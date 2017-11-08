@@ -74,7 +74,7 @@ function tsd_switch_magazine_drafts_to($postTypeTo) {
 	else {
 		$wpdb->query("commit");
 		ob_get_clean();
-		header('Location: /wp-admin/admin.php?post_type=tsd_magazine_post&page=magazinepostsimport');
+		header('Location: /wp-admin/edit.php?post_type=tsd_magazine_post&page=magazinepostsimport');
 		die;
 	}
 	
