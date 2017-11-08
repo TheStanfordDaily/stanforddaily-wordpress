@@ -1,0 +1,36 @@
+﻿.overlay-icon{ display:none;}
+
+#tabbed-widget .widget-container{
+	position:relative;
+	padding-top:46px;
+	overflow:hidden;
+}
+.widget-container li{
+	position:relative;
+	overflow:hidden;
+}
+#tabbed-widget .widget-top {
+	width:308px;
+	position:absolute;
+	top:0;
+}
+
+.flex-direction-nav .flex-next { right: 5px; }
+.flex-direction-nav .flex-prev {left: 5px;}
+
+.scroll-box .cat-box-content{
+	padding-bottom:0;
+}
+.scroll-nav{
+	overflow:hidden;
+	margin-bottom:0;
+	padding-left:48%;
+}
+.scroll-nav a{
+	float:left;
+}
+
+.group_items {
+	width: 614px;
+	height:175px !important;
+}

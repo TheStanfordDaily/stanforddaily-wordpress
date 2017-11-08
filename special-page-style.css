@@ -1,0 +1,265 @@
+.background-cover {
+	background-color: #FFFFFF !important;
+	background-image: url("") !important;
+}
+
+body {
+	font-family: Georgia, "Times New Roman", Times, Georgia, serif;	
+	width:auto; height:auto;	
+	padding: 0 0 30px 0;
+	margin: 0;
+	color: #222222;	
+	background-color: white;	
+}
+
+p {
+	margin-bottom: 17px;
+	margin-top: 17px;
+}
+
+a:link {
+	text-decoration: underline;
+}
+
+h4{
+	font-size: 12px;
+	display:block;
+	margin-top:0px;
+	margin-bottom: 20px;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+div.featuredVideoLarge{
+	margin-left: auto;
+	margin-right: auto;
+	width: 853px;
+}
+
+div.featuredVideoLarge iframe{
+	margin-left: auto;
+	margin-right: auto;
+	width: 853px;
+}
+
+p.feature {
+	line-height: 29.92px;
+	font-size: 17.6px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 620px;
+}
+
+p.feature a{
+	color: #222222;
+}
+/*
+p.feature:first-of-type:first-letter {
+	color: #231F20;
+	float: left;
+	font-family: "Miller Headline Bold," "Times New Roman", Times, Georgia, serif;
+	font-size: 7.2em;
+	line-height: 0.93em;
+	padding: 0 0.12em 0 0;
+}*/
+
+.chapter > .feature:first-letter {
+	color: #231F20;
+	float: left;
+	font-family: "Miller Headline Bold," "Times New Roman", Times, Georgia, serif;
+	font-size: 115.2px;
+	line-height: .93em;
+	padding: 0 19.2px 0 0;
+}
+
+.chapter > .feature ~ .feature:first-letter {
+	line-height: 29.96px;
+	font-size: 17.6px;
+	font-family: Georgia, "Times New Roman", Times, Georgia, serif;	
+	margin-left: auto;
+	margin-right: auto;
+	width: 620px;
+	color: #222222;
+	float: none;
+	padding: 0px;
+	
+}
+
+p.caption {
+	font-size: 12px;
+	padding: 0 20px;
+}
+
+p.footercaption{
+	line-height: 30.4px;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 853px;
+}
+
+p.byline {
+	font-size: 17.6px;
+	text-align: center;
+}
+
+p.contactline{
+	font-style: italic;
+	line-height: 29.92px;
+	font-size: 17.6px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 620px;
+}
+
+p.byline a{
+	color: #222222;
+}
+
+p.caption{
+	font-size: 14px;
+}
+
+img.chapterimg {
+	width: 100%;
+}
+
+img.headerlogo {
+	height: 50px;
+	width: 50px;
+	margin-right: 50px;
+}
+
+div.popout{
+	display:none;
+	opacity: 1;
+}
+
+div.popout h4{
+	text-align: center;
+	font-size: 17px;
+}
+
+div.popout table{
+	opacity: 1;
+	width: 75%;
+	background-color: #FFFFFF;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	border-width: 2px;
+	z-index: 8888;
+	position:relative;
+	
+}
+
+div.rightsidebar{
+	float:right;
+	width: 300px;
+	margin-right: 30px;
+}
+
+div.rightsidebar h5{
+	text-align: center;
+	margin-top: 2px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+img.sidebarimage{
+	display:block;
+	width: 250px;
+	height: 167px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.socialbutton{
+	height: 30px;
+	width: 30px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+	max-height:50px;
+	min-width:100%;
+   background:white;
+   position:fixed;
+   z-index: 5;
+}
+#headerlogo {
+	margin-left: 5px;
+	float: left;
+}
+#headermeta {
+	margin-left: 100px;
+	float: left;
+	margin-top: 20px;
+}
+#headermeta h4 a, #headerchapters h4 a{
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+}
+#headerchapters{
+	margin-left: 200px;
+	float: left;
+	margin-top: 20px;
+}
+div.fb-like {
+	float: right;
+	max-height: 10px;
+}
+#headerright{
+	float: right;
+}
+
+#body {
+   padding-bottom:60px;   /* Height of the footer */
+  /* padding-top:50px; */
+   background-color:#FFFFFF;
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+}
+
+.header-content {
+	padding-top: 50px !important;
+}
+
+.special-comments {
+	width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.longformad {text-align: center; margin: 0% 40%;}
+
+/* Phone styling */
+@media only screen and (max-width: 767px) {
+	.longformad {margin: auto;}
+	#headermeta {
+		display:none;
+	}
+	p.feature {
+		width: 90%;
+		padding: 0px 5px;
+	}
+	
+	.special-comments {
+		width: 90%;
+	}
+	.chapter > .feature ~ .feature:first-letter {
+		width: 100%;
+	}
+}
+

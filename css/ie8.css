@@ -1,0 +1,7 @@
+﻿.overlay-icon{ display:none;}
+#main-content , .breaking-news, header#theme-header, .comment-wrap{border:1px solid #ddd;}
+.flex-direction-nav a { display:none}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover , .flexslider:hover .flex-prev , .flexslider:hover .flex-next { display:block;}
+.recent-box .recent-item, #related_posts .related-item, .scroll-box .scroll-item {margin-right: 7px;}
+.post-thumbnail a, .post-thumbnail{min-width: 55px;}
+.video-box.cat-box li .post-thumbnail a{width: 160px;}

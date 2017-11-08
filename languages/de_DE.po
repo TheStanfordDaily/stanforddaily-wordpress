@@ -1,0 +1,725 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sahifa 1.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-03 18:07+0200\n"
+"PO-Revision-Date: 2013-10-07 09:24+0100\n"
+"Last-Translator: Fouad Badawy <fouad@mo3aser.com>\n"
+"Language-Team: Tielabs <info@tielabs.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Language: en_EG\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:6 ../loop.php:3 ../page.php:7
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: ../404.php:9
+msgid ""
+"Apologies, but the page you requested could not be found. Perhaps searching "
+"will help."
+msgstr ""
+"Entschuldigung, aber die angeforderte Seite konnte nicht gefunden werden. "
+"Vielleicht hilft die Suche."
+
+#: ../404.php:13
+msgid "Pages"
+msgstr "Seiten"
+
+#: ../404.php:18
+msgid "Categories"
+msgstr "Kategorien"
+
+#: ../404.php:23
+msgid "Tags"
+msgstr "Tags"
+
+#: ../404.php:35
+msgid "Authors"
+msgstr "Autoren"
+
+#: ../archive.php:9
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Tägliches Archiv: <span>%s</span>"
+
+#: ../archive.php:11
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Monatliches Archiv: <span>%s</span>"
+
+#: ../archive.php:13
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Jährliches Archiv: <span>%s</span>"
+
+#: ../archive.php:15
+msgid "Blog Archives"
+msgstr "Blog Archiv"
+
+#: ../author.php:9
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Autoren Archiv: %s"
+
+#: ../author.php:12 ../category.php:10
+msgid "Feed Subscription"
+msgstr "Feed Abonnement"
+
+#: ../author.php:27
+msgid " 's site"
+msgstr " 's Website"
+
+#: ../author.php:30
+msgid "  on Twitter"
+msgstr "  auf Twitter"
+
+#: ../author.php:33
+msgid "  on Facebook"
+msgstr "  auf Facebook"
+
+#: ../author.php:36
+msgid "  on Google+"
+msgstr "  auf Google+"
+
+#: ../author.php:39
+msgid "  on Linkedin"
+msgstr "  auf Linkedin"
+
+#: ../author.php:42
+msgid "  on Flickr"
+msgstr "  auf Flickr"
+
+#: ../author.php:45
+msgid "  on YouTube"
+msgstr "  auf Youtube"
+
+#: ../author.php:48
+msgid "  on Pinterest"
+msgstr "  auf Pinterest"
+
+#: ../author.php:51
+msgid "  on Behance"
+msgstr "  auf Behance"
+
+#: ../author.php:54
+msgid "  on Instagram"
+msgstr "  auf Instagram"
+
+#: ../comments.php:3
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Dieser Artikel ist mit einem Passwort gesichert. Enter das Passwort um die "
+"Kommentare zu sehen."
+
+#: ../comments.php:12
+msgid "No comments"
+msgstr "Keine Kommentare"
+
+#: ../comments.php:12
+msgid "One comment"
+msgstr "Ein Kommentar"
+
+#: ../comments.php:12
+msgid "comments"
+msgstr "Kommentare"
+
+#: ../comments.php:17
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Kommentare"
+
+#: ../comments.php:18
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Kommentare <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../comments.php:34
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: ../comments.php:46
+msgid "Name"
+msgstr "Name"
+
+#: ../comments.php:48
+msgid "Email"
+msgstr "E-Mail"
+
+#: ../comments.php:50
+msgid "Website"
+msgstr "Website"
+
+#: ../comments.php:53
+msgid " Required fields are marked"
+msgstr "Benötigte Felder sind markiert"
+
+#: ../comments.php:57
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Du musst <a href=\"%s\">angemeldet sein</a> um einen Kommentar zu "
+"hinterlassen."
+
+#: ../comments.php:58
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Abmelden"
+"\">Abmelden?</a>"
+
+#: ../comments.php:59
+msgid "Your email address will not be published."
+msgstr "Deine E-Mail-Adresse wird nicht veröffentlicht."
+
+#: ../comments.php:60
+msgid "Leave a Reply"
+msgstr "Hinterlasse einen Kommentar"
+
+#: ../comments.php:61
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Hinterlasse einen Kommentar zu %s"
+
+#: ../comments.php:62
+msgid "Cancel reply"
+msgstr "Antwort abbrechen"
+
+#: ../comments.php:63
+msgid "Post Comment"
+msgstr "Senden"
+
+#: ../footer.php:27
+msgid "Scroll To Top"
+msgstr "Nach oben scrollen"
+
+#: ../header.php:36
+msgid "Search"
+msgstr "Suche"
+
+#: ../header.php:37
+msgid "Search..."
+msgstr "Suchen…"
+
+#: ../header.php:128
+msgid "Random Article"
+msgstr "Zufälliger Artikel"
+
+#: ../index.php:23
+msgid "You can use Homepage builder to build your homepage"
+msgstr "Du kannst den Homepage Builder nutzen um deine Startseite anzupassen"
+
+#: ../loop.php:5 ../page.php:9
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+"Entschuldigung, aber es konnte nichts im abgefragten Archiv gefunden werden. "
+"Vielleicht hilft dir die Suche, einen ähnlichen Artikel zu finden."
+
+#: ../loop.php:20 ../loop.php:33 ../loop.php:51
+msgid "Read More &raquo;"
+msgstr "Mehr lesen &raquo;"
+
+#: ../page.php:46
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: ../page.php:50
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../search.php:9
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: ../search.php:11
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: ../search.php:23
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Entschuldigung, aber es konnte nichts gefunden werden. Bitte versuche es mit "
+"einem anderen Begriff erneut."
+
+#: ../single.php:66
+msgid "Tagged with: "
+msgstr "Schlagwörter: "
+
+#: ../single.php:79
+msgid "About"
+msgstr "Über"
+
+#: ../single.php:90
+msgid "Previous:"
+msgstr "Vorheriger Artikel:"
+
+#: ../single.php:91
+msgid "Next:"
+msgstr "Nächster Artikel:"
+
+#: ../tag.php:7
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Schlagwörter Archiv: %s"
+
+#: ../template-best-reviews.php:59
+msgid "Posted by: "
+msgstr "Geschrieben von: "
+
+#: ../template-best-reviews.php:61
+msgid "on "
+msgstr "Am "
+
+#: ../template-best-reviews.php:63
+msgid "in "
+msgstr "Unter "
+
+#: ../template-restrict.php:43
+msgid "You must be "
+msgstr "Du musst"
+
+#: ../template-restrict.php:43
+msgid "logged in"
+msgstr "angemeldet sein"
+
+#: ../template-restrict.php:43
+msgid " to view this page."
+msgstr "um diese Seite zu sehen."
+
+#: ../template-timeline.php:61
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink zu %s"
+
+#: ../functions/common-scripts.php:46 ../functions/theme-functions.php:72
+msgid "Go to..."
+msgstr "Gehe zu…"
+
+#: ../functions/common-scripts.php:47 ../functions/theme-functions.php:1621
+#: ../functions/theme-functions.php:1627
+msgid "Your Rating:"
+msgstr "Deine Bewertung:"
+
+#: ../functions/theme-functions.php:30
+msgid "Top Menu Navigation"
+msgstr "Top Menü Navigation"
+
+#: ../functions/theme-functions.php:31
+msgid "Primary Navigation"
+msgstr "Primäre Navigation"
+
+#: ../functions/theme-functions.php:56
+msgid "You can use WP menu builder to build menus"
+msgstr "Nutze die Wordpress Menüfunktion um ein Menü hinzuzufügen."
+
+#: ../functions/theme-functions.php:675
+msgid "Social Networking"
+msgstr "Social Networking"
+
+#: ../functions/theme-functions.php:765
+msgid "No items."
+msgstr "Keine Artikel."
+
+#: ../functions/theme-functions.php:770
+msgid "Posted "
+msgstr "Geschrieben "
+
+#: ../functions/theme-functions.php:1301
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: ../functions/theme-functions.php:1304
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: ../functions/theme-functions.php:1305
+msgid "Your Profile"
+msgstr "Dein Profil"
+
+#: ../functions/theme-functions.php:1306
+msgid "Logout"
+msgstr "Abmelden"
+
+#: ../functions/theme-functions.php:1346
+msgid "Username"
+msgstr "Username"
+
+#: ../functions/theme-functions.php:1347
+msgid "Password"
+msgstr "Passwort"
+
+#: ../functions/theme-functions.php:1348
+msgid "Log in"
+msgstr "Anmelden"
+
+#: ../functions/theme-functions.php:1349
+msgid "Remember Me"
+msgstr "Angemeldet bleiben"
+
+#: ../functions/theme-functions.php:1354
+msgid "Lost your password?"
+msgstr "Passwort vergessen?"
+
+#: ../functions/theme-functions.php:1441
+msgid "Review Overview"
+msgstr "Review Übersicht"
+
+#: ../functions/theme-functions.php:1495
+msgid "Summary :"
+msgstr "Zusammenfassung :"
+
+#: ../functions/theme-functions.php:1598
+msgid "No Ratings Yet !"
+msgstr "Bisher keine Bewertungen!"
+
+#: ../functions/theme-functions.php:1602
+msgid "Be the first one !"
+msgstr "Sei der Erste !"
+
+#: ../functions/theme-functions.php:1621 ../functions/theme-functions.php:1627
+#: ../functions/theme-functions.php:1634
+msgid "votes"
+msgstr "votes"
+
+#: ../functions/theme-functions.php:1632 ../functions/theme-functions.php:1634
+msgid "User Rating:"
+msgstr "Nutzerbewertungen:"
+
+#: ../functions/theme-functions.php:1654 ../functions/theme-functions.php:1661
+#: ../functions/theme-functions.php:1667 ../functions/theme-functions.php:1673
+msgid "ago"
+msgstr "vor"
+
+#: ../functions/theme-functions.php:1830
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: ../functions/widgetize-theme.php:13
+msgid "Primary Widget Area"
+msgstr "Primäre Widget Area"
+
+#: ../functions/widgetize-theme.php:15
+msgid "The Primary widget area"
+msgstr "Die primäre Widget Area"
+
+#: ../functions/widgetize-theme.php:21
+msgid "Shop - For WooCommerce Pages"
+msgstr "Shop - Für WooCommerce Seiten"
+
+#: ../functions/widgetize-theme.php:23
+msgid "This widget area uses in the WooCommerce pages ."
+msgstr "Diese Widgets werden auf WooCommerce Seiten genutzt."
+
+#: ../functions/widgetize-theme.php:53
+msgid "First Footer Widget Area"
+msgstr "Erste Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:55
+msgid "The first footer widget area"
+msgstr "Die erste Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:61
+msgid "Second Footer Widget Area"
+msgstr "Zweite Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:63
+msgid "The Second footer widget area"
+msgstr "Die zweite Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:70
+msgid "Third Footer Widget Area"
+msgstr "Dritte Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:72
+msgid "The Third footer widget area"
+msgstr "Die dritte Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:79
+msgid "Fourth Footer Widget Area"
+msgstr "Vierte Footer Widget Area"
+
+#: ../functions/widgetize-theme.php:81
+msgid "The Fourth footer widget area"
+msgstr "Die vierte Footer Widget Area"
+
+#: ../includes/archives-meta.php:16
+msgid "Leave a comment"
+msgstr "Hinterlasse einen Kommentar"
+
+#: ../includes/archives-meta.php:16
+msgid "1 Comment"
+msgstr "Ein Kommentar"
+
+#: ../includes/archives-meta.php:16
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: ../includes/breadcrumbs.php:15
+msgid "Home"
+msgstr "Startseite"
+
+#: ../includes/breadcrumbs.php:107
+msgid "page "
+msgstr "Seite "
+
+#: ../includes/breaking-news.php:18
+msgid "Breaking News"
+msgstr "Neuigkeiten"
+
+#: ../includes/pagenavi.php:159
+msgid "Page %CURRENT_PAGE% of %TOTAL_PAGES%"
+msgstr "Seite %CURRENT_PAGE% von %TOTAL_PAGES%"
+
+#: ../includes/pagenavi.php:162
+msgid "&laquo; First"
+msgstr "&laquo; Erste"
+
+#: ../includes/pagenavi.php:163
+msgid "Last &raquo;"
+msgstr "Letzte &raquo;"
+
+#: ../includes/pagenavi.php:164
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: ../includes/pagenavi.php:165
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: ../includes/pagenavi.php:166 ../includes/pagenavi.php:167
+msgid "..."
+msgstr "..."
+
+#: ../includes/post-related.php:29
+msgid "Related Articles"
+msgstr "Ähnliche Artikel"
+
+#: ../includes/post-share.php:7
+msgid "Share !"
+msgstr "Teilen !"
+
+#: ../includes/wp_list_comments.php:9
+#, php-format
+msgid "%s "
+msgstr "%s "
+
+#: ../includes/wp_list_comments.php:10
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: ../includes/wp_list_comments.php:10 ../includes/wp_list_comments.php:30
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: ../includes/wp_list_comments.php:15
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wird überprüft."
+
+#: ../includes/wp_list_comments.php:30
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../includes/widgets/widget-ads.php:78
+#: ../includes/widgets/widget-ads.php:198
+#: ../includes/widgets/widget-ads.php:320
+#: ../includes/widgets/widget-ads.php:441
+#: ../includes/widgets/widget-ads.php:562
+#: ../includes/widgets/widget-ads.php:709
+#: ../includes/widgets/widget-ads.php:817
+#: ../includes/widgets/widget-ads.php:926
+#: ../includes/widgets/widget-ads.php:1038
+#: ../includes/widgets/widget-ads.php:1150
+msgid " Advertisement"
+msgstr "Werbung"
+
+#: ../includes/widgets/widget-author.php:23
+#, php-format
+msgid "About %s"
+msgstr "Über %s"
+
+#: ../includes/widgets/widget-author.php:91
+#, php-format
+msgid "By %s"
+msgstr "Von %s"
+
+#: ../includes/widgets/widget-author.php:99
+msgid "All"
+msgstr "Alle"
+
+#: ../includes/widgets/widget-authors-posts.php:46
+msgid "Authors Posts"
+msgstr "Autoren Artikel"
+
+#: ../includes/widgets/widget-category.php:46
+msgid "Category Posts"
+msgstr "Kategorie Artikel"
+
+#: ../includes/widgets/widget-comments-avatar.php:42
+msgid "Recent Comments"
+msgstr "Ähnliche Artikel"
+
+#: ../includes/widgets/widget-counter.php:52
+#: ../includes/widgets/widget-feedburner.php:30
+msgid "Subscribe"
+msgstr "RSS abonnieren"
+
+#: ../includes/widgets/widget-counter.php:52
+#: ../includes/widgets/widget-counter.php:83
+#: ../includes/widgets/widget-counter.php:93
+msgid "Subscribers"
+msgstr "Abonnenten"
+
+#: ../includes/widgets/widget-counter.php:53
+msgid "To RSS Feed"
+msgstr "Zum RSS Feed"
+
+#: ../includes/widgets/widget-counter.php:63
+#: ../includes/widgets/widget-counter.php:103
+#: ../includes/widgets/widget-counter.php:113
+#: ../includes/widgets/widget-counter.php:123
+#: ../includes/widgets/widget-counter.php:133
+msgid "Followers"
+msgstr "Followers"
+
+#: ../includes/widgets/widget-counter.php:73
+msgid "Fans"
+msgstr "Fans"
+
+#: ../includes/widgets/widget-custom-author.php:52
+msgid "About Author"
+msgstr "Über Autor"
+
+#: ../includes/widgets/widget-facebook.php:41
+msgid "Find us on Facebook"
+msgstr "Finde uns auf Facebook"
+
+#: ../includes/widgets/widget-feedburner.php:27
+msgid "Enter your e-mail address"
+msgstr "E-Mail-Adresse eingeben"
+
+#: ../includes/widgets/widget-feedburner.php:51
+msgid "FeedBurner Widget"
+msgstr "FeedBurner Widget"
+
+#: ../includes/widgets/widget-feedburner.php:51
+msgid "Subscribe to our email newsletter."
+msgstr "Abonniere unseren Newsletter."
+
+#: ../includes/widgets/widget-flickr.php:44
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../includes/widgets/widget-google.php:53
+msgid "Follow us on Google+"
+msgstr "Folge uns auf Google+"
+
+#: ../includes/widgets/widget-login.php:35
+msgid "Login"
+msgstr "Anmelden"
+
+#: ../includes/widgets/widget-news-pic.php:44
+msgid "News in Pictures"
+msgstr "Neuigkeiten in Bildern"
+
+#: ../includes/widgets/widget-posts.php:55
+msgid "Recent Posts"
+msgstr "Letzte Artikel"
+
+#: ../includes/widgets/widget-search.php:15
+msgid "to search type and hit enter"
+msgstr "zum suchen tippen und Enter drücken"
+
+#: ../includes/widgets/widget-social.php:51
+msgid "Social"
+msgstr "Social"
+
+#: ../includes/widgets/widget-tabbed.php:21
+msgid "Popular"
+msgstr "Beliebt"
+
+#: ../includes/widgets/widget-tabbed.php:22
+msgid "Recent"
+msgstr "Letzte"
+
+#: ../includes/widgets/widget-tabbed.php:23
+msgid "Comments"
+msgstr "Kommentare"
+
+#: ../includes/widgets/widget-text-html.php:61
+msgid "Text"
+msgstr "Text"
+
+#: ../includes/widgets/widget-twitter.php:107
+#, php-format
+msgid "%s ago"
+msgstr "vor %s"
+
+#: ../includes/widgets/widget-twitter.php:109
+msgid "Y/m/d"
+msgstr "Y/m/d"
+
+#: ../includes/widgets/widget-twitter.php:110
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../includes/widgets/widget-twitter.php:110
+msgid "Y/m/d H:i:s"
+msgstr "d. M Y H:i:s"
+
+#: ../includes/widgets/widget-twitter.php:150
+msgid "@Follow Me"
+msgstr "@Folge mir"
+
+#: ../includes/widgets/widget-video.php:63
+msgid " Featured Video"
+msgstr " Empfohlenes Video"
+
+#: ../includes/widgets/widget-youtube.php:40
+msgid "Subscribe to our Channel"
+msgstr "Abonniere unseren Channel"
+
+#: ../panel/mpanel-functions.php:92
+msgid "Use this image"
+msgstr "Diese Bild nutzen"
+
+#: ../panel/shortcodes/shortcode.php:396
+msgid "About The Author"
+msgstr "Über den Autor"
+
+#: ../woocommerce/single-product/related.php:38
+#, fuzzy
+msgid "Related Products"
+msgstr "Ähnliche Artikel"
+
+#, fuzzy
+#~ msgid "Assign Authors"
+#~ msgstr "Autoren"
+
+#, fuzzy
+#~ msgid "Import author:"
+#~ msgstr "Über Autor"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Kategorie Archiv: %s"
+
+#~ msgid "Register"
+#~ msgstr "Registrieren"
+
+#~ msgid "You are here:"
+#~ msgstr "Du bist hier:"

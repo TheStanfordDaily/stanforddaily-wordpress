@@ -1,0 +1,22 @@
+<wpml-config>
+	<admin-texts>
+	 <key name="tie_options">
+	  <key name="logo" />
+	  <key name="logo_retina" />
+	  <key name="breaking_title" />
+	  <key name="footer_one" />
+	  <key name="footer_two" />
+	  <key name="banner_top_adsense" />
+	  <key name="banner_bottom_adsense" />
+	  <key name="banner_above_adsense" />
+	  <key name="banner_below_adsense" />
+	  <key name="ads1_shortcode" />
+	  <key name="ads2_shortcode" />
+	  <key name="related_title" />
+	  <key name="todaydate_format" />
+	 </key>
+	</admin-texts>  
+	<custom-types>
+		<custom-type translate="1">tie_slider</custom-type>
+	</custom-types>
+</wpml-config>

@@ -1,0 +1,61 @@
+﻿body {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+label {
+	float: left;
+	width: 150px;
+}
+span {
+	float: left;
+}
+textarea, input[type="text"], input[type="password"], input[type="file"], input[type="button"], input[type="submit"], input[type="reset"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], select {
+	border-color: #DFDFDF;
+	background-color: white;
+}
+select {
+	padding: 2px;
+	height: 2em;
+	width: 210px;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+textarea, input {
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+input {
+	padding: 3px;
+	width: 200px;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+textarea {
+	width: 425px;
+	height: 200px;
+}
+a.add {
+	background-color: #4cd964;
+	border: 0 none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font: 13px/17px Tahoma,Geneva,sans-serif;
+	padding: 5px 10px 6px;
+	text-align: left;
+	-webkit-transition: border-color,0.3s;
+	-moz-transition: border-color,0.3s;
+	-o-transition: border-color,0.3s;
+	transition: border-color,0.3s;
+	text-decoration: none;
+}
+a.add:hover {background: #1c2025;}

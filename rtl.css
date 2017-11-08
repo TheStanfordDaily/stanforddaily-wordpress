@@ -1,0 +1,152 @@
+﻿.logo, .today-date, .top-nav ul, .top-nav ul li, .search-block #s, #main-nav ul li, .breaking-news span, .pagination a, .pagination span.extend, .pagination span.current, .cat-box-title h2, .wide-box li .post-thumbnail, .wide-box li, .cat-tabs-header li, .cat-tabs-wrap li.first-news, .cat-box.column2, .cat-box li .post-thumbnail, .list-box li.first-news, .recent-box .recent-item, .share-post span.share-text, .block-head h3, .author-avatar img, .author-social, .post-previous, #related_posts .related-item, .pic-box li.first-pic, #tabbed-widget ul.tabs li,
+.widget-container .post-thumbnail, .widget-top h4, .footer-widgets-box, .breaking-news ul, .flickr-wrapper .flickr_badge_image, .post-tabs ul.tabs-nav li, .post-tabs-ver ul.tabs-nav, .author-info img.author-img, h2.page-title, .sitemap-col, .widget-container .post-thumbnail, .footer-widget-container .post-thumbnail, .comment-avatar, .top-nav .menu-alert, #main-nav .menu-alert, .item-list .post-thumbnail, .ei-slider-thumbs li, .scroll-box .scroll-item,.entry ul.best-reviews .post-thumbnail,.entry ul.best-reviews .best-reviews-content,
+.entry ul.best-reviews .best-review-score, .video-box .big-video-column, #main-nav ul ul, .woocommerce-page .col2-set .col-1{ float: right }
+.top-area, .search-block, .search-block .search-button, a.random-article, .pagination .pages, .cat-tabs-wrap li, .list-box li, .post-next, #twitter-widget .tweet_list .tweet_avatar img, .footer-bottom .social-icons, .top-nav .social-icons, #twitter-shortcode .tweet_list .tweet_avatar img, a.rss-cat-icon, .jp-play-bar, .jp-volume-bar-value, .user-rate, .video-box li, .mega-menu-content, .twitter-timestamp,
+h3.toggle-head-open .tieicon-up, h3.toggle-head-close .tieicon-down,
+.woocommerce-message .button, .woocommerce-error .button, .woocommerce-info .button,.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 ,
+.woocommerce .checkout #shiptobilling, .woocommerce-page .checkout #shiptobilling , .user-rate, #tie_lang_switcher { float: left }
+body { font-family: Tahoma, arial }
+h1, h2, h3, .post-title, .breaking-news span, .share-post span.share-text { font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+.today-date { margin: 4px 5px 0 10px }
+.search-block { margin-right: 5px; margin-left: 0px; }
+.search-block:after { border-right-color: transparent !important }
+.search-block .search-button { margin-right: 0; margin-left: 0px; }
+a.random-article { margin: 5px 10px 0 0 }
+.breaking-news span { margin-right: 0; margin-left: 10px; }
+h2.page-title { margin-right: 0; margin-left: 10px; }
+.top-nav ul ul ul, #main-nav ul ul ul { right: 100%; left: auto; }
+#main-nav .main-menu { margin-right: 10px; margin-left: 0px; }
+#main-nav ul li { border-width: 0 1px 0 0 }
+#main-nav ul li:last-child a { border-left: 0 none }
+#main-nav  ul ul li:hover > a, #main-nav  ul ul :hover > a, .top-nav ul ul li:hover > a, .top-nav ul ul :hover > a { padding-right: 15px !important; padding-left: 5px !important; }
+#main-nav .menu-alert { margin-right: 10px; margin-left: 0; }
+.pagination a, .pagination span.extend, .pagination span.current { margin-right: 0; margin-left: 3px; }
+.post-thumbnail { margin: 0 0 10px 15px }
+.cat-box-title h2 { margin-right: 0; margin-left: 10px; }
+a.rss-cat-icon { margin: 6px 8px 0 0 }
+.wide-box li .post-thumbnail, .cat-box li .post-thumbnail { margin-right: 0; margin-left: 15px; }
+.cat-tabs-header li { margin-right: 0; margin-left: 10px; font-weight: bold; }
+.cat-tabs-wrap li.first-news, .list-box li.first-news { margin-right: 0 }
+li.other-news { border-right: 3px solid #eaeaea; border-left: 0 none; }
+body.dark-skin li.other-news, body.dark-skin ul.timeline { border-right-color: #292929 }
+.cat-tabs-wrap li, .list-box li { clear: left }
+.cat-box.column2 { margin-right: 0; margin-left: 20px; }
+.column2.last-column { margin-left: 0; margin-right: 0; }
+.recent-box .recent-item { margin: 0 0 10px 10px }
+.recent-box .recent-item:nth-child(3n+3) { margin-right: 0; margin-left: 0; }
+.share-post span.share-text { margin: -10px 0 -10px 20px }
+#related_posts .related-item { margin: 0 0 -10px 10px }
+#related_posts .related-item:nth-child(3n+3) { margin-left: 0 }
+.block-head h3 { margin-right: 0; margin-left: 10px; }
+.author-avatar img { margin: 0 0 5px 10px }
+.pic-box li { float: right; margin-left: 0; margin-right: 6px; }
+.pic-box li.first-pic { margin-left: 14px; margin-right: 0; }
+#tabbed-widget ul.tabs li { margin-right: 3px; margin-left: 0; }
+.widget-container .post-thumbnail { margin: 0 0 0 10px }
+.widget-top h4 { margin-left: 10px; margin-right: 0; }
+.widget-container li { background-position: right 8px; padding: 0 12px 10px 0; }
+.widget-container .post-thumbnail, .footer-widget-container .post-thumbnail { margin: 0 0 0 10px }
+#twitter-widget li { padding: 10px 30px 10px 10px; }
+#twitter-widget li:before {float: right;margin-left: 0;margin-right: -30px;}
+#twitter-widget .tweet_list .tweet_avatar img { margin-right: 2px; margin-left: 0; }
+.footer-widgets-box { margin-right: 0; margin-left: 4%; }
+.footer-1c .footer-widgets-box, .narrow-wide-2c #footer-second, .wide-narrow-2c #footer-second, .footer-2c #footer-second, .footer-3c #footer-third, .footer-4c #footer-fourth, .wide-right-3c #footer-third, .wide-left-3c #footer-third { margin-left: 0 }
+.entry ol, .entry ul { margin: 0 10px 25px 0 }
+.share-post li { direction: ltr; text-align: left; width: 99px; }
+.comment-wrap { margin-left: 0; margin-right: 20px; }
+.comment-avatar { margin: 0 -30px 5px 0 }
+.author-comment { margin-right: 30px }
+.commentlist .reply a { left: 0; right: auto; }
+#sitemap { padding: 10px 15px 0 0 }
+.sitemap-col { margin: 0 0 10px 2% }
+.sitemap-col ul li { background-position: right 7px }
+.entry table th { text-align: right }
+blockquote { padding: 0 60px 0 0; margin: 0 40px 30px 0; }
+blockquote:before {margin-right: -70px;margin-left: 0;float: right;}
+ul.timeline { border-right: 2px solid #DFDFE0; margin: 0 35px 30px 0; border-left: 0 none; }
+	ul.timeline li{padding: 2px 100px 2px 10px;}
+	ul.timeline li span{left: auto; right:0;}
+
+#main-nav ul ul ul, #main-nav ul li.current-menu-item ul ul, #main-nav ul li.current-menu-parent ul ul, #main-nav ul li.current-page-ancestor ul ul {left: auto;right: 100%;}
+#main-nav-uber a.random-article{ right: auto; left: 0;}
+
+ul.authors-wrap li { list-style: none }
+/* Shortcodes */
+.dropcap { float: right; margin: 0 0 0 8px; }
+.entry .starlist li, .entry .checklist li { background-position: right top; padding: 0 25px 0 0; }
+.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth { margin-right: 0; margin-left: 4%; float: right; }
+.entry .last { margin-left: 0 !important; clear: left; }
+#twitter-shortcode li { background-position: right 15px; padding: 5px 30px 5px 10px; }
+#twitter-shortcode .tweet_list .tweet_avatar img { margin-left: 0; margin-right: 5px; }
+.post-tabs ul.tabs-nav li { margin: 0 0 0 5px }
+.post-tabs-ver .pane { margin-left: 0; margin-right: 170px; }
+.post-tabs ul.tabs-nav { padding-left: 0; padding-right: 20px; }
+.post-tabs-ver ul.tabs-nav li { border-radius: 0 4px 4px 0; border-left-width: 0; border-right-width: 1px; }
+.author-info img.author-img { margin-right: 0; margin-left: 15px; }
+.box div { background-position: right top !important; padding-right: 60px; padding-left: 0; }
+.children { margin-left: 0; margin-right: 50px; }
+.review-top { float: right; margin-right: 0; margin-left: 20px; }
+.review-stars .review-item h5 { float: right }
+.review-stars .stars-large { float: left }
+span.stars-small { float: right; margin: 2px 0 0 5px; }
+.post-meta .stars-small { float: right; margin: -1px 0 0 5px; }
+.flex-direction-nav .flex-next {right: auto; left: -30px; }
+.flex-direction-nav .flex-prev { right: -30px; left: auto; }
+.flex-direction-nav .flex-next:before {content: '\f007'; }
+.flex-direction-nav .flex-prev:before {content: '\f006'; }
+.flexslider:hover .flex-next { left: 5px; right: auto; }
+.flexslider:hover .flex-prev { right: 5px; left: auto; }
+.ei-slider-thumbs li.ei-slider-element { left: auto; right: auto; }
+a.pp_expand, a.pp_contract, a.pp_close, .pp_arrow_next, .pp_arrow_previous, .pp_play, .pp_pause, a.pp_previous, a.pp_next { direction: ltr; overflow: hidden; }
+div.pp_default .pp_content_container .pp_right { padding-right: 20px !important; }
+.group_items .scroll-item:last-child, .group_items .scroll-item { margin-left: 10px; margin-right: 0; }
+.group_items .scroll-item:last-child { margin-left: 0 }
+p.post-meta span{margin-right:0;margin-left:10px;}
+#commentform input[type="checkbox"]{margin: 2px 0 0 7px ;float:right;clear:right;}
+.entry li {margin: 0 10px 5px 0;}
+.share-post li, .mini-share-post li {float: right;}
+html body iframe[name*="oauth2relay"]{ display: none; right: -100px; }
+.entry ul.best-reviews .best-review-score{margin: 15px 0 0 15px;}
+.mega-menu-item {float: right;padding-right: 4%; padding-left:0;}
+#main-nav ul li .mega-menu-block ul.sub-menu {margin-left: 0; margin-right:30px;}
+#main-nav ul li.parent-list a {padding-left: 22px; padding-right: 10px;}
+.top-menu ul li.parent-list a {padding-left: 18px; padding-right: 10px;}
+#main-nav ul li a .sub-indicator, .top-menu ul li a .sub-indicator {right: auto; left:7px;}
+#main-nav ul ul li a .sub-indicator, .top-menu ul ul li a .sub-indicator {border: 4px solid transparent;border-right: 4px solid #ddd;}
+.post-next {padding-left: 40px; padding-right: 0; text-align: left;}
+.post-previous {padding-right: 40px; padding-left: 0;}
+.post-previous a:after{right:0; left: auto;}
+.post-next a:after{left:0; right: auto;}
+.box .tieicon-boxicon {float: right;margin-right: -70px; margin-left: 0;}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {float: right;margin: 0 0 2.992em 3.8%;width: 22.1%;margin-right: 0;}
+.woocommerce ul.products li.last, .woocommerce-page ul.products li.last {margin-left: 0;}
+.woocommerce ul.products li.product .onsale, .woocommerce-page ul.products li.product .onsale {right: auto; left: 0;margin: -6px 0 0 -6px;}
+.woocommerce-message:before, .woocommerce-error:before, .woocommerce-info:before {right: 1em;left:auto;}
+.woocommerce-message, .woocommerce-error, .woocommerce-info {padding: 1em 3.5em 1em 1em !important;}
+.woocommerce ul.cart_list li img, .woocommerce-page ul.cart_list li img, .woocommerce ul.product_list_widget li img, .woocommerce-page ul.product_list_widget li img {float: right;margin-right: 0;margin-left: 4px;}
+.widget_product_search #s {float: right;margin-right: 0;margin-left: 5px}
+form.checkout{  overflow:hidden;}
+
+.page-title {float: right;margin-left: 10px;margin-right: 0;}
+
+@media only screen and (max-width: 985px) and (min-width: 768px) { 
+    #footer-second, #footer-fourth { margin-left: 0 !important }
+    #top-menu-mob, #main-menu-mob { float: right; margin-right: 10px; }
+    #sidebar .slides > li { -webkit-backface-visibility: visible }
+    .flex-direction-nav { display: none }
+    .widget-counter li a strong{opacity:1;}
+}
+@media only screen and (max-width: 767px) and (min-width: 480px) { 
+    .logo { float: none; text-align: center !important; }
+    #top-menu-mob, #main-menu-mob { float: right }
+    #main-menu-mob, #top-menu-mob { margin-right: 10px; margin-left: 0; }
+    .recent-box .recent-item, .recent-box .recent-item:nth-child(3n+3) { margin-left: 2px }
+    .scroll-box .scroll-item, .group_items .scroll-item:last-child { margin: 0 27px }
+}
+@media only screen and (max-width: 479px) and (min-width: 320px) { 
+    #main-menu-mob, #top-menu-mob { margin-right: 10px; margin-left: 0; }
+    .logo { float: none; text-align: center !important; }
+    .recent-box .recent-item, .recent-box .recent-item:nth-child(3n+3) { margin-left: 0px }
+    .scroll-box .scroll-item { margin: 0 -1px; width: 131px; }
+}

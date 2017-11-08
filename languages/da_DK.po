@@ -1,0 +1,712 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sahifa 1.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-03 18:07+0200\n"
+"PO-Revision-Date: 2013-10-03 18:07+0200\n"
+"Last-Translator: Fouad Badawy <fouad@mo3aser.com>\n"
+"Language-Team: Tielabs <info@tielabs.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Language: en_EG\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:6
+#: ../loop.php:3
+#: ../page.php:7
+msgid "Not Found"
+msgstr "Ikke fundet"
+
+#: ../404.php:9
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr "Beklager, men den ønskede side blev ikke fundet. Måske vil en søgning hjælpe."
+
+#: ../404.php:13
+msgid "Pages"
+msgstr "Sider"
+
+#: ../404.php:18
+msgid "Categories"
+msgstr "Kategorier"
+
+#: ../404.php:23
+msgid "Tags"
+msgstr "Mærker"
+
+#: ../404.php:35
+msgid "Authors"
+msgstr "Forfattere"
+
+#: ../archive.php:9
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Dagsarkiver: <span>%s</span>"
+
+#: ../archive.php:11
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Månedsarkiver: <span>%s</span>"
+
+#: ../archive.php:13
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Årsarkiver <span>%s</span>"
+
+#: ../archive.php:15
+msgid "Blog Archives"
+msgstr "Artikel-arkiver"
+
+#: ../author.php:9
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Forfatter-arkiver: %s"
+
+#: ../author.php:12
+#: ../category.php:10
+msgid "Feed Subscription"
+msgstr "Feed-abonnement"
+
+#: ../author.php:27
+msgid " 's site"
+msgstr "'s websted"
+
+#: ../author.php:30
+msgid "  on Twitter"
+msgstr " på Twitter"
+
+#: ../author.php:33
+msgid "  on Facebook"
+msgstr " på Facebook"
+
+#: ../author.php:36
+msgid "  on Google+"
+msgstr " på Google+"
+
+#: ../author.php:39
+msgid "  on Linkedin"
+msgstr " på LinkedIn"
+
+#: ../author.php:42
+msgid "  on Flickr"
+msgstr " på Flickr"
+
+#: ../author.php:45
+msgid "  on YouTube"
+msgstr " på YouTube"
+
+#: ../author.php:48
+msgid "  on Pinterest"
+msgstr " på Pinterest"
+
+#: ../author.php:51
+msgid "  on Behance"
+msgstr ""
+
+#: ../author.php:54
+msgid "  on Instagram"
+msgstr ""
+
+#: ../comments.php:3
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Denne artikel er beskyttet med adgangskode. Indtast koden for at se kommentarer."
+
+#: ../comments.php:12
+msgid "No comments"
+msgstr "Ingen kommentarer"
+
+#: ../comments.php:12
+msgid "One comment"
+msgstr "En kommentar"
+
+#: ../comments.php:12
+msgid "comments"
+msgstr "kommentarer"
+
+#: ../comments.php:17
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ældre kommentarer"
+
+#: ../comments.php:18
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyere kommentarer <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../comments.php:34
+msgid "Comments are closed."
+msgstr "Lukket for kommentarer."
+
+#: ../comments.php:46
+msgid "Name"
+msgstr "Navn"
+
+#: ../comments.php:48
+msgid "Email"
+msgstr "Email"
+
+#: ../comments.php:50
+msgid "Website"
+msgstr "Websted"
+
+#: ../comments.php:53
+msgid " Required fields are marked"
+msgstr "Obligatoriske felter er markerede"
+
+#: ../comments.php:57
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Du skal være <a href=\"%s\">logget ind</a> for at kommentere."
+
+#: ../comments.php:58
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Logget ind som <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log ud fra denne konto\">Logge ud?</a>"
+
+#: ../comments.php:59
+msgid "Your email address will not be published."
+msgstr "Din email-adresse offentliggøres IKKE."
+
+#: ../comments.php:60
+msgid "Leave a Reply"
+msgstr "Skriv kommentar"
+
+#: ../comments.php:61
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Skriv kommentar til %s"
+
+#: ../comments.php:62
+msgid "Cancel reply"
+msgstr "Annuller kommentar"
+
+#: ../comments.php:63
+msgid "Post Comment"
+msgstr "Send kommentar"
+
+#: ../footer.php:27
+msgid "Scroll To Top"
+msgstr "Gå til toppen"
+
+#: ../header.php:36
+msgid "Search"
+msgstr "Søg"
+
+#: ../header.php:37
+msgid "Search..."
+msgstr "Søg..."
+
+#: ../header.php:128
+msgid "Random Article"
+msgstr "Tilfældig artikel"
+
+#: ../index.php:23
+msgid "You can use Homepage builder to build your homepage"
+msgstr "Du kan bruge Homepage builder til opbygning af forsiden"
+
+#: ../loop.php:5
+#: ../page.php:9
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Beklager. Ingen resultater blev fundet. Måske søgning kan hjælpe med at finde en relateret artikel."
+
+#: ../loop.php:20
+#: ../loop.php:33
+#: ../loop.php:51
+msgid "Read More &raquo;"
+msgstr "Læs mere &raquo;"
+
+#: ../page.php:46
+msgid "Pages:"
+msgstr "Sider:"
+
+#: ../page.php:50
+msgid "Edit"
+msgstr "Rediger"
+
+#: ../search.php:9
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søgeresultat for: %s"
+
+#: ../search.php:11
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#: ../search.php:23
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Beklager. Intet fundet på søgekriteriete. Prøv igen med andre nøgleord."
+
+#: ../single.php:66
+msgid "Tagged with: "
+msgstr "Mærket med:"
+
+#: ../single.php:79
+msgid "About"
+msgstr "Om"
+
+#: ../single.php:90
+msgid "Previous:"
+msgstr "Foregående:"
+
+#: ../single.php:91
+msgid "Next:"
+msgstr "Næste:"
+
+#: ../tag.php:7
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Mærke-arkiver: %s"
+
+#: ../template-best-reviews.php:59
+msgid "Posted by: "
+msgstr "Skrevet af:"
+
+#: ../template-best-reviews.php:61
+msgid "on "
+msgstr "d. "
+
+#: ../template-best-reviews.php:63
+msgid "in "
+msgstr "i "
+
+#: ../template-restrict.php:43
+msgid "You must be "
+msgstr "Du skal være "
+
+#: ../template-restrict.php:43
+msgid "logged in"
+msgstr "logget ind"
+
+#: ../template-restrict.php:43
+msgid " to view this page."
+msgstr " for at se denne side"
+
+#: ../template-timeline.php:61
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink til %s"
+
+#: ../functions/common-scripts.php:46
+#: ../functions/theme-functions.php:72
+msgid "Go to..."
+msgstr "Gå til..."
+
+#: ../functions/common-scripts.php:47
+#: ../functions/theme-functions.php:1621
+#: ../functions/theme-functions.php:1627
+msgid "Your Rating:"
+msgstr "Bedøm artiklen"
+
+#: ../functions/theme-functions.php:30
+msgid "Top Menu Navigation"
+msgstr "Topmenu-navigation"
+
+#: ../functions/theme-functions.php:31
+msgid "Primary Navigation"
+msgstr "Primær navigation"
+
+#: ../functions/theme-functions.php:56
+msgid "You can use WP menu builder to build menus"
+msgstr "Du kan bruge WP's menubygger til opbygning af menuer"
+
+#: ../functions/theme-functions.php:675
+msgid "Social Networking"
+msgstr "Sociale netværk"
+
+#: ../functions/theme-functions.php:765
+msgid "No items."
+msgstr "Ingen emner."
+
+#: ../functions/theme-functions.php:770
+msgid "Posted "
+msgstr "Offentliggjort"
+
+#: ../functions/theme-functions.php:1301
+msgid "Welcome"
+msgstr "Velkommen"
+
+#: ../functions/theme-functions.php:1304
+msgid "Dashboard"
+msgstr "Kontrolpanel"
+
+#: ../functions/theme-functions.php:1305
+msgid "Your Profile"
+msgstr "Din profil"
+
+#: ../functions/theme-functions.php:1306
+msgid "Logout"
+msgstr "Log ud"
+
+#: ../functions/theme-functions.php:1346
+msgid "Username"
+msgstr "Brugerenavn"
+
+#: ../functions/theme-functions.php:1347
+msgid "Password"
+msgstr "Adgangskode"
+
+#: ../functions/theme-functions.php:1348
+msgid "Log in"
+msgstr "Log ind"
+
+#: ../functions/theme-functions.php:1349
+msgid "Remember Me"
+msgstr "Husk mig"
+
+#: ../functions/theme-functions.php:1354
+msgid "Lost your password?"
+msgstr "Glemt adgangskoden?"
+
+#: ../functions/theme-functions.php:1441
+msgid "Review Overview"
+msgstr "Bedømmelsesoversigt"
+
+#: ../functions/theme-functions.php:1495
+msgid "Summary :"
+msgstr "Resume:"
+
+#: ../functions/theme-functions.php:1598
+msgid "No Ratings Yet !"
+msgstr "Ingen bedømmelser endnu!"
+
+#: ../functions/theme-functions.php:1602
+msgid "Be the first one !"
+msgstr "Bliv den første ..."
+
+#: ../functions/theme-functions.php:1621
+#: ../functions/theme-functions.php:1627
+#: ../functions/theme-functions.php:1634
+msgid "votes"
+msgstr "stemmer"
+
+#: ../functions/theme-functions.php:1632
+#: ../functions/theme-functions.php:1634
+msgid "User Rating:"
+msgstr "Brugerbedømmelser:"
+
+#: ../functions/theme-functions.php:1654
+#: ../functions/theme-functions.php:1661
+#: ../functions/theme-functions.php:1667
+#: ../functions/theme-functions.php:1673
+msgid "ago"
+msgstr "siden"
+
+#: ../functions/theme-functions.php:1830
+#, php-format
+msgid "Page %s"
+msgstr "Side %s"
+
+#: ../functions/widgetize-theme.php:13
+msgid "Primary Widget Area"
+msgstr "Primært widget-område"
+
+#: ../functions/widgetize-theme.php:15
+msgid "The Primary widget area"
+msgstr "Det primære widget-område"
+
+#: ../functions/widgetize-theme.php:21
+msgid "Shop - For WooCommerce Pages"
+msgstr ""
+
+#: ../functions/widgetize-theme.php:23
+msgid "This widget area uses in the WooCommerce pages ."
+msgstr ""
+
+#: ../functions/widgetize-theme.php:53
+msgid "First Footer Widget Area"
+msgstr "Første footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:55
+msgid "The first footer widget area"
+msgstr "Første footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:61
+msgid "Second Footer Widget Area"
+msgstr "Andet footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:63
+msgid "The Second footer widget area"
+msgstr "Andet footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:70
+msgid "Third Footer Widget Area"
+msgstr "Tredie footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:72
+msgid "The Third footer widget area"
+msgstr "Tredie footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:79
+msgid "Fourth Footer Widget Area"
+msgstr "Fjerde footer-widgetområde"
+
+#: ../functions/widgetize-theme.php:81
+msgid "The Fourth footer widget area"
+msgstr "Fjerde footer-widgetområde"
+
+#: ../includes/archives-meta.php:16
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: ../includes/archives-meta.php:16
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: ../includes/archives-meta.php:16
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: ../includes/breadcrumbs.php:15
+msgid "Home"
+msgstr "Forside"
+
+#: ../includes/breadcrumbs.php:107
+msgid "page "
+msgstr "side"
+
+#: ../includes/breaking-news.php:18
+msgid "Breaking News"
+msgstr "Seneste nyt"
+
+#: ../includes/pagenavi.php:159
+msgid "Page %CURRENT_PAGE% of %TOTAL_PAGES%"
+msgstr "Side %CURRENT_PAGE% af %TOTAL_PAGES%"
+
+#: ../includes/pagenavi.php:162
+msgid "&laquo; First"
+msgstr "&laquo; Første"
+
+#: ../includes/pagenavi.php:163
+msgid "Last &raquo;"
+msgstr "Sidste &raquo;"
+
+#: ../includes/pagenavi.php:164
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: ../includes/pagenavi.php:165
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: ../includes/pagenavi.php:166
+#: ../includes/pagenavi.php:167
+msgid "..."
+msgstr "..."
+
+#: ../includes/post-related.php:29
+msgid "Related Articles"
+msgstr "Relaterede artikler"
+
+#: ../includes/post-share.php:7
+msgid "Share !"
+msgstr "Del artiklen!"
+
+#: ../includes/wp_list_comments.php:9
+#, php-format
+msgid "%s "
+msgstr "%s"
+
+#: ../includes/wp_list_comments.php:10
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s klokken %2$s"
+
+#: ../includes/wp_list_comments.php:10
+#: ../includes/wp_list_comments.php:30
+msgid "(Edit)"
+msgstr "(Rediger)"
+
+#: ../includes/wp_list_comments.php:15
+msgid "Your comment is awaiting moderation."
+msgstr "Kommentaren afventer gennemsyn."
+
+#: ../includes/wp_list_comments.php:30
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../includes/widgets/widget-ads.php:78
+#: ../includes/widgets/widget-ads.php:198
+#: ../includes/widgets/widget-ads.php:320
+#: ../includes/widgets/widget-ads.php:441
+#: ../includes/widgets/widget-ads.php:562
+#: ../includes/widgets/widget-ads.php:709
+#: ../includes/widgets/widget-ads.php:817
+#: ../includes/widgets/widget-ads.php:926
+#: ../includes/widgets/widget-ads.php:1038
+#: ../includes/widgets/widget-ads.php:1150
+msgid " Advertisement"
+msgstr "Annonce"
+
+#: ../includes/widgets/widget-author.php:23
+#, php-format
+msgid "About %s"
+msgstr "Om %s"
+
+#: ../includes/widgets/widget-author.php:91
+#, php-format
+msgid "By %s"
+msgstr "Af %s"
+
+#: ../includes/widgets/widget-author.php:99
+msgid "All"
+msgstr "Alle"
+
+#: ../includes/widgets/widget-authors-posts.php:46
+msgid "Authors Posts"
+msgstr "Forfatterindlæg"
+
+#: ../includes/widgets/widget-category.php:46
+msgid "Category Posts"
+msgstr "Kategoriindlæg"
+
+#: ../includes/widgets/widget-comments-avatar.php:42
+msgid "Recent Comments"
+msgstr "Seneste kommentarer"
+
+#: ../includes/widgets/widget-counter.php:52
+#: ../includes/widgets/widget-feedburner.php:30
+msgid "Subscribe"
+msgstr "Abonner"
+
+#: ../includes/widgets/widget-counter.php:52
+#: ../includes/widgets/widget-counter.php:83
+#: ../includes/widgets/widget-counter.php:93
+msgid "Subscribers"
+msgstr "Abonnenter"
+
+#: ../includes/widgets/widget-counter.php:53
+msgid "To RSS Feed"
+msgstr "Til RSS-feed"
+
+#: ../includes/widgets/widget-counter.php:63
+#: ../includes/widgets/widget-counter.php:103
+#: ../includes/widgets/widget-counter.php:113
+#: ../includes/widgets/widget-counter.php:123
+#: ../includes/widgets/widget-counter.php:133
+msgid "Followers"
+msgstr "Følgere"
+
+#: ../includes/widgets/widget-counter.php:73
+msgid "Fans"
+msgstr "Fans"
+
+#: ../includes/widgets/widget-custom-author.php:52
+msgid "About Author"
+msgstr "Om forfatteren"
+
+#: ../includes/widgets/widget-facebook.php:41
+msgid "Find us on Facebook"
+msgstr "Besøg os på Facebook"
+
+#: ../includes/widgets/widget-feedburner.php:27
+msgid "Enter your e-mail address"
+msgstr "Indtast din email-adresse"
+
+#: ../includes/widgets/widget-feedburner.php:51
+msgid "FeedBurner Widget"
+msgstr "FeedBurner Widget"
+
+#: ../includes/widgets/widget-feedburner.php:51
+msgid "Subscribe to our email newsletter."
+msgstr "Abonner på email-nyhedsbrev"
+
+#: ../includes/widgets/widget-flickr.php:44
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../includes/widgets/widget-google.php:53
+msgid "Follow us on Google+"
+msgstr "Følg os på Google+"
+
+#: ../includes/widgets/widget-login.php:35
+msgid "Login"
+msgstr "Log ind"
+
+#: ../includes/widgets/widget-news-pic.php:44
+msgid "News in Pictures"
+msgstr "Nyheder i billeder"
+
+#: ../includes/widgets/widget-posts.php:55
+msgid "Recent Posts"
+msgstr "Seneste indlæg"
+
+#: ../includes/widgets/widget-search.php:15
+msgid "to search type and hit enter"
+msgstr "Søg ved at indtaste - afslut med Enter"
+
+#: ../includes/widgets/widget-social.php:51
+msgid "Social"
+msgstr "Social"
+
+#: ../includes/widgets/widget-tabbed.php:21
+msgid "Popular"
+msgstr "Populære"
+
+#: ../includes/widgets/widget-tabbed.php:22
+msgid "Recent"
+msgstr "Seneste"
+
+#: ../includes/widgets/widget-tabbed.php:23
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: ../includes/widgets/widget-text-html.php:61
+msgid "Text"
+msgstr "Tekst"
+
+#: ../includes/widgets/widget-twitter.php:107
+#, php-format
+msgid "%s ago"
+msgstr "%s siden"
+
+#: ../includes/widgets/widget-twitter.php:109
+msgid "Y/m/d"
+msgstr "Å/m/d"
+
+#: ../includes/widgets/widget-twitter.php:110
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: ../includes/widgets/widget-twitter.php:110
+msgid "Y/m/d H:i:s"
+msgstr "Å/m/d/T:m:s"
+
+#: ../includes/widgets/widget-twitter.php:150
+msgid "@Follow Me"
+msgstr "@Følg mig"
+
+#: ../includes/widgets/widget-video.php:63
+msgid " Featured Video"
+msgstr " Featured video"
+
+#: ../includes/widgets/widget-youtube.php:40
+msgid "Subscribe to our Channel"
+msgstr "Abonner på vores kanal"
+
+#: ../panel/mpanel-functions.php:92
+msgid "Use this image"
+msgstr "Brug dette billede"
+
+#: ../panel/shortcodes/shortcode.php:396
+msgid "About The Author"
+msgstr "Om forfatteren"
+
+#: ../woocommerce/single-product/related.php:38
+#, fuzzy
+msgid "Related Products"
+msgstr "Relaterede artikler"
+
+#, fuzzy
+#~ msgid "Assign Authors"
+#~ msgstr "Forfattere"
+
+#, fuzzy
+#~ msgid "Import author:"
+#~ msgstr "Om forfatteren"
+
+#~ msgid "Category Archives: %s"
+#~ msgstr "Område %s"
