@@ -14,7 +14,7 @@ function tsd_magazine_post_type_init()
                            ],
                            'public'      => true,
                            'taxonomies' => array('post_tag','category'),
-                           'supports' => array('thumbnail', 'author'),
+			   'supports' => array('editor', 'thumbnail', 'author'),
                            'has_archive' => true,
                            'menu_position'=> 3,
                            'show_in_rest' => true,
