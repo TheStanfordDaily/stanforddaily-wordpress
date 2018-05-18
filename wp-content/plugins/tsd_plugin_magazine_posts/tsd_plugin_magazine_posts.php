@@ -21,7 +21,7 @@ function tsd_magazine_post_type_init()
                            'taxonomies' => array('post_tag','category'),
 			   'supports' => array('title','editor', 'thumbnail', 'author'),
                            'has_archive' => true,
-                           'menu_position'=> 3,
+                           'menu_position'=> 3.41309,
                            'show_in_rest' => true,
                            'rest_base'          => 'tsd_magazine_posts',
   							'rest_controller_class' => 'WP_REST_Posts_Controller'
