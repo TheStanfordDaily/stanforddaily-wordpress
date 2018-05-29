@@ -176,7 +176,7 @@ Class PopularWidget implements NormalWidgetInterface
                 $query_opts['include_category'] = $categories[0]->cat_ID;   
             }
 
-            $query_result = jnews_view_counter_query();
+            $query_result = jnews_view_counter_query($query_opts);
 
             echo jnews_sanitize_output($this->render_content($query_result['result']));
         } else {
