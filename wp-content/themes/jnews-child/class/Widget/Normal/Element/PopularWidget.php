@@ -164,12 +164,19 @@ Class PopularWidget implements NormalWidgetInterface
     {
         if(class_exists('JNews_View_Counter'))
         {
+            // implode(
+            $categories = get_the_category();
+            
+            $include_category = "";
+            if ( ! empty( $categories ) ) {
+                $include_category = $categories[0]->id;   
+            }
             $query_result = jnews_view_counter_query(array(
                 'order_by'  => isset($instance['order_by']) ? $instance['order_by'] : 'views',
                 'limit'     => isset($instance['limit']) ? $instance['limit'] : 5,
                 'range'     => isset($instance['range']) ? $instance['range'] : 'all',
                 'post_type' => 'post',
-                'include_category' => get_the_category()
+                'include_category' => $include_category
             ));
 
             echo jnews_sanitize_output($this->render_content($query_result['result']));
