@@ -169,7 +169,7 @@ Class PopularWidget implements NormalWidgetInterface
             
             $include_category = "";
             if ( ! empty( $categories ) ) {
-                $include_category = $categories[0]->id;   
+                $include_category = $categories[0]->cat_ID;   
             }
             $query_result = jnews_view_counter_query(array(
                 'order_by'  => isset($instance['order_by']) ? $instance['order_by'] : 'views',
