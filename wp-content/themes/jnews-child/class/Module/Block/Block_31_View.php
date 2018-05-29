@@ -19,6 +19,7 @@ Class Block_31_View extends BlockViewAbstract
                         <h3 class=\"jeg_post_title\">
                             <a href=\"" . get_the_permalink($post) . "\">" . get_the_title($post) . "</a>
                         </h3>
+                        <h4>" . esc_html(get_the_author_meta('display_name')) . "</h4>
                         {$this->post_meta_2($post)}
                     </div>
                 </article>";
