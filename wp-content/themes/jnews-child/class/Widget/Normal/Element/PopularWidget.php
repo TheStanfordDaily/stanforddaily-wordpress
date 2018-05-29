@@ -1,12 +1,12 @@
 <?php
 /**
- * @author : Stanford Daily (based on PopularWidget from jnews)
+ * @author : jnews
  */
 namespace JNews\Widget\Normal\Element;
 
 use JNews\Widget\Normal\NormalWidgetInterface;
 
-Class StanfordDailyPopularWidget implements NormalWidgetInterface
+Class PopularWidget implements NormalWidgetInterface
 {
     /**
      * Register widget with WordPress.
@@ -169,6 +169,7 @@ Class StanfordDailyPopularWidget implements NormalWidgetInterface
                 'limit'     => isset($instance['limit']) ? $instance['limit'] : 5,
                 'range'     => isset($instance['range']) ? $instance['range'] : 'all',
                 'post_type' => 'post',
+                'include_category' => get_the_category()
             ));
 
             echo jnews_sanitize_output($this->render_content($query_result['result']));
