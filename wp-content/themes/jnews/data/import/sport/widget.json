@@ -1,0 +1,254 @@
+{
+  "default-sidebar": {
+    "jnews_module_element_ads-1": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "ads_image_new_tab": "1",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_social_counter-1": {
+      "title": "Connect with us",
+      "column": "col4",
+      "style": "colored",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22jegtheme%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22dribbble%22%2C%22social_url%22%3A%22https%3A%2F%2Fdribbble.com%2Fenvato%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%2C%7B%22social_icon%22%3A%22soundcloud%22%2C%22social_url%22%3A%22https%3A%2F%2Fsoundcloud.com%2Fdialogdinihari%22%7D%5D",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_tab_post-1": {
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_6",
+      "header_url": "",
+      "limit": "4",
+      "range": "all",
+      "title": ""
+    },
+    "jnews_module_block_19-1": {
+      "first_title": "Recommended",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "All",
+      "post_type": "post",
+      "number_post": "4",
+      "post_offset": "0",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "default",
+      "date_format_custom": "Y/m/d",
+      "pagination_mode": "disable",
+      "pagination_number_post": "6",
+      "pagination_scroll_limit": "0",
+      "column_width": "auto"
+    }
+  },
+  "footer-widget-1": {
+    "jnews_about-2": {
+      "title": "About Us",
+      "aboutimg": "",
+      "aboutimgretina": "",
+      "aboutdesc": "We bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details.\r\n\r\n<a href=\"#\" class=\"readmore\">Read more</a>",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "categories-4": {
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_6",
+      "header_url": "",
+      "title": "Categories"
+    }
+  },
+  "footer-widget-3": {
+    "tag_cloud-1": {
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_6",
+      "header_url": "",
+      "taxonomy": "post_tag",
+      "title": "Tags"
+    }
+  },
+  "footer-widget-4": {
+    "jnews_recent_news-5": {
+      "title": "Recent News",
+      "postnumber": "2",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home": {
+    "jnews_social_counter-3": {
+      "title": "Stay Connected",
+      "column": "col4",
+      "style": "light",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22jegtheme%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22dribbble%22%2C%22social_url%22%3A%22https%3A%2F%2Fdribbble.com%2Fenvato%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%2C%7B%22social_icon%22%3A%22soundcloud%22%2C%22social_url%22%3A%22https%3A%2F%2Fsoundcloud.com%2Fdialogdinihari%22%7D%5D",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_popular-1": {
+      "title": "Popular",
+      "limit": "5",
+      "order_by": "views",
+      "range": "all",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-loop": {
+    "sportspress-event-blocks-2": {
+      "align": "none",
+      "title": "Match Results",
+      "caption": "",
+      "id": "331",
+      "status": "publish",
+      "date": "default",
+      "date_from": "2017-02-22",
+      "date_to": "2017-02-22",
+      "day": "",
+      "number": "5",
+      "order": "default",
+      "show_all_events_link": "1",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "sportspress-league-table-2": {
+      "align": "none",
+      "title": "Standings",
+      "caption": "",
+      "id": "332",
+      "number": "5",
+      "columns": [
+        "pts"
+      ],
+      "show_team_logo": "1",
+      "show_full_table_link": "1",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_block_19-2": {
+      "first_title": "Most Popular",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "All",
+      "post_type": "post",
+      "number_post": "5",
+      "post_offset": "0",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "default",
+      "date_format_custom": "Y/m/d",
+      "pagination_mode": "loadmore",
+      "pagination_number_post": "3",
+      "pagination_scroll_limit": "0",
+      "column_width": "auto"
+    }
+  },
+  "home-2": {
+    "sportspress-league-table-3": {
+      "align": "none",
+      "title": "",
+      "caption": "",
+      "id": "332",
+      "number": "5",
+      "columns": [
+        "p",
+        "w",
+        "d",
+        "l",
+        "f",
+        "a",
+        "gd",
+        "pts"
+      ],
+      "show_team_logo": "1",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "sportspress-countdown-2": {
+      "align": "none",
+      "title": "",
+      "caption": "",
+      "team": "0",
+      "id": "0",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  }
+}

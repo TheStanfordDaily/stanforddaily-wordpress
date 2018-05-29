@@ -1,0 +1,297 @@
+[
+  {
+    "id": "NESs7Ft",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "c0Chdcn",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "6uxzhZK",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          },
+          {
+            "id": "ODYqq6C",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_7",
+              "header_filter_category": "{{category:drink:id}},{{category:recipe:id}},{{category:street-food:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "nextprev",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "first_title": "Latest Recipes",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          },
+          {
+            "id": "4WHSBzk",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "6db7571",
+            "elType": "widget",
+            "settings": {
+              "color": "#eeeeee",
+              "gap": {
+                "unit": "px",
+                "size": 2
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "30",
+                "left": "0",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "divider"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "IfOVfrc",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "sDAz789",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "p7UdLSE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_7",
+              "header_filter_category": "{{category:breakfast:id}},{{category:dinner:id}},{{category:vegetarian:id}},{{category:drink:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "loadmore",
+              "first_title": "More Recipes",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_27_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "bZggVY8",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "fda3c69",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Find A Recipe",
+              "header_type": "heading_5",
+              "header_align": "center",
+              "scheme": "normal"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "47a736b",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": ""
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-search"
+          },
+          {
+            "id": "e2f937b",
+            "elType": "widget",
+            "settings": {
+              "first_title": "About Me",
+              "header_type": "heading_5",
+              "header_align": "center"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "02da086",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "aboutimg": "{{image:fashion2:id}}",
+                "aboutimgretina": "",
+                "aboutname": "Mocha Rose",
+                "aboutoccupation": "Food Blogger",
+                "aboutdesc": "Hello & welcome to my blog! My name is Mocha Rose and I'm a 20-year-old independent blogger with a passion for sharing about fashion and lifestyle.",
+                "signature": "",
+                "signatureretina": "",
+                "align": "1"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_about"
+          },
+          {
+            "id": "7705436",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Follow & Subscribe",
+              "header_type": "heading_5",
+              "header_align": "center"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "ef13e27",
+            "elType": "widget",
+            "settings": {
+              "align": "yes",
+              "account": [
+                {
+                  "social_icon": "facebook",
+                  "social_url": "https:\/\/www.facebook.com\/jegtheme\/",
+                  "_id": "9f41a43"
+                },
+                {
+                  "social_icon": "twitter",
+                  "social_url": "https:\/\/twitter.com\/jegtheme",
+                  "_id": "55299f0"
+                },
+                {
+                  "social_icon": "googleplus",
+                  "social_url": "#",
+                  "_id": "ef02c55"
+                },
+                {
+                  "social_icon": "vk",
+                  "social_url": "#",
+                  "_id": "a6d9ba0"
+                },
+                {
+                  "social_icon": "instagram",
+                  "social_url": "#",
+                  "_id": "53aac85"
+                },
+                {
+                  "social_icon": "flickr",
+                  "social_url": "#",
+                  "_id": "941ecfd"
+                },
+                {
+                  "social_icon": "tumblr",
+                  "social_url": "#",
+                  "_id": "cb528d3"
+                },
+                {
+                  "social_icon": "youtube",
+                  "social_url": "#",
+                  "_id": "09fab6a"
+                }
+              ]
+            },
+            "elements": [],
+            "widgetType": "socialicon"
+          },
+          {
+            "id": "e5ed713",
+            "elType": "widget",
+            "settings": {
+              "first_title": "INSTAGRAM",
+              "header_type": "heading_5",
+              "header_align": "center"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "2e7b15f",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "username": "themodernproper",
+                "column": "2",
+                "row": "3",
+                "hover": "like",
+                "sort": "most_recent",
+                "button": "",
+                "newtab": "1"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_instagram"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

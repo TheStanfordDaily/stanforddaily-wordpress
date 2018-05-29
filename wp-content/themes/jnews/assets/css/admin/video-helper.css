@@ -1,0 +1,167 @@
+.video-documentation-body {
+    overflow: hidden;
+}
+
+.video-documentation-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 99999;
+}
+
+.video-documentation-list h2 {
+    background: #5A5A5A;
+    margin: 0;
+    line-height: 25px;
+    padding: 10px 12px;
+    color: #FFF;
+    border-bottom: 1px solid #555;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.video-documentation-list a.video-active {
+    background: #000;
+}
+
+.video-documentation {
+    position: fixed;
+    background: #0F3F92;
+    color: #fff;
+    font-weight: bold;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 99;
+    padding: 8px 20px;
+    bottom: 20px;
+    right: -170px;
+
+    -moz-transform-origin:0 0;
+    -moz-transform:rotate(-90deg) translate(0%, 0%);
+    -webkit-transform-origin:0 0;
+    -webkit-transform:rotate(-90deg) translate(0%, 0%);
+    -o-transform-origin:0 0;
+    -o-transform:rotate(-90deg) translate(0%, 0%);
+    -ms-transform-origin:0 0;
+    -ms-transform:rotate(-90deg) translate(0%, 0%);
+    transform-origin:0 0;
+    transform:rotate(-90deg) translate(0%, 0%);
+
+    -webkit-border-radius: 4px 4px 0 0 ;
+    -moz-border-radius: 4px 4px 0 0 ;
+    border-radius:4px 4px 0 0 ;
+}
+
+.folded .video-documentation {
+    margin-left: -100px;
+}
+
+.video-documentation i {
+    color: #FFF;
+    display: inline-block;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.video-documentation-wrapper {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background: rgba(0,0,0,1);
+    z-index: 99999;
+    display: none;
+}
+
+
+.video-documentation-body .video-documentation-overlay,
+.video-documentation-body .video-documentation-wrapper{
+    display: block;
+}
+
+.video-documentation-body {
+    overflow: hidden;
+}
+
+.video-documentation-holder {}
+
+.video-documentation-list {
+    right: 40px;
+    position: fixed;
+    display: block;
+    width: 350px;
+    background: #272727;
+    top: 40px;
+    color: #fff;
+    box-sizing: border-box;
+    border-left: 1px solid #474747;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.video-documentation-close {
+    position: fixed;
+    padding: 7px 15px;
+    background: #fff;
+    cursor: pointer;
+    right: 405px;
+    text-align: center;
+    color: #000;
+    opacity: 1;
+    font-size: 16px;
+    height: 21px;
+    width: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.18);
+}
+
+.video-documentation-list a,
+.video-documentation-list a:focus{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #474747;
+    padding: 10px 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.video-documentation-list a.active {
+    background: #111;
+}
+
+.video-documentation-list h3 {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 25px;
+    font-size: 13px;
+    margin: 0;
+
+}
+
+.video-documentation-list a,
+.video-documentation-list a .fa {
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.video-documentation-list a .fa {
+    position: absolute;
+    line-height: 18px;
+    visibility: hidden;
+    left: 5px;
+}
+
+.video-documentation-list a.video-active .fa {
+    visibility: visible;
+    left: 15px;
+}

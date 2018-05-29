@@ -1,0 +1,29 @@
+/** Color **/
+.entry-header .jeg_post_meta .fa, .jeg_post_meta .fa {
+	color: inherit !important;
+}
+
+/** Widget **/
+.widget .jeg_block_heading {
+	margin-bottom: 20px;
+}
+.widget .jeg_block_heading_5 {
+	margin-bottom: 10px;
+}
+.widget .mc4wp-form-fields p, .footer_widget .mc4wp-form-fields p {
+	font-size: 13px;
+}
+
+/** Post **/
+.entry-content blockquote, .entry-content q {
+	font-style: normal;
+	color: #111;
+	font-weight: 500;
+	line-height: normal;
+}
+.jeg_share_button a, .sidefeed_loadmore .btn, .jscroll-to-top > a {
+	border-radius: 0;
+}
+.jeg_thumb .jeg_post_category a {
+	padding: 2px 4px;
+}

@@ -1,0 +1,254 @@
+/** Menu **/
+.jeg_menu li > ul li a {
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+}
+
+.jeg_newsfeed .jeg_post_title {
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.dark .jeg_bg_overlay {
+	background: #000;
+}
+
+/** Forms **/
+input:not([type="submit"]),textarea,select,.chosen-container-single .chosen-single {
+	border-color: #c8c8c8;
+}
+
+/** Block **/
+.jeg_post_meta,
+.jeg_hero_style_7 .jeg_post_meta,
+.jeg_hero_style_7 .jeg_post_meta .fa {
+	color: #666;
+}
+
+.jeg_post_excerpt {
+	font-size: 15px;
+	line-height: 1.6;
+	color: #000;
+}
+
+.jeg_readmore {
+	box-shadow: none;
+	border: 0;
+	padding: 0;
+	text-transform: none;
+	font-size: 13px;
+	border-bottom: 1px solid;
+	color: #000 !important;
+}
+
+.jeg_readmore:hover {
+	background: transparent !important;
+	color: inherit;
+	opacity: .7;
+}
+
+.jeg_post_meta .fa {
+	margin-right: .1em;
+}
+
+.jeg_postblock .jeg_post_meta .fa {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+
+.entry-header .jeg_meta_author,
+.jeg_meta_author {
+	text-transform: none;
+	font-size: 14px;
+	font-family: "PT Serif", Georgia, serif;
+	font-style: italic;
+	margin-right: 12px !important;
+	letter-spacing: -.02em;
+}
+
+.entry-header .jeg_meta_author a,
+.jeg_meta_author a {
+	font-weight: normal;
+}
+
+.entry-header .jeg_meta_date .fa,
+.jeg_meta_date .fa {
+	display: none;
+}
+
+.jeg_pl_lg_4 .jeg_post_title {
+	line-height: 1.25;
+}
+
+.jeg_pl_lg_9 .jeg_post_title {
+	font-weight: bold;
+	font-size: 28px;
+}
+
+/* Block Heading */
+.jeg_block_heading_5:before {
+	border-width: 1px;
+	/*border-color: #c8c8c8;*/
+}
+
+.widget .jeg_block_heading_5 .jeg_block_title {
+	float: none;
+	text-align: center;
+}
+
+.widget .jeg_block_heading_5 .jeg_block_title span {
+	padding: 0 15px;
+}
+
+.jeg_block_heading_9 {
+	border-top-width: 2px;
+	border-top-color: #000;
+	border-bottom: 0;
+	margin-bottom: 20px;
+}
+
+.jeg_block_heading_5 .jeg_block_title,
+.jeg_block_heading_9 .jeg_block_title {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.jeg_postblock_carousel_1 .jeg_post_title {
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: normal;
+}
+
+.jeg_postblock_carousel_1 .jeg_post_meta {
+	display: none;
+}
+
+.jeg_postblock_carousel_2 .jeg_post_title {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jeg_postblock_carousel_2 .jeg_post_category {
+	margin-bottom: 12px;
+}
+
+/* Heropost */
+.jeg_hero_style_7 .jeg_meta_author {
+	font-size: 16px;
+	margin-right: 1em !important;
+}
+
+div[data-vc-stretch-content="true"] .jeg_heroblock .jeg_post_title {
+	font-size: 22px;
+}
+
+div[data-vc-stretch-content="true"] .jeg_heroblock_7.jeg_hero_style_1 .jeg_post_title {
+	max-width: 80%;
+	margin-left: 0;
+}
+
+/* Slider */
+.jeg_slider_type_4 .jeg_slide_item {
+	height: 600px;
+}
+
+.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title {
+	font-weight: bold;
+}
+
+.jeg_slider_type_4 .jeg_slide_caption:before,
+.jeg_slider_type_4 .jeg_slide_caption:after {
+	display: none;
+}
+
+.jeg_slider_type_4 .jeg_slide_caption .jeg_post_category {
+	margin-bottom: 10px;
+}
+
+.jeg_slider_type_4 .jeg_slide_item:before {
+	background: rgba(0, 0, 0, .18);
+}
+
+/** Post **/
+.entry-content blockquote,
+.entry-content q {
+	color: #000;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-style: normal;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	font-weight: bold;
+}
+
+/** Archive **/
+
+/** Widget **/
+.jeg_inline_subscribeform.alt {
+	color: #aaa;
+}
+
+.jeg_inline_subscribeform.alt .mc4wp-form h3 {
+	color: #fff;
+}
+
+.jeg_inline_subscribeform.alt input[type="text"],
+.jeg_inline_subscribeform.alt input[type="email"] {
+	border: 0;
+}
+
+.jeg_inline_subscribeform.alt .mc4wp-form input[type="submit"] {
+	background: #313131;
+}
+
+.jeg_footer .jeg_footer_heading h3, .jeg_footer .widget h2 {
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.jeg_inline_subscribeform .mc4wp-form h3 {
+	font-size: 18px;
+}
+
+/** Footer **/
+.footer_widget.widget_categories > ul {
+	-webkit-columns: 1;
+	columns: 1;
+}
+
+/** Custom Class **/
+.jeg_otb {
+	overflow: visible !important;
+}
+
+@media (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+	.jeg_slider_type_4 .jeg_slide_item {
+		height: 500px;
+	}
+}
+@media only screen and (max-width : 767px) {
+}
+@media only screen and (max-width : 667px) {
+	.jeg_slider_type_4 .jeg_slide_item {
+		height: 400px;
+	}
+}
+@media only screen and (max-width : 568px) {
+}
+@media only screen and (max-width : 480px) {
+	.jeg_slider_type_4 .jeg_slide_item {
+		height: 300px;
+	}
+}

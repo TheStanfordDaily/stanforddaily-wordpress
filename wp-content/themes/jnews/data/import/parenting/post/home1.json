@@ -1,0 +1,356 @@
+[
+  {
+    "id": "de98Zr5",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "Jse8WSx",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "ft20anM",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 4
+              },
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_post": "",
+              "hero_height_desktop": "580",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_6_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "EWsMlqS",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "0YXed7m",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "cysW0G5",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:family:id}},{{category:food:id}},{{category:health:id}},{{category:lifestyle:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 30
+              },
+              "first_title": "Baby Care Tips",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          },
+          {
+            "id": "XyCc2Fd",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:food:id}},{{category:health:id}},{{category:family:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 2
+              },
+              "include_category": "{{category:lifestyle:id}}",
+              "first_title": "Lifestyle",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_14_elementor"
+          },
+          {
+            "id": "d3ZRZsE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:health:id}},{{category:family:id}},{{category:baby-and-toddler:id}},{{category:food:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "7",
+              "first_title": "Health Care",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_5_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "kSxlRuz",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "072e04c",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Categories",
+              "header_type": "heading_6"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "d7b54a6",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "count": "on"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-categories"
+          },
+          {
+            "id": "50b0606",
+            "elType": "widget",
+            "settings": {
+              "column": "col4",
+              "style": "colored",
+              "fb_id": "1708153456106457",
+              "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+              "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+              "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+              "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+              "account": [
+                {
+                  "social_icon": "facebook",
+                  "social_url": "https:\/\/www.facebook.com\/jegtheme\/",
+                  "_id": "6b8dfc1"
+                },
+                {
+                  "social_icon": "twitter",
+                  "social_url": "https:\/\/twitter.com\/jegtheme",
+                  "_id": "ad85b4e"
+                },
+                {
+                  "social_icon": "instagram",
+                  "social_url": "https:\/\/www.instagram.com\/envato\/",
+                  "_id": "23f4962"
+                },
+                {
+                  "social_icon": "youtube",
+                  "social_url": "http:\/\/www.youtube.com\/user\/Envato",
+                  "_id": "9ad62a6"
+                }
+              ]
+            },
+            "elements": [],
+            "widgetType": "socialcounter"
+          },
+          {
+            "id": "304940d",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_345x345:url:full}}",
+                "id": "{{image:ad_345x345:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "f1ab9d8",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Popular News",
+              "header_type": "heading_6"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "5e234cb",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "limit": "5",
+                "order_by": "views",
+                "range": "all"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_popular"
+          },
+          {
+            "id": "779b869",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Don't Miss",
+              "header_type": "heading_6"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "6a54767",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "first_title": "",
+                "second_title": "",
+                "url": "",
+                "header_type": "heading_6",
+                "header_background": "",
+                "header_secondary_background": "",
+                "header_text_color": "",
+                "header_line_color": "",
+                "header_accent_color": "",
+                "header_filter_category": "",
+                "header_filter_author": "",
+                "header_filter_tag": "",
+                "header_filter_text": "All",
+                "post_type": "post",
+                "content_type": "all",
+                "number_post": "6",
+                "post_offset": "0",
+                "unique_content": "unique1",
+                "include_post": "",
+                "exclude_post": "",
+                "include_category": "{{category:health:id}}",
+                "exclude_category": "",
+                "include_author": "",
+                "include_tag": "",
+                "exclude_tag": "",
+                "sort_by": "latest",
+                "date_format": "ago",
+                "date_format_custom": "Y\/m\/d",
+                "pagination_mode": "disable",
+                "pagination_number_post": "6",
+                "pagination_scroll_limit": "0",
+                "scheme": "normal",
+                "column_width": "auto",
+                "title_color": "",
+                "accent_color": "",
+                "alt_color": "",
+                "excerpt_color": ""
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_module_block_19"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "4BWhaoe",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "b4j8DVl",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "GByTExK",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image_link": "#",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              }
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "EZoYSVk",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "margin": {
+                "unit": "px",
+                "size": 4
+              },
+              "autoplay_delay": {
+                "unit": "px",
+                "size": 3500
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:food:id}}",
+              "show_nav": "true",
+              "enable_autoplay": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_2_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

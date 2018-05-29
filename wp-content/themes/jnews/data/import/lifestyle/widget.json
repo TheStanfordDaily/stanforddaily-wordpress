@@ -1,0 +1,219 @@
+{
+  "default-sidebar": {
+    "search-2": {
+      "title": ""
+    },
+    "jnews_module_element_ads-4": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "categories-4": {
+      "title": "Categories",
+      "count": "on",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_recent_news-2": {
+      "title": "Recent.",
+      "postnumber": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-1": {
+    "jnews_about-2": {
+      "title": "",
+      "aboutimg": "{{image:footer_logo:id}}",
+      "aboutimgretina": "",
+      "aboutname": "",
+      "aboutoccupation": "",
+      "aboutdesc": "We bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details.",
+      "signature": "",
+      "signatureretina": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "categories-3": {
+      "title": "Category",
+      "count": "on",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-3": {
+    "tag_cloud-2": {
+      "title": "Tags",
+      "taxonomy": "post_tag",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-4": {
+    "recent-posts-3": {
+      "title": "Recent Posts",
+      "number": "3",
+      "show_date": "on",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home": {
+    "jnews_tab_post-2": {
+      "title": "",
+      "limit": "4",
+      "range": "daily",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "categories-2": {
+      "title": "",
+      "count": "on",
+      "header_url": "",
+      "header_type": "heading_7",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_facebook_page-2": {
+      "title": "Facebook",
+      "url": "http://facebook.com/facebook",
+      "appid": "1708153456106457",
+      "tabs": "false",
+      "height": "",
+      "cover": "false",
+      "photo": "true",
+      "header_url": "",
+      "header_type": "heading_7",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-4": {
+    "jnews_tab_post-3": {
+      "title": "",
+      "limit": "4",
+      "range": "daily",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-3": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_popular-3": {
+      "title": "Popular",
+      "limit": "5",
+      "order_by": "comments",
+      "range": "daily",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_block_21-2": {
+      "first_title": "Most Popular",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "",
+      "post_type": "post",
+      "number_post": "4",
+      "post_offset": "",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "ago",
+      "date_format_custom": "",
+      "pagination_mode": "disable",
+      "pagination_number_post": "16",
+      "pagination_scroll_limit": "",
+      "column_width": "auto"
+    },
+    "jnews_facebook_page-3": {
+      "title": "Facebook",
+      "url": "http://facebook.com/facebook",
+      "appid": "1708153456106457",
+      "tabs": "false",
+      "height": "",
+      "cover": "false",
+      "photo": "true",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "#212121",
+      "header_text_color": ""
+    }
+  },
+  "home-5": {
+    "jnews_popular-2": {
+      "title": "Popular.",
+      "limit": "5",
+      "order_by": "comments",
+      "range": "daily",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_tab_post-4": {
+      "title": "",
+      "limit": "4",
+      "range": "daily",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-5": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    }
+  }
+}

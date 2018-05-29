@@ -1,0 +1,259 @@
+
+.slider-input-wrapper input[type=range] {
+    -webkit-appearance: none;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 5px;
+    width: calc(100% - 100px);
+    padding: 0; }
+.slider-input-wrapper input[type=range]:focus {
+    box-shadow: none;
+    outline: none; }
+.slider-input-wrapper input[type=range]:hover {
+    background-color: rgba(0, 0, 0, 0.25); }
+.slider-input-wrapper input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #3498D9; }
+.slider-input-wrapper input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #3498D9; }
+.slider-input-wrapper input[type=range]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #3498D9; }
+.slider-input-wrapper input[type=range]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #3498D9; }
+.slider-input-wrapper input[type=range]::-moz-range-track {
+    border: inherit;
+    background: transparent; }
+.slider-input-wrapper input[type=range]::-ms-track {
+    border: inherit;
+    color: transparent;
+    background: transparent; }
+.slider-input-wrapper input[type=range]::-ms-fill-lower, .slider-input-wrapper input[type=range]::-ms-fill-upper {
+    background: transparent; }
+.slider-input-wrapper input[type=range]::-ms-tooltip {
+    display: none; }
+
+.slider-input-wrapper input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+    height: 5px;
+    width: calc(100% - 100px);
+    padding: 0;
+}
+
+.jnews_range_value {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    width: 49px;
+    border: 1px solid #ddd;
+    margin-left: 8px;
+    line-height: 26px;
+    display: inline-block;
+}
+
+.jnews-slider-reset {
+    color: rgba(0, 0, 0, 0.2);
+    float: right;
+    -webkit-transition: color 0.5s ease-in;
+    -moz-transition: color 0.5s ease-in;
+    -ms-transition: color 0.5s ease-in;
+    -o-transition: color 0.5s ease-in;
+    transition: color 0.5s ease-in;
+}
+
+.jnews-slider-reset span {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.wp-tab-panel.vc_checkblock {
+    padding: 7px;
+}
+
+.vc_checkblock label {
+    display: block;
+    padding: 3px 0;
+}
+
+.wp-tab-panel.vc_checkblock input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.select2-container {
+    z-index: 100000;
+}
+
+.vc_ui-panel .select2-container {
+    width: 100% !important;
+    z-index: auto;
+}
+
+.vc_ui-panel .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid #cfcfcf 1px;
+}
+
+.vc_ui-panel .select2-container--default .select2-selection--multiple .select2-selection__choice,
+.vc_ui-panel .select2-container--default .select2-selection--multiple {
+    border-radius: 1px;
+}
+
+.vc_ui-panel .select2-container .select2-search--inline {
+    margin-bottom: 0;
+}
+
+.select2-container li {
+    margin-bottom: 0;
+}
+
+.vc_ui-panel .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: solid #cfcfcf 1px;
+    border-radius: 1px;
+}
+
+.radio-image-wrapper label .radioimage_field {
+    display: none;
+}
+
+.radio-image-wrapper label {
+    display: inline-block;
+    margin: 5px;
+    vertical-align: top;
+}
+
+.radio-image-wrapper label img {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    padding: 3px;
+}
+
+.radio-image-wrapper label .radioimage_field:checked ~ img {
+    border-color: #278ab7;
+    background-color: #278ab7;
+}
+
+.vc_edit_form_elements input.wp-color-picker[type="text"] {
+    width: 150px !important;
+}
+
+.number-input-wrapper {
+    position: relative;
+}
+
+.number-input-wrapper .ui-spinner.ui-widget-content .ui-spinner-button {
+    position: absolute;
+    right: 0;
+    color: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 0 5px;
+    width: 20px;
+    height: calc(50% + 0.5em);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background: transparent;
+    background: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.number-input-wrapper .ui-spinner.ui-widget-content .ui-spinner-button.ui-spinner-up {
+    top: 4px;
+}
+
+.number-input-wrapper .ui-spinner.ui-widget-content .ui-spinner-button.ui-spinner-down {
+    top: 19px;
+}
+
+.number-input-wrapper .ui-spinner.ui-widget-content .ui-spinner-button .ui-button-text {
+    display: none;
+}
+
+.number-input-wrapper .ui-spinner.ui-widget-content .ui-spinner-button.ui-spinner-up::before {
+    content: "\f343";
+    font-family: dashicons;
+}
+
+.number-input-wrapper .ui-spinner.ui-widget-content .ui-spinner-button.ui-spinner-down::before {
+    content: "\f347";
+    font-family: dashicons;
+}
+
+.vc_wrapper-param-type-alert  .wpb_element_label,
+.vc_wrapper-param-type-alert  .vc_description  {
+    display: none;
+}
+
+
+.vc-alert-element {
+    width: 100%;
+    clear: both;
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 9px 13px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.vc-alert-element.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.vc-alert-element.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.vc-alert-element.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.vc-alert-element strong {
+    font-weight:bold;
+}
+
+.vc-alert-element .alert-description {
+    margin-top: 5px;
+}
+
+.vc_ui-panel-content-container .ui-widget-content {
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+.vc_edit_form_elements input:focus {
+    border: 1px solid #ddd;
+    -webkit-box-shadow: inset 0 1px 2px rgba( 0, 0, 0, 0.07 );
+    box-shadow: inset 0 1px 2px rgba( 0, 0, 0, 0.07 );
+}
+
+.wp-admin .vc_layout-onion  input[type="text"] {
+    padding: 0;
+}

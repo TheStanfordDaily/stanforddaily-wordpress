@@ -1,0 +1,40 @@
+body.mce-content-body {
+    max-width: 710px;
+    margin: 0;
+    padding: 10px 30px !important;
+    right: 100px;
+    position: relative;
+}
+
+body.mce-content-body.content:before {
+    content: "";
+    display: block;
+    position: fixed;
+    background: #f5f5f5;
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #ddd;
+    z-index: 1;
+    width: 100px;
+}
+
+body.mceContentBody.content:after {
+    content: 'SIDEBAR';
+    color: #9F9F9F;
+    position: fixed;
+    left: 0;
+    top: 15px;
+    display: block;
+    width: 10px;
+    z-index: 5;
+    text-align: center;
+    right: 50px;
+}
+
+.aligncenter, div.aligncenter {
+    text-align: center;
+    display: block;
+    margin: 5px auto 5px auto;
+}

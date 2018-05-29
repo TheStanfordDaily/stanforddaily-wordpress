@@ -1,0 +1,181 @@
+/* Menu */
+.jeg_main_menu > li > a {
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+.jeg_menu li > ul li a {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+/* Blocks */
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 5px 7px;
+	line-height: 1;
+	letter-spacing: 2px;
+	font-size: 10px;
+}
+.jeg_post_meta {
+	letter-spacing: 1px;
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto
+}
+.jeg_readmore {
+	border: 2px solid #121212;
+	box-shadow: none;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 10px;
+	padding: 8px 20px;
+}
+.jeg_block_nav a {
+	border: 2px solid;
+	width: 34px;
+}
+.jeg_block_loadmore a {
+	border: 2px solid #121212;
+	line-height: 28px;
+	height: auto;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.jeg_block_loadmore a:before, .jeg_block_loadmore a:after {
+	display: none;
+}
+.jeg_pl_md_1 .jeg_post_title {
+	font-size: 18px;
+	line-height: 1.3;
+}
+.jeg_postblock_23 .jeg_post_title {
+	font-size: 20px;
+	line-height: 1.25;
+}
+.jeg_postblock_23 .jeg_post_excerpt {
+	margin: 15px 0;
+}
+.jeg_postblock_27 .jeg_post_category a {
+	font-size: 10px;
+	letter-spacing: 1px;
+	border-bottom: 1px solid;
+	padding-bottom: 5px;
+	margin-bottom: 8px;
+}
+.jeg_pl_md_4 .jeg_post_title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.3;
+}
+.jeg_pl_sm .jeg_post_title {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.jeg_pl_md_box .jeg_post_title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/** Hero **/
+.jeg_hero_style_6 .jeg_post_title {
+	line-height: 1.2;
+}
+.jeg_hero_style_6 .jeg_post_meta {
+	padding: 1px 0px;
+}
+
+/** Post **/
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+	font-weight: 600;
+}
+.entry-content blockquote, .entry-content q {
+	font-style: normal;
+	color: #121212;
+	font-weight: bold;
+	font-size: 18px;
+}
+.entry-content .pullquote {
+	font-size: 22px;
+}
+.entry-content .pullquote:after {
+	margin-bottom: 0;
+}
+.entry-content .pullquote:before {
+	margin-top: 0;
+}
+.jeg_share_button a {
+	border-radius: 0;
+}
+.jeg_single_tpl_6 .jeg_featured_bg {
+	background: #212121;
+}
+.jeg_single_tpl_6 .jeg_featured_img {
+	opacity: 0.8;
+}
+
+/** Widgets **/
+.jeg_tabpost_nav li {
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	border-color: #121212 !important;
+	border-width: 2px !important;
+}
+.jeg_tabpost_nav li.active {
+	background: #121212;
+	color: #fff;
+}
+.popularpost_item {
+	margin-bottom: 15px;
+}
+.popularpost_item .jeg_post_title {
+	font-weight: bold;
+}
+.popularpost_item .jeg_post_title a:before {
+	background: transparent;
+	height: auto;
+	font-weight: bold;
+	font-style: normal;
+	border-radius: 0;
+	border: 2px solid;
+}
+.popularpost_item:first-child .jeg_post_title a:before, .popularpost_item:first-child:hover .jeg_post_title a:before {
+	border: none;
+	border-left: 2px solid
+}
+.widget_categories li a, .widget_nav_menu li a {
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+/* Mailchimp */
+.widget .mc4wp-form, .jeg_sidebar .mc4wp-form {
+	background: #f5f5f5;
+	padding: 35px;
+	border: 0;
+}
+.widget .mc4wp-form .jeg_mc4wp_heading {
+	margin-bottom: 1em;
+}
+.jeg_inline_subscribeform .mc4wp-form h3 {
+	font-size: 20px;
+}
+
+/** Footer **/
+.jscroll-to-top > a {
+	border-radius: 0;
+	border: 2px solid #121212;
+	background: #fff;
+	color: #121212;
+	line-height: 40px;
+	box-shadow: none;
+}
+.jeg_footer p.copyright {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto
+}

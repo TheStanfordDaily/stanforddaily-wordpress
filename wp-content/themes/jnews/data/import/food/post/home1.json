@@ -1,0 +1,39 @@
+[
+  {
+    "id": "7Wrp9Tf",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "B7OvS6t",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "HWvLZaK",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 30
+              },
+              "hero_style": "jeg_hero_style_7",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              }
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_8_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

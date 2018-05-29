@@ -1,0 +1,419 @@
+[
+  {
+    "id": "875f07c",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "border_border": "solid",
+      "border_width": {
+        "unit": "px",
+        "top": "1",
+        "right": "0",
+        "bottom": "1",
+        "left": "0",
+        "isLinked": false
+      },
+      "border_color": "#e0e0e0"
+    },
+    "elements": [
+      {
+        "id": "7831c6c",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "5c58057",
+            "elType": "section",
+            "settings": [],
+            "elements": [
+              {
+                "id": "42c1aa4",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 100,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "4233acf",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 10
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "f3707d1",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Subscribe to Newsletter",
+                      "align": "center",
+                      "title_color": "#000000",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Playfair Display",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 34
+                      },
+                      "typography_font_weight": "700"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "e996c28",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Be the first to get daily fitness news & tips from JNews Fitness.",
+                      "header_size": "h4",
+                      "align": "center",
+                      "title_color": "#9d9d9e",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Source Sans Pro",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 17
+                      },
+                      "typography_font_weight": "normal"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "852235b",
+                    "elType": "widget",
+                    "settings": {
+                      "shortcode": "[mc4wp_form]"
+                    },
+                    "elements": [],
+                    "widgetType": "shortcode"
+                  },
+                  {
+                    "id": "9872c43",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 20
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "c1dfaf1",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "c142c3e",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "a416a47",
+            "elType": "section",
+            "settings": {
+              "structure": "50"
+            },
+            "elements": [
+              {
+                "id": "04a3cb3",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 20,
+                  "_inline_size": 33.421
+                },
+                "elements": [
+                  {
+                    "id": "e032a92",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 10
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "5557a9d",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 10
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "3bd03c9",
+                    "elType": "widget",
+                    "settings": {
+                      "image": {
+                        "url": "{{image:footer_logo:url:full}}",
+                        "id": "{{image:footer_logo:id}}"
+                      },
+                      "image_size": "full",
+                      "align": "left"
+                    },
+                    "elements": [],
+                    "widgetType": "image"
+                  },
+                  {
+                    "id": "021bfe2",
+                    "elType": "widget",
+                    "settings": {
+                      "editor": "<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Maecenas malesuada. Quisque ut nisi.<\/p>"
+                    },
+                    "elements": [],
+                    "widgetType": "text-editor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "f8d5dc2",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 20,
+                  "_inline_size": 16.579
+                },
+                "elements": [],
+                "isInner": true
+              },
+              {
+                "id": "d406412",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 20,
+                  "_inline_size": 16.667
+                },
+                "elements": [
+                  {
+                    "id": "0e510ca",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 10
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "4100143",
+                    "elType": "widget",
+                    "settings": {
+                      "wp": {
+                        "title": "Categories",
+                        "nav_menu": ""
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "wp-widget-nav_menu"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "2d71bbc",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 20,
+                  "_inline_size": 16.667
+                },
+                "elements": [
+                  {
+                    "id": "b13f18e",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 10
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "0cdb923",
+                    "elType": "widget",
+                    "settings": {
+                      "wp": {
+                        "title": "Information",
+                        "nav_menu": ""
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "wp-widget-nav_menu"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "0170b86",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 20,
+                  "_inline_size": 16.666
+                },
+                "elements": [
+                  {
+                    "id": "a1c7aae",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 10
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "c4fb32d",
+                    "elType": "widget",
+                    "settings": {
+                      "wp": {
+                        "title": "About",
+                        "nav_menu": ""
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "wp-widget-nav_menu"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "aaac61b",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 40
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "5d7aaa5",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "border_border": "solid",
+      "border_width": {
+        "unit": "px",
+        "top": "1",
+        "right": "0",
+        "bottom": "0",
+        "left": "0",
+        "isLinked": false
+      },
+      "border_color": "#e0e0e0"
+    },
+    "elements": [
+      {
+        "id": "37d02ff",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "e9de0b9",
+            "elType": "section",
+            "settings": {
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "c5da6e8",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null,
+                  "content_position": "center"
+                },
+                "elements": [
+                  {
+                    "id": "fc7d229",
+                    "elType": "widget",
+                    "settings": {
+                      "editor": "<p>© 2018 JNews - Premium WordPress news & magazine theme by - Jegtheme.<\/p>"
+                    },
+                    "elements": [],
+                    "widgetType": "text-editor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "99a3a92",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null,
+                  "content_position": "center"
+                },
+                "elements": [
+                  {
+                    "id": "10addc9",
+                    "elType": "widget",
+                    "settings": {
+                      "social_icon": "nobg",
+                      "_css_classes": "footer_right"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_footer_social_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

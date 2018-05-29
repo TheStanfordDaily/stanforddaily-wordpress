@@ -1,0 +1,320 @@
+[
+  {
+    "id": "tkDITIH",
+    "elType": "section",
+    "settings": {
+      "structure": "20"
+    },
+    "elements": [
+      {
+        "id": "kz0uZt3",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "4leRdGA",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "enable_autoplay": "true",
+              "newsticker_title": "TRENDING",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_newsticker_elementor"
+          },
+          {
+            "id": "wTdftsB",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 2
+              },
+              "unique_content": "unique1",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_14_elementor"
+          },
+          {
+            "id": "rvjVQWD",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_5",
+              "first_title": "Stock Exchange"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "e462c14",
+            "elType": "section",
+            "settings": {
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "f7f86d4",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "JEl3elx",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_5",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:economy:id}}",
+                      "first_title": "Economy",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "885cf51",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "15",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "eOAjaPa",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_5",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:markets:id}}",
+                      "first_title": "Markets",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "owKVqYa",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "36e4101",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "limit": "3",
+                "range": "all"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_tab_post"
+          },
+          {
+            "id": "TrMlX6h",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_5",
+              "first_title": "Newsletter",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "N2UwHfA",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_5",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 3
+              },
+              "first_title": "Opinion",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "MY2A1X6",
+    "elType": "section",
+    "settings": {
+      "structure": "20",
+      "stretch_section": "section-stretched",
+      "css_classes": "vc_custom_1511860982119"
+    },
+    "elements": [
+      {
+        "id": "JdGFOOQ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "fxlR60R",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "margin": {
+                "unit": "px",
+                "size": 0
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:tech:id}},{{category:real-estate:id}}",
+              "show_nav": "true",
+              "css": ".vc_custom_1511860579780{margin-bottom: 0px !important;}",
+              "date_format_custom": "Y\/m\/d",
+              "_css_classes": "vc_custom_1511860579780"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_2_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "bqMGOS5",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "DLQqJT0",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "b8132fe",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          },
+          {
+            "id": "hmQsMC8",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image_link": "#",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              }
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

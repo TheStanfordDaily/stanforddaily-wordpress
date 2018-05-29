@@ -1,0 +1,313 @@
+[
+  {
+    "id": "GPzAoxa",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "qdBznTq",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "fZLSt48",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 2
+              },
+              "hero_style": "jeg_hero_style_2",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_12_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "DAX4PdJ",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "BwnhlXS",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "Ku3aHEJ",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:news:id}},{{category:tech:id}},{{category:lifestyle:id}},{{category:entertainment:id}}",
+              "header_filter_text": "الكل",
+              "post_offset": {
+                "unit": "px",
+                "size": 1
+              },
+              "unique_content": "unique1",
+              "sort_by": "popular_post_month",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 30
+              },
+              "first_title": "محتوى متميز",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          },
+          {
+            "id": "4yakxWc",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:politics:id}},{{category:world:id}},{{category:business:id}},{{category:science:id}}",
+              "header_filter_text": "الكل",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:politics:id}},{{category:world:id}},{{category:business:id}},{{category:science:id}}",
+              "pagination_mode": "nextprev",
+              "first_title": "سياسة",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          },
+          {
+            "id": "00lEAjJ",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image_new_tab": "yes",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              },
+              "ads_image_link": "http:\/\/bit.ly\/jnewsio"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "791e8d5",
+            "elType": "section",
+            "settings": {
+              "gap": "extended",
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "79fe629",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "oMc8hfj",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_filter_category": "{{category:startup:id}},{{category:mobile:id}},{{category:apps:id}},{{category:gear:id}}",
+                      "header_filter_text": "الكل",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 4
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:tech:id}}",
+                      "first_title": "التكنولوجيا",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "c286ea8",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "qws13Pj",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_filter_category": "{{category:travel:id}},{{category:health:id}},{{category:food:id}},{{category:fashion:id}}",
+                      "header_filter_text": "الكل",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 4
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:lifestyle:id}}",
+                      "first_title": "لايف ستايل",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "ZU24tdo",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "09B19WG",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home-2"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          },
+          {
+            "id": "KfpaMRc",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:tech:id}}",
+              "sort_by": "random",
+              "first_title": "لا تفوت",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_19_elementor"
+          },
+          {
+            "id": "PHwetJn",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image_new_tab": "yes",
+              "ads_image": {
+                "url": "{{image:ad_300x600:url:full}}",
+                "id": "{{image:ad_300x600:id}}"
+              },
+              "ads_image_link": "http:\/\/bit.ly\/jnewsio",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "KZGKTJO",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "mWcn5Np",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "eK5ZZua",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 2
+              },
+              "hero_style": "jeg_hero_style_5",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "hero_height_desktop": "350px",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_7_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

@@ -1,0 +1,74 @@
+body {
+	font-size: 14px;
+}
+.jeg_header .container {
+	padding: 0 50px;
+}
+.jeg_header .jeg_menu.jeg_main_menu {
+	font-size: 13px;
+}
+.jeg_block_title span {
+	font-size: 14px;
+}
+.jeg_block_heading_9 .jeg_block_title span {
+	line-height: 32px;
+	display: inline;
+}
+.jeg_pl_md_card .jeg_postblock_content {
+	padding: 12px 15px 0;
+	margin: -50px 10px 0;
+}
+.jeg_pl_lg_card .jeg_postblock_content {
+    padding: 15px 20px 0px;
+	margin: -60px 10px 0;
+}
+.jeg_postblock_11 .jeg_post_category {
+	display: none;
+}
+.jeg_postblock_12 .jeg_post_category {
+	display: none;
+}
+.jeg_block_loadmore a::before, .jeg_block_loadmore a::after {
+	display: none;
+}
+.jeg_block_loadmore a {
+	width: 100%;
+}
+.jeg_content {
+    padding: 30px 0 40px;
+}
+.jeg_hero_style_2 .jeg_thumb:before {
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 1) 100%);
+}
+.jeg_mc4wp_heading {
+	margin-bottom: 10px;
+}
+.page-template-template-builder .jeg_content {
+	padding: 1px 0 40px;
+}
+.jeg_pl_sm .jeg_post_title {
+	font-weight: normal;
+    font-size: 14px;
+}
+.jeg_review_list_widget .jeg_pl_sm .jeg_post_title {
+	font-weight: bold;
+}
+.jeg_cat_subtitle {
+	font-style: normal;
+}
+.jeg_review_widget .average_review_score .average_score {
+    margin-top: 5px;
+}
+.jeg_slider_type_3.owl-carousel .owl-nav div {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.25);
+}
+.footer_widget.widget_tag_cloud .tagcloud a:hover {
+    color: #fff;
+}
+.jeg_midbar .jeg_social_icon_block.nobg a .fa {
+    font-size: 16px;
+}
+.jeg_nav_left .jeg_logo {
+	padding-right: 0;
+}

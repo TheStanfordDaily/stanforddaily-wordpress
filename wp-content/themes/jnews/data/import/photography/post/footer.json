@@ -1,0 +1,43 @@
+[
+  {
+    "id": "b7d37aa",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "e0ba8a3",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "dce9211",
+            "elType": "widget",
+            "settings": {
+              "social_icon": "nobg",
+              "_css_classes": "jeg_aligncenter"
+            },
+            "elements": [],
+            "widgetType": "jnews_footer_social_elementor"
+          },
+          {
+            "id": "89df107",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Copyright © 2018 JNews. Photography Blog theme by Jegtheme.<\/p>",
+              "align": "center",
+              "text_color": "#313638",
+              "typography_typography": "custom",
+              "typography_font_family": "Inconsolata"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

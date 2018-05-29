@@ -1,0 +1,293 @@
+[
+  {
+    "id": "knaslxT",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "ntgwVGk",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "RBHwb6W",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 4
+              },
+              "hero_style": "jeg_hero_style_5",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_5_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "c8MjphJ",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "GRc0emt",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "AUmYnCu",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "header_filter_category": "{{category:news:id}},{{category:destination:id}},{{category:food-drink:id}},{{category:photo:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "first_title": "TRAVEL IDEAS",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          },
+          {
+            "id": "ijPaUwG",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "header_filter_category": "{{category:news:id}},{{category:travel-ideas:id}},{{category:food-drink:id}},{{category:photo:id}},{{category:video:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:destination:id}}",
+              "first_title": "TRAVEL DESTINATION",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          },
+          {
+            "id": "6DDiLqC",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "loadmore",
+              "first_title": "LATEST JOURNAL",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_4_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "bHmRyyS",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "NVlnPIl",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home-3"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "62c3ebd",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "background_background": "classic",
+      "background_image": {
+        "url": "{{image:travel_bg:url:full}}",
+        "id": "{{image:travel_bg:id}}"
+      },
+      "background_overlay_background": "classic",
+      "background_overlay_color": "rgba(61,175,156,0.6)",
+      "css_classes": "elementor_custom_62c3ebd"
+    },
+    "elements": [
+      {
+        "id": "5c7f609",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "b6d7d23",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          },
+          {
+            "id": "d924d92",
+            "elType": "widget",
+            "settings": {
+              "title": "Start Planning Your Trip Today!",
+              "align": "center",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 28
+              },
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "7ec0949",
+            "elType": "widget",
+            "settings": {
+              "title": "We will help create your travel plan perfect! You can set accommodation on your budget and just rest assured we'll take care everything.",
+              "header_size": "h4",
+              "align": "center",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+                "unit": "px",
+                "size": 30
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "200",
+                "bottom": "0",
+                "left": "300",
+                "isLinked": false
+              },
+              "_margin_tablet": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "_margin_mobile": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "0b6ebaf",
+            "elType": "widget",
+            "settings": {
+              "text": "CONTACT US",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 14
+              },
+              "typography_font_weight": "400",
+              "background_color": "#f7be68",
+              "border_radius": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "text_padding": {
+                "unit": "px",
+                "top": "14",
+                "right": "20",
+                "bottom": "14",
+                "left": "20",
+                "isLinked": false
+              },
+              "_animation": "fadeIn"
+            },
+            "elements": [],
+            "widgetType": "button"
+          },
+          {
+            "id": "0d82f88",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]
