@@ -105,7 +105,7 @@ Class HeaderOption extends CustomizerOptionAbstract
             'type'          => 'jnews-select',
             'section'       => $this->section_header_block_builder,
             'label'         => 'Arrangement',
-            'multiple'      => 3,
+            'multiple'      => 4,
             'choices'       => array(
                 'top'           => esc_attr__( 'Top', 'jnews' ),
                 'mid'           => esc_attr__( 'Mid', 'jnews' ),
