@@ -444,13 +444,19 @@ abstract Class ModuleViewAbstract
 
         if(get_theme_mod('jnews_show_block_meta', true))
         {
+            // author detail
+            $author             = $post->post_author;
+            $author_url         = get_author_posts_url($author);
+            $author_name        = get_the_author_meta('display_name', $author);
+            
             if (jnews_is_review($post->ID)) {
                 $output = get_theme_mod('jnews_show_block_meta_rating', true) ? jnews_generate_rating($post->ID, 'jeg_landing_review') : "";
             } else {
-
-                $output .= "<div class=\"jeg_post_meta\">";
-                $output .= get_theme_mod('jnews_show_block_meta_date', true) ? "<div class=\"jeg_meta_date\"><a href=\"" . get_the_permalink($post) . "\" ><i class=\"fa fa-clock-o\"></i> " . $this->format_date($post) . "</a></div>" : "";
-                $output .= "</div>";
+              $output .= "<div class=\"jeg_post_meta\">";
+              $output .= get_theme_mod('jnews_show_block_meta_author', true) ? "<div class=\"jeg_meta_author\"><span class=\"by\">" . jnews_return_translation('by', 'jnews', 'by') . "</span> <a href=\"{$author_url}\">{$author_name}</a></div>" : "";
+              $output .= get_theme_mod('jnews_show_block_meta_date', true) ? "<div class=\"jeg_meta_date\"><a href=\"" . get_the_permalink($post) . "\"><i class=\"fa fa-clock-o\"></i> " . $this->format_date($post) . "</a></div>" : "";
+              // $output .= get_theme_mod('jnews_show_block_meta_comment', true) ? "<div class=\"jeg_meta_comment\"><a href=\"" . jnews_get_respond_link($post->ID) . "\" ><i class=\"fa fa-comment-o\"></i> {$comment}</a></div>" : "";
+              $output .= "</div>";
             }
         }
 
