@@ -79,7 +79,7 @@ Class Block_1_View extends BlockViewAbstract
 
         $second_block = '';
         for($i = 1; $i < sizeof($results); $i++) {
-            $second_block .= $this->render_block_type_3($results[$i]);
+            $second_block .= $this->render_block_type_2($results[$i]);
         }
 
         $output =
@@ -119,7 +119,7 @@ Class Block_1_View extends BlockViewAbstract
 
         $second_block = '';
         for($i = 1; $i < sizeof($results); $i++) {
-            $second_block .= $this->render_block_type_2($results[$i], 'jnews-120x86');
+            $second_block .= $this->render_block_type_3($results[$i], 'jnews-120x86');
         }
 
         $output =
