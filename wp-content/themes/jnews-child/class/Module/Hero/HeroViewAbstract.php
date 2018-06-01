@@ -106,6 +106,12 @@ abstract Class HeroViewAbstract extends ModuleViewAbstract
     {
         $attr['number_post'] = $this->get_number_post();
         $attr['pagination_number_post'] = 1;
+        $attr['meta_query'] = array(
+          array(
+           'key' => '_thumbnail_id',
+           'compare' => 'EXISTS'
+          )
+        );
         $results = $this->build_query($attr);
         return $this->render_output($results['result'], $attr, $column_class);
     }
