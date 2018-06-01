@@ -42,7 +42,13 @@ abstract Class CategoryAbstract extends ArchiveAbstract
                 'number_post' => $this->hero_instance->get_number_post(),
                 'include_category' => $this->term->term_id,
                 'sort_by' => 'latest',
-                'push_archive' => true
+                'push_archive' => true,
+                'meta_query' => array(
+                  array(
+                   'key' => '_thumbnail_id',
+                   'compare' => 'EXISTS'
+                  )
+                )
             );
 
             /** @var Hero\HeroViewAbstract */
