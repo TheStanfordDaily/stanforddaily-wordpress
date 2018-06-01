@@ -78,7 +78,7 @@ Class PopularWidget implements NormalWidgetInterface
         {
             switch($key) {
                 case 0 :
-                    $output .= $this->first_item($key, $value);
+                    $output .= $this->next_item($key, $value);
                     break;
                 default :
                     $output .= $this->next_item($key, $value);
