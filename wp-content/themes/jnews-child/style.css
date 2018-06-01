@@ -14,6 +14,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *  Theme customization starts here
 /* ------------------------------------------------------------------------- */
 
+/* Don't scale images */
 img {
   object-fit: cover;
+}
+
+/* Default image thumbnail */
+.thumbnail-container.no_thumbnail:after{
+  background-image: url('https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.thumbnail-container.no_thumbnail:after{
+  display: none;
 }
