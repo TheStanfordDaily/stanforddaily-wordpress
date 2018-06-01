@@ -20,7 +20,7 @@ img {
 }
 
 /* Default image thumbnail */
-.thumbnail-container.no_thumbnail:after{
+.thumbnail-container.no_thumbnail{
   background-image: url('https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg');
   background-size: contain;
   background-repeat: no-repeat;
