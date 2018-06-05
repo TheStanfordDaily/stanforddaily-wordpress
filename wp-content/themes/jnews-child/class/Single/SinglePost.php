@@ -314,10 +314,10 @@ Class SinglePost
         $category = $top_category[0];
         $sidebar = get_theme_mod('jnews_category_sidebar', 'default-sidebar');
 
-        $is_overwritten = get_theme_mod('jnews_category_override_' . $top_category->term_id, false);
+        $is_overwritten = get_theme_mod('jnews_category_override_' . $top_category["term_id"], false);
         if ( $is_overwritten )
         {
-            $sidebar = get_theme_mod('jnews_category_sidebar_' . $top_category->term_id, 'default-sidebar');
+            $sidebar = get_theme_mod('jnews_category_sidebar_' . $top_category["term_id"], 'default-sidebar');
         }
 
         // return apply_filters( 'jnews_category_sidebar', $option, $category->term_id );
