@@ -293,14 +293,14 @@ Class SinglePost
 
     public function get_sidebar()
     {
-        $sidebar = get_theme_mod('jnews_single_sidebar', 'default-sidebar');
+        // $sidebar = get_theme_mod('jnews_single_sidebar', 'default-sidebar');
 
-        if(vp_metabox('jnews_single_post.override_template', null, $this->post_id))
-        {
-            $sidebar = vp_metabox('jnews_single_post.override.0.sidebar', 'default-sidebar', $this->post_id);
-        }
+        // if(vp_metabox('jnews_single_post.override_template', null, $this->post_id))
+        // {
+        //     $sidebar = vp_metabox('jnews_single_post.override.0.sidebar', 'default-sidebar', $this->post_id);
+        // }
 
-        return apply_filters('jnews_single_post_sidebar', $sidebar, $this->post_id);
+        // return apply_filters('jnews_single_post_sidebar', $sidebar, $this->post_id);
         
         // get the top level category object
         $cats = get_the_category(); // category object
