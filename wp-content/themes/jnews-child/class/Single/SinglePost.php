@@ -293,14 +293,14 @@ Class SinglePost
 
     public function get_sidebar()
     {
-        // $sidebar = get_theme_mod('jnews_single_sidebar', 'default-sidebar');
+        $sidebar = get_theme_mod('jnews_single_sidebar', 'default-sidebar');
 
-        // if(vp_metabox('jnews_single_post.override_template', null, $this->post_id))
-        // {
-        //     $sidebar = vp_metabox('jnews_single_post.override.0.sidebar', 'default-sidebar', $this->post_id);
-        // }
+        if(vp_metabox('jnews_single_post.override_template', null, $this->post_id))
+        {
+            $sidebar = vp_metabox('jnews_single_post.override.0.sidebar', 'default-sidebar', $this->post_id);
+        }
 
-        // return apply_filters('jnews_single_post_sidebar', $sidebar, $this->post_id);
+        return apply_filters('jnews_single_post_sidebar', $sidebar, $this->post_id);
         
         // get the top level category object
         $cats = get_the_category(); // category object
@@ -312,12 +312,13 @@ Class SinglePost
             }
         }
         $category = $top_category[0];
+        var_dump($top_category);
         $sidebar = get_theme_mod('jnews_category_sidebar', 'default-sidebar');
 
-        $is_overwritten = get_theme_mod('jnews_category_override_' . $top_category["term_id"], false);
+        $is_overwritten = get_theme_mod('jnews_category_override_' . $top_category->term_id, false);
         if ( $is_overwritten )
         {
-            $sidebar = get_theme_mod('jnews_category_sidebar_' . $top_category["term_id"], 'default-sidebar');
+            $sidebar = get_theme_mod('jnews_category_sidebar_' . $top_category->term_id, 'default-sidebar');
         }
 
         // return apply_filters( 'jnews_category_sidebar', $option, $category->term_id );
