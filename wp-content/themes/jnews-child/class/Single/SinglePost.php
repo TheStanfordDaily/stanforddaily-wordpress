@@ -295,7 +295,7 @@ Class SinglePost
     {
       // Overrides post sidebar to get category sidebar.
       $category = new \JNews\Category\Category(get_the_category());
-      return $category->get_content_sidebar();
+      return $category->render_sidebar();
     }
 
 	public function get_second_sidebar()
