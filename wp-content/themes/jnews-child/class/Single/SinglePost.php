@@ -311,8 +311,8 @@ Class SinglePost
                 $top_category[] = $cat;  
             }
         }
-        $category = $top_category[0];
-        var_dump($top_category);
+        $top_category = $top_category[0];
+        // var_dump($top_category);
         $sidebar = get_theme_mod('jnews_category_sidebar', 'default-sidebar');
 
         $is_overwritten = get_theme_mod('jnews_category_override_' . $top_category->term_id, false);
