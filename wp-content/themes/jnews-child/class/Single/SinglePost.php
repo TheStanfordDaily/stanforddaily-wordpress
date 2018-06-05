@@ -307,7 +307,7 @@ Class SinglePost
         $top_category = array();
 
         foreach($cats as $cat) {
-            if ($cat->parent == 0) {
+            if ($cat->parent == 0 && $cat->term_id != 1485) {
                 $top_category[] = $cat;  
             }
         }
