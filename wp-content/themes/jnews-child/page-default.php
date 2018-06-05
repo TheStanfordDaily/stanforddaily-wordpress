@@ -2,6 +2,8 @@
 get_header();
 the_post();
 $single = new \JNews\Single\SinglePage();
+$term = get_queried_object(); 
+$category = new \JNews\Category\Category($term);
 ?>
 
     <div class="jeg_main <?php $single->main_class(); ?>">
@@ -67,7 +69,7 @@ $single = new \JNews\Single\SinglePage();
                             }
                             ?>
                         </div>
-                        <?php $single->render_sidebar(); ?>
+                        <?php $category->render_sidebar(); ?>
                     </div>
 
                 </div>
