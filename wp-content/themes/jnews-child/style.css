@@ -28,3 +28,18 @@ img {
 .thumbnail-container.no_thumbnail:after{
   display: none;
 }
+.jeg_container .jeg_content {
+  padding: 10px 0px 40px; /* original: 30px 0px 40px; */
+}
+.jeg_block_heading {
+  margin-bottom: 15px; /* orig: 30px */
+}
+.jeg_pl_sm {
+  margin-bottom: 0px; /* 25px */
+}
+.widget {
+  margin-bottom: 0px; /* 40px */
+}
+.jeg_postblock {
+  margin-bottom: 10px; /* 20px */
+}
