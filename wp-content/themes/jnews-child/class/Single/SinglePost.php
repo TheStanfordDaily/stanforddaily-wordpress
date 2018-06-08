@@ -312,7 +312,6 @@ Class SinglePost
             }
         }
         $top_category = $top_category[0];
-        print("<!--");var_dump($top_category);print("-->");
         $sidebar = get_theme_mod('jnews_category_sidebar', 'default-sidebar');
 
         $is_overwritten = get_theme_mod('jnews_category_override_' . $top_category->term_id, false);
