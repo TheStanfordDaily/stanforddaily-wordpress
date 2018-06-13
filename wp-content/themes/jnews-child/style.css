@@ -58,5 +58,5 @@ img {
 }
 
 .jeg_single_tpl_2 .entry-header {
-  border-bottom: none;
+  border-bottom: none !important;
 }
