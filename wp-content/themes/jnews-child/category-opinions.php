@@ -41,5 +41,11 @@
     </div>
 </div>
 
+<style>
+.jeg_main_content .jeg_posts .jeg_thumb {
+    display: none;
+}
+</style>
+
 
 <?php get_footer(); ?>
