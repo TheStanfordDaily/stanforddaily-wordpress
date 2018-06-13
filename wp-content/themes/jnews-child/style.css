@@ -54,9 +54,9 @@ img {
 }
 
 .jeg_cat_title {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir", sans-serif; /* "Open Sans", serif */
 }
 
 .jeg_single_tpl_2 .entry-header {
-  border-bottom: none !important;
+  border-bottom: none !important; /* 2 px solid #111 */
 }
