@@ -6,7 +6,7 @@ namespace JNews\Widget\Normal\Element;
 
 use JNews\Widget\Normal\NormalWidgetInterface;
 
-Class AboutMultiWidget implements NormalWidgetInterface
+Class AboutWidget implements NormalWidgetInterface
 {
     /**
      * @return array
@@ -39,21 +39,6 @@ Class AboutMultiWidget implements NormalWidgetInterface
                 'desc'      => esc_html__('Display your occupation (for blog).', 'jnews'),
                 'type'      => 'text'
             ),
-            'aboutdesc'   => array(
-                'title'     => esc_html__('About Description', 'jnews'),
-                'desc'      => esc_html__('You may use standard HTML tags and attributes.', 'jnews'),
-                'type'      => 'textarea'
-            ),
-            'signature'   => array(
-                'title'     => esc_html__('Signature', 'jnews'),
-                'desc'      => esc_html__('Put signature at the bottom of content.', 'jnews'),
-                'type'      => 'image'
-            ),
-            'signatureretina'   => array(
-                'title'     => esc_html__('Signature: Retina', 'jnews'),
-                'desc'      => esc_html__('Retina version (2x size) of your signature image.', 'jnews'),
-                'type'      => 'image'
-            ),
             'align' => array(
                 'title'     => esc_html__('Centered Content', 'jnews'),
                 'desc'      => esc_html__('Set content text align center.', 'jnews'),
@@ -78,11 +63,6 @@ Class AboutMultiWidget implements NormalWidgetInterface
         // Extract Widget
         extract( $instance );
 
-        if($text_content !== null)
-        {
-            $aboutdesc = $text_content;
-        }
-
         if ( isset( $aboutimg ) )
         {
             $aboutimg = wp_get_attachment_image_src($aboutimg, 'full');
@@ -99,25 +79,8 @@ Class AboutMultiWidget implements NormalWidgetInterface
             $aboutimgretina = '';
         }
 
-        if ( isset( $signature ) )
-        {
-            $signature = wp_get_attachment_image_src($signature, 'full');
-            $signature = $signature[0];
-        } else {
-            $signature = '';
-        }
-
-        if ( isset( $signatureretina ) )
-        {
-            $signatureretina = wp_get_attachment_image_src($signatureretina, 'full');
-            $signatureretina = $signatureretina[0];
-        } else {
-            $signatureretina = '';
-        }
-
         $aboutname = isset($aboutname) ? $aboutname : '';
         $aboutoccupation = isset($aboutoccupation) ? $aboutoccupation : '';
-        $aboutdesc = isset($aboutdesc) ? $aboutdesc : '';
         $align = isset($align) && $align ? 'jeg_aligncenter' : '';
 
 ?>
@@ -129,13 +92,7 @@ Class AboutMultiWidget implements NormalWidgetInterface
             <?php endif ?>
             <?php if (!empty($aboutname)) : ?><h2 class="jeg_about_name"><?php echo wp_kses( $aboutname, wp_kses_allowed_html() ) ?></h2><?php endif; ?>
             <?php if (!empty($aboutoccupation)) : ?><p class="jeg_about_title"><?php echo wp_kses( $aboutoccupation, wp_kses_allowed_html() ) ?></p><?php endif; ?>
-            <p><?php echo str_replace(PHP_EOL,"<br>", do_shortcode($aboutdesc)) ; ?></p>
 
-            <?php if ( !empty( $signature ) || !empty( $signatureretina ) ) : ?>
-                <div class="jeg_about_autograph">
-                    <img src="<?php echo esc_url($signature) ?>" srcset="<?php echo esc_url($signature) ?> 1x, <?php echo esc_url($signatureretina) ?> 2x" alt="<?php echo esc_attr($aboutname) ?>">
-                </div>
-            <?php endif; ?>
         </div>
 <?php
     }
