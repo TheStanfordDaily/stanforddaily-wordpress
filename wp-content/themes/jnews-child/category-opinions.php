@@ -42,6 +42,7 @@
 </div>
 
 <style>
+/* Hide images on opinions page. */
 .jeg_main_content .jeg_posts .jeg_thumb {
     display: none;
 }
