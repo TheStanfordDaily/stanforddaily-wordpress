@@ -42,7 +42,7 @@ img {
 }
 
 .jeg_pl_sm {
-  margin-bottom: 10px; /* 25px */
+  margin-bottom: 15px; /* 25px */
 }
 
 .widget {
@@ -51,4 +51,8 @@ img {
 
 .jeg_postblock {
   margin-bottom: 10px; /* 20px */
+}
+
+.jeg_cat_title {
+  font-family: "Libre Baskerville", serif;
 }
