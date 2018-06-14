@@ -61,6 +61,12 @@ img {
   border-bottom: none !important; /* 2 px solid #111 */
 }
 
+.jeg_pl_sm_2 .jeg_post_title {
+  font-size: 14px;
+}
+
+/* Messing around with style for custom widget */
+
 .footer_logo img {
   max-width: 50px;
   float: left;
@@ -77,7 +83,6 @@ img {
 
 .jeg_about_title_mod {
   background: none !important;
-  display: inline !important;
   font-family: "Open Sans", sans-serif;
   color: #a0a0a0;
   font-size: 13px;
