@@ -77,6 +77,10 @@ img {
   width: 280px;
 }
 
+li {
+  font-family: "PT Serif", serif;
+}
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
