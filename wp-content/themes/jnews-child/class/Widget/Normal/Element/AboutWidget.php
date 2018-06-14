@@ -99,7 +99,7 @@ Class AboutWidget implements NormalWidgetInterface
                     <img src="<?php echo esc_url($aboutimg) ?>" srcset="<?php echo esc_url($aboutimg) ?> 1x, <?php echo esc_url($aboutimgretina) ?> 2x" alt="<?php bloginfo('name'); ?>" data-pin-no-hover="true">
                 </a>
             <?php endif ?>
-            <?php if (!empty($aboutname)) : ?><h2 class="jeg_about_name"><?php echo wp_kses( $aboutname, wp_kses_allowed_html() ) ?></h2><?php endif; ?>
+            <?php if (!empty($aboutname)) : ?><p class="jeg_about_name"><?php echo wp_kses( $aboutname, wp_kses_allowed_html() ) ?></h2><?php endif; ?>
             <?php if (!empty($aboutoccupation)) : ?><p class="jeg_about_title"><?php echo wp_kses( $aboutoccupation, wp_kses_allowed_html() ) ?></p><?php endif; ?>
             <?php if (!empty($aboutname)) : ?><br clear="left"><?php endif; ?>
             <?php if ( !empty( $aboutimg ) || !empty( $aboutimgretina ) ) : ?>
@@ -107,7 +107,7 @@ Class AboutWidget implements NormalWidgetInterface
                     <img src="<?php echo esc_url($aboutimg) ?>" srcset="<?php echo esc_url($aboutimg) ?> 1x, <?php echo esc_url($aboutimgretina) ?> 2x" alt="<?php bloginfo('name'); ?>" data-pin-no-hover="true">
                 </a>
             <?php endif ?>
-            <?php if (!empty($aboutname)) : ?><h2 class="jeg_about_name"><?php echo wp_kses( $aboutname, wp_kses_allowed_html() ) ?></h2><?php endif; ?>
+            <?php if (!empty($aboutname)) : ?><p class="jeg_about_name"><?php echo wp_kses( $aboutname, wp_kses_allowed_html() ) ?></h2><?php endif; ?>
             <?php if (!empty($aboutoccupation)) : ?><p class="jeg_about_title"><?php echo wp_kses( $aboutoccupation, wp_kses_allowed_html() ) ?></p><?php endif; ?>
         </div>
 <?php
