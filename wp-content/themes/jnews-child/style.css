@@ -73,6 +73,10 @@ img {
   font-family: "Open Sans", sans-serif;
 }
 
+.jeg_pl_lg_2 .jeg_thumb {
+  width: 280px;
+}
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
