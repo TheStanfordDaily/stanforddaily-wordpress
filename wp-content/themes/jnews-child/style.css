@@ -85,6 +85,10 @@ li {
   width: 100%;
 }
 
+.jeg_post_title {
+  font-size: 42px;
+}
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
