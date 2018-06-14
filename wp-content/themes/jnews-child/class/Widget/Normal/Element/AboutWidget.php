@@ -39,6 +39,11 @@ Class AboutWidget implements NormalWidgetInterface
                 'desc'      => esc_html__('Display your occupation (for blog).', 'jnews'),
                 'type'      => 'text'
             ),
+            'aboutusername'   => array(
+                'title'     => esc_html__('Username', 'jnews'),
+                'desc'      => esc_html__('List your WP username.', 'jnews'),
+                'type'      => 'text'
+            ),
             'align' => array(
                 'title'     => esc_html__('Centered Content', 'jnews'),
                 'desc'      => esc_html__('Set content text align center.', 'jnews'),
@@ -80,19 +85,19 @@ Class AboutWidget implements NormalWidgetInterface
         }
 
         $aboutname = isset($aboutname) ? $aboutname : '';
+        $aboutusername = isset($aboutusername) ? $aboutusername : '';
         $aboutoccupation = isset($aboutoccupation) ? $aboutoccupation : '';
         $align = isset($align) && $align ? 'jeg_aligncenter' : '';
 
 ?>
         <div class="jeg_about <?php echo esc_attr($align) ?>">
             <?php if ( !empty( $aboutimg ) || !empty( $aboutimgretina ) ) : ?>
-                <a class="footer_logo" href="<?php echo esc_url(home_url('/')); ?>">
+                <a class="footer_logo" href="<?php echo esc_url(home_url('/author/' . $aboutusername . '/')); ?>">
                     <img src="<?php echo esc_url($aboutimg) ?>" srcset="<?php echo esc_url($aboutimg) ?> 1x, <?php echo esc_url($aboutimgretina) ?> 2x" alt="<?php bloginfo('name'); ?>" data-pin-no-hover="true">
                 </a>
             <?php endif ?>
             <?php if (!empty($aboutname)) : ?><h2 class="jeg_about_name"><?php echo wp_kses( $aboutname, wp_kses_allowed_html() ) ?></h2><?php endif; ?>
             <?php if (!empty($aboutoccupation)) : ?><p class="jeg_about_title"><?php echo wp_kses( $aboutoccupation, wp_kses_allowed_html() ) ?></p><?php endif; ?>
-
         </div>
 <?php
     }
