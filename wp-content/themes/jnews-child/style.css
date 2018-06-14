@@ -77,6 +77,10 @@ img {
   width: 280px;
 }
 
+.category-featured .jeg_thumb {
+  width: 350px;
+}
+
 li {
   font-family: "PT Serif", serif;
 }
