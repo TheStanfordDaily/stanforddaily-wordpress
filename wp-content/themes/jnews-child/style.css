@@ -60,3 +60,16 @@ img {
 .jeg_single_tpl_2 .entry-header {
   border-bottom: none !important; /* 2 px solid #111 */
 }
+
+.footer_logo img {
+  max-width: 20%;
+  float: left;
+}
+
+.jeg_about_name {
+  float: right;
+}
+
+.jeg_about_title {
+  float: right;
+}

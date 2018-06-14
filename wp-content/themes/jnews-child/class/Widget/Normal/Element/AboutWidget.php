@@ -1,6 +1,9 @@
 <?php
 /**
  * @author : Jegtheme
+ * Modified: Do-Hyoung Park
+ *  Eliminated use of signatures and description
+ *  Added field for WP username for linking to author bio upon click
  */
 namespace JNews\Widget\Normal\Element;
 
