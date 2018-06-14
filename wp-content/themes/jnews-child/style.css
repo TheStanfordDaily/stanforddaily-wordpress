@@ -62,13 +62,16 @@ img {
 }
 
 .footer_logo img {
-  max-width: 15%;
+  max-width: 50px;
   float: left;
 }
 
-.jeg_about_name {
-  padding: none !important;
+.widget_jnews_about h2 {
   margin: none !important;
+  padding: none !important;
+}
+
+.jeg_about_name {
   background: none !important;
   display: inline !important;
 }
