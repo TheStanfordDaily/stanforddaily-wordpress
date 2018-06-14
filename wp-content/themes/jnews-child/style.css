@@ -67,9 +67,9 @@ img {
 }
 
 .jeg_about_name {
-  float: right;
+  padding: none;
+  margin: none;
 }
 
 .jeg_about_title {
-  float: right;
 }
