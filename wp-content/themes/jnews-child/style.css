@@ -62,13 +62,15 @@ img {
 }
 
 .footer_logo img {
-  max-width: 20%;
+  max-width: 15%;
   float: left;
 }
 
 .jeg_about_name {
-  padding: none;
-  margin: none;
+  padding: none !important;
+  margin: none !important;
+  background: none !important;
+  display: inline !important;
 }
 
 .jeg_about_title {
