@@ -66,12 +66,18 @@ img {
   float: left;
 }
 
-.jeg_about_name {
+.jeg_about_name_mod {
   background: none !important;
   display: inline !important;
   font-family: "Open Sans", sans-serif;
+  color: #333333;
   font-size: 16px;
 }
 
-.jeg_about_title {
+.jeg_about_title_mod {
+  background: none !important;
+  display: inline !important;
+  font-family: "Open Sans", sans-serif;
+  color: #a0a0a0;
+  font-size: 13px;
 }
