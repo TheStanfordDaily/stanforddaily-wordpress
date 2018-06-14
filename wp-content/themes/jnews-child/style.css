@@ -81,6 +81,10 @@ li {
   width: 280px;
 }
 
+.category_multimedia .jeg_thumb {
+  width: 100%;
+}
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
