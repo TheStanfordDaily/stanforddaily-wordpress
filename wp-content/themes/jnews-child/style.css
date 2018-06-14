@@ -65,6 +65,14 @@ img {
   font-size: 14px;
 }
 
+.basic-question-title {
+  font-family: "PT Serif", serif;
+}
+
+.basic-answer .basic-text {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
