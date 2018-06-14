@@ -77,6 +77,10 @@ li {
   font-family: "PT Serif", serif;
 }
 
+.jnews_category_content_wrapper img {
+  width: 280px;
+}
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
