@@ -681,7 +681,7 @@ Class SinglePost
                     $image_size = 'jnews-1140x815';
                     break;
                 default :
-                    $image_size = 'jnews-1140x570';
+                    $image_size = 'jnews-750x375';
             }
         }
 
