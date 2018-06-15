@@ -28,18 +28,86 @@ img {
 .thumbnail-container.no_thumbnail:after{
   display: none;
 }
+
 .jeg_container .jeg_content {
-  padding: 10px 0px 40px; /* original: 30px 0px 40px; */
+  padding: 20px 0px 30px; /* original: 30px 0px 40px; */
 }
+
+.jnews_category_header_top {
+  padding-top: 10px;
+}
+
 .jeg_block_heading {
-  margin-bottom: 15px; /* orig: 30px */
+  margin-bottom: 25px; /* orig: 30px */
 }
+
 .jeg_pl_sm {
-  margin-bottom: 0px; /* 25px */
+  margin-bottom: 15px; /* 25px */
 }
+
 .widget {
-  margin-bottom: 0px; /* 40px */
+  margin-bottom: 20px; /* 40px */
 }
+
 .jeg_postblock {
   margin-bottom: 10px; /* 20px */
+}
+
+.jeg_cat_title {
+  font-family: "Avenir", sans-serif; /* "Open Sans", serif */
+}
+
+.jeg_single_tpl_2 .entry-header {
+  border-bottom: none !important; /* 2 px solid #111 */
+}
+
+.jeg_pl_sm_2 .jeg_post_title {
+  font-size: 14px;
+}
+
+.basic-question-title {
+  font-family: "PT Serif", serif;
+}
+
+.basic-answer .basic-text {
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  font-family: "PT Serif", serif;
+}
+
+.jnews_category_content_wrapper .jeg_thumb {
+  width: 280px;
+}
+
+.jeg_pl_lg_4 .jeg_thumb {
+  width: 100%;
+}
+
+.jeg_single_tpl_2 .entry-header .jeg_post_title {
+  font-size: 42px !important;
+}
+
+/* Messing around with style for custom widget */
+
+.footer_logo img {
+  max-width: 50px;
+  float: left;
+  padding-bottom: 15px;
+}
+
+.jeg_about_name_mod {
+  background: none !important;
+  display: inline !important;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  font-size: 16px;
+}
+
+.jeg_about_title_mod {
+  background: none !important;
+  font-family: "Open Sans", sans-serif;
+  color: #a0a0a0;
+  font-size: 13px;
 }
