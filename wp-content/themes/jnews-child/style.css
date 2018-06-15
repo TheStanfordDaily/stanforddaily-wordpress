@@ -89,6 +89,34 @@ li {
   font-size: 42px !important;
 }
 
+/* hide "Read More" button */
+.jeg_readmore {
+	display: none;
+}
+.entry-header {
+	margin: 0 0 -8px;
+}
+
+.jeg_pl_sm_2 {
+    margin-bottom: 10px;
+}
+.jeg_pl_sm_2:after {
+	margin-top: 10px;
+}
+
+.vc_tta-container h2 {
+	font-family: "Libre Baskerville", serif;
+}
+
+.adproductsheader {
+	font-family: "Libre Baskerville", serif;
+}
+
+.jnews_header_top_ads {
+	background-color: #212121;
+}
+
+
 /* Messing around with style for custom widget */
 
 .footer_logo img {
