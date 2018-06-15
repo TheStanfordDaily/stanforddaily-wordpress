@@ -675,7 +675,7 @@ Class SinglePost
                     $image_size = 'jnews-featured-1140';
                     break;
                 case 'crop-500';
-                    $image_size = 'jnews-1140x570';
+                    $image_size = 'jnews-750x375';
                     break;
                 case 'crop-715':
                     $image_size = 'jnews-1140x815';
