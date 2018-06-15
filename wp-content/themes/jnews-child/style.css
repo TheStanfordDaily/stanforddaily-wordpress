@@ -116,6 +116,11 @@ li {
 	background-color: #212121;
 }
 
+/* Poll move to back */
+.basic-yop-poll-container {
+  z-index: 1;
+}
+
 
 /* Messing around with style for custom widget */
 
