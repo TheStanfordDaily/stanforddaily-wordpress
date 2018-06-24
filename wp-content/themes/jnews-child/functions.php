@@ -1,4 +1,7 @@
 <?php
+/**
+ * @author : TSD Tech Team
+ */
 
 /**
  * Load parent theme style
