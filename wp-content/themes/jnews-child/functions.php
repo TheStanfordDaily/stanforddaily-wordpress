@@ -20,7 +20,7 @@ function jnews_child_enqueue_parent_style()
 function jnews_the_author_link($author = null)
 {
     if ( function_exists( 'coauthors_posts_links' ) ) {
-        return coauthors_post_links();
+        return coauthors_posts_links();
     }
     else {
         printf('<a href="%1$s">%2$s</a>',
