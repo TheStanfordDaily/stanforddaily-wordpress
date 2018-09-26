@@ -40,7 +40,7 @@ function tsd_get_coauthors_link_for_post($post)
     }
     $links = array();
     foreach ($coauthors as $author) {
-        arr_push($links, coauthors_posts_links_single($author));
+        array_push($links, coauthors_posts_links_single($author));
     }
     return join(", ", $links);
 }
