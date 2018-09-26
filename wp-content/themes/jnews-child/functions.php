@@ -28,3 +28,19 @@ function jnews_the_author_link($author = null)
             get_the_author_meta('display_name', $author));
     }
 }
+
+
+function tsd_get_coauthors_link_for_post($post)
+{
+    if ( function_exists( 'get_coauthors' ) ) {
+        $coauthors = get_coauthors($post->ID);
+    }
+    else {
+        $coauthors = array($post->post_author);
+    }
+    foreach ($coauthors as $author) {
+        $author_url         = get_author_posts_url($author);
+        $author_name        = get_the_author_meta('display_name', $author);
+        $text = join(", ", coauthors_posts_links_single);
+    }
+}
