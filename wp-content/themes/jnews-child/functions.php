@@ -38,9 +38,9 @@ function tsd_get_coauthors_link_for_post($post)
     else {
         $coauthors = array($post->post_author);
     }
-    $text = "";
+    $links = array();
     foreach ($coauthors as $author) {
-        $text .= coauthors_posts_links_single($author);
+        arr_push($links, coauthors_posts_links_single($author));
     }
-    return $text;
+    return join(", ", $links);
 }
