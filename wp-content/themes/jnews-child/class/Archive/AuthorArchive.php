@@ -25,6 +25,7 @@ Class AuthorArchive extends ArchiveAbstract
     public function __construct()
     {
         $this->author = get_the_author_meta( 'ID' );
+        $this->author_nickname = get_the_author_meta( 'nickname' );
         $this->section = isset($_REQUEST['section']) ? $_REQUEST['section'] : '';
     }
 
@@ -43,7 +44,8 @@ Class AuthorArchive extends ArchiveAbstract
             'pagination_number_post' => $post_per_page,
             'number_post' => $post_per_page,
             'post_offset' => $this->offset,
-            'include_author' => $this->author,
+            // 'include_author' => $this->author,
+            'include_author_nickname' => $this->author_nickname,
             'sort_by' => 'latest',
             'pagination_mode' => $this->get_content_pagination(),
             'pagination_scroll_limit' => $this->get_content_pagination_limit(),
