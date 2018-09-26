@@ -63,7 +63,6 @@ Class ModuleQuery
             'include_category',
             'exclude_category',
             'include_author',
-            'include_author_nickname',
             'include_tag',
             'exclude_tag',
             'sort_by',
@@ -478,10 +477,6 @@ Class ModuleQuery
 
             if(!empty($attr['include_author'])) {
                 $args['author'] = $attr['include_author'];
-            }
-
-            if(!empty($attr['include_author_nickname'])) {
-                $args['author_name'] = $attr['include_author_nickname'];
             }
 
             if(!empty($attr['include_tag'])) {
