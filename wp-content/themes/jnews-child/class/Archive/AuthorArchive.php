@@ -25,7 +25,7 @@ Class AuthorArchive extends ArchiveAbstract
     public function __construct()
     {
         $this->author = get_the_author_meta( 'ID' );
-        $this->author_nickname = get_the_author_meta( 'nickname' );
+        $this->author_nickname = get_the_author_meta( 'user_nicename' );
         $this->section = isset($_REQUEST['section']) ? $_REQUEST['section'] : '';
     }
 
