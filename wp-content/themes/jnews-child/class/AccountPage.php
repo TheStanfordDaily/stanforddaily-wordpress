@@ -45,7 +45,7 @@ Class AccountPage
         add_filter( 'document_title_parts',         array( $this, 'account_title') );
         add_filter( 'jnews_dropdown_link',          array( $this, 'dropdown_link' ) );
         add_filter( 'upload_size_limit',            array( $this, 'upload_size_limit' ) );
-        add_filter( 'ajax_query_attachments_args',  array( $this, 'filter_user_media' ) );
+        // add_filter( 'ajax_query_attachments_args',  array( $this, 'filter_user_media' ) );
         add_filter( 'upload_mimes',                 array( $this, 'filter_mime_types' ) );
     }
 
