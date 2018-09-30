@@ -16,6 +16,7 @@ Class AuthorArchive extends ArchiveAbstract
      * @var \WP_Term
      */
     protected $author;
+    protected $authorname;
 
     /**
      * @var String
@@ -25,6 +26,7 @@ Class AuthorArchive extends ArchiveAbstract
     public function __construct()
     {
         $this->author = get_the_author_meta( 'ID' );
+        $this->authorname = get_the_author_meta( 'nickname' );
         if ( function_exists( 'get_coauthors' ) ) {
             $this->coauthors = coauthors_ids(null, null, null, null, false);
         }
@@ -50,7 +52,8 @@ Class AuthorArchive extends ArchiveAbstract
             'pagination_number_post' => $post_per_page,
             'number_post' => $post_per_page,
             'post_offset' => $this->offset,
-            'include_author' => $this->coauthors,
+            // 'include_author' => $this->coauthors,
+            'author_name' => $this->authorname,
             'sort_by' => 'latest',
             'pagination_mode' => $this->get_content_pagination(),
             'pagination_scroll_limit' => $this->get_content_pagination_limit(),
