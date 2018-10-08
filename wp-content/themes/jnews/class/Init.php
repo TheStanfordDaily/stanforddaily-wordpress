@@ -80,7 +80,7 @@ class Init
     {
         if ( defined('DOING_AJAX') && DOING_AJAX )
         {
-            new CommentProcess();
+            // new CommentProcess();
             new SocialCounterProcess();
         }
     }
