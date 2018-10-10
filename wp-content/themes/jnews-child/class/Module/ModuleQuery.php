@@ -498,10 +498,6 @@ Class ModuleQuery
                 $args['author'] = $attr['include_author'];
             }
 
-            if(!empty($attr['tax_query'])) {
-                $args['tax_query'] = $attr['tax_query'];
-            }
-
             if(!empty($attr['include_tag'])) {
                 $args['include_tag'] = $attr['include_tag'];
             }
