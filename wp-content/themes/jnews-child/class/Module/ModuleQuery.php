@@ -396,6 +396,7 @@ Class ModuleQuery
             $merged_ids = array_merge($query1->posts, $query2->posts);
             
             unset($args["author__in"]);
+            unset($args['fields']);
             $args["post__in"] = $merged_ids;
             $query = new \WP_Query($args);
         }

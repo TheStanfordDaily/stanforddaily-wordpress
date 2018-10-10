@@ -43,7 +43,7 @@ Class AuthorArchive extends ArchiveAbstract
             'pagination_number_post' => $post_per_page,
             'number_post' => $post_per_page,
             'post_offset' => $this->offset,
-            // 'tsd_include_author_or' => $this->author,
+            'tsd_include_author_or' => $this->author,
             'tax_query' => array(
                 // "relation" => "OR",
                 array(
