@@ -64,6 +64,7 @@ Class ModuleQuery
             'exclude_category',
             'include_author',
             'tax_query',
+            'tsd_include_author_or',
             'include_tag',
             'exclude_tag',
             'sort_by',
@@ -387,7 +388,6 @@ Class ModuleQuery
             $query1 = new \WP_Query( $args );
             $args["author__in"] = explode(',', $attr['tsd_include_author_or']);
             unset($args["tax_query"]);
-            var_dump($args);
             $query2 = new \WP_Query( $args );
             $query = new \WP_Query();
             $query->posts = array_merge( $query1->posts, $query2->posts );
