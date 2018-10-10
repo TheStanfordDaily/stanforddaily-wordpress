@@ -144,3 +144,8 @@ li {
   color: #a0a0a0;
   font-size: 13px;
 }
+
+/* Fix black bar issue */
+#adminmenuback {
+  display: none !important;
+}
