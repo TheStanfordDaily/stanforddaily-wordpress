@@ -387,6 +387,7 @@ Class ModuleQuery
         {
             // Get ids first, then merge them. From https://premium.wpmudev.org/forums/topic/merging-two-query-result-arrays-into-one-for-looping-through
             $args['fields'] = 'ids';
+            $args["nopaging"] = true;
             $query1 = new \WP_Query( $args );
             
             $args["author__in"] = explode(',', $attr['tsd_include_author_or']);
@@ -397,6 +398,7 @@ Class ModuleQuery
             
             unset($args["author__in"]);
             unset($args['fields']);
+            unset($args["nopaging"])
             $args["post__in"] = $merged_ids;
             $query = new \WP_Query($args);
         }
