@@ -385,14 +385,19 @@ Class ModuleQuery
 
         if ( isset( $attr['tsd_include_author_or'] ) ) 
         {
+            // Get ids first, then merge them. From https://premium.wpmudev.org/forums/topic/merging-two-query-result-arrays-into-one-for-looping-through
+            $args['fields'] = 'ids';
             $query1 = new \WP_Query( $args );
+            
             $args["author__in"] = explode(',', $attr['tsd_include_author_or']);
             unset($args["tax_query"]);
             $query2 = new \WP_Query( $args );
-            $query = new \WP_Query();
-            $query->posts = array_merge( $query1->posts, $query2->posts );
-            //populate post_count count for the loop to work correctly
-            $query->post_count = $query1->post_count + $query2->post_count;
+            
+            $merged_ids = array_merge(get_posts($query1), get_posts($query2));
+            
+            unset($args["author__in"]);
+            $args["post__in"] = $merged_ids;
+            $query = new \WP_Query($args);
         }
         else {
             // Query
