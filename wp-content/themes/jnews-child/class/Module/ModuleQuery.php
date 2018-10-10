@@ -384,10 +384,10 @@ Class ModuleQuery
 
         if ( isset( $attr['tsd_include_author_or'] ) ) 
         {
+            $query1 = new \WP_Query( $args );
             $args["include_author"] = $attr['tsd_include_author_or'];
             unset($args["tax_query"]);
             $query2 = new \WP_Query( $args );
-            $query1 = new \WP_Query( $args );
             $query = new \WP_Query();
             $query->posts = array_merge( $query1->posts, $query2->posts );
             //populate post_count count for the loop to work correctly
