@@ -63,7 +63,6 @@ Class ModuleQuery
             'include_category',
             'exclude_category',
             'include_author',
-            'tax_query',
             'tsd_query_by_coauthor',
             'include_tag',
             'exclude_tag',
@@ -236,10 +235,6 @@ Class ModuleQuery
 
         if(!empty($attr['include_author'])) {
             $args['author__in'] = explode(',', $attr['include_author']);
-        }
-
-        if(!empty($attr['tax_query'])) {
-            $args['tax_query'] = $attr['tax_query'];
         }
 
         if(!empty($attr['include_tag'])) {
