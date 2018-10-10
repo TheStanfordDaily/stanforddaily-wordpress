@@ -34,10 +34,7 @@ Class AuthorArchive extends ArchiveAbstract
         ModuleManager::getInstance()->set_width($content_width);
 
         $post_per_page = get_option( 'posts_per_page' );
-        var_dump($this->author);
-        echo "DONE 1";
-        var_dump(get_the_author_meta('user_nicename'));
-        echo "DONE";
+
         $attr = array(
             'content_type' => $this->section,
             'date_format' => $this->get_content_date(),
