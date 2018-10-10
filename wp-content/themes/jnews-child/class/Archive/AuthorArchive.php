@@ -50,8 +50,8 @@ Class AuthorArchive extends ArchiveAbstract
             'tax_query' => array(
                 array(
                     'taxonomy' => 'author',
-                    'field'    => 'name',
-                    'terms'    => the_author_meta('user_nicename'),
+                    'field'    => 'slug',
+                    'terms'    => "cap-" . the_author_meta('user_nicename'),
                 ),
             ),
             'sort_by' => 'latest',
