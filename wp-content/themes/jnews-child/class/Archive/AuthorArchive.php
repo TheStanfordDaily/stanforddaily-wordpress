@@ -36,7 +36,7 @@ Class AuthorArchive extends ArchiveAbstract
         $post_per_page = get_option( 'posts_per_page' );
         var_dump($this->author);
         echo "DONE 1";
-        var_dump(the_author_meta('nickname'));
+        var_dump(get_the_author_meta('user_nicename'));
         echo "DONE";
         $attr = array(
             'content_type' => $this->section,
@@ -51,7 +51,7 @@ Class AuthorArchive extends ArchiveAbstract
                 array(
                     'taxonomy' => 'author',
                     'field'    => 'slug',
-                    'terms'    => "cap-" . the_author_meta('user_nicename'),
+                    'terms'    => "cap-" . get_the_author_meta('user_nicename'),
                 ),
             ),
             'sort_by' => 'latest',
