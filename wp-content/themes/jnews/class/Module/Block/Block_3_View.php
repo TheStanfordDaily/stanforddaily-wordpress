@@ -10,7 +10,7 @@ Class Block_3_View extends BlockViewAbstract
     {
         $thumbnail = $this->get_thumbnail($post->ID, $image_size);
         
-        $terms = wp_get_object_terms( $post_id, 'author'); 
+        $terms = wp_get_object_terms( $post->ID, 'author'); 
         var_dump($terms);
 
         $output =
