@@ -35,7 +35,6 @@ Class AuthorArchive extends ArchiveAbstract
 
         $post_per_page = get_option( 'posts_per_page' );
         var_dump($this->author);
-        var_dump(cap_get_coauthor_terms_for_post(the_post()))
         $attr = array(
             'content_type' => $this->section,
             'date_format' => $this->get_content_date(),
