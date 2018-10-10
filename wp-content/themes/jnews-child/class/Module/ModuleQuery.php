@@ -393,7 +393,7 @@ Class ModuleQuery
             unset($args["tax_query"]);
             $query2 = new \WP_Query( $args );
             
-            $merged_ids = array_merge(get_posts($query1), get_posts($query2));
+            $merged_ids = array_merge($query1->posts, $query2->posts);
             
             unset($args["author__in"]);
             $args["post__in"] = $merged_ids;
