@@ -43,7 +43,7 @@ Class AuthorArchive extends ArchiveAbstract
             'pagination_number_post' => $post_per_page,
             'number_post' => $post_per_page,
             'post_offset' => $this->offset,
-            'include_author' => $this->author,
+            // 'include_author' => $this->author,
             'sort_by' => 'latest',
             'pagination_mode' => $this->get_content_pagination(),
             'pagination_scroll_limit' => $this->get_content_pagination_limit(),
