@@ -398,7 +398,7 @@ Class ModuleQuery
             
             unset($args["author__in"]);
             unset($args['fields']);
-            unset($args["nopaging"])
+            unset($args["nopaging"]);
             $args["post__in"] = $merged_ids;
             $query = new \WP_Query($args);
         }
