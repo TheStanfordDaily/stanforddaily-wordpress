@@ -10,8 +10,6 @@ Class Block_3_View extends BlockViewAbstract
     {
         $thumbnail = $this->get_thumbnail($post->ID, $image_size);
 
-        var_dump($post->author_name);
-
         $output =
             "<article " . jnews_post_class("jeg_post jeg_pl_md_2", $post->ID) . ">
                 <div class=\"jeg_thumb\">
