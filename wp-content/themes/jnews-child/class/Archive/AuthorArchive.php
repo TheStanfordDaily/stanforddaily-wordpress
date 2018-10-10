@@ -45,10 +45,17 @@ Class AuthorArchive extends ArchiveAbstract
             'post_offset' => $this->offset,
             'include_author' => $this->author,
             'tax_query' => array(
+                "relation" => "OR",
                 array(
                     'taxonomy' => 'author',
                     'field'    => 'slug',
                     'terms'    => "cap-" . get_the_author_meta('user_nicename'),
+                ),
+                array(
+                    'taxonomy' => 'author',
+                    'field'    => 'slug',
+                    'terms'    => "",
+                    "operator" => "NOT EXISTS"
                 ),
             ),
             'sort_by' => 'latest',
