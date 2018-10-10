@@ -9,8 +9,9 @@ Class Block_3_View extends BlockViewAbstract
     public function render_block_type_1($post, $image_size)
     {
         $thumbnail = $this->get_thumbnail($post->ID, $image_size);
-
-        var_dump(cap_get_coauthor_terms_for_post($post->ID));
+        
+        $terms = wp_get_post_terms( $post_id, 'author'); 
+        var_dump($terms);
 
         $output =
             "<article " . jnews_post_class("jeg_post jeg_pl_md_2", $post->ID) . ">
