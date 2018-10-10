@@ -10,7 +10,7 @@ Class Block_3_View extends BlockViewAbstract
     {
         $thumbnail = $this->get_thumbnail($post->ID, $image_size);
 
-        var_dump($post);
+        var_dump(cap_get_coauthor_terms_for_post($post->ID));
 
         $output =
             "<article " . jnews_post_class("jeg_post jeg_pl_md_2", $post->ID) . ">
