@@ -64,7 +64,7 @@ Class ModuleQuery
             'exclude_category',
             'include_author',
             'tax_query',
-            'tsd_include_author_or_tax_query',
+            'tsd_query_by_coauthor',
             'include_tag',
             'exclude_tag',
             'sort_by',
@@ -383,14 +383,21 @@ Class ModuleQuery
 
 
 
-        if ( isset( $attr['tsd_include_author_or_tax_query'] ) ) 
+        if ( isset( $attr['tsd_query_by_coauthor'] ) ) 
         {
             // Get ids first, then merge them. From https://premium.wpmudev.org/forums/topic/merging-two-query-result-arrays-into-one-for-looping-through
             $args['fields'] = 'ids';
             $args["nopaging"] = true;
+            $args["tax_query"] = array(
+                array(
+                    'taxonomy' => 'author',
+                    'field'    => 'slug',
+                    'terms'    => "cap-" . $attr['tsd_query_by_coauthor'][1],
+                )
+            );
             $query1 = new \WP_Query( $args );
             
-            $args["author__in"] = explode(',', $attr['tsd_include_author_or_tax_query']);
+            $args["author__in"] = explode(',', $attr['tsd_query_by_coauthor'][0]);
             unset($args["tax_query"]);
             $query2 = new \WP_Query( $args );
             
