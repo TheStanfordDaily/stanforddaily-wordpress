@@ -43,20 +43,20 @@ Class AuthorArchive extends ArchiveAbstract
             'pagination_number_post' => $post_per_page,
             'number_post' => $post_per_page,
             'post_offset' => $this->offset,
-            'include_author' => $this->author,
+            // 'include_author' => $this->author,
             'tax_query' => array(
-                "relation" => "OR",
+                // "relation" => "OR",
                 array(
                     'taxonomy' => 'author',
                     'field'    => 'slug',
                     'terms'    => "cap-" . get_the_author_meta('user_nicename'),
                 ),
-                array(
-                    'taxonomy' => 'author',
-                    'field'    => 'slug',
-                    'terms'    => "",
-                    "operator" => "NOT EXISTS"
-                ),
+                // array(
+                //     'taxonomy' => 'author',
+                //     'field'    => 'slug',
+                //     'terms'    => "",
+                //     "operator" => "NOT EXISTS"
+                // )
             ),
             'sort_by' => 'latest',
             'pagination_mode' => $this->get_content_pagination(),
