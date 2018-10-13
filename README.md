@@ -1,7 +1,7 @@
-# Co-authors debugging
+# AWS deployment
 
-git push staging coauthors:master
+pip install awsebcli
 
-http://stanforddaily2.staging.wpengine.com/author/holden-foreman/
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/php-hawordpress-tutorial.html#php-wordpress-tutorial-prereqs
 
-http://stanforddaily2.staging.wpengine.com/author/bcontreras/
+eb deploy develop --staged

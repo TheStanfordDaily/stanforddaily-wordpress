@@ -7,7 +7,6 @@
 Thumbs.db
 
 # wordpress specific
-wp-config.php
 wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/*
@@ -96,3 +95,8 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
