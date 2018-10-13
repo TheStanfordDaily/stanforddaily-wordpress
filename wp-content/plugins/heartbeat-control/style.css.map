@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"AAAA,8BACI,aAAa,CACb,iBAAiB,CACjB,gBAAgB,CAChB,YAAY,CACZ,kBAAkB,EACrB;;ACJD,8VAA8V","file":"style.css","sourcesContent":[".slider-field-value-display {\n    float: right;\n    font-weight: 400;\n    font-size: 12px;\n    color: #888;\n    padding-top: .5em;\n}"]}

@@ -1,0 +1,15 @@
+{
+    "name": "jeffmatson/heartbeat-control",
+    "description": "WordPress plugin to control the WordPress heartbeat.",
+    "type": "wordpress-plugin",
+    "require": {
+        "webdevstudios/cmb2": "^2.3"
+    },
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Jeff Matson",
+            "email": "jeff@jeffmatson.net"
+        }
+    ]
+}

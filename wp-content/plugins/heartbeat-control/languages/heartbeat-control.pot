@@ -1,0 +1,82 @@
+# Copyright (C) 2018 heartbeat-control
+# This file is distributed under the same license as the heartbeat-control package.
+msgid ""
+msgstr ""
+"Project-Id-Version: heartbeat-control\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../heartbeat-control.php:104
+msgid "Heartbeat Control has updated to a new version!"
+msgstr ""
+
+#: ../heartbeat-control.php:105
+msgid "Multiple rules can now be specified. Go to the settings to add the new features!"
+msgstr ""
+
+#: ../heartbeat-control.php:106
+msgid "Want more? <a href=\"https://www.patreon.com/JeffMatson\">Support me on Patreon</a> to further my projects and get early access to the upcoming Heartbeat Control Pro!"
+msgstr ""
+
+#: ../settings.php:41
+msgid "Heartbeat Control Settings"
+msgstr ""
+
+#: ../settings.php:51
+msgid "Set WordPress heartbeat rules. Duplicate locations are ordered based on priority (higher list position wins)."
+msgstr ""
+
+#: ../settings.php:53
+msgid "Rule {#}"
+msgstr ""
+
+#: ../settings.php:54
+msgid "Add Another Rule"
+msgstr ""
+
+#: ../settings.php:55
+msgid "Remove Rule"
+msgstr ""
+
+#: ../settings.php:61
+msgid "Heartbeat Behavior"
+msgstr ""
+
+#: ../settings.php:67
+msgid "Allow Heartbeat"
+msgstr ""
+
+#: ../settings.php:68
+msgid "Disable Heartbeat"
+msgstr ""
+
+#: ../settings.php:69
+msgid "Modify Heartbeat"
+msgstr ""
+
+#: ../settings.php:74
+msgid "Locations"
+msgstr ""
+
+#: ../settings.php:78
+msgid "WordPress Dashboard"
+msgstr ""
+
+#: ../settings.php:79
+msgid "Frontend"
+msgstr ""
+
+#: ../settings.php:80
+msgid "Post Editor"
+msgstr ""
+
+#: ../settings.php:85
+msgid "Frequency"
+msgstr ""

@@ -1,0 +1,15 @@
+label.uber-grid-options-label{
+	float: left;
+	width: 200px;
+}
+
+#uber-grid-settings h3{
+	padding-top: 1.7em;
+}
+
+#uber-grid-settings input[type=checkbox]{
+	margin-right: 0.5em;
+}
+#uber-grid-settings .clear-after{
+	clear: both;
+}

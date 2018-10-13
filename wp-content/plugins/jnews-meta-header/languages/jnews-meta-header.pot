@@ -1,0 +1,79 @@
+# Copyright (C) 2018 JNews Meta Header
+# This file is distributed under the same license as the JNews Meta Header package.
+msgid ""
+msgstr ""
+"Project-Id-Version: JNews Meta Header\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Jegtheme <support@jeghteme.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;jnews_print_translation;jnews_return_translation\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wordpress/jnews-meta-header/class.jnews-meta-option.php:47, wordpress/jnews-meta-header/meta-header-option.php:9
+msgid "Social Meta Setting"
+msgstr ""
+
+#: wordpress/jnews-meta-header/meta-header-option.php:19
+msgid "FB App ID"
+msgstr ""
+
+#: wordpress/jnews-meta-header/meta-header-option.php:20
+msgid "The unique ID that lets Facebook know the identity of your site. You can create your Facebook App ID <a href='%s' target='_blank'>here</a>."
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:13
+msgid "Facebook Social Meta"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:18
+msgid "FB Share Title"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:19
+msgid "Leave this option empty to use this post / page title"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:24
+msgid "FB Share Description"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:25
+msgid "Leave this option empty to use this post / page excerpt"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:30
+msgid "FB Share Image"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:31, wordpress/jnews-meta-header/metabox/social-meta.php:58
+msgid "Leave this option empty to use default featured image"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:40
+msgid "Twitter Social Meta"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:45
+msgid "Twitter Share Title"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:46
+msgid "Leave this option empty to use post / page title"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:51
+msgid "Twitter Share Description"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:52
+msgid "Leave this option empty to use post / page excerpt"
+msgstr ""
+
+#: wordpress/jnews-meta-header/metabox/social-meta.php:57
+msgid "Twitter Share Image"
+msgstr ""

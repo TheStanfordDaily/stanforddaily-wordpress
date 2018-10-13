@@ -1,0 +1,22 @@
+@media only screen and (max-width : 976px)
+{
+    .jeg_preview_media_holder .fullscreen-switch {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 768px)
+{
+    .jeg_preview_media_holder h2 {
+        font-size: 16px;
+    }
+    
+    .jeg_preview_control .subtitle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 480px)
+{
+
+}

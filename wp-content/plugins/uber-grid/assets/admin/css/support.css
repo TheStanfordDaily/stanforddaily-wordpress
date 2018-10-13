@@ -1,0 +1,63 @@
+mark{
+	background-color: transparent !important;
+}
+mark.ok{
+	color: green;
+	font-weight: bold;
+}
+mark.error{
+	font-weight: bold;
+	color: red;
+}
+mark.warning{
+	font-weight: bold;
+	color: orange !important;
+	border: none !important;
+	padding: 0;
+}
+
+.screen h3{
+	font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+	margin: 8px 0;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 24px;
+}
+#support-form, #support-diagnostics{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#support-form{
+	float: left;
+	width: 50%;
+}
+#support-diagnostics{
+	float: left;
+	width: 50%;
+	border-left: 1px solid #dfdfdf;
+	padding-left: 17px;
+}
+
+#support-wrap small{
+	color: #888;
+	font-size: 80%;
+	font-style: italic;
+	display: block;
+}
+
+#support-wrap input[type=text], #support-wrap textarea{
+	width: 100%;
+	display: block;
+}
+#support-wrap textarea{
+	height: 300px;
+}
+#diagnostics thead th{
+	border-top: 1px solid #ddd;
+}
+#diagnostics thead:first-child th{
+	border-top: none;
+}
+#diagnostics tr td:first-child{
+	width: 30%;
+}

@@ -1,0 +1,191 @@
+# Copyright (C) 2018 JNews Gallery
+# This file is distributed under the same license as the JNews Gallery package.
+msgid ""
+msgstr ""
+"Project-Id-Version: JNews Gallery\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Jegtheme <support@jeghteme.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;jnews_print_translation;jnews_return_translation\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wordpress/jnews-gallery/class.jnews-gallery-option.php:47
+msgid "Gallery Shortcode"
+msgstr ""
+
+#: wordpress/jnews-gallery/class.jnews-gallery-option.php:55, wordpress/jnews-gallery/preview-slider-ads-option.php:43
+msgid "Preview Slider Ads"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:99
+msgid "JNews Gallery Setting"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:102
+msgid "Enable JNews Slider Gallery"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:108, wordpress/jnews-gallery/preview-slider-option.php:39
+msgid "Use Slider Zoom with Description"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:114, wordpress/jnews-gallery/preview-slider-option.php:57
+msgid "Show Ads Wrapper"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:120
+msgid "Slider Title"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:299
+msgid "ADVERTISEMENT"
+msgstr ""
+
+#: wordpress/jnews-gallery/jnews-gallery.php:504
+msgid "of"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:52
+msgid "Advertisement type"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:53
+msgid "Choose which type of advertisement you want to use."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:56
+msgid "Image Ads"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:57
+msgid "Google Ads"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:58
+msgid "Script Code"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:59
+msgid "Shortcode"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:72
+msgid "Advertisement Image"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:73
+msgid "Upload 300x250 Image size."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:89
+msgid "Advertisement Link"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:90
+msgid "Please put where this advertisement image will be heading."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:106
+msgid "Alternate Text"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:107
+msgid "Insert alternate text for advertisement image."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:125
+msgid "Publisher ID"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:126
+msgid "Insert data-ad-client / google_ad_client content."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:142
+msgid "Ads Slot ID"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:143
+msgid "Insert data-ad-slot / google_ad_slot content."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:160
+msgid "Desktop Ads Size"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:161
+msgid "Choose ad size to be shown on desktop, recommended to use auto."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:181
+msgid "Ads code"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:182
+msgid "Put your ad's script code right here."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:200
+msgid "Advertisement code"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:201
+msgid "Put your shortcode ads right here."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-ads-option.php:217
+msgid "Show Advertisement Text"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:10
+msgid "Gallery Info"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:11
+msgid "This gallery option setting is a global setting. Its mean, when you change this setting, all of your gallery setting will follow this setting. But you can override each of this setting on your single gallery."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:18
+msgid "JNews Gallery Default Option"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:28
+msgid "Turn All Gallery to JNews Gallery"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:29
+msgid "Enabling this option will turn all default slider into <strong>JNews Gallery</strong>."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:40
+msgid "Enabling this option will turn your <strong>JNews Gallery</strong> to have description when zoomed."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:58
+msgid "Enabling this option will turn your <strong>JNews Gallery</strong> to have ads section when zoomed."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:76
+msgid "Preview Slider Loader Style"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:77
+msgid "Choose loader style that you want to use for gallery."
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:79
+msgid "Dot"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:80
+msgid "Circle"
+msgstr ""
+
+#: wordpress/jnews-gallery/preview-slider-option.php:81
+msgid "Square"
+msgstr ""

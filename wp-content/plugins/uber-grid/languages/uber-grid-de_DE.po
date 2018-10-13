@@ -1,0 +1,1582 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Uber Grid v1.8.3.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-08-29 06:45:53+0000\n"
+"Last-Translator: Andreas Reitberger <andy.reitberger@gmail.com>\n"
+"Language-Team: wdbase <kontakt@wdbase.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: admin/environment.class.php:22
+#@ uber-grid
+msgid "Please increase your memory limit."
+msgstr "Bitte erhöhen Sie Ihr 'Memory Limit'."
+
+#: admin/environment.class.php:29
+#@ uber-grid
+msgid "Please upgrade your WordPress installation"
+msgstr "Bitte aktualisieren Sie Ihre WordPress Installation."
+
+#: admin/environment.class.php:86
+#, php-format
+#@ uber-grid
+msgid ""
+"plugin requires at least WordPress %s.\n"
+"\t\t\t\t\tPlease <a href=\"%s\">update your installation</a> to enable UberGrid."
+msgstr ""
+"Plugin benötigt mindestens WordPress %s.\n"
+"\t\t\t\t\tPlease <a href=\"%s\">update your installation</a>um UberGrid aktivieren zu können."
+
+#: admin/environment.class.php:103
+#: admin/environment.class.php:105
+#@ uber-grid
+msgid "Can't detect"
+msgstr "Kann nicht ermittelt werden"
+
+#: admin/environment.class.php:110
+#@ uber-grid
+msgid "Memory limit set for PHP is too small and can cause random failures."
+msgstr "Das 'Memory Limit', welches für PHP gesetzt ist, ist zu klein und kann zufällige Fehler verursachen."
+
+#: admin/environment.class.php:112
+#@ uber-grid
+msgid "Learn how to increase it"
+msgstr "Lerne, wie Sie dieses Limit erhöhen können"
+
+#: admin/environment.class.php:116
+#@ uber-grid
+msgid ""
+"Not a big deal,\n"
+"\t\t\t\t\t\t\t\t\tbut it is recommended to disable debug mode on production sites"
+msgstr ""
+"Keine große Sache,\n"
+"\t\t\t\t\t\t\t\taber es ist empfohlen, den Debug-Modus bei Produktionsseiten zu deaktivieren"
+
+#: admin/environment.class.php:131
+#: admin/settings.class.php:10
+#: post-types.php:10
+#: shortcodes.php:25
+#: shortcodes.php:36
+#: widgets.php:5
+#: widgets.php:6
+#@ ubergrid
+#@ uber-grid
+#@ default
+msgid "UberGrid"
+msgstr "UberGrid"
+
+#: admin/environment.class.php:149
+#@ uber-grid
+msgid "UberGrid Support Request"
+msgstr "UberGrid Support Anfrage"
+
+#: admin/environment.class.php:166
+#@ uber-grid
+msgid "Load more will not work"
+msgstr "'Mehr Laden' wird nicht funktionieren"
+
+#: admin/environment.class.php:171
+#@ uber-grid
+msgid ""
+"GD library is required to resize images before displaying. Please contact\n"
+"\t\t\t\t\tyour hosting provider in order to install it."
+msgstr ""
+"GD Library wird benötigt um eine Größenanpassung von Bildern durchführen zu können, bevor diese angezeigt werden.  Bitte kontaktieren\n"
+"\t\t\t\t\t Sie Ihren Webhoster um dieses Script zu installieren."
+
+#: admin/environment.class.php:178
+#@ uber-grid
+msgid ""
+"This may break \"Load more\" or endless scrolling. To fix this issue,\n"
+"\t\t\t\t\tplease disable security hardening plugins and make sure your .htaccess file does not restrict an\n"
+"\t\t\t\t\taccess to this file."
+msgstr ""
+"Dies kann die \"Load more\" stören oder ein endloses Scrollen verursachen. Um diesen Fehler zu beheben,\n"
+"\t\t\t\t\tdeaktivieren Sie bitte Sicherheitssteigernde Plugins und vergewisseren Sie sich, dass Ihre  .htaccess Datei den \n"
+"\t\t\t\t\tZugriff auf diese Datei verhindert."
+
+#: admin/environment.class.php:186
+#@ uber-grid
+msgid "Cannot create image cache. Please create wp-content/uber-grid-cache directory manually and allow a write access there"
+msgstr "Bilder-Cache konnte nicht erstellt werden. Bitte erstellen Sie das wp-content/uber-grid-cache Verzeichnis manuell und erlauben Sie Schreibzugriff"
+
+#: admin/environment.class.php:192
+#@ uber-grid
+msgid "wp-content directory is not writable, Images may not show right"
+msgstr "wp-content Verzeichnis ist nicht beschreibbar. Bilder werden nicht richtig angezeigt"
+
+#: admin/environment.class.php:200
+#@ default
+msgid "Uploads dir is not writable. Images may not show right"
+msgstr "Das Upload-Verzeichnis ist nicht beschreibbar. Bilder werden nicht richtig angezeigt"
+
+#: admin/environment.class.php:205
+#@ default
+msgid "Uploads dir renamed."
+msgstr "Upload Ordner umbenannt."
+
+#: admin/environment.class.php:251
+#, php-format
+#@ uber-grid
+msgid "Your uploads dir was renamed to %s. Please create <code>wp-content/uber-grid-timthumb-config.php</code> and add the next <code>%s</code> line at the top of that file."
+msgstr "Ihr Upload-Verzeichnis wurde auf %s umbenannt. Bitte erstelle <code>wp-content/uber-grid-timthumb-config.php</code> und fügen Sie die nächste <code>%s</code> Zeile ganz oben in der Datei ein."
+
+#: admin/environment.class.php:264
+#@ uber_grid
+msgid "UberGrid requires GD library in order to work correctly. Please contact your hosting administrator."
+msgstr "UberGrid benötigt GD Library um richtig arbeiten zu können. Bitte kontaktieren Sie Ihren Webhoster."
+
+#: admin/environment.class.php:273
+#@ uber-grid
+msgid "External HTTP requests are not supported. This will break most of image sources. Please install Curl or other PHP HTTP extension."
+msgstr "Externe HTTP Abfragen sind nicht unterstützt. Das bricht die meisten Bildpfade. Bitte installieren Sie Curl oder andere PHP HTTP Erweiterungen."
+
+#: admin/grid-editor.php:59
+#@ uber-grid
+msgid "Grid updated."
+msgstr "Grid aktualisiert."
+
+#: admin/grid-editor.php:60
+#@ uber-grid
+msgid "Grid created."
+msgstr "Grid erstellt."
+
+#: admin/grid-editor.php:70
+#: admin/templates/meta-box-publish.php:27
+#@ default
+msgid "Publish"
+msgstr "Veröffentlichen"
+
+#: admin/grid-editor.php:72
+#@ uber-grid
+msgid "Grid Layout"
+msgstr "Grid Layout"
+
+#: admin/grid-editor.php:73
+#@ uber-grid
+msgid "Extras"
+msgstr "Extras"
+
+#: admin/grid-editor.php:75
+#@ uber-grid
+msgid "Fonts"
+msgstr "Schriftarten"
+
+#: admin/grid-editor.php:139
+#@ uber-grid
+msgid "(copy)"
+msgstr "(Kopie)"
+
+#: admin/grid-list.php:17
+#: admin/templates/edit_form_after_title.php:4
+#@ uber-grid
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/image-troubleshooting.class.php:8
+#: admin/image-troubleshooting.class.php:10
+#@ uber-grid
+msgid "Image display troubleshooting"
+msgstr "Bildanzeige Fehlerbehebung"
+
+#: admin/pointers.php:24
+#@ uber-grid
+msgid "Add a cell"
+msgstr "Eine Zelle hinzufügen"
+
+#: admin/pointers.php:25
+#@ uber-grid
+msgid "<p>Click here to add a first cell to your grid.</p>"
+msgstr "<p>Klicken Sie hier um Ihre erste Zelle zu Ihrem Grid hinzuzufügen.</p>"
+
+#: admin/pointers.php:29
+#@ uber-grid
+msgid "Save your grid"
+msgstr "Speichern Sie Ihr Grid"
+
+#: admin/pointers.php:30
+#, php-format
+#@ uber-grid
+msgid "<p>After saving your grid, insert this code <strong>[ubergrid id=%s]</strong> into your site pages to use the grid.</p>"
+msgstr "<p>Nachdem Sie Ihr Grid gespeichert haben, fügen Sie diesen Shortcode <strong>[ubergrid id=%s]</strong> in die gewünschte Seite ein, um das Grid zu benutzen.</p>"
+
+#: admin/pointers.php:38
+#@ uber-grid
+msgid "Create a grid"
+msgstr "Erstelle ein Grid"
+
+#: admin/pointers.php:39
+#@ uber-grid
+msgid "<p>Please click here to create your first grid.</p>"
+msgstr "<p>Klicken Sie hier, um Ihr erstes Grid zu erstellen.</p>"
+
+#: admin/support.class.php:24
+#: admin/support.class.php:25
+#@ namespace
+msgid "Support"
+msgstr "Support"
+
+#: admin/support.class.php:42
+#@ namespace
+msgid "Please enter your email"
+msgstr "Bitte geben Sie Ihre E-Mail an"
+
+#: admin/support.class.php:44
+#@ namespace
+msgid "Please enter your question"
+msgstr "Bitte geben Sie Ihre Frage ein"
+
+#: admin/support.class.php:154
+#@ namespace
+msgid "Warning"
+msgstr "Warnung"
+
+#: admin/support.class.php:157
+#@ namespace
+msgid "Error"
+msgstr "Fehler"
+
+#: admin/support.class.php:160
+#@ namespace
+msgid "OK"
+msgstr "OK"
+
+#: admin/templates/cell-fields.php:1
+#: admin/templates/meta-box-extras-filters.php:15
+#: admin/templates/meta-box-extras-pagination.php:13
+#@ uber-grid
+msgid "Center"
+msgstr "Mittig"
+
+#: admin/templates/cell-fields.php:2
+#@ uber-grid
+msgid "Top center"
+msgstr "Oben Mittig"
+
+#: admin/templates/cell-fields.php:3
+#@ uber-grid
+msgid "Top left"
+msgstr "Oben Links"
+
+#: admin/templates/cell-fields.php:4
+#@ uber-grid
+msgid "Top right"
+msgstr "Oben Rechts"
+
+#: admin/templates/cell-fields.php:5
+#@ uber-grid
+msgid "Bottom center"
+msgstr "Unten Mittig"
+
+#: admin/templates/cell-fields.php:6
+#@ uber-grid
+msgid "Bottom left"
+msgstr "Unten Links"
+
+#: admin/templates/cell-fields.php:7
+#@ uber-grid
+msgid "Bottom right"
+msgstr "Oben Rechts"
+
+#: admin/templates/cell-fields.php:8
+#: admin/templates/cell-fields.php:11
+#@ uber-grid
+msgid "Top left - bottom left"
+msgstr "Oben links - unten links"
+
+#: admin/templates/cell-fields.php:9
+#@ uber-grid
+msgid "Top left - bottom right"
+msgstr "Oben links - unten rechts"
+
+#: admin/templates/cell-fields.php:10
+#@ uber-grid
+msgid "Top right - bottom right"
+msgstr "Oben rechts - unten rechts"
+
+#: admin/templates/cell-fields.php:13
+#@ uber-grid
+msgid "Main"
+msgstr "Haupt"
+
+#: admin/templates/cell-fields.php:17
+#: admin/templates/cell-fields.php:18
+#: admin/templates/cell-fields.php:191
+#: admin/templates/cell-fields.php:230
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Title"
+msgstr "Titel"
+
+#: admin/templates/cell-fields.php:22
+#@ uber-grid
+msgid "Tagline"
+msgstr "Untertitel"
+
+#: admin/templates/cell-fields.php:27
+#: admin/templates/cell-fields.php:218
+#: admin/templates/cell-fields.php:257
+#@ uber-grid
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: admin/templates/cell-fields.php:32
+#@ default
+msgid "Title / Tagline position"
+msgstr "Position Titel / Untertitel"
+
+#: admin/templates/cell-fields.php:34
+#@ uber-grid
+msgid "Do not show"
+msgstr "Nicht anzeigen"
+
+#: admin/templates/cell-fields.php:39
+#@ uber-grid
+msgid "Tags (used for filtering)"
+msgstr "Schlagwörter (genutzt zum Filtern)"
+
+#: admin/templates/cell-fields.php:40
+#: admin/templates/filter-taxonomy.php:8
+#@ default
+#@ uber-grid
+msgid "comma-separated tags"
+msgstr "Mit Komma abgetrennte Schlagwörter"
+
+#: admin/templates/cell-fields.php:42
+#@ uber-grid
+msgid "Fetch filtering tags from taxonomy"
+msgstr "Hole Schlagwörter für Filterung aus Taxonomie"
+
+#: admin/templates/cell-fields.php:44
+#@ uber-grid
+msgid "Dont fetch"
+msgstr "Nicht holen"
+
+#: admin/templates/cell-fields.php:54
+#@ uber-grid
+msgid "Main image"
+msgstr "Hauptbild"
+
+#: admin/templates/cell-fields.php:62
+#: admin/templates/cell-fields.php:76
+#: admin/templates/cell-fields.php:138
+#: admin/templates/cell-fields.php:213
+#@ uber-grid
+msgid "Select image"
+msgstr "Bild wählen"
+
+#: admin/templates/cell-fields.php:64
+#: admin/templates/cell-fields.php:78
+#: admin/templates/cell-fields.php:140
+#: admin/templates/cell-fields.php:215
+#@ uber-grid
+msgid "Remove image"
+msgstr "Bild entfernen"
+
+#: admin/templates/cell-fields.php:69
+#: admin/templates/cell-fields.php:207
+#@ uber-grid
+msgid "Background image"
+msgstr "Hintergrundbild"
+
+#: admin/templates/cell-fields.php:86
+#@ uber-grid
+msgid "Layout"
+msgstr "Layout"
+
+#: admin/templates/cell-fields.php:94
+#@ uber-grid
+msgid "Delete"
+msgstr "Löschen"
+
+#: admin/templates/cell-fields.php:103
+#@ uber-grid
+msgid "Add a layout"
+msgstr "Ein Layout hinzufügen"
+
+#: admin/templates/cell-fields.php:115
+#@ default
+msgid "Link"
+msgstr "Link"
+
+#: admin/templates/cell-fields.php:119
+#@ default
+msgid "Link mode"
+msgstr "Link Modus"
+
+#: admin/templates/cell-fields.php:121
+#@ uber-grid
+msgid "URL"
+msgstr "URL"
+
+#: admin/templates/cell-fields.php:122
+#: admin/templates/settings.php:51
+#@ uber-grid
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: admin/templates/cell-fields.php:126
+#@ uber-grid
+msgid "Link this cell to URL"
+msgstr "Verlinke diese Zelle mit einem URL"
+
+#: admin/templates/cell-fields.php:128
+#@ default
+msgid "Please don't use youtu.be short URLs - use full youtube.com/watch/... ones instead"
+msgstr "Bitte nutzen Sie keine youtu.be short URLS - nutzen Sie volle YouTube.com/watch/... URLs"
+
+#: admin/templates/cell-fields.php:131
+#@ uber-grid
+msgid "Lightbox image"
+msgstr "Lightbox Bild"
+
+#: admin/templates/cell-fields.php:145
+#@ uber-grid
+msgid "Lightbox Title"
+msgstr "Lightbox Titel"
+
+#: admin/templates/cell-fields.php:149
+#@ uber-grid
+msgid "Lightbox Text"
+msgstr "Lightbox Text"
+
+#: admin/templates/cell-fields.php:156
+#@ uber-grid
+msgid "Link \"target\" attribute value"
+msgstr "Link \"target\" Eigenschaftswert"
+
+#: admin/templates/cell-fields.php:160
+#@ uber-grid
+msgid "Link \"rel\" attribute value"
+msgstr "Link \"rel\" Eigenschaftswert"
+
+#: admin/templates/cell-fields.php:181
+#@ uber-grid
+msgid "On-hover"
+msgstr "On-hover"
+
+#: admin/templates/cell-fields.php:185
+#@ default
+msgid "Text position"
+msgstr "Text Position"
+
+#: admin/templates/cell-fields.php:195
+#@ uber-grid
+msgid "Text"
+msgstr "Text"
+
+#: admin/templates/cell-fields.php:199
+#@ uber-grid
+msgid "Text color"
+msgstr "Textfarbe"
+
+#: admin/templates/cell-fields.php:205
+#@ uber-grid
+msgid "Disable arrow in hover block"
+msgstr "Deaktiviere Pfeil im Hover-Block"
+
+#: admin/templates/cell-fields.php:226
+#@ uber-grid
+msgid "Label below"
+msgstr "Label unterhalb"
+
+#: admin/templates/cell-fields.php:235
+#@ uber-grid
+msgid "Small text"
+msgstr "Kleiner Text"
+
+#: admin/templates/cell-fields.php:240
+#@ uber-grid
+msgid "Price tag"
+msgstr "Preisschild"
+
+#: admin/templates/cell-fields.php:244
+#@ uber-grid
+msgid "Border top"
+msgstr "Rand oben"
+
+#: admin/templates/cell-fields.php:249
+#@ uber-grid
+msgid "Border bottom"
+msgstr "Rand unten"
+
+#: admin/templates/cell-fields.php:261
+#@ uber-grid
+msgid "Price color"
+msgstr "Farbe des Preises"
+
+#: admin/templates/cell-fields.php:265
+#@ uber-grid
+msgid "Price background color"
+msgstr "Hintergrundfarbe des Preises"
+
+#: admin/templates/edit_form_after_title.php:10
+#: templates/grid.php:8
+#@ uber-grid
+msgid "Ask for support"
+msgstr "Um Support bitten"
+
+#: admin/templates/edit_form_after_title.php:11
+#@ uber-grid
+msgid "Manual"
+msgstr "Manuell"
+
+#: admin/templates/edit_form_after_title.php:12
+#@ uber-grid
+msgid "Automatic"
+msgstr "Automatisch"
+
+#: admin/templates/edit_form_after_title.php:17
+#@ uber-grid
+msgid "Cells"
+msgstr "Zellen"
+
+#: admin/templates/edit_form_after_title.php:18
+#@ uber-grid
+msgid "Add new cell"
+msgstr "Neue Zelle hinzufügen"
+
+#: admin/templates/edit_form_after_title.php:33
+#@ uber-grid
+msgid "Build from posts"
+msgstr "Aus Beitrag bauen"
+
+#: admin/templates/edit_form_after_title.php:36
+#@ default
+msgid "Post type"
+msgstr "Beitragstyp"
+
+#: admin/templates/edit_form_after_title.php:38
+#@ uber-grid
+msgid "Fetch"
+msgstr "Holen (Fetch)"
+
+#: admin/templates/edit_form_after_title.php:47
+#@ uber-grid
+msgid "order by"
+msgstr "sortieren nach"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Date"
+msgstr "Datum"
+
+#: admin/templates/edit_form_after_title.php:49
+#: admin/templates/meta-box-extras-effects.php:7
+#@ uber-grid
+msgid "None"
+msgstr "Nichts"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Author"
+msgstr "Autor"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Name"
+msgstr "Name"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Modification date"
+msgstr "Datum der Modifizierung"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Rand"
+msgstr "Rand"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ uber-grid
+msgid "Comment count"
+msgstr "Kommentaranzahl"
+
+#: admin/templates/edit_form_after_title.php:49
+#@ default
+msgid "Menu position"
+msgstr "Position des Menüs"
+
+#: admin/templates/edit_form_after_title.php:62
+#@ uber-grid
+msgid "Tagged with"
+msgstr "Verschlagwortet mit"
+
+#: admin/templates/edit_form_after_title.php:71
+#: admin/templates/edit_form_after_title.php:85
+#@ uber-grid
+msgid "Add filter"
+msgstr "Filter hinzufügen"
+
+#: admin/templates/edit_form_after_title.php:76
+#@ uber-grid
+msgid "Custom fields filters"
+msgstr "Benutzerdefinierte Felder Filter"
+
+#: admin/templates/edit_form_after_title.php:91
+#@ uber-grid
+msgid "On-the-fly"
+msgstr "On-the-fly"
+
+#: admin/templates/edit_form_after_title.php:93
+#@ uber-grid
+msgid "build the grid on the fly each time when showing or"
+msgstr "Erstelle das Grid 'on-the-fly' jedesmal, wenn dieses angezeigt wird oder"
+
+#: admin/templates/edit_form_after_title.php:94
+#@ uber-grid
+msgid "Build now"
+msgstr "Jetzt erstellen"
+
+#: admin/templates/edit_form_after_title.php:101
+#@ uber-grid
+msgid "Cell template"
+msgstr "Zellen Template"
+
+#: admin/templates/edit_form_after_title.php:104
+#@ uber-grid
+msgid "Pseudo-tags"
+msgstr "Pseudo-Schlagwörter"
+
+#: admin/templates/edit_form_after_title.php:109
+#@ uber-grid
+msgid "Post title"
+msgstr "Beitragstitel"
+
+#: admin/templates/edit_form_after_title.php:110
+#@ uber-grid
+msgid "Post excerpt"
+msgstr "Beitragsauszug"
+
+#: admin/templates/edit_form_after_title.php:111
+#@ uber-grid
+msgid "Post ID"
+msgstr "Beitrags-ID"
+
+#: admin/templates/edit_form_after_title.php:112
+#@ uber-grid
+msgid "Post URL"
+msgstr "Beitrags-URL"
+
+#: admin/templates/edit_form_after_title.php:113
+#@ uber-grid
+msgid "Post content"
+msgstr "Beitragsinhalt"
+
+#: admin/templates/edit_form_after_title.php:114
+#@ uber-grid
+msgid "Post tags"
+msgstr "Beitrags-Schlagwörter"
+
+#: admin/templates/edit_form_after_title.php:115
+#@ uber-grid
+msgid "Add your meta key name instead of ellipsis to fetch custom field value"
+msgstr "Fügen Sie Ihren Meta Key Name, anstatt von Auslassungszeichen hinzu, um den benutzerdefinierten Feldwert zu holen"
+
+#: admin/templates/edit_form_after_title.php:116
+#@ uber-grid
+msgid "WooCommerce product regular price"
+msgstr "WooCommerce Produkt - Normaler Preis"
+
+#: admin/templates/edit_form_after_title.php:117
+#@ uber-grid
+msgid "WooCommerce product sale price"
+msgstr "WooCommerce Produkt - Reduzierter Preis"
+
+#: admin/templates/filter-custom-field.php:16
+#@ default
+msgid "value"
+msgstr "Wert"
+
+#: admin/templates/filter-custom-field.php:25
+#: admin/templates/filter-taxonomy.php:15
+#: admin/templates/part-cell.php:14
+#@ uber-grid
+msgid "Remove"
+msgstr "Entfernen"
+
+#: admin/templates/meta-box-extras-effects.php:2
+#@ uber-grid
+msgid "Black & white images"
+msgstr "Schwarz & Weiße Bilder"
+
+#: admin/templates/meta-box-extras-effects.php:5
+#@ uber-grid
+msgid "Hover effect"
+msgstr "Hover Effekt"
+
+#: admin/templates/meta-box-extras-effects.php:8
+#@ uber-grid
+msgid "Fade In"
+msgstr "Einblenden"
+
+#: admin/templates/meta-box-extras-effects.php:9
+#@ uber-grid
+msgid "Slide down"
+msgstr "Runter sliden"
+
+#: admin/templates/meta-box-extras-effects.php:10
+#@ uber-grid
+msgid "Slide up"
+msgstr "Hoch sliden"
+
+#: admin/templates/meta-box-extras-effects.php:11
+#@ uber-grid
+msgid "Slide left"
+msgstr "Von links sliden"
+
+#: admin/templates/meta-box-extras-effects.php:12
+#@ uber-grid
+msgid "Slide right"
+msgstr "Von rechts sliden"
+
+#: admin/templates/meta-box-extras-effects.php:13
+#@ uber-grid
+msgid "Fly-In"
+msgstr "Einfliegen"
+
+#: admin/templates/meta-box-extras-effects.php:14
+#@ uber-grid
+msgid "Fly-Out"
+msgstr "Ausfliegen"
+
+#: admin/templates/meta-box-extras-effects.php:15
+#@ uber-grid
+msgid "Teeth"
+msgstr "Zahn (Effekt)"
+
+#: admin/templates/meta-box-extras-effects.php:16
+#@ uber-grid
+msgid "Jaws"
+msgstr "Klauen (Effekt)"
+
+#: admin/templates/meta-box-extras-filters.php:2
+#: admin/templates/meta-box-extras-pagination.php:7
+#@ uber-grid
+msgid "Color: "
+msgstr "Farbe: "
+
+#: admin/templates/meta-box-extras-filters.php:3
+#: admin/templates/meta-box-extras-pagination.php:8
+#@ uber-grid
+msgid "Background color: "
+msgstr "Hintergrundfarbe: "
+
+#: admin/templates/meta-box-extras-filters.php:4
+#@ uber-grid
+msgid "Accent color: "
+msgstr "Hervorhebungs-Farbe: "
+
+#: admin/templates/meta-box-extras-filters.php:5
+#@ uber-grid
+msgid "Accent background color: "
+msgstr "Hervorhebungs-Hintergrundfarbe: "
+
+#: admin/templates/meta-box-extras-filters.php:7
+#@ uber-grid
+msgid "Sort filters"
+msgstr "Filter sortieren"
+
+#: admin/templates/meta-box-extras-filters.php:9
+#@ uber-grid
+msgid "Off"
+msgstr "Aus"
+
+#: admin/templates/meta-box-extras-filters.php:10
+#@ uber-grid
+msgid "On"
+msgstr "Ein"
+
+#: admin/templates/meta-box-extras-filters.php:13
+#: admin/templates/meta-box-extras-pagination.php:11
+#@ uber-grid
+msgid "Align:"
+msgstr "Ausrichten: "
+
+#: admin/templates/meta-box-extras-filters.php:16
+#: admin/templates/meta-box-extras-pagination.php:14
+#@ uber-grid
+msgid "Left"
+msgstr "Links"
+
+#: admin/templates/meta-box-extras-filters.php:17
+#: admin/templates/meta-box-extras-pagination.php:15
+#@ uber-grid
+msgid "Right"
+msgstr "Rechts"
+
+#: admin/templates/meta-box-extras-filters.php:19
+#@ uber-grid
+msgid "\"All\" wording"
+msgstr "\"All\" Formulierungen"
+
+#: admin/templates/meta-box-extras-pagination.php:1
+#@ default
+msgid "Enable pagination"
+msgstr "Seitennummerierung aktivieren"
+
+#: admin/templates/meta-box-extras-pagination.php:3
+#@ default
+msgid "Items per page"
+msgstr "Artikel pro Seite"
+
+#: admin/templates/meta-box-extras-pagination.php:9
+#@ uber-grid
+msgid "Current page color: "
+msgstr "Farbe der aktuellen Seite: "
+
+#: admin/templates/meta-box-extras-pagination.php:10
+#@ uber-grid
+msgid "Current page bg color: "
+msgstr "Hintergrundfarbe der aktuellen Seite: "
+
+#: admin/templates/meta-box-extras-pagination.php:17
+#@ uber-grid
+msgid "\"Pages\" wording"
+msgstr "\"Pages\" Wortlaut"
+
+#: admin/templates/meta-box-extras.php:2
+#@ uber-grid
+msgid "Filters"
+msgstr "Filter"
+
+#: admin/templates/meta-box-extras.php:3
+#@ uber-grid
+msgid "Pagination"
+msgstr "Seitennummerierung"
+
+#: admin/templates/meta-box-extras.php:4
+#@ uber-grid
+msgid "Effects"
+msgstr "Effekte"
+
+#: admin/templates/meta-box-fonts.php:6
+#@ uber-grid
+msgid "Title font"
+msgstr "Titel Schriftart"
+
+#: admin/templates/meta-box-fonts.php:7
+#: admin/templates/meta-box-fonts.php:8
+#: admin/templates/meta-box-fonts.php:11
+#: admin/templates/meta-box-fonts.php:12
+#: admin/templates/meta-box-fonts.php:17
+#: admin/templates/meta-box-fonts.php:18
+#: admin/templates/meta-box-fonts.php:22
+#: admin/templates/meta-box-fonts.php:23
+#: admin/templates/meta-box-fonts.php:28
+#: admin/templates/meta-box-fonts.php:29
+#: admin/templates/meta-box-fonts.php:32
+#: admin/templates/meta-box-fonts.php:33
+#: admin/templates/meta-box-fonts.php:38
+#: admin/templates/meta-box-fonts.php:39
+#: admin/templates/meta-box-fonts.php:42
+#: admin/templates/meta-box-fonts.php:43
+#: admin/templates/meta-box-fonts.php:47
+#: admin/templates/meta-box-fonts.php:48
+#: admin/templates/meta-box-fonts.php:53
+#: admin/templates/meta-box-fonts.php:54
+#: admin/templates/meta-box-fonts.php:59
+#: admin/templates/meta-box-fonts.php:60
+#: admin/templates/meta-box-layout.php:2
+#: admin/templates/settings.php:99
+#@ uber-grid
+msgid "Default"
+msgstr "Standard"
+
+#: admin/templates/meta-box-fonts.php:10
+#@ uber-grid
+msgid "Tagline font"
+msgstr "Untertitel Schriftart"
+
+#: admin/templates/meta-box-fonts.php:16
+#@ uber-grid
+msgid "Hover title font"
+msgstr "Hover Titel Schriftart"
+
+#: admin/templates/meta-box-fonts.php:21
+#@ uber-grid
+msgid "Hover text font"
+msgstr "Hover Text Schriftart"
+
+#: admin/templates/meta-box-fonts.php:27
+#@ uber-grid
+msgid "Lightbox title font"
+msgstr "Lightbox Titel Schriftart"
+
+#: admin/templates/meta-box-fonts.php:31
+#@ uber-grid
+msgid "Lightbox text font"
+msgstr "Lightbox Text Schriftart"
+
+#: admin/templates/meta-box-fonts.php:37
+#@ uber-grid
+msgid "Label title font"
+msgstr "Label Titel Schriftart"
+
+#: admin/templates/meta-box-fonts.php:41
+#@ uber-grid
+msgid "Label tagline font"
+msgstr "Label Untertitel Schriftart"
+
+#: admin/templates/meta-box-fonts.php:46
+#@ uber-grid
+msgid "Label price font"
+msgstr "Label Preis Schriftart"
+
+#: admin/templates/meta-box-fonts.php:52
+#@ uber-grid
+msgid "Filters font"
+msgstr "Filter Schriftart"
+
+#: admin/templates/meta-box-fonts.php:58
+#@ uber-grid
+msgid "Pagination font"
+msgstr "Seitennummerierung Schriftart"
+
+#: admin/templates/meta-box-layout-440.php:3
+#: admin/templates/meta-box-layout-768.php:3
+#: admin/templates/meta-box-layout-default.php:2
+#@ uber-grid
+msgid "Cell width"
+msgstr "Zellenbreite"
+
+#: admin/templates/meta-box-layout-440.php:7
+#: admin/templates/meta-box-layout-768.php:7
+#: admin/templates/meta-box-layout-default.php:6
+#@ uber-grid
+msgid "Cell height"
+msgstr "Zellenhöhe"
+
+#: admin/templates/meta-box-layout-440.php:11
+#: admin/templates/meta-box-layout-768.php:11
+#: admin/templates/meta-box-layout-default.php:10
+#@ uber-grid
+msgid "Gap between cells"
+msgstr "Lücke zwischen Zellen"
+
+#: admin/templates/meta-box-layout-440.php:15
+#: admin/templates/meta-box-layout-768.php:15
+#: admin/templates/meta-box-layout-default.php:25
+#@ uber-grid
+msgid "Cell border width"
+msgstr "Zellenrahmenbreite"
+
+#: admin/templates/meta-box-layout-440.php:19
+#: admin/templates/meta-box-layout-768.php:19
+#@ uber-grid
+msgid "Cell border radius"
+msgstr "Zellenrahmenradius"
+
+#: admin/templates/meta-box-layout-440.php:23
+#: admin/templates/meta-box-layout-768.php:23
+#@ uber-grid
+msgid "Title font size"
+msgstr "Titel Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:27
+#: admin/templates/meta-box-layout-768.php:27
+#@ uber-grid
+msgid "Tagline font size"
+msgstr "Untertitel Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:31
+#: admin/templates/meta-box-layout-768.php:31
+#@ uber-grid
+msgid "Hover title font size"
+msgstr "Hover Titel Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:35
+#: admin/templates/meta-box-layout-768.php:35
+#@ uber-grid
+msgid "Hover text font size"
+msgstr "Hover Text Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:39
+#: admin/templates/meta-box-layout-768.php:39
+#@ uber-grid
+msgid "Label title font size"
+msgstr "Label Titel Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:43
+#: admin/templates/meta-box-layout-768.php:43
+#@ uber-grid
+msgid "Label tagline font size"
+msgstr "Label Untertitel Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:47
+#: admin/templates/meta-box-layout-768.php:47
+#@ uber-grid
+msgid "Label price tag font size"
+msgstr "Schriftgröße Preisschild Schriftgröße"
+
+#: admin/templates/meta-box-layout-440.php:51
+#: admin/templates/meta-box-layout-768.php:51
+#: admin/templates/meta-box-layout-default.php:45
+#@ uber-grid
+msgid "Max label height"
+msgstr "Max. Labelhöhe"
+
+#: admin/templates/meta-box-layout-default.php:14
+#@ uber-grid
+msgid "Max grid width"
+msgstr "Max. Gridbreite"
+
+#: admin/templates/meta-box-layout-default.php:18
+#@ uber-grid
+msgid "Responsive cell size"
+msgstr "Responsive Zellengröße"
+
+#: admin/templates/meta-box-layout-default.php:20
+#@ uber-grid
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: admin/templates/meta-box-layout-default.php:21
+#@ uber-grid
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: admin/templates/meta-box-layout-default.php:29
+#@ uber-grid
+msgid "Border color"
+msgstr "Rahmenfarbe"
+
+#: admin/templates/meta-box-layout-default.php:33
+#@ uber-grid
+msgid "Border radius"
+msgstr "Rahmenradius"
+
+#: admin/templates/meta-box-layout-default.php:37
+#@ uber-grid
+msgid "Border opacity"
+msgstr "Rahmendeckkraft"
+
+#: admin/templates/meta-box-layout-default.php:41
+#@ uber-grid
+msgid "Shadow radius"
+msgstr "Schattenradius"
+
+#: admin/templates/meta-box-layout.php:3
+#@ uber-grid
+msgid "< 768px"
+msgstr "< 768px"
+
+#: admin/templates/meta-box-layout.php:4
+#@ uber-grid
+msgid "< 440px"
+msgstr "< 440px"
+
+#: admin/templates/meta-box-publish.php:5
+#@ ubergrid
+msgid "Preview"
+msgstr "Vorschau"
+
+#: admin/templates/meta-box-publish.php:6
+#@ uber-grid
+msgid "Create a copy"
+msgstr "Erstellen eine Kopie"
+
+#: admin/templates/meta-box-publish.php:17
+#@ default
+msgid "Delete Permanently"
+msgstr "Unwiderruflich Löschen"
+
+#: admin/templates/meta-box-publish.php:19
+#@ default
+msgid "Move to Trash"
+msgstr "In Papierkorb verschieben"
+
+#: admin/templates/meta-box-publish.php:28
+#@ uber-grid
+msgid "Create"
+msgstr "Erstellen"
+
+#: admin/templates/meta-box-publish.php:30
+#@ default
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: admin/templates/meta-box-publish.php:31
+#@ uber-grid
+msgid "Save"
+msgstr "Speichern"
+
+#: admin/templates/part-cell.php:6
+#@ uber-crid
+msgid "clone"
+msgstr "Duplizieren"
+
+#: admin/templates/part-cell.php:12
+#@ uber-grid
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: admin/templates/preview-template.php:3
+#@ uber-grid
+msgid "Preview grid"
+msgstr "Grid-Vorschau"
+
+#: admin/templates/preview-template.php:6
+#@ uber-grid
+msgid "Close preview"
+msgstr "Vorschau schließen"
+
+#: admin/templates/settings.php:3
+#@ uber-grid
+msgid "UberGrid Settings"
+msgstr "UberGrid Einstellungen"
+
+#: admin/templates/settings.php:7
+#@ uber-grid
+msgid "Performance"
+msgstr "Performance"
+
+#: admin/templates/settings.php:9
+#@ uber-grid
+msgid "Disable inline styles"
+msgstr "Deaktiviere Inline Stlyes"
+
+#: admin/templates/settings.php:11
+#@ uber-grid
+msgid "Loads all the styles from an separate file instead of inline style tag. Increases performance, but can lead to conflicts with cacning plugins and minifiers"
+msgstr "Lädt alle Styles von einer separaten Datei, anstatt diese vom Inline Style Tag zu laden. Erhöht die Performance, kann jedoch zu einem Konflikt mit 'Caching' oder 'Minifying' Plugins führen."
+
+#: admin/templates/settings.php:15
+#@ uber-grid
+msgid "Enable caching"
+msgstr "Aktiviere 'Caching'"
+
+#: admin/templates/settings.php:17
+#@ uber-grid
+msgid "Increases rendering performance, can lead to random issues"
+msgstr "Erhöhung der Rendering-Leistung kann zu zufälligen Fehlern führen"
+
+#: admin/templates/settings.php:21
+#@ uber-grid
+msgid "Compatibility"
+msgstr "Kompatibilität"
+
+#: admin/templates/settings.php:23
+#@ uber-grid
+msgid "Use shortcode hack"
+msgstr "Nutze Shortcodes"
+
+#: admin/templates/settings.php:25
+#@ uber-grid
+msgid "Try this if UberGrid looks strange on your site"
+msgstr "Versuchen Sie dies, wenn UberGrid merkwürdig auf Ihrer Seite aussieht"
+
+#: admin/templates/settings.php:29
+#@ uber-grid
+msgid "Force new jQuery version"
+msgstr "Zwinge zur Nutzung der neuen jQuery Version"
+
+#: admin/templates/settings.php:31
+#@ uber-grid
+msgid "Try this if UberGrid does not work at your site"
+msgstr "Versuchen Sie dies, wenn UberGrid auf Ihrer Seite nicht funktioniert"
+
+#: admin/templates/settings.php:34
+#@ uber-grid
+msgid "Image Processing"
+msgstr "Bildverarbeitung"
+
+#: admin/templates/settings.php:36
+#@ uber-grid
+msgid "Processing engine"
+msgstr "Verarbeitungsscript"
+
+#: admin/templates/settings.php:39
+#@ uber-grid
+msgid "TimThumb"
+msgstr "TimThumb"
+
+#: admin/templates/settings.php:41
+#@ uber-grid
+msgid "Photon"
+msgstr "Photon"
+
+#: admin/templates/settings.php:49
+#@ uber-grid
+msgid "Lightbox integration"
+msgstr "Lightbox Integration"
+
+#: admin/templates/settings.php:53
+#@ uber-grid
+msgid "Magnific popup"
+msgstr "Magnific popup"
+
+#: admin/templates/settings.php:55
+#@ uber-grid
+msgid "Swipebox"
+msgstr "Swipebox"
+
+#: admin/templates/settings.php:57
+#@ uber-grid
+msgid "Prettyphoto"
+msgstr "Prettyphoto"
+
+#: admin/templates/settings.php:60
+#@ uber-grid
+msgid "iLightbox"
+msgstr "iLightbox"
+
+#: admin/templates/settings.php:66
+#@ uber-grid
+msgid "Not installed or inactive."
+msgstr "Nicht installiert oder inaktiv."
+
+#: admin/templates/settings.php:67
+#, php-format
+#@ uber-grid
+msgid "You can buy iLightbox at the <a href=\"%s\" target=\"_blank\">CodeCanyon</a>, install and activate it"
+msgstr "Sie können iLightbox auf <a href=\"%s\" target=\"_blank\">CodeCanyon</a>kaufen, installieren und aktivieren"
+
+#: admin/templates/settings.php:71
+#@ uber-grid
+msgid "JetPack carousel"
+msgstr "JetPack Karussell"
+
+#: admin/templates/settings.php:76
+#@ uber-grid
+msgid "JetPack not installed, not activated, or Carousel module is inactive"
+msgstr "JetPack ist nicht installiert, inaktiv oder der Karussell Modus ist nicht aktiviert"
+
+#: admin/templates/settings.php:77
+#@ uber-grid
+msgid "Install Jetpack"
+msgstr "Installiere Jetpack"
+
+#: admin/templates/settings.php:81
+#@ uber-grid
+msgid "FooBox"
+msgstr "FooBox"
+
+#: admin/templates/settings.php:86
+#@ uber-grid
+msgid "FooBox is not installed, or was not activated."
+msgstr "FooBox ist nicht installiert oder inaktiv."
+
+#: admin/templates/settings.php:87
+#, php-format
+#@ uber-grid
+msgid "You can buy FooBox at: <a href=\"%s\" target=\"_blank\">its official site</a>"
+msgstr "Sie können FooBox auf <a href=\"%s\" target=\"_blank\">der offiziellen Seite</a> kaufen"
+
+#: admin/templates/settings.php:90
+#@ uber-grid
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: admin/templates/settings.php:94
+#@ uber-grid
+msgid "PrettyPhoto options"
+msgstr "PrettyPhoto Optionen"
+
+#: admin/templates/settings.php:96
+#@ uber-grid
+msgid "PrettyPhoto skin"
+msgstr "PrettyPhoto Skin"
+
+#: admin/templates/settings.php:100
+#@ uber-grid
+msgid "Facebook"
+msgstr "Facebook"
+
+#: admin/templates/settings.php:101
+#@ uber-grid
+msgid "Dark rounded"
+msgstr "Dunkel (abgerundet)"
+
+#: admin/templates/settings.php:102
+#@ uber-grid
+msgid "Dark square"
+msgstr "Dunkel (quadratisch)"
+
+#: admin/templates/settings.php:103
+#@ uber-grid
+msgid "Light rounded"
+msgstr "Hell (abgerundet)"
+
+#: admin/templates/settings.php:104
+#@ uber-grid
+msgid "Light square"
+msgstr "Hell (quadratisch)"
+
+#: admin/templates/settings.php:108
+#@ uber-grid
+msgid "Custom lightbox options"
+msgstr "Benutzerdefinierte Lightbox Optionen"
+
+#: admin/templates/settings.php:110
+#@ uber-grid
+msgid "Link custom rel attribute value"
+msgstr "Verlinke benutzerdefinierte 'rel=' Eigesnschaftswerte"
+
+#: admin/templates/settings.php:113
+#@ uber-grid
+msgid "If your custom lightbox requires a specific rel attribute value, you can enter it here."
+msgstr "Wenn Ihre benutzerdefinierte Lightbox einen spezifischen 'rel' Eigenschaftswert benötigt, können Sie diesen hier eingeben."
+
+#: admin/templates/settings.php:117
+#@ uber-grid
+msgid "Link class"
+msgstr "Link Klasse"
+
+#: admin/templates/settings.php:120
+#@ uber-grid
+msgid "If your custom lightbox requires a specific class, you can enter it here."
+msgstr "Wenn Ihre benutzerdefinierte Lightbox eine spezifische Klasse benötigt, können Sie diese hier eingeben."
+
+#: admin/templates/settings.php:124
+#@ uber-grid
+msgid "Custom attribute name"
+msgstr "Benutzerdefinierter Eigenschaftsname"
+
+#: admin/templates/settings.php:128
+#@ uber-grid
+msgid "Custom attribute value"
+msgstr "Benutzerdefinierter Eigenschaftswert"
+
+#: admin/templates/support-sent.php:6
+#@ asg
+msgid "It will take from a few hours to a couple of days to answer it, please be patient."
+msgstr "Es kann von ein paar Stunden bis zu einigen Tagen dauern, bis ich antworte. Bitte haben Sie Geduld."
+
+#: admin/templates/support.php:5
+#@ namespace
+msgid ""
+"You can send a support request from this screen directly. It is the best way to ask for support,\n"
+"\t\tbecause along with your description, an additional system information will be sent making it easier to help you.\n"
+"\t\tSupport requests are usually answered within a day, with infrequent delays up to a couple of days\n"
+"\t\t when I am away or busy with developing new cool stuff."
+msgstr ""
+"Sie können direkt von hier aus einen Suppertanfrage senden. Dies ist der beste Weg um um Support zu bitten,\n"
+"\t\tweil neben Ihrer Beschreibung zusätzliche Systeminformationen, welche uns bei der Fehlerbehebung helfen, mitgesandt werden.\n"
+"\t\tSupport Anfragen werden gewöhnlich innerhalb eines Tages, oder manchmal in ein paar Tagen, beantwortet,\n"
+"\t\t wenn ich beschäftigt bin oder an neuen coolen Sachen arbeite."
+
+#: admin/templates/support.php:16
+#@ namespace
+msgid "Your email"
+msgstr "Ihre E-Mail"
+
+#: admin/templates/support.php:23
+#@ namespace
+msgid "An answer will be sent to this email"
+msgstr "Die Antwort wird an diese E-Mail gesandt"
+
+#: admin/templates/support.php:27
+#@ namespace
+msgid "Your question"
+msgstr "Ihre Frage"
+
+#: admin/templates/support.php:32
+#@ namespace
+msgid "Your question here. Including specific steps to reproduce the issue usually helps to resolve the question much faster."
+msgstr "Geben Sie Ihre Frage hier an. Fügen Sie spezifische Schritte hinzu, welche uns helfen den Fehler zu reproduzieren. Das beschleunigt den Vorgang erheblich."
+
+#: admin/templates/support.php:38
+#@ namespace
+msgid "Gallery URL"
+msgstr "Galerie URL"
+
+#: admin/templates/support.php:45
+#@ namespace
+msgid "Your gallery URL"
+msgstr "Ihr Galerie URL"
+
+#: admin/templates/support.php:49
+#@ namespace
+msgid "Provide an admin access"
+msgstr "Stellen Sie mir einen Admin Zugriff zur Verfügung"
+
+#: admin/templates/support.php:51
+#@ namespace
+msgid "Create a temporary admin account"
+msgstr "Erstelle einen temporären Admin Account"
+
+#: admin/templates/support.php:53
+#@ namespace
+msgid "Provide me an admin access to your site. It allows me to help you on the fly without asking too many questions about details and is used really carefully. I respect my clients and their privacy - it is the only way of building a good long term business. A new admin account will be created, and the password used for this account will be strong and unique for your site."
+msgstr "Stellen Sie mir einen Adminzugriff für Ihre Seite zur Verfügung. Dies erlaubt es mir Ihnen direkt von mir aus zu helfen, ohne Sie mit Fragen über Details zu löchern. Ich respektiere meine Kunden und deren Privatsphäre! Es ist der einzige Weg ein Langzeitgeschäft aufzubauen. Ein neuer Admin Account wird erstellt, und das Passwort wird stark und einzigartig für Ihre Seite."
+
+#: admin/templates/support.php:57
+#@ namespace
+msgid "Submit the request"
+msgstr "Anfrage absenden"
+
+#: admin/templates/support.php:64
+#@ namespace
+msgid "This data will be sent along with your support request"
+msgstr "Diese Daten werden an Ihre Support-Anfrage angeheftet"
+
+#: admin/templates/support.php:67
+#@ namespace
+msgid "Environment"
+msgstr "Umfeld"
+
+#: admin/templates/support.php:72
+#@ namespace
+msgid "name"
+msgstr "Name"
+
+#: admin/templates/support.php:96
+#@ namespace
+msgid "Plugins"
+msgstr "Plugins"
+
+#: admin/templates/support.php:110
+#@ namespace
+msgid "Theme"
+msgstr "Theme"
+
+#: admin/templates/support.php:116
+#@ namespace
+msgid "Theme "
+msgstr "Theme "
+
+#: functions.php:157
+#@ uber-grid
+msgid "Plus"
+msgstr "Plus"
+
+#: post-types.php:14
+#: post-types.php:15
+#@ uber-grid
+msgid "Add new Grid"
+msgstr "Neues Grid hinzufügen"
+
+#: post-types.php:16
+#@ uber-grid
+msgid "Edit Grid"
+msgstr "Grid bearbeiten"
+
+#: post-types.php:17
+#@ uber-grid
+msgid "Search grids"
+msgstr "Grids durchsuchen"
+
+#: post-types.php:18
+#@ uber-grid
+msgid "No grids yet"
+msgstr "Keine Grids bis jetzt"
+
+#: shortcodes.php:28
+#@ uber-grid
+msgid "Content"
+msgstr "Inhalt"
+
+#: shortcodes.php:39
+#@ uber-grid
+msgid "Please enter grid ID here."
+msgstr "Bitte geben Sie hier eine Grid ID ein."
+
+#: templates/grid-blank-slate.php:2
+#@ uber-grid
+msgid "There are no cells in this grid yet."
+msgstr "Es gibt noch keine Zellen in diesem Grid."
+
+#: templates/grid.php:9
+#@ uber-grid
+msgid "Images not showing?"
+msgstr "Bilder nicht angezeigt?"
+
+#: templates/grid.php:10
+#@ uber-grid
+msgid "Edit grid"
+msgstr "Grid bearbeiten"
+
+#: updater.php:41
+#@ default
+msgid "An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr "Ein unerwarteter  HTTP Fehler ist aufgetreten, während der API Abfrage.</p> <p><a href=\"?\" onclick=\"document.location.reload(); return false;\">Versuche es erneut</a>"
+
+#: updater.php:45
+#@ default
+msgid "An unknown error occurred"
+msgstr "Ein unbekannter Fehler ist aufgetreten"
+
+#: widgets.php:29
+#@ default
+msgid "Title:"
+msgstr "Titel:"
+
+#: widgets.php:32
+#@ uber-grid
+msgid "Grid"
+msgstr "Grid"
+
+#: admin/templates/layout-chooser.php:3
+#@ uber-grid
+msgid "1x"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:4
+#@ uber-grid
+msgid "2x wide"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:5
+#@ uber-grid
+msgid "2x wide, image at the left"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:6
+#@ uber-grid
+msgid "2x wide, image at the right"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:7
+#@ uber-grid
+msgid "2x height"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:8
+#@ uber-grid
+msgid "2x height, image at the top"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:9
+#@ uber-grid
+msgid "2x height, image at the bottom"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:10
+#@ uber-grid
+msgid "2x width and height"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:11
+#@ uber-grid
+msgid "2x width and height, image at the left"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:12
+#@ uber-grid
+msgid "2x width and height, image at the right"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:13
+#@ uber-grid
+msgid "2x width and height, image at the top"
+msgstr ""
+
+#: admin/templates/layout-chooser.php:14
+#@ uber-grid
+msgid "2x width and height, image at the bottom"
+msgstr ""
+

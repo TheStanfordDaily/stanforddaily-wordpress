@@ -1,0 +1,206 @@
+#formatdiv, /* hide default radio button UI */
+#titlewrap {
+	display: none;
+}
+#post-body-content #postimagediv .inside p {
+	text-align: center;
+}
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+.vp-pfui-elm-block {
+	margin-bottom: 18px;
+}
+.vp-pfui-elm-block label {
+	color: #666;
+	display: block;
+	margin-bottom: 2px;
+	padding-left: 10px;
+	text-transform: uppercase;
+}
+.vp-pfui-elm-block input[type="text"],
+.vp-pfui-elm-block textarea,
+.vp-pfui-elm-block select,
+.vp-pfui-elm-block .vp-pfui-elm-container {
+	border: 1px #dfdfdf solid;
+}
+.vp-pfui-elm-block input[type="text"],
+.vp-pfui-elm-block textarea {
+	font-size: 18px;
+	width: 100%;
+}
+.vp-pfui-elm-block textarea {
+	height: 161px;
+	padding-left: 8px;
+}
+.vp-pfui-elm-block input[type="text"] {
+	padding-left: 8px;
+}
+.vp-pfui-elm-block .description {
+	color: #999;
+	display: block;
+	font-size: 11px;
+	line-height: 1.6;
+	padding-left: 10px;
+}
+.vp-pfui-elm-block .vp-pfui-elm-source {
+	height: 96px;
+}
+.vp-pfui-elm-block .vp-pfui-elm-container {
+	background: #f0f0f0;
+	padding: 10px;
+}
+.vp-pfui-elm-block .vp-pfui-elm-container p.none {
+	text-align: center;
+}
+.vp-pfui-elm-block .vp-pfui-elm-image-gallery {
+	margin: 0 0 -5px 0;
+	padding: 0;
+}
+.vp-pfui-elm-block .vp-pfui-elm-container .gallery {
+	margin: 0;
+	padding-bottom: 8px;
+}
+.vp-pfui-elm-block .vp-pfui-elm-container .gallery li {
+	display: inline-block;
+	margin: 0 8px 8px 0;
+	padding: 0;
+}
+.vp-pfui-elm-block .vp-pfui-elm-container .gallery li img {
+	vertical-align: middle;
+}
+
+#vp-pfui-format-gallery-preview .vp-pfui-elm-container {
+	background: #fff;
+}
+
+/* Video Field */
+#vp-pfui-format-video-embed {
+	height: 65px;
+}
+
+/* Featured Image */
+#post-body-content #select-featured-image {
+	text-align: center;
+}
+#post-body-content #select-featured-image img {
+	display: block;
+	margin: 0 auto 4px;
+}
+#post-body-content #select-featured-image a {
+	float: none;
+}
+#post-body-content #select-featured-image a.button-secondary {
+	margin-right: 10px;
+}
+
+#vp-post-formats-ui-tabs {
+	margin-bottom: 0;
+}
+
+/** tab navigation
+ -------------------------------------------------- */
+.vp-pfui-nav {
+	border-bottom: 1px solid #ccc;
+	margin: 10px 0 20px 0;
+	width: 100%;
+}
+.vp-pfui-nav ul {
+	list-style-type: none;
+	margin: 0 10px;
+	padding: 0em;
+}
+.vp-pfui-nav ul li,
+.vp-pfui-nav ul li a {
+	float: left;
+	margin: 0;
+}
+.vp-pfui-nav ul li a {
+	display: block;
+	color: #999;
+	background-color: #eee;
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
+	margin-right: 5px;
+	padding: 0 10px;
+	text-decoration: none;
+	text-shadow: #fff 0 1px 1px;
+	-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.vp-pfui-nav ul li a:hover {
+	color: #666;
+}
+.vp-pfui-nav ul li a.current {
+	background: none;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #f1f1f1;
+	color: #464646;
+	margin-bottom: -1px;
+}
+.vp-pfui-nav ul li a:focus {
+	outline: none;
+}
+
+/* Gallery */
+.vp-pfui-gallery-picker .gallery{
+	overflow: auto;
+}
+.vp-pfui-gallery-picker .gallery span{
+	width: 120px;
+	height: 120px;
+	display: block;
+	float: left;
+	position: relative;
+	margin: 4px;
+	border: solid 1px #eeeeee;
+}
+.vp-pfui-gallery-picker .gallery span.close{
+	width: 8px;
+	height: 8px;
+	line-height: 8px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	display: none;
+	border: none;
+	cursor: pointer;
+}
+.vp-pfui-gallery-picker .gallery span:hover span.close{
+	display: block;
+}
+.vp-pfui-gallery-picker .gallery img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.vp-pfui-gallery-picker .gallery span.vp-pfui-ui-state-highlight {
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	border: 1px dotted #bbbbbb;
+	background: #eeeeee;
+}
+.vp-pfui-gallery-picker .gallery span {
+	padding: 5px;
+	border: solid 1px #EFEFEF;
+}
+.vp-pfui-gallery-picker .gallery > span:hover {
+	border: solid 1px #CCC;
+	-moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+	box-shadow: 1px 1px 5px #999;
+}

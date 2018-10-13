@@ -1,0 +1,319 @@
+.jeg_preview_body_hidden {
+    overflow: hidden;
+}
+.jeg_preview_slider {
+    background: black;
+    position: relative;
+    margin-bottom: 20px;
+}
+.jeg_preview_slider.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+}
+.jeg_preview_slider.active .jeg_preview_holder, .jeg_preview_slider.active .jeg_preview_description {
+    z-index: 2;
+}
+.jeg_preview_holder {
+    position: relative;
+}
+.jeg_preview_media_content_holder_padding {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+.jeg_preview_media_content_holder {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    overflow: hidden;
+}
+.jeg_preview_media_content_holder img {
+    position: absolute;
+}
+.jeg_preview_slider.fullscreen .jeg_preview_media_content {
+    padding-bottom: 0;
+}
+.jeg_preview_media_content {
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.jeg_preview_media_content iframe, .jeg_preview_media_content object, .jeg_preview_media_content embed, .jeg_preview_media_content video {
+    width: 100%;
+}
+.jeg_preview_media_content iframe, .jeg_preview_media_content object, .jeg_preview_media_content embed, .jeg_preview_media_content video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.jeg_preview_media_holder {
+    position: relative;
+}
+.jeg_preview_media_holder h3 {
+    color: #FFF;
+    padding: 0 30px 0 15px;
+    line-height: 30px;
+    height: 30px;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: bold !important;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 5px 0 0 !important;
+}
+.jeg_preview_media_holder .fullscreen-switch {
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.jeg_preview_media_holder .fullscreen-switch i:after {
+    content: "\f065";
+}
+.jeg_preview_slider.fullscreen .jeg_preview_media_holder .fullscreen-switch i:after {
+    content: "\f066";
+}
+.jeg_preview_media_content {
+    width: 100%;
+    height: 100%;
+    clear: both;
+}
+.jeg_preview_item_thumbnail {
+    position: relative;
+    overflow: hidden;
+    opacity: 0.7;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
+.jeg_preview_item.active .jeg_preview_item_thumbnail {
+    opacity: 1;
+}
+.jeg_preview_item_thumbnail:after {
+    border: 2px solid #fff;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.5;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
+.jeg_preview_item.active .jeg_preview_item_thumbnail:after {
+    opacity: 1;
+}
+.jeg_preview_item_thumbnail img {
+    transition: .3s;
+}
+.jeg_preview_item.active .jeg_preview_item_thumbnail img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.jeg_preview_bottom_slider {
+    background: #000;
+    padding: 10px 0;
+}
+.jeg_preview_control {
+    color: #ffffff;
+    position: absolute;
+    bottom: 5px;
+    z-index: 2;
+    width: 100%;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+.jeg_preview_control .left_control {
+    margin-left: 15px;
+}
+.jeg_preview_control .counter {
+    float: left;
+}
+.jeg_preview_control .counter, .jeg_preview_control .subtitle {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.65);
+    z-index: 2;
+    font-size: 12px;
+    margin-left: 1em;
+}
+.jeg_preview_control .subtitle {
+    text-align: center;
+    margin: 0 5em;
+}
+.jeg_preview_control .counter {
+    font-style: italic;
+}
+.jeg_preview_control .zoom {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.jeg_preview_control .zoom > span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    line-height: 19px;
+    left: auto;
+    bottom: auto;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    background: rgba(93, 93, 93, 0.75);
+    border-radius: 3px;
+    margin-right: 5px;
+    overflow: hidden;
+    opacity: .6;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+}
+.jeg_preview_control .zoom > span:hover {
+    opacity: 1;
+}
+.jeg_preview_control .zoom > span.off {
+    opacity: 0.3;
+}
+.jeg_preview_media_content_navigation > div {
+    font-family: "jegicon";
+    position: absolute;
+    text-align: center;
+    font-size: 36px;
+    line-height: 40px;
+    color: #FFF;
+    top: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    width: 15%;
+    min-width: 40px;
+    max-width: 100px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.jeg_preview_media_content_navigation:hover > div {
+    opacity: 1
+}
+.jeg_preview_media_content_navigation > div:after {
+    position: absolute;
+    height: 40px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.jeg_preview_media_content_navigation .prev {
+    left: 15px;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+}
+.jeg_preview_media_content_navigation .next {
+    right: 15px;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+}
+.jeg_preview_media_content_navigation .next:after {
+    content: "\66";
+    right: 15px;
+}
+.jeg_preview_media_content_navigation .prev:after {
+    content: "\65";
+    left: 15px;
+}
+.jeg_preview_hide {
+    display: none;
+}
+.jeg_preview_grabbing {
+    cursor: url(drag.png), auto;
+}
+.jeg_preview_grabbing.draggable {
+    cursor: url(drag.png), auto;
+}
+.jeg_hidden_preview_description {
+    display: none;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+.jeg_hidden_preview_description.active {
+    display: block;
+}
+.jeg_preview_description {
+    display: none;
+    height: 100%;
+    background: #212121;
+    top: 0;
+    color: #aaa;
+}
+.jeg_preview_slider_ads {
+    width: 400px;
+    text-align: center;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+}
+.jeg_preview_slider_ads img {
+    display: inline-block !important;
+}
+.jeg_preview_description_wrapper {
+    overflow: auto;
+}
+.jeg_hidden_preview_description {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.jeg_preview_slider.fullscreen .jeg_preview_description {
+    right: 0;
+    position: fixed;
+    display: block;
+}
+.jeg_preview_description .jeg_hidden_preview_description > h3 {
+    font-size: 24px;
+    line-height: 1.375em;
+}
+.jeg_preview_description h3, .jeg_preview_description a {
+    color: #fff;
+}
+.mfp-container figcaption {
+    margin: 0;
+}

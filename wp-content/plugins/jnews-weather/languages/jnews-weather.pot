@@ -1,0 +1,389 @@
+# Copyright (C) 2018 JNews Weather
+# This file is distributed under the same license as the JNews Weather package.
+msgid ""
+msgstr ""
+"Project-Id-Version: JNews Weather\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Jegtheme <support@jeghteme.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;jnews_print_translation;jnews_return_translation\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:19
+msgid "JNews : Weather"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:21
+msgid "Weather forecast for JNews"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:33
+msgid "Title"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:34
+msgid "Title on widget header."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:38, wordpress/jnews-weather/header-weather-option.php:29
+msgid "Weather Location"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:39
+msgid "You can insert <strong>\"city name\"</strong> or <strong>\"city name, country code\"</strong>. For more detail information, you can read our documentation <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:43
+msgid "Location Name"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:44
+msgid "Insert custom name for weather location. Leave blank to use default location name."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:48
+msgid "Auto Detect Location"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:49
+msgid "Enable this option will automatically detect weather location of your site visitor. For more detail information, you can read our documentation <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:53
+msgid "Date Format"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:54
+msgid ""
+"Please set date format weather widget, for more detail about this format, please refer to\n"
+"                                <a href='%s' target='_blank'>Developer Codex</a>. Leave blank if you wont show them."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:61
+msgid "Detail Weather Forecast"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:62
+msgid "Show weather forecast detail info for today."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:66
+msgid "Show"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:67, wordpress/jnews-weather/header-weather-option.php:60
+msgid "Hide"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:71
+msgid "Next Days Weather Forecast"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:72
+msgid "Show weather forecast info for next days."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:76
+msgid "Temperature Only"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:77
+msgid "Icon Weather Only"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:78
+msgid "Show All"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:79
+msgid "Hide All"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:83
+msgid "Number of Weather Item"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:84
+msgid "Setup the number of days to show. This option will works if you show weather forecast info for next days."
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:101
+msgid "Image Background"
+msgstr ""
+
+#: wordpress/jnews-weather/class.jnews-weather-widget.php:102
+msgid "Insert an image for weather background."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:10
+msgid "Weather Forecast Info"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:11
+msgid "You will need to refersh the page to see the result of your changes.</br></br> If you want to purge the current cache, you just need to choose <strong>Disable Cache</strong> on the <strong>Weather Cache Expired</strong> option. Then you can setup the <strong>Weather Cache Expired</strong> option again right after you refresh the page."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:21
+msgid "Weather Forecast Source"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:22
+msgid "Choose weather forecast source."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:24
+msgid "Yahoo Weather"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:25
+msgid "Dark Sky"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:26
+msgid "Open Weather Map"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:27
+msgid "Aeris Weather"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:38
+msgid "Dark Sky Secret Key"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:39
+msgid "Insert your Dark Sky Secret Key. Find your Dark Sky Secret Key <a href='%s' target='_blank'>here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:56
+msgid "Open Weather Map API Key"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:57
+msgid "Insert your Open Weather Map API Key. Find your Open Weather Map API Key <a href='%s' target='_blank'>here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:74
+msgid "Aeris Weather Client ID"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:75
+msgid "Insert your Aeris Weather Client ID. Find your Aeris Weather Client ID <a href='%s' target='_blank'>here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:92
+msgid "Aeris Weather Client Secret"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:93
+msgid "Insert your Aeris Weather Client Secret. Find your Aeris Weather Client Secret <a href='%s' target='_blank'>here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:110
+msgid "Default Temperature Unit"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:111
+msgid "Choose default temperature unit."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:113
+msgid "Celsius"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:114
+msgid "Fahrenheit"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:125
+msgid "Weather Cache Expired"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:126
+msgid "Choose the expired time of weather forecast data cache."
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:128
+msgid "1 Hour"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:129
+msgid "2 Hour"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:130
+msgid "3 Hour"
+msgstr ""
+
+#: wordpress/jnews-weather/global-weather-option.php:131
+msgid "Disable Cache"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:18
+msgid "Top Bar Weather Forecast"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:19
+msgid "Please make sure you've been setup <strong>General Weather Forescast Setting</strong>. You can check it right <a href='%s' target='_blank'>here</a>."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:30
+msgid "You can insert <strong>\"city name\"</strong> or <strong>\"city name, country code\"</strong>. For more detail information, you can read our documentation <a href='%s' target='_blank'>here</a>"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:43
+msgid "Weather Auto Detect Location"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:44
+msgid "Enable this option will automatically detect weather location of your site visitor. For more detail information, you can read our documentation <a href='%s' target='_blank'>here</a>"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:57
+msgid "Top Bar Weather Item"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:58
+msgid "Show weather forecast for next days."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:61
+msgid "Normal"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:62
+msgid "Slide"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:76
+msgid "Weather Item Count"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:77
+msgid "The number of weather item to show."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:102
+msgid "Weather Item Content"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:103
+msgid "The content of weather item to show."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:128
+msgid "Autoplay Slide Weather Item"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:129
+msgid "Enable this option to make weather item auto slide."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:149
+msgid "Autoplay Slide Speed"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:150
+msgid "Setup the speed of autoplay slide weather item (second)."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:180
+msgid "Stop Autoplay Slide"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:181
+msgid "Enable this option to stop autoplay slide when mouse hover on weather item."
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:203
+msgid "Weather Style"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:212
+msgid "Background Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:213
+msgid "weather background color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:229
+msgid "Text Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:230
+msgid "weather text color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:248
+msgid "Icon Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:249
+msgid "weather icon color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:265
+msgid "Drop Background Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:266
+msgid "weather drop background color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:282
+msgid "Drop Hover Background Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:283
+msgid "weather drop hover background color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:300
+msgid "Drop Weather Icon Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:301
+msgid "drop weather icon color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:317
+msgid "Drop Degree Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:318
+msgid "weather drop degree color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:335
+msgid "Drop Days Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:336
+msgid "weather drop days color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:352
+msgid "Drop Border Color"
+msgstr ""
+
+#: wordpress/jnews-weather/header-weather-option.php:353
+msgid "drop border color"
+msgstr ""
+
+#: wordpress/jnews-weather/jnews-weather.php:60
+msgid "Weather Setting"
+msgstr ""
+
+#: wordpress/jnews-weather/jnews-weather.php:67
+msgid "Header - Weather Setting"
+msgstr ""
+
+#: wordpress/jnews-weather/include/wp-background-process.php:425
+msgid "Every %d Minutes"
+msgstr ""

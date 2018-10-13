@@ -1,0 +1,22 @@
+.jeg_preview_slider.fullscreen .jeg_preview_description {
+    left: 0;
+    right: auto;
+}
+
+.jeg_preview_media_content_navigation .next {
+    right: auto;
+    left: 15px;
+}
+
+.jeg_preview_media_content_navigation .prev {
+    right: 15px;
+    left: auto;
+}
+
+.jeg_preview_media_content_navigation .next:after {
+    content: '\f104';
+}
+
+.jeg_preview_media_content_navigation .prev:after{
+    content: '\f105';
+}

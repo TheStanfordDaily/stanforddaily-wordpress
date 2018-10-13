@@ -1,0 +1,229 @@
+# Copyright (C) 2018 JNews Social Login
+# This file is distributed under the same license as the JNews Social Login package.
+msgid ""
+msgstr ""
+"Project-Id-Version: JNews Social Login\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Jegtheme <support@jeghteme.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;jnews_print_translation;jnews_return_translation\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:389
+msgid "Graph returned an error: "
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:391
+msgid "Facebook SDK returned an error: "
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:393
+msgid "Error: "
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:429, wordpress/jnews-social-login/class.jnews-social-login.php:465, wordpress/jnews-social-login/class.jnews-social-login.php:505, wordpress/jnews-social-login/class.jnews-social-login.php:526
+msgid "Error"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:429
+msgid "Failed to get Google Code"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:505
+msgid "Failed to get Linked in access token"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:662
+msgid "OR"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:685
+msgid "Sign In with Facebook"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:686
+msgid "Sign In with Google+"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:687
+msgid "Sign In with Linked In"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:691
+msgid "Sign Up with Facebook"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:692
+msgid "Sign Up with Google+"
+msgstr ""
+
+#: wordpress/jnews-social-login/class.jnews-social-login.php:693
+msgid "Sign Up with Linked In"
+msgstr ""
+
+#: wordpress/jnews-social-login/jnews-social-login.php:110
+msgid ""
+"You will be asked to enter callback url when you configure apps. Please use below url :\n"
+"                                <ol>\n"
+"                                    <li><strong>Facebook</strong> : %s</li>\n"
+"                                    <li><strong>Google</strong> : %s</li>\n"
+"                                    <li><strong>Linked In</strong> : %s</li>\n"
+"                                 </ol>"
+msgstr ""
+
+#: wordpress/jnews-social-login/jnews-social-login.php:119
+msgid "Please <strong>Do not use Plain Permalink setting</strong>. To change this setting, please go to Settings > Permalinks."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:6
+msgid "Subscriber"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:7
+msgid "Contributor"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:12
+msgid "Participant"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:22
+msgid "Social Login Info"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:33
+msgid "Show Social Login"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:34
+msgid "Choose the location to display the social login & registration."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:36
+msgid "Login Only"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:37
+msgid "Registration Only"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:38
+msgid "Show on Both"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:39
+msgid "Hide"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:50
+msgid "User Role"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:51
+msgid "Choose new user default role."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:69
+msgid "Social Login Style"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:70
+msgid "Choose social login button style."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:72
+msgid "Normal"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:73
+msgid "Light"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:91
+msgid "Facebook Integration"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:92
+msgid "Enable Facebook login and registration."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:109
+msgid "Facebook App ID"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:110
+msgid "You can create an application and get Facebook App ID <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:132
+msgid "Facebook App Secret"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:133
+msgid "You can create an application and get Facebook App Secret <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:155
+msgid "Google Integration"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:156
+msgid "Enable Google login and registration."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:173
+msgid "Google Apps Name"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:174
+msgid "You can create an application and get Google Apps <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:196
+msgid "Google Client ID"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:197
+msgid "You can create an application and get Google Client ID <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:219
+msgid "Google Client Secret"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:220
+msgid "You can create an application and get Google Client Secret <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:242
+msgid "Linked In Integration"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:243
+msgid "Enable Linked In login and registration."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:260
+msgid "Linked In Client ID"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:261
+msgid "You can create an application and get Linked In Client ID <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:283
+msgid "Linked In Client Secret"
+msgstr ""
+
+#: wordpress/jnews-social-login/social-login-option.php:284
+msgid "You can create an application and get Linked In Client Secret <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: wordpress/jnews-social-login/include/class.jnews-social-login-option.php:53
+msgid "Social Login Setting"
+msgstr ""
