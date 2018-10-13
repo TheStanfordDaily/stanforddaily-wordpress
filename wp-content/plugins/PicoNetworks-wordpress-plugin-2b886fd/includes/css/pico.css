@@ -1,0 +1,350 @@
+.dashicons-pico {
+  opacity: 0.5;
+  background: url(../img/icon.svg) center;
+  vertical-align: text-bottom;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+.current .dashicons-pico {
+  opacity: 1 !important;
+}
+#pico-container {
+  color: #444;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin-left: -20px;
+}
+
+#pico-container .form.pico {
+  background: #FFFFFF;
+  border: 1px solid #D0D0D0;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-width: 345px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+#pico-container .form .header-form {
+  margin: 1em 0;
+  text-align: center;
+}
+#pico-container .header-form img {
+  height: 36px;
+  width: 79px;
+}
+#pico-container .form .description-form {
+  margin: 2em 0;
+}
+#pico-container .form .description-form b {
+  font-size: 16px;
+}
+#pico-container .form input {
+  border: 1px solid #D0D0D0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+}
+#pico-container .form input:focus {
+  border: 1px solid #00C590;
+}
+#pico-container .form input#api_key {
+  -webkit-text-security: disc;
+}
+#pico-container .form #submit {
+  background: #00C590;
+  border: 0;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  outline: 0;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 30%;
+}
+#pico-container a {
+  color: #00C590;
+  text-decoration: none;
+}
+#pico-container a:hover {
+  color: #00C590;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#pico-container .login-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+#pico-container .f-left {
+  width: 80%;
+}
+#pico-container .f-right {
+  width: 20%;
+}
+#pico-container .f-right img {
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 24px;
+  width: 24px;
+}
+#pico-container .error-message {
+  align-items: center;
+  border: 1px solid #f5a623;
+  border-radius: 4px;
+  color: #444;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 24px 0;
+}
+#pico-container .error-icon {
+  background: #f5a623;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  height: 100%;
+  padding: 8px 12px 6px 12px;
+}
+#pico-container .error-text {
+  font-weight: 600;
+  padding: 7px 16px;
+}
+#pico-container .leaky-form {
+  background: #FFFFFF;
+  border: 1px solid #D0D0D0;
+  border-bottom: none;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+#pico-container .alert-img {
+  margin-right: 6px;
+}
+#pico-container .leaky-form b {
+  font-size: 16px;
+}
+#pico-container #leaky_paywall_option {
+  margin: 0 0 0.5em 0;
+  width: 100%;
+}
+#pico-container #leaky-paywall-update-status {
+  color: #AAAAAA;
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+#pico-container #leaky-paywall-select-description {
+  color: #AAAAAA;
+  padding-top: 1em;
+}
+#pico-container .footer-form {
+  align-items: center;
+  background: #F1FBF9;
+  border: 1px solid #D0D0D0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  max-width: 345px;
+  margin: 0 auto 100px;
+  padding: 7px 30px 7px 30px;
+  position: relative;
+  z-index: 1;
+}
+#pico-container #modal-container {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 160px;
+  padding: 32px 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+#pico-container #modal-container .modal {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+}
+#pico-container #modal-container .modal#alert {
+  width: 400px;
+}
+#pico-container #modal-container .modal#alert .header {
+  padding: 32px 32px 16px 32px;
+}
+#pico-container #modal-container .modal#alert .header .close-alert {
+  cursor: pointer;
+  float: right;
+  height: 24px;
+  width: 24px;
+}
+#pico-container #modal-container .modal#alert .header .alert-icon {
+  display: none;
+  float: left;
+  height: 24px;
+  margin-right: 10px;
+  width: 24px;
+}
+#pico-container #modal-container .modal#alert .header .alert-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+#pico-container #modal-container .modal#alert .message {
+  padding: 0 32px 16px 32px;
+}
+#pico-container #modal-container .modal#alert .footer {
+  overflow: auto;
+  padding: 16px 32px 24px 32px;
+}
+#pico-container #modal-container .modal#alert .footer button {
+  float: right;
+}
+#pico-container #modal-container .modal#alert .footer .btn-secondary {
+  display: none;
+}
+#pico-container #modal-container .modal#alert.allow-cancel .header .close-alert {
+  display: block;
+}
+#pico-container #modal-container .modal#alert.allow-cancel .footer .btn-secondary {
+  display: block;
+}
+#pico-container #modal-container .modal#alert.show-icon .header .alert-icon {
+  display: block;
+}
+#pico-container #modal-container .modal#modal {
+  height: 600px;
+  width: 772px;
+}
+#pico-container #modal-container .modal#modal .header {
+  overflow: auto;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 16px 24px;
+}
+#pico-container #modal-container .modal#modal .header button, #pico-container #modal-container .modal#modal .header .tooltip-item {
+  float: right;
+}
+#pico-container #modal-container .modal#modal .header button {
+  line-height: 30px;
+  padding: 0 16px;
+}
+#pico-container #modal-container .modal#modal .header .tooltip-item {
+  display: none;
+  height: 24px;
+  margin: 3px 16px 0 0;
+  width: 24px;
+}
+#pico-container #modal-container .modal#modal .header .header-icon {
+  display: none;
+  float: left;
+  margin: 3px 10px 0 0;
+}
+#pico-container #modal-container .modal#modal .header .modal-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+#pico-container #modal-container .modal#modal .modal-content {
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  position: absolute;
+  top: 63px;
+  width: 100%;
+}
+#pico-container #modal-container .modal#modal.show-header-icons .header-icon, #pico-container #modal-container .modal#modal.show-header-icons .tooltip-item {
+  display: block;
+}
+#pico-container #modal-container.modal-disconnect {
+  /*display: block;*/
+}
+#pico-container #modal-container.modal-disconnect .modal,
+#pico-container #modal-container.modal-disconnect .modal#alert {
+  /*display: block;*/
+  color: #000;
+  /*.header .close-alert,*/
+}
+#pico-container #modal-container.modal-disconnect .modal .header .alert-icon,
+#pico-container #modal-container.modal-disconnect .modal .footer .btn-secondary,
+#pico-container #modal-container.modal-disconnect .modal#alert .header .alert-icon,
+#pico-container #modal-container.modal-disconnect .modal#alert .footer .btn-secondary {
+  display: block;
+}
+#pico-container .pico-button {
+  background: #00C590 !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  box-shadow: 0px 1px 2px 0 rgba(69,58,121,0.15) !important;
+  color: #FFFFFF !important;
+  cursor: pointer !important;
+  float: right !important;
+  font-weight: 600;
+  line-height: 38px !important;
+  margin: 10px 0 0 0 !important;
+  padding: 0 20px !important;
+  outline: 0 !important;
+  text-align: center !important;
+  -webkit-transition: 0.2s !important;
+  transition: 0.2s !important;
+  width: auto !important;
+}
+#pico-container .pico-button:hover {
+  box-shadow: 0px 2px 6px 0 rgba(69,58,121,0.25) !important;
+}
+#pico-container .pico-button:active,
+#pico-container .pico-button:focus {
+  box-shadow: 0px 1px 2px 0 rgba(69,58,121,0.15) !important;
+}
+#pico-container .pico-button-primary {
+  background: #00C590 !important;
+  border: 1px solid #00AC7E !important;
+}
+#pico-container .pico-button-danger {
+  background: #FF5E5B !important;
+  border: 1px solid #E3413D !important;
+}
+#pico-container .pico-button-neutral {
+  background: #FFFFFF !important;
+  border: 1px solid #E0E0E6 !important;
+  color: #444 !important;
+  font-weight: normal !important;
+}
+#pico-container .footer #cancel {
+  margin-right: 14px !important;
+}
+#pico-container .input-wrapper {
+  position: relative;
+}
+#pico-container .input-img {
+  width: 22px;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
