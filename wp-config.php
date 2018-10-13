@@ -21,3 +21,8 @@ require_once(ABSPATH . 'wp-settings.php');
 
 define( 'WP_HOME', 'http://develop.symuqpygde.us-east-2.elasticbeanstalk.com/' );
 define( 'WP_SITEURL', 'http://develop.symuqpygde.us-east-2.elasticbeanstalk.com/' );
+
+define( 'S3_UPLOADS_BUCKET', $_SERVER['S3_UPLOADS_BUCKET'] );
+define( 'S3_UPLOADS_KEY', $_SERVER['S3_UPLOADS_KEY'] );
+define( 'S3_UPLOADS_SECRET', $_SERVER['S3_UPLOADS_SECRET'] );
+define( 'S3_UPLOADS_REGION', $_SERVER['S3_UPLOADS_REGION'] ); // the s3 bucket region, required for Frankfurt, Beijing & Sydney.
