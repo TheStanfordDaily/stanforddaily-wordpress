@@ -19,8 +19,8 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 require_once(ABSPATH . 'wp-settings.php');
 
-define( 'WP_HOME', 'http://develop.symuqpygde.us-east-2.elasticbeanstalk.com/' );
-define( 'WP_SITEURL', 'http://develop.symuqpygde.us-east-2.elasticbeanstalk.com/' );
+define( 'WP_HOME', $_SERVER["SITE_URL"] );
+define( 'WP_SITEURL', $_SERVER["SITE_URL"] );
 
 define( 'S3_UPLOADS_BUCKET', $_SERVER['S3_UPLOADS_BUCKET'] );
 define( 'S3_UPLOADS_KEY', $_SERVER['S3_UPLOADS_KEY'] );
