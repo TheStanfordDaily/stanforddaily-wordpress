@@ -18,3 +18,6 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 require_once(ABSPATH . 'wp-settings.php');
+
+define( 'WP_HOME', 'http://develop.symuqpygde.us-east-2.elasticbeanstalk.com/' );
+define( 'WP_SITEURL', 'http://develop.symuqpygde.us-east-2.elasticbeanstalk.com/' );
