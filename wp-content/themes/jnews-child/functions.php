@@ -44,3 +44,13 @@ function tsd_get_coauthors_link_for_post($post)
     }
     return join(", ", $links);
 }
+
+
+/**
+ * Issue #28 - Add a banner to download iOS app
+ */
+function tsd_add_ios_app_banner()
+{
+    ?><meta name="apple-itunes-app" content="app-id=1341270063"><?php
+}
+add_action('wp_head', 'tsd_add_ios_app_banner');
