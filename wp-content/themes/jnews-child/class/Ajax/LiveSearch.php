@@ -97,11 +97,11 @@ Class LiveSearch
         if($date_format === 'ago') {
             return jnews_ago_time( human_time_diff( get_the_time('U', $post), current_time('timestamp') ) );
         } else if ($date_format === 'custom') {
-            return get_the_modified_date(get_theme_mod('jnews_live_search_date_custom'), $post);
+            return get_the_date(get_theme_mod('jnews_live_search_date_custom'), $post);
         } else if ($date_format) {
-            return get_the_modified_date(null, $post);
+            return get_the_date(null, $post);
         }
 
-        return get_the_modified_date(null, $post);
+        return get_the_date(null, $post);
     }
 }

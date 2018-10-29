@@ -319,13 +319,13 @@ abstract Class ModuleViewAbstract
             if($date_format === 'ago') {
                 return jnews_ago_time ( human_time_diff( get_the_time('U', $post), current_time('timestamp') ) );
             } else if ($date_format === 'custom') {
-                return get_the_modified_date($this->attribute['date_format_custom'], $post);
+                return get_the_date($this->attribute['date_format_custom'], $post);
             } else if ($date_format) {
-                return get_the_modified_date(null, $post);
+                return get_the_date(null, $post);
             }
         }
 
-        return get_the_modified_date(null, $post);
+        return get_the_date(null, $post);
     }
 
     protected function get_excerpt($post)

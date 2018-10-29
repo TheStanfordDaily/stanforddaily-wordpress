@@ -220,14 +220,14 @@ Class SinglePost
 		}
 		else if ( $date_format === 'default' )
 		{
-			return get_the_modified_date(null, $post);
+			return get_the_date(null, $post);
 		}
 		else if ( $date_format )
 		{
-			return get_the_modified_date($date_format, $post);
+			return get_the_date($date_format, $post);
 		}
 
-		return get_the_modified_date(null, $post);
+		return get_the_date(null, $post);
 	}
 
     public function get_template()
