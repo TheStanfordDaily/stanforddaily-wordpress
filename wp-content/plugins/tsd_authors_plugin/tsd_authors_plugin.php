@@ -29,8 +29,7 @@ function tsd_authors_plugin_enable_api() {
     // handle the request
 
     function tsd_authors_plugin_authors_list($request) {
-        $data = "{'a': 'b'}";
-        return new WP_REST_Response(json_decode($data), 200);
+        return new WP_REST_Response("{'a': 'b'}", 200);
     }
 
 }
