@@ -24,7 +24,18 @@ function tsd_authors_plugin_enable_api() {
 
     // Handle the request
     function tsd_authors_plugin_authors_list($request) {
-        return ["id" => (int) $request['id']];
+        $intUserID = (int) $request['id'];
+
+        // https://wordpress.stackexchange.com/a/180143/75147
+        $user = get_userdata( $intUserID );
+        if ( $user === false ) {
+            // User ID does not exist
+            return new WP_Error( 'no_author', 'Invalid author', array( 'status' => 404 ) );
+        }
+
+        // https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#return-value
+        // "After your callback is called, the return value is then converted to JSON, and returned to the client."
+        return ["id" => $user->ID, "name" => $user->first_name." ".$user->last_name];
     }
 }
 
