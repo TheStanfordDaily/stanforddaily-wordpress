@@ -17,7 +17,7 @@ function tsd_authors_plugin_enable_api() {
 
         // http://example.com/wp-json/random/v2/posts
 
-        register_rest_route('tsd_authors/v1', array (
+        register_rest_route('tsd_authors/v1', '/author/(?P<id>\d+)', array (
             'methods'             => 'GET',
             'callback'            => 'tsd_authors_plugin_authors_list',
             'permission_callback' => function (WP_REST_Request $request) {
@@ -29,7 +29,7 @@ function tsd_authors_plugin_enable_api() {
     // handle the request
 
     function tsd_authors_plugin_authors_list($request) {
-        return new WP_REST_Response("{'a': 'b'}", 200);
+        return new WP_REST_Response("{'id': '".$request['id']."'}", 200);
     }
 
 }
