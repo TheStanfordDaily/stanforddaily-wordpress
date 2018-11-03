@@ -31,9 +31,19 @@ function tsd_authors_plugin_enable_api() {
             }
         ]);
 
+        // Match "/authorsList"
         register_rest_route('tsd_authors/v1', '/authorsList', [
             'methods' => 'GET',
             'callback' => 'tsd_authors_plugin_authors_list',
+            'permission_callback' => function (WP_REST_Request $request) {
+                return true;
+            }
+        ]);
+
+        // Match "/authorsJSON"
+        register_rest_route('tsd_authors/v1', '/authorsJSON', [
+            'methods' => 'GET',
+            'callback' => 'tsd_authors_plugin_authors_json',
             'permission_callback' => function (WP_REST_Request $request) {
                 return true;
             }
@@ -64,6 +74,28 @@ function tsd_authors_plugin_enable_api() {
         }
 
         return $userIDs;
+    }
+
+    // Handle the "/authorsJSON" request
+    // (hardcoded JSON)
+    function tsd_authors_plugin_authors_json( $request ) {
+        $jsonString = '[
+    {
+        "fruit": "Apple",
+        "size": "Large",
+        "color": "Red"
+    },
+    {
+        "fruit": "Orange",
+        "size": "Small",
+        "color": "Orange"
+    }
+]';
+        // We want to `json_decode` and then return array instead of return string directly because:
+        // 1. To make sure the json the valid.
+        // 2. To avoid dealing with extra `"`s and `\n`s.
+        $json = json_decode($jsonString, true);
+        return $json;
     }
 }
 
