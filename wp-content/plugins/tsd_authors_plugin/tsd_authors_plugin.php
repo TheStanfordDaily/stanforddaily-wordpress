@@ -15,19 +15,25 @@ function tsd_authors_plugin_enable_api() {
     // Create json-api endpoint
     add_action('rest_api_init', function () {
         // Match "/author/{id}"
-        register_rest_route('tsd_authors/v1', '/author/(?P<id>\d+)', array (
-            'methods'             => 'GET',
-            'callback'            => 'tsd_authors_plugin_authors_list',
+        register_rest_route('tsd_authors/v1', '/author/(?P<id>\d+)', [
+            'methods' => 'GET',
+            'callback' => 'tsd_authors_plugin_authors_list',
+            'args' => [
+                'id' => [
+                    'validate_callback' => function($param, $request, $key) {
+                        // Make sure the parameter passed in is always a number
+                        return is_numeric( $param );
+                    }
+                ]
+            ],
             'permission_callback' => function (WP_REST_Request $request) {
                 return true;
             }
-        ));
+        ]);
     });
 
     // Handle the request
     function tsd_authors_plugin_authors_list( $request ) {
-        // We don't need explicitly check if `$request['id']` is int because our regular expression above in `register_rest_route`'s `$route` parameter only accepts "\d+"
-
         // https://wordpress.stackexchange.com/a/180143/75147
         $user = get_userdata( $request['id'] );
         if ( $user === false ) {
