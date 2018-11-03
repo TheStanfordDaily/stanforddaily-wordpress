@@ -10,13 +10,9 @@
 
 // Custom WP API endpoint
 function tsd_authors_plugin_enable_api() {
-
-    // create json-api endpoint
-
+    // Create json-api endpoint
     add_action('rest_api_init', function () {
-
-        // http://example.com/wp-json/random/v2/posts
-
+        // Match "/author/{id}"
         register_rest_route('tsd_authors/v1', '/author/(?P<id>\d+)', array (
             'methods'             => 'GET',
             'callback'            => 'tsd_authors_plugin_authors_list',
@@ -26,12 +22,10 @@ function tsd_authors_plugin_enable_api() {
         ));
     });
 
-    // handle the request
-
+    // Handle the request
     function tsd_authors_plugin_authors_list($request) {
-        return new WP_REST_Response("{'id': '".$request['id']."'}", 200);
+        return ["id" => (int) $request['id']];
     }
-
 }
 
 add_action('init', 'tsd_authors_plugin_enable_api');
