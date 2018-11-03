@@ -5,11 +5,13 @@
 * Author: TSD Tech Team
 * Version: 1.0
 * History:
-* 1.0 (11/2/18) - Created. (Ashwin Ramaswami)
+* 1.0 (11/2/18) - Created. (Ashwin Ramaswami & Yifei He)
 */
 
 // Custom WP API endpoint
 function tsd_authors_plugin_enable_api() {
+    // Ref: https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
+
     // Create json-api endpoint
     add_action('rest_api_init', function () {
         // Match "/author/{id}"
@@ -23,11 +25,11 @@ function tsd_authors_plugin_enable_api() {
     });
 
     // Handle the request
-    function tsd_authors_plugin_authors_list($request) {
-        $intUserID = (int) $request['id'];
+    function tsd_authors_plugin_authors_list( $request ) {
+        // We don't need explicitly check if `$request['id']` is int because our regular expression above in `register_rest_route`'s `$route` parameter only accepts "\d+"
 
         // https://wordpress.stackexchange.com/a/180143/75147
-        $user = get_userdata( $intUserID );
+        $user = get_userdata( $request['id'] );
         if ( $user === false ) {
             // User ID does not exist
             return new WP_Error( 'no_author', 'Invalid author', array( 'status' => 404 ) );
