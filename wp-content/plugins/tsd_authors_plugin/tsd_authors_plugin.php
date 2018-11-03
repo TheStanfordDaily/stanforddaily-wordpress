@@ -17,7 +17,7 @@ function tsd_authors_plugin_enable_api() {
         // Match "/author/{id}"
         register_rest_route('tsd_authors/v1', '/author/(?P<id>\d+)', [
             'methods' => 'GET',
-            'callback' => 'tsd_authors_plugin_authors_list',
+            'callback' => 'tsd_authors_plugin_author_info',
             'args' => [
                 'id' => [
                     'validate_callback' => function($param, $request, $key) {
@@ -30,10 +30,18 @@ function tsd_authors_plugin_enable_api() {
                 return true;
             }
         ]);
+
+        register_rest_route('tsd_authors/v1', '/authorsList', [
+            'methods' => 'GET',
+            'callback' => 'tsd_authors_plugin_authors_list',
+            'permission_callback' => function (WP_REST_Request $request) {
+                return true;
+            }
+        ]);
     });
 
-    // Handle the request
-    function tsd_authors_plugin_authors_list( $request ) {
+    // Handle the "/author/{id}" request
+    function tsd_authors_plugin_author_info( $request ) {
         // https://wordpress.stackexchange.com/a/180143/75147
         $user = get_userdata( $request['id'] );
         if ( $user === false ) {
@@ -44,6 +52,18 @@ function tsd_authors_plugin_enable_api() {
         // https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#return-value
         // "After your callback is called, the return value is then converted to JSON, and returned to the client."
         return ["id" => $user->ID, "name" => $user->first_name." ".$user->last_name];
+    }
+
+    // Handle the "/authorsList" request
+    function tsd_authors_plugin_authors_list( $request ) {
+        $users = get_users();
+
+        $userIDs = [];
+        foreach ( $users as $user ) {
+            $userIDs[] = $user->ID;
+        }
+
+        return $userIDs;
     }
 }
 
