@@ -1,8 +1,8 @@
 <?php
 /**
-* Plugin Name: TSD Authors Plugin
+* Plugin Name: The Stanford Daily Authors Plugin
 * Description: Add authors endpoint onto REST API, which can be consumed by our mobile app.
-* Author: TSD Tech Team
+* Author: The Stanford Daily Tech Team
 * Version: 1.0
 * History:
 * 1.0 (11/2/18) - Created. (Ashwin Ramaswami & Yifei He)
@@ -15,7 +15,7 @@ function tsd_authors_plugin_enable_api() {
     // Create json-api endpoint
     add_action('rest_api_init', function () {
         // Match "/author/{id}"
-        register_rest_route('tsd_authors/v1', '/author/(?P<id>\d+)', [
+        register_rest_route('tsd/v1', '/authors/(?P<id>\d+)', [
             'methods' => 'GET',
             'callback' => 'tsd_authors_plugin_author_info',
             'args' => [
@@ -31,8 +31,8 @@ function tsd_authors_plugin_enable_api() {
             }
         ]);
 
-        // Match "/authorsList"
-        register_rest_route('tsd_authors/v1', '/authorsList', [
+        // Match "/authors"
+        register_rest_route('tsd/v1', '/authors', [
             'methods' => 'GET',
             'callback' => 'tsd_authors_plugin_authors_list',
             'permission_callback' => function (WP_REST_Request $request) {
@@ -40,14 +40,6 @@ function tsd_authors_plugin_enable_api() {
             }
         ]);
 
-        // Match "/authorsJSON"
-        register_rest_route('tsd_authors/v1', '/authorsJSON', [
-            'methods' => 'GET',
-            'callback' => 'tsd_authors_plugin_authors_json',
-            'permission_callback' => function (WP_REST_Request $request) {
-                return true;
-            }
-        ]);
     });
 
     // Handle the "/author/{id}" request
@@ -74,28 +66,6 @@ function tsd_authors_plugin_enable_api() {
         }
 
         return $userIDs;
-    }
-
-    // Handle the "/authorsJSON" request
-    // (hardcoded JSON)
-    function tsd_authors_plugin_authors_json( $request ) {
-        $jsonString = '[
-    {
-        "fruit": "Apple",
-        "size": "Large",
-        "color": "Red"
-    },
-    {
-        "fruit": "Orange",
-        "size": "Small",
-        "color": "Orange"
-    }
-]';
-        // We want to `json_decode` and then return array instead of return string directly because:
-        // 1. To make sure the json the valid.
-        // 2. To avoid dealing with extra `"`s and `\n`s.
-        $json = json_decode($jsonString, true);
-        return $json;
     }
 }
 
