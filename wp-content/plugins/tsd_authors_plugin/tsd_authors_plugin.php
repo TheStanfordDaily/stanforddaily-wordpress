@@ -68,6 +68,6 @@ function tsd_authors_plugin_enable_api() {
         return $userIDs;
     }
 }
-include "custom_author_fields.php";
+include "lib/custom_author_fields.php";
 add_action('init', 'tsd_authors_plugin_enable_api');
 add_action('init', 'tsd_authors_plugin_add_custom_fields');
