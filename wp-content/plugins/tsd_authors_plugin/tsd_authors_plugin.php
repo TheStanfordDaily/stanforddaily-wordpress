@@ -70,12 +70,23 @@ function tsd_authors_plugin_enable_api() {
     function tsd_authors_plugin_authors_list( $request ) {
         $users = get_users();
 
-        $userIDs = [];
-        foreach ( $users as $user ) {
-            $userIDs[] = $user->ID;
-        }
+        // $userIDs = [];
+        // foreach ( $users as $user ) {
+        //     $userIDs[] = $user->ID;
+        // }
 
-        return $userIDs;
+        $json = '[
+            {"name": "Arts and Life", "members": [
+                {"name": "Alex Tsai", "id": 1001790},
+                {"name": "Shana Hadi", "id": 1001803}
+            ]},
+            {"name": "Tech", "members": [
+                {"name": "Ashwin Ramaswami", "id": 1001827},
+                {"name": "John Doe", "id": 1001714}
+            ]}
+        ]';
+
+        return json_decode($json, true);
     }
 }
 include "lib/custom_author_fields.php";
