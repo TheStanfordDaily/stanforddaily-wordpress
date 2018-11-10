@@ -1,0 +1,12 @@
+img.soundcloudIsGold_placeholder{
+    border: 1px solid #7B9DA2;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 566px;
+    height: auto;
+}
+img.soundcloudIsGold_placeholder:hover{
+  background-color: #0085ba;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
