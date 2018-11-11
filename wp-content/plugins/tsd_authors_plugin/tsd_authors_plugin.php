@@ -96,7 +96,21 @@ function tsd_authors_plugin_enable_api() {
             }
         }
         //print_r($userSectionsAndIDs);
-        return $userSectionsAndIDs;
+
+        $results = [];
+        foreach ($userSectionsAndIDs as $eachSection => $eachIDs) {
+            $thisSectionArray = [];
+            $thisSectionArray["name"] = $eachSection;
+            foreach ($eachIDs as $eachID => $eachName) {
+                $thisMemberInfo = [];
+                $thisMemberInfo["id"] = $eachID;
+                $thisMemberInfo["name"] = $eachName;
+                $thisSectionArray["members"][] = $thisMemberInfo;
+            }
+            $results[] = $thisSectionArray;
+        }
+        //print_r($results);
+        return $results;
 
         $json = '[
             {"name": "Arts and Life", "members": [
