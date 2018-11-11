@@ -2,12 +2,17 @@
 // Adapted from https://www.cssigniter.com/how-to-add-a-custom-user-field-in-wordpress/
 
 $theDailySections = ["news" => "News",
-                    "al" => "Arts and Life",
-                    "op" => "Opinions",
-                    "grind" => "The Grind",
-                    "sports" => "Sports",
-                    "copyedit" => "Copy Editing",
-                    "multimedia" => "Multimedia"];
+                "al" => "Arts and Life",
+                "op" => "Opinions",
+                "grind" => "The Grind",
+                "sports" => "Sports",
+                "copyedit" => "Copy Editing",
+                "multimedia" => "Multimedia",
+                "graphics" => "Graphics",
+                "yearbook" => "Yearbook",
+                "tech" => "Tech",
+                "photo" => "Photo"
+                ];
 
 $tsd_author_custom_fields = [
     "blurb" => ["title" => "Blurb", "type" => "textarea"],
@@ -57,7 +62,7 @@ function tsd_authors_plugin_add_custom_fields()
                     // Ref: https://stackoverflow.com/a/14873743/2603230
                     $userSections = get_user_meta( $user->ID, $name, true );
                     foreach($fieldOptions["choices"] as $thisKey => $thisValue) { ?>
-                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (in_array($thisKey, $userSections)) { ?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
+                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (is_array($userSections) && in_array($thisKey, $userSections)) { ?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
                     <?php }
                     break;
                     default: ?>
@@ -115,4 +120,3 @@ function tsd_authors_plugin_add_custom_fields()
         //}
     }
 }
-?>
