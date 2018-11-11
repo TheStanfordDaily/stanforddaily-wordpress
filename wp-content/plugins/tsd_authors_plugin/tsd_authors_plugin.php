@@ -8,6 +8,8 @@
 * 1.0 (11/2/18) - Created. (Ashwin Ramaswami & Yifei He)
 */
 
+include "lib/custom_author_fields.php";
+
 // Custom WP API endpoint
 function tsd_authors_plugin_enable_api() {
     // Ref: https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
@@ -82,6 +84,20 @@ function tsd_authors_plugin_enable_api() {
         //     $userIDs[] = $user->ID;
         // }
 
+        global $theDailySections;
+        $userSectionsAndIDs = [];
+        foreach ( $users as $user ) {
+            $thisUserSections = get_user_meta( $user->ID, "tsd_section", true );
+            if (!empty($thisUserSections)){
+                foreach ($thisUserSections as $eachSection) {
+                    $eachSectionName = $theDailySections[$eachSection];
+                    $userSectionsAndIDs[$eachSectionName][$user->ID] = $user->first_name." ".$user->last_name;
+                }
+            }
+        }
+        //print_r($userSectionsAndIDs);
+        return $userSectionsAndIDs;
+
         $json = '[
             {"name": "Arts and Life", "members": [
                 {"name": "Alex Tsai", "id": 1001790},
@@ -96,6 +112,5 @@ function tsd_authors_plugin_enable_api() {
         return json_decode($json, true);
     }
 }
-include "lib/custom_author_fields.php";
 add_action('init', 'tsd_authors_plugin_enable_api');
 add_action('init', 'tsd_authors_plugin_add_custom_fields');
