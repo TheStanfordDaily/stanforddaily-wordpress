@@ -55,12 +55,19 @@ function tsd_authors_plugin_enable_api() {
 
         // https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#return-value
         // "After your callback is called, the return value is then converted to JSON, and returned to the client."
-        $all_meta_for_user = get_user_meta( $userId, null, false );
+
+        // https://codex.wordpress.org/Function_Reference/get_user_meta
+        // "To avoid this, you may want to run a simple array_map() on the results of get_user_meta() in order to take only the first index of each result (this emulating what the $single argument does when $key is provided:"
+        $all_meta_for_user = array_map( function( $a ){ return $a[0]; }, get_user_meta( $userId, null ) );
         $meta_to_return = ["id" => $user->ID, "name" => $user->first_name." ".$user->last_name];
         foreach ($all_meta_for_user as $key => $value) {
             $shortKey = preg_replace('/^tsd_/', '', $key);
             if (array_key_exists($shortKey, $tsd_author_custom_fields)) {
-                $meta_to_return[$shortKey] = $value[0];
+                if (is_serialized($value)) {
+                    // We have to unserialize array if it's serialized (e.g. "a:4:{i:0;s:2:"op";i:1;s:5:"grind";i:2;s:6:"sports";i:3;s:8:"copyedit";}")
+                    $value = unserialize($value);
+                }
+                $meta_to_return[$shortKey] = $value;
             }
         }
         return $meta_to_return;

@@ -57,7 +57,7 @@ function tsd_authors_plugin_add_custom_fields()
                     // Ref: https://stackoverflow.com/a/14873743/2603230
                     $userSections = get_user_meta( $user->ID, $name, true );
                     foreach($fieldOptions["choices"] as $thisKey => $thisValue) { ?>
-                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (isset($userSections[$thisKey]) && $userSections[$thisKey] == "on") { ?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
+                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (in_array($thisKey, $userSections)) { ?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
                     <?php }
                     break;
                     default: ?>
@@ -104,8 +104,11 @@ function tsd_authors_plugin_add_custom_fields()
 
         //if (!empty($_POST['year_of_birth']) && intval($_POST['year_of_birth']) >= 1900) {
         foreach ($tsd_author_custom_fields as $field => $fieldOptions) {
-            // Update user meta too if the field is a checkbox even if it's empty - or else we can't clear the checkbox.
-            if (isset($_POST['tsd_' . $field]) || $fieldOptions["type"] = "checkbox") {
+            if ($fieldOptions["type"] == "checkbox") {
+                update_user_meta($user_id, 'tsd_' . $field, array_keys($_POST['tsd_' . $field]));
+                continue;
+            }
+            if (isset($_POST['tsd_' . $field])) {
                 update_user_meta($user_id, 'tsd_' . $field, $_POST['tsd_' . $field]);
             }
         }
