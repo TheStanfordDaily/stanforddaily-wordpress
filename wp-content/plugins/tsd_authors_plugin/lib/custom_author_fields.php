@@ -1,6 +1,14 @@
 <?php
 // Adapted from https://www.cssigniter.com/how-to-add-a-custom-user-field-in-wordpress/
 
+$theDailySections = ["news" => "News",
+                    "al" => "Arts and Life",
+                    "op" => "Opinions",
+                    "grind" => "The Grind",
+                    "sports" => "Sports",
+                    "copyedit" => "Copy Editing",
+                    "multimedia" => "Multimedia"];
+
 $tsd_author_custom_fields = [
     "blurb" => ["title" => "Blurb", "type" => "textarea"],
     "hometown" => ["title" => "Hometown"],
@@ -9,6 +17,7 @@ $tsd_author_custom_fields = [
     "diningHall" => ["title" => "Dining Hall"],
     "studySpot" => ["title" => "Study Spot"],
     "findYou" => ["title" => "Find You"],
+    "section" => ["title" => "Your Section(s)", "type" => "checkbox", "choices" => $theDailySections]
 ];
 
 function tsd_authors_plugin_add_custom_fields()
@@ -25,7 +34,7 @@ function tsd_authors_plugin_add_custom_fields()
 	<table class="form-table">
         <?php foreach ($tsd_author_custom_fields as $field => $fieldOptions) {
             $name = "tsd_" . $field;
-            $value = esc_attr(get_the_author_meta("tsd_" . $field, $user->ID));
+            $value = esc_attr(get_the_author_meta($name, $user->ID));
             ?>
 		<tr>
             <th>
@@ -44,6 +53,13 @@ function tsd_authors_plugin_add_custom_fields()
                     cols="30"
                     ><?php echo $value; ?></textarea>
                     <?php break;
+                    case 'checkbox':
+                    // Ref: https://stackoverflow.com/a/14873743/2603230
+                    $userSections = get_user_meta( $user->ID, $name, true );
+                    foreach($fieldOptions["choices"] as $thisKey => $thisValue) { ?>
+                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (isset($userSections[$thisKey]) && $userSections[$thisKey] == "on") { ?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
+                    <?php }
+                    break;
                     default: ?>
                     <input type="text"
                     class="regular-text"
@@ -88,7 +104,8 @@ function tsd_authors_plugin_add_custom_fields()
 
         //if (!empty($_POST['year_of_birth']) && intval($_POST['year_of_birth']) >= 1900) {
         foreach ($tsd_author_custom_fields as $field => $fieldOptions) {
-            if (isset($_POST['tsd_' . $field])) {
+            // Update user meta too if the field is a checkbox even if it's empty - or else we can't clear the checkbox.
+            if (isset($_POST['tsd_' . $field]) || $fieldOptions["type"] = "checkbox") {
                 update_user_meta($user_id, 'tsd_' . $field, $_POST['tsd_' . $field]);
             }
         }
