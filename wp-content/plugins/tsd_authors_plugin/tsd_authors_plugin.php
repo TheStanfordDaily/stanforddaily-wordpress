@@ -50,16 +50,16 @@ function tsd_authors_plugin_enable_api() {
         $user = get_userdata( $userId );
         if ( $user === false ) {
             // User ID does not exist
-            return new WP_Error( 'no_author', 'Invalid author', array( 'status' => 404 ) );
+            return new WP_Error( 'no_author', 'Invalid author', ['status' => 404] );
         }
 
         // https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#return-value
         // "After your callback is called, the return value is then converted to JSON, and returned to the client."
         $all_meta_for_user = get_user_meta( $userId, null, false );
-        $meta_to_return = array("id" => $user->ID, "name" => $user->first_name." ".$user->last_name);
+        $meta_to_return = ["id" => $user->ID, "name" => $user->first_name." ".$user->last_name];
         foreach ($all_meta_for_user as $key => $value) {
             $shortKey = preg_replace('/^tsd_/', '', $key);
-            if (array_key_exists( $shortKey, $tsd_author_custom_fields)) {
+            if (array_key_exists($shortKey, $tsd_author_custom_fields)) {
                 $meta_to_return[$shortKey] = $value[0];
             }
         }

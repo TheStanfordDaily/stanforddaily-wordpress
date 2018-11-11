@@ -1,26 +1,26 @@
 <?php
 // Adapted from https://www.cssigniter.com/how-to-add-a-custom-user-field-in-wordpress/
 
-$tsd_author_custom_fields = array(
-    "blurb" => array("title" => "Blurb", "type" => "textarea"),
-    "hometown" => array("title" => "Hometown"),
-    "timeAtDaily" => array("title" => "Time at the Daily"),
-    "tapOrder" => array("title" => "Favorite TAP Order"),
-    "diningHall" => array("title" => "Dining Hall"),
-    "studySpot" => array("title" => "Study Spot"),
-    "findYou" => array("title" => "Find You"),
-);
+$tsd_author_custom_fields = [
+    "blurb" => ["title" => "Blurb", "type" => "textarea"],
+    "hometown" => ["title" => "Hometown"],
+    "timeAtDaily" => ["title" => "Time at the Daily"],
+    "tapOrder" => ["title" => "Favorite TAP Order"],
+    "diningHall" => ["title" => "Dining Hall"],
+    "studySpot" => ["title" => "Study Spot"],
+    "findYou" => ["title" => "Find You"],
+];
 
 function tsd_authors_plugin_add_custom_fields()
 {
-    add_action('show_user_profile', 'crf_show_extra_profile_fields');
-    add_action('edit_user_profile', 'crf_show_extra_profile_fields');
+    add_action('show_user_profile', 'tsd_authors_plugin_show_extra_profile_fields');
+    add_action('edit_user_profile', 'tsd_authors_plugin_show_extra_profile_fields');
 
-    function crf_show_extra_profile_fields($user)
+    function tsd_authors_plugin_show_extra_profile_fields($user)
     {
         global $tsd_author_custom_fields;
         ?>
-	<h3><?php esc_html_e('Mobile App Author Information', 'crf');?></h3>
+	<h2><?php esc_html_e('Mobile App Author Information');?></h2>
 
 	<table class="form-table">
         <?php foreach ($tsd_author_custom_fields as $field => $fieldOptions) {
@@ -29,21 +29,30 @@ function tsd_authors_plugin_add_custom_fields()
             ?>
 		<tr>
             <th>
-                <label for="<?php echo "tsd_" . $field; ?>">
-                    <?php echo isset($fieldOptions["title"]) ? $fieldOptions["title"] : $field; ?>
+                <label for="<?php echo $name; ?>">
+                    <?php echo $fieldOptions["title"] ?? $field; ?>
                 </label>
             </th>
 			<td>
-                <?php if (isset($fieldOptions["type"]) && $fieldOptions["type"] == "textarea") {?>
+                <?php $fieldType = $fieldOptions["type"] ?? "text";
+                switch ($fieldType) {
+                    case 'textarea': ?>
                     <textarea
-			       name="<?php echo $name; ?>"
-                    ><?php echo $value; ?></textarea>
-                <?php } else {?>
-                    <input type="text"
                     name="<?php echo $name; ?>"
+                    id="<?php echo $name; ?>"
+                    rows="5"
+                    cols="30"
+                    ><?php echo $value; ?></textarea>
+                    <?php break;
+                    default: ?>
+                    <input type="text"
+                    class="regular-text"
+                    name="<?php echo $name; ?>"
+                    id="<?php echo $name; ?>"
                     value="<?php echo $value; ?>"
                     />
-                <?php }?>
+                    <?php break;
+                } ?>
 			</td>
         </tr>
         <?php }?>
@@ -51,8 +60,8 @@ function tsd_authors_plugin_add_custom_fields()
 	<?php
 }
 
-    add_action('user_profile_update_errors', 'crf_user_profile_update_errors', 10, 3);
-    function crf_user_profile_update_errors($errors, $update, $user)
+    add_action('user_profile_update_errors', 'tsd_authors_plugin_user_profile_update_errors', 10, 3);
+    function tsd_authors_plugin_user_profile_update_errors($errors, $update, $user)
     {
         if (!$update) {
             return;
@@ -67,10 +76,10 @@ function tsd_authors_plugin_add_custom_fields()
         // }
     }
 
-    add_action('personal_options_update', 'crf_update_profile_fields');
-    add_action('edit_user_profile_update', 'crf_update_profile_fields');
+    add_action('personal_options_update', 'tsd_authors_plugin_update_profile_fields');
+    add_action('edit_user_profile_update', 'tsd_authors_plugin_update_profile_fields');
 
-    function crf_update_profile_fields($user_id)
+    function tsd_authors_plugin_update_profile_fields($user_id)
     {
         global $tsd_author_custom_fields;
         if (!current_user_can('edit_user', $user_id)) {
