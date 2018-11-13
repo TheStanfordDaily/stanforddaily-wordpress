@@ -149,3 +149,13 @@ li {
 #adminmenuback {
   display: none !important;
 }
+
+.center_left {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+}
+
+img {
+  z-index: -1;
+}
