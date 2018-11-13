@@ -11,8 +11,7 @@ $theDailySections = ["news" => "News",
                 "graphics" => "Graphics",
                 "yearbook" => "Yearbook",
                 "tech" => "Tech",
-                "photo" => "Photo"
-                ];
+                "photo" => "Photo"];
 
 $tsd_author_custom_fields = [
     "coverImage" => ["title" => "Cover Image", "type" => "image"],
@@ -111,10 +110,10 @@ function tsd_authors_plugin_add_custom_fields()
                 } ?>
 			</td>
         </tr>
-        <?php }?>
+        <?php } ?>
 	</table>
 	<?php
-}
+    }
 
     add_action('user_profile_update_errors', 'tsd_authors_plugin_user_profile_update_errors', 10, 3);
     function tsd_authors_plugin_user_profile_update_errors($errors, $update, $user)
