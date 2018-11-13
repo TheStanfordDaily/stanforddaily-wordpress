@@ -77,21 +77,22 @@ function tsd_authors_plugin_enable_api() {
 
     // Handle the "/authorsList" request
     function tsd_authors_plugin_authors_list( $request ) {
-        $users = get_users();
-
-        // $userIDs = [];
-        // foreach ( $users as $user ) {
-        //     $userIDs[] = $user->ID;
-        // }
-
         global $theDailySections;
         $userSectionsAndIDs = [];
-        foreach ( $users as $user ) {
-            $thisUserSections = get_user_meta( $user->ID, "tsd_section", true );
-            if (!empty($thisUserSections)){
-                foreach ($thisUserSections as $eachSection) {
-                    $eachSectionName = $theDailySections[$eachSection];
-                    $userSectionsAndIDs[$eachSectionName][$user->ID] = $user->first_name." ".$user->last_name;
+        // https://wordpress.stackexchange.com/q/10881/75147
+        $user_query = new WP_User_Query([
+            'meta_key' => 'tsd_section',
+            'meta_value' => [''],
+            'meta_compare' => 'NOT IN'
+        ]);
+        if (!empty( $user_query->get_results())) {
+            foreach($user_query->get_results() as $user) {
+                $thisUserSections = get_user_meta($user->ID, "tsd_section", true);
+                if (!empty($thisUserSections)){
+                    foreach ($thisUserSections as $eachSection) {
+                        $eachSectionName = $theDailySections[$eachSection];
+                        $userSectionsAndIDs[$eachSectionName][$user->ID] = $user->first_name." ".$user->last_name;
+                    }
                 }
             }
         }
