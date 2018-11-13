@@ -1,10 +1,10 @@
-<?php
+ <?php
 /**
  * @author : TSD Tech Team
  */
 
 /**
- * Load parent theme style
+ * Load parent theme style test
  */
 add_action( 'wp_enqueue_scripts', 'jnews_child_enqueue_parent_style' );
 
