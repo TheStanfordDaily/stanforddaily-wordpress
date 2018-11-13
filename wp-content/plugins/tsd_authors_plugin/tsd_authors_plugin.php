@@ -16,7 +16,7 @@ function tsd_authors_plugin_enable_api() {
 
     // Create json-api endpoint
     add_action('rest_api_init', function () {
-        // Match "/author/{id}"
+        // Match "/authors/{id}"
         register_rest_route('tsd/v1', '/authors/(?P<id>\d+)', [
             'methods' => 'GET',
             'callback' => 'tsd_authors_plugin_author_info',
@@ -44,7 +44,7 @@ function tsd_authors_plugin_enable_api() {
 
     });
 
-    // Handle the "/author/{id}" request
+    // Handle the "/authors/{id}" request
     function tsd_authors_plugin_author_info( $request ) {
         global $tsd_author_custom_fields;
         // https://wordpress.stackexchange.com/a/180143/75147
@@ -75,7 +75,7 @@ function tsd_authors_plugin_enable_api() {
         return $meta_to_return;
     }
 
-    // Handle the "/authorsList" request
+    // Handle the "/authors" request
     function tsd_authors_plugin_authors_list( $request ) {
         global $theDailySections;
         $userSectionsAndIDs = [];
