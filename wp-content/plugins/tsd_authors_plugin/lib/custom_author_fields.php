@@ -2,16 +2,16 @@
 // Adapted from https://www.cssigniter.com/how-to-add-a-custom-user-field-in-wordpress/
 
 $theDailySections = ["news" => "News",
-                "al" => "Arts and Life",
-                "op" => "Opinions",
-                "grind" => "The Grind",
-                "sports" => "Sports",
-                "copyedit" => "Copy Editing",
-                "multimedia" => "Multimedia",
-                "graphics" => "Graphics",
-                "yearbook" => "Yearbook",
-                "tech" => "Tech",
-                "photo" => "Photo"];
+    "al" => "Arts and Life",
+    "op" => "Opinions",
+    "grind" => "The Grind",
+    "sports" => "Sports",
+    "copyedit" => "Copy Editing",
+    "multimedia" => "Multimedia",
+    "graphics" => "Graphics",
+    "yearbook" => "Yearbook",
+    "tech" => "Tech",
+    "photo" => "Photo"];
 
 $tsd_author_custom_fields = [
     "coverImage" => ["title" => "Cover Image", "type" => "image"],
@@ -24,15 +24,16 @@ $tsd_author_custom_fields = [
     "diningHall" => ["title" => "Dining Hall"],
     "studySpot" => ["title" => "Study Spot"],
     "findYou" => ["title" => "Find You"],
-    "section" => ["title" => "Your Section(s)", "type" => "checkbox", "choices" => $theDailySections]
+    "section" => ["title" => "Your Section(s)", "type" => "checkbox", "choices" => $theDailySections],
 ];
 
 // https://wordpress.stackexchange.com/a/233212/75147
-add_action( 'admin_enqueue_scripts', 'tsd_authors_plugin_load_wp_media_files' );
-function tsd_authors_plugin_load_wp_media_files( $page ) {
-    if( $page == 'profile.php' || $page == 'user-edit.php' ) {
+add_action('admin_enqueue_scripts', 'tsd_authors_plugin_load_wp_media_files');
+function tsd_authors_plugin_load_wp_media_files($page)
+{
+    if ($page == 'profile.php' || $page == 'user-edit.php') {
         wp_enqueue_media();
-        wp_enqueue_script('tsd_authors_plugin_load_wp_media_script', plugins_url( '/upload.js' , __FILE__ ), ['jquery'], '0.1');
+        wp_enqueue_script('tsd_authors_plugin_load_wp_media_script', plugins_url('/upload.js', __FILE__), ['jquery'], '0.1');
     }
 }
 
@@ -67,8 +68,8 @@ function tsd_authors_plugin_add_custom_fields()
             </th>
 			<td>
                 <?php $fieldType = $fieldOptions["type"] ?? "text";
-                switch ($fieldType) {
-                    case 'textarea': ?>
+            switch ($fieldType) {
+                case 'textarea': ?>
                     <textarea
                     name="<?php echo $name; ?>"
                     id="<?php echo $name; ?>"
@@ -76,30 +77,30 @@ function tsd_authors_plugin_add_custom_fields()
                     cols="30"
                     ><?php echo $value; ?></textarea>
                     <?php break;
-                    case 'checkbox':
+                case 'checkbox':
                     // Ref: https://stackoverflow.com/a/14873743/2603230
-                    $userSections = get_user_meta( $user->ID, $name, true );
-                    foreach($fieldOptions["choices"] as $thisKey => $thisValue) { ?>
-                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (is_array($userSections) && in_array($thisKey, $userSections)) { ?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
+                    $userSections = get_user_meta($user->ID, $name, true);
+                    foreach ($fieldOptions["choices"] as $thisKey => $thisValue) {?>
+                        <label><input type="checkbox" name="<?php echo $name; ?>[<?php echo $thisKey; ?>]" <?php if (is_array($userSections) && in_array($thisKey, $userSections)) {?>checked="checked"<?php }?> /> <?php echo $thisValue; ?></label><br />
                     <?php }
                     break;
-                    case 'image':
+                case 'image':
                     // https://wordpress.stackexchange.com/a/233212/75147
-                    $image_id = get_user_meta( $user->ID, $name, true );
-                    if( intval( $image_id ) > 0 ) {
+                    $image_id = get_user_meta($user->ID, $name, true);
+                    if (intval($image_id) > 0) {
                         // Change with the image size you want to use
-                        $image = wp_get_attachment_image( $image_id, 'medium', false, ['class' => 'user-preview-image', 'id' => $name] );
+                        $image = wp_get_attachment_image($image_id, 'medium', false, ['class' => 'user-preview-image', 'id' => $name]);
                     } else {
-                        $image = '<img class="user-preview-image" id="'.$name.'" />';
-                    } ?>
+                        $image = '<img class="user-preview-image" id="' . $name . '" />';
+                    }?>
                     <div class="tsd-authors-plugin-image-upload-options">
-                        <input type="hidden" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value="<?php echo esc_attr( get_the_author_meta( $name, $user->ID ) ); ?>" class="regular-text" />
+                        <input type="hidden" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value="<?php echo esc_attr(get_the_author_meta($name, $user->ID)); ?>" class="regular-text" />
                         <input type="button" class="button-primary" value="Upload Image" id="selectimage" data-field-id="<?php echo $name; ?>" /><br /><br />
                         <?php echo $image; ?>
                     </div>
                     <?php
-                    break;
-                    default: ?>
+break;
+                default: ?>
                     <input type="text"
                     class="regular-text"
                     name="<?php echo $name; ?>"
@@ -107,13 +108,13 @@ function tsd_authors_plugin_add_custom_fields()
                     value="<?php echo $value; ?>"
                     />
                     <?php break;
-                } ?>
+            }?>
 			</td>
         </tr>
-        <?php } ?>
+        <?php }?>
 	</table>
 	<?php
-    }
+}
 
     add_action('user_profile_update_errors', 'tsd_authors_plugin_user_profile_update_errors', 10, 3);
     function tsd_authors_plugin_user_profile_update_errors($errors, $update, $user)
@@ -156,15 +157,16 @@ function tsd_authors_plugin_add_custom_fields()
 
     // https://wordpress.stackexchange.com/a/233212/75147
     // Ajax action to refresh the user image
-    add_action( 'wp_ajax_cyb_get_image_url', 'tsd_authors_plugin_cyb_get_image_url'   );
-    function tsd_authors_plugin_cyb_get_image_url() {
-        if(isset($_GET['id'])){
-            $image = wp_get_attachment_image( filter_input( INPUT_GET, 'id', FILTER_VALIDATE_INT ), 'medium', false, ['class' => 'user-preview-image', 'id' => $_GET['fieldId']] );
+    add_action('wp_ajax_cyb_get_image_url', 'tsd_authors_plugin_cyb_get_image_url');
+    function tsd_authors_plugin_cyb_get_image_url()
+    {
+        if (isset($_GET['id'])) {
+            $image = wp_get_attachment_image(filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT), 'medium', false, ['class' => 'user-preview-image', 'id' => $_GET['fieldId']]);
             $data = [
-                'image'    => $image,
-                'fieldID'  => $_GET['fieldId']
+                'image' => $image,
+                'fieldID' => $_GET['fieldId'],
             ];
-            wp_send_json_success( $data );
+            wp_send_json_success($data);
         } else {
             wp_send_json_error();
         }
