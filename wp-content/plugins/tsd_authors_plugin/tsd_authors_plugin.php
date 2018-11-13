@@ -69,6 +69,12 @@ function tsd_authors_plugin_enable_api() {
                     // We have to unserialize array if it's serialized (e.g. "a:4:{i:0;s:2:"op";i:1;s:5:"grind";i:2;s:6:"sports";i:3;s:8:"copyedit";}")
                     $value = unserialize($value);
                 }
+                // If the key ends with `Image`
+                if(preg_match('/Image$/', $key)) {
+                    if (!empty($value)) {
+                        $value = wp_get_attachment_image_src($value, 'full')[0];
+                    }
+                }
                 $meta_to_return[$shortKey] = $value;
             }
         }
