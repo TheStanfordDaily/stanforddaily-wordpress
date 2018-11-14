@@ -53,6 +53,7 @@ img {
   margin-bottom: 10px; /* 20px */
 }
 
+
 .jeg_cat_title {
   font-family: "Avenir", sans-serif; /* "Open Sans", serif */
 }
@@ -153,9 +154,30 @@ li {
 .center_left {
   position: absolute;
   top: 4px;
-  left: 16px;
+  left: 12px;
 }
 
-img {
+.tsd_position {
+  position: absolute;
+  top: 0px;
+  left: 12px;
+}
+
+.jeg_featured .feature_image {
+  height: 50px;
   z-index: -1;
+}
+
+#rectangle {
+  width: 50%;
+  height: 100px;
+  background: #8c1515;
+}
+
+blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0px;
+  margin-right: 500px;
 }

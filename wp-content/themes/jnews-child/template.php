@@ -21,9 +21,12 @@ $single = new \JNews\Single\SinglePage();
                             <?php endif; ?>
 
                             <div class="entry-header">
-                                
-                                <h1 class="jeg_post_title center_left"><?php the_title(); ?></h1>
-
+                                <div class = "container">
+                                    <img scr = "jeg_featured featured_image" alt="Featured Image" style="width:100%">
+                                    <img scr = "https://www.stanforddaily.com/wp-content/uploads/2018/06/DailyRedSmall.jpeg" alt= "TSD Logo" style="tsd_position">
+                                    <div id = "rectangle"></div>
+                                    <h1 class="jeg_post_title center_left"><?php the_title(); ?></h1>
+                                </div>
                                 <?php if($single->can_render_post_meta()) :  ?>
                                     <div class="jeg_meta_container">
                                         <div class="jeg_post_meta">
@@ -41,7 +44,7 @@ $single = new \JNews\Single\SinglePage();
                             <?php
                                 if ( vp_metabox('jnews_single_page.show_post_featured', true) )
                                 {
-                                    echo jnews_sanitize_output($single->render_featured_post());
+                                    //echo jnews_sanitize_output($single->render_featured_post());
                                     
                                 }
                             ?>
@@ -57,6 +60,9 @@ $single = new \JNews\Single\SinglePage();
 
                                 <div class="content-inner">
                                     <?php the_content(); ?>
+                                    <p> "This an example page." </p>
+                                    <blockquote> <p> "Hi there! I'm a bike messenger by day, aspiring 
+                                    actor by night, and this is my website." </p> </blockquote>
                                     <?php wp_link_pages(); ?>
                                     <?php do_action('jnews_share_bottom_bar', get_the_ID()); ?>
                                 </div>
