@@ -153,8 +153,8 @@ li {
 
 .center_left {
   position: absolute;
-  top: 4px;
-  left: 12px;
+  top: 50px;
+  left: 15%;
 }
 
 .tsd_position {
@@ -174,10 +174,15 @@ li {
   background: #8c1515;
 }
 
+.p_quote {
+  float: left;
+  width: 200px;
+  font-size: 30px;
+  line-height: 0.9;
+  font-style: bold;
+  padding: 15px;
+}
+
 blockquote {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0px;
-  margin-right: 500px;
+  margin: 0;
 }

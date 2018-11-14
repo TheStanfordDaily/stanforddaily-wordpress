@@ -60,9 +60,17 @@ $single = new \JNews\Single\SinglePage();
 
                                 <div class="content-inner">
                                     <?php the_content(); ?>
-                                    <p> "This an example page." </p>
-                                    <blockquote> <p> "Hi there! I'm a bike messenger by day, aspiring 
-                                    actor by night, and this is my website." </p> </blockquote>
+                                    <p> This an example page. This is an example page. It’s different from 
+                                    a blog post because it will stay in one place and will show up 
+                                    in your site navigation (in most themes). Most people start with an About 
+                                    page that introduces them to potential site visitors. It might say something like this:</p>
+                                    <aside class ="p_quote">
+                                        <blockquote> <p> Hi there! I'm a bike messenger by day, aspiring 
+                                        actor by night, and this is my website. </p> </blockquote>
+                                    </aside>
+                                    <img scr = "jeg_featured featured_image" alt="Featured Image" style="width:100%">
+                                    <p style = "font-size: 10px"> "This is the caption." </p>
+                                    <p> Here's some more text. <p>
                                     <?php wp_link_pages(); ?>
                                     <?php do_action('jnews_share_bottom_bar', get_the_ID()); ?>
                                 </div>
