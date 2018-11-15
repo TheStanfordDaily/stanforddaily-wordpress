@@ -11,7 +11,27 @@ add_action( 'wp_enqueue_scripts', 'jnews_child_enqueue_parent_style' );
 function jnews_child_enqueue_parent_style()
 {
     wp_enqueue_style( 'jnews-parent-style', get_parent_theme_file_uri('/style.css'));
+    
 }
+
+add_action( 'wp_enqueue_scripts', 'tsd_enqueue_slick' );
+
+function tsd_enqueue_slick()
+{
+    wp_enqueue_style( 'tsd-slick-style', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    wp_enqueue_style( 'tsd-slick-style-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
+    wp_enqueue_script('tsd-slick-script', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'));
+}
+
+add_action( 'wp_enqueue_scripts', 'tsd_enqueue_fancybox' );
+
+function tsd_enqueue_fancybox()
+{
+    wp_enqueue_style( 'tsd-fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css');
+    wp_enqueue_script('tsd-fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js', array('jquery'));
+}
+
+
 
 
 /*
