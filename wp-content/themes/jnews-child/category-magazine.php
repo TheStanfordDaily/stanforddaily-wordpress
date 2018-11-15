@@ -31,7 +31,7 @@ $issues = array(
     array("volume" => "I",
         "issue" => "4",
         "date" => "2.24.17",
-        "id" => "28430991/45977522".
+        "id" => "28430991/45977522",
         "image" => 1146946),
 
     array("volume" => "I",
