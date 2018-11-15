@@ -2,6 +2,12 @@
 get_header();
 $term = get_queried_object();
 $category = new \JNews\Category\Category($term);
+$posts = get_posts( array( 'post_type' => 'tsd_magazine_post' ) );
+// $posts = get_posts( array( 'post_type' => 'post' ) );
+foreach ($posts as $post) {
+    $catID = get_cat_ID("magazine");
+    wp_set_post_categories($post->ID, $catID, true);
+}
 $issues = array(
     array("volume" => "I",
         "issue" => "1",
