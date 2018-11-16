@@ -68,7 +68,7 @@ $single = new \JNews\Single\SinglePage();
                                         <blockquote> <p> Hi there! I'm a bike messenger by day, aspiring 
                                         actor by night, and this is my website. </p> </blockquote>
                                     </aside>
-                                    <img scr = "jeg_featured featured_image" alt="Featured Image" style="width:100%">
+                                    <img class = "jeg_featured featured_image" alt="Featured Image" style="width:100%">
                                     <p style = "font-size: 10px"> "This is the caption." </p>
                                     <p> Here's some more text. <p>
                                     <?php wp_link_pages(); ?>
