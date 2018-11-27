@@ -21,10 +21,12 @@ $single = new \JNews\Single\SinglePage();
                             <?php endif; ?>
 
                             <div class="entry-header">
-                                <div class = "container">
-                                    <img scr = "jeg_featured featured_image" alt="Featured Image" style="width:100%">
-                                    <img scr = "https://www.stanforddaily.com/wp-content/uploads/2018/06/DailyRedSmall.jpeg" alt= "TSD Logo" style="tsd_position">
+                                <div class = "tsd_container">
+                                    <img class = "jeg_featured featured_image" alt="Featured Image" style="width:100%" 
+                                        src = "<?php echo $single->get_featured_image_src('full')?>">
                                     <div id = "rectangle"></div>
+                                    <img src = "https://www.stanforddaily.com/wp-content/uploads/2018/06/DailyRedSmall.jpeg" alt= "TSD Logo" 
+                                        style = "position: absolute; width: 20%; top: 0px; left: 15%; ">
                                     <h1 class="jeg_post_title center_left"><?php the_title(); ?></h1>
                                 </div>
                                 <?php if($single->can_render_post_meta()) :  ?>
@@ -60,17 +62,6 @@ $single = new \JNews\Single\SinglePage();
 
                                 <div class="content-inner">
                                     <?php the_content(); ?>
-                                    <p> This an example page. This is an example page. It’s different from 
-                                    a blog post because it will stay in one place and will show up 
-                                    in your site navigation (in most themes). Most people start with an About 
-                                    page that introduces them to potential site visitors. It might say something like this:</p>
-                                    <aside class ="p_quote">
-                                        <blockquote> <p> Hi there! I'm a bike messenger by day, aspiring 
-                                        actor by night, and this is my website. </p> </blockquote>
-                                    </aside>
-                                    <img class = "jeg_featured featured_image" alt="Featured Image" style="width:100%">
-                                    <p style = "font-size: 10px"> "This is the caption." </p>
-                                    <p> Here's some more text. <p>
                                     <?php wp_link_pages(); ?>
                                     <?php do_action('jnews_share_bottom_bar', get_the_ID()); ?>
                                 </div>

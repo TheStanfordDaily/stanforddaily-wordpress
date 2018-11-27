@@ -157,12 +157,6 @@ li {
   left: 15%;
 }
 
-.tsd_position {
-  position: absolute;
-  top: 0px;
-  left: 12px;
-}
-
 .jeg_featured .feature_image {
   height: 50px;
   z-index: -1;
@@ -170,19 +164,26 @@ li {
 
 #rectangle {
   width: 50%;
-  height: 100px;
+  height: 95%;
+  position: absolute;
+  top: 0px;
   background: #8c1515;
 }
 
 .p_quote {
-  float: left;
-  width: 200px;
-  font-size: 30px;
-  line-height: 0.9;
-  font-style: bold;
-  padding: 15px;
+    float: left;
+    width: 200px;
+    font-size: 30px;
+    line-height: 0.9;
+    font-style: bold;
+    padding: 15px;
 }
 
 blockquote {
   margin: 0;
+}
+
+.tsd_container {
+  position: relative;
+  color: white;
 }
