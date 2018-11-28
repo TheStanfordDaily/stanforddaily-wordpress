@@ -16,8 +16,12 @@ jQuery(document).ready( function($) {
                 });
 
         image_frame.on('close',function() {
+            // Show "Loading..." label and hide current image
+            jQuery("#" + $(e.target).data('field-id') + "-loading").text("Loading...");
+            jQuery('.user-preview-image#' + $(e.target).data('field-id')).hide();
+
             // get selections and save to hidden input plus other AJAX stuff etc.
-            var selection =  image_frame.state().get('selection');
+            var selection = image_frame.state().get('selection');
             var gallery_ids = new Array();
             var my_index = 0;
             selection.each(function(attachment) {
@@ -55,8 +59,10 @@ function Refresh_Image(the_id, the_field_id){
     };
 
     jQuery.get(ajaxurl, data, function(response) {
-        if(response.success === true) {
-            jQuery('.user-preview-image#' + response.data.fieldID).replaceWith( response.data.image );
+        if (response.success === true) {
+            // Show image and replace it with the correct image
+            jQuery('.user-preview-image#' + response.data.fieldID).show().replaceWith( response.data.image );
+            jQuery("#" + response.data.fieldID + "-loading").text("");
         }
     });
 }

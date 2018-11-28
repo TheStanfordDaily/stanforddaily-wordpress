@@ -96,7 +96,7 @@ function tsd_authors_plugin_add_custom_fields()
                     <div class="tsd-authors-plugin-image-upload-options">
                         <input type="hidden" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value="<?php echo esc_attr(get_the_author_meta($name, $user->ID)); ?>" class="regular-text" />
                         <input type="button" class="button-primary" value="Upload Image" id="selectimage" data-field-id="<?php echo $name; ?>" /><br /><br />
-                        <?php echo $image; ?>
+                        <?php echo $image; ?><span id="<?php echo $name; ?>-loading"></span>
                     </div>
                     <?php
 break;

@@ -44,6 +44,13 @@ function tsd_authors_plugin_enable_api() {
 
     });
 
+    function tsd_authors_plugin_get_image_url_from_id($id) {
+        if (!empty($id)) {
+            return wp_get_attachment_image_src($id, 'full')[0];
+        }
+        return "";
+    }
+
     // Handle the "/authors/{id}" request
     function tsd_authors_plugin_author_info( $request ) {
         global $tsd_author_custom_fields;
@@ -71,9 +78,7 @@ function tsd_authors_plugin_enable_api() {
                 }
                 // If the key ends with `Image`
                 if(preg_match('/Image$/', $key)) {
-                    if (!empty($value)) {
-                        $value = wp_get_attachment_image_src($value, 'full')[0];
-                    }
+                    $value = tsd_authors_plugin_get_image_url_from_id($value);
                 }
                 $meta_to_return[$shortKey] = $value;
             }
@@ -97,7 +102,11 @@ function tsd_authors_plugin_enable_api() {
                 if (!empty($thisUserSections)){
                     foreach ($thisUserSections as $eachSection) {
                         $eachSectionName = $theDailySections[$eachSection];
-                        $userSectionsAndIDs[$eachSectionName][$user->ID] = $user->first_name." ".$user->last_name;
+                        $userSectionsAndIDs[$eachSectionName][] = [
+                            "id" => $user->ID,
+                            "name" => $user->first_name." ".$user->last_name,
+                            "profileImage" => tsd_authors_plugin_get_image_url_from_id(get_user_meta($user->ID, "tsd_profileImage", true)),
+                        ];
                     }
                 }
             }
@@ -105,21 +114,16 @@ function tsd_authors_plugin_enable_api() {
         //print_r($userSectionsAndIDs);
 
         $results = [];
-        foreach ($userSectionsAndIDs as $eachSection => $eachIDs) {
+        foreach ($userSectionsAndIDs as $eachSection => $eachMembers) {
             $thisSectionArray = [];
             $thisSectionArray["name"] = $eachSection;
-            foreach ($eachIDs as $eachID => $eachName) {
-                $thisMemberInfo = [];
-                $thisMemberInfo["id"] = $eachID;
-                $thisMemberInfo["name"] = $eachName;
-                $thisSectionArray["members"][] = $thisMemberInfo;
-            }
+            $thisSectionArray["members"] = $eachMembers;
             $results[] = $thisSectionArray;
         }
         //print_r($results);
         return $results;
 
-        $json = '[
+        /*$json = '[
             {"name": "Arts and Life", "members": [
                 {"name": "Alex Tsai", "id": 1001790},
                 {"name": "Shana Hadi", "id": 1001803}
@@ -130,7 +134,7 @@ function tsd_authors_plugin_enable_api() {
             ]}
         ]';
 
-        return json_decode($json, true);
+        return json_decode($json, true);*/
     }
 }
 add_action('init', 'tsd_authors_plugin_enable_api');
