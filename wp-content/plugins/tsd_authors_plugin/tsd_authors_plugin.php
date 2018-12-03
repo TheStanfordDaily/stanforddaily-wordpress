@@ -68,7 +68,12 @@ function tsd_authors_plugin_enable_api() {
         // https://codex.wordpress.org/Function_Reference/get_user_meta
         // "To avoid this, you may want to run a simple array_map() on the results of get_user_meta() in order to take only the first index of each result (this emulating what the $single argument does when $key is provided:"
         $all_meta_for_user = array_map( function( $a ){ return $a[0]; }, get_user_meta( $userId, null ) );
-        $meta_to_return = ["id" => $user->ID, "name" => $user->first_name." ".$user->last_name];
+
+        $meta_to_return = [
+            "id" => $user->ID,
+            "name" => $user->first_name." ".$user->last_name,
+            "email" => $user->user_email,
+        ];
         foreach ($all_meta_for_user as $key => $value) {
             $shortKey = preg_replace('/^tsd_/', '', $key);
             if (array_key_exists($shortKey, $tsd_author_custom_fields)) {
