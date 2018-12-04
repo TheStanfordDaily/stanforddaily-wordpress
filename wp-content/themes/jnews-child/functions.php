@@ -74,7 +74,7 @@ add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
  * Style of blockquotes inserted within article.
  */
 function tsd_blockquotes($atts, $content = null) {
-    $atts = shortcode_atts(array(
+    $values = shortcode_atts( array(
         'width' => '200px',
         'padding' => '15px',
         'float' => 'left',
@@ -83,11 +83,8 @@ function tsd_blockquotes($atts, $content = null) {
         'font-style' => 'bold',
     ), $atts);
 
-    $return .= '<p><div style = width: ' .$atts['width'] . '; padding: ' .$atts['padding'] . '; float: ' .$atts['float'] . '</div></p>';
-        '; font-size: ' .$atts['font-size'] . '; line-height: ' .$atts['line-height'] . '; font-style: ' .$atts['font-style'] .'>' 
-        .do_shortcode($content). '</div></p>';
-
-
-    return $return;
+    return '<p style = width: ' .esc_attr($values['width']) . 'padding: ' .esc_attr($values['padding']) . 
+        'float: ' .esc_attr($values['float']) . 'font-size: ' .esc_attr($values['font-size']) . 'line-height: ' 
+        .esc_attr($values['line-height']) . 'font-style: ' .esc_attr($values['font-style ']) . '> ' .$content .'</p>';
 }
-add_shortcode('blockquote', 'tsd_blockquotes');
+add_shortcode('tsd_blockquote', 'tsd_blockquotes');
