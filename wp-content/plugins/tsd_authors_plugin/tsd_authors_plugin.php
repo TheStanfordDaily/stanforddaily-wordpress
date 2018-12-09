@@ -44,9 +44,9 @@ function tsd_authors_plugin_enable_api() {
 
     });
 
-    function tsd_authors_plugin_get_image_url_from_id($id) {
+    function tsd_authors_plugin_get_image_url_from_id($id, $size='thumbnail') {
         if (!empty($id)) {
-            return wp_get_attachment_image_src($id, 'full')[0];
+            return wp_get_attachment_image_src($id, $size)[0];
         }
         return "";
     }
@@ -83,7 +83,7 @@ function tsd_authors_plugin_enable_api() {
                 }
                 // If the key ends with `Image`
                 if(preg_match('/Image$/', $key)) {
-                    $value = tsd_authors_plugin_get_image_url_from_id($value);
+                    $value = tsd_authors_plugin_get_image_url_from_id($value, 'medium');
                 }
                 $meta_to_return[$shortKey] = $value;
             }
@@ -110,7 +110,7 @@ function tsd_authors_plugin_enable_api() {
                         $userSectionsAndIDs[$eachSectionName][] = [
                             "id" => $user->ID,
                             "name" => $user->first_name." ".$user->last_name,
-                            "profileImage" => tsd_authors_plugin_get_image_url_from_id(get_user_meta($user->ID, "tsd_profileImage", true)),
+                            "profileImage" => tsd_authors_plugin_get_image_url_from_id(get_user_meta($user->ID, "tsd_coverImage", true), 'thumbnail'),
                         ];
                     }
                 }
