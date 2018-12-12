@@ -165,6 +165,7 @@ li {
 #rectangle {
   width: 50%;
   height: 95%;
+  opacity: 50%;
   position: absolute;
   top: 0px;
   background: #8c1515;

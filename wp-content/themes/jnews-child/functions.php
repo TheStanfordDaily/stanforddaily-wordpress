@@ -73,18 +73,20 @@ add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
 /**
  * Style of blockquotes inserted within article.
  */
-function tsd_blockquotes($atts, $content = null) {
-    $values = shortcode_atts( array(
+function tsd_blockquote_function($atts, $content = null) {
+
+    $atts = shortcode_atts( array(
         'width' => '200px',
-        'padding' => '15px',
         'float' => 'left',
         'font-size' => '30px',
-        'line-height' => '0.9',
-        'font-style' => 'bold',
     ), $atts);
 
-    return '<p style = width: ' .esc_attr($values['width']) . 'padding: ' .esc_attr($values['padding']) . 
-        'float: ' .esc_attr($values['float']) . 'font-size: ' .esc_attr($values['font-size']) . 'line-height: ' 
-        .esc_attr($values['line-height']) . 'font-style: ' .esc_attr($values['font-style ']) . '> ' .$content .'</p>';
+    $return .= '<p><div style="width: ' . $atts['width'] . '; float: ' . $atts['float'] . '; 
+    font-size: ' . $atts['font-size'] .';">' .do_shortcode($content) .'</div></p>';
+
+    return $return;
 }
-add_shortcode('tsd_blockquote', 'tsd_blockquotes');
+
+function register_shortcodes() {
+    add_shortcode('tsd_blockquote', 'tsd_blockquote_function');
+}
