@@ -81,8 +81,8 @@ function tsd_blockquote_function($atts, $content = null) {
         'font-size' => '30px',
     ), $atts);
 
-    $return .= '<p><div style="width: ' . $atts['width'] . '; float: ' . $atts['float'] . '; 
-    font-size: ' . $atts['font-size'] .';">' .do_shortcode($content) .'</div></p>';
+    $return .= '<div><div style="width: ' . $atts['width'] . '; float: ' . $atts['float'] . '; 
+    font-size: ' . $atts['font-size'] .';">' .do_shortcode($content) .'</div></div>';
 
     return $return;
 }
