@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'jnews_child_enqueue_parent_style' );
 function jnews_child_enqueue_parent_style()
 {
     wp_enqueue_style( 'jnews-parent-style', get_parent_theme_file_uri('/style.css'));
-    
+
 }
 
 add_action( 'wp_enqueue_scripts', 'tsd_enqueue_slick' );
@@ -78,7 +78,7 @@ add_action('wp_head', 'tsd_add_ios_app_banner');
 /*
  * Add donate blurb to the bottom of every article page
  */
-function tsd_add_donate_blurb_to_content( $content ) {    
+function tsd_add_donate_blurb_to_content( $content ) {
     if( is_single() ) {
         ob_start();
         include "donate-blurb.php";
@@ -89,3 +89,55 @@ function tsd_add_donate_blurb_to_content( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
+
+
+/**
+ * Issue #43 - Register a custom post type called "magazine_issue".
+ */
+function tsd_add_magazine_issue_post_type() {
+    // Ref: https://developer.wordpress.org/reference/functions/register_post_type/#comment-351
+    $labels = [
+        'name'                  => 'Magazine Issues', // Post type general name
+        'singular_name'         => 'Magazine Issue', // Post type singular name
+        'menu_name'             => 'Magazine Issues', // Admin Menu text
+        'name_admin_bar'        => 'Magazine Issue', // Add New on Toolbar
+        'add_new'               => 'Add New',
+        'add_new_item'          => 'Add New Magazine Issue',
+        'new_item'              => 'New Magazine Issue',
+        'edit_item'             => 'Edit Magazine Issue',
+        'view_item'             => 'View Magazine Issue',
+        'all_items'             => 'All Magazine Issues',
+        'search_items'          => 'Search Magazine Issues',
+        'parent_item_colon'     => 'Parent Magazine Issues:',
+        'not_found'             => 'No Magazine Issues found.',
+        'not_found_in_trash'    => 'No Magazine Issues found in Trash.',
+        'featured_image'        => 'Magazine Cover Image', // Overrides the “Featured Image” phrase for this post type. Added in 4.3
+        'set_featured_image'    => 'Set cover image', // Overrides the “Set featured image” phrase for this post type. Added in 4.3
+        'remove_featured_image' => 'Remove cover image', // Overrides the “Remove featured image” phrase for this post type. Added in 4.3
+        'use_featured_image'    => 'Use as cover image', // Overrides the “Use as featured image” phrase for this post type. Added in 4.3
+        'archives'              => 'Magazine Issue archives', // The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4
+        'insert_into_item'      => 'Insert into Magazine Issue', // Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4
+        'uploaded_to_this_item' => 'Uploaded to this Magazine Issue', // Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4
+        'filter_items_list'     => 'Filter Magazine Issues list', // Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4
+        'items_list_navigation' => 'Magazine Issues list navigation', // Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4
+        'items_list'            => 'Magazine Issues list', // Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4
+    ];
+
+    $args = [
+        'labels'             => $labels,
+        'public'             => false,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => [ 'slug' => 'magazine_issue' ], // TODO: what does this does?
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => [ 'title', 'custom-fields', 'thumbnail' ],
+    ];
+
+    register_post_type( 'magazine_issue', $args );
+}
+add_action( 'init', 'tsd_add_magazine_issue_post_type' );

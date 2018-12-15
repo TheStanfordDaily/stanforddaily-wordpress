@@ -9,6 +9,35 @@ foreach ($posts as $post) {
     wp_set_post_categories($post->ID, $catID, true);
 }
 // var_dump($posts);
+
+$issues = [];
+
+$tsd_magazine_issue_key = "tsd_magazine_issue_";
+$issues_query = get_posts( [
+    'post_type' => 'magazine_issue',
+    'order' => 'ASC',
+    'orderby'  => 'date',
+    'numberposts' => -1, ]);
+foreach ($issues_query as $each_issue_query) {
+    $each_issue = [];
+
+    // Title example: "II/3"
+    // means Volume II and Issue 3.
+    $title_exploded = explode('/', $each_issue_query->post_title);
+    $each_issue["volume"] = $title_exploded[0];
+    $each_issue["issue"] = $title_exploded[1];
+
+    $custom_fields = get_post_custom($each_issue_query->ID);
+    $each_issue["id"] = $custom_fields[$tsd_magazine_issue_key."id"][0];
+
+    $each_issue["image"] = get_post_thumbnail_id($each_issue_query->ID);
+
+    $issue_date = new DateTime( $each_issue_query->post_date );
+    $each_issue["date"] = $issue_date->format('Y-m-d');
+
+    $issues[] = $each_issue;
+}
+
 $issues = array(
     array("volume" => "I",
         "issue" => "1",
@@ -135,7 +164,7 @@ $issues = array(
                             .slick-prev::before, .slick-next::before {
                                 color: black;
                             }
-                            
+
                             </style>
                         <script>
                         $(function() {
