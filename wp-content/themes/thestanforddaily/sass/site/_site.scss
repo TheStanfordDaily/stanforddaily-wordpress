@@ -1,6 +1,13 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 
+.container {
+	padding-right: $size__site-left-right-padding;
+	padding-left: $size__site-left-right-padding;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
