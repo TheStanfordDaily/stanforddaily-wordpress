@@ -160,3 +160,40 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Feature image sizes.
+ */
+// For backward compatibility
+// TODO: Set our own prefix
+$prefix = "jnews-";
+/*$image_size = array(
+	// dimension : 0.5
+	$prefix . '360x180'           => array('width' => 360,  'height' => 180, 'crop' => true , 'dimension' => 500),
+	$prefix . '750x375'           => array('width' => 750,  'height' => 375, 'crop' => true , 'dimension' => 500),
+	$prefix . '1140x570'          => array('width' => 1140, 'height' => 570, 'crop' => true , 'dimension' => 500),
+
+	// dimension : 0.715
+	$prefix . '120x86'            => array('width' => 120,  'height' => 86,  'crop' => true , 'dimension' => 715),
+	$prefix . '350x250'           => array('width' => 350,  'height' => 250, 'crop' => true , 'dimension' => 715),
+	$prefix . '750x536'           => array('width' => 750,  'height' => 536, 'crop' => true , 'dimension' => 715),
+	$prefix . '1140x815'          => array('width' => 1140, 'height' => 815, 'crop' => true , 'dimension' => 715),
+
+	// dimension
+	$prefix . '360x504'           => array('width' => 360, 'height' => 504, 'crop' => true , 'dimension' => 1400),
+
+	// dimension 1
+	$prefix . '75x75'             => array('width' => 75, 'height' => 75, 'crop' => true , 'dimension' => 1000),
+
+	// featured post
+	$prefix . 'featured-750'      => array('width' => 750,  'height' => 0,  'crop' => true , 'dimension' => 1000),
+	$prefix . 'featured-1140'     => array('width' => 1140, 'height' => 0,  'crop' => true , 'dimension' => 1000),
+);*/
+
+// For post, we only have to use this size
+// TODO: Add size for homepage thumbnail
+$image_size = [$prefix . '1140x570' => array('width' => 1140, 'height' => 570, 'crop' => true , 'dimension' => 500),];
+
+foreach($image_size as $id => $image) {
+	add_image_size( $id, $image['width'], $image['height'], $image['crop'] );
+}

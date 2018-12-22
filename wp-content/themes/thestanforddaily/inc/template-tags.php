@@ -134,13 +134,17 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php
+				// TODO: More sizes? Change name?
+				the_post_thumbnail( 'jnews-1140x570' );
+				?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
+			// TODO: What size?
 			the_post_thumbnail( 'post-thumbnail', array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
