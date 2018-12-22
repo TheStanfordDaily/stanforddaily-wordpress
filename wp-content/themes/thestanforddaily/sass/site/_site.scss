@@ -2,10 +2,26 @@
 // @import "../layout/sidebar-content";
 
 .container {
+	@include center-block;
 	padding-right: $size__site-left-right-padding;
 	padding-left: $size__site-left-right-padding;
-	margin-right: auto;
-	margin-left: auto;
+
+	@media screen and (max-width: 767px) {
+	    width: 98%;
+	    width: calc(100% - 10px);
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 750px;
+	}
+
+	@media screen and (min-width: 992px) {
+		width: 970px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 1170px;
+	}
 }
 
 /*--------------------------------------------------------------
