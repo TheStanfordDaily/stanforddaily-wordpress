@@ -41,22 +41,14 @@
 
 		<div class="site-branding">
 			<div class="container">
-				<?php
-				$custom_logo = get_custom_logo();
-				if (!empty($custom_logo)) {
-					echo $custom_logo;
-				} else {
-					if ( is_front_page() && is_home() ) :
-						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php
-					else :
-						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
-				}
-				?>
+				<h1 class="site-title"><?php
+					$custom_logo = get_custom_logo();
+					if (!empty($custom_logo)) {
+						echo $custom_logo;
+					} else {
+						?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php
+					}
+				?></h1>
 			</div>
 		</div><!-- .site-branding -->
 

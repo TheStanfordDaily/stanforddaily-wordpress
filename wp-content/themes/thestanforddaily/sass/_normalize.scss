@@ -33,6 +33,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: baseline;
 }
 
+// https://stackoverflow.com/q/5804256/2603230
+audio, canvas, img, video {
+    vertical-align: middle;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
