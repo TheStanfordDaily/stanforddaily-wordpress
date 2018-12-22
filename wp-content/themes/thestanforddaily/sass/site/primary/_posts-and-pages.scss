@@ -7,6 +7,15 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-title {
+	font-family: Libre Baskerville;
+	font-weight: 700;
+	font-size: 3em;
+	line-height: 1.15;
+	margin: 0 0 .4em;
+	letter-spacing: -.04em;
+}
+
 .updated:not(.published) {
 	display: none;
 }

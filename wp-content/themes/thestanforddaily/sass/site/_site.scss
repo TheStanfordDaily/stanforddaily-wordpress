@@ -1,5 +1,9 @@
-// @import "../layout/content-sidebar";
+@import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
+
+.site-content {
+	padding: 20px 0px 30px;
+}
 
 .container {
 	@include center-block;

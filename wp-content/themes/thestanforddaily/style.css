@@ -907,6 +907,40 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%;
+}
+
+.site-main {
+  margin: 0 25% 0 0;
+}
+
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%;
+}
+
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-sidebar .site-main {
+  margin-right: 0;
+}
+
+.site-content {
+  padding: 20px 0px 30px;
+}
+
 .container {
   display: block;
   margin-left: auto;
@@ -946,6 +980,15 @@ a:hover, a:active {
 .post,
 .page {
   margin: 0 0 1.5em;
+}
+
+.entry-title {
+  font-family: Libre Baskerville;
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 1.15;
+  margin: 0 0 0.4em;
+  letter-spacing: -0.04em;
 }
 
 .updated:not(.published) {
