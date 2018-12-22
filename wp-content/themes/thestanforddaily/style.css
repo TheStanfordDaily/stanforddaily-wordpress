@@ -399,10 +399,12 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -673,8 +675,8 @@ a:hover, a:active {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-size: 60px;
   letter-spacing: -0.02em;
+  font-size: 45px;
 }
 .site-branding .site-title a {
   height: 100%;
