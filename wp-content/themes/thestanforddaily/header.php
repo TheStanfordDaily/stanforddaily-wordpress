@@ -62,13 +62,15 @@
 
 		<nav id="site-navigation" class="main-navigation">
 			<div class="container">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsd' ); ?></button>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-primary',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
+				<div class="nav-row">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsd' ); ?></button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-primary',
+						'menu_id'        => 'primary-menu',
+					) );
+					?>
+				</div>
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
