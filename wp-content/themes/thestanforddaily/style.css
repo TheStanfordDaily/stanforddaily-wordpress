@@ -1000,6 +1000,11 @@ a:hover, a:active {
 .entry-summary {
   margin: 1.5em 0 0;
 }
+.page-content p,
+.entry-content p,
+.entry-summary p {
+  font-family: PT Serif;
+}
 
 .page-links {
   clear: both;
