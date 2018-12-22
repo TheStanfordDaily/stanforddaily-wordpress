@@ -75,6 +75,7 @@
 		li {
 			padding: 0 16px;
 			margin: 0;
+			color: #212121;
 		}
 
 		ul {
@@ -125,12 +126,14 @@
 
 		&:hover > a,
 		&.focus > a {
+			color: $color__link;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		color: inherit;
 	}
 
 	.current_page_item > a,

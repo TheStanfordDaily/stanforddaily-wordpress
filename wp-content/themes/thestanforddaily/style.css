@@ -614,13 +614,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #aa0000;
+  text-decoration: none;
 }
 a:visited {
-  color: purple;
+  color: #aa0000;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: black;
 }
 a:focus {
   outline: thin dotted;
@@ -703,6 +704,7 @@ a:hover, a:active {
 .main-navigation ul li {
   padding: 0 16px;
   margin: 0;
+  color: #212121;
 }
 .main-navigation ul ul {
   background: #fff;
@@ -734,9 +736,13 @@ a:hover, a:active {
 .main-navigation li {
   position: relative;
 }
+.main-navigation li:hover > a, .main-navigation li.focus > a {
+  color: #aa0000;
+}
 .main-navigation a {
   display: block;
   text-decoration: none;
+  color: inherit;
 }
 /* Small menu. */
 .menu-toggle,
