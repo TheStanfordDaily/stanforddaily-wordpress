@@ -23,6 +23,14 @@
 	color: #a0a0a0;
 }
 
+.entry-meta {
+	.avatar {
+		width: 35px;
+		border-radius: 100%;
+		margin-right: 5px;
+	}
+}
+
 .updated:not(.published) {
 	display: none;
 }

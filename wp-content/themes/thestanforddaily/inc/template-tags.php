@@ -37,24 +37,46 @@ endif;
 
 if ( ! function_exists( 'tsd_posted_by' ) ) :
 	/**
-	 * Prints HTML with meta information for the current author.
+	 * Prints HTML with meta information for the current author(s).
 	 */
 	function tsd_posted_by() {
 		if ( function_exists( 'coauthors_posts_links' ) ) :
 			// https://vip.wordpress.com/documentation/incorporate-co-authors-plus-template-tags-into-your-theme/
-			$author_list = coauthors_posts_links( null, null, null, null, false );
+			$author_html = coauthors_posts_links( null, null, null, null, false );
 		else:
-			$author_list = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+			$author_html = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 		endif;
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'tsd' ),
-			$author_list
+			$author_html
 		);
+
+		tsd_posted_by_avatar();
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
+	}
+endif;
+
+if ( ! function_exists( 'tsd_posted_by_avatar' ) ) :
+	/**
+	 * Prints HTML for all the avatar(s) of the author(s).
+	 */
+	function tsd_posted_by_avatar() {
+		$author_list = [];
+		if ( function_exists( 'get_coauthors' ) ) :
+			foreach ( get_coauthors() as $each_author ) {
+				$author_list[] = $each_author->ID;
+			}
+		else:
+			$author_list = [get_the_author_meta( 'ID' )];
+		endif;
+
+		foreach ( $author_list as $each_author ) {
+			echo get_avatar( $each_author, 80, null, get_the_author_meta('display_name', $each_author) );
+		}
 	}
 endif;
 

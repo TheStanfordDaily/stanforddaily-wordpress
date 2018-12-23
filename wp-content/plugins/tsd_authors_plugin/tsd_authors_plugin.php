@@ -141,6 +141,8 @@ function tsd_authors_plugin_enable_api() {
 
         return json_decode($json, true);*/
     }
+
+    // TODO: https://codex.wordpress.org/Plugin_API/Filter_Reference/get_avatar
 }
 add_action('init', 'tsd_authors_plugin_enable_api');
 add_action('init', 'tsd_authors_plugin_add_custom_fields');
