@@ -36,6 +36,19 @@
 		border-radius: 100%;
 		margin-right: 5px;
 	}
+
+	.entry-meta-comment {
+		margin-left: 15px;
+
+		a::before{
+			/** Add comment icon **/
+			content: "\F075";
+			display: inline-block;
+			margin-right: 5px;
+			// https://stackoverflow.com/a/47775385/2603230
+			font-family: 'Font Awesome 5 Free';
+		}
+	}
 }
 
 .updated:not(.published) {

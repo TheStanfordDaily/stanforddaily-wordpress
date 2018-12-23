@@ -1113,6 +1113,16 @@ a:hover, a:active {
   border-radius: 100%;
   margin-right: 5px;
 }
+.entry-meta .entry-meta-comment {
+  margin-left: 15px;
+}
+.entry-meta .entry-meta-comment a::before {
+  /** Add comment icon **/
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Free";
+}
 
 .updated:not(.published) {
   display: none;

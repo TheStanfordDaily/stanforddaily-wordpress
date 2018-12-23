@@ -80,6 +80,17 @@ if ( ! function_exists( 'tsd_posted_by_avatar' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'tsd_comments_count' ) ) :
+	/**
+	 * Prints HTML for the comments count for this post.
+	 * Note that when using Disqus, putting arguments in comments_number() will not be effective.
+	 * Ref: https://wordpress.stackexchange.com/q/87886/75147
+	 */
+	function tsd_comments_count() {
+		?><span class="entry-meta-comment"><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></span><?php
+	}
+endif;
+
 if ( ! function_exists( 'tsd_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
