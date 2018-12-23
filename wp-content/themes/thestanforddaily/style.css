@@ -1027,15 +1027,32 @@ a:hover, a:active {
   margin: 0 -25% 0 0;
   width: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .content-area {
+    float: none;
+    margin: 0 auto;
+  }
+}
 
 .site-main {
   margin: 0 25% 0 0;
+}
+@media screen and (max-width: 1024px) {
+  .site-main {
+    margin: 0 auto;
+  }
 }
 
 .site-content .widget-area {
   float: right;
   overflow: hidden;
   width: 25%;
+}
+@media screen and (max-width: 1024px) {
+  .site-content .widget-area {
+    float: none;
+    width: 100%;
+  }
 }
 
 .site-footer {
