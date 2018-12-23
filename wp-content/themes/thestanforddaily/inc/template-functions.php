@@ -35,3 +35,18 @@ function tsd_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'tsd_pingback_header' );
+
+/*
+ * Add donate blurb to the bottom of every article page
+ */
+function tsd_add_donate_blurb_to_content( $content ) {
+    if( is_single() ) {
+        ob_start();
+        include "donate-blurb.php";
+        $donate_blurb_content = ob_get_contents();
+        ob_end_clean();
+        $content .= $donate_blurb_content;
+    }
+    return $content;
+}
+add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
