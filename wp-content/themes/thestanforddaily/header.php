@@ -28,13 +28,24 @@
 		<nav id="site-topbar" class="main-topbar">
 			<div class="container">
 				<div class="nav-row">
-					<button class="menu-toggle" aria-controls="topbar-menu" aria-expanded="false"><?php esc_html_e( 'Top Bar Menu', 'tsd' ); ?></button>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-topbar',
-						'menu_id'        => 'topbar-menu',
-					) );
-					?>
+					<div class="nav-col">
+						<button class="menu-toggle" aria-controls="topbar-menu" aria-expanded="false"><?php esc_html_e( 'Top Bar Menu', 'tsd' ); ?></button>
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-topbar',
+							'menu_id'        => 'topbar-menu',
+						) );
+						?>
+					</div>
+					<div class="nav-col">
+						<form role="search" method="get" class="topbar-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<label>
+								<span class="screen-reader-text">Search for:</span>
+								<input type="search" class="topbar-search-field" placeholder="Search&hellip;" value="<?php the_search_query(); ?>" name="s">
+							</label>
+							<button type="submit" class="topbar-search-submit"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</nav><!-- #site-topbar -->
