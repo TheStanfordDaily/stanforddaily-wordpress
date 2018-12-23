@@ -16,6 +16,13 @@
 	letter-spacing: -.04em;
 }
 
+.entry-subtitle {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+	color: #a0a0a0;
+}
+
 .updated:not(.published) {
 	display: none;
 }
