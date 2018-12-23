@@ -10,6 +10,10 @@ ol {
 	list-style: decimal;
 }
 
+li {
+	font-family: "PT Serif", serif;
+}
+
 li > ul,
 li > ol {
 	margin-bottom: 0;

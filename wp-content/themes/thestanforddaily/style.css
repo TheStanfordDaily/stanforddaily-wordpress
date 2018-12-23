@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: The Stanford Daily
 Theme URI: http://underscores.me/
@@ -497,6 +498,10 @@ ol {
   list-style: decimal;
 }
 
+li {
+  font-family: "PT Serif", serif;
+}
+
 li > ul,
 li > ol {
   margin-bottom: 0;
@@ -803,10 +808,20 @@ a:hover, a:active {
   margin: 0;
   padding-left: 0;
 }
-.main-navigation ul li {
+.main-navigation ul li a {
   padding: 0 16px;
   margin: 0;
   color: #212121;
+  white-space: nowrap;
+}
+.main-navigation ul li.menu-item-has-children > a::after {
+  /** Add angle-down **/
+  color: #a0a0a0;
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: -3px;
+  font-family: FontAwesome;
 }
 .main-navigation ul ul {
   background: #fff;
@@ -816,20 +831,34 @@ a:hover, a:active {
   top: 100%;
   left: -999em;
   z-index: 99999;
+  min-width: 100%;
 }
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
-.main-navigation ul ul li {
+.main-navigation ul ul li a {
   padding: 8px 16px;
   line-height: 20px;
+}
+.main-navigation ul ul li ul {
+  min-width: 12em;
+}
+.main-navigation ul ul li:hover, .main-navigation ul ul li.focus {
+  background: #f5f5f5;
+}
+.main-navigation ul ul li:hover > a, .main-navigation ul ul li.focus > a {
+  color: #212121;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
-.main-navigation ul ul a {
-  width: 200px;
+.main-navigation ul ul li.menu-item-has-children > a::after {
+  /** Add angle-right **/
+  content: "";
+  position: absolute;
+  right: 10px;
+  color: #949494;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {

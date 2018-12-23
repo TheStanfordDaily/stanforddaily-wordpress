@@ -73,9 +73,22 @@
 		padding-left: 0;
 
 		li {
-			padding: 0 16px;
-			margin: 0;
-			color: #212121;
+			a {
+				padding: 0 16px;
+				margin: 0;
+				color: #212121;
+				white-space: nowrap;
+			}
+
+			&.menu-item-has-children > a::after {
+				/** Add angle-down **/
+				color: #a0a0a0;
+				content: "\F107";
+				display: inline-block;
+				margin-left: 5px;
+				margin-right: -3px;
+				font-family: FontAwesome;
+			}
 		}
 
 		ul {
@@ -87,23 +100,45 @@
 			left: -999em;
 			z-index: 99999;
 
+			min-width: 100%;
+
 			ul {
 				left: -999em;
 				top: 0;
 			}
 
 			li {
-				padding: 8px 16px;
-				line-height: 20px;
+				a {
+					padding: 8px 16px;
+					line-height: 20px;
+				}
+
+				ul {
+					min-width: 12em;
+				}
+
+				&:hover, &.focus {
+					background: #f5f5f5;
+					& > a {
+						color: #212121;
+					}
+				}
 
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
 				}
+
+				&.menu-item-has-children > a::after {
+					/** Add angle-right **/
+					content: "\F105";
+					position: absolute;
+					right: 10px;
+					color: #949494;
+				}
 			}
 
 			a {
-				width: 200px;
 			}
 
 			:hover > a,
