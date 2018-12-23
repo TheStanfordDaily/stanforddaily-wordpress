@@ -734,25 +734,20 @@ a:hover, a:active {
 .main-topbar li:last-child {
   padding-right: 0;
 }
-.main-topbar .topbar-search-form {
+.main-topbar .topbar-search-form .topbar-search-field, .main-topbar .topbar-search-form .topbar-search-submit {
   color: #f5f5f5;
-}
-.main-topbar .topbar-search-form .topbar-search-field {
-  color: inherit;
-  line-height: 32px;
-  height: auto;
+  font-size: 14px;
   padding: 0;
   border: 0;
   background: transparent;
+}
+.main-topbar .topbar-search-form .topbar-search-field {
+  line-height: 32px;
+  height: auto;
   box-shadow: none;
 }
 .main-topbar .topbar-search-form .topbar-search-submit {
-  color: inherit;
-  padding-right: 0;
   padding-left: 5px;
-  background: transparent;
-  border: 0;
-  font-size: 14px;
   outline: none;
   cursor: pointer;
 }

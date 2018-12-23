@@ -30,24 +30,20 @@
 	}
 
 	.topbar-search-form {
-		color: #f5f5f5;
-
-		.topbar-search-field {
-			color: inherit;
-			line-height: 32px;
-			height: auto;
+		.topbar-search-field, .topbar-search-submit {
+			color: #f5f5f5;
+			font-size: 14px;
 			padding: 0;
 			border: 0;
 			background: transparent;
+		}
+		.topbar-search-field {
+			line-height: 32px;
+			height: auto;
 			box-shadow: none;
 		}
 		.topbar-search-submit {
-			color: inherit;
-			padding-right: 0;
 			padding-left: 5px;
-			background: transparent;
-			border: 0;
-			font-size: 14px;
 			outline: none;
 			cursor: pointer;
 		}
