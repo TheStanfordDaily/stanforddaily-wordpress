@@ -1,5 +1,44 @@
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 1.75em;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #212121;
+}
+
+h1 {
+	font-size: 2.25em;
+	margin: .67em 0 .5em;
+	line-height: 1.25;
+	letter-spacing: -.02em;
+}
+h2 {
+	font-size: 1.953em;
+	margin: .83em 0 .5em;
+	line-height: 1.35;
+}
+h3 {
+	font-size: 1.563em;
+	margin: 1em 0 .5em;
+	line-height: 1.4;
+}
+h4 {
+	font-size: 1.25em;
+	margin: 1.33em 0 .5em;
+	line-height: 1.5;
+}
+h5 {
+	font-size: 1.1em;
+	margin: 1.25em 0 .5em;
+	line-height: 1.6;
+}
+h6 {
+	font-size: .85em;
+	margin: 1.6em 0 1em;
 }
 
 dfn, cite, em, i {
@@ -7,7 +46,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 1em 40px;
 }
 
 address {
@@ -22,12 +61,16 @@ pre {
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: .5em 1.5em;
+	border: 1px solid #eee;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 code, kbd, tt, var {
 	font-family: $font__code;
 	@include font-size(0.9375);
+	padding: .2em .5em;
 }
 
 abbr, acronym {
@@ -37,9 +80,27 @@ abbr, acronym {
 
 mark, ins {
 	background: $color__background-ins;
-	text-decoration: none;
+	padding: 0 .4em;
+	color: #fff;
 }
 
 big {
 	font-size: 125%;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -.5em;
+}
+sub {
+	bottom: -.25em;
 }
