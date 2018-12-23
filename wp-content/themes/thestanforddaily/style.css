@@ -1133,6 +1133,13 @@ a:hover, a:active {
   color: #a0a0a0;
 }
 
+.entry-meta {
+  font-size: 13px;
+  color: #808080;
+}
+.entry-meta a {
+  color: #333;
+}
 .entry-meta .avatar {
   width: 35px;
   border-radius: 100%;

@@ -26,7 +26,7 @@ if ( ! function_exists( 'tsd_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'tsd' ),
+			esc_html_x( '%s', 'post date', 'tsd' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -55,7 +55,7 @@ if ( ! function_exists( 'tsd_posted_by' ) ) :
 
 		tsd_posted_by_avatar();
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline">' . $byline . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;

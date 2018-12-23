@@ -22,10 +22,7 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				tsd_posted_on();
-				tsd_posted_by();
-				?>
+				<?php tsd_posted_by(); ?> &mdash; <?php tsd_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
