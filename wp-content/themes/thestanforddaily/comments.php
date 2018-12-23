@@ -5,6 +5,8 @@
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
  *
+ * The Stanford Daily uses Disqus for commenting. So this file is not used.
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package The_Stanford_Daily
