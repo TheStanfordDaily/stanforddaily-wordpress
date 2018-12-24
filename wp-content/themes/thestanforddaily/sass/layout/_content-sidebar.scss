@@ -24,7 +24,7 @@
 
 	@media screen and (max-width: $size__break-mobile) {
 		float: none;
-		width: 100%;
+		width: $size__site-main;
 	}
 }
 
