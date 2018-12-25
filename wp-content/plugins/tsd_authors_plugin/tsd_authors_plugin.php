@@ -141,6 +141,38 @@ function tsd_authors_plugin_enable_api() {
 
         return json_decode($json, true);*/
     }
+
+    // Issue #51 - Alter the avatar image returned by the get_avatar() function
+    // Ref: https://codex.wordpress.org/Plugin_API/Filter_Reference/get_avatar
+    function tsd_authors_plugin_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
+        $user = false;
+
+        if ( is_numeric( $id_or_email ) ) {
+            $id = (int) $id_or_email;
+            $user = get_user_by( 'id' , $id );
+        } elseif ( is_object( $id_or_email ) ) {
+            if ( ! empty( $id_or_email->user_id ) ) {
+                $id = (int) $id_or_email->user_id;
+                $user = get_user_by( 'id' , $id );
+            }
+        } else {
+            $user = get_user_by( 'email', $id_or_email );
+        }
+
+        if ( $user && is_object( $user ) ) {
+            $image_id = get_user_meta($user->data->ID, "tsd_profileImage", true);
+            if ( ! empty( $image_id ) ) {
+                $avatar = tsd_authors_plugin_get_image_url_from_id($image_id, 'thumbnail');
+                $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+            } else {
+                // Fallback to default $avatar (i.e. Gravatar).
+                // So do nothing.
+            }
+        }
+
+        return $avatar;
+    }
+    add_filter( 'get_avatar' , 'tsd_authors_plugin_custom_avatar' , 1 , 5 );
 }
 add_action('init', 'tsd_authors_plugin_enable_api');
 add_action('init', 'tsd_authors_plugin_add_custom_fields');
