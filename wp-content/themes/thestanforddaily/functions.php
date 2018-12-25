@@ -123,6 +123,8 @@ add_action( 'widgets_init', 'tsd_widgets_init' );
 function tsd_scripts() {
 	wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
+	wp_enqueue_style('fonts-libre-baskerville', "https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville:400,400i,700");
 	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -130,6 +132,7 @@ function tsd_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
 }
 add_action( 'wp_enqueue_scripts', 'tsd_scripts' );
 
@@ -197,3 +200,6 @@ $image_size = [$prefix . '1140x570' => array('width' => 1140, 'height' => 570, '
 foreach($image_size as $id => $image) {
 	add_image_size( $id, $image['width'], $image['height'], $image['crop'] );
 }
+
+// Excerpts have no ellipses ([...]) at the end
+add_filter('excerpt_more','__return_false');

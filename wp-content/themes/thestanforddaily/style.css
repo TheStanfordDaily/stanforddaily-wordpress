@@ -1360,3 +1360,28 @@ object {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Added styles */
+* {
+  font-family: "Libre Baskerville", serif;
+}
+.entry-meta {
+  font-family: "Open Sans";
+  margin-bottom: 5px;
+}
+.entry-date {
+  text-transform: uppercase;
+}
+h3 {
+  font-weight: bold;
+}
+.tsd-grid-large {
+  display: flex;
+}
+.tsd-grid-large .tsd-post-thumbnail {
+  flex: 1;
+  display: block;
+}
+.tsd-grid-large .tsd-post-main {
+  flex: 1;
+}
