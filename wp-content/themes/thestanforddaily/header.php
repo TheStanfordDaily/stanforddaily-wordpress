@@ -18,6 +18,11 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<style>
+	.tsd-header-image {
+		max-height: 100%;
+	}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -52,20 +57,16 @@
 
 		<div class="site-branding">
 			<div class="container">
-				<?php
-				$title_tag = "div";
-				if ( is_front_page() && is_home() ) {
-					$title_tag = "h1";
-				}
-				?>
-				<<?php echo $title_tag; ?> class="site-title"><?php
-					$custom_logo = get_custom_logo();
-					if (!empty($custom_logo)) {
-						echo $custom_logo;
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php 
+					$header_image_url = get_header_image();
+					if (!empty($header_image_url)) {
+						?><img class="tsd-header-image" src="<?php echo $header_image_url; ?>"><?php
 					} else {
-						?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php
+						?><?php bloginfo( 'name' ); ?><?php
 					}
-				?></<?php echo $title_tag; ?>>
+				?>
+			</a>
 			</div>
 		</div><!-- .site-branding -->
 
