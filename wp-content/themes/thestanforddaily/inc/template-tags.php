@@ -106,10 +106,10 @@ if ( ! function_exists( 'tsd_entry_footer' ) ) :
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'tsd' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'tsd' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'tsd' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<div class="tags-links"><span>Tags:</span>%1$s</div>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
