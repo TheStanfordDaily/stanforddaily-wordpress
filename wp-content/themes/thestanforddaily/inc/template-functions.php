@@ -58,3 +58,14 @@ function tsd_load_fa() {
 	?><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><?php
 }
 add_action( 'wp_head', 'tsd_load_fa' );
+
+/*
+ * Change the meta key of the post subtitle to `post_subtitle`
+ * for https://wordpress.org/plugins/wp-subtitle/,
+ * as JNews uses `post_subtitle` as the meta key.
+ * (Issue #50)
+ */
+function tsd_change_post_subtitle_meta_key() {
+    return "post_subtitle";
+}
+add_filter( 'wps_subtitle_key', 'tsd_change_post_subtitle_meta_key' );
