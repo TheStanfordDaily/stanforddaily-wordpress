@@ -10,26 +10,24 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<div class="excerpt-thumb">
+		<?php tsd_post_thumbnail(); ?>
+	</div><!-- .excerpt-thumb -->
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			tsd_posted_on();
-			tsd_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<div class="excerpt-content">
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-	<?php tsd_post_thumbnail(); ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php tsd_posted_by(false); ?> &mdash; <?php tsd_posted_on(); tsd_comments_count(); ?>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php tsd_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+	</div><!-- .excerpt-content -->
+	<div class="clear"></div>
 </article><!-- #post-<?php the_ID(); ?> -->

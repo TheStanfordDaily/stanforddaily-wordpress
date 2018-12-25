@@ -39,7 +39,7 @@ if ( ! function_exists( 'tsd_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author(s).
 	 */
-	function tsd_posted_by() {
+	function tsd_posted_by($show_avatar = true) {
 		if ( function_exists( 'coauthors_posts_links' ) ) :
 			// https://vip.wordpress.com/documentation/incorporate-co-authors-plus-template-tags-into-your-theme/
 			$author_html = coauthors_posts_links( null, null, null, null, false );
@@ -53,7 +53,9 @@ if ( ! function_exists( 'tsd_posted_by' ) ) :
 			$author_html
 		);
 
-		tsd_posted_by_avatar();
+		if ($show_avatar) {
+			tsd_posted_by_avatar();
+		}
 
 		echo '<span class="byline">' . $byline . '</span>'; // WPCS: XSS OK.
 
@@ -159,11 +161,14 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function tsd_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
 		if ( is_singular() ) :
+			if ( ! has_post_thumbnail() ) {
+				return;
+			}
 			?>
 
 			<div class="post-thumbnail">
@@ -176,14 +181,18 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 		<?php else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-			// TODO: What size?
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
+			<div class="thumbnail-container<?php if ( ! has_post_thumbnail() ) { ?> no-thumbnail<?php } ?>">
+				<?php
+				if ( has_post_thumbnail() ) {
+					// TODO: What size?
+					the_post_thumbnail( 'post-thumbnail', array(
+						'alt' => the_title_attribute( array(
+							'echo' => false,
+						) ),
+					) );
+				}
+				?>
+			</div>
 		</a>
 
 		<?php
