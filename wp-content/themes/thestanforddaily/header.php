@@ -63,7 +63,7 @@
 					if (!empty($header_image_url)) {
 						?><img class="tsd-header-image" src="<?php echo $header_image_url; ?>"><?php
 					} else {
-						?><?php bloginfo( 'name' ); ?><?php
+						?><h1><?php bloginfo( 'name' ); ?></h1><?php
 					}
 				?>
 			</a>
