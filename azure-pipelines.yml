@@ -19,8 +19,19 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: composer install --no-interaction --prefer-dist
-  displayName: 'composer install'
+- script: |
+    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+    chmod +x wp-cli.phar
+    ./wp-cli.phar package install frozzare/wp-cli-lint
+  displayName: 'install wp cli'
 
-- script: phpunit
-  displayName: 'Run tests with phpunit'
+- script: |
+    ./wp-cli.phar lint
+  displayName: 'lint'
+
+
+# - script: composer install --no-interaction --prefer-dist
+#   displayName: 'composer install'
+
+# - script: phpunit
+#   displayName: 'Run tests with phpunit'
