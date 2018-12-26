@@ -96,3 +96,6 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+#composer
+/vendor
