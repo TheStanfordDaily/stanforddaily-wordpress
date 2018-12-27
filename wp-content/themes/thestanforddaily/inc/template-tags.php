@@ -7,6 +7,23 @@
  * @package The_Stanford_Daily
  */
 
+if ( ! function_exists( 'tsd_get_all_author_id' ) ) :
+	/**
+	 * Get all authors' ID of the current article.
+	 */
+	function tsd_get_all_author_id() {
+		$author_list = [];
+		if ( function_exists( 'get_coauthors' ) ) :
+			foreach ( get_coauthors() as $each_author ) {
+				$author_list[] = $each_author->ID;
+			}
+		else:
+			$author_list = [get_the_author_meta( 'ID' )];
+		endif;
+		return $author_list;
+	}
+endif;
+
 if ( ! function_exists( 'tsd_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -67,14 +84,7 @@ if ( ! function_exists( 'tsd_posted_by_avatar' ) ) :
 	 * Prints HTML for all the avatar(s) of the author(s).
 	 */
 	function tsd_posted_by_avatar() {
-		$author_list = [];
-		if ( function_exists( 'get_coauthors' ) ) :
-			foreach ( get_coauthors() as $each_author ) {
-				$author_list[] = $each_author->ID;
-			}
-		else:
-			$author_list = [get_the_author_meta( 'ID' )];
-		endif;
+		$author_list = tsd_get_all_author_id();
 
 		foreach ( $author_list as $each_author ) {
 			echo get_avatar( $each_author, 80, null, get_the_author_meta('display_name', $each_author) );
@@ -90,6 +100,27 @@ if ( ! function_exists( 'tsd_comments_count' ) ) :
 	 */
 	function tsd_comments_count() {
 		?><span class="entry-meta-comment"><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></span><?php
+	}
+endif;
+
+if ( ! function_exists( 'tsd_author_box' ) ) :
+	/**
+	 * Prints HTML for the author box which contains the author information.
+	 */
+	function tsd_author_box( $id ) {
+		$user = get_user_by( 'id' , $id );
+		$user_url = esc_url( get_author_posts_url( $id ) );
+		?>
+		<div class="author-box">
+			<div class="author-image">
+				<a href="<?php echo $user_url; ?>"><?php echo get_avatar( $id, 110, null, $user->display_name ); ?></a>
+			</div>
+			<div class="author-content">
+				<p class="author-name"><a href="<?php echo $user_url; ?>"><?php echo $user->display_name; ?></a></p>
+				<p class="author-description"><?php the_author_meta( "description" , $id ); ?></p>
+			</div>
+		</div>
+		<?php
 	}
 endif;
 
@@ -113,6 +144,15 @@ if ( ! function_exists( 'tsd_entry_footer' ) ) :
 				/* translators: 1: list of tags. */
 				printf( '<div class="tags-links"><span>Tags:</span>%1$s</div>', $tags_list ); // WPCS: XSS OK.
 			}
+
+			if ( is_singular() ) :
+				printf( '<div class="author-boxes">' );
+				$author_list = tsd_get_all_author_id();
+				foreach ( $author_list as $each_author_id ) {
+					tsd_author_box($each_author_id);
+				}
+				printf( '</div>' );
+			endif;
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
