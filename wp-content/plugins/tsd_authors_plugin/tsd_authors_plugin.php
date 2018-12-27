@@ -174,10 +174,9 @@ function tsd_authors_plugin_enable_api() {
     }
     add_filter( 'get_avatar' , 'tsd_authors_plugin_custom_avatar' , 1 , 5 );
 
-    // Issue #55 - Alter the user description returned by the get_the_author_description() function
+    // Issue #55 - Alter the user description returned by the `get_the_author_meta("description")` function
     // Ref: https://developer.wordpress.org/reference/hooks/get_the_author_field/
-    // Note that this function also alters the value returned by `the_author_meta("description");`,
-    // but does NOT alter the value returned by `get_user_meta(..., "description", ...);`.
+    // Note that this function does NOT alter the value returned by `get_user_meta(..., "description", ...);`.
     function tsd_authors_plugin_custom_user_description( $value, $user_id ) {
         if ( ! empty( $value ) ) {
             // If the user already has the description, do nothing.
