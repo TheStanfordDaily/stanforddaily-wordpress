@@ -1011,6 +1011,15 @@ a:hover, a:active {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
 }
+.widget .widget-title {
+  font-size: 18px;
+  border-bottom: 2px solid;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+.widget ul {
+  margin-left: 1.5em;
+}
 .widget select {
   max-width: 100%;
 }
