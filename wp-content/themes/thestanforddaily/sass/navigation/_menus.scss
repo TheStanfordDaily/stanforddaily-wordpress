@@ -70,7 +70,7 @@
 		a {
 			height: 100%;
 			img {
-				height: 100%;
+				max-height: 100%;
 				width: auto;
 				vertical-align: baseline;
 			}
@@ -249,7 +249,7 @@
 		box-shadow: 0 2px 6px rgba(0,0,0,.1);
 
 		.container {
-			padding: $top_sticky_bar_padding 0;
+			padding: $top_sticky_bar_padding 50px;
 		}
 
 		.site-title {

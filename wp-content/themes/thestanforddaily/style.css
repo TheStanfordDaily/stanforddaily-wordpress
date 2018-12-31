@@ -769,7 +769,7 @@ a:hover, a:active {
   height: 100%;
 }
 .site-branding .site-title a img {
-  height: 100%;
+  max-height: 100%;
   width: auto;
   vertical-align: baseline;
 }
@@ -901,7 +901,7 @@ a:hover, a:active {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   .site-branding .container {
-    padding: 10px 0;
+    padding: 10px 50px;
   }
   .site-branding .site-title {
     text-align: center;
