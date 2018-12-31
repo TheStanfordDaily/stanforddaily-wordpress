@@ -240,10 +240,11 @@
 		}
 	}
 
-	// Ref: https://www.w3schools.com/howto/howto_js_sidenav.asp
+	// Ref: https://www.w3schools.com/howto/howto_js_sidenav.asp & JNews 2
 	.main-navigation {
 		height: 100%; /* 100% Full-height */
-		width: 0; /* 0 width - change this with JavaScript */
+		width: 250px;
+		transform: translate3d(-100%, 0, 0); // Move navbar off-screen to the left
 		position: fixed; /* Stay in place */
 		z-index: 9999; /* Stay on top */
 		top: 0; /* Stay at the top */
@@ -252,10 +253,10 @@
 		overflow-x: hidden; /* Disable horizontal scroll */
 		overflow-y: auto;
 		padding-top: 60px; /* Place content 60px from the top */
-		box-shadow: 1px 0 5px rgba(0,0,0,.1),3px 0 25px rgba(0,0,0,.18);
 
 		&.mobile-open {
-			width: 250px;
+			transform: translateZ(0);	// Move nav-bar back to the screen.
+			box-shadow: 1px 0 5px rgba(0,0,0,.1),3px 0 25px rgba(0,0,0,.18);
 		}
 		&.with-animation {
 			// https://stackoverflow.com/q/16654094/2603230

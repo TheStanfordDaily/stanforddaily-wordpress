@@ -897,8 +897,8 @@ a:hover, a:active {
   .main-navigation {
     height: 100%;
     /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
+    width: 250px;
+    transform: translate3d(-100%, 0, 0);
     position: fixed;
     /* Stay in place */
     z-index: 9999;
@@ -912,10 +912,10 @@ a:hover, a:active {
     overflow-y: auto;
     padding-top: 60px;
     /* Place content 60px from the top */
-    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
   }
   .main-navigation.mobile-open {
-    width: 250px;
+    transform: translateZ(0);
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
   }
   .main-navigation.with-animation {
     transition: 0.3s;
