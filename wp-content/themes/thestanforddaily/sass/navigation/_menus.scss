@@ -51,28 +51,34 @@
 }
 
 .site-branding {
-	$top_site_branding_height: 100px;
-	$top_site_branding_padding: 20px;
-	height: $top_site_branding_height;
+	height: 100px;
 	.container {
 		height: 100%;
-		padding-top: $top_site_branding_padding;
-		padding-bottom: $top_site_branding_padding;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 	.site-title {
 		display: block;
 		height: 100%;
 		margin: 0;
 		padding: 0;
-		line-height: $top_site_branding_height - $top_site_branding_padding * 2;
+		line-height: 1;
 		letter-spacing: -.02em;
 		font-size: 45px;
 		a {
 			height: 100%;
+
+			// https://stackoverflow.com/a/7310398/2603230
+			&::after {
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+
 			img {
 				max-height: 100%;
 				width: auto;
-				vertical-align: baseline;
 			}
 		}
 	}
@@ -238,7 +244,6 @@
 	}
 
 	$top_sticky_bar_height: 60px;
-	$top_sticky_bar_padding: 10px;
 	.site-branding {
 		position: fixed;
 		top: 0;
@@ -249,13 +254,12 @@
 		box-shadow: 0 2px 6px rgba(0,0,0,.1);
 
 		.container {
-			padding: $top_sticky_bar_padding 50px;
+			padding: 10px 50px;
 		}
 
 		.site-title {
 			text-align: center;
 			font-size: 30px;
-			line-height: $top_sticky_bar_height - $top_sticky_bar_padding * 2;
 		}
 
 		.nav-toggle-button {
