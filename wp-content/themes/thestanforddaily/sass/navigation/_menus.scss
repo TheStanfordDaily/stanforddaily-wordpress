@@ -247,7 +247,7 @@
 	// Ref: https://www.w3schools.com/howto/howto_js_sidenav.asp & JNews 2
 	.main-navigation {
 		height: 100%; /* 100% Full-height */
-		width: 250px;
+		max-width: 250px; // So that that screens smaller than 250px width will also display the nav bar nicely
 		transform: translate3d(-100%, 0, 0); // Move navbar off-screen to the left
 		position: fixed; /* Stay in place */
 		z-index: 9999; /* Stay on top */
