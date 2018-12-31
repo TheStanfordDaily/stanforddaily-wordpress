@@ -4,16 +4,11 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-/*( function() {
-	var container, button, menu, links, i, len;
+( function() {
+	var container, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
-		return;
-	}
-
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
 		return;
 	}
 
@@ -21,26 +16,12 @@
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
 		return;
 	}
 
-	menu.setAttribute( 'aria-expanded', 'false' );
 	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
 		menu.className += ' nav-menu';
 	}
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
@@ -53,7 +34,7 @@
 
 	/**
 	 * Sets or removes .focus class on an element.
-	 *
+	 */
 	function toggleFocus() {
 		var self = this;
 
@@ -75,7 +56,7 @@
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
-	 *
+	 */
 	( function( container ) {
 		var touchStartFn, i,
 			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
@@ -103,7 +84,7 @@
 			}
 		}
 	}( container ) );
-} )();*/
+} )();
 
 // Ref: https://davidwalsh.name/css-animation-callback
 function whichTransitionEvent() {
@@ -124,23 +105,16 @@ function whichTransitionEvent() {
 }
 
 function openNav() {
-	// https://stackoverflow.com/a/7288701/2603230
-	//jQuery(".main-navigation").show(0).addClass("mobile-open");
-
 	// https://stackoverflow.com/q/16654094/2603230
 	jQuery(".main-navigation").addClass("with-animation").addClass("mobile-open");
+
 	jQuery(".background-overlay").addClass("overlay-display");
 }
 
 function closeNav() {
-	// https://stackoverflow.com/a/2510255/2603230
-	/*jQuery(".main-navigation").removeClass("mobile-open").delay(1000).queue(function () {
-		jQuery(this).css('display', '').dequeue();
-	});*/
-
 	var mainNav = jQuery(".main-navigation");
 	mainNav.removeClass("mobile-open");
-	/* Listen for a transition! */
+	/* Listen for a transition */
 	mainNav.one(whichTransitionEvent(), function() {
 		// Remove animation property after the nav bar is closed.
 		mainNav.removeClass("with-animation");

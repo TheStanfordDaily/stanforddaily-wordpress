@@ -264,9 +264,11 @@
 
 		.container {
 			width: auto;
+			padding: 0;
 		}
 
 		ul {
+			width: 100%;
 			flex-direction: column;
 
 			a {
@@ -277,9 +279,32 @@
 				display: block;
 				transition: 0.3s;
 			}
+
+			li {
+				width: 100%;
+
+				margin-top: 10px;
+				&:last-child {
+					margin-bottom: 10px;
+				}
+
+				a {
+					font-size: 18px;
+					line-height: 1.5em;
+					&::after {
+						// Remove arrows.
+						content: "" !important;
+						margin: 0;
+					}
+				}
+			}
+
+			ul {
+				// Don't show any sub-menu.
+				display: none;
+			}
 		}
 
-		// TODO: Ignore sub-menus in the mobile state.
 		// TODO: Add a close button for smaller screens like on phones.
 	}
 }

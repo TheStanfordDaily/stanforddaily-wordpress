@@ -75,6 +75,7 @@
 				<div class="nav-row">
 					<?php
 					wp_nav_menu( array(
+						'container'      => false,   // Avoid extra container
 						'theme_location' => 'menu-primary',
 						'menu_id'        => 'primary-menu',
 					) );

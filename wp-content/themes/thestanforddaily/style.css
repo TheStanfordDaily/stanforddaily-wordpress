@@ -923,8 +923,10 @@ a:hover, a:active {
   }
   .main-navigation .container {
     width: auto;
+    padding: 0;
   }
   .main-navigation ul {
+    width: 100%;
     flex-direction: column;
   }
   .main-navigation ul a {
@@ -934,6 +936,24 @@ a:hover, a:active {
     color: #818181;
     display: block;
     transition: 0.3s;
+  }
+  .main-navigation ul li {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .main-navigation ul li:last-child {
+    margin-bottom: 10px;
+  }
+  .main-navigation ul li a {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  .main-navigation ul li a::after {
+    content: "" !important;
+    margin: 0;
+  }
+  .main-navigation ul ul {
+    display: none;
   }
 }
 .site-main .comment-navigation,
