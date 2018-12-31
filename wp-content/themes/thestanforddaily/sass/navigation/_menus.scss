@@ -235,12 +235,45 @@
 		display: none;
 	}
 
+	$top_sticky_bar_height: 60px;
+	$top_sticky_bar_padding: 10px;
 	.site-branding {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: $top_sticky_bar_height;
+		line-height: $top_sticky_bar_height;
+		background: #fff;
+		box-shadow: 0 2px 6px rgba(0,0,0,.1);
+
+		.container {
+			padding: $top_sticky_bar_padding 0;
+		}
+
 		.site-title {
 			text-align: center;
+			font-size: 30px;
+			line-height: $top_sticky_bar_height - $top_sticky_bar_padding * 2;
+			img {
+				vertical-align: baseline;
+			}
 		}
+
 		.nav-toggle-button {
 			display: block;
+			position: absolute;
+			padding: 0;
+			height: 100%;
+			top: 0;
+			left: 20px;
+			color: #212121;
+			font-size: 22px;
+			border: 0;
+			outline: none;
+			box-shadow: none;
+			background: transparent;
+			cursor: pointer;
 		}
 	}
 
@@ -323,6 +356,11 @@
 			transition: .2s ease;
 			z-index: 9999;
 		}
+	}
+
+	.site-content {
+		// To make sure that the nav bar does not cover the content.
+		margin-top: $top_sticky_bar_height;
 	}
 }
 

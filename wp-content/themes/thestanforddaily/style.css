@@ -891,11 +891,41 @@ a:hover, a:active {
     display: none;
   }
 
+  .site-branding {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .site-branding .container {
+    padding: 10px 0;
+  }
   .site-branding .site-title {
     text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .site-branding .site-title img {
+    vertical-align: baseline;
   }
   .site-branding .nav-toggle-button {
     display: block;
+    position: absolute;
+    padding: 0;
+    height: 100%;
+    top: 0;
+    left: 20px;
+    color: #212121;
+    font-size: 22px;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
   }
 
   .main-navigation {
@@ -971,6 +1001,10 @@ a:hover, a:active {
     opacity: 0.75;
     transition: 0.2s ease;
     z-index: 9999;
+  }
+
+  .site-content {
+    margin-top: 60px;
   }
 }
 .site-main .comment-navigation,
