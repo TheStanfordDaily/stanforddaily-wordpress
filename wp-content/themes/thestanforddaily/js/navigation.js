@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-( function() {
+/*( function() {
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
@@ -53,7 +53,7 @@
 
 	/**
 	 * Sets or removes .focus class on an element.
-	 */
+	 *
 	function toggleFocus() {
 		var self = this;
 
@@ -75,7 +75,7 @@
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
-	 */
+	 *
 	( function( container ) {
 		var touchStartFn, i,
 			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
@@ -103,4 +103,57 @@
 			}
 		}
 	}( container ) );
-} )();
+} )();*/
+
+// Ref: https://davidwalsh.name/css-animation-callback
+function whichTransitionEvent() {
+	var t;
+	var el = document.createElement('fakeelement');
+	var transitions = {
+		'transition': 'transitionend',
+		'OTransition': 'oTransitionEnd',
+		'MozTransition': 'transitionend',
+		'WebkitTransition': 'webkitTransitionEnd'
+	};
+
+	for (t in transitions) {
+		if (el.style[t] !== undefined) {
+			return transitions[t];
+		}
+	}
+}
+
+function openNav() {
+	// https://stackoverflow.com/a/7288701/2603230
+	//jQuery(".main-navigation").show(0).addClass("mobile-open");
+
+	// https://stackoverflow.com/q/16654094/2603230
+	jQuery(".main-navigation").addClass("with-animation").addClass("mobile-open");
+	jQuery(".background-overlay").addClass("overlay-display");
+}
+
+function closeNav() {
+	// https://stackoverflow.com/a/2510255/2603230
+	/*jQuery(".main-navigation").removeClass("mobile-open").delay(1000).queue(function () {
+		jQuery(this).css('display', '').dequeue();
+	});*/
+
+	var mainNav = jQuery(".main-navigation");
+	mainNav.removeClass("mobile-open");
+	/* Listen for a transition! */
+	mainNav.one(whichTransitionEvent(), function() {
+		// Remove animation property after the nav bar is closed.
+		mainNav.removeClass("with-animation");
+	});
+
+	jQuery(".background-overlay").removeClass("overlay-display");
+}
+
+jQuery(document).ready(function () {
+	jQuery('.nav-toggle-button').click(function () {
+		openNav();
+	});
+	jQuery('.background-overlay').click(function() {
+		closeNav();
+	});
+});

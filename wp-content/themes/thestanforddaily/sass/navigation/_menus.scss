@@ -73,6 +73,11 @@
 			}
 		}
 	}
+
+	.nav-toggle-button {
+		display: none;
+		float: left;
+	}
 }
 
 .main-navigation {
@@ -200,17 +205,82 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.background-overlay {
 	display: block;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	background: #000;
+	background: linear-gradient(180deg, #000, #434343);
+	transition: .2s ease-out .1s;
+	opacity: 0;
+	z-index: 9998;
+	visibility: hidden;
 }
+@media screen and (max-width: $size__break-mobile) {
+	.background-overlay {
+		&.overlay-display {
+			opacity: .85;
+			visibility: visible;
+			transition: .4s cubic-bezier(.22,.61,.36,1) .1s;
+		}
+	}
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
+	.main-topbar {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
+
+	.site-branding {
+		.site-title {
+			text-align: center;
+		}
+		.nav-toggle-button {
+			display: block;
+		}
+	}
+
+	// Ref: https://www.w3schools.com/howto/howto_js_sidenav.asp
+	.main-navigation {
+		height: 100%; /* 100% Full-height */
+		width: 0; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index: 9999; /* Stay on top */
+		top: 0; /* Stay at the top */
+		left: 0;
+		background-color: #fff;
+		overflow-x: hidden; /* Disable horizontal scroll */
+		overflow-y: auto;
+		padding-top: 60px; /* Place content 60px from the top */
+		box-shadow: 1px 0 5px rgba(0,0,0,.1),3px 0 25px rgba(0,0,0,.18);
+
+		&.mobile-open {
+			width: 250px;
+		}
+		&.with-animation {
+			// https://stackoverflow.com/q/16654094/2603230
+			transition: 0.3s; /* 0.3 second transition effect to slide in the sidenav */
+		}
+
+		.container {
+			width: auto;
+		}
+
+		ul {
+			flex-direction: column;
+
+			a {
+				padding: 8px 8px 8px 32px;
+				text-decoration: none;
+				font-size: 25px;
+				color: #818181;
+				display: block;
+				transition: 0.3s;
+			}
+		}
+
+		// TODO: Ignore sub-menus in the mobile state.
+		// TODO: Add a close button for smaller screens like on phones.
 	}
 }
 

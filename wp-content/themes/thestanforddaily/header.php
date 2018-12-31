@@ -23,13 +23,13 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tsd' ); ?></a>
+	<div class="background-overlay"></div>
 
 	<header id="masthead" class="site-header">
 		<nav id="site-topbar" class="main-topbar">
 			<div class="container">
 				<div class="nav-row">
 					<div class="nav-col">
-						<button class="menu-toggle" aria-controls="topbar-menu" aria-expanded="false"><?php esc_html_e( 'Top Bar Menu', 'tsd' ); ?></button>
 						<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-topbar',
@@ -51,6 +51,7 @@
 		</nav><!-- #site-topbar -->
 
 		<div class="site-branding">
+			<button class="nav-toggle-button"><i class="fas fa-bars"></i></button>
 			<div class="container">
 				<?php
 				$title_tag = "div";
@@ -72,7 +73,6 @@
 		<nav id="site-navigation" class="main-navigation">
 			<div class="container">
 				<div class="nav-row">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsd' ); ?></button>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-primary',

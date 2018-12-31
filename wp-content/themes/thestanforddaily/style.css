@@ -772,6 +772,10 @@ a:hover, a:active {
   height: 100%;
   width: auto;
 }
+.site-branding .nav-toggle-button {
+  display: none;
+  float: left;
+}
 
 .main-navigation {
   clear: both;
@@ -858,18 +862,78 @@ a:hover, a:active {
   color: inherit;
 }
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.background-overlay {
   display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  background: linear-gradient(180deg, #000, #434343);
+  transition: 0.2s ease-out 0.1s;
+  opacity: 0;
+  z-index: 9998;
+  visibility: hidden;
 }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
+@media screen and (max-width: 1024px) {
+  .background-overlay.overlay-display {
+    opacity: 0.85;
+    visibility: visible;
+    transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
+  }
+
+  .main-topbar {
     display: none;
   }
 
-  .main-navigation ul {
+  .site-branding .site-title {
+    text-align: center;
+  }
+  .site-branding .nav-toggle-button {
     display: block;
+  }
+
+  .main-navigation {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9999;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    overflow-y: auto;
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
+  }
+  .main-navigation.mobile-open {
+    width: 250px;
+  }
+  .main-navigation.with-animation {
+    transition: 0.3s;
+    /* 0.3 second transition effect to slide in the sidenav */
+  }
+  .main-navigation .container {
+    width: auto;
+  }
+  .main-navigation ul {
+    flex-direction: column;
+  }
+  .main-navigation ul a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
   }
 }
 .site-main .comment-navigation,
