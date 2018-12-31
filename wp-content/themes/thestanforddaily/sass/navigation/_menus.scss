@@ -202,6 +202,10 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
+
+	.nav-close-button {
+		display: none;
+	}
 }
 
 /* Small menu. */
@@ -252,7 +256,7 @@
 		background-color: #fff;
 		overflow-x: hidden; /* Disable horizontal scroll */
 		overflow-y: auto;
-		padding-top: 60px; /* Place content 60px from the top */
+		padding-top: 40px; /* Place content 40px from the top */
 
 		&.mobile-open {
 			transform: translateZ(0);	// Move nav-bar back to the screen.
@@ -260,7 +264,7 @@
 		}
 		&.with-animation {
 			// https://stackoverflow.com/q/16654094/2603230
-			transition: 0.3s; /* 0.3 second transition effect to slide in the sidenav */
+			transition: 0.3s ease; /* 0.3 second transition effect to slide in the sidenav */
 		}
 
 		.container {
@@ -306,7 +310,19 @@
 			}
 		}
 
-		// TODO: Add a close button for smaller screens like on phones.
+		.nav-close-button {
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			padding: 0;
+			font-size: 16px;
+			line-height: initial;
+			color: black;
+			opacity: 0.75;
+			transition: .2s ease;
+			z-index: 9999;
+		}
 	}
 }
 

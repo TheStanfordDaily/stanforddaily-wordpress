@@ -861,6 +861,10 @@ a:hover, a:active {
   text-decoration: none;
   color: inherit;
 }
+.main-navigation .nav-close-button {
+  display: none;
+}
+
 /* Small menu. */
 .background-overlay {
   display: block;
@@ -910,15 +914,15 @@ a:hover, a:active {
     overflow-x: hidden;
     /* Disable horizontal scroll */
     overflow-y: auto;
-    padding-top: 60px;
-    /* Place content 60px from the top */
+    padding-top: 40px;
+    /* Place content 40px from the top */
   }
   .main-navigation.mobile-open {
     transform: translateZ(0);
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
   }
   .main-navigation.with-animation {
-    transition: 0.3s;
+    transition: 0.3s ease;
     /* 0.3 second transition effect to slide in the sidenav */
   }
   .main-navigation .container {
@@ -954,6 +958,19 @@ a:hover, a:active {
   }
   .main-navigation ul ul {
     display: none;
+  }
+  .main-navigation .nav-close-button {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 0;
+    font-size: 16px;
+    line-height: initial;
+    color: black;
+    opacity: 0.75;
+    transition: 0.2s ease;
+    z-index: 9999;
   }
 }
 .site-main .comment-navigation,

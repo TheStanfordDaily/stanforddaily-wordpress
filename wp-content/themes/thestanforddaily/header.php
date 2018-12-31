@@ -73,6 +73,7 @@
 		<nav id="site-navigation" class="main-navigation">
 			<div class="container">
 				<div class="nav-row">
+					<a href="#" class="nav-close-button"><i class="fas fa-times"></i></a>
 					<?php
 					wp_nav_menu( array(
 						'container'      => false,   // Avoid extra container

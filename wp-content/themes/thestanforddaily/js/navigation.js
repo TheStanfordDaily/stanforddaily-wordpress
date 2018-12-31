@@ -127,7 +127,7 @@ jQuery(document).ready(function () {
 	jQuery('.nav-toggle-button').click(function () {
 		openNav();
 	});
-	jQuery('.background-overlay').click(function() {
+	jQuery('.background-overlay, .nav-close-button').click(function() {
 		closeNav();
 	});
 });
