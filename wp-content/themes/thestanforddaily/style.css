@@ -906,7 +906,7 @@ a:hover, a:active {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   .site-branding .container {
-    padding: 10px 50px;
+    padding: 10px 54px;
   }
   .site-branding .site-title {
     text-align: center;
@@ -1175,7 +1175,7 @@ a:hover, a:active {
 }
 
 .site-main {
-  margin: 0 25% 0 0;
+  margin: 0 30% 0 0;
 }
 @media screen and (max-width: 1024px) {
   .site-main {
@@ -1301,6 +1301,10 @@ a:hover, a:active {
 
 .updated:not(.published) {
   display: none;
+}
+
+.post-feature-image {
+  margin-top: 1.5em;
 }
 
 .page-content,

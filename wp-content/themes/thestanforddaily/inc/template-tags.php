@@ -211,12 +211,12 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			}
 			?>
 
-			<div class="post-thumbnail">
+			<div class="post-feature-image">
 				<?php
 				// TODO: More sizes? Change name?
 				the_post_thumbnail( 'jnews-1140x570' );
 				?>
-			</div><!-- .post-thumbnail -->
+			</div><!-- .post-feature-image -->
 
 		<?php else : ?>
 
