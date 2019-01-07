@@ -239,3 +239,36 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'tsd_pagination' ) ) :
+	/**
+	 * Pagination for archive, taxonomy, category, tag and search results pages
+	 * https://www.kevinleary.net/wordpress-pagination-paginate_links/
+	 *
+	 * @global $wp_query http://codex.wordpress.org/Class_Reference/WP_Query
+	 * @return Prints the HTML for the pagination if a template is $paged
+	 */
+	function tsd_pagination() {
+		global $wp_query;
+
+		$big = 999999999; // This needs to be an unlikely integer
+
+		// For more options and info view the docs for paginate_links()
+		// http://codex.wordpress.org/Function_Reference/paginate_links
+		$paginate_links = paginate_links( array(
+			'base' => str_replace( $big, '%#%', get_pagenum_link($big) ),
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages,
+			'mid_size' => 5,
+			'prev_text' => '',
+			'next_text' => ''
+		) );
+
+		// Display the pagination if more than one page is found
+		if ( $paginate_links ) { ?>
+		<div class="pagination">
+			<?php echo $paginate_links; ?>
+		</div><!-- .pagination -->
+		<?php }
+	}
+endif;

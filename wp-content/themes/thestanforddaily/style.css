@@ -1045,6 +1045,45 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Pagination
+--------------------------------------------------------------*/
+.pagination {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pagination .page-numbers {
+  color: #212121;
+  padding: 0 10px;
+  display: inline-block;
+  border: 1px solid #eee;
+  text-align: center;
+  min-width: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.pagination .page-numbers.dots {
+  border: 0;
+  font-weight: 400;
+}
+.pagination .page-numbers.current {
+  background-color: #aa0000;
+  border-color: #aa0000;
+  color: white;
+}
+.pagination .page-numbers.prev::before, .pagination .page-numbers.next::after {
+  font-weight: 400;
+  font-family: FontAwesome;
+  display: inline-block;
+}
+.pagination .page-numbers.prev::before {
+  content: "";
+}
+.pagination .page-numbers.next::after {
+  content: "";
+}
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
