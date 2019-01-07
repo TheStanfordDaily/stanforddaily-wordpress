@@ -148,6 +148,7 @@
 		height: 200px;
 		line-height: 200px;
 		background: #f7f7f7;
+		overflow: hidden;
 
 		&.no-thumbnail {
 			background-image: url('https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg');
