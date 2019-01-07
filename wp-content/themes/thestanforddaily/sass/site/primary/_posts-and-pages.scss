@@ -179,6 +179,10 @@
 }
 
 
-.page-title {
+.page-header {
 	margin: 0 0 15px;
+
+	.page-title {
+		margin: 0;
+	}
 }
