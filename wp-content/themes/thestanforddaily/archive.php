@@ -32,9 +32,9 @@ get_header();
 				the_post();
 
 				/*
-				 * Include the content-archive template for the content.
+				 * Include the excerpt template for the content.
 				 */
-				get_template_part( 'template-parts/content', 'archive' );
+				get_template_part( 'template-parts/excerpt', get_post_type() );
 
 			endwhile;
 
