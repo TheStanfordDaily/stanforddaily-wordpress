@@ -5,15 +5,10 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
-		return;
-	}
-
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
 		return;
 	}
 
@@ -21,26 +16,12 @@
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
 		return;
 	}
 
-	menu.setAttribute( 'aria-expanded', 'false' );
 	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
 		menu.className += ' nav-menu';
 	}
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
@@ -104,3 +85,49 @@
 		}
 	}( container ) );
 } )();
+
+// Ref: https://davidwalsh.name/css-animation-callback
+function whichTransitionEvent() {
+	var t;
+	var el = document.createElement('fakeelement');
+	var transitions = {
+		'transition': 'transitionend',
+		'OTransition': 'oTransitionEnd',
+		'MozTransition': 'transitionend',
+		'WebkitTransition': 'webkitTransitionEnd'
+	};
+
+	for (t in transitions) {
+		if (el.style[t] !== undefined) {
+			return transitions[t];
+		}
+	}
+}
+
+function openNav() {
+	// https://stackoverflow.com/q/16654094/2603230
+	jQuery(".main-navigation").addClass("with-animation").addClass("mobile-open");
+
+	jQuery(".background-overlay").addClass("overlay-display");
+}
+
+function closeNav() {
+	var mainNav = jQuery(".main-navigation");
+	mainNav.removeClass("mobile-open");
+	/* Listen for a transition */
+	mainNav.one(whichTransitionEvent(), function() {
+		// Remove animation property after the nav bar is closed.
+		mainNav.removeClass("with-animation");
+	});
+
+	jQuery(".background-overlay").removeClass("overlay-display");
+}
+
+jQuery(document).ready(function () {
+	jQuery('.nav-toggle-button').click(function () {
+		openNav();
+	});
+	jQuery('.background-overlay, .nav-close-button').click(function() {
+		closeNav();
+	});
+});

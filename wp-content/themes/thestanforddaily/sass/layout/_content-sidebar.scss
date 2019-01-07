@@ -10,7 +10,7 @@
 }
 
 .site-main {
-	margin: 0 $size__site-sidebar 0 0;
+	margin: 0 $size__site-sidebar+5% 0 0;
 
 	@media screen and (max-width: $size__break-mobile) {
 		margin: 0 auto;

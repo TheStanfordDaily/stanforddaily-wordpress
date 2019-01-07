@@ -7,6 +7,23 @@
  * @package The_Stanford_Daily
  */
 
+if ( ! function_exists( 'tsd_get_all_author_id' ) ) :
+	/**
+	 * Get all authors' ID of the current article.
+	 */
+	function tsd_get_all_author_id() {
+		$author_list = [];
+		if ( function_exists( 'get_coauthors' ) ) :
+			foreach ( get_coauthors() as $each_author ) {
+				$author_list[] = $each_author->ID;
+			}
+		else:
+			$author_list = [get_the_author_meta( 'ID' )];
+		endif;
+		return $author_list;
+	}
+endif;
+
 if ( ! function_exists( 'tsd_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -67,14 +84,7 @@ if ( ! function_exists( 'tsd_posted_by_avatar' ) ) :
 	 * Prints HTML for all the avatar(s) of the author(s).
 	 */
 	function tsd_posted_by_avatar() {
-		$author_list = [];
-		if ( function_exists( 'get_coauthors' ) ) :
-			foreach ( get_coauthors() as $each_author ) {
-				$author_list[] = $each_author->ID;
-			}
-		else:
-			$author_list = [get_the_author_meta( 'ID' )];
-		endif;
+		$author_list = tsd_get_all_author_id();
 
 		foreach ( $author_list as $each_author ) {
 			echo get_avatar( $each_author, 80, null, get_the_author_meta('display_name', $each_author) );
@@ -93,6 +103,27 @@ if ( ! function_exists( 'tsd_comments_count' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'tsd_author_box' ) ) :
+	/**
+	 * Prints HTML for the author box which contains the author information.
+	 */
+	function tsd_author_box( $id ) {
+		$user = get_user_by( 'id' , $id );
+		$user_url = esc_url( get_author_posts_url( $id ) );
+		?>
+		<div class="author-box">
+			<div class="author-image">
+				<a href="<?php echo $user_url; ?>"><?php echo get_avatar( $id, 110, null, $user->display_name ); ?></a>
+			</div>
+			<div class="author-content">
+				<p class="author-name"><a href="<?php echo $user_url; ?>"><?php echo $user->display_name; ?></a></p>
+				<p class="author-description"><?php the_author_meta( "description" , $id ); ?></p>
+			</div>
+		</div>
+		<?php
+	}
+endif;
+
 if ( ! function_exists( 'tsd_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -100,12 +131,10 @@ if ( ! function_exists( 'tsd_entry_footer' ) ) :
 	function tsd_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'tsd' ) );
+			/*$categories_list = get_the_category_list( esc_html__( ', ', 'tsd' ) );
 			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'tsd' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
+			}*/
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'tsd' ) );
@@ -113,6 +142,15 @@ if ( ! function_exists( 'tsd_entry_footer' ) ) :
 				/* translators: 1: list of tags. */
 				printf( '<div class="tags-links"><span>Tags:</span>%1$s</div>', $tags_list ); // WPCS: XSS OK.
 			}
+
+			if ( is_singular() ) :
+				printf( '<div class="author-boxes">' );
+				$author_list = tsd_get_all_author_id();
+				foreach ( $author_list as $each_author_id ) {
+					tsd_author_box($each_author_id);
+				}
+				printf( '</div>' );
+			endif;
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -133,23 +171,6 @@ if ( ! function_exists( 'tsd_entry_footer' ) ) :
 			);
 			echo '</span>';
 		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'tsd' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 
@@ -171,12 +192,12 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			}
 			?>
 
-			<div class="post-thumbnail">
+			<div class="post-feature-image">
 				<?php
 				// TODO: More sizes? Change name?
 				the_post_thumbnail( 'jnews-1140x570' );
 				?>
-			</div><!-- .post-thumbnail -->
+			</div><!-- .post-feature-image -->
 
 		<?php else : ?>
 
@@ -197,5 +218,38 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 
 		<?php
 		endif; // End is_singular().
+	}
+endif;
+
+if ( ! function_exists( 'tsd_pagination' ) ) :
+	/**
+	 * Pagination for archive, taxonomy, category, tag and search results pages
+	 * https://www.kevinleary.net/wordpress-pagination-paginate_links/
+	 *
+	 * @global $wp_query http://codex.wordpress.org/Class_Reference/WP_Query
+	 * @return Prints the HTML for the pagination if a template is $paged
+	 */
+	function tsd_pagination() {
+		global $wp_query;
+
+		$big = 999999999; // This needs to be an unlikely integer
+
+		// For more options and info view the docs for paginate_links()
+		// http://codex.wordpress.org/Function_Reference/paginate_links
+		$paginate_links = paginate_links( array(
+			'base' => str_replace( $big, '%#%', get_pagenum_link($big) ),
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages,
+			'mid_size' => 5,
+			'prev_text' => '',
+			'next_text' => ''
+		) );
+
+		// Display the pagination if more than one page is found
+		if ( $paginate_links ) { ?>
+		<div class="pagination">
+			<?php echo $paginate_links; ?>
+		</div><!-- .pagination -->
+		<?php }
 	}
 endif;

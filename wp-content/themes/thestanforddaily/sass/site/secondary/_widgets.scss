@@ -1,6 +1,17 @@
 .widget {
 	margin: 0 0 1.5em;
 
+	.widget-title {
+		font-size: 18px;
+		border-bottom: 2px solid;
+		margin-bottom: 20px;
+		padding-bottom: 5px;
+	}
+
+	ul {
+		margin-left: 1.5em;
+	}
+
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
