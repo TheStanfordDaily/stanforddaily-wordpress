@@ -1465,7 +1465,7 @@ a:hover, a:active {
 }
 
 .page-header {
-  margin: 0 0 15px;
+  margin: 0 0 30px;
 }
 .page-header .page-title {
   margin: 0;
@@ -1480,13 +1480,6 @@ a:hover, a:active {
 
 .bypostauthor {
   display: block;
-}
-
-/*--------------------------------------------------------------
-## Author pages
---------------------------------------------------------------*/
-.author-main .page-header {
-  margin: 0 0 30px;
 }
 
 /*--------------------------------------------------------------
