@@ -164,7 +164,7 @@ li {
 
 #rectangle {
   width: 50%;
-  height: 95%;
+  height: 92%;
   opacity: 50%;
   position: absolute;
   top: 0px;
@@ -187,4 +187,10 @@ blockquote {
 .tsd_container {
   position: relative;
   color: white;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

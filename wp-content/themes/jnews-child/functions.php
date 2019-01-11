@@ -77,16 +77,16 @@ function tsd_blockquote_function($atts, $content = null) {
 
     $atts = shortcode_atts( array(
         'width' => '200px',
+        'padding-bottom' => '10px',
+        'padding-right' => '10px',
         'float' => 'left',
         'font-size' => '30px',
     ), $atts);
 
-    $return .= '<div><div style="width: ' . $atts['width'] . '; float: ' . $atts['float'] . '; 
+    $return .= '<div><div style="width: ' . $atts['width'] . '; padding-bottom: ' .$atts['padding-bottom'] . '; 
+    float: ' . $atts['float'] . '; padding-right: ' .$atts['padding-right'] .';
     font-size: ' . $atts['font-size'] .';">' .do_shortcode($content) .'</div></div>';
 
     return $return;
 }
-
-function register_shortcodes() {
-    add_shortcode('tsd_blockquote', 'tsd_blockquote_function');
-}
+add_shortcode('tsd_blockquote', 'tsd_blockquote_function');

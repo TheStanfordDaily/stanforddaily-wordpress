@@ -25,9 +25,25 @@ $single = new \JNews\Single\SinglePage();
                                     <img class = "jeg_featured featured_image" alt="Featured Image" style="width:100%" 
                                         src = "<?php echo $single->get_featured_image_src('full')?>">
                                     <div id = "rectangle"></div>
-                                    <img src = "https://www.stanforddaily.com/wp-content/uploads/2018/06/DailyRedSmall.jpeg" alt= "TSD Logo" 
+                                    <!--<img src = "https://www.stanforddaily.com/wp-content/uploads/2018/06/DailyRedSmall.jpeg" alt= "TSD Logo" 
                                         style = "position: absolute; width: 20%; top: 0px; left: 15%; ">
-                                    <h1 class="jeg_post_title center_left"><?php the_title(); ?></h1>
+                                    -->
+                                    <h1 class="jeg_post_title center_left" style = "color: white; left: 5%; 
+                                        width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%;">
+                                        <?php the_title(); ?></h1>
+                                    <div class="jeg_meta_author" style = "color: white; left: 5%; 
+                                        width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%;"> </div>
+                                     <div class="jeg_meta_date" style = "color: white; left: 5%; 
+                                        width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%;"> </div>
+                                    <!--
+                                    <div class="jeg_meta_container">
+                                        <div class="jeg_post_meta jeg_post_meta_2" style = "color: white; left: 5%; 
+                                        width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%; position: relative;">
+                                            <div class="jeg_meta_author"> </div>
+                                            <div class="jeg_meta_date"> </div>
+                                        </div>
+                                    </div>
+                                    -->
                                 </div>
                                 <?php if($single->can_render_post_meta()) :  ?>
                                     <div class="jeg_meta_container">
