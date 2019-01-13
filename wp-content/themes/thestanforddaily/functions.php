@@ -44,8 +44,8 @@ if ( ! function_exists( 'tsd_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-primary' => esc_html__( 'Primary', 'tsd' ),
 			'menu-topbar' => esc_html__( 'Top Bar', 'tsd' ),
+			'menu-primary' => esc_html__( 'Primary', 'tsd' ),
 		) );
 
 		/*
