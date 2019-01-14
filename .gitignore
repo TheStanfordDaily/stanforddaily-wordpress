@@ -99,3 +99,4 @@ wp-content/mysql.sql
 
 #composer
 /vendor
+.vagrant
