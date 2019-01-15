@@ -101,6 +101,5 @@ wp-content/mysql.sql
 /vendor
 .vagrant
 
-wp-content/plugins
 wp-content/debug.log
 *.sql
