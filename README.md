@@ -5,6 +5,8 @@ Download [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ## Run
 
+First, download the database dump .sql file, then put it into `wp-vagrant/dumps`.
+
 ```
 vagrant plugin install vagrant-hostmanager
 vagrant plugin install vagrant-triggers
@@ -31,12 +33,22 @@ mysql -uroot -proot
 ```
 use wp_stanforddaily2;
 delete from wp_pv_am_activities;
+delete from wp_3wp_activity_monitor_index;
+delete from wp_comments;
+delete from wp_popularpostssummary;
+delete from wp_options where option_name like '%jnews%';
 DELETE p, pm
   FROM wp_posts p
  INNER 
   JOIN wp_postmeta pm
     ON pm.post_id = p.ID
- WHERE p.post_date < "2017" and p.post_type = "post";
+ WHERE (p.post_type = "post" and (p.post_date < "2018" or p.post_status != 'publish')) ;
+```
+Exit mysql, create admin user:
+
+```
+cd /vagrant
+wp user create root ashwin@stanforddaily.com --role=administrator --user-pass=root
 ```
 
 ```
