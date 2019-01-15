@@ -55,13 +55,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.network "private_network", ip: "192.168.50.2"
-  config.vm.hostname = "wpvagrant.dev"
-  config.hostsupdater.remove_on_suspend = true
+  config.vm.hostname = "localhost.stanforddaily.com"
+  config.hostsupdater.remove_on_suspend = false
 
   # Vagrant triggers
-  config.trigger.before :destroy, :stdout => true do
-    info "Dumping the database before destroying the VM..."
-    run  "vagrant ssh -c 'sh /vagrant/wp-vagrant/mysql/db_dump.sh'"
+  config.trigger.before :destroy do |trigger|
+    trigger.info = "Dumping the database before destroying the VM..."
+    trigger.run = {inline: "vagrant ssh -c 'sh /vagrant/wp-vagrant/mysql/db_dump.sh'"}
   end
 
   # provisioning script

@@ -8,7 +8,7 @@
 
 # this is hostname for the vagrant box
 # make sure to change it in the Vagrantfile as well
-hostname='wpvagrant.dev'
+hostname='localhost.stanforddaily.com'
 
 # PHP version to install
 # valid values:
@@ -35,7 +35,7 @@ mysql_root_password='root'
 # set to true to download and install latest version of WP
 # if we detect existing core files, then the WP download will not take place, even if
 # this is set to true, so it's normally safe to always have this set to true
-install_wordpress=true
+install_wordpress=false
 
 
 # WordPress version to install (if install_wordpress=true)
@@ -50,13 +50,13 @@ wp_version=""
 #
 
 # name of database: eg wordpress
-wp_db_name='wp_vagrant'
+wp_db_name='wp_stanforddaily2'
 
 # database user name, leave empty to use the root user
-wp_db_user=''
+wp_db_user='root'
 
 # database password
-wp_db_password=''
+wp_db_password='root'
 
 #
 # initial WP admin user
@@ -79,10 +79,10 @@ wp_site_title='WP Vagrant'
 #
 
 # set to true to import the database as part of the provisioning process
-import_database=false
+import_database=true
 
 # specify the domain that the imported dump file uses.
 # This allows us to search / replace the domain used in the dump file into
 # the hostname used by this vagrant instance
 
-import_site_domain=''
+import_site_domain='www.stanforddaily.com'

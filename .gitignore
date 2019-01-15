@@ -100,3 +100,7 @@ wp-content/mysql.sql
 #composer
 /vendor
 .vagrant
+
+wp-content/plugins
+wp-content/debug.log
+*.sql
