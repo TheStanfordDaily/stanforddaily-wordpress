@@ -1,17 +1,24 @@
 # Local setup
+
+## Installation
+
 Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 Download [Vagrant](https://www.vagrantup.com/downloads.html)
 
-## Run
-
-First, download the database dump `.sql` file, then put it into `wp-vagrant/` folder.
-
-Then run the following commands inside the cloned `stanforddaily-website/` folder: (If you are on Mac, you may need to enter in your password during this step.)
+Then run the following commands to install some necessary vagrant plugins:
 ```
 vagrant plugin install vagrant-hostmanager
 vagrant plugin install vagrant-triggers
 vagrant plugin install vagrant-hostsupdater
+```
+
+## Run
+
+First, download the database dump (`.sql`) file and put it into the `wp-vagrant/` folder.
+
+Then, run this command from the cloned `stanforddaily-website/` folder to start the local server: (If you are on Mac, you may need to enter in your password during this step.)
+```
 vagrant up
 ```
 
@@ -78,3 +85,7 @@ Nginx logs
 sudo tail -f /var/log/nginx/error.log
 sudo vim /etc/nginx/sites-enabled/default.conf
 ```
+
+# Alternative ways
+
+https://github.com/TheStanfordDaily/stanforddaily-website/wiki/Setting-up-the-Stanford-Daily-website-on-your-Mac-or-Windows-using-Local-by-Flywheel
