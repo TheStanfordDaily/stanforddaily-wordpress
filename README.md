@@ -50,16 +50,36 @@ Random notes:
 
 ```
 vagrant ssh
-mysql -uroot -proot
 ```
 
+Befor running vagrant up (if loading db dump directly from wpengine):
 ```
+sed -i 's/utf8mb4_unicode_520_ci/utf8mb4_unicode_ci/g' /vagrant/wp-vagrant/dump.sql
+perl -i -pe 's/utf8mb4_unicode_520_ci/utf8mb4_unicode_ci/g' wp-vagrant/wp_stanforddaily2.sql
+```
+
+Create admin user:
+
+```
+cd /vagrant
+wp user create root admin@localhost.stanforddaily.com --role=administrator --user_pass=root
+wp user update root --user_email=admin@localhost.stanforddaily.com
+```
+
+MySQL queries to make db smaller:
+```
+mysql -uroot -proot
+
 use wp_stanforddaily2;
 delete from wp_pv_am_activities;
 delete from wp_3wp_activity_monitor_index;
 delete from wp_comments;
 delete from wp_popularpostssummary;
 delete from wp_options where option_name like '%jnews%';
+delete from wp_postmeta where meta_key like '%jnews%';
+UPDATE wp_postmeta
+  WHERE post_type = 'attachment'
+  SET guid = replace(guid, 'localhost.stanforddaily.com', 'www.stanforddaily.com');
 DELETE p, pm
   FROM wp_posts p
  INNER

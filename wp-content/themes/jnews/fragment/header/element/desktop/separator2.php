@@ -1,1 +1,0 @@
-<div class="jeg_separator separator2"></div>

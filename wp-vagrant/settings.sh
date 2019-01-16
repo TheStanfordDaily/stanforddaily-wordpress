@@ -85,4 +85,4 @@ import_database=true
 # This allows us to search / replace the domain used in the dump file into
 # the hostname used by this vagrant instance
 
-import_site_domain='www.stanforddaily.com'
+# import_site_domain='www.stanforddaily.com'
