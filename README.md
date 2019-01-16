@@ -31,6 +31,17 @@ To shutdown the local server, run:
 vagrant halt
 ```
 
+## Re-setup
+
+Normally, when you shutdown the local server using `vagrant halt`, all data in your local database (e.g., if you posted a new article on your local website) will *not* be lost the next time you `vagrant up`.
+
+However, if you wish to restart from a `.sql` file, you can run:
+```
+vagrant destroy # Current database will be exported to `wp-vagrant/db_dumps/`
+# Put your `.sql` file inside `wp-vagrant/`
+vagrant up
+```
+
 ## More info on setup
 Taken from https://github.com/digitalquery/wp-vagrant
 
