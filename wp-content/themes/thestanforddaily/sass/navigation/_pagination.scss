@@ -1,0 +1,39 @@
+.pagination {
+	text-align: center;
+	margin-bottom: 30px;
+
+	.page-numbers {
+		color: #212121;
+		padding: 0 10px;
+		display: inline-block;
+		border: 1px solid #eee;
+		text-align: center;
+		min-width: 30px;
+		line-height: 30px;
+		font-size: 13px;
+		font-weight: 700;
+
+		&.dots {
+			border: 0;
+			font-weight: 400;
+		}
+
+		&.current {
+			background-color: $color__link;
+			border-color: $color__link;
+			color: white;
+		}
+
+		&.prev::before, &.next::after {
+			font-weight: 400;
+			font-family: FontAwesome;
+			display: inline-block;
+		}
+		&.prev::before {
+			content: "\F104";
+		}
+		&.next::after {
+			content: "\F105";
+		}
+	}
+}

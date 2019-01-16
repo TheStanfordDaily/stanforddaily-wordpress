@@ -44,8 +44,8 @@ if ( ! function_exists( 'tsd_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-primary' => esc_html__( 'Primary', 'tsd' ),
 			'menu-topbar' => esc_html__( 'Top Bar', 'tsd' ),
+			'menu-primary' => esc_html__( 'Primary', 'tsd' ),
 		) );
 
 		/*
@@ -75,10 +75,9 @@ if ( ! function_exists( 'tsd_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 60,
+			'width'       => 500,
 			'flex-width'  => true,
-			'flex-height' => true,
 		) );
 	}
 endif;

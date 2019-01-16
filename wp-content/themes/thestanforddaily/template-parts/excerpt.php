@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying results in search pages
+ * Template part for displaying posts excerpts (e.g. in author pages, search pages, or archive pages)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

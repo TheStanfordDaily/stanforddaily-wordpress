@@ -2,6 +2,7 @@
     background: #eee;
     padding: 5px;
     border-top: 1px solid #aa0000;
+    margin-bottom: 30px;
 ">
     <h3 style="
     /* padding: 0; */

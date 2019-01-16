@@ -96,3 +96,9 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+#composer
+/vendor
+.vagrant
+wp-content/debug.log
+*.sql
