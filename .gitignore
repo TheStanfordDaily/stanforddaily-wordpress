@@ -101,4 +101,4 @@ wp-content/mysql.sql
 /vendor
 .vagrant
 wp-content/debug.log
-wp-vagrant/*.sql
+wp-vagrant/**/*.sql
