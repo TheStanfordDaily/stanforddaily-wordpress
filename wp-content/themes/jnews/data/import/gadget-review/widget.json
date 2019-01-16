@@ -1,0 +1,256 @@
+{
+  "default-sidebar": {
+    "jnews_review-7": {
+      "title": "TOP ",
+      "limit": "4",
+      "second_title": "REVIEW",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-8": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x600:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "Advertisement Banner",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_popular-4": {
+      "title": "Recommended ",
+      "limit": "6",
+      "order_by": "comments",
+      "range": "all",
+      "second_title": "Reading",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-1": {
+    "jnews_about-2": {
+      "title": "About Us",
+      "aboutimg": "",
+      "aboutimgretina": "",
+      "aboutname": "",
+      "aboutoccupation": "",
+      "aboutdesc": "We bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details.",
+      "signature": "",
+      "signatureretina": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_social-2": {
+      "title": "",
+      "widgetstyle": "rounded",
+      "icon_color": "",
+      "bg_color": "",
+      "beforesocial": "<strong>Follow Us</strong>",
+      "aftersocial": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22googleplus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2BJegtheme%22%7D%2C%7B%22social_icon%22%3A%22dribbble%22%2C%22social_url%22%3A%22https%3A%2F%2Fdribbble.com%2Fjegtheme%22%7D%5D",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "tag_cloud-3": {
+      "title": "Popular Tag",
+      "taxonomy": "post_tag",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-3": {
+    "jnews_recent_news-2": {
+      "title": "Recent News",
+      "postnumber": "2",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "landing-1": {
+    "jnews_review-2": {
+      "title": "HOT ",
+      "limit": "5",
+      "second_title": "PRODUCT",
+      "header_url": "#",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-9": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x250:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "Advertisement Banner",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_twitter-2": {
+      "title": "Follow ",
+      "username": "engadget",
+      "limit": "2",
+      "height": "150",
+      "theme": "light",
+      "color": "#aa0000",
+      "header": "false",
+      "footer": "false",
+      "second_title": "Twitter",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "landing-3": {
+    "jnews_review-4": {
+      "title": "HOT ",
+      "limit": "6",
+      "second_title": "PRODUCT",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-3": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x250:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "Advertisement Banner",
+      "ads_image_new_tab": "1",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_twitter-4": {
+      "title": "Follow ",
+      "username": "engadget",
+      "limit": "2",
+      "height": "150",
+      "theme": "light",
+      "color": "#aa0000",
+      "header": "false",
+      "footer": "false",
+      "second_title": "Twitter",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "landing-4": {
+    "mc4wp_form_widget-4": {
+      "title": "NEWSLETTERS",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": "#aa0000"
+    },
+    "jnews_module_element_ads-5": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x600:id}}",
+      "ads_image_link": "",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_module_block_29-3": {
+      "first_title": "TRENDING ",
+      "second_title": "REVIEW",
+      "url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "",
+      "post_type": "post",
+      "content_type": "all",
+      "number_post": "12",
+      "post_offset": "",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "ago",
+      "date_format_custom": "",
+      "pagination_mode": "disable",
+      "pagination_number_post": "16",
+      "pagination_scroll_limit": "",
+      "column_width": "auto"
+    }
+  },
+  "single-post": {
+    "jnews_single_review-2": {
+      "title": "",
+      "showdescription": "1",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-7": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x600:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "Advertisement Banner",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "jnews_popular-3": {
+      "title": "Recommended ",
+      "limit": "6",
+      "order_by": "comments",
+      "range": "daily",
+      "second_title": "Reading",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_review-6": {
+      "title": "TOP ",
+      "limit": "5",
+      "second_title": "REVIEW",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "default-sidebar": {
+    "jnews_social_counter-4": {
+      "title": "Follow Our Social",
+      "column": "col1",
+      "style": "light",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_tab_post-1": {
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_6",
+      "header_url": "",
+      "limit": "3",
+      "range": "all",
+      "title": ""
+    },
+    "jnews_module_element_ads-1": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "http://bit.ly/jnewsio",
+      "ads_image_alt": "",
+      "ads_image_new_tab": "1",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "scheme": "normal",
+      "column_width": "auto"
+    },
+    "jnews_recent_news-7": {
+      "title": "RECENT NEWS",
+      "postnumber": "3",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-1": {
+    "jnews_about-3": {
+      "title": "About Us",
+      "aboutimg": "",
+      "aboutimgretina": "",
+      "aboutname": "",
+      "aboutoccupation": "",
+      "aboutdesc": "We bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details.",
+      "signature": "",
+      "signatureretina": "",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_social-3": {
+      "title": "",
+      "widgetstyle": "rounded",
+      "icon_color": "",
+      "bg_color": "",
+      "beforesocial": "<strong>Follow Us</strong>",
+      "aftersocial": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22googleplus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2BJegtheme%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "tag_cloud-5": {
+      "title": "Popular Tag",
+      "taxonomy": "post_tag",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-3": {
+    "jnews_recent_news-5": {
+      "title": "Recent News",
+      "postnumber": "2",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-4": {
+    "meta-4": {
+      "title": "",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "single-post": {
+    "jnews_single_review-2": {
+      "title": "",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_block_17-3": {
+      "first_title": "MOVIE REVIEW",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_secondary_background": "",
+      "header_text_color": "",
+      "header_line_color": "",
+      "header_accent_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "All",
+      "post_type": "post",
+      "content_type": "review",
+      "number_post": "5",
+      "post_offset": "0",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "default",
+      "date_format_custom": "Y/m/d",
+      "excerpt_length": "20",
+      "excerpt_ellipsis": "...",
+      "pagination_mode": "disable",
+      "pagination_number_post": "4",
+      "pagination_scroll_limit": "0",
+      "scheme": "normal",
+      "column_width": "auto",
+      "title_color": "",
+      "accent_color": "",
+      "alt_color": "",
+      "excerpt_color": ""
+    },
+    "jnews_module_element_ads-5": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "scheme": "normal",
+      "column_width": "auto"
+    },
+    "jnews_recent_news-3": {
+      "title": "RECENT MOVIE",
+      "postnumber": "4",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  }
+}

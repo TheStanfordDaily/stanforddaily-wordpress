@@ -1,0 +1,156 @@
+[
+  {
+    "id": "zZyj0Uq",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "VWTLfpw",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "9QlAKfN",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 2
+              },
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_10_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ilypzwI",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "E3xe35y",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "30YZWSK",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:business:id}},{{category:world:id}},{{category:science:id}},{{category:politics:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 10
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:news:id}}",
+              "first_title": "أخبار مميزة",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "chgl7CW",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "SRKaciz",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:apps:id}}",
+              "first_title": "التطبيقات",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "LOhqSOE",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1499916616568{margin-bottom: 40px !important;padding-top: 15px !important;padding-bottom: 15px !important;background-color: #f9f9f9 !important;}",
+      "css_classes": "vc_custom_1499916616568"
+    },
+    "elements": [
+      {
+        "id": "VUcYUbX",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "R3H4lYq",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#",
+              "css": ".vc_custom_1499916585567{margin-bottom: 0px !important;}",
+              "_css_classes": "vc_custom_1499916585567"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

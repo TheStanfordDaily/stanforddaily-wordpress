@@ -1,0 +1,801 @@
+
+/*** dark element ***/
+
+.jeg_postblock .jeg_post_title a,
+.jeg_breakingnews .jeg_news_ticker a,
+.jeg_meganav_bar.jeg_splitpost_bar .current_title,
+.jeg_iconlink .jeg_block_icon_desc h3,
+.jeg_review_search .jeg_post_title a,
+.jeg_carousel .jeg_postblock_carousel_3 .jeg_post_title a,
+.jeg_postblock .jeg_readmore,
+.jeg_postblock .jeg_block_nav a,
+.jeg_postblock .jeg_block_loadmore a,
+.jeg_postblock .okayNav__menu-toggle.icon--active span,
+.jeg_postblock.jeg_postblock_27  .jeg_pl_md_4 .jeg_post_title a,
+.jeg_review_search .jeg_pagenav_1 .page_number,
+.jeg_review_search .jeg_pagenav_1 .page_nav,
+.jeg_meganav_bar{
+    color: #fff;
+}
+
+.jeg_postblock .jeg_post_excerpt p,
+.jeg_postblock .jeg_post_meta,
+.jeg_postblock .jeg_subcat_list > li > a,
+.jeg_postblock .jeg_meta_footer .jeg_meta_author a,
+.jeg_postblock .jeg_meta_footer .jeg_meta_comment a,
+.jeg_postblock.jeg_postblock_27  .jeg_pl_md_4 .jeg_post_meta,
+.jeg_iconlink,
+.jeg_review_search,
+.jeg_iconlink .jeg_block_icon_link i,
+.jeg_postblock .okayNav__nav--invisible a{
+    color: #eee;
+}
+
+.jeg_postblock .jeg_block_nav a.disabled{
+    color: #999;
+}
+
+.jeg_postblock .jeg_meta_footer .label,
+.jeg_postblock.jeg_postblock_27 .jeg_post_excerpt{
+    color: #ccc;
+}
+
+.jeg_postblock .jeg_block_loadmore a:before,
+.jeg_postblock .jeg_block_loadmore a:after,
+.jeg_breakingnews .jeg_news_ticker_arrow,
+.jeg_review_search .review-search-form,
+.jeg_postblock .okayNav__nav--invisible{
+    background: rgba(255,255,255,0.2);;
+}
+
+.jeg_postblock .jeg_block_nav a,
+.jeg_postblock .jeg_block_loadmore a,
+.jeg_breakingnews .jeg_news_ticker_arrow:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+.jeg_postblock .jeg_block_nav:before,
+.jeg_postblock .jeg_block_nav:after{
+    border-color: rgba(255,255,255,0.1);
+}
+
+.jeg_postblock .jeg_block_nav a{
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_review_search .jeg_pagenav_1 a.page_nav:hover,
+.jeg_review_search .jeg_pagenav_1 a.page_number:hover{
+    background: rgba(255,255,255,0.3);
+}
+
+.jeg_postblock .jeg_pl_md_card .jeg_postblock_content,
+.jeg_postblock .jeg_pl_lg_card .jeg_postblock_content,
+.jeg_heropost_14 .jeg_pl_lg_7 .jeg_postblock_content,
+.jeg_heropost_14 .jeg_pl_lg_7{
+    background: transparent;
+}
+
+.jeg_pl_lg_7 {
+    border-color: rgba(255,255,255,0.3);
+}
+
+.jeg_postblock .jeg_block_heading_2,
+.jeg_block_heading_2,
+.jeg_postblock .module-overlay,
+.jeg_review_search .module-overlay{
+    background: rgba(0,0,0,0.5);
+}
+
+.jeg_block_heading_5 .jeg_subcat {
+    background: transparent;
+}
+
+.jeg_postblock .okayNav__menu-toggle span{
+    background: rgba(255,255,255,0.6);
+}
+
+.jeg_breakingnews .jeg_news_ticker_arrow {
+    border-color: rgba(255,255,255,0.1);
+    color: #aaa;
+}
+
+.jeg_iconlink {
+    border-color: #333;
+}
+
+.jeg_postblock .jeg_block_heading_1,
+.jeg_postblock .jeg_block_heading_6,
+.jeg_block_heading_1,
+.jeg_block_heading_6,
+.jeg_postblock .okayNav__nav--invisible a{
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_postblock.jeg_postblock_16 .jeg_posts.jeg_load_more_flag,
+.jeg_postblock .jeg_pl_lg_8:not(:last-of-type),
+.jeg_postblock.jeg_postblock_24 .jeg_pl_xs_4 .jeg_postblock_content,
+.jeg_postblock.jeg_postblock_25 .jeg_post,
+.jeg_postblock .jeg_meta_footer,
+.jeg_postblock .jeg_meta_footer > div,
+.jeg_postblock .jeg_meta_footer > div,
+.jeg_postblock .jeg_pl_lg_9,
+.jeg_heropost_14.dark .jeg_pl_lg_7,
+.jeg_postblock .jeg_pl_lg_6 {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_postblock .jeg_block_loadmore a,
+.jeg_heropost_14 .jeg_pl_sm_2:after {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_postblock .jeg_pl_md_card .jeg_postblock_content{
+    padding: 12px 20px 10px;
+}
+
+.jeg_postblock .jeg_pl_lg_card .jeg_postblock_content{
+    padding: 15px 30px 15px;
+}
+
+.jeg_breakingnews .jeg_news_ticker{
+    border-color: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.1);
+}
+
+.jeg_breakingnews .jeg_news_ticker_item .post-date{
+    color: #ddd;
+}
+
+.jeg_meganav_bar{
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+}
+
+/** Dark Scheme **/
+
+.jeg_content {
+    background: #000;
+}
+
+body, .content-inner, h1, h2, h3, h4, h5, h6, .jeg_post_title a, .entry-header .jeg_post_title, .jeg_hero_style_7,
+.jeg_post_title a, .jeg_block_title, .jeg_splitpost_bar .current_title, .jeg_video_playlist_title, .gallery-caption,
+.entry-content .dropcap, #breadcrumbs a, #breadcrumbs .breadcrumb_last_link a, .a:hover, a:focus,
+.entry-content blockquote p:last-child, .jeg_meta_category a, .wp-caption .wp-caption-text,
+.entry-header .jeg_meta_like a, .entry-header .jeg_meta_comment a {
+    color: #fff;
+}
+
+.entry-content .pullquote:before,
+.entry-content .pullquote:after,
+.jeg_share_button .jeg_btn-toggle{
+    background: rgba(255,255,255,0.4);
+}
+
+.jeg_popup_post {
+    background: rgba(0,0,0,0.8);
+}
+
+.jeg_post_tags a {
+    color: #f5f5f5;
+    background: rgba(255,255,255,0.2);
+}
+
+.jeg_prevnext_post,
+.jeg_authorbox {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.comment-respond {
+    border-color: rgba(255,255,255,0.2);
+}
+
+input:not([type="submit"]),
+textarea,
+select,
+.chosen-container-single,
+.chosen-single {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.3);
+    color: #eee;
+}
+
+.alert {
+    color: #000;
+}
+
+.jeg_tabpost_nav li {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_tabpost_nav li.active,
+.jeg_pagenav_1 .page_nav,
+.jeg_pagenav_1 .page_number,
+.entry-content table {
+    color: #fff;
+}
+
+.jeg_tabpost_nav li.active:hover {
+    color: #212121;
+}
+
+.entry-content th {
+    color: #ddd;
+}
+
+.entry-content tbody tr:hover {
+    color: #c0c0c0;
+    background: #2c2c2c;
+}
+
+.jeg_pagenav_1 .page_nav,
+.jeg_pagenav_1 .page_number {
+    border-color: rgba(255,255,255,0.4);
+}
+
+.jeg_pagenav_1 a.page_nav:hover,
+.jeg_pagenav_1 a.page_number:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.jeg_cat_header_2 {
+    background: #333;
+    border-color: rgba(255,255,255,0.2);
+}
+
+.entry-content th,
+.entry-content td,
+.entry-content tr {
+    border-color: #444;
+}
+
+.jeg_review_wrap,
+.jeg_reviewdetail .conspros:first-child,
+.jeg_reviewscore,
+.jeg_reviewstars li{
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_reviewdetail {
+    background: rgba(255,255,255,0.1);
+}
+
+.jeg_deals a {
+    color: #fff;
+}
+
+ul.jeg_storelist,
+.jeg_storelist li,
+.jeg_deals_float {
+    border-color: rgba(255,255,255,0.2);
+    background: transparent;
+}
+
+.jeg_cat_header {
+    background: #000;
+}
+
+.jeg_pagenav_1 .page_nav, .jeg_pagenav_1 .page_number {
+    border-color: #999;
+}
+
+.jeg_pagenav_2 .page_nav, .jeg_pagenav_2 .page_number {
+    color: #fff;
+}
+
+.jeg_pagenav_2 .page_nav:hover, .jeg_pagenav_2 .page_number:hover {
+    background: #5f5f5f;
+}
+
+.jeg_pagenav_3 {
+    border-color: #333;
+}
+
+.jeg_pagenav_3 .page_number.active, .jeg_pagenav_3 .page_number.active:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.jeg_pagenav_3 .page_number {
+    color: #dbdbdb;
+}
+
+.jeg_pagenav_3 .page_nav {
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+}
+
+.jeg_cat_header_4 .jeg_breadcrumbs, .jeg_single_tpl_4 .jeg_breadcrumbs, .jeg_single_tpl_5 .jeg_breadcrumbs {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_cat_overlay.normal .jeg_cat_title {
+    color: #333;
+}
+
+.jeg_cat_overlay.normal #breadcrumbs a {
+    color: #555;
+}
+
+.jeg_tabpost_nav li:last-child {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_socialcounter a {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+}
+
+.jeg_socialcounter li:hover a {
+    background: rgba(0,0,0,0.2);
+}
+
+.widget_archive li a, .widget_pages li a, .widget_meta li a, .widget_recent_entries li a, .widget_rss li a {
+    color: #fff;
+}
+
+/** calendar **/
+.widget_calendar .calendar_wrap,
+.widget_calendar caption,
+.widget_calendar thead,
+.widget_calendar tfoot{
+    border-color: rgba(255,255,255,0.5);
+}
+
+.widget_calendar caption {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.widget_calendar tbody tr:nth-child(2n) {
+    background: rgba(255,255,255,0.2);
+}
+
+.widget_calendar tbody td {
+    color: #ddd;
+}
+
+.widget_calendar tbody td#today {
+    color: #fff;
+}
+
+.widget_calendar tbody a {
+    color: #959595;
+}
+
+.widget_categories li a {
+    color: #f3f3f3;
+}
+
+.widget_categories li, .widget_nav_menu li, .widget_polylang li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.widget_nav_menu li a, .widget_polylang li a {
+    color: #fff;
+}
+
+.popularpost_item:first-child {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.popularpost_item .jeg_post_title a::before {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.popularpost_item:first-child .jeg_post_title a::before, .popularpost_item:first-child:hover .jeg_post_title a::before {
+    border-color: rgba(255,255,255,0.3);
+}
+
+.widget_tag_cloud a {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.jeg_splitpost_1 > span {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.jeg_splitpost_bar {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.jeg_splitpost_nav {
+    background: rgba(87, 87, 87, 0.9);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.jeg_splitpost_nav li {
+    border-color: rgba(255,255,255,0.3);
+}
+
+.jeg_splitpost_nav li a {
+    color: #eee;
+}
+
+.jeg_splitpost_nav li.current a {
+    color: #fff;
+}
+
+.jeg_splitpost_nav li:hover {
+    background: #484848;
+}
+
+.split-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.entry-content .intro-text {
+    color: #ddd;
+}
+
+.jeg_archive_search {
+    background: rgba(255,255,255,0.1);
+}
+
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span {
+    color: #fff;
+}
+
+.single-product div.product .product_meta {
+    border-color: rgba(255,255,255,0.3);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: transparent;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li,
+.woocommerce #reviews #comments ol.commentlist li .comment-text{
+    border-color: rgba(255,255,255,0.7);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li:hover:not(.active) a {
+    color: #ccc;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+    border-color: rgba(255,255,255,0.4);
+}
+
+#bbpress-forums div.bbp-search-form {
+    background: #201f1f;
+}
+
+.jeg_viewport #bbpress-forums div.odd, .jeg_viewport #bbpress-forums ul.odd, .jeg_viewport #bbpress-forums li.bbp-header, .jeg_viewport #bbpress-forums li.bbp-footer,
+#bbpress-forums div.even, #bbpress-forums ul.even {
+    background: #222;
+}
+
+#bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer,
+#bbpress-forums fieldset.bbp-form,
+#bbpress-forums fieldset.bbp-form legend,
+#bbpress-forums div.bbp-the-content-wrapper,
+.wp-editor-container,
+#bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic{
+    border-color: rgba(255,255,255,0.2);
+}
+
+#bbpress-forums div.bbp-forum-header, #bbpress-forums div.bbp-topic-header, #bbpress-forums div.bbp-reply-header,
+div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header {
+    background: #2c2c2c;
+    border-color: #565252;
+}
+
+span.bbp-admin-links a {
+    color: #e1e1e1;
+}
+
+
+.jeg_postblock.alt .jeg_post_title a,
+.jeg_breakingnews.alt .jeg_news_ticker a,
+.jeg_meganav_bar.alt.jeg_splitpost_bar .current_title,
+.jeg_iconlink.alt .jeg_block_icon_desc h3,
+.jeg_review_search.alt .jeg_post_title a,
+.jeg_carousel .jeg_postblock_carousel_3 .jeg_post_title a,
+.jeg_postblock.alt .jeg_readmore,
+.jeg_postblock.alt .jeg_block_nav a,
+.jeg_postblock.alt .jeg_block_loadmore a,
+.jeg_postblock.alt .okayNav__menu-toggle.icon--active span,
+.jeg_postblock.alt.jeg_postblock_27  .jeg_pl_md_4 .jeg_post_title a,
+.jeg_review_search.alt .jeg_pagenav_1 .page_number,
+.jeg_review_search.alt .jeg_pagenav_1 .page_nav,
+.jeg_meganav_bar.alt,
+.alt .jeg_block_title,
+.alt.jeg_block_title
+{
+    color: #000;
+}
+
+.jeg_postblock.alt .jeg_post_excerpt p,
+.jeg_postblock.alt .jeg_post_meta,
+.jeg_postblock.alt .jeg_subcat_list > li > a,
+.jeg_postblock.alt .jeg_meta_footer .jeg_meta_author a,
+.jeg_postblock.alt .jeg_meta_footer .jeg_meta_comment a,
+.jeg_postblock.alt.jeg_postblock_27  .jeg_pl_md_4 .jeg_post_meta,
+.jeg_iconlink.alt,
+.jeg_review_search.alt,
+.jeg_iconlink.alt .jeg_block_icon_link i,
+.jeg_postblock.alt .okayNav__nav--invisible a {
+    color: #53585c;
+}
+
+.jeg_postblock.alt .jeg_block_nav a.disabled {
+    color: #7b7b7b;
+}
+
+.jeg_postblock.alt .jeg_meta_footer .label,
+.jeg_postblock.alt.jeg_postblock_27 .jeg_post_excerpt {
+    color: #ccc;
+}
+
+.jeg_postblock.alt .jeg_block_loadmore a:before,
+.jeg_postblock.alt .jeg_block_loadmore a:after,
+.jeg_breakingnews.alt .jeg_news_ticker_arrow,
+.jeg_review_search.alt .review-search-form,
+.jeg_postblock.alt .okayNav__nav--invisible {
+    background: #fff;
+}
+
+.jeg_postblock.alt .jeg_block_nav a,
+.jeg_postblock.alt .jeg_block_loadmore a,
+.jeg_breakingnews.alt .jeg_news_ticker_arrow:hover {
+    background: #fff;
+}
+
+.jeg_postblock.alt .jeg_block_nav:before {
+    border-color: #eee;
+}
+
+.jeg_postblock.alt .jeg_block_nav a {
+    border-color: #eee;
+}
+
+.jeg_review_search.alt .jeg_pagenav_1 a.page_nav:hover,
+.jeg_review_search.alt .jeg_pagenav_1 a.page_number:hover {
+    background: #999;
+}
+
+.jeg_postblock.alt .jeg_pl_md_card .jeg_postblock_content,
+.jeg_postblock.alt .jeg_pl_lg_card .jeg_postblock_content,
+.jeg_heropost_14.alt .jeg_pl_lg_7 .jeg_postblock_content,
+.jeg_heropost_14.alt .jeg_pl_lg_7,
+.jeg_heropost_14.alt .jeg_pl_lg_7 .jeg_thumb .jeg_post_category a {
+    background: #fff;
+}
+
+.jeg_postblock.alt .jeg_block_heading_2,
+.alt.jeg_block_heading_2,
+.jeg_postblock.alt .module-overlay,
+.jeg_review_search.alt .module-overlay {
+    background: rgba(225, 225, 225, 0.5);
+}
+
+.jeg_block_heading_5 .jeg_block_title span,
+.jeg_block_heading_5 .jeg_subcat {
+    background: transparent;
+}
+
+.jeg_postblock.alt .okayNav__menu-toggle span {
+    background: #ccc;
+}
+
+.jeg_breakingnews.alt .jeg_news_ticker_arrow {
+    color: #aaa;
+    border-color: #eee;
+    background: #fff;
+
+}
+
+.jeg_iconlink.alt {
+    border-color: #333;
+}
+
+.jeg_postblock.alt .jeg_block_heading_1,
+.jeg_postblock.alt .jeg_block_heading_6,
+.jeg_block_heading_1.alt,
+.jeg_block_heading_6.alt,
+.jeg_postblock.alt .okayNav__nav--invisible a {
+    border-color: #eee;
+}
+
+.jeg_postblock.alt.jeg_postblock_16 .jeg_posts.jeg_load_more_flag,
+.jeg_postblock.alt .jeg_pl_lg_8:not(:last-of-type),
+.jeg_postblock.alt.jeg_postblock_24 .jeg_pl_xs_4 .jeg_postblock_content,
+.jeg_postblock.alt.jeg_postblock_25 .jeg_post,
+.jeg_postblock.alt .jeg_meta_footer,
+.jeg_postblock.alt .jeg_meta_footer > div,
+.jeg_postblock.alt .jeg_meta_footer > div,
+.jeg_postblock.alt .jeg_pl_lg_9,
+.jeg_heropost_14.alt .jeg_pl_lg_7 {
+    border-color: #eee;
+}
+
+.jeg_postblock.alt .jeg_block_loadmore a,
+.jeg_heropost_14.alt .jeg_pl_sm_2:after {
+    border-color: #e0e0e0;
+}
+
+.jeg_postblock.alt  .jeg_pl_lg_6 {
+    border-color: #eee;
+}
+
+.jeg_postblock.alt .jeg_pl_md_card .jeg_postblock_content {
+    padding: 12px 20px 10px;
+}
+
+.jeg_postblock.alt .jeg_pl_lg_card .jeg_postblock_content {
+    padding: 15px 30px 15px;
+}
+
+.jeg_breakingnews.alt .jeg_news_ticker {
+    border-color: #eee;
+    background: #fff;
+}
+
+.jeg_breakingnews.alt .jeg_news_ticker_item .post-date {
+    color: #999;
+}
+
+.jeg_breakingnews.alt .jeg_news_ticker_arrow:hover {
+    background: #edecec;
+}
+
+.jeg_meganav_bar.alt {
+    border-color: #e0e0e0;
+    background: #fff;
+}
+
+.jeg_postblock.alt .jeg_block_loadmore a::before,
+.jeg_postblock.alt .jeg_block_loadmore a::after {
+    background: #eee;
+}
+
+.jeg_postblock.alt .jeg_block_loadmore a:hover,
+.jeg_postblock.alt .jeg_block_loadmore a.active {
+    color: #fff;
+}
+
+.jeg_postblock .box_wrap .jeg_post_title a,
+.jeg_postblock.alt .box_wrap .jeg_post_title a {
+    color: #fff;
+}
+
+.jeg_postblock.alt .box_wrap .jeg_post_meta {
+    color: #fff;
+}
+
+.alt .jeg_pl_lg_box a, .jeg_pl_lg_box a:hover,
+.alt .jeg_pl_lg_box .jeg_post_title a,
+.alt .jeg_postblock .jeg_pl_lg_box .jeg_post_title a:hover,
+.alt .jeg_pl_lg_box .jeg_post_meta,
+.alt .jeg_pl_md_box a,
+.alt .jeg_pl_md_box a:hover,
+.alt .jeg_pl_md_box .jeg_post_title a,
+.alt .jeg_postblock .jeg_pl_md_box .jeg_post_title a:hover,
+.alt .jeg_pl_md_box .jeg_post_meta {
+    color: #fff;
+}
+
+.jeg_single_tpl_6 .entry-header .jeg_post_title span, .jeg_single_tpl_6 .entry-header .jeg_post_subtitle span {
+    color: #000;
+}
+
+.jeg_empty_module {
+    border-color:#6e6e6e;
+    background: #000;
+}
+
+.jeg_megamenu .sub-menu {
+    background: #000;
+}
+
+.jeg_newsfeed_subcat li.active,
+.sub-menu .jeg_newsfeed_subcat,
+.jeg_newsfeed_tags {
+    border-color: #555;
+}
+
+.sub-menu .jeg_newsfeed_subcat {
+    background: #1e1c1c;
+}
+
+.jeg_newsfeed_subcat li.active {
+    background: #111;
+}
+
+.jeg_newsfeed_subcat li.active a {
+    color: #fff;
+}
+
+.newsfeed_overlay {
+    background: #000;
+}
+
+.owl-carousel .owl-nav div:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.thumbnail-container {
+    background: rgba(0,0,0,0.2);
+}
+
+.jeg_menu li > ul {
+    background: #151515;
+}
+
+.jeg_menu li > ul li a {
+    color: #fff;
+}
+
+.jeg_menu .jeg_child_megamenu > ul {
+    column-rule: 1px solid #555;
+}
+
+.newsfeed_carousel.owl-carousel .owl-nav div.disabled,
+.owl-carousel .owl-nav div {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.owl-carousel .owl-nav div:hover {
+    color: #fff;
+}
+
+.jeg_postblock_carousel_3.alt .owl-nav > div {
+    background: #bfbdbd;
+    border-color: #adadad;
+}
+
+.jeg_author_content, .jeg_author_socials a {
+    color: #fff;
+}
+
+.jeg_block_heading_5::before {
+    border-color: #333;
+}
+
+.jeg_block_heading_5.alt:before {
+    border-color: #eee;
+}
+
+.jeg_postblock_carousel_3 .owl-nav > div {
+    background: rgba(0,0,0,0.1);
+}
+
+.jeg_blocklink .jeg_block_content a {
+    background: #222;
+}
+
+.jeg_hero_style_7 .jeg_postblock_content {
+    background: rgba(38, 38, 38, 0.9);
+}
+
+.jsc_dark .jeg_video_playlist_title {
+    color: #333;
+}
+
+.jsc_dark .jeg_dark_playlist .jeg_video_playlist_title {
+    color: #fff;
+}
+
+.jeg_popup {
+    background: #000;
+}
+
+.jsc_dark .jeg_dark_playlist .jeg_video_playlist_title {
+    color: #fff;
+}
+
+.jeg_block_nav a:hover:not(.disabled) {
+    background: rgba(255,255,255,0.3);
+}
+
+.lazyload[src*="jeg-empty"], .lazyloading {
+    background: rgba(255,255,255,0.2);
+}
+
+.commentlist .fn, .pinglist .ping-link {
+    color: #ffffff;
+}

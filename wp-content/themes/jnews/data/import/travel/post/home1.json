@@ -1,0 +1,428 @@
+[
+  {
+    "id": "a501c8c",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "css_classes": "vc_custom_1492066458960"
+    },
+    "elements": [
+      {
+        "id": "b88bba5",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css_classes": "vc_custom_1492066358906"
+        },
+        "elements": [
+          {
+            "id": "27df665",
+            "elType": "widget",
+            "settings": {
+              "date_format_custom": "Y\/m\/d",
+              "post_offset": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_7_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "5A3Viaz",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "v9v6iQ9",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "Hygsb90",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:news:id}},{{category:travel-ideas:id}},{{category:destination:id}},{{category:travel-ideas:id}},{{category:photo:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "first_title": "Travel Ideas",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_19_elementor"
+          },
+          {
+            "id": "FgWcG9o",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:news:id}},{{category:travel-ideas:id}},{{category:destination:id}},{{category:video:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:destination:id}}",
+              "first_title": "Travel Destination",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_14_elementor"
+          },
+          {
+            "id": "fsak2dg",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_tag": "{{taxonomy:post_tag:backpacker:id}},{{taxonomy:post_tag:gear:id}},{{taxonomy:post_tag:resources:id}},{{taxonomy:post_tag:trip-plan:id}},{{taxonomy:post_tag:tips:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_tag": "{{taxonomy:post_tag:tips:id}},{{taxonomy:post_tag:trip-plan:id}}",
+              "first_title": "Travel Tips",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_7_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "koQQylX",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "Qc6yKm1",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "64fae37",
+    "elType": "section",
+    "settings": {
+      "background_background": "classic",
+      "background_image": {
+        "url": "{{image:travel_bg:url:full}}",
+        "id": "{{image:travel_bg:id}}"
+      },
+      "css_classes": "jeg_travel_home_news_row vc_custom_1496890676325",
+      "background_position": "center center",
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "background_overlay_background": "classic",
+      "background_overlay_color": "rgba(0,0,0,0.51)"
+    },
+    "elements": [
+      {
+        "id": "224c295",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "fe14a58",
+            "elType": "widget",
+            "settings": {
+              "title": "Travel News",
+              "align": "left",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 44
+              },
+              "_css_classes": "vc_custom_1496892063515",
+              "hide_desktop": "hidden-desktop",
+              "hide_tablet": "hidden-tablet"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "9d83f5e",
+            "elType": "widget",
+            "settings": {
+              "title": "Find your best tour and start the adventure at the lowest budget and best experiences.",
+              "header_size": "p",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 22
+              },
+              "typography_font_weight": "400",
+              "hide_desktop": "hidden-desktop",
+              "hide_tablet": "hidden-tablet"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "2ac22b7",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "91ccb96",
+    "elType": "section",
+    "settings": {
+      "background_background": "classic",
+      "css_classes": "vc_custom_1496890676325"
+    },
+    "elements": [
+      {
+        "id": "f37cf1e",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "36aa305",
+            "elType": "widget",
+            "settings": {
+              "title": "Travel News<\/strong>",
+              "align": "left",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 44
+              },
+              "_css_classes": "vc_custom_1496892063515",
+              "hide_mobile": "hidden-phone"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "df59feb",
+            "elType": "widget",
+            "settings": {
+              "title": "Find your best tour and start the adventure at the lowest budget and best experiences.",
+              "header_size": "p",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Roboto",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 22
+              },
+              "typography_font_weight": "400",
+              "hide_mobile": "hidden-phone"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "fb583ac",
+            "elType": "section",
+            "settings": {
+              "gap": "extended",
+              "structure": "30"
+            },
+            "elements": [
+              {
+                "id": "a5d63ae",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 33,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "5540615",
+                    "elType": "widget",
+                    "settings": {
+                      "header_filter_text": "All",
+                      "post_offset": "",
+                      "unique_content": "unique2",
+                      "include_category": "{{category:news:id}}",
+                      "date_format_custom": "Y\/m\/d",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_24_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "214d24a",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 33,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "81bd619",
+                    "elType": "widget",
+                    "settings": {
+                      "header_filter_text": "All",
+                      "post_offset": "",
+                      "unique_content": "unique2",
+                      "include_category": "{{category:news:id}}",
+                      "date_format_custom": "Y\/m\/d",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_24_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "cf1d412",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 33,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "539dc60",
+                    "elType": "widget",
+                    "settings": {
+                      "header_filter_text": "All",
+                      "post_offset": "",
+                      "unique_content": "unique2",
+                      "include_category": "{{category:news:id}}",
+                      "date_format_custom": "Y\/m\/d",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_24_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "Ww1CMXO",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "t7cIzm3",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "CAkXZaN",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "xwLoIRW",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique2",
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "first_title": "More News",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

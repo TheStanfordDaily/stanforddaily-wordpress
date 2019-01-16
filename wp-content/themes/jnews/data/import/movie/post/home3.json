@@ -1,0 +1,400 @@
+[
+  {
+    "id": "hS1Blkw",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1500453570734{margin-top: -30px !important;margin-bottom: 140px !important;padding-top: 60px !important;background: #dddddd url({{image:movie_bg:url:full}}) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}",
+      "_element_id": "first-header",
+      "css_classes": "vc_custom_1500453570734"
+    },
+    "elements": [
+      {
+        "id": "BXG7KvW",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "SY5be4b",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 10
+              },
+              "hero_style": "jeg_hero_style_7",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "hero_height_desktop": "500",
+              "css": ".vc_custom_1500457952216{margin-bottom: -100px !important;}",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_5_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "g3GB4xh",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "2gGk8HV",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "t2s509c",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image_new_tab": "yes",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "KF9DDeP",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_2",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:trailer:id}}",
+              "sort_by": "alphabet_asc",
+              "first_title": "MOVIE TRAILLER",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "Rj08nHJ",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "rf1uvHO",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "EoK8rcd",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image_new_tab": "yes",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "rmqc1zQ",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "EOFw8FE",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "vnnWCor",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_2",
+              "first_title": "MOVIE REVIEW"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "76fMv0U",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_style": "jeg_hero_style_2",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_13_elementor"
+          },
+          {
+            "id": "Wd8nzyz",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_2",
+              "post_offset": {
+                "unit": "px",
+                "size": 1
+              },
+              "unique_content": "unique1",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_15_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "A8pfX5L",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1500453683082{margin-bottom: 70px !important;border-bottom-width: 150px !important;padding-top: 20px !important;padding-bottom: 30px !important;background: #aa2727 url({{image:movie_bg:url:full}}) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;border-bottom-color: #eeeeee !important;border-bottom-style: solid !important;}",
+      "_element_id": "second-header",
+      "css_classes": "vc_custom_1500453683082"
+    },
+    "elements": [
+      {
+        "id": "5LpA8Nx",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "1b142da",
+            "elType": "widget",
+            "settings": {
+              "title": "Upcoming Movie Trailer",
+              "align": "center",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Cabin",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 40
+              },
+              "typography_font_weight": "700",
+              "_css_classes": "vc_custom_1500370993441"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "KcYSieE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "vertical",
+              "content_video_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "sort_by": "latest",
+              "css": ".vc_custom_1500347032852{margin-bottom: -220px !important;}"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_videoplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "NeyJrG7",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "1fGBo6Q",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "mbCrW12",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image_new_tab": "yes",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "5OAQ0zI",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "jNn62WQ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "uDXvTE7",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_2",
+              "header_filter_category": "{{category:genre:id}},{{category:box-office:id}},{{category:movie-review:id}},{{category:trailer:id}},{{category:action:id}},{{category:horror:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "excerpt_length": {
+                "unit": "px",
+                "size": 23
+              },
+              "excerpt_ellipsis": "",
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "first_title": "MOVIE NEWS",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_5_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "hKYDWA5",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "TC7YqIO",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_2",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 3
+              },
+              "sort_by": "alphabet_desc",
+              "first_title": "Trending",
+              "second_title": " Movie",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          },
+          {
+            "id": "rhxL4VS",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_300x600:url:full}}",
+                "id": "{{image:ad_300x600:id}}"
+              },
+              "ads_image_link": "#",
+              "ads_image_alt": "Advertisement Banner",
+              "css": ".vc_custom_1500089835358{border-top-width: 1px !important;border-right-width: 1px !important;border-bottom-width: 1px !important;border-left-width: 1px !important;padding-top: 30px !important;padding-bottom: 30px !important;background-color: #f9f9f9 !important;border-left-color: #e0e0e0 !important;border-left-style: solid !important;border-right-color: #e0e0e0 !important;border-right-style: solid !important;border-top-color: #e0e0e0 !important;border-top-style: solid !important;border-bottom-color: #e0e0e0 !important;border-bottom-style: solid !important;border-radius: 2px !important;}",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

@@ -1,0 +1,504 @@
+[
+  {
+    "id": "FlSTkdN",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "amYgtFy",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "okxI0RK",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 10
+              },
+              "hero_style": "jeg_hero_style_4",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_7_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "10ujCv3",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "TW4yiXs",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "CbgNxe3",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_1",
+              "header_filter_category": "{{category:disease:id}},{{category:health:id}},{{category:nutrition:id}},{{category:weight-loss:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Health & Medicine",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          },
+          {
+            "id": "1UCpf98",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_1",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:disease:id}}",
+              "first_title": "Disease",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          },
+          {
+            "id": "4a23c70",
+            "elType": "section",
+            "settings": {
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "b2c92c1",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "15",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "f0Th1nA",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_1",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "include_category": "{{category:nutrition:id}}",
+                      "first_title": "Food & Nutrition",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_19_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "5f98a26",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "015",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "ETExQJ6",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_1",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "include_category": "{{category:lifestyle:id}}",
+                      "first_title": "Healthy Living",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_19_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "8GzLRPy",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_1",
+              "header_filter_category": "{{category:disease:id}},{{category:fitness:id}},{{category:health:id}},{{category:lifestyle:id}},{{category:nutrition:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Disease",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "p3CqYfQ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "303c599",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Connect With Us"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "dc37d1e",
+            "elType": "widget",
+            "settings": {
+              "column": "col4",
+              "style": "colored",
+              "newtab": "yes",
+              "fb_id": "1708153456106457",
+              "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+              "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+              "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+              "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+              "account": [
+                {
+                  "social_icon": "facebook",
+                  "social_url": "https:\/\/www.facebook.com\/jegtheme\/",
+                  "_id": "32d92c5"
+                },
+                {
+                  "social_icon": "twitter",
+                  "social_url": "https:\/\/twitter.com\/jegtheme",
+                  "_id": "9449555"
+                },
+                {
+                  "social_icon": "google-plus",
+                  "social_url": "https:\/\/plus.google.com\/+envato",
+                  "_id": "7770a18"
+                },
+                {
+                  "social_icon": "behance",
+                  "social_url": "https:\/\/www.behance.net\/jegtheme",
+                  "_id": "e3224a7"
+                },
+                {
+                  "social_icon": "instagram",
+                  "social_url": "https:\/\/www.instagram.com\/envato\/",
+                  "_id": "88ba630"
+                },
+                {
+                  "social_icon": "youtube",
+                  "social_url": "http:\/\/www.youtube.com\/user\/Envato",
+                  "_id": "b768125"
+                },
+                {
+                  "social_icon": "soundcloud",
+                  "social_url": "https:\/\/soundcloud.com\/dialogdinihari",
+                  "_id": "86592ef"
+                }
+              ]
+            },
+            "elements": [],
+            "widgetType": "socialcounter"
+          },
+          {
+            "id": "b73a5d7",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Popular News"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "5112fa0",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "limit": "5",
+                "order_by": "comments",
+                "range": "all"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_popular"
+          },
+          {
+            "id": "6ef4ceb",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_345x345:url:full}}",
+                "id": "{{image:ad_345x345:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "fb65dcd",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Find by Categories"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "56ee91f",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "count": "on"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-categories"
+          },
+          {
+            "id": "78e8582",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Find by Topics"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "6e06e33",
+            "elType": "widget",
+            "settings": [],
+            "elements": [],
+            "widgetType": "wp-widget-tag_cloud"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "doZspSK",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1493695065122{margin-bottom: 40px !important;border-top-width: 1px !important;border-bottom-width: 1px !important;padding-top: 30px !important;padding-right: 30px !important;padding-left: 30px !important;background-color: #212121 !important;border-top-color: #eeeeee !important;border-top-style: solid !important;border-bottom-color: #eeeeee !important;border-bottom-style: solid !important;}",
+      "margin": {
+        "unit": "px",
+        "top": "0",
+        "right": 0,
+        "bottom": "0",
+        "left": 0,
+        "isLinked": true
+      },
+      "css_classes": "vc_custom_1493695065122"
+    },
+    "elements": [
+      {
+        "id": "qfl59ZC",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "ZIJ7pjT",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "header_align": "center",
+              "first_title": "HEALTH & SCIENTIFIC VIDEO",
+              "header_text_color": "#ffffff"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "h8rGc47",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "vertical",
+              "scheme": "dark",
+              "playlist": " https:\/\/www.youtube.com\/watch?v=Vj1bnfNaVBE,https:\/\/www.youtube.com\/watch?v=RTqqY1uKChU,https:\/\/www.youtube.com\/watch?v=YPjK8CX5cJo,https:\/\/www.youtube.com\/watch?v=Lanzf6AKbD0,https:\/\/www.youtube.com\/watch?v=oZOHWD4q9c4,https:\/\/www.youtube.com\/watch?v=287NSXirWeA,https:\/\/www.youtube.com\/watch?v=LZFWUPMUgxs"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_embedplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ajYnIXQ",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "7PAy5VD",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "eVgdE0l",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_1",
+              "header_filter_category": "{{category:disease:id}},{{category:fitness:id}},{{category:health:id}},{{category:lifestyle:id}},{{category:nutrition:id}},{{category:weight-loss:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "first_title": "Latest Health News",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_23_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "3jelrG2",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1492765990069{margin-top: 20px !important;}",
+      "css_classes": "vc_custom_1492765990069"
+    },
+    "elements": [
+      {
+        "id": "EKaO48c",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "M53UVDt",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#",
+              "css": ".vc_custom_1492766021090{margin-bottom: 20px !important;}",
+              "_css_classes": "vc_custom_1492766021090"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

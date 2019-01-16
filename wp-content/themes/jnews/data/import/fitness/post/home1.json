@@ -1,0 +1,321 @@
+[
+  {
+    "id": "duRGjv0",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "lYAGFYM",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "ZSO6xJy",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 2
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_14_elementor"
+          },
+          {
+            "id": "bfe699d",
+            "elType": "widget",
+            "settings": {
+              "color": "#eeeeee"
+            },
+            "elements": [],
+            "widgetType": "divider"
+          },
+          {
+            "id": "28a4a89",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 10
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "qG6WQw8",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "structure": "22"
+    },
+    "elements": [
+      {
+        "id": "mE2z9Ug",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "tphPoRv",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_7",
+              "first_title": "Featured"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "hPHIwOE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 1
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:fitness:id}}",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": "",
+              "column_width": "8"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_6_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "3Qh3J69",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "9b63656",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_300x600:url:full}}",
+                "id": "{{image:ad_300x600:id}}"
+              }
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "yJXBAeF",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "kkPCaxk",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "c9c2275",
+            "elType": "widget",
+            "settings": {
+              "weight": {
+                "unit": "px",
+                "size": 2
+              },
+              "color": "#eeeeee"
+            },
+            "elements": [],
+            "widgetType": "divider"
+          },
+          {
+            "id": "56fb0a0",
+            "elType": "widget",
+            "settings": {
+              "title": "Editor's Pick",
+              "align": "center",
+              "title_color": "#212121",
+              "typography_typography": "custom",
+              "typography_font_family": "Source Sans Pro",
+              "typography_font_weight": "bold"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "GmZ3HMN",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_style": "jeg_hero_style_7",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_13_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "HC7QmHt",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "wzV4jSG",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "U6merbR",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_7",
+              "number_post": {
+                "unit": "px",
+                "size": 2
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique2",
+              "include_category": "{{category:food-nutrition:id}}",
+              "first_title": "Food & Nutrition",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "BIbi5am",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "MX9tzgj",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_7",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique2",
+              "include_category": "{{category:diets-weight-loss:id}}",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 30
+              },
+              "pagination_mode": "nextprev",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "first_title": "Diet & Weight Loss",
+              "column_width": "8",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_2_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "WYNtxJx",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "RBeLIB0",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css": ".vc_custom_1493005960272{padding-right: 30px !important;padding-left: 30px !important;}"
+        },
+        "elements": [
+          {
+            "id": "aMRLv34",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "651bb07",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "structure": "30",
+      "background_background": "classic",
+      "background_color": "#060502",
+      "padding": {
+        "unit": "px",
+        "top": "60",
+        "right": "0",
+        "bottom": "50",
+        "left": "0",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "4759b64",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "content_position": "center"
+        },
+        "elements": [
+          {
+            "id": "a47bedb",
+            "elType": "widget",
+            "settings": {
+              "text_color": "#ffffff",
+              "hover_text_color": "#c69d6d"
+            },
+            "elements": [],
+            "widgetType": "jnews_footer_menu_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "cd7e524",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "content_position": "center"
+        },
+        "elements": [
+          {
+            "id": "579100e",
+            "elType": "widget",
+            "settings": {
+              "align": "yes",
+              "account": [
+                {
+                  "social_icon": "facebook",
+                  "social_url": "https:\/\/www.facebook.com\/jegtheme\/",
+                  "_id": "ee080f3"
+                },
+                {
+                  "social_icon": "twitter",
+                  "social_url": "https:\/\/twitter.com\/jegtheme",
+                  "_id": "f4bed6c"
+                },
+                {
+                  "social_icon": "googleplus",
+                  "social_url": "#",
+                  "_id": "c5b0807"
+                },
+                {
+                  "social_icon": "vk",
+                  "social_url": "#",
+                  "_id": "2829a35"
+                },
+                {
+                  "social_icon": "pinterest",
+                  "social_url": "#",
+                  "_id": "367307a"
+                },
+                {
+                  "social_icon": "pinterest",
+                  "social_url": "#",
+                  "_id": "c3e4e03"
+                }
+              ]
+            },
+            "elements": [],
+            "widgetType": "socialicon"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "24d93b3",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null,
+          "content_position": "center"
+        },
+        "elements": [
+          {
+            "id": "f1fd3f9",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>© Copyright 2018 JNews – Premium WordPress Theme.<\/p>"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

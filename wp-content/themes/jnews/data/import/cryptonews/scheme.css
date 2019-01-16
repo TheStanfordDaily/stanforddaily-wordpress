@@ -1,0 +1,69 @@
+/** Menu **/
+.jeg_main_menu > li > a {
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+/** Block **/
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 3px 6px;
+	border-radius: 2px;
+	letter-spacing: .04em;
+	font-weight: bold;
+}
+
+.jeg_hero_style_2 .jeg_post_category {
+	top: 10px;
+}
+
+.jeg_hero_style_2 .jeg_thumb a > div:before {
+	opacity: .4;
+}
+
+.jeg_hero_style_2 .jeg_thumb a > div:after {
+	background: -webkit-gradient(linear, right top, left top, from(#DB3069), to(#FCC11E));
+	background: linear-gradient(to left, #DB3069, #FCC11E);
+}
+
+.jeg_tabpost_nav li {
+	font-weight: bold;
+}
+
+/** Post **/
+.entry-header .jeg_post_meta .fa,
+.jeg_post_meta .fa {
+	color: inherit !important;
+}
+
+.entry-header .jeg_meta_author a,
+.jeg_postblock .jeg_meta_author a,
+.jeg_tabpost_nav li.active {
+	color: #191818;
+}
+
+.jeg_pl_lg_box .jeg_post_meta a,
+.jeg_pl_lg_box .jeg_post_meta .fa,
+.jeg_pl_md_box .jeg_post_meta a,
+.jeg_pl_md_box .jeg_post_meta .fa {
+	color: inherit;
+}
+
+.entry-content blockquote,
+.entry-content q {
+	color: #191818;
+	border-color: #fcb42d;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	color: #191818;
+}

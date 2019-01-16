@@ -1,0 +1,99 @@
+[
+  {
+    "id": "QrvaRVt",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "layout": "full_width"
+    },
+    "elements": [
+      {
+        "id": "bKTQGcZ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css": ".vc_custom_1488342076566{padding-right: 30px !important;padding-left: 30px !important;}",
+          "css_classes": "vc_custom_1488342076566"
+        },
+        "elements": [
+          {
+            "id": "1BDTH5l",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 30
+              },
+              "hero_style": "jeg_hero_style_7",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_8_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "o2Xx5Kt",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "p4Agv6q",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "n1UyLOo",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "header_align": "center",
+              "first_title": "FEATURED POST",
+              "header_background": "#252627"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "r1osD1m",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_item": {
+                "unit": "px",
+                "size": 4
+              },
+              "margin": {
+                "unit": "px",
+                "size": 30
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "show_nav": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_1_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

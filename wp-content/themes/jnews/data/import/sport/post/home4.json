@@ -1,0 +1,801 @@
+[
+  {
+    "id": "5q6h3wg",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "s5pgu66",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "ABGtA3i",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "date_format": "ago",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "enable_autoplay": "true",
+              "newsticker_title": "TRENDING",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_newsticker_elementor"
+          },
+          {
+            "id": "SQG3TSR",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_1_elementor"
+          },
+          {
+            "id": "ac3fd1b",
+            "elType": "section",
+            "settings": {
+              "gap": "extended",
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "c86549b",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "0fV6G2n",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:football:id}}",
+                      "first_title": "Football",
+                      "header_background": "#1d255a",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "00ea661",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "JyDbE2s",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:tennis:id}}",
+                      "first_title": "Tennis",
+                      "header_background": "#b74674",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "7d0981a",
+            "elType": "section",
+            "settings": {
+              "gap": "extended",
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "b61522b",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "99yJKfd",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:basketball:id}}",
+                      "column_width": "4",
+                      "first_title": "Basketball",
+                      "header_background": "#0091cd",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": ""
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "b3acbce",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "livd8bh",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:motogp:id}}",
+                      "column_width": "4",
+                      "first_title": "MotoGP",
+                      "header_background": "#e9b700",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": ""
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "1482k48",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "06vKF9W",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_345x345:url:full}}",
+                "id": "{{image:ad_345x345:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "2e5c38b",
+            "elType": "section",
+            "settings": {
+              "css_classes": "vc_custom_1487915380416"
+            },
+            "elements": [
+              {
+                "id": "505cb63",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 100,
+                  "_inline_size": null,
+                  "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                  },
+                  "margin": {
+                    "unit": "px",
+                    "top": "30",
+                    "right": "30",
+                    "bottom": "30",
+                    "left": "30",
+                    "isLinked": true
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "c6eec70",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Super Bowl 2017",
+                      "title_color": "#ffffff",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Open Sans",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 21
+                      },
+                      "typography_font_weight": "700"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "53fba11",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Are you ready for some football? Support your team to win this big game!",
+                      "header_size": "p",
+                      "title_color": "#d9d9d9",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Open Sans",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 14
+                      },
+                      "typography_line_height": {
+                        "unit": "em",
+                        "size": 1.5
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "dec0342",
+                    "elType": "widget",
+                    "settings": {
+                      "text": "BUY TICKETS",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Open Sans",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 12
+                      },
+                      "typography_font_weight": "500",
+                      "button_text_color": "#ffc600",
+                      "background_color": "rgba(255,255,255,0)",
+                      "hover_color": "#ffffff",
+                      "button_background_hover_color": "#ffc600",
+                      "border_border": "solid",
+                      "border_width": {
+                        "unit": "px",
+                        "top": "2",
+                        "right": "2",
+                        "bottom": "2",
+                        "left": "2",
+                        "isLinked": true
+                      },
+                      "border_color": "#ffc600",
+                      "border_radius": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": true
+                      },
+                      "text_padding": {
+                        "unit": "px",
+                        "top": "10",
+                        "right": "15",
+                        "bottom": "10",
+                        "left": "15",
+                        "isLinked": false
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "button"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "e576429",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 20
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          },
+          {
+            "id": "kcotlXc",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "number_post": {
+                "unit": "px",
+                "size": 2
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Recommended",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_21_elementor"
+          },
+          {
+            "id": "5cqqvVE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Champions League",
+              "header_background": "#590050",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_15_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "D7VFb4I",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "v9Rwgng",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "VwdgICJ",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "3zW9Mmz",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "hheVo9B",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "Aej5naC",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "number_post": {
+                "unit": "px",
+                "size": 2
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "first_title": "Highlights",
+              "header_background": "#1d255a",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "DxTz46P",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "MIzQivZ",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique2",
+              "include_category": "{{category:cycling:id}}",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 30
+              },
+              "pagination_mode": "nextprev",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "first_title": "Cycling",
+              "column_width": "8",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_2_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "9ace8bd",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css_classes": "vc_custom_1493693901531",
+      "structure": "20",
+      "margin": {
+        "unit": "px",
+        "top": "",
+        "right": 0,
+        "bottom": "",
+        "left": 0,
+        "isLinked": true
+      },
+      "padding": {
+        "unit": "px",
+        "top": "40",
+        "right": "0",
+        "bottom": "40",
+        "left": "0",
+        "isLinked": false
+      }
+    },
+    "elements": [
+      {
+        "id": "582b277",
+        "elType": "column",
+        "settings": {
+          "_column_size": 50,
+          "_inline_size": 70,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "60",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "29cad5e",
+            "elType": "widget",
+            "settings": {
+              "title": "Don't Miss The Game",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Open Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 22
+              },
+              "typography_font_weight": "bold"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "e38e5a4",
+            "elType": "widget",
+            "settings": {
+              "title": "Are you ready for some football? Support your team to win this big match!",
+              "header_size": "h4",
+              "title_color": "#ffffff",
+              "typography_typography": "custom",
+              "typography_font_family": "Open Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 17
+              },
+              "typography_font_weight": "400"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "4019df8",
+        "elType": "column",
+        "settings": {
+          "_column_size": 50,
+          "_inline_size": 30,
+          "content_position": "center"
+        },
+        "elements": [
+          {
+            "id": "c3a04c4",
+            "elType": "widget",
+            "settings": {
+              "text": "BUY TICKETS",
+              "align": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Open Sans",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 14
+              },
+              "button_text_color": "#3d4248",
+              "background_color": "#ffc600",
+              "border_border": "solid",
+              "border_radius": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+              },
+              "text_padding": {
+                "unit": "px",
+                "top": "14",
+                "right": "20",
+                "bottom": "14",
+                "left": "20",
+                "isLinked": false
+              }
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "4Szm9Oh",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "yYT8cce",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "AnReUKN",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:golf:id}}",
+              "column_width": "4",
+              "first_title": "Golf",
+              "header_background": "#3d4248",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "YQDLzcC",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "RICWAci",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:boxing:id}}",
+              "column_width": "4",
+              "first_title": "Boxing",
+              "header_background": "#eb3939",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "K0AiZtr",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "bGGM3x0",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:f1:id}}",
+              "column_width": "4",
+              "first_title": "Formula 1",
+              "header_background": "#0091cd",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

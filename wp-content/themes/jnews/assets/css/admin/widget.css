@@ -1,0 +1,382 @@
+.wrap > h1 {
+    display: inline-block;
+}
+
+.wrap > h2 {
+    float: left;
+}
+
+.wrap > .clearfix {
+    clear: both;
+    padding: 10px;
+}
+
+.widget-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    display: none;
+}
+
+.widget-overlay-wrapper {
+    background:  #FFFFFF;
+    left: 50%;
+    margin-left: -175px;
+    position: absolute;
+    width: 350px;
+    box-shadow: 0 0 5px #999999;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+.widget-overlay-wrapper > h3 {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px 20px 15px;
+}
+
+.widget-content-wrapper > ul {
+    padding: 10px 10px 20px;
+    margin: 0;
+}
+
+.widget-content-wrapper li {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    line-height: 15px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    background: #f0f0f0;
+    text-align: left;
+}
+
+.widget-content-wrapper li:hover {
+    background: #fff;
+}
+
+.widget-content-wrapper li:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.widget-additional, .widget-content-wrapper {
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.widget-additional > input[type="text"] {
+    height: 26px;
+    width: 300px;
+}
+
+/* .widget-overlay input[type="button"], .widget-overlay input[type="submit"] {
+    border: 1px solid #DDDDDD;
+    color: #333333;
+    cursor: pointer;
+    padding: 6px 17px;
+    background: #428BCA;
+    color: white;
+} */
+
+.widget-confirm {
+    border-top: 1px solid #DDDDDD;
+    background: #f0f0f0;
+    padding: 15px 20px;
+}
+
+.widget-confirm .savewidget {
+    float: right;
+}
+
+.widget-adding-content .widget-confirm {
+    text-align: right;
+}
+
+.widget-overlay .close {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 18px;
+    top: 22px;
+}
+
+.widget-content-wrapper .remove {
+    color: #FF0000;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.widgets-php .wp-header-end {
+    display: none;
+}
+
+.sidebarwidget.add-new-h2 {
+    display: inline-block;
+    margin-top: 17px;
+    cursor: pointer;
+}
+
+.widget-overlay-wrapper.linkedin-oauth-code > .fa {
+    color: #0077b5;
+    font-size: 18px;
+    position: absolute;
+    right: 18px;
+    top: 22px;
+}
+
+.widget-overlay-wrapper.linkedin-oauth-code p {
+    text-align: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+.widget-overlay-wrapper.linkedin-oauth-code .alert-info {
+    padding: 10px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    border: 1px solid #bce8f1;
+}
+
+.widget-overlay-wrapper.linkedin-oauth-code .alert-info span {
+    display: block;
+    margin-top: 5px;
+}
+
+.linkedin-oauth-code-enable form {
+    visibility: hidden;
+}
+
+/* widget list */
+#widget-list div[id*='jnews'] .widget-top {
+    background: #eef6fb;
+    border-color: #bbdefb;
+}
+
+#widget-list div[id*='jnews'] .widget-top:hover {
+    background: #e3f2fd;
+    border-color: #64b5f6;
+}
+
+/* override category setting */
+#edittag .override-category-setting {
+    max-width: 750px;
+    background: #fff;
+}
+#edittag .override-category-setting > .jeg_accordion_heading {
+    background-color: #fff;
+    color: #212121;
+    line-height: 40px;
+}
+#edittag .override-category-setting > .jeg_accordion_heading span {
+    font-size: 14px;
+    font-weight: 600;
+}
+#edittag .override-category-setting > .jeg_accordion_heading > .jeg_accordion_button {
+    width: 40px;
+    line-height: 40px;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper label .image-clickable,
+#edittag .type-radioimage[data-field='header_style'] .radio-image-wrapper label .image-clickable,
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper label .image-clickable,
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper label .image-clickable,
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper label .image-clickable {
+    width: 122px;
+    height: 97px;
+    display: block;
+    position: relative;
+    padding: 3px;
+    margin: 4px 2px;
+    box-sizing: border-box;
+    border: 3px solid #ddd;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper label .image-clickable,
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper label .image-clickable,
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper label .image-clickable {
+    height: 92px;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper label .image-clickable:after,
+#edittag .type-radioimage[data-field='header_style'] .radio-image-wrapper label .image-clickable:after,
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper label .image-clickable:after,
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper label .image-clickable:after,
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper label .image-clickable:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-image: url('../../img/admin/customizer_sprites.png');
+    background-repeat: no-repeat;    
+    width: 110px;
+    height: 85px;
+    top: 4px;
+    left: 4px;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper label .image-clickable:after,
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper label .image-clickable:after,
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper label .image-clickable:after {
+    height: 80px;
+    top: 2px;
+}
+#edittag .radio-image-wrapper label .radioimage_field:checked ~ .image-clickable {
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    border-color: #3498DB;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(1) .image-clickable:after {
+    background-position: -110px -3636px !important;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(2) .image-clickable:after {
+    background-position: 0 -3551px !important;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(3) .image-clickable:after {
+    background-position:  0 -4209px !important;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(4) .image-clickable:after {
+    background-position: -110px -4209px !important;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(5) .image-clickable:after {
+    background-position: 0 -4294px !important;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(6) .image-clickable:after {
+    background-position: -110px -4294px !important;
+}
+#edittag .type-radioimage[data-field='page_layout'] .radio-image-wrapper > label:nth-child(7) .image-clickable:after {
+    background-position: 0 -3636px !important;
+}
+#edittag .type-radioimage[data-field='header_style'] .radio-image-wrapper > label:nth-child(1) .image-clickable:after {
+    background-position: 0 -2956px !important;
+}
+#edittag .type-radioimage[data-field='header_style'] .radio-image-wrapper > label:nth-child(2) .image-clickable:after {
+    background-position: -110px -2956px !important;
+}
+#edittag .type-radioimage[data-field='header_style'] .radio-image-wrapper > label:nth-child(3) .image-clickable:after {
+    background-position: 0 -3041px !important;
+}
+#edittag .type-radioimage[data-field='header_style'] .radio-image-wrapper > label:nth-child(4) .image-clickable:after {
+    background-position: -110px -3041px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(1) .image-clickable:after {
+    background-position: 0 -2396px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(2) .image-clickable:after {
+    background-position: -110px -2396px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(3) .image-clickable:after {
+    background-position: 0 -2476px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(4) .image-clickable:after {
+    background-position: -110px -2476px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(5) .image-clickable:after {
+    background-position: 0 -2556px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(6) .image-clickable:after {
+    background-position: -110px -2556px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(7) .image-clickable:after {
+    background-position: 0 -2636px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(8) .image-clickable:after {
+    background-position: -110px -2636px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(9) .image-clickable:after {
+    background-position: 0 -2716px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(10) .image-clickable:after {
+    background-position: -110px -2716px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(11) .image-clickable:after {
+    background-position: 0 -2796px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(12) .image-clickable:after {
+    background-position: -110px -2796px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(13) .image-clickable:after {
+    background-position: 0 -2876px !important;
+}
+#edittag .type-radioimage[data-field='hero_layout'] .radio-image-wrapper > label:nth-child(14) .image-clickable:after {
+    background-position: -110px -2876px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(1) .image-clickable:after {
+    background-position: -110px -2076px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(2) .image-clickable:after {
+    background-position: 0 -2156px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(3) .image-clickable:after {
+    background-position: -110px -2156px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(4) .image-clickable:after {
+    background-position: 0 -2236px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(5) .image-clickable:after {
+    background-position: -110px -2236px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(6) .image-clickable:after {
+    background-position: 0 -2316px !important;
+}
+#edittag .type-radioimage[data-field='hero_style'] .radio-image-wrapper > label:nth-child(7) .image-clickable:after {
+    background-position: -110px -2316px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(1) .image-clickable:after {
+    background-position: 0 -1116px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(2) .image-clickable:after {
+    background-position: -110px -1116px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(3) .image-clickable:after {
+    background-position: 0 -1196px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(4) .image-clickable:after {
+    background-position: -110px -1196px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(5) .image-clickable:after {
+    background-position: 0 -1276px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(6) .image-clickable:after {
+    background-position: 0 -1356px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(7) .image-clickable:after {
+    background-position: -110px -1356px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(8) .image-clickable:after {
+    background-position: 0 -1436px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(9) .image-clickable:after {
+    background-position: -110px -1436px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(10) .image-clickable:after {
+    background-position: -110px -1516px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(11) .image-clickable:after {
+    background-position: 0 -1596px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(12) .image-clickable:after {
+    background-position: -110px -1676px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(13) .image-clickable:after {
+    background-position: -110px -1836px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(14) .image-clickable:after {
+    background-position: 0 -1916px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(15) .image-clickable:after {
+    background-position: 0 -1996px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(16) .image-clickable:after {
+    background-position: -110px -1996px !important;
+}
+#edittag .type-radioimage[data-field='content_layout'] .radio-image-wrapper > label:nth-child(17) .image-clickable:after {
+    background-position: 0 -2076px !important;
+}

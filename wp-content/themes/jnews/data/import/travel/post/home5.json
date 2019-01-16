@@ -1,0 +1,141 @@
+[
+  {
+    "id": "ZrI6g1Y",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1492148194688{margin-top: -30px !important;}",
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "css_classes": "vc_custom_1492148194688"
+    },
+    "elements": [
+      {
+        "id": "8TEyuXx",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css": ".vc_custom_1492148178007{padding-right: 0px !important;padding-left: 0px !important;}",
+          "css_classes": "vc_custom_1492148178007"
+        },
+        "elements": [
+          {
+            "id": "M8i3GeY",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "fullsize_image": "yes",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "BXjZhVu",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "TQHTiq0",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "zrYHlDg",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Travel Guides",
+              "second_title": "best tips from the experts.",
+              "image": {
+                "url": "{{image:travel1:url:full}}",
+                "id": "{{image:travel1:id}}"
+              },
+              "title_url": "http:\/\/jnews.jegtheme.com\/travel\/category\/travel-ideas\/",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "QBNCJ6G",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "qlE1iX0",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Destination",
+              "second_title": "recommended place to go",
+              "image": {
+                "url": "{{image:travel2:url:full}}",
+                "id": "{{image:travel2:id}}"
+              },
+              "title_url": "http:\/\/jnews.jegtheme.com\/travel\/category\/destination\/",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "ATuuJcn",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "2CnB4mj",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Shop",
+              "second_title": "shop traveling gears",
+              "image": {
+                "url": "{{image:travel3:url:full}}",
+                "id": "{{image:travel3:id}}"
+              },
+              "title_url": "http:\/\/jnews.jegtheme.com\/travel\/shop\/",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

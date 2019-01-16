@@ -1,0 +1,23 @@
+.jeg_block_heading_2 .jeg_block_title span {
+	border-radius: 0;
+}
+
+.jeg_cat_subtitle {
+	font-style: normal;
+}
+
+.jeg_postblock .jeg_block_heading_2, .jeg_block_heading_2, .jeg_postblock .module-overlay, .jeg_review_search .module-overlay {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.newsfeed_carousel.owl-carousel .owl-nav div.disabled, .owl-carousel .owl-nav div {
+    border-color: #444;
+}
+
+.jeg_postblock_carousel_3 .jeg_post_title {
+	font-size: 15px;
+}
+
+.content-inner {
+	font-size: 15px;
+}

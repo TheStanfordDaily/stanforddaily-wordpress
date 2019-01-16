@@ -1,0 +1,324 @@
+[
+  {
+    "id": "kVldlt4",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "E9gkFZ7",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "Eh0nErY",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 15
+              },
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 8
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_11_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "s9YYa0Z",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "068l1uz",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "nXD16Um",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_6",
+              "first_title": "Popular",
+              "second_title": " Product"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "LUtpcuN",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 10
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 1
+              },
+              "unique_content": "unique1",
+              "first_title": "Featured",
+              "second_title": " Content",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_17_elementor"
+          },
+          {
+            "id": "QWMj6Ki",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:behavior:id}},{{category:wellness:id}},{{category:research:id}},{{category:training:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 2
+              },
+              "unique_content": "unique1",
+              "first_title": "Dog",
+              "second_title": " Wellness",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "gLhhRqC",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "SUcfRQh",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_345x345:url:full}}",
+                "id": "{{image:ad_345x345:id}}"
+              },
+              "ads_image_link": "#",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "YKDJF79",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "horizontal",
+              "playlist": "https:\/\/www.youtube.com\/watch?v=SfLV8hD7zX4, https:\/\/www.youtube.com\/watch?v=j5PLngd2WN0, https:\/\/www.youtube.com\/watch?v=fdnM6u4sKKY, https:\/\/www.youtube.com\/watch?v=1kgmfPClsZc, https:\/\/www.youtube.com\/watch?v=JDZ1K79ie64, https:\/\/www.youtube.com\/watch?v=CKz_Ndak1u4",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_embedplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "5b90d26",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "background_background": "classic",
+      "background_image": {
+        "url": "{{image:pet_bg:url:full}}",
+        "id": "{{image:pet_bg:id}}"
+      },
+      "background_position": "center center",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    },
+    "elements": [
+      {
+        "id": "1fa1944",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "e718059",
+            "elType": "section",
+            "settings": {
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "39aee46",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [],
+                "isInner": true
+              },
+              {
+                "id": "32194a4",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50
+                },
+                "elements": [
+                  {
+                    "id": "8bad362",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 80
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "fd20926",
+                    "elType": "widget",
+                    "settings": {
+                      "editor": "<h2>Donate to Bawa<\/h2><p>Help bawa to provide better shelter to balinese dog & other animal<\/p><p><a>Donate Now<\/a><\/p>",
+                      "align": "center",
+                      "text_color": "#000000",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Overlock",
+                      "_margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "120",
+                        "bottom": "0",
+                        "left": "120",
+                        "isLinked": false
+                      },
+                      "_padding": {
+                        "unit": "px",
+                        "top": "20",
+                        "right": "0",
+                        "bottom": "20",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "_background_background": "classic",
+                      "_background_color": "rgba(255,255,255,0.51)",
+                      "_border_border": "solid",
+                      "_border_width": {
+                        "unit": "px",
+                        "top": "1",
+                        "right": "1",
+                        "bottom": "1",
+                        "left": "1",
+                        "isLinked": true
+                      },
+                      "_border_color": "#f0f0f0",
+                      "_border_radius": {
+                        "unit": "px",
+                        "top": "5",
+                        "right": "5",
+                        "bottom": "5",
+                        "left": "5",
+                        "isLinked": true
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "text-editor"
+                  },
+                  {
+                    "id": "1314010",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 80
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "d1d4fcd",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "5a81d7a",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "324afa9",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

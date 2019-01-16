@@ -1,0 +1,115 @@
+[
+  {
+    "id": "XTovxSY",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "o4paY9K",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "fUT7565",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 20
+              },
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 8
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_9_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "FCuOLVV",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "SbiP4Gl",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "Cyj0DJb",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:behavior:id}},{{category:culture:id}},{{category:research:id}},{{category:sports:id}},{{category:tips:id}},{{category:training:id}},{{category:wellness:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 10
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "scrollload",
+              "pagination_scroll_limit": "0",
+              "first_title": "Latest",
+              "second_title": " News",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_11_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "BSVQNOX",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "SV3yxym",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home-4"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          },
+          {
+            "id": "iuhbFA0",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "horizontal",
+              "playlist": "https:\/\/www.youtube.com\/watch?v=SfLV8hD7zX4, https:\/\/www.youtube.com\/watch?v=j5PLngd2WN0, https:\/\/www.youtube.com\/watch?v=fdnM6u4sKKY, https:\/\/www.youtube.com\/watch?v=1kgmfPClsZc, https:\/\/www.youtube.com\/watch?v=JDZ1K79ie64, https:\/\/www.youtube.com\/watch?v=CKz_Ndak1u4",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_embedplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

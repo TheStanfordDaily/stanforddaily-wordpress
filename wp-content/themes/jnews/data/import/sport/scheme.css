@@ -1,0 +1,169 @@
+
+/* SportPress Plugin */
+.sp-template, .sp-data-table, .sp-table-caption, .sp-template h1, .sp-template h2, .sp-template h3, .sp-template h4, .sp-template h5, .sp-template h6, .sp-data-table h1, .sp-data-table h2, .sp-data-table h3, .sp-data-table h4, .sp-data-table h5, .sp-data-table h6, .sp-table-caption h1, .sp-table-caption h2, .sp-table-caption h3, .sp-table-caption h4, .sp-table-caption h5, .sp-table-caption h6 {
+	font-family: inherit !important;
+}
+.sp-league-table thead th {
+	text-transform: uppercase !important;
+	font-weight: bold !important;
+}
+.sp-league-table tbody tr {
+	border-bottom: 1px solid #eee !important;
+}
+.sp-league-table th, .sp-league-table td {
+	border: 0 !important;
+}
+.sp-league-table .data-name .team-logo {
+	width: 38px;
+	height: 38px;
+	margin-right: 15px;
+}
+.sp-league-table .data-name .team-logo img {
+	max-width: 38px;
+	max-height: 38px;
+}
+.sp-league-table td.has-logo {
+	padding: 10px !important;
+}
+.sp-view-all-link {
+	text-align: center !important;
+}
+
+/* Event Widget */
+.sp-template-event-blocks td {
+	position: relative;
+}
+.sp-event-blocks .team-logo {
+	position: absolute;
+	top: 50%;
+	margin: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.sp-event-blocks .logo-odd {
+	float: none;
+	left: 15px;
+}
+.sp-event-blocks .logo-even {
+	float: none;
+	right: 15px;
+}
+.sp-template-event-blocks .sp-event-results {
+	font-size: 26px !important;
+	line-height: 1;
+}
+
+/** Video Player **/
+.jeg_dark_playlist .jeg_video_playlist_list_wrapper {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+/** Block **/
+.jeg_otb {
+	overflow: visible !important;
+}
+
+.jeg_subcat_list > li > a {
+	font-weight: 600;
+}
+.jeg_post_category {
+	text-rendering: inherit;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+}
+.jeg_thumb .jeg_post_category {
+	left: 0;
+	bottom: 0;
+}
+
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 3px 5px 3px 8px;
+	line-height: 1;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	position: relative;
+}
+
+.jeg_thumb .jeg_post_category a:after,
+.jeg_pl_lg_box .jeg_post_category a:after,
+.jeg_pl_md_box .jeg_post_category a:after,
+.jeg_postblock_carousel_2 .jeg_post_category a:after,
+.jeg_heroblock .jeg_post_category a:after,
+.jeg_slide_caption .jeg_post_category a:after {
+	content: '';
+	position: absolute;
+	display: block;
+	right: -10px;
+	height: 0;
+	border-color: transparent;
+	border-bottom-color: inherit;
+	top: 0;
+	width: 0;
+	border-width: 0 10px 17px 0;
+	border-style: solid;
+}
+
+.jeg_pl_md_card .jeg_post_category, .jeg_pl_lg_card .jeg_post_category {
+	line-height: 1;
+	margin-bottom: 7px;
+}
+.jeg_pl_md_card .jeg_post_category a, .jeg_pl_lg_card .jeg_post_category a {
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.jeg_pl_sm .jeg_post_title,
+.jeg_postblock_carousel_1 .jeg_post_title,
+.popularpost_item .jeg_post_title {
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+/** Widget **/
+/* Popular Post Widget */
+.popularpost_item {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+.popularpost_item .jeg_post_title a:before {
+	border-radius: 0;
+}
+
+/** Footer **/
+.jeg_footer.custom input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.jeg_footer.custom input:-moz-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.jeg_footer.custom input::-moz-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.jeg_footer.custom input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.jeg_footer.dark input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.jeg_footer.dark input:-moz-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.jeg_footer.dark input::-moz-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.jeg_footer.dark input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/** Custom Class **/
+.jeg_otb {
+	overflow: visible !important;
+}

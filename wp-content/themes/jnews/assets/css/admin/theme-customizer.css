@@ -1,0 +1,52 @@
+.jnews .vex-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.jnews .vex-dialog-button {
+    width: 50%;
+}
+
+.jnews .vex-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 3px;
+    transform: translate(-50%,-50%);
+}
+
+.jnews .vex-dialog-message {
+    background: white;
+    border: 1px solid rgb(221, 221, 221);
+    width: 400px;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    color: rgb(136, 136, 136);
+}
+
+.jnews .vex-dialog-buttons {
+    margin-top: 10px;
+}
+
+.jnews .vex-dialog-button {
+    width: 194px;
+    float: left;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.jnews .vex-dialog-button.vex-first {
+    margin-right: 12px;
+    line-height: 35px;
+}
+
+.jnews .vex-dialog-button.vex-last {
+
+}
+
+.customize-partial-edit-shortcut {
+    display: none !important;
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "6caOmxW",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1497339642400{margin-top: -30px !important;}",
+      "css_classes": "vc_custom_1497339642400"
+    },
+    "elements": [
+      {
+        "id": "Tp1sHUV",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "jn1Kb06",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          },
+          {
+            "id": "ND3TVTC",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_7",
+              "header_align": "center",
+              "first_title": "FEATURED POST"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "2km8wxX",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "margin": {
+                "unit": "px",
+                "size": 30
+              },
+              "number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "enable_autoplay": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_3_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "S5UMuWe",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "cQ9wdbg",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "pbncPr6",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]
