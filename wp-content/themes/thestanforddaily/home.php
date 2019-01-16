@@ -16,6 +16,7 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
+		query_posts( array ( 'category_name' => 'big-news-feed', 'posts_per_page' => 5 ) );
 		if ( have_posts() ) :
 
 			/* Start the Loop */
@@ -27,7 +28,7 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/grid-large' );
+				get_template_part( 'template-parts/excerpt', get_post_type() );
 
 			endwhile;
 
@@ -38,6 +39,7 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+		wp_reset_query();
 		?>
 
 		</main><!-- #main -->
