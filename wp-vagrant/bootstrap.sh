@@ -46,7 +46,8 @@ sudo -u vagrant -i -- rm $wp_path/wp-config.php
 sudo -u vagrant -i -- wp core config  --path=$wp_path --dbname=$wp_db_name --dbuser=$wp_db_user --dbpass=$wp_db_password --extra-php <<PHP
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
-define( 'WP_MEMORY_LIMIT', '256M' );
+define( 'WP_HOME', 'http://localhost.stanforddaily.com' );
+define( 'WP_SITEURL', 'http://localhost.stanforddaily.com' );
 PHP
 
 # sudo -u vagrant -i -- wget s3 > dump.sql 
