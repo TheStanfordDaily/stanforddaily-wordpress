@@ -1,0 +1,41 @@
+.jeg_vertical_menu .menu {
+    margin-top: 8px;
+}
+
+@media only screen and (min-width: 569px;) {
+	.jeg_postblock_23 .jeg_post {
+		padding-right: 20px;
+	}
+}
+
+.jeg_block_heading_5 .jeg_block_title span {
+	color: #000;
+}
+
+.jeg_block_heading_5:before {
+    border-bottom: 5px solid #000;
+}
+
+.jeg_block_title {
+    font-size: 16px;
+}
+
+.jeg_subcat_list > li > a {
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.jeg_block_loadmore a::before, .jeg_block_loadmore a::after {
+	display: none;
+}
+
+.jeg_block_loadmore a {
+	background: #ffb900;
+	border-color: #ffb900;
+	color: #fff;
+	min-width: 50%;
+}
+
+.jeg_footer .mc4wp-form h3 {
+	color: #fff;
+}

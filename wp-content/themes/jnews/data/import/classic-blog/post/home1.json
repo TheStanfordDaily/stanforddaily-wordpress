@@ -1,0 +1,227 @@
+[
+  {
+    "id": "NlzMXnh",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1518582785577{margin-top: -20px !important;}"
+    },
+    "elements": [
+      {
+        "id": "7pulmFh",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "1Jmy4xj",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "fullsize_image": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "AFjmOGd",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "7h0VCAH",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "AXZHnu3",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "About",
+              "second_title": "Little story of me",
+              "title_url": "#",
+              "image": {
+                "url": "{{image:fashion1:url:full}}",
+                "id": "{{image:fashion1:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "JakLTHk",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "XeDyUWU",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Instagram",
+              "second_title": "Stay updates",
+              "title_url": "https:\/\/instagram.com\/jegtheme",
+              "image": {
+                "url": "{{image:fashion2:url:full}}",
+                "id": "{{image:fashion2:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "JC8RU9M",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "xJu7HuP",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Travel",
+              "second_title": "Where I've been",
+              "title_url": "https:\/\/jnews.io\/classic-blog\/category\/travel\/",
+              "image": {
+                "url": "{{mage:fashion3:url:full}}",
+                "id": "{{mage:fashion3:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "1KsytXG",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "brvgqo4",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "yCEAxyz",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 1
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 76
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_26_elementor"
+          },
+          {
+            "id": "H57MzzA",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 39
+              },
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_27_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "GagHUJg",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "oGWz7rQ",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "default-sidebar"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

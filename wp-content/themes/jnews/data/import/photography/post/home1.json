@@ -1,0 +1,101 @@
+[
+  {
+    "id": "r6wv4Sa",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "n3tIFgZ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "CblylYB",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "post_offset": "0",
+              "unique_content": "unique1",
+              "fullsize_image": "true"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "d9jbFxZ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "dQVEWsa",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 30
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "1kkonO7",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "357Ghse",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "CrQQB91",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "post_offset": "0",
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 20
+              },
+              "pagination_mode": "scrollload",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "pagination_scroll_limit": "0"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_27_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

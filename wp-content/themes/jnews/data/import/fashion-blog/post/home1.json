@@ -1,0 +1,355 @@
+[
+  {
+    "id": "48d1788",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "css_classes": "vc_custom_1488185105318"
+    },
+    "elements": [
+      {
+        "id": "b725990",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css_classes": "vc_custom_1488185113339"
+        },
+        "elements": [
+          {
+            "id": "0756b98",
+            "elType": "widget",
+            "settings": {
+              "fullsize_image": "yes",
+              "date_format_custom": "Y\/m\/d",
+              "post_offset": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "iizZhn1",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1491990521981{margin-bottom: 60px !important;border-bottom-width: 1px !important;border-bottom-color: #eeeeee !important;border-bottom-style: solid !important;}"
+    },
+    "elements": [
+      {
+        "id": "DPcIG7g",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "20",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "SXtxk85",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "Story",
+              "second_title": "See my story",
+              "title_url": "#",
+              "image": {
+                "url": "https:\/\/jnews.dev.com\/wp-content\/uploads\/2018\/01\/travel4-5.jpg",
+                "id": 75
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "wndfKdi",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "10",
+            "bottom": "0",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "EAxWT7W",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "use_video_bg": "yes",
+              "title": "Instagram",
+              "second_title": "Stay updates",
+              "title_url": "#",
+              "image": {
+                "url": "https:\/\/jnews.dev.com\/wp-content\/uploads\/2018\/01\/fashion6-6.jpg",
+                "id": 71
+              },
+              "video_url": "https:\/\/www.youtube.com\/watch?v=pXvGbOThFwc",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "buXPkax",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "20",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "0hNSfgq",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Shop",
+              "second_title": "Shop my outfits",
+              "title_url": "#",
+              "image": {
+                "url": "https:\/\/jnews.dev.com\/wp-content\/uploads\/2018\/01\/fashion5-6.jpg",
+                "id": 70
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "zpv6MIl",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "wWEawb7",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "qj4BO2q",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 1
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 56
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_26_elementor"
+          },
+          {
+            "id": "8cX8uL1",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_27_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "J2sirYo",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "dac3b76",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Search",
+              "header_type": "heading_3",
+              "header_align": "center",
+              "header_background": "#252627"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "3e5c027",
+            "elType": "widget",
+            "settings": [],
+            "elements": [],
+            "widgetType": "wp-widget-search"
+          },
+          {
+            "id": "c2b88d1",
+            "elType": "widget",
+            "settings": {
+              "first_title": "About Me",
+              "header_type": "heading_3",
+              "header_align": "center",
+              "header_background": "#252627"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "11ba908",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "aboutimg": "{{image:fashion2:id}}",
+                "aboutimgretina": "",
+                "aboutname": "Mocha Rose",
+                "aboutoccupation": "Fashion Blogger & Traveler",
+                "aboutdesc": "Hello & welcome to my blog! My name is Mocha Rose and I'm a 20-year-old independent blogger with a passion for sharing about fashion and lifestyle.",
+                "signature": "",
+                "signatureretina": "",
+                "align": "1"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_about"
+          },
+          {
+            "id": "a0ff4c1",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Categories",
+              "header_type": "heading_3",
+              "header_align": "center",
+              "header_background": "#252627"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "1fbf558",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "count": "on"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-categories"
+          },
+          {
+            "id": "7dc320d",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_300x600:url:full}}",
+                "id": "{{image:ad_300x600:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "62167ec",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Facebook",
+              "header_type": "heading_3",
+              "header_align": "center",
+              "header_background": "#252627"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "49df7b9",
+            "elType": "widget",
+            "settings": {
+              "wp": {
+                "title": "",
+                "url": "https:\/\/www.facebook.com\/lookbook\/",
+                "appid": "1708153456106457",
+                "tabs": "false",
+                "height": "500",
+                "cover": "false",
+                "photo": "true",
+                "small": "1"
+              }
+            },
+            "elements": [],
+            "widgetType": "wp-widget-jnews_facebook_page"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

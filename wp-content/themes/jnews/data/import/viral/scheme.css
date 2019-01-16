@@ -1,0 +1,235 @@
+/** Header **/
+.jeg_header_style_sidecontent .jeg_navbar_wrapper {
+	border-bottom: 0;
+}
+
+/** Menu **/
+.jeg_main_menu > li > a {
+	letter-spacing: 0.5px;
+	text-transform: none;
+}
+.jeg_main_menu li > ul {
+	padding: 15px 0px;
+}
+.jeg_main_menu li > ul li a {
+	font-size: 14px;
+	padding: 8px 23px 8px 25px;
+	border-bottom: 0;
+}
+.jeg_newsfeed_list {
+	padding: 30px;
+}
+.jeg_newsfeed .jeg_post_title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/** Blocks **/
+.jeg_thumb .jeg_post_category {
+	bottom: auto;
+	top: 10px;
+}
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 3px 4px 3px 5px;
+	line-height: 1;
+	border-radius: 2px;
+	letter-spacing: 0.5px;
+}
+.jeg_readmore {
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.jeg_pl_md_card .jeg_post_category, .jeg_pl_lg_card .jeg_post_category {
+	line-height: 1;
+	margin-bottom: 7px;
+}
+.jeg_pl_md_card .jeg_post_category a, .jeg_pl_lg_card .jeg_post_category a {
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.jeg_pl_md_1 .jeg_post_meta, .jeg_postblock_carousel_1 .jeg_post_meta {
+	display: none;
+}
+.jeg_pl_md_1 .jeg_thumb {
+	margin-bottom: 10px;
+}
+
+.jeg_postblock_9 .jeg_posts {
+	margin-right: -40px;
+}
+.jeg_postblock_9 .jeg_post {
+	padding-right: 40px;
+}
+.jeg_col_2o3 .jeg_pl_md_1 .jeg_post_title,
+.jeg_col_3o3 .jeg_pl_md_1 .jeg_post_title {
+	font-size: 18px;
+}
+.jeg_block_loadmore a {
+	width: 40%;
+    font-size: 12px;
+    font-weight: bold;
+    height: auto;
+    line-height: 32px;
+    letter-spacing: .5px;
+    border-radius: 4px;
+    border-width: 2px;
+}
+
+/* Carousel 2 */
+.jeg_postblock_carousel_2 .thumbnail-container:before,
+.jeg_postblock_carousel_2 .format-video .thumbnail-container:before,
+.jeg_postblock_carousel_2 .format-gallery .thumbnail-container:before,
+.jeg_postblock_carousel_2 .jeg_postblock_content {
+    opacity: 0;
+}
+.jeg_postblock_carousel_2 .owl-item:hover .jeg_postblock_content {
+    opacity: 1;
+}
+
+/* Carousel 3 */
+.jeg_postblock_carousel_3 .jeg_post_title {
+	font-size: 13px;
+	font-weight: bolder;
+}
+.jeg_postblock_carousel_3 .jeg_post_meta {
+	display: none;
+}
+
+/** Post **/
+.entry-header .jeg_meta_container {
+	padding-top: 10px;
+	border-top: 2px solid #eee;
+}
+.entry-content blockquote, .entry-content q {
+	color: #1e0b0f;
+	font-weight: 500;
+	font-size: 18px;
+	margin-left: 1em;
+}
+.entry-content .pullquote {
+	font-size: 20px;
+}
+.entry-content .pullquote:after {
+	margin-top: 25px;
+	margin-bottom: 0;
+}
+.entry-content .pullquote:before {
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+.entry-content .pullquote:before, .entry-content .pullquote:after {
+	width: 80px;
+	height: 1px;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+	font-weight: bold;
+}
+.jeg_splitpost_4 .page_nav {
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	border-radius: 3px;
+}
+input:not([type="submit"]), textarea, select, .chosen-container-single .chosen-single {
+	border-radius: 3px;
+}
+input[type="submit"], .btn, .button {
+	font-size: 14px;
+	border-radius: 3px;
+	padding: 0 22px;
+	font-weight: bold !important;
+	letter-spacing: 0.5px;
+}
+.content-inner label {
+	font-size: 14px;
+	font-weight: bold;
+}
+.content-inner input:not([type="submit"]) {
+	width: auto;
+}
+.content-inner textarea {
+	width: 90%;
+}
+
+/** Archive **/
+.jeg_cat_subtitle {
+	font-style: normal;
+	margin-top: 5px;
+}
+
+/** Widget **/
+.jeg_block_heading_5 .jeg_block_title, .jeg_block_heading_8 .jeg_block_title {
+	font-weight: bold;
+}
+.widget .mc4wp-form, .jeg_sidebar .mc4wp-form {
+	background: transparent;
+	border-width: 5px;
+	border-radius: 5px;
+	padding: 30px;
+	text-align: center;
+}
+.widget .mc4wp-form input, .jeg_sidebar .mc4wp-form input {
+	text-align: center;
+}
+.widget .mc4wp-form h3, .jeg_sidebar .mc4wp-form h3 {
+	font-size: 19px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+.widget .mc4wp-form small, .jeg_sidebar .mc4wp-form small {
+	color: #a0a0a0;
+}
+.jeg_tabpost_nav li {
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: .5px;
+	font-weight: bold !important;
+	border-width: 2px !important;
+}
+.popularpost_item .jeg_post_title {
+	font-size: 15px;
+	font-weight: bold;
+}
+.popularpost_item:first-child .jeg_post_title {
+	font-size: 20px;
+}
+.widget_tag_cloud a {
+	border-radius: 3px;
+	padding: 2px 10px 1px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	background: #eee;
+}
+
+/** Footer **/
+.jeg_footer .jeg_footer_heading h3, .jeg_footer .widget h2 {
+	text-transform: uppercase;
+	font-weight: bold !important;
+}
+
+@media (max-width: 1200px) {
+}
+@media only screen and (min-width: 1024px) {
+	.jeg_pl_lg_box .jeg_post_title {
+		font-size: 28px;
+		line-height: 1.3;
+	}
+}
+@media only screen and (max-width : 767px) {
+}
+@media only screen and (max-width : 667px) {
+	.jeg_pl_lg_box .jeg_post_title {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width : 568px) {
+}
+@media only screen and (max-width : 480px) {
+}

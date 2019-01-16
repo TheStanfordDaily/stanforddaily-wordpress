@@ -1,0 +1,22 @@
+Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+<div class="row clearfix">
+<div class="col-md-6">
+<h4 class="p1"><strong>Headquarters</strong></h4>
+Jegtheme Studio
+36B Sunset Road,
+Bali, Indonesia 80115
+
+</div>
+<div class="col-md-6">
+<h4 class="p1"><strong>Contact Info</strong></h4>
+P. (0361) 888 1234
+F. (0361) 888 1235
+Email: <a href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+
+</div>
+</div>
+
+<hr />
+
+<h4 class="p1"><strong>Get in touch</strong></h4>
+[contact-form-7 id="4" title="Contact form 1"]

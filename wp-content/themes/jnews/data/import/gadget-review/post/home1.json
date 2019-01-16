@@ -1,0 +1,340 @@
+[
+  {
+    "id": "ZJIy0aN",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "CtSFDPA",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "XQFY6nx",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#",
+              "ads_image_alt": "Advertisement"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "CvuQo4D",
+    "elType": "section",
+    "settings": {
+      "gap": "extended",
+      "structure": "30"
+    },
+    "elements": [
+      {
+        "id": "6786d83",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": 16.842
+        },
+        "elements": [
+          {
+            "id": "760afa5",
+            "elType": "widget",
+            "settings": {
+              "first_title": "TOP",
+              "second_title": "CATEGORY",
+              "header_type": "heading_5"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "60bea36",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-headphones",
+              "title": "Audio",
+              "subtitle": "Best Audio"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "148e006",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-camera-retro",
+              "title": "Camera",
+              "subtitle": "Best Camera"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "f9db156",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-car",
+              "title": "Car",
+              "subtitle": "Visit Roadshow"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "0d56e90",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-desktop",
+              "title": "Desktop",
+              "subtitle": "Best Dekstop"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "499e5c6",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-laptop",
+              "title": "Laptop",
+              "subtitle": "Best Laptop"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "c9d7bea",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-music",
+              "title": "Headphones",
+              "subtitle": "Best Headphones"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "536fc98",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-mobile",
+              "title": "Handphone",
+              "subtitle": "Best Handphone"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "b32de9c",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-tv",
+              "title": "TV",
+              "subtitle": "Best Television"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "1dc1bfd",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-print",
+              "title": "Printer",
+              "subtitle": "Best Printer"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "46b5f7a",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-briefcase",
+              "title": "Bag",
+              "subtitle": "Best Bag for you"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "fbefff7",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-motorcycle",
+              "title": "Motorcycle",
+              "subtitle": "Best Motorcycle"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "30c52f4",
+            "elType": "widget",
+            "settings": {
+              "icon": "fa fa-keyboard-o",
+              "title": "Keyboard",
+              "subtitle": "Best Keyboard"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_iconlink_elementor"
+          },
+          {
+            "id": "1c0e15c",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_vertical:url:full}}",
+                "id": "{{image:ad_vertical:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "aQRazzJ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": 50
+        },
+        "elements": [
+          {
+            "id": "zJwcdoR",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_5",
+              "number_post": {
+                "unit": "px",
+                "size": 1
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_post": "30",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 30
+              },
+              "first_title": "TOP ",
+              "second_title": "REVIEW",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_12_elementor"
+          },
+          {
+            "id": "QesN48L",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 12
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 1
+              },
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 6
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_11_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "avjN1NE",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": 33.154
+        },
+        "elements": [
+          {
+            "id": "pShAI8L",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "landing-1"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "hHuRr03",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1497263838416{margin-top: 30px !important;margin-bottom: 50px !important;border-top-width: 1px !important;border-bottom-width: 1px !important;background-color: #f2f2f2 !important;border-top-color: #dbdbdb !important;border-top-style: solid !important;border-bottom-color: #dbdbdb !important;border-bottom-style: solid !important;}",
+      "css_classes": "vc_custom_1497263838416"
+    },
+    "elements": [
+      {
+        "id": "EpVuDni",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css": ".vc_custom_1497233281181{margin-top: 40px !important;}",
+          "css_classes": "vc_custom_1497233281181"
+        },
+        "elements": [
+          {
+            "id": "Hv4S1oF",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "vertical",
+              "content_video_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "sort_by": "latest"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_videoplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

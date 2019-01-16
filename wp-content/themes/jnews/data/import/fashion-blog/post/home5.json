@@ -1,0 +1,92 @@
+[
+  {
+    "id": "qKQTSYd",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "s4oXasV",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "HJfFl26",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 20
+              },
+              "hero_style": "jeg_hero_style_3",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_3_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ykpdYA0",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "mXCMItG",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "BrT3wh0",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_970x90:url:full}}",
+                "id": "{{image:ad_970x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "GKVota3",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_item": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "show_nav": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_2_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

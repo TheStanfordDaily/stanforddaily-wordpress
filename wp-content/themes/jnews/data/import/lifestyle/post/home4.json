@@ -1,0 +1,95 @@
+[
+  {
+    "id": "BiYeayi",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "MDA58it",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "AofBhP5",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_13_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "kChYACT",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "5vXGOWV",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_300x600:url:full}}",
+                "id": "{{image:ad_300x600:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "YudL8OQ",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "g6jQvyr",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "Mox70O5",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_13_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

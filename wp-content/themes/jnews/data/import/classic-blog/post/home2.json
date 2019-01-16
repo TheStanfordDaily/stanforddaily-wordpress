@@ -1,0 +1,99 @@
+[
+  {
+    "id": "X7EEmYQ",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1519702171729{margin-top: -20px !important;}",
+      "stretch_section": "section-stretched",
+      "layout": "full_width"
+    },
+    "elements": [
+      {
+        "id": "JTdqMdC",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "4YquMTP",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "fullsize_image": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "OHk1oDn",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "ORJMYnq",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "f1153e3",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 10
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          },
+          {
+            "id": "lmh4fuv",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "margin": {
+                "unit": "px",
+                "size": 30
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "sort_by": "random",
+              "show_nav": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_1_elementor"
+          },
+          {
+            "id": "b4973bb",
+            "elType": "widget",
+            "settings": {
+              "color": "#ebebeb"
+            },
+            "elements": [],
+            "widgetType": "divider"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

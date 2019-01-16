@@ -1,0 +1,335 @@
+.jeg_overlay_slider {
+    overflow: hidden;
+    height: 500px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.jeg_boxed .jeg_overlay_slider {
+    margin-left: -30px;
+    width: calc(100% + 60px);
+}
+.jeg_overlay_slider_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    background: #41301f;
+}
+.jeg_overlay_slider_wrapper:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: -webkit-linear-gradient(90deg, #780206 10%, #061161 90%);
+    background: -moz-linear-gradient(90deg, #780206 10%, #061161 90%);
+    background: -ms-linear-gradient(90deg, #780206 10%, #061161 90%);
+    background: -o-linear-gradient(90deg, #780206 10%, #061161 90%);
+    background: linear-gradient(90deg, #780206 10%, #061161 90%);
+}
+.jeg_overlay_slider_wrapper:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    opacity: 0.35;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 70%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(70%, rgba(0, 0, 0, 0.65)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 70%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 70%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 70%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+.jeg_overlay_container {
+    height: 100%;
+    position: relative;
+}
+.jeg_overlay_slider_bottom {
+    position: absolute;
+    bottom: 0;
+}
+.shownav .jeg_overlay_slider_bottom {
+    padding-left: 50px;
+}
+.jeg_overlay_slider_item {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 75px;
+}
+.jeg_overlay_slider_item h3 span {
+}
+.owl-stage-outer .jeg_overlay_slider_item {
+    width: 100%;
+}
+.jeg_overlay_slider_item h3 {
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.4;
+    max-height: 36.4px;
+    margin: 0;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.jeg_overlay_slider_item.active {
+    background: #fff;
+}
+.jeg_overlay_slider_item.active > h3 {
+    color: #000;
+    text-overflow: ellipsis;
+}
+.jeg_overlay_slider_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: none;
+}
+.jeg_overlay_slider_bg.active {
+    display: block;
+}
+.jeg_overlay_caption_container {
+    position: absolute;
+    bottom: 100px;
+    max-width: 600px;
+    color: #fff;
+    display: none;
+}
+.jeg_overlay_caption_container.active {
+    display: block;
+}
+.jeg_overlay_caption_container .jeg_post_title {
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.jeg_overlay_caption_container .jeg_post_title a {
+    color: #fff;
+}
+.jeg_overlay_slider .jeg_post_category {
+    border-left: 3px solid #f70d28;
+    line-height: 11px;
+}
+.jeg_overlay_slider .jeg_post_category a {
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    margin: 0px 10px 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.jeg_overlay_slider_bottom .owl-nav {
+    margin-top: 0;
+}
+.jeg_overlay_slider_bottom.owl-carousel .owl-nav div {
+    border: 0;
+    background: #f70d28;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    height: 50%;
+    line-height: normal;
+    width: 40px;
+    font-size: 20px;
+    margin: 0;
+    opacity: 1;
+}
+.jeg_overlay_slider_bottom.owl-carousel .owl-nav div:hover {
+    background: #f70d28;
+    color: #fff;
+    opacity: 0.8;
+}
+.jeg_overlay_slider_bottom .owl-nav > div:before {
+    font-family: "jegicon" !important;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.jeg_overlay_slider_bottom .owl-nav .owl-next {
+    top: 0;
+}
+.jeg_overlay_slider_bottom .owl-nav .owl-prev {
+    top: 50%;
+    margin-top: 1px
+}
+.jeg_overlay_slider_bottom .owl-nav .owl-next:before {
+    content: "\65";
+}
+.jeg_overlay_slider_bottom .owl-nav .owl-prev:before {
+    content: "\66";
+}
+.jeg_overlay_slider_loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.jeg_overlay_slider_loader .jeg_overlay_slider_loader_circle {
+    top: 50%;
+    z-index: 2;
+    margin-top: -60px;
+}
+.jeg_overlay_slider_loader_circle {
+    margin: 60px auto;
+    font-size: 9px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+.jeg_overlay_slider_loader_circle, .jeg_overlay_slider_loader_circle:after {
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+}
+
+/* Preloader Animation */
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*** Responsive ***/
+@media only screen and (max-width:1024px) {
+    .jeg_overlay_slider {
+        height: 400px;
+    }
+    .jeg_overlay_slider_wrapper {
+        height: 450px;
+    }
+    .jeg_overlay_caption_container .jeg_post_title {
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .jeg_overlay_slider {
+        width: 100%;
+    }
+    .jeg_overlay_caption_container .jeg_post_title {
+        font-size: 30px;
+    }
+    .jeg_overlay_slider_loader_circle, .jeg_overlay_slider_loader_circle:after {
+        width: 7em;
+        height: 7em;
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width:767px) {
+    .jeg_overlay_slider {
+        margin-top: -20px;
+    }
+    .jeg_overlay_caption_container .jeg_post_title {
+        font-size: 26px;
+    }
+    .jeg_overlay_caption_container {
+        bottom: 85px;
+    }
+    .jeg_overlay_slider_item {
+        padding: 12px 15px;
+        height: auto;
+    }
+}
+@media only screen and (max-width:567px) {
+    .jeg_overlay_caption_container {
+        bottom: 65px;
+    }
+    /*.jeg_overlay_caption_container .jeg_post_title {
+        font-size: 20px;
+        margin-bottom: 0;
+    }*/
+    .jeg_overlay_slider_item h3 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .jeg_overlay_slider_item {
+        padding: 8px 15px;
+        height: 48px;
+    }
+    .jeg_overlay_slider_bottom.owl-carousel .owl-nav div {
+        font-size: 14px;
+        line-height: 22px;
+        width: 30px;
+    }
+    .shownav .jeg_overlay_slider_bottom {
+        padding-left: 40px;
+    }
+    .jeg_overlay_slider .jeg_post_category a {
+        font-size: 10px;
+        font-weight: 500;
+    }
+}
+@media only screen and (max-width:480px) {
+    .jeg_overlay_caption_container .jeg_post_title {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    .jeg_overlay_slider .jeg_post_category {
+        margin-bottom: 5px;
+        line-height: 1;
+    }
+    .jeg_overlay_slider .jeg_post_category a {
+        font-size: 11px;
+    }
+    .jeg_overlay_caption_container .jeg_post_title {
+        font-size: 15px;
+    }
+    .jeg_overlay_caption_container {
+        bottom: 60px;
+    }
+    .jeg_overlay_slider_item {
+        height: 32px;
+    }
+    .jeg_overlay_slider_item h3 {
+        line-height: 16.8px;
+        -webkit-line-clamp: 1;
+    }
+}

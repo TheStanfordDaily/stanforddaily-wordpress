@@ -1,0 +1,280 @@
+[
+  {
+    "id": "EuYYdZc",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1488961940788{margin-top: -30px !important;margin-bottom: 40px !important;padding-top: 30px !important;background-color: #f5f5f5 !important;}",
+      "css_classes": "vc_custom_1488961940788"
+    },
+    "elements": [
+      {
+        "id": "6NyR1K1",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "6CBrI73",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "css": ".vc_custom_1488961575054{margin-bottom: 30px !important;}",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_2_elementor"
+          },
+          {
+            "id": "PLdRGVd",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_item": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "show_nav": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_2_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "J6HnAFm",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "OFyUs7M",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "tSNzup1",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "dx53jiV",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "Ze8JkP7",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "VvtJa1E",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Featured.",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_2_elementor"
+          },
+          {
+            "id": "D8r60eG",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_5",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "excerpt_length": {
+                "unit": "px",
+                "size": 32
+              },
+              "css": ".vc_custom_1488939606445{border-top-width: 2px !important;padding-top: 25px !important;border-top-color: #eeeeee !important;border-top-style: solid !important;}",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_25_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "vEHJbNN",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "u6IukQd",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 2
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Trending.",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          },
+          {
+            "id": "EGkzcNj",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Fashion.",
+              "column_width": "4",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_21_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "mPYZYp6",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1488961957415{margin-bottom: 40px !important;padding-top: 40px !important;background-color: #f5f5f5 !important;background-position: 0 0 !important;background-repeat: repeat !important;}",
+      "css_classes": "vc_custom_1488961957415"
+    },
+    "elements": [
+      {
+        "id": "YENujve",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "7ecc26e",
+            "elType": "widget",
+            "settings": {
+              "title": "Happening Now",
+              "align": "center",
+              "title_color": "#121212",
+              "typography_typography": "custom",
+              "typography_font_family": "Montserrat",
+              "typography_font_size": {
+                "unit": "em",
+                "size": 2
+              },
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "ea1c05d",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Don't miss a thing",
+              "header_type": "heading_5",
+              "header_align": "center",
+              "header_background": "rgba(255,255,255,0)"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "ui1ZoJt",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 20
+              },
+              "hero_style": "jeg_hero_style_6",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_11_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

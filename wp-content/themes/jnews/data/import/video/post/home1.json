@@ -1,0 +1,539 @@
+[
+  {
+    "id": "39dc7c4",
+    "elType": "section",
+    "settings": {
+      "css_classes": "vc_custom_1501064204380"
+    },
+    "elements": [
+      {
+        "id": "4155aac",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "55e0acb",
+            "elType": "widget",
+            "settings": [],
+            "elements": [],
+            "widgetType": "shortcode"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "YygM5Qi",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "X8zfk27",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "d3DXhe6",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 10
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "h34VfPK",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1500021559938{margin-top: -30px !important;margin-bottom: 40px !important;padding-top: 30px !important;background-color: #1c1c1c !important;}",
+      "hide_desktop": "hidden-desktop",
+      "hide_tablet": "hidden-tablet",
+      "hide_mobile": "hidden-phone",
+      "css_classes": "vc_custom_1500021559938"
+    },
+    "elements": [
+      {
+        "id": "GXcEwsr",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "CiKzrjO",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "vertical",
+              "scheme": "dark",
+              "content_video_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "sort_by": "latest"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_videoplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "LlVZpzW",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "HO2ZR7U",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "7XFOVSt",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "rkU4DFD",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "header_filter_category": "{{category:movie:id}},{{category:music:id}},{{category:tech:id}},{{category:sports:id}},{{category:travel:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:news:id}},{{category:tech:id}}",
+              "first_title": "Featured Videos",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_15_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "eae6bf3",
+    "elType": "section",
+    "settings": {
+      "background_background": "classic"
+    },
+    "elements": [
+      {
+        "id": "c819f6d",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "_inline_size": null,
+          "css_classes": "vc_custom_1500964838797"
+        },
+        "elements": [
+          {
+            "id": "eed4dce",
+            "elType": "section",
+            "settings": {
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "12527af",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": 70,
+                  "space_between_widgets": 20,
+                  "margin": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "40",
+                    "isLinked": false
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "eacae80",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Watch The International Tournament 2017 Live!",
+                      "title_color": "#ffffff",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Montserrat",
+                      "typography_font_weight": "700"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  },
+                  {
+                    "id": "97ba20e",
+                    "elType": "widget",
+                    "settings": {
+                      "title": "Support your team to be the champion and win big price!",
+                      "header_size": "p",
+                      "title_color": "#ffffff",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Montserrat",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 14
+                      },
+                      "typography_font_weight": "400"
+                    },
+                    "elements": [],
+                    "widgetType": "heading"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "197785c",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": 30,
+                  "content_position": "center"
+                },
+                "elements": [
+                  {
+                    "id": "05235e2",
+                    "elType": "widget",
+                    "settings": {
+                      "text": "WATCH NOW",
+                      "align": "center",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Montserrat",
+                      "typography_font_size": {
+                        "unit": "px",
+                        "size": 15
+                      },
+                      "button_text_color": "#ffffff",
+                      "background_color": "#ff3a4c",
+                      "border_radius": {
+                        "unit": "px",
+                        "top": "50",
+                        "right": "50",
+                        "bottom": "50",
+                        "left": "50",
+                        "isLinked": true
+                      },
+                      "text_padding": {
+                        "unit": "px",
+                        "top": "16",
+                        "right": "35",
+                        "bottom": "16",
+                        "left": "35",
+                        "isLinked": false
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "button"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "4ZsQloQ",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "LYMsMPr",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "EWmMU1A",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:gaming:id}}",
+              "exclude_category": "{{category:movie:id}},{{category:sports:id}}",
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "first_title": "Gamer's on action",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          },
+          {
+            "id": "PU3geYk",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_category": "{{category:movie:id}}",
+              "exclude_category": "{{category:music:id}}",
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "first_title": "Movie & TV Series worth seeing",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": "",
+              "column_width": "12"
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ce5eb76",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "33da2c5",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "BgCfdZ1",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "first_title": "Popular Video Channels"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "SEYXDrO",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "gap": "extended",
+      "structure": "30"
+    },
+    "elements": [
+      {
+        "id": "70CWVGd",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "9Ex2iw0",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "GAMING",
+              "image": {
+                "url": "{{image:travel1:url:full}}",
+                "id": "{{image:travel1:id}}"
+              },
+              "title_url": "https:\/\/jnews.dev.com\/?cat=7",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          },
+          {
+            "id": "WXOUNtE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "SPORTS",
+              "image": {
+                "url": "{{image:fashion4:url:full}}",
+                "id": "{{image:fashion4:id}}"
+              },
+              "title_url": "https:\/\/jnews.dev.com\/?cat=8",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "BUPcass",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "oruvs7s",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "Movie & Series",
+              "image": {
+                "url": "{{image:fashion2:url:full}}",
+                "id": "{{image:fashion2:id}}"
+              },
+              "title_url": "https:\/\/jnews.dev.com\/?cat=5",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          },
+          {
+            "id": "nNFxrdA",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "FOOD",
+              "image": {
+                "url": "{{image:fashion5:url:full}}",
+                "id": "{{image:fashion5:id}}"
+              },
+              "title_url": "https:\/\/jnews.dev.com\/?cat=9",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "KJAHHpB",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "vSf6M5j",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "MUSIC",
+              "image": {
+                "url": "{{image:fashion3:url:full}}",
+                "id": "{{image:fashion3:id}}"
+              },
+              "title_url": "https:\/\/jnews.dev.com\/?cat=6",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          },
+          {
+            "id": "XyMl0hR",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "TRAVEL",
+              "image": {
+                "url": "{{image:fashion6:url:full}}",
+                "id": "{{image:fashion6:id}}"
+              },
+              "title_url": "https:\/\/jnews.dev.com\/?cat=2",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

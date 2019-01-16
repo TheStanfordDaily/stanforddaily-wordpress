@@ -1,0 +1,168 @@
+[
+  {
+    "id": "X6O4vAK",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1519705192099{margin-top: -20px !important;}",
+      "stretch_section": "section-stretched",
+      "layout": "full_width"
+    },
+    "elements": [
+      {
+        "id": "bbeFM9R",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "TMYH3aT",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_style": "jeg_hero_style_5",
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "hero_height_desktop": "380",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_8_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "sRQVJgM",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "hjheq6j",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "VH37SiM",
+            "elType": "widget",
+            "settings": {
+              "space": {
+                "unit": "px",
+                "size": 10
+              }
+            },
+            "elements": [],
+            "widgetType": "spacer"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "FsDyeBf",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "hM9KDZF",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "nfsEzJT",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 1
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 76
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_26_elementor"
+          },
+          {
+            "id": "ZPcUxg1",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "excerpt_length": {
+                "unit": "px",
+                "size": 39
+              },
+              "pagination_mode": "loadmore",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_27_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "pyN50rE",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "e3UwP3g",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "default-sidebar"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

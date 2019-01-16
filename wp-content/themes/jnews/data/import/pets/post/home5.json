@@ -1,0 +1,225 @@
+[
+  {
+    "id": "5b90d26",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "background_background": "classic",
+      "background_image": {
+        "url": "{{image:pet_bg:url:full}}",
+        "id": "{{image:pet_bg:id}}"
+      },
+      "background_position": "center center",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    },
+    "elements": [
+      {
+        "id": "1fa1944",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "e718059",
+            "elType": "section",
+            "settings": {
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "39aee46",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [],
+                "isInner": true
+              },
+              {
+                "id": "32194a4",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50
+                },
+                "elements": [
+                  {
+                    "id": "8bad362",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 80
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  },
+                  {
+                    "id": "fd20926",
+                    "elType": "widget",
+                    "settings": {
+                      "editor": "<h2>Donate to Bawa<\/h2><p>Help bawa to provide better shelter to balinese dog & other animal<\/p><p><a>Donate Now<\/a><\/p>",
+                      "align": "center",
+                      "text_color": "#000000",
+                      "typography_typography": "custom",
+                      "typography_font_family": "Overlock",
+                      "_margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "120",
+                        "bottom": "0",
+                        "left": "120",
+                        "isLinked": false
+                      },
+                      "_padding": {
+                        "unit": "px",
+                        "top": "20",
+                        "right": "0",
+                        "bottom": "20",
+                        "left": "0",
+                        "isLinked": false
+                      },
+                      "_background_background": "classic",
+                      "_background_color": "rgba(255,255,255,0.51)",
+                      "_border_border": "solid",
+                      "_border_width": {
+                        "unit": "px",
+                        "top": "1",
+                        "right": "1",
+                        "bottom": "1",
+                        "left": "1",
+                        "isLinked": true
+                      },
+                      "_border_color": "#f0f0f0",
+                      "_border_radius": {
+                        "unit": "px",
+                        "top": "5",
+                        "right": "5",
+                        "bottom": "5",
+                        "left": "5",
+                        "isLinked": true
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "text-editor"
+                  },
+                  {
+                    "id": "1314010",
+                    "elType": "widget",
+                    "settings": {
+                      "space": {
+                        "unit": "px",
+                        "size": 80
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "spacer"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "TmngssM",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "CHYct4Q",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "b6xT7qd",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "Golden Retriever",
+              "title_url": "https:\/\/jnews.dev.com\/?cat=30",
+              "image": {
+                "url": "{{image:pet1:url:full}}",
+                "id": "{{image:pet1:id}}"
+              },
+              "second_title": "Find out more information about Pitbull Breed",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "DWyoWwO",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "flQ9Iep",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "Pitbull",
+              "title_url": "https:\/\/jnews.dev.com\/?cat=30",
+              "image": {
+                "url": "{{image:pet2:url:full}}",
+                "id": "{{image:pet2:id}}"
+              },
+              "second_title": "Find out more information about Pitbull Breed",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "bGcOob0",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "RfR3moX",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "Beagle",
+              "title_url": "https:\/\/jnews.dev.com\/?cat=30",
+              "image": {
+                "url": "{{image:pet3:url:full}}",
+                "id": "{{image:pet3:id}}"
+              },
+              "second_title": "Find out more information about Beagle Breed",
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

@@ -1,0 +1,259 @@
+{
+  "default-sidebar": {
+    "mc4wp_form_widget-1": {
+      "title": "",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_block_9-2": {
+      "first_title": "Trending",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "",
+      "post_type": "post",
+      "number_post": "5",
+      "post_offset": "",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "ago",
+      "date_format_custom": "",
+      "pagination_mode": "disable",
+      "pagination_number_post": "16",
+      "pagination_scroll_limit": "",
+      "column_width": "auto"
+    },
+    "jnews_module_element_ads-1": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x250:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    }
+  },
+  "footer-widget-1": {
+    "jnews_about-1": {
+      "title": "",
+      "aboutimg": "{{image:logo:id}}",
+      "aboutimgretina": "{{image:logo2x:id}}",
+      "aboutname": "",
+      "aboutoccupation": "",
+      "aboutdesc": "We bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details.",
+      "signature": "",
+      "signatureretina": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_social-1": {
+      "title": "",
+      "widgetstyle": "rounded",
+      "icon_color": "",
+      "bg_color": "",
+      "beforesocial": "<strong>Follow Us</strong>",
+      "aftersocial": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22googleplus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2BJegtheme%22%7D%5D",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "jnews_recent_news-2": {
+      "title": "Recent News",
+      "postnumber": "2",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-3": {
+    "categories-3": {
+      "title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "tag_cloud-1": {
+      "title": "",
+      "taxonomy": "post_tag",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-4": {
+    "mc4wp_form_widget-2": {
+      "title": "Newsletter",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home": {
+    "jnews_module_block_9-3": {
+      "first_title": "TRENDING",
+      "second_title": ".",
+      "url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "",
+      "post_type": "post",
+      "number_post": "4",
+      "post_offset": "",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "ago",
+      "date_format_custom": "",
+      "pagination_mode": "disable",
+      "pagination_number_post": "16",
+      "pagination_scroll_limit": "",
+      "column_width": "auto"
+    },
+    "mc4wp_form_widget-3": {
+      "title": "",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-2": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_300x600:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "ads_image_new_tab": "1",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    }
+  },
+  "category": {
+    "jnews_module_element_ads-3": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "column_width": "auto"
+    },
+    "tag_cloud-2": {
+      "title": "BROWSE BY TAG",
+      "taxonomy": "post_tag",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "categories-5": {
+      "title": "BROWSE BY CATEGORY",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-3": {
+    "mc4wp_form_widget-4": {
+      "title": "",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_popular-2": {
+      "title": "POPULAR POST",
+      "limit": "5",
+      "order_by": "comments",
+      "range": "daily",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_tab_post-2": {
+      "title": "",
+      "limit": "4",
+      "range": "daily",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "contact": {
+    "jnews_social_counter-1": {
+      "title": "GET CONNECTED",
+      "column": "col3",
+      "style": "colored",
+      "newtab": "1",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22dribbble%22%2C%22social_url%22%3A%22https%3A%2F%2Fdribbble.com%2Fenvato%22%7D%2C%7B%22social_icon%22%3A%22soundcloud%22%2C%22social_url%22%3A%22https%3A%2F%2Fsoundcloud.com%2Fdialogdinihari%22%7D%2C%7B%22social_icon%22%3A%22flickr%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fwe-are-envato%2F%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%5D",
+      "header_url": "",
+      "header_type": "heading_5",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "mc4wp_form_widget-5": {
+      "title": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  }
+}

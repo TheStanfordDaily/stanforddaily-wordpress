@@ -1,0 +1,267 @@
+[
+  {
+    "id": "1N1zww1",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "tPln0Mf",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "bQnua6r",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_1_elementor"
+          },
+          {
+            "id": "swaiQcv",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_3",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "nextprev",
+              "pagination_number_post": {
+                "unit": "px",
+                "size": 5
+              },
+              "first_title": "More News",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_2_elementor"
+          },
+          {
+            "id": "a9de603",
+            "elType": "section",
+            "settings": {
+              "gap": "extended",
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "8e5f975",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "6uW8hYH",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:travel-ideas:id}}",
+                      "first_title": "Travel Ideas",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "196fc98",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "NuJhj4E",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:destination:id}}",
+                      "first_title": "Destination",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "kRUvHh0",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              }
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "ce5b0c6",
+            "elType": "section",
+            "settings": {
+              "gap": "extended",
+              "structure": "20"
+            },
+            "elements": [
+              {
+                "id": "876bbab",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "RosjUDC",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:news:id}}",
+                      "first_title": "Travel News",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "8478e66",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 50,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "KP8Qk5Z",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "header_type": "heading_3",
+                      "number_post": {
+                        "unit": "px",
+                        "size": 3
+                      },
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "unique_content": "unique1",
+                      "include_category": "{{category:food-drink:id}}",
+                      "first_title": "Food & Drink",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_17_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "B3GpxqH",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "RulbmgH",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home-3"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

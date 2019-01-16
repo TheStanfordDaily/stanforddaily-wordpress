@@ -1,0 +1,142 @@
+.jeg_header.full .container {
+	padding-left: 25px;
+	padding-right: 35px;
+}
+
+.jeg_stickybar .jeg_logo img {
+	max-height: 58px;
+}
+
+.jeg_slider_type_2 .jeg_slide_caption {
+	max-width: 680px;
+}
+.jeg_slider_type_2 .jeg_slide_caption .jeg_post_title {
+	line-height: 1.3;
+}
+
+.jeg_overlay_slider_wrapper:before {
+	background: -webkit-gradient(linear,left top, right top,color-stop(10%, #000022),color-stop(90%, #044389));
+	background: linear-gradient(90deg,#000022 10%,#044389 90%)
+}
+
+.jeg_header .jeg_menu.jeg_main_menu > li > a {
+	letter-spacing: 2px;
+}
+
+.jeg_pl_md_1 .jeg_post_title {
+	font-weight: normal;
+}
+
+.jeg_pl_sm_2 .jeg_post_category a {
+	letter-spacing: 2px;
+}
+
+.jeg_block_title span {
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+
+.jeg_block_heading_9 {
+    border-top: 2px solid #212121;
+    border-bottom: 1px solid #eee;
+}
+.jeg_block_heading_9 .jeg_block_title span {
+	line-height: 38px;
+}
+
+.jeg_post_excerpt {
+	font-size: 16px;
+	line-height: 1.6em
+}
+
+.jeg_pl_lg_7 .jeg_thumb .jeg_post_category a {
+	letter-spacing: 3px;
+}
+
+.jeg_pl_lg_7 .jeg_post_title {
+    font-size: 30px;
+    margin: 0 auto 13px;
+    line-height: 1.3em;
+}
+
+.jeg_share_button.share-float.share-monocrhome a {
+	background-color: #fff !important;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	border-radius: 2px;
+}
+
+.jeg_share_button .fa {
+	color: #093969;
+}
+
+.jeg_single_tpl_2 .entry-header .jeg_post_title,
+.jeg_single_tpl_3 .entry-header .jeg_post_title,
+.jeg_single_tpl_6 .entry-header .jeg_post_title {
+	font-size: 3.2em;
+	line-height: 1.3em
+}
+
+.jeg_socialcounter.col1 a {
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.jeg_block_heading_6,
+.jeg_socialcounter.col1 a {
+	border-color: #ddd;
+}
+
+.widget .jeg_block_heading_5, 
+.jeg_block_heading_5 {
+	margin-bottom: 20px;
+}
+
+.jeg_pl_sm .jeg_post_title { 
+	font-weight: normal;
+}
+
+.jnews_related_post_container .jeg_block_heading_5 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.jeg_cat_subtitle {
+	font-style: normal;
+}
+
+.jeg_cat_overlay .jeg_title_wrap {
+	padding: 60px 0 40px;
+}
+
+.jeg_cat_overlay.dark .jeg_cat_bg:after { 
+	display: none;
+}
+
+.jeg_cat_overlay {
+    padding-top: 10px;
+}
+
+.jeg_cat_header_4 .jeg_cat_overlay .jeg_title_wrap {
+	padding: 60px 0 70px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.jeg_pl_lg_7 .jeg_post_title {font-size: 22px; line-height: 1.3em}
+}
+@media only screen and (max-width : 568px) {
+	.jeg_pl_lg_7 .jeg_post_title {font-size: 18px; line-height: 1.3em;}
+}
+@media only screen and (max-width : 480px) {
+	.jeg_post_excerpt {
+		font-size: 16px;
+		line-height: 1.6em;
+		height: 70px;
+		overflow: hidden;
+	}
+
+	.jeg_overlay_caption_container .jeg_post_title {
+		font-size: 21px;
+	}
+}
