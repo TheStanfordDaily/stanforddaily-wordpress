@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1348a04",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "css_classes": "vc_custom_1500890847747"
+    },
+    "elements": [
+      {
+        "id": "32e05f2",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "fb6b225",
+            "elType": "widget",
+            "settings": {
+              "fullsize_image": "yes",
+              "date_format_custom": "Y\/m\/d",
+              "post_offset": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

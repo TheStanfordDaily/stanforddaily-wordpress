@@ -1,0 +1,116 @@
+[
+  {
+    "id": "xysfNhb",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "3InvlY4",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "20",
+            "bottom": "0",
+            "left": "0",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "t6eSe85",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "Recipes",
+              "second_title": "Find what to cook",
+              "title_url": "http:\/\/jnews.jegtheme.com\/food\/category\/recipe\/",
+              "image": {
+                "url": "{{image:food7:url:full}}",
+                "id": "{{image:food7:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "Z0Ja00q",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "10",
+            "bottom": "0",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "WYytx1J",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "newtab": "true",
+              "title": "Instagram",
+              "second_title": "Follow & keep stalking",
+              "title_url": "http:\/\/instagram.com\/jegtheme",
+              "image": {
+                "url": "{{image:food8:url:full}}",
+                "id": "{{image:food8:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "kiUn0iT",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "margin": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "20",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "mgYPmcH",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "title": "About Me",
+              "second_title": "Read little story of me.",
+              "title_url": "http:\/\/jnews.jegtheme.com\/food\/about\/",
+              "image": {
+                "url": "{{image:food9:url:full}}",
+                "id": "{{image:food9:id}}"
+              },
+              "column_width": "4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_blocklink_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

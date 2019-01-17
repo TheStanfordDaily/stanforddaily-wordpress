@@ -1,0 +1,108 @@
+.jeg_viewport {
+	padding: 40px 0;
+}
+
+.jeg_thumb .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a {
+	padding: 4px 7px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.jeg_subcat_list > li > a {
+	text-transform: capitalize;
+}
+
+.jeg_newsfeed_subcat li a {
+	text-transform: capitalize;
+}
+
+.jeg_hero_style_2 .jeg_post_category {
+	top: 10px;
+	left: -10px
+}
+
+.jeg_hero_style_2 .jeg_thumb::after {
+    content: '';
+    background: #B3FFAB;
+    background: -webkit-linear-gradient(45deg, #fff, #dd5e08);
+    background: linear-gradient(45deg, #fff, #dd5e08);
+    opacity: 0;
+}
+
+.jeg_pl_md_1 .jeg_post_title,
+.jeg_block_title,
+.jeg_postblock_2.jeg_col_1o3 .jeg_pl_lg_2 .jeg_post_title {
+    font-size: 18px;
+}
+
+.jeg_mc4wp_heading, 
+.jeg_video_playlist_current h2 {
+    margin-bottom: 15px;
+}
+
+.jeg_newsfeed_subcat li a,
+.jeg_newsfeed .jeg_post_title,
+.jeg_newsfeed_tags h3,
+.jeg_newsfeed_tags li a,
+.jeg_menu li > ul li a,
+.jeg_subcat_list > li > a,
+.jeg_pl_xs_3 .jeg_post_title,
+.jeg_video_playlist_title,
+.jeg_top_socials a {
+	font-size: 14px;
+}
+
+.jeg_newsfeed .jeg_post_title {
+	margin: 10px 0 0;
+	font-weight: bold;
+}
+
+.jeg_post_meta {
+	font-size: 12px;
+}
+
+.jeg_topbar {
+	font-size: 13px;
+}
+
+.jeg_blocklink .jeg_block_content a {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.jeg_blocklink .jeg_block_content span {
+    color: #666;
+
+}
+
+@media only screen and (max-width : 1280px) {
+	.jeg_viewport {
+		padding: 0 0;
+	}
+} 
+
+/* 
+
+.jeg_main .jeg_container {
+	overflow: hidden;	
+}
+
+.jeg_sticky_nav .jeg_sticky_logo {
+    display: none;
+}
+
+.jeg_navbar .jeg_search_wrapper,
+.jeg_main_menu > li > a,
+.jeg_header .jeg_sticky_nav .jeg_header .jeg_sticky_nav .jeg_top_socials a, .jeg_header .jeg_sticky_nav .jeg_navbar .jeg_search_wrapper, .jeg_header .jeg_sticky_nav .jeg_carticon,
+.jeg_carticon,
+.jeg_header .jeg_sticky_nav .jeg_main_menu > li > a  {
+	line-height: 42px !important;
+}
+
+.jeg_sticky_logo {
+	height: 42px;
+}
+
+*/

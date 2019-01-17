@@ -1,0 +1,112 @@
+/** Menu **/
+.jeg_main_menu > li > a {
+	letter-spacing: 0.5px;
+}
+
+/** Video Player **/
+.jeg_dark_playlist .jeg_video_playlist_list_wrapper {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+/** Block **/
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 3px 6px 4px;
+	line-height: 1;
+	letter-spacing: 0.5px;
+}
+.jeg_subcat_list > li > a {
+	font-weight: bold;
+	letter-spacing: .2px;
+}
+.jeg_hero_style_1 .jeg_thumb:before {
+	opacity: .18;
+}
+.jeg_hero_style_2 .jeg_post_category {
+	top: 15px;
+}
+.jeg_heropost_1 .jeg_pl_sm_2 .jeg_post_title,
+.jeg_pl_lg_box .jeg_post_title,
+.jeg_pl_md_box .jeg_post_title {
+	font-weight: bold;
+}
+.jeg_heropost_1 .jeg_pl_md_box .jeg_post_title {
+	font-size: 15px;
+}
+.jeg_footer .jeg_pl_sm .jeg_post_title {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+/** Post **/
+input:not([type="submit"]), textarea, select, .chosen-container-single .chosen-single {
+	border-radius: 3px;
+}
+input[type="submit"], .btn, .button {
+	font-size: 14px;
+	border-radius: 3px;
+	padding: 0 22px;
+	font-weight: bold !important;
+	letter-spacing: 0.5px;
+}
+
+/** Archive **/
+.jeg_cat_header_1 {
+	border-bottom: 3px solid #eee;
+	padding-bottom: 15px;
+}
+
+/** Widget **/
+.mc4wp-form h3 {
+	text-transform: uppercase;
+	letter-spacing: .5px;
+}
+.widget .mc4wp-form, .jeg_sidebar .mc4wp-form {
+	padding: 30px;
+	background: #fff;
+	border-radius: 5px;
+	border-width: 3px;
+}
+.jeg_sidebar .mc4wp-form .jeg_mc4wp_heading,
+.widget .mc4wp-form .jeg_mc4wp_heading,
+.footer_widget .mc4wp-form .jeg_mc4wp_heading {
+	margin-bottom: 1em;
+}
+.widget_tag_cloud a {
+	line-height: 1;
+	padding: 5px 8px 6px;
+	letter-spacing: .5px;
+}
+.popularpost_item .jeg_post_title {
+	font-weight: bold;
+}
+
+/** Footer **/
+.jeg_footer.custom input::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.custom input:-moz-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.custom input::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.custom input:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.dark input::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.dark input:-moz-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.dark input::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.jeg_footer.dark input:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}

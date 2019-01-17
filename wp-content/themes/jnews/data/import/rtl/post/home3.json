@@ -1,0 +1,471 @@
+[
+  {
+    "id": "Z9tZOHq",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1499838706012{margin-top: -30px !important;}",
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "css_classes": "vc_custom_1499838706012"
+    },
+    "elements": [
+      {
+        "id": "9aziFP5",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css": ".vc_custom_1499838741889{padding-right: 0px !important;padding-left: 0px !important;}",
+          "css_classes": "vc_custom_1499838741889"
+        },
+        "elements": [
+          {
+            "id": "eecLhqt",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "fullsize_image": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "80qqv9j",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "hiXgrqg",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "g8GqjgI",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "محتوى متميز",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          },
+          {
+            "id": "Y6Odk0Y",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:startup:id}},{{category:apps:id}},{{category:mobile:id}},{{category:gear:id}}",
+              "header_filter_text": "الكل",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:tech:id}}",
+              "first_title": "التكنولوجيا",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_9_elementor"
+          },
+          {
+            "id": "BqsKrSa",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:gaming:id}},{{category:sports:id}},{{category:music:id}},{{category:movie:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 3
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:entertainment:id}}",
+              "pagination_mode": "nextprev",
+              "first_title": "وسائل الترفيه",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_22_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "W1tdjru",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "LSK11rr",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home-3"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "kHajNYw",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1499851836504{margin-top: 15px !important;margin-bottom: 40px !important;padding-top: 30px !important;background-color: #111111 !important;}",
+      "css_classes": "vc_custom_1499851836504 jeg_sidebar_left"
+    },
+    "elements": [
+      {
+        "id": "7ZvJqXt",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "_inline_size": null
+        },
+        "elements": [
+          {
+            "id": "RPEOR82",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_5",
+              "header_align": "center",
+              "scheme": "alt",
+              "first_title": "اختيار المحرر",
+              "header_text_color": "#ffffff",
+              "header_background": "#111111",
+              "header_line_color": "rgba(255,255,255,0.14)"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "51f1a1d",
+            "elType": "section",
+            "settings": {
+              "structure": "22"
+            },
+            "elements": [
+              {
+                "id": "8f9aaf5",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 66,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "356f80f",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "post_offset": {
+                        "unit": "px",
+                        "size": 0
+                      },
+                      "scheme": "alt",
+                      "header_filter_text": "All",
+                      "date_format_custom": "Y\/m\/d",
+                      "excerpt_ellipsis": "...",
+                      "pagination_scroll_limit": "",
+                      "column_width": "8"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_block_13_elementor"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "de2fcac",
+                "elType": "column",
+                "settings": {
+                  "_column_size": 33,
+                  "_inline_size": null
+                },
+                "elements": [
+                  {
+                    "id": "2ea125f",
+                    "elType": "widget",
+                    "settings": {
+                      "compatible_column_notice": "",
+                      "ads_type": "image",
+                      "ads_image_new_tab": "yes",
+                      "ads_image": {
+                        "url": "{{image:ad_300x600:url:full}}",
+                        "id": "{{image:ad_300x600:id}}"
+                      },
+                      "ads_image_link": "http:\/\/bit.ly\/jnewsio",
+                      "column_width": "4"
+                    },
+                    "elements": [],
+                    "widgetType": "jnews_element_ads_elementor"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "NlHYVeU",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "nuSRciF",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "BTNOtr8",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:health:id}}",
+              "column_width": "4",
+              "first_title": "الصحة",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "2Ad1HLS",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "CYyqjfo",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:science:id}}",
+              "column_width": "4",
+              "first_title": "علم",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "euiCYbt",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "bt9MmXA",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:business:id}}",
+              "column_width": "4",
+              "first_title": "اعمال",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "QoJSZWT",
+    "elType": "section",
+    "settings": {
+      "gap": "extended"
+    },
+    "elements": [
+      {
+        "id": "GIMjGkJ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "ZA7e4qQ",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:sports:id}}",
+              "column_width": "4",
+              "first_title": "رياضات",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "3Bke4u1",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "rrChQl9",
+            "elType": "widget",
+            "settings": {
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:health:id}}",
+              "column_width": "4",
+              "first_title": "Health",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "Pi3w0QP",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33
+        },
+        "elements": [
+          {
+            "id": "HbzHLGV",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_8",
+              "number_post": {
+                "unit": "px",
+                "size": 4
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "include_category": "{{category:travel:id}}",
+              "column_width": "4",
+              "first_title": "السفر",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_20_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

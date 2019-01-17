@@ -1,0 +1,139 @@
+/* Layout */
+@media only screen and (min-width : 1280px) {
+	.container,
+    .jeg_vc_content > .vc_row,
+    .jeg_vc_content > .vc_element > .vc_row {
+	    width: 1050px;
+	}
+}
+
+/** Header **/
+.jeg_header_style_sidecontent .jeg_navbar_wrapper {
+	border-bottom: 0;
+}
+
+/** Menu **/
+.jeg_main_menu > li > a {
+	letter-spacing: 0.5px;
+	text-transform: none;
+}
+.jeg_main_menu li > ul {
+	padding: 15px 0px;
+}
+.jeg_main_menu li > ul li a {
+	font-size: 14px;
+	padding: 8px 23px 8px 25px;
+	border-bottom: 0;
+}
+.jeg_newsfeed_list {
+	padding: 30px;
+}
+.jeg_newsfeed .jeg_post_title {
+	font-size: 16px;
+}
+
+/* Blocks */
+.jeg_block_heading_5:before {
+	border-width: 1px;
+}
+.jeg_pl_md_1 .jeg_post_meta, .jeg_postblock_carousel_1 .jeg_post_meta {
+	display: none;
+}
+.jeg_pl_md_1 .jeg_thumb {
+	margin-bottom: 10px;
+}
+.jeg_col_2o3 .jeg_pl_md_1 .jeg_post_title, .jeg_col_3o3 .jeg_pl_md_1 .jeg_post_title {
+	font-size: 20px;
+}
+.jeg_pl_lg_8 .jeg_post_meta .fa {
+	font-size: 13px;
+}
+.jeg_postblock_carousel_1 .jeg_postblock_content {
+	padding: 0 10px;
+}
+.jeg_postblock_carousel_1 .jeg_post_title {
+	font-size: 13px;
+	font-weight: 500;
+}
+.jeg_thumb .jeg_post_category {
+	bottom: auto;
+	top: 10px;
+}
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 4px 8px 2px 8px;
+	line-height: 1;
+	border-radius: 18px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+.jeg_pl_md_card .jeg_post_category, .jeg_pl_lg_card .jeg_post_category {
+	line-height: 1;
+	margin-bottom: 7px;
+}
+.jeg_pl_md_card .jeg_post_category a, .jeg_pl_lg_card .jeg_post_category a {
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+.jeg_pagenav_1 .page_nav, .jeg_pagenav_1 .page_number,
+.jeg_pagenav_2 .page_nav, .jeg_pagenav_2 .page_number {
+	border-radius: 100%;
+	width: 32px;
+	line-height: 30px;
+	padding: 2px 0 0;
+}
+.jeg_pagenav_1 .page_nav, .jeg_pagenav_1 .page_number {
+	line-height: 28px;
+}
+
+/* Share */
+.jeg_share_button a {
+	line-height: 39px;
+	max-width: 38px;
+	border-radius: 38px;
+}
+.jeg_share_button a.expanded {
+    padding: 0 15px;
+    border-radius: 28px;
+}
+.jeg_share_button a > span {
+	font-size: 12px;
+}
+.jeg_share_button span.count {
+	margin-left: 5px;
+	font-size: 11px;
+	padding: 2px 5px 0;
+}
+
+/** Post **/
+.jeg_post_tags a {
+	font-size: 11px;
+	letter-spacing: 0.5px;
+	border-radius: 20px;
+	padding: 5px 8px 2px;
+	line-height: 1;
+	background: #e4e4e4;
+	text-transform: uppercase;
+}
+
+/** Widget **/
+.widget .mc4wp-form, .jeg_sidebar .mc4wp-form {
+	background: transparent;
+	border-width: 4px;
+	border-radius: 5px;
+	padding: 30px;
+	text-align: center;
+}
+.widget .mc4wp-form input, .jeg_sidebar .mc4wp-form input {
+	text-align: center;
+}
+.widget .mc4wp-form h3, .jeg_sidebar .mc4wp-form h3 {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 15px;
+}

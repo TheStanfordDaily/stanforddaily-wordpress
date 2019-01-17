@@ -1,0 +1,258 @@
+[
+  {
+    "id": "vQCzZPG",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "hrmYCXn",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "tBarkfO",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 4
+              },
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "hero_height_desktop": "580",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_1_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "KRdTNKu",
+    "elType": "section",
+    "settings": [],
+    "elements": [
+      {
+        "id": "LEfhuSQ",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "uIxM9TK",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:baby-and-toddler:id}},{{category:food:id}},{{category:health:id}},{{category:lifestyle:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "What's New",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          },
+          {
+            "id": "LQ7fshG",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              },
+              "ads_image_link": "#"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "NxvypIs",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:family:id}},{{category:parenting:id}},{{category:lifestyle:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "first_title": "Mother & Father",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_19_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "ctWY7bf",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "69707fe",
+            "elType": "widget",
+            "settings": {
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_345x345:url:full}}",
+                "id": "{{image:ad_345x345:id}}"
+              }
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          },
+          {
+            "id": "ef9b6ca",
+            "elType": "widget",
+            "settings": {
+              "first_title": "Follow Us",
+              "header_type": "heading_6"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "50b0606",
+            "elType": "widget",
+            "settings": {
+              "column": "col1",
+              "style": "colored",
+              "fb_id": "1708153456106457",
+              "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+              "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+              "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+              "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+              "account": [
+                {
+                  "social_icon": "facebook",
+                  "social_url": "https:\/\/www.facebook.com\/jegtheme\/",
+                  "_id": "6b8dfc1"
+                },
+                {
+                  "social_icon": "twitter",
+                  "social_url": "https:\/\/twitter.com\/jegtheme",
+                  "_id": "ad85b4e"
+                },
+                {
+                  "social_icon": "instagram",
+                  "social_url": "https:\/\/www.instagram.com\/envato\/",
+                  "_id": "23f4962"
+                },
+                {
+                  "social_icon": "youtube",
+                  "social_url": "http:\/\/www.youtube.com\/user\/Envato",
+                  "_id": "9ad62a6"
+                }
+              ]
+            },
+            "elements": [],
+            "widgetType": "socialcounter"
+          },
+          {
+            "id": "845bfba",
+            "elType": "widget",
+            "settings": [],
+            "elements": [],
+            "widgetType": "wp-widget-jnews_tab_post"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "B455MDR",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1497671495454{margin-top: 40px !important;margin-bottom: 60px !important;padding-top: 30px !important;background-color: #f9f9f9 !important;}",
+      "css_classes": "vc_custom_1497671495454"
+    },
+    "elements": [
+      {
+        "id": "VwCHnJW",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "849f945",
+            "elType": "widget",
+            "settings": {
+              "title": "Craft & Tips Video",
+              "header_size": "h3",
+              "align": "center",
+              "title_color": "#2e3b43",
+              "typography_typography": "custom",
+              "typography_font_family": "Nunito",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 32
+              },
+              "typography_font_weight": "400"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "28b2d3f",
+            "elType": "widget",
+            "settings": {
+              "color": "#ebebeb",
+              "width": {
+                "unit": "%",
+                "size": 10
+              },
+              "align": "center",
+              "gap": {
+                "unit": "px",
+                "size": 2
+              }
+            },
+            "elements": [],
+            "widgetType": "divider"
+          },
+          {
+            "id": "P1DCz9b",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "horizontal",
+              "playlist": "https:\/\/www.youtube.com\/watch?v=foWUOPxU6j8,https:\/\/www.youtube.com\/watch?v=qDJgt-sto-Q,https:\/\/www.youtube.com\/watch?v=vwMH9eJGTcU,https:\/\/www.youtube.com\/watch?v=Xf1olSpQOVk,https:\/\/www.youtube.com\/watch?v=Jv8R8r6Ugho,https:\/\/www.youtube.com\/watch?v=cvszL_o5ChA"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_embedplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

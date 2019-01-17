@@ -1,0 +1,147 @@
+[
+  {
+    "id": "FwgMyLJ",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched"
+    },
+    "elements": [
+      {
+        "id": "6RnzFcP",
+        "elType": "column",
+        "settings": {
+          "_column_size": 66
+        },
+        "elements": [
+          {
+            "id": "8abbsjR",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 2
+              },
+              "unique_content": "unique1",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_2_elementor"
+          },
+          {
+            "id": "hUueNEz",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_type": "heading_6",
+              "first_title": "Popular",
+              "second_title": " Product"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_header_elementor"
+          },
+          {
+            "id": "TG8ydol",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:boxer:id}},{{category:bulldog:id}},{{category:german-shepherd:id}},{{category:golden-retriever:id}}",
+              "post_offset": {
+                "unit": "px",
+                "size": 2
+              },
+              "unique_content": "unique1",
+              "first_title": "Dog",
+              "second_title": " Wellness",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "excerpt_ellipsis": "...",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_1_elementor"
+          },
+          {
+            "id": "La4S1sr",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "header_filter_category": "{{category:training:id}},{{category:wellness:id}},{{category:culture:id}}",
+              "number_post": {
+                "unit": "px",
+                "size": 10
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "pagination_mode": "loadmore",
+              "first_title": "Study ",
+              "second_title": " & Research",
+              "header_filter_text": "All",
+              "date_format_custom": "Y\/m\/d",
+              "pagination_scroll_limit": ""
+            },
+            "elements": [],
+            "widgetType": "jnews_block_21_elementor"
+          }
+        ],
+        "isInner": false
+      },
+      {
+        "id": "HEgPOs0",
+        "elType": "column",
+        "settings": {
+          "_column_size": 33,
+          "sticky_sidebar": "yes"
+        },
+        "elements": [
+          {
+            "id": "0e08075",
+            "elType": "widget",
+            "settings": {
+              "sidebar": "home-3"
+            },
+            "elements": [],
+            "widgetType": "sidebar"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "gMSyHnM",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css": ".vc_custom_1493273163896{margin-bottom: 40px !important;border-top-width: 1px !important;border-bottom-width: 1px !important;padding-top: 40px !important;background-color: #f2f2f2 !important;border-top-color: #e8e8e8 !important;border-top-style: solid !important;border-bottom-color: #e8e8e8 !important;border-bottom-style: solid !important;}",
+      "css_classes": "vc_custom_1493273163896"
+    },
+    "elements": [
+      {
+        "id": "u2mnJuW",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "WThI3mA",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "layout": "horizontal",
+              "playlist": "https:\/\/www.youtube.com\/watch?v=SfLV8hD7zX4, https:\/\/www.youtube.com\/watch?v=j5PLngd2WN0, https:\/\/www.youtube.com\/watch?v=fdnM6u4sKKY, https:\/\/www.youtube.com\/watch?v=1kgmfPClsZc, https:\/\/www.youtube.com\/watch?v=JDZ1K79ie64, https:\/\/www.youtube.com\/watch?v=CKz_Ndak1u4"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_embedplaylist_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

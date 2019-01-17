@@ -1,0 +1,89 @@
+{
+  "contact": {
+    "jnews_about-2": {
+      "aboutdesc": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+      "aboutimg": "{{image:fashion1:id}}",
+      "aboutimgretina": "{{image:fashion1:id}}",
+      "aboutname": "Crystell Kodak",
+      "aboutoccupation": "XYZ Photographer",
+      "align": "1",
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_6",
+      "header_url": "",
+      "second_title": "",
+      "signature": "",
+      "signatureretina": "",
+      "title": ""
+    },
+    "jnews_social-2": {
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCiSEZYAicvipL95JrvISyIw%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fjegtheme%2F%22%7D%5D",
+      "aftersocial": "",
+      "align": "1",
+      "beforesocial": "",
+      "bg_color": "",
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_6",
+      "header_url": "",
+      "icon_color": "#121415",
+      "second_title": "",
+      "title": "",
+      "widgetstyle": "nobg"
+    }
+  },
+  "default-sidebar": {
+    "categories-3": {
+      "header_background": "",
+      "header_text_color": "",
+      "header_type": "heading_8",
+      "header_url": "",
+      "second_title": "",
+      "title": ""
+    },
+    "jnews_module_block_27-2": {
+      "accent_color": "",
+      "alt_color": "",
+      "column_width": "auto",
+      "content_type": "all",
+      "date_format": "default",
+      "date_format_custom": "Y/m/d",
+      "excerpt_color": "",
+      "excerpt_ellipsis": "...",
+      "excerpt_length": "20",
+      "exclude_category": "",
+      "exclude_post": "",
+      "exclude_tag": "",
+      "first_title": "Popular Post",
+      "header_accent_color": "",
+      "header_background": "",
+      "header_filter_author": "",
+      "header_filter_category": "",
+      "header_filter_tag": "",
+      "header_filter_text": "All",
+      "header_line_color": "",
+      "header_secondary_background": "",
+      "header_text_color": "",
+      "header_type": "heading_8",
+      "include_author": "",
+      "include_category": "",
+      "include_post": "",
+      "include_tag": "",
+      "number_post": "4",
+      "pagination_mode": "disable",
+      "pagination_number_post": "6",
+      "pagination_scroll_limit": "0",
+      "post_offset": "0",
+      "post_type": "post",
+      "scheme": "normal",
+      "second_title": "",
+      "sort_by": "popular_post",
+      "title_color": "",
+      "unique_content": "disable",
+      "url": ""
+    },
+    "search-3": {
+      "title": ""
+    }
+  }
+}

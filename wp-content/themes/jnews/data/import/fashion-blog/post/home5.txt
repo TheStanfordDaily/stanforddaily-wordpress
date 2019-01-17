@@ -1,0 +1,2 @@
+[vc_row][vc_column][jnews_hero_3 compatible_column_notice="" hero_margin="20" hero_style="jeg_hero_style_3" content_filter_number_alert="" post_offset="0" sort_by="latest"]
+[/vc_column][/vc_row][vc_row][vc_column offset="vc_hidden-xs"][jnews_element_ads compatible_column_notice="" ads_type="image" ads_image="{{image:ad_970x90:id}}" ads_image_link="#"][jnews_carousel_2 compatible_column_notice="" number_item="4" margin="20" number_post="5" post_offset="0" sort_by="latest" show_nav="true"][/vc_column][/vc_row]

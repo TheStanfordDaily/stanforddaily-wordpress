@@ -1,0 +1,224 @@
+/** Layout **/
+@media only screen and (min-width:1440px) {
+	.jeg_header.full .container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+/** Menu **/
+.jeg_main_menu > li > a {
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+.jeg_menu_style_5 > li.current-menu-item > a, .jeg_menu_style_5 > li.current-menu-ancestor > a {
+    color: #212121;
+}
+
+/* Blocks */
+.jeg_block_title {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 13px;
+}
+.jeg_block_heading_7 .jeg_block_title {
+	font-size: 11px;
+}
+.widget .jeg_block_heading_7 .jeg_block_title {
+	float: none;
+	text-align: center;
+}
+.jeg_post_meta {
+	font-size: 10px;
+	letter-spacing: .5px;
+}
+.jeg_post_meta .fa, .entry-header .jeg_post_meta .fa {
+	color: inherit !important;
+	margin-right: 2px;
+}
+.jeg_post_category {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.jeg_post_category a {
+	font-weight: bold;
+}
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a, .jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 2px 4px 3px;
+	line-height: 1;
+	font-weight: 600;
+}
+.jeg_slider_type_2 .jeg_slide_item:before {
+	opacity: .3;
+}
+.jeg_slider_type_2 .jeg_slide_caption .jeg_post_title {
+	font-weight: normal;
+}
+.jeg_slider_type_4 .jeg_slide_item:before {
+	background: rgba(0, 0, 0, .15);
+}
+.jeg_slider_type_4 .jeg_slide_caption:before, .jeg_slider_type_4 .jeg_slide_caption:after {
+	display: none;
+}
+.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title {
+	line-height: 1.15;
+	margin: 16px auto 10px;
+}
+
+.jeg_pl_md_2 .jeg_post_title, .jeg_pl_md_3 .jeg_post_title,
+.jeg_pl_lg_2 .jeg_post_title, .jeg_pl_lg_3 .jeg_post_title,
+.jeg_pl_lg_4 .jeg_post_title {
+	font-weight: normal;
+}
+.jeg_pl_md_1 .jeg_post_title {
+	font-weight: normal;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+.jeg_pl_md_4 .jeg_post_title {
+	font-size: 24px;
+	line-height: 1.15;
+}
+.jeg_pl_sm .jeg_post_title, .popularpost_item .jeg_post_title {
+	font-size: 16px;
+	line-height: 1.25;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+/* Carousel */
+.jeg_postblock_carousel_3 .jeg_thumb {
+	margin-right: 15px;
+}
+.jeg_postblock_carousel_3 .jeg_post_title {
+	font-size: 15px;
+}
+.jeg_postblock_carousel_3.shownav .jeg_carousel_post {
+	padding: 0 30px;
+}
+.jeg_postblock_carousel_3 .owl-nav > div {
+	border-color: #eee;
+	font-size: 15px;
+	width: 30px;
+}
+.jeg_postblock_carousel_3 .owl-nav > div:hover {
+	background: #fff;
+}
+
+/* Hero */
+.jeg_heroblock_8 .jeg_post_title {
+	font-size: 24px;
+}
+.jeg_hero_style_6 .jeg_post_title {
+	font-weight: normal;
+}
+.jeg_hero_style_6 .jeg_thumb:before {
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+
+/** Post **/
+.entry-header .jeg_post_title {
+	font-weight: normal;
+	font-size: 4em;
+	line-height: 1.1;
+}
+.jeg_single_tpl_10 .entry-header:before {
+	border-bottom: 3px solid #f5aa95;
+}
+@media only screen and (min-width:1200px) {
+	.jeg_single_tpl_10 .entry-header:before {
+		margin-bottom: 40px;
+	}
+}
+.entry-content blockquote p {
+	text-transform: uppercase;
+	letter-spacing: .5px;
+}
+.entry-content .pullquote.align-left {
+	text-align: left;
+}
+.entry-content .pullquote:before, .entry-content .pullquote:after {
+	width: 80px;
+	margin: 1em auto;
+}
+
+/** Category **/
+.jeg_cat_title {
+	letter-spacing: normal;
+}
+.jeg_cat_header_4 .jeg_cat_overlay .jeg_title_wrap {
+	padding: 70px 0;
+}
+
+/** Author **/
+.jeg_archive_header.jeg_authorpage {
+	margin-bottom: 60px;
+}
+.jeg_authorpage .jeg_author_wrap {
+	background: #f9f6f5;
+	border: 0;
+	border-radius: 0;
+	text-align: center;
+}
+.jeg_authorpage .jeg_author_image {
+	float: none;
+}
+.jeg_authorpage .jeg_author_image img {
+	width: 80px;
+	height: 80px;
+}
+.jeg_authorpage .jeg_author_content {
+	max-width: 600px;
+	padding: 0;
+	margin: 20px auto 0;
+}
+.jeg_authorpage .jeg_author_content p {
+    width: auto;
+}
+
+/** WooCommerce **/
+.woocommerce .woocommerce-breadcrumb {
+	display: none;
+}
+.woocommerce-checkout {
+	margin-bottom: 40px;
+}
+
+/** Widget **/
+.popularpost_item:first-child {
+	border-bottom-width: 2px;
+}
+.popularpost_item .jeg_post_title a:before {
+	font-size: 20px;
+	letter-spacing: .5px;
+}
+.jeg_tabpost_nav li {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+/* Mailchimp 4 WP */
+.widget .mc4wp-form, .jeg_sidebar .mc4wp-form {
+	background: #F9F6F5;
+	border: 0;
+	padding: 40px;
+	text-align: center;
+}
+.widget .mc4wp-form .jeg_mc4wp_heading {
+	margin-bottom: 20px;
+}
+.widget .mc4wp-form h3, .jeg_sidebar .mc4wp-form h3 {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

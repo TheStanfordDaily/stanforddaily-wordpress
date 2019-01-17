@@ -1,0 +1,46 @@
+[
+  {
+    "id": "CEp4QG2",
+    "elType": "section",
+    "settings": {
+      "stretch_section": "section-stretched",
+      "css_classes": "vc_custom_1500885411715"
+    },
+    "elements": [
+      {
+        "id": "Xf00aUR",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css_classes": "vc_custom_1500883717252"
+        },
+        "elements": [
+          {
+            "id": "lxz3tCX",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "autoplay_delay": {
+                "unit": "px",
+                "size": 3500
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "unique_content": "unique1",
+              "include_post": "{{post:putting-a-sofa-in-your-kitchen-is-officially-a-thing:id}},{{post:the-beautiful-interior-of-casa-ubud-seminyak-by-leo-dicaplok:id}},{{post:these-16-stylish-rooms-do-mid-century-modern-right:id}}",
+              "enable_autoplay": "true",
+              "fullsize_image": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_slider_4_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

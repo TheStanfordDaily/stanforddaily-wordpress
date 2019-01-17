@@ -1,0 +1,110 @@
+.jeg_main_menu > li > a {
+	padding: 0 10px;
+	line-height: 30px;
+	margin: 0 5px;
+}
+
+.jeg_main_menu > li {
+	border-right: 1px solid #eee;
+}
+
+.jeg_main_menu > li:last-child {
+	border-right: 0;
+}
+
+.sf-arrows .sf-with-ul:after {
+	display: none
+}
+
+.jeg_block_title, .jeg_block_heading_2 .jeg_block_title {
+	font-size: 18px;
+	position: relative;
+}
+
+.jeg_block_heading_2 .jeg_subcat_list > li > a {
+	font-size: 12px;
+}
+
+.jeg_block_title span,
+.jeg_subcat_list > li > a {
+	height: 42px;
+	line-height: 42px;
+}
+
+.jeg_pl_md_2 .jeg_post_title {
+	font-size: 26px;
+	line-height: 1.2em;
+}
+
+.jeg_hero_style_7 .jeg_postblock_content {
+	left: 20px;
+	bottom: 20px;
+	right: 20px;
+	width: auto;
+}
+
+.jeg_block_heading_2 .jeg_block_title:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 20px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: #c62d2d transparent transparent transparent;
+}
+
+.jeg_thumb .jeg_post_category a {
+	padding: 4px 8px;
+}
+
+.jeg_pl_md_5 .jeg_post_title {
+	font-size: 18px;
+}
+
+.jeg_hero_style_2 .jeg_post_category {
+	top: 20px;
+}
+
+.jeg_sidebar .jeg_block_title, .jeg_sidebar .jeg_block_heading_2 .jeg_block_title {
+	font-size: 16px;
+}
+
+.jeg_cat_subtitle {
+	font-style: normal;
+}
+
+.jeg_share_button.share-float a {
+	margin-bottom: 10px;
+}
+
+.jeg_header .jeg_sticky_nav .jeg_main_menu > li > a {
+	line-height: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.jeg_pl_sm .jeg_post_title {
+		font-size: 14px;
+	}
+
+	.jeg_pl_md_card .jeg_post_title {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.jeg_pl_sm .jeg_post_title {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 568px) {
+	.jeg_pl_md_2 .jeg_post_title, .jeg_pl_md_3 .jeg_post_title {
+		font-size: 16px;
+	}
+
+	.jeg_pl_md_1 .jeg_post_title {
+		font-size: 17px;
+	}
+}

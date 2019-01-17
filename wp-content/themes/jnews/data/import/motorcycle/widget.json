@@ -1,0 +1,203 @@
+{
+  "default-sidebar": {
+    "jnews_social_counter-3": {
+      "title": "Stay Connected",
+      "column": "col1",
+      "style": "light",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_tab_post-5": {
+      "title": "",
+      "limit": "4",
+      "range": "daily",
+      "second_title": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_popular-6": {
+      "title": "Popular",
+      "limit": "5",
+      "order_by": "comments",
+      "range": "daily",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-1": {
+    "text-3": {
+      "title": "",
+      "text": "<img class=\"\" src=\"{{image:logo:url:full}}\" />\r\n\r\n<br/><br/>\r\n\r\nWe bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details. Build any publishing media for your business with JNews.",
+      "second_title": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "tag_cloud-7": {
+      "title": "Popular Tag",
+      "taxonomy": "post_tag",
+      "second_title": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-3": {
+    "jnews_recent_news-5": {
+      "title": "Recent News",
+      "postnumber": "2",
+      "second_title": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-widget": {
+    "jnews_social_counter-4": {
+      "title": "Stay Connected",
+      "column": "col1",
+      "style": "light",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fenvato%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-loop": {
+    "jnews_popular-3": {
+      "title": "Popular Post",
+      "limit": "5",
+      "order_by": "comments",
+      "range": "all",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-3": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "Advertisement Banner",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "scheme": "normal",
+      "column_width": "auto"
+    },
+    "jnews_twitter-3": {
+      "title": "Follow our Twitter",
+      "username": "crash_motogp",
+      "limit": "2",
+      "height": "150",
+      "theme": "dark",
+      "color": "",
+      "header": "true",
+      "footer": "true",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "single-post": {
+    "jnews_social_counter-6": {
+      "title": "Stay Connected",
+      "column": "col1",
+      "style": "light",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fenvato%2F%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_module_element_ads-8": {
+      "ads_type": "image",
+      "ads_image": "{{image:ad_345x345:id}}",
+      "ads_image_link": "#",
+      "ads_image_alt": "Advertisement Banner",
+      "google_publisher_id": "",
+      "google_slot_id": "",
+      "google_desktop": "auto",
+      "google_tab": "auto",
+      "google_phone": "auto",
+      "ads_code": "",
+      "scheme": "normal",
+      "column_width": "auto"
+    },
+    "jnews_tab_post-3": {
+      "title": "",
+      "limit": "5",
+      "range": "daily",
+      "second_title": "",
+      "header_url": "",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_popular-4": {
+      "title": "Popular",
+      "limit": "5",
+      "order_by": "comments",
+      "range": "daily",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_2",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  }
+}

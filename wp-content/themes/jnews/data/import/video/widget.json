@@ -1,0 +1,232 @@
+{
+  "default-sidebar": {
+    "jnews_module_block_9-4": {
+      "first_title": "Recommended",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": "",
+      "header_filter_category": "",
+      "header_filter_author": "",
+      "header_filter_tag": "",
+      "header_filter_text": "All",
+      "post_type": "post",
+      "content_type": "all",
+      "number_post": "3",
+      "post_offset": "0",
+      "unique_content": "disable",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "date_format": "default",
+      "date_format_custom": "Y/m/d",
+      "pagination_mode": "disable",
+      "pagination_number_post": "4",
+      "pagination_scroll_limit": "0",
+      "scheme": "normal",
+      "column_width": "auto"
+    },
+    "jnews_module_element_header-2": {
+      "first_title": "Popular Playlist",
+      "second_title": "",
+      "url": "",
+      "header_type": "heading_8",
+      "header_align": "left",
+      "header_background": "",
+      "header_text_color": "",
+      "scheme": "normal",
+      "column_width": "auto"
+    },
+    "jnews_module_element_videoplaylist-2": {
+      "layout": "vertical",
+      "scheme": "dark",
+      "number_post": "5",
+      "post_type": "post",
+      "post_offset": "0",
+      "include_post": "",
+      "exclude_post": "",
+      "include_category": "",
+      "exclude_category": "",
+      "include_author": "",
+      "include_tag": "",
+      "exclude_tag": "",
+      "sort_by": "latest",
+      "column_width": "auto"
+    }
+  },
+  "footer-widget-1": {
+    "jnews_about-2": {
+      "title": "",
+      "aboutimg": "{{image:footer_logo:id}}",
+      "aboutimgretina": "{{image:footer_logo2x:id}}",
+      "aboutname": "",
+      "aboutoccupation": "",
+      "aboutdesc": "We bring you the best Premium WordPress Themes that perfect for news, magazine, personal blog, etc. Check our landing page for details.",
+      "signature": "",
+      "signatureretina": "",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-2": {
+    "categories-6": {
+      "title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-3": {
+    "tag_cloud-3": {
+      "title": "",
+      "taxonomy": "post_tag",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "jnews_social-2": {
+      "title": "Follow Us",
+      "widgetstyle": "rounded",
+      "icon_color": "",
+      "bg_color": "",
+      "beforesocial": "",
+      "aftersocial": "",
+      "account": "%5B%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22instagram%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.instagram.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22googleplus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2BJegtheme%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "footer-widget-4": {
+    "mc4wp_form_widget-7": {
+      "title": "Newsletter",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home": {
+    "mc4wp_form_widget-9": {
+      "title": "",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_6",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "contact": {
+    "jnews_social_counter-2": {
+      "title": "Follow Us",
+      "column": "col1",
+      "style": "light",
+      "newtab": "1",
+      "fb_id": "1708153456106457",
+      "fb_secret": "ae408213fb9a2e29d3ad858e03ec5a75",
+      "fb_key": "1708153456106457|LBeqPdQFTJXpeFL3sPex1LQBMVY",
+      "gg_key": "AIzaSyCNRPgcByJDdhhZZRZ0AEyUnZ9lqmlBrvE",
+      "bh_key": "t2wwIJCdYCWCdAdPHwef3hGvcx8ztA8o",
+      "twitch_key": "70rw46i5pwbs7awvivrex7weweg6jq",
+      "linkedin_id": "",
+      "linkedin_secret": "",
+      "linkedin_code": "",
+      "linkedin_key": "",
+      "vk_id": "",
+      "rss_count": "",
+      "account": "%5B%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%2C%7B%22social_icon%22%3A%22twitch%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.twitch.tv%2Fesl_csgo%22%7D%2Cnull%2C%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22google-plus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2Benvato%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "text-3": {
+      "title": "Contact Info",
+      "text": "P. (0361) 888 1234 <br />\r\nF. (0361) 888 1235 <br />\r\nEmail: <a href=\"mailto:contact@yourwebsite.com\">contact@yourwebsite.com</a>",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "text-2": {
+      "title": "Headquarters",
+      "text": "Jegtheme Studio <br />\r\n36B Sunset Road,<br />\r\nBali, Indonesia 80115<br />",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-3": {
+    "jnews_social-3": {
+      "title": "Follow Us",
+      "widgetstyle": "rounded",
+      "icon_color": "",
+      "bg_color": "",
+      "beforesocial": "",
+      "aftersocial": "",
+      "account": "%5B%7B%22social_icon%22%3A%22vimeo%22%2C%22social_url%22%3A%22http%3A%2F%2Fvimeo.com%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%2C%7B%22social_icon%22%3A%22twitch%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.twitch.tv%2F%22%7D%2C%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22googleplus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2BJegtheme%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "categories-7": {
+      "title": "Browse by Category",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  },
+  "home-4": {
+    "jnews_social-4": {
+      "title": "Follow Us",
+      "widgetstyle": "rounded",
+      "icon_color": "",
+      "bg_color": "",
+      "beforesocial": "",
+      "aftersocial": "",
+      "account": "%5B%7B%22social_icon%22%3A%22vimeo%22%2C%22social_url%22%3A%22http%3A%2F%2Fvimeo.com%22%7D%2C%7B%22social_icon%22%3A%22youtube%22%2C%22social_url%22%3A%22http%3A%2F%2Fwww.youtube.com%2Fuser%2FEnvato%22%7D%2C%7B%22social_icon%22%3A%22twitch%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.twitch.tv%2F%22%7D%2C%7B%22social_icon%22%3A%22facebook%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.facebook.com%2Fjegtheme%2F%22%7D%2C%7B%22social_icon%22%3A%22twitter%22%2C%22social_url%22%3A%22https%3A%2F%2Ftwitter.com%2Fjegtheme%22%7D%2C%7B%22social_icon%22%3A%22googleplus%22%2C%22social_url%22%3A%22https%3A%2F%2Fplus.google.com%2F%2BJegtheme%22%7D%2C%7B%22social_icon%22%3A%22behance%22%2C%22social_url%22%3A%22https%3A%2F%2Fwww.behance.net%2Fjegtheme%22%7D%5D",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "categories-8": {
+      "title": "Browse by Category",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    },
+    "mc4wp_form_widget-10": {
+      "title": "",
+      "second_title": "",
+      "header_url": "",
+      "header_type": "heading_8",
+      "header_background": "",
+      "header_text_color": ""
+    }
+  }
+}

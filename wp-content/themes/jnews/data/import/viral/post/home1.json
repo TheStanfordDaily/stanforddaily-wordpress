@@ -1,0 +1,111 @@
+[
+  {
+    "id": "2xZyYRC",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1491642988902{margin-top: -30px !important;}",
+      "stretch_section": "section-stretched",
+      "layout": "full_width",
+      "css_classes": "vc_custom_1491642988902"
+    },
+    "elements": [
+      {
+        "id": "gomhlnp",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100,
+          "css": ".vc_custom_1491642981686{padding-right: 0px !important;padding-left: 0px !important;}",
+          "css_classes": "vc_custom_1491642981686"
+        },
+        "elements": [
+          {
+            "id": "qOiAU9O",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "number_item": {
+                "unit": "px",
+                "size": 6
+              },
+              "margin": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format": "ago",
+              "number_post": {
+                "unit": "px",
+                "size": 8
+              },
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "show_nav": "true",
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_carousel_2_elementor"
+          },
+          {
+            "id": "kkB06dE",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "ads_type": "image",
+              "ads_image": {
+                "url": "{{image:ad_728x90:url:full}}",
+                "id": "{{image:ad_728x90:id}}"
+              },
+              "ads_image_link": "#",
+              "css": ".vc_custom_1491643074286{margin-bottom: 20px !important;}"
+            },
+            "elements": [],
+            "widgetType": "jnews_element_ads_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "x8cAGb8",
+    "elType": "section",
+    "settings": {
+      "css": ".vc_custom_1491643032803{margin-top: 20px !important;}",
+      "css_classes": "vc_custom_1491643032803"
+    },
+    "elements": [
+      {
+        "id": "E2KUr7c",
+        "elType": "column",
+        "settings": {
+          "_column_size": 100
+        },
+        "elements": [
+          {
+            "id": "NuCdjUN",
+            "elType": "widget",
+            "settings": {
+              "compatible_column_notice": "",
+              "hero_margin": {
+                "unit": "px",
+                "size": 4
+              },
+              "content_filter_number_alert": "",
+              "post_offset": {
+                "unit": "px",
+                "size": 0
+              },
+              "date_format_custom": "Y\/m\/d"
+            },
+            "elements": [],
+            "widgetType": "jnews_hero_3_elementor"
+          }
+        ],
+        "isInner": false
+      }
+    ],
+    "isInner": false
+  }
+]

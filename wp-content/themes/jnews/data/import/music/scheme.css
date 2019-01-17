@@ -1,0 +1,56 @@
+/** Color **/
+.entry-header .jeg_post_meta .fa, .jeg_post_meta .fa {
+	color: inherit !important;
+}
+
+.jeg_share_button a {
+	border-radius: 0;
+}
+.jeg_share_button .jeg_btn-toggle {
+	background: #000;
+}
+.jeg_share_stats .counts {
+	color: #333;
+}
+.jeg_share_stats .sharetext {
+	color: #666;
+}
+
+/** Module **/
+.jeg_heroblock .jeg_post_category {
+	font-size: 10px;
+}
+.jeg_heroblock .jeg_post_category a {
+	font-size: 10px;
+	padding: 3px 5px;
+}
+.jeg_hero_style_6 .jeg_post_title {
+	line-height: 1.4;
+	margin-bottom: 10px;
+}
+
+.jeg_thumb .jeg_post_category a {
+    padding: 3px 5px;
+    line-height: 10px;
+    font-size: 10px;
+}
+
+.jeg_pl_md_box .jeg_post_title {
+	font-weight: bold;
+}
+.jeg_postblock_27 .jeg_post_category a {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Subscribe form */
+.jeg_inline_subscribeform .mc4wp-form .jeg_mc4wp_heading {
+	padding-right: 65px;
+}
+
+/** Footer **/
+.jeg_footer.dark input[type="submit"], .jeg_footer.dark .btn, .jeg_footer.dark .button,
+.jeg_footer .footer_dark input[type="submit"], .jeg_footer .footer_dark .btn, .jeg_footer .footer_dark .button {
+	color: #fff !important;
+	background-color: #3bc5f8 !important;
+}

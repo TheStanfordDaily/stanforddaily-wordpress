@@ -1,0 +1,159 @@
+/** Layout **/
+/*@media only screen and (min-width : 1280px) {
+    .jeg_boxed .jeg_container {width: auto;}
+    .jeg_boxed .jeg_viewport {width: 1230px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 0 3px rgba(0,0,0,0.15)}
+}*/
+
+/** Menu **/
+.jeg_newsfeed .jeg_post_title {
+	font-size: 14px;
+}
+
+/** Video Player **/
+.jeg_dark_playlist .jeg_video_playlist_list_wrapper {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+/** Slider **/
+.jeg_overlay_caption_container {
+	bottom: 160px;
+}
+.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title {
+	font-weight: bold;
+	font-size: 42px;
+}
+.jeg_slider_type_4 .jeg_slide_item:before {
+	background: rgba(0,0,0,.18);
+}
+
+/** Block **/
+.jeg_hero_style_2 .jeg_post_category {
+	top: 15px;
+}
+.jeg_hero_style_5 .jeg_postblock_content {
+	padding: 6% 12%;
+}
+.jeg_hero_style_5 .jeg_post_category a {
+	box-shadow: none;
+}
+.jeg_hero_style_5 .jeg_thumb:before {
+	opacity: 0.5;
+}
+.jeg_hero_style_5 .jeg_thumb:after {
+	opacity: 0.6;
+}
+
+.jeg_thumb .jeg_post_category a,
+.jeg_pl_lg_box .jeg_post_category a,
+.jeg_pl_md_box .jeg_post_category a,
+.jeg_postblock_carousel_2 .jeg_post_category a,
+.jeg_heroblock .jeg_post_category a,
+.jeg_slide_caption .jeg_post_category a {
+	padding: 3px 5px 4px 6px;
+    line-height: 1;
+    border-radius: 2px;
+}
+
+.jeg_pl_sm .jeg_post_title {
+	font-size: 17px;
+	line-height: 1.3;
+}
+.jeg_pl_md_box .jeg_post_title {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.25;
+}
+.jeg_pl_lg_box .jeg_post_title {
+	font-size: 26px;
+}
+
+.jeg_pl_md_1 .jeg_post_title {
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+.jeg_heroblock .jeg_post_title {
+	font-size: 20px;
+}
+.jeg_heroblock_7 .jeg_post_title {
+	font-size: 24px;
+}
+
+/** VC Hacks **/
+/*.vc_col-sm-12 .vc_cta3 .vc_cta3-content {
+	width: 100%;
+}*/
+/*.vc_col-sm-12 .vc_cta3 .vc_cta3-content-header {
+	width: 70%;
+}*/
+
+/** Single **/
+.jeg_featured_bg {
+	background: #293132;
+}
+h1,.entry-header .jeg_post_title {
+	letter-spacing: normal;
+}
+
+/** Widget **/
+/* Popular Post Widget */
+.popularpost_item .jeg_post_title {
+	font-size: 16px;
+	font-weight: bold;
+}
+.popularpost_item:first-child .jeg_post_title {
+	font-size: 20px;
+}
+
+.jeg_tabpost_nav li {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/** Custom Class **/
+.jeg_travel_home_news_row {
+	padding-top: 25%;
+	margin-bottom: 25px;
+	overflow: hidden !important;
+}
+@media (min-width: 992px) {
+	.jeg_travel_home_news_row {
+	    padding-bottom: 270px !important;
+	    margin-bottom: -388px !important;
+	}
+	.elementor-element.jeg_travel_home_news_row {
+		margin-bottom: -368px !important;
+	}
+}
+@media (min-width: 1200px) {
+	.jeg_travel_home_news_row {
+	    /* padding-bottom: 270px !important; */
+	    margin-bottom: -437px !important;
+	}
+	.elementor-element.jeg_travel_home_news_row {
+		margin-bottom: -396px !important;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.jeg_pl_lg_box .jeg_post_title {font-size: 18px;}
+	.jeg_overlay_caption_container { bottom: 100px; }
+	.jeg_pl_sm .jeg_post_title { font-size: 13px; }
+	.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title { font-size: 30px; }
+}
+@media only screen and (max-width : 767px) {
+	.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title { font-size: 28px; }
+}
+@media only screen and (max-width : 667px) {
+	.jeg_pl_lg_box .jeg_post_title {font-size: 20px}
+	.jeg_overlay_caption_container { bottom: 65px; }
+	.jeg_pl_sm .jeg_post_title { font-size: 15px; }
+	.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title { font-size: 24px; }
+
+}
+@media only screen and (max-width : 568px) {
+	.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title { font-size: 26px; }
+}
+@media only screen and (max-width : 480px) {
+	.jeg_slider_type_4 .jeg_slide_caption .jeg_post_title { font-size: 22px; }
+}

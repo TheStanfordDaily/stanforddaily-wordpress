@@ -1,0 +1,114 @@
+/** Color **/
+.entry-header .jeg_post_meta .fa, .jeg_post_meta .fa {
+	color: inherit !important;
+}
+
+.jeg_midbar.dark .jeg_menu:not(.jeg_main_menu) > li > a:hover {
+	color: inherit !important;
+}
+
+/** Menu **/
+.jeg_nav_icon ~ .jeg_mainmenu_wrap {
+    padding-left: 0;
+}
+
+/** Module **/
+.jeg_heroblock .jeg_post_category {
+	margin-bottom: 6px;
+}
+
+.jeg_heroblock_9 .jeg_post_title {
+	max-width: 400px;
+}
+
+/** Carousel **/
+body:not(.jeg_boxed) div[data-vc-full-width="true"] .jeg_postblock_carousel_2 .owl-carousel .owl-nav div {
+	bottom: 50%;
+	transform: translateY(50%);
+	width: 28px;
+}
+
+body:not(.jeg_boxed) div[data-vc-full-width="true"] .jeg_postblock_carousel_2 .owl-carousel .owl-prev {
+	left: -60px;
+}
+
+body:not(.jeg_boxed) div[data-vc-full-width="true"] .jeg_postblock_carousel_2 .owl-carousel .owl-next {
+	right: -60px;
+}
+
+/** Widget **/
+.jeg_main_content .Widget_Stockdio_Ticker {
+	margin-bottom: 0;
+}
+
+.widget .jeg_block_heading {
+	margin-bottom: 20px;
+}
+
+.widget .jeg_block_heading_5 {
+	margin-bottom: 10px;
+}
+
+.widget .mc4wp-form-fields p, .footer_widget .mc4wp-form-fields p {
+	font-size: 13px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.jeg_postblock_8.jeg_col_2o3 .jeg_post,
+	.jeg_postblock_8.jeg_col_2o3 .jeg_post {
+		margin-bottom: 20px;
+	}
+	.jeg_postblock_8.jeg_col_2o3 .jeg_post:nth-child(1) .jeg_post_title,
+	.jeg_postblock_8.jeg_col_2o3 .jeg_post:nth-child(2) .jeg_post_title {
+		font-size: 14px;
+	}
+	.jeg_pl_md_box .jeg_post_title,
+	.jeg_postblock_22 .jeg_post_title {
+		font-size: 13px;
+	}
+	.jeg_tabpost_nav li {
+		font-weight: normal !important;
+		font-size: 11px;
+	}
+	.jeg_pl_sm .jeg_post_title {
+		font-size: 12px;
+		font-weight: normal;
+	}
+	.jeg_pl_sm .jeg_post_meta {
+		display: none;
+	}
+}
+
+/** Post **/
+.jeg_single_tpl_2 .entry-header .jeg_post_subtitle {
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 1.2;
+	max-width: 760px;
+}
+
+.entry-content blockquote, .entry-content q {
+	font-style: normal;
+	color: #111;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.jeg_share_button a, .sidefeed_loadmore .btn, .jscroll-to-top > a {
+	border-radius: 0;
+}
+
+.jeg_thumb .jeg_post_category a {
+	padding: 2px 4px;
+}
+
+.content-inner {
+	font-size: 17px;
+	color: #191820;
+}
+
+/* Footer */
+.jeg_footer.dark input[type="submit"], .jeg_footer.dark .btn, .jeg_footer.dark .button {
+	color: #02010a !important;
+	background-color: #F6DA09 !important;
+}
