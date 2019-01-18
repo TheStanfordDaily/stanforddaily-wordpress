@@ -37,6 +37,7 @@ Normally, when you shutdown the local server using `vagrant halt`, all data in y
 
 However, if you wish to restart from a `.sql` file, you can run:
 ```
+vagrant up # Vagrant needs first to be up and running
 vagrant destroy # Current database will be exported to `wp-vagrant/db_dumps/`
 # Put your `.sql` file inside `wp-vagrant/`
 vagrant up
