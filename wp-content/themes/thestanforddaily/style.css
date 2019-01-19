@@ -828,6 +828,9 @@ a:hover, a:active {
   left: -999em;
   top: 0;
 }
+.main-navigation ul ul li {
+  min-width: 100%;
+}
 .main-navigation ul ul li a {
   padding: 8px 16px;
   line-height: 20px;
