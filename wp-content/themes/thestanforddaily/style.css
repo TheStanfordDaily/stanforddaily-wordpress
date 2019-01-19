@@ -944,8 +944,7 @@ a:hover, a:active {
     /* Stay in place */
     z-index: 9999;
     /* Stay on top */
-    top: 0;
-    /* Stay at the top */
+    top: auto;
     left: 0;
     background-color: #fff;
     overflow-x: hidden;
