@@ -25,8 +25,8 @@
 		}
 
 		&.prev::before, &.next::after {
-			font-weight: 400;
-			font-family: FontAwesome;
+			font-weight: 900;	// https://stackoverflow.com/a/49755090/2603230
+			font-family: "Font Awesome 5 Free";
 			display: inline-block;
 		}
 		&.prev::before {

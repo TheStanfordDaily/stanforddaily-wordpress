@@ -812,7 +812,8 @@ a:hover, a:active {
   display: inline-block;
   margin-left: 5px;
   margin-right: -3px;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 .main-navigation ul ul {
   background: #fff;
@@ -1075,8 +1076,8 @@ a:hover, a:active {
   color: white;
 }
 .pagination .page-numbers.prev::before, .pagination .page-numbers.next::after {
-  font-weight: 400;
-  font-family: FontAwesome;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
   display: inline-block;
 }
 .pagination .page-numbers.prev::before {
