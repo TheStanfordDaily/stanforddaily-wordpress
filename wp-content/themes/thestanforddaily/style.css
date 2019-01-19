@@ -814,6 +814,7 @@ a:hover, a:active {
   margin-right: -3px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  vertical-align: middle;
 }
 .main-navigation ul ul {
   background: #fff;
