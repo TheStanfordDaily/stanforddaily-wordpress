@@ -253,7 +253,7 @@
 	$top_sticky_bar_height: 60px;
 	.site-branding {
 		position: fixed;
-		top: 0;
+		top: auto;	// So that the admin bar would cover it.
 		left: 0;
 		width: 100%;
 		height: $top_sticky_bar_height;
