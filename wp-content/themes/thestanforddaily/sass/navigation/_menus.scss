@@ -166,12 +166,16 @@
 					left: 100%;
 				}
 
-				&.menu-item-has-children > a::after {
-					/** Add angle-right **/
-					content: "\F105";
-					position: absolute;
-					right: 10px;
-					color: #949494;
+				&.menu-item-has-children > a {
+					margin-right: 10px;
+
+					&::after {
+						/** Add angle-right **/
+						content: "\F105";
+						position: absolute;
+						right: 10px;
+						color: #949494;
+					}
 				}
 			}
 

@@ -848,6 +848,9 @@ a:hover, a:active {
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
+.main-navigation ul ul li.menu-item-has-children > a {
+  margin-right: 10px;
+}
 .main-navigation ul ul li.menu-item-has-children > a::after {
   /** Add angle-right **/
   content: "";
