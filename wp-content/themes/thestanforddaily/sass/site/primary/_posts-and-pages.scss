@@ -156,6 +156,10 @@
 		background: #f7f7f7;
 		overflow: hidden;
 
+		// https://stackoverflow.com/a/16629593/2603230
+		display: flex;
+		align-items: center;
+
 		&.no-thumbnail {
 			background-image: url('https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg');
 			background-size: contain;
