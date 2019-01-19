@@ -69,3 +69,32 @@ function tsd_change_post_subtitle_meta_key() {
     return "post_subtitle";
 }
 add_filter( 'wps_subtitle_key', 'tsd_change_post_subtitle_meta_key' );
+
+/*
+ * Add a Stanford Daily logo to wp-login.php.
+ */
+function tsd_add_login_logo() { ?>
+    <style>
+	#login h1 a, .login h1 a {
+		display: inline-block;
+	}
+	#login h1::after, .login h1::after {
+		display: inline-block;
+		margin-bottom: 25px;
+		margin-left: 50px;
+		content: "";
+
+		/**background-image: url(wp-admin/images/w-logo-blue.png?ver=20131202);
+		background-image: none,url(wp-admin/images/wordpress-logo.svg?ver=20131107);**/
+		background-image: url(https://www.stanforddaily.com/wp-content/uploads/2018/05/TSDLogo.jpg);
+
+		height: 84px;
+		width: 84px;
+		background-size: 84px;
+		background-position: center top;
+		background-repeat: no-repeat;
+		border-radius: 20px;
+	}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'tsd_add_login_logo' );
