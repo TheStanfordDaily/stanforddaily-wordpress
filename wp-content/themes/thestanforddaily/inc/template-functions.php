@@ -60,6 +60,21 @@ function tsd_load_fa() {
 add_action( 'wp_head', 'tsd_load_fa' );
 
 /*
+ * Issue #28 - Add a banner to download iOS app.
+ * `app-argument` will be parsed and read in the app.
+ */
+function tsd_add_ios_app_banner() {
+	$currentPageURL = home_url( '/' );
+	if ( is_single() ) {
+		$currentPageURL = home_url( '/?p=' . get_queried_object_id() );
+	} else if ( is_author() ) {
+		$currentPageURL = home_url( '/?author=' . get_queried_object_id() );
+	}
+	?><meta name="apple-itunes-app" content="app-id=1341270063, app-argument=<?php echo $currentPageURL; ?>"><?php
+}
+add_action( 'wp_head', 'tsd_add_ios_app_banner' );
+
+/*
  * Change the meta key of the post subtitle to `post_subtitle`
  * for https://wordpress.org/plugins/wp-subtitle/,
  * as JNews uses `post_subtitle` as the meta key.
