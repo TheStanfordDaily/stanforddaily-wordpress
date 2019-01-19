@@ -46,6 +46,15 @@ vagrant up
 ## More info on setup
 Taken from https://github.com/digitalquery/wp-vagrant
 
+# Theme Development
+
+When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. To compile all the `.scss` files into `style.css`, run the following command at the root of the theme folder (`wp-content/themes/thestanforddaily/`):
+```
+sass sass/style.scss style.css
+```
+
+Learn more: https://sass-lang.com/
+
 ## Notes
 Random notes:
 
