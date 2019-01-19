@@ -72,6 +72,7 @@ add_filter( 'wps_subtitle_key', 'tsd_change_post_subtitle_meta_key' );
 
 /*
  * Add a Stanford Daily logo to wp-login.php.
+ * https://codex.wordpress.org/Customizing_the_Login_Form
  */
 function tsd_add_login_logo() { ?>
     <style>
