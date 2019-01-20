@@ -153,8 +153,11 @@ li {
 
 .center_left {
   position: absolute;
-  top: 50px;
-  left: 15%;
+  color: white; 
+  left: 5%; 
+  width: 40%; 
+  font-family: 'Times New Roman', Times, serif; 
+  top: 30%;
 }
 
 .jeg_featured .feature_image {
@@ -164,7 +167,7 @@ li {
 
 #rectangle {
   width: 50%;
-  height: 92%;
+  height: 100%;
   opacity: 50%;
   position: absolute;
   top: 0px;
@@ -191,6 +194,4 @@ blockquote {
 
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

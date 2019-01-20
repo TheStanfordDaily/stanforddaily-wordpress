@@ -22,7 +22,7 @@ $single = new \JNews\Single\SinglePage();
 
                             <div class="entry-header">
                                 <div class = "tsd_container">
-                                    <img class = "jeg_featured featured_image" alt="Featured Image" style="width:100%" 
+                                    <img class = "jeg_featured featured_image" alt="Featured Image" style="width:100%; height: 100%;" 
                                         src = "<?php echo $single->get_featured_image_src('full')?>">
                                     <div id = "rectangle"></div>
                                     <!--<img src = "https://www.stanforddaily.com/wp-content/uploads/2018/06/DailyRedSmall.jpeg" alt= "TSD Logo" 
@@ -31,11 +31,21 @@ $single = new \JNews\Single\SinglePage();
                                     <h1 class="jeg_post_title center_left" style = "color: white; left: 5%; 
                                         width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%;">
                                         <?php the_title(); ?></h1>
-                                    <div class="jeg_meta_author" style = "color: white; left: 5%; 
+  
+                                    <h1 class = "jeg_post_author center_left" style = "color: white; left: 5%; 
+                                        width: 40%; font-family: 'Times New Roman', Times, serif; top: 80%;"> 
+                                        by <?php the_author(); ?></h1>
+
+                                    <h1 class = "jeg_post_date center_left" style = "position: absolute; 
+                                        color: white; left: 13%; width: 40%; font-family: 'Times New Roman', Times, serif; 
+                                        top: 80%;"> — <?php the_date(); ?></h1> 
+
+                                    <!--
+                                    <div class = "jeg_meta_author" style = "color: white; left: 5%; 
                                         width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%;"> </div>
                                      <div class="jeg_meta_date" style = "color: white; left: 5%; 
                                         width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%;"> </div>
-                                    <!--
+
                                     <div class="jeg_meta_container">
                                         <div class="jeg_post_meta jeg_post_meta_2" style = "color: white; left: 5%; 
                                         width: 40%; font-family: 'Times New Roman', Times, serif; top: 30%; position: relative;">

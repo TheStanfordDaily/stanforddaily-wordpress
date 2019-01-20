@@ -90,3 +90,23 @@ function tsd_blockquote_function($atts, $content = null) {
     return $return;
 }
 add_shortcode('tsd_blockquote', 'tsd_blockquote_function');
+
+/**
+ * Style of images inserted within article.
+ */
+
+ function tsd_image_function($atts, $content = null) {
+     $atts = shortcode_atts( array (
+         'display' => 'block',
+         'margin-left' => 'auto',
+         'margin-right' => 'auto',
+         'width' => '50%',
+     ), $atts);
+
+     $return .= '<div><div style ="display: ' .$atts['display']. '; margin-left: ' .$atts['margin-left'] 
+     . '; margin-right: ' . $atts['margin-right'] . '; width: ' .$atts['width'] 
+     . ';">' .do_shortcode($content) . '</div></div>';
+
+     return $return;
+ }
+ add_shortcode('tsd_image', 'tsd_image_function');
