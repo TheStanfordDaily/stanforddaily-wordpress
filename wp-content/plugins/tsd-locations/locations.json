@@ -1,0 +1,98 @@
+{
+	"arboretum": [
+		"Arboretum",
+		"arboretum",
+		"Arboretum Grove",
+		"Arboretum Road"
+	],
+	"arizona_cactus_garden": [
+		"Arizona Cactus Garden",
+		"The Arizona Garden",
+		"cactus garden"
+	],
+	"bing_concert_hall": [
+		"Bing Concert Hall"
+	],
+	"braun_music_center": [
+		"Braun Music Center"
+	],
+	"cantor_arts_center": [
+		"Cantor Arts Center",
+		"The Cantor Arts Center",
+		"Iris & B. Gerald Cantor Center for Visual Arts",
+		"Iris and B. Gerald Cantor Center for Visual Arts",
+		"Iris and Gerald B. Cantor Center for Visual Arts"
+	],
+	"clock_tower": [
+		"Clock Tower",
+		"clock tower",
+		"Stanford Clock Tower"
+	],
+	"dish": [
+		"The Dish",
+		"Dish"
+	],
+	"fire_truck_house": [
+		"Fire Truck House",
+		"Firetruck House"
+	],
+	"frost_amphitheater": [
+		"Frost Amphitheater"
+	],
+	"green_earth_sciences": [
+		"Green Earth Sciences",
+		"Cecil H. and Ida M. Green Earth Sciences Research Building"
+	],
+	"haas_center": [
+		"Haas Center for Public Service",
+		"Haas Center",
+		"Stanford Haas Center"
+	],
+	"hanna_house": [
+		"Hanna-Honeycomb House",
+		"hanna house",
+		"Hanna House"
+	],
+	"hoover_house": [
+		"hoover house",
+		"Hoover House",
+		"Lou Henry Hoover House"
+	],
+	"hoover_tower": [
+		"Hoover Tower",
+		"hoover tower"
+	],
+	"lake_lagunita": [
+		"Lake Lagunita"
+	],
+	"main_quad": [
+		"Main Quad",
+		"main quad",
+		"Quad"
+	],
+	"oval": [
+		"Oval",
+		"OVAL",
+		"the oval"
+	],
+	"mausoleum": [
+		"Mausoleum",
+		"Stanford Mausoleum",
+		"The Mausoleum"
+	],
+	"memorial_auditorium": [
+		"Memorial Auditorium",
+		"memaud"
+	],
+	"memorial_church": [
+		"Memorial Church",
+		"Memchu"
+	],
+	"research_park": [
+		"Stanford Research Park",
+		"Research Park"
+	],
+	"shopping_center": [
+		"Stanford Shopping Center"
+	]
+}
