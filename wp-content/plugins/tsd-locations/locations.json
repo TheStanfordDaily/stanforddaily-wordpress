@@ -1,98 +1,274 @@
 {
-	"arboretum": [
-		"Arboretum",
-		"arboretum",
-		"Arboretum Grove",
-		"Arboretum Road"
-	],
-	"arizona_cactus_garden": [
-		"Arizona Cactus Garden",
-		"The Arizona Garden",
-		"cactus garden"
-	],
-	"bing_concert_hall": [
-		"Bing Concert Hall"
-	],
-	"braun_music_center": [
-		"Braun Music Center"
-	],
-	"cantor_arts_center": [
-		"Cantor Arts Center",
-		"The Cantor Arts Center",
-		"Iris & B. Gerald Cantor Center for Visual Arts",
-		"Iris and B. Gerald Cantor Center for Visual Arts",
-		"Iris and Gerald B. Cantor Center for Visual Arts"
-	],
-	"clock_tower": [
-		"Clock Tower",
-		"clock tower",
-		"Stanford Clock Tower"
-	],
-	"dish": [
-		"The Dish",
-		"Dish"
-	],
-	"fire_truck_house": [
-		"Fire Truck House",
-		"Firetruck House"
-	],
-	"frost_amphitheater": [
-		"Frost Amphitheater"
-	],
-	"green_earth_sciences": [
-		"Green Earth Sciences",
-		"Cecil H. and Ida M. Green Earth Sciences Research Building"
-	],
-	"haas_center": [
-		"Haas Center for Public Service",
-		"Haas Center",
-		"Stanford Haas Center"
-	],
-	"hanna_house": [
-		"Hanna-Honeycomb House",
-		"hanna house",
-		"Hanna House"
-	],
-	"hoover_house": [
-		"hoover house",
-		"Hoover House",
-		"Lou Henry Hoover House"
-	],
-	"hoover_tower": [
-		"Hoover Tower",
-		"hoover tower"
-	],
-	"lake_lagunita": [
-		"Lake Lagunita"
-	],
-	"main_quad": [
-		"Main Quad",
-		"main quad",
-		"Quad"
-	],
-	"oval": [
-		"Oval",
-		"OVAL",
-		"the oval"
-	],
-	"mausoleum": [
-		"Mausoleum",
-		"Stanford Mausoleum",
-		"The Mausoleum"
-	],
-	"memorial_auditorium": [
-		"Memorial Auditorium",
-		"memaud"
-	],
-	"memorial_church": [
-		"Memorial Church",
-		"Memchu"
-	],
-	"research_park": [
-		"Stanford Research Park",
-		"Research Park"
-	],
-	"shopping_center": [
-		"Stanford Shopping Center"
-	]
+	"arboretum": {
+		"name": "Arboretum",
+		"description": "...",
+		"coordinates": [
+			37.437778,
+			-122.166667
+		],
+		"tag-slug": [
+			"Arboretum",
+			"arboretum",
+			"Arboretum Grove",
+			"Arboretum Road"
+		]
+	},
+	"arizona_cactus_garden": {
+		"name": "Arizona Cactus Garden",
+		"description": "...",
+		"coordinates": [
+			37.43592,
+			-122.17112
+		],
+		"tag-slug": [
+			"Arizona Cactus Garden",
+			"The Arizona Garden",
+			"cactus garden"
+		]
+	},
+	"bing_concert_hall": {
+		"name": "Bing Concert Hall",
+		"description": "...",
+		"coordinates": [
+			37.431944,
+			-122.166111
+		],
+		"tag-slug": [
+			"Bing Concert Hall"
+		]
+	},
+	"braun_music_center": {
+		"name": "Braun Music Center",
+		"description": "...",
+		"coordinates": [
+			37.423889,
+			-122.169444
+		],
+		"tag-slug": [
+			"Braun Music Center"
+		]
+	},
+	"cantor_arts_center": {
+		"name": "Iris & B. Gerald Cantor Center for Visual Arts",
+		"description": "...",
+		"coordinates": [
+			37.433,
+			-122.171
+		],
+		"tag-slug": [
+			"Cantor Arts Center",
+			"The Cantor Arts Center",
+			"Iris & B. Gerald Cantor Center for Visual Arts",
+			"Iris and B. Gerald Cantor Center for Visual Arts",
+			"Iris and Gerald B. Cantor Center for Visual Arts"
+		]
+	},
+	"clock_tower": {
+		"name": "Clock Tower",
+		"description": "...",
+		"coordinates": [
+			37.42595,
+			-122.168858
+		],
+		"tag-slug": [
+			"Clock Tower",
+			"clock tower",
+			"Stanford Clock Tower"
+		]
+	},
+	"dish": {
+		"name": "The Dish",
+		"description": "...",
+		"coordinates": [
+			37.4083,
+			-122.179
+		],
+		"tag-slug": [
+			"The Dish",
+			"Dish"
+		]
+	},
+	"fire_truck_house": {
+		"name": "Fire Truck House",
+		"description": "...",
+		"coordinates": [
+			37.425066,
+			-122.171667
+		],
+		"tag-slug": [
+			"Fire Truck House",
+			"Firetruck House"
+		]
+	},
+	"frost_amphitheater": {
+		"name": "Frost Amphitheater",
+		"description": "...",
+		"coordinates": [
+			37.430556,
+			-122.165833
+		],
+		"tag-slug": [
+			"Frost Amphitheater"
+		]
+	},
+	"green_earth_sciences": {
+		"name": "Green Earth Sciences",
+		"description": "...",
+		"coordinates": [
+			37.426667,
+			-122.173889
+		],
+		"tag-slug": [
+			"Green Earth Sciences",
+			"Cecil H. and Ida M. Green Earth Sciences Research Building"
+		]
+	},
+	"haas_center": {
+		"name": "Haas Center for Public Service",
+		"description": "...",
+		"coordinates": [
+			37.422531,
+			-122.167436
+		],
+		"tag-slug": [
+			"Haas Center for Public Service",
+			"Haas Center",
+			"Stanford Haas Center"
+		]
+	},
+	"hanna_house": {
+		"name": "Hanna–Honeycomb House",
+		"description": "...",
+		"coordinates": [
+			37.416014,
+			-122.163553
+		],
+		"tag-slug": [
+			"Hanna-Honeycomb House",
+			"hanna house",
+			"Hanna House"
+		]
+	},
+	"hoover_house": {
+		"name": "Lou Henry Hoover House",
+		"description": "...",
+		"coordinates": [
+			37.417711,
+			-122.168878
+		],
+		"tag-slug": [
+			"hoover house",
+			"Hoover House",
+			"Lou Henry Hoover House"
+		]
+	},
+	"hoover_tower": {
+		"name": "Hoover Tower",
+		"description": "...",
+		"coordinates": [
+			37.42759,
+			-122.16695
+		],
+		"tag-slug": [
+			"Hoover Tower",
+			"hoover tower"
+		]
+	},
+	"lake_lagunita": {
+		"name": "Lake Lagunita",
+		"description": "...",
+		"coordinates": [
+			37.423273,
+			-122.176076
+		],
+		"tag-slug": [
+			"Lake Lagunita"
+		]
+	},
+	"main_quad": {
+		"name": "Main Quad",
+		"description": "...",
+		"coordinates": [
+			37.4275,
+			-122.170278
+		],
+		"tag-slug": [
+			"Main Quad",
+			"main quad",
+			"Quad"
+		]
+	},
+	"oval": {
+		"name": "Oval",
+		"description": "...",
+		"coordinates": [
+			37.42986,
+			-122.16948
+		],
+		"tag-slug": [
+			"Oval",
+			"OVAL",
+			"the oval"
+		]
+	},
+	"mausoleum": {
+		"name": "Mausoleum",
+		"description": "...",
+		"coordinates": [
+			37.43651,
+			-122.16989
+		],
+		"tag-slug": [
+			"Mausoleum",
+			"Stanford Mausoleum",
+			"The Mausoleum"
+		]
+	},
+	"memorial_auditorium": {
+		"name": "Memorial Auditorium",
+		"description": "...",
+		"coordinates": [
+			37.428889,
+			-122.166389
+		],
+		"tag-slug": [
+			"Memorial Auditorium",
+			"memaud"
+		]
+	},
+	"memorial_church": {
+		"name": "Memorial Church",
+		"description": "...",
+		"coordinates": [
+			37.4268,
+			-122.1705
+		],
+		"tag-slug": [
+			"Memorial Church",
+			"Memchu"
+		]
+	},
+	"research_park": {
+		"name": "Stanford Research Park",
+		"description": "...",
+		"coordinates": [
+			37.4069,
+			-122.1518
+		],
+		"tag-slug": [
+			"Stanford Research Park",
+			"Research Park"
+		]
+	},
+	"shopping_center": {
+		"name": "Stanford Shopping Center",
+		"description": "...",
+		"coordinates": [
+			37.443056,
+			-122.171111
+		],
+		"tag-slug": [
+			"Stanford Shopping Center"
+		]
+	}
 }

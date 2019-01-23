@@ -58,11 +58,11 @@ function tsd_locations_plugin_enable_api() {
             return new WP_Error( 'no_location', 'Invalid location', ['status' => 404] );
         }
 
-        $location_names = $locations[$location_key];
-        //print_r($location_names);
+        $location_info = $locations[ $location_key ];
+        //print_r($location_info);
 
         $all_tag_slugs = [];
-        foreach ( $location_names as $each_name ) {
+        foreach ( $location_info[ "tag-slug" ] as $each_name ) {
             // Replace space with "-" and make the name all lowerstring.
             $tag_slug = tsd_locations_plugin_get_tag_slug_from_name( $each_name );
             $all_tag_slugs[] = $tag_slug;
@@ -81,9 +81,13 @@ function tsd_locations_plugin_enable_api() {
         $locations = tsd_locations_plugin_get_locations();
 
         $location_keys = [];
-        foreach ( $locations as $each_location_key => $each_location_names ) {
+        foreach ( $locations as $each_location_key => $each_location_info ) {
             $all_articles = tsd_locations_plugin_return_location_info( [ "name" => $each_location_key ] );
-            $location_keys[$each_location_key] = count( $all_articles );
+
+            $results_info = $each_location_info;
+            $results_info[ "count" ] = count( $all_articles );
+
+            $location_keys[ $each_location_key ] = $results_info;
         }
 
         return $location_keys;
