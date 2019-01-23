@@ -48,7 +48,10 @@
 		]
 	},
 	"cantor_arts_center": {
-		"name": "Iris & B. Gerald Cantor Center for Visual Arts",
+		"name": "Cantor Arts Center",
+		"aliases": [
+			"Iris & B. Gerald Cantor Center for Visual Arts"
+		],
 		"description": "...",
 		"coordinates": [
 			37.433,

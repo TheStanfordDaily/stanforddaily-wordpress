@@ -100,11 +100,17 @@ function tsd_locations_plugin_enable_api() {
         $locations = tsd_locations_plugin_get_locations();
         $place_names = [];
         foreach( $locations as $each_location_key => $each_location_info ) {
-            $place_names[] = $each_location_info["name"];
+            $place_names[ $each_location_info["name"] ] = $each_location_key;
+            if( array_key_exists( "aliases", $each_location_info ) ) {
+                foreach( $each_location_info["aliases"] as $each_alias ) {
+                    $place_names[ $each_alias ] = $each_location_key;
+                }
+            }
         }
+        //print_r($place_names);
 
         // https://stackoverflow.com/a/39477606/2603230
-        usort($place_names, function ($a, $b) use ($search_word) {
+        uksort($place_names, function ($a, $b) use ($search_word) {
             similar_text($search_word, $a, $percentA);
             similar_text($search_word, $b, $percentB);
 
@@ -112,12 +118,14 @@ function tsd_locations_plugin_enable_api() {
         });
 
         $results = [];
-        foreach( $place_names as $each_place_name ) {
+        foreach( $place_names as $each_place_name => $each_place_code ) {
             similar_text($search_word, $each_place_name, $match_pertcentage);
             //echo $each_place_name." ".$match_pertcentage."\n";
             // If it is >40% match.
             if ( $match_pertcentage > 40 ) {
-                $results[] = $each_place_name;
+                if ( ! array_key_exists( $each_place_code, $results ) ) {
+                    $results[ $each_place_code ] = $locations[ $each_place_code ];
+                }
             }
         }
         return $results;
