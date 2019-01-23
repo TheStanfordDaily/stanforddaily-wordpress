@@ -41,8 +41,15 @@ function tsd_locations_plugin_enable_api() {
         return $locations;
     }
 
-    function tsd_locations_plugin_get_tag_slug_from_name( $tag_name ) {
-        return get_term_by( 'name', $tag_name, 'post_tag' );
+    function tsd_locations_plugin_get_tag_slugs_from_names( $tag_names ) {
+        $tag_slugs = [];
+        foreach ( $tag_names as $each_name ) {
+            $tag_info = get_term_by( 'name', $each_name, 'post_tag' );
+            if ( !empty( $tag_info ) && ! in_array( $tag_info->slug, $tag_slugs ) ) {
+                $tag_slugs[] = $tag_info->slug;
+            }
+        }
+        return $tag_slugs;
     }
 
     // Handle the "/locations/{name}" request
@@ -59,14 +66,7 @@ function tsd_locations_plugin_enable_api() {
         $location_info = $locations[ $location_key ];
         //print_r($location_info);
 
-        $all_tag_slugs = [];
-        foreach ( $location_info[ "tag-name" ] as $each_name ) {
-            $tag_info = tsd_locations_plugin_get_tag_slug_from_name( $each_name );
-            if ( !empty( $tag_info ) ) {
-                $tag_slug = $tag_info->slug;
-                $all_tag_slugs[] = $tag_slug;
-            }
-        }
+        $all_tag_slugs = tsd_locations_plugin_get_tag_slugs_from_names ( $location_info[ "tag-name" ] );
 
         $all_articles = get_posts( [
             'tag' => implode( ",", $all_tag_slugs ),
@@ -85,14 +85,13 @@ function tsd_locations_plugin_enable_api() {
         foreach ( $locations as $each_location_key => $each_location_info ) {
             $results_info = $each_location_info;
 
-            $post_count = 0;
-            foreach ( $each_location_info[ "tag-name" ] as $each_name ) {
-                $tag_info = tsd_locations_plugin_get_tag_slug_from_name( $each_name );
-                if ( !empty( $tag_info ) ) {
-                    $post_count += $tag_info->count;
-                }
-            }
-            $results_info[ "count" ] = $post_count;
+            $all_tag_slugs = tsd_locations_plugin_get_tag_slugs_from_names ( $each_location_info[ "tag-name" ] );
+            $all_posts = get_posts( [
+                'tag' => implode( ",", $all_tag_slugs ),
+                'numberposts' => -1,
+                'fields' => 'ids',  // https://wordpress.stackexchange.com/a/159193/75147
+            ] );
+            $results_info[ "count" ] = count( $all_posts );
 
             $location_keys[ $each_location_key ] = $results_info;
         }
