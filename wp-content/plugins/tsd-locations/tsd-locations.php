@@ -76,14 +76,19 @@ function tsd_locations_plugin_enable_api() {
 
         $location_keys = [];
         foreach ( $locations as $each_location_key => $each_location_info ) {
-            $all_articles = tsd_locations_plugin_return_location_info( [ "name" => $each_location_key ] );
-
             $results_info = $each_location_info;
-            $results_info[ "count" ] = count( $all_articles );
+
+            $post_count = 0;
+            foreach ( $each_location_info[ "tag-name" ] as $each_name ) {
+                $tag_info = get_term_by( 'name', $each_name, 'post_tag' );
+                if ( !empty( $tag_info ) ) {
+                    $post_count += $tag_info->count;
+                }
+            }
+            $results_info[ "count" ] = $post_count;
 
             $location_keys[ $each_location_key ] = $results_info;
         }
-
         return $location_keys;
     }
 }
