@@ -41,6 +41,10 @@ function tsd_locations_plugin_enable_api() {
         return $locations;
     }
 
+    function tsd_locations_plugin_get_tag_slug_from_name( $tag_name ) {
+        return get_term_by( 'name', $tag_name, 'post_tag' );
+    }
+
     // Handle the "/locations/{name}" request
     function tsd_locations_plugin_return_location_info( $request ) {
         $locations = tsd_locations_plugin_get_locations();
@@ -55,7 +59,7 @@ function tsd_locations_plugin_enable_api() {
 
         $all_tag_slugs = [];
         foreach ( $location_info[ "tag-name" ] as $each_name ) {
-            $tag_info = get_term_by( 'name', $each_name, 'post_tag' );
+            $tag_info = tsd_locations_plugin_get_tag_slug_from_name( $each_name );
             if ( !empty( $tag_info ) ) {
                 $tag_slug = $tag_info->slug;
                 $all_tag_slugs[] = $tag_slug;
@@ -80,7 +84,7 @@ function tsd_locations_plugin_enable_api() {
 
             $post_count = 0;
             foreach ( $each_location_info[ "tag-name" ] as $each_name ) {
-                $tag_info = get_term_by( 'name', $each_name, 'post_tag' );
+                $tag_info = tsd_locations_plugin_get_tag_slug_from_name( $each_name );
                 if ( !empty( $tag_info ) ) {
                     $post_count += $tag_info->count;
                 }
