@@ -41,14 +41,6 @@ function tsd_locations_plugin_enable_api() {
         return $locations;
     }
 
-    function tsd_locations_plugin_get_tag_slug_from_name( $tag_name ) {
-        // Replace space with "-" and make the name all lowerstring.
-        $tag_slug = str_replace( " ", "-", strtolower($tag_name) );
-        // Remove "." in the slug.
-        $tag_slug = str_replace( ".", "", $tag_slug );
-        return $tag_slug;
-    }
-
     // Handle the "/locations/{name}" request
     function tsd_locations_plugin_return_location_info( $request ) {
         $locations = tsd_locations_plugin_get_locations();
@@ -62,10 +54,12 @@ function tsd_locations_plugin_enable_api() {
         //print_r($location_info);
 
         $all_tag_slugs = [];
-        foreach ( $location_info[ "tag-slug" ] as $each_name ) {
-            // Replace space with "-" and make the name all lowerstring.
-            $tag_slug = tsd_locations_plugin_get_tag_slug_from_name( $each_name );
-            $all_tag_slugs[] = $tag_slug;
+        foreach ( $location_info[ "tag-name" ] as $each_name ) {
+            $tag_info = get_term_by( 'name', $each_name, 'post_tag' );
+            if ( !empty( $tag_info ) ) {
+                $tag_slug = $tag_info->slug;
+                $all_tag_slugs[] = $tag_slug;
+            }
         }
         // TODO: Add cache?
         $all_articles = get_posts( [
