@@ -32,6 +32,15 @@ function tsd_locations_plugin_enable_api() {
             }
         ]);
 
+        // Match "/locations/search/{text}"
+        register_rest_route('tsd/v1', '/locations/search/(?P<text>.*)', [
+            'methods' => 'GET',
+            'callback' => 'tsd_locations_plugin_return_location_search',
+            'permission_callback' => function (WP_REST_Request $request) {
+                return true;
+            }
+        ]);
+
     });
 
     function tsd_locations_plugin_get_locations() {
@@ -82,6 +91,36 @@ function tsd_locations_plugin_enable_api() {
             $location_keys[ $each_location_key ] = $results_info;
         }
         return $location_keys;
+    }
+
+    // Handle the "/locations/search/{text}" request
+    function tsd_locations_plugin_return_location_search( $request ) {
+        $search_word = urldecode( $request[ 'text' ] );
+
+        $locations = tsd_locations_plugin_get_locations();
+        $place_names = [];
+        foreach( $locations as $each_location_key => $each_location_info ) {
+            $place_names[] = $each_location_info["name"];
+        }
+
+        // https://stackoverflow.com/a/39477606/2603230
+        usort($place_names, function ($a, $b) use ($search_word) {
+            similar_text($search_word, $a, $percentA);
+            similar_text($search_word, $b, $percentB);
+
+            return $percentA === $percentB ? 0 : ($percentA > $percentB ? -1 : 1);
+        });
+
+        $results = [];
+        foreach( $place_names as $each_place_name ) {
+            similar_text($search_word, $each_place_name, $match_pertcentage);
+            //echo $each_place_name." ".$match_pertcentage."\n";
+            // If it is >40% match.
+            if ( $match_pertcentage > 40 ) {
+                $results[] = $each_place_name;
+            }
+        }
+        return $results;
     }
 }
 add_action('init', 'tsd_locations_plugin_enable_api');
