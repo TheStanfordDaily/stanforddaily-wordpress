@@ -14,8 +14,8 @@ function tsd_locations_plugin_enable_api() {
 
     // Create json-api endpoint
     add_action('rest_api_init', function () {
-        // Match "/locations/{name}"
-        register_rest_route('tsd/v1', '/locations/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
+        // Match "/locations/info/{name}/{page_number}"
+        register_rest_route('tsd/v1', '/locations/info/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
             'methods' => 'GET',
             'callback' => 'tsd_locations_plugin_return_location_info',
             'permission_callback' => function (WP_REST_Request $request) {
@@ -50,7 +50,7 @@ function tsd_locations_plugin_enable_api() {
         return $locations;
     }
 
-    // Handle the "/locations/{name}" request
+    // Handle the "/locations/info/{name}/{page_number}" request
     function tsd_locations_plugin_return_location_info( $request ) {
         $locations = tsd_locations_plugin_get_locations();
         $location_key = $request[ 'name' ];
