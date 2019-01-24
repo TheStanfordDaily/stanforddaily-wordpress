@@ -145,7 +145,8 @@
 	"haas_center": {
 		"name": "Haas Center for Public Service",
 		"aliases": [
-			"Stanford Public Service Center"
+			"Stanford Public Service Center",
+			"Haas Center"
 		],
 		"description": "...",
 		"coordinates": [
