@@ -14,19 +14,19 @@ function tsd_locations_plugin_enable_api() {
 
     // Create json-api endpoint
     add_action('rest_api_init', function () {
-        // Match "/locations/info/{name}/{page_number}"
-        register_rest_route('tsd/v1', '/locations/info/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
+        // Match "/locations"
+        register_rest_route('tsd/v1', '/locations', [
             'methods' => 'GET',
-            'callback' => 'tsd_locations_plugin_return_location_info',
+            'callback' => 'tsd_locations_plugin_return_locations_list',
             'permission_callback' => function (WP_REST_Request $request) {
                 return true;
             }
         ]);
 
-        // Match "/locations"
-        register_rest_route('tsd/v1', '/locations', [
+        // Match "/locations/info/{name}/{page_number}"
+        register_rest_route('tsd/v1', '/locations/info/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
             'methods' => 'GET',
-            'callback' => 'tsd_locations_plugin_return_locations_list',
+            'callback' => 'tsd_locations_plugin_return_location_info',
             'permission_callback' => function (WP_REST_Request $request) {
                 return true;
             }
@@ -40,7 +40,6 @@ function tsd_locations_plugin_enable_api() {
                 return true;
             }
         ]);
-
     });
 
     function tsd_locations_plugin_get_locations() {
@@ -48,6 +47,26 @@ function tsd_locations_plugin_enable_api() {
         $locations = json_decode( $locations_string, true );
         //print_r($locations);
         return $locations;
+    }
+
+    // Handle the "/locations" request
+    function tsd_locations_plugin_return_locations_list( $request ) {
+        $locations = tsd_locations_plugin_get_locations();
+
+        $location_keys = [];
+        foreach ( $locations as $each_location_key => $each_location_info ) {
+            $results_info = $each_location_info;
+
+            $all_posts = get_posts( [
+                'tag' => implode( ",", $each_location_info[ "tag-slug" ] ),
+                'numberposts' => -1,
+                'fields' => 'ids',  // https://wordpress.stackexchange.com/a/159193/75147
+            ] );
+            $results_info[ "count" ] = count( $all_posts );
+
+            $location_keys[ $each_location_key ] = $results_info;
+        }
+        return $location_keys;
     }
 
     // Handle the "/locations/info/{name}/{page_number}" request
@@ -71,26 +90,6 @@ function tsd_locations_plugin_enable_api() {
         ] );
         //echo $location_key.count($all_articles)."\n";
         return $all_articles;
-    }
-
-    // Handle the "/locations" request
-    function tsd_locations_plugin_return_locations_list( $request ) {
-        $locations = tsd_locations_plugin_get_locations();
-
-        $location_keys = [];
-        foreach ( $locations as $each_location_key => $each_location_info ) {
-            $results_info = $each_location_info;
-
-            $all_posts = get_posts( [
-                'tag' => implode( ",", $each_location_info[ "tag-slug" ] ),
-                'numberposts' => -1,
-                'fields' => 'ids',  // https://wordpress.stackexchange.com/a/159193/75147
-            ] );
-            $results_info[ "count" ] = count( $all_posts );
-
-            $location_keys[ $each_location_key ] = $results_info;
-        }
-        return $location_keys;
     }
 
     // Handle the "/locations/search/{text}" request
