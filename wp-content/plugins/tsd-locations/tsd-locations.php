@@ -101,10 +101,8 @@ function tsd_locations_plugin_enable_api() {
         $place_names = [];
         foreach( $locations as $each_location_key => $each_location_info ) {
             $place_names[ $each_location_info["name"] ] = $each_location_key;
-            if( array_key_exists( "aliases", $each_location_info ) ) {
-                foreach( $each_location_info["aliases"] as $each_alias ) {
-                    $place_names[ $each_alias ] = $each_location_key;
-                }
+            foreach( $each_location_info["aliases"] as $each_alias ) {
+                $place_names[ $each_alias ] = $each_location_key;
             }
         }
         //print_r($place_names);

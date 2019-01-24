@@ -1,6 +1,9 @@
 {
 	"arboretum": {
 		"name": "Arboretum",
+		"aliases": [
+			"Stanford University Arboretum"
+		],
 		"description": "...",
 		"coordinates": [
 			37.437778,
@@ -14,6 +17,10 @@
 	},
 	"arizona_cactus_garden": {
 		"name": "Arizona Cactus Garden",
+		"aliases": [
+			"Arizona Garden",
+			"Cactus Garden"
+		],
 		"description": "...",
 		"coordinates": [
 			37.43592,
@@ -27,6 +34,7 @@
 	},
 	"bing_concert_hall": {
 		"name": "Bing Concert Hall",
+		"aliases": [],
 		"description": "...",
 		"coordinates": [
 			37.431944,
@@ -38,6 +46,7 @@
 	},
 	"braun_music_center": {
 		"name": "Braun Music Center",
+		"aliases": [],
 		"description": "...",
 		"coordinates": [
 			37.423889,
@@ -66,6 +75,9 @@
 	},
 	"clock_tower": {
 		"name": "Clock Tower",
+		"aliases": [
+			"Stanford Clock Tower"
+		],
 		"description": "...",
 		"coordinates": [
 			37.42595,
@@ -78,6 +90,7 @@
 	},
 	"dish": {
 		"name": "The Dish",
+		"aliases": [],
 		"description": "...",
 		"coordinates": [
 			37.4083,
@@ -90,6 +103,7 @@
 	},
 	"fire_truck_house": {
 		"name": "Fire Truck House",
+		"aliases": [],
 		"description": "...",
 		"coordinates": [
 			37.425066,
@@ -102,6 +116,9 @@
 	},
 	"frost_amphitheater": {
 		"name": "Frost Amphitheater",
+		"aliases": [
+			"Laurence Frost Amphitheater"
+		],
 		"description": "...",
 		"coordinates": [
 			37.430556,
@@ -113,6 +130,9 @@
 	},
 	"green_earth_sciences": {
 		"name": "Green Earth Sciences",
+		"aliases": [
+			"Cecil H. and Ida M. Green Earth Sciences Research Building"
+		],
 		"description": "...",
 		"coordinates": [
 			37.426667,
@@ -124,6 +144,9 @@
 	},
 	"haas_center": {
 		"name": "Haas Center for Public Service",
+		"aliases": [
+			"Stanford Public Service Center"
+		],
 		"description": "...",
 		"coordinates": [
 			37.422531,
@@ -136,7 +159,10 @@
 		]
 	},
 	"hanna_house": {
-		"name": "Hanna-Honeycomb House",
+		"name": "Hanna House",
+		"aliases": [
+			"Hanna-Honeycomb House"
+		],
 		"description": "...",
 		"coordinates": [
 			37.416014,
@@ -149,6 +175,9 @@
 	},
 	"hoover_house": {
 		"name": "Lou Henry Hoover House",
+		"aliases": [
+			"Lou Henry and Herbert Hoover House"
+		],
 		"description": "...",
 		"coordinates": [
 			37.417711,
@@ -161,6 +190,7 @@
 	},
 	"hoover_tower": {
 		"name": "Hoover Tower",
+		"aliases": [],
 		"description": "...",
 		"coordinates": [
 			37.42759,
@@ -172,6 +202,9 @@
 	},
 	"lake_lagunita": {
 		"name": "Lake Lagunita",
+		"aliases": [
+			"Dry lake"
+		],
 		"description": "...",
 		"coordinates": [
 			37.423273,
@@ -183,6 +216,10 @@
 	},
 	"main_quad": {
 		"name": "Main Quad",
+		"aliases": [
+			"Main Quadrangle",
+			"Quad"
+		],
 		"description": "...",
 		"coordinates": [
 			37.4275,
@@ -195,6 +232,7 @@
 	},
 	"oval": {
 		"name": "Oval",
+		"aliases": [],
 		"description": "...",
 		"coordinates": [
 			37.42986,
@@ -207,6 +245,9 @@
 	},
 	"mausoleum": {
 		"name": "Mausoleum",
+		"aliases": [
+			"Stanford Mausoleum"
+		],
 		"description": "...",
 		"coordinates": [
 			37.43651,
@@ -220,6 +261,11 @@
 	},
 	"memorial_auditorium": {
 		"name": "Memorial Auditorium",
+		"aliases": [
+			"Stanford Memorial Auditorium",
+			"Memorial Hall",
+			"MemAud"
+		],
 		"description": "...",
 		"coordinates": [
 			37.428889,
@@ -232,6 +278,10 @@
 	},
 	"memorial_church": {
 		"name": "Memorial Church",
+		"aliases": [
+			"Stanford Memorial Church",
+			"MemChu"
+		],
 		"description": "...",
 		"coordinates": [
 			37.4268,
@@ -244,6 +294,10 @@
 	},
 	"research_park": {
 		"name": "Stanford Research Park",
+		"aliases": [
+			"Research Park",
+			"SRP"
+		],
 		"description": "...",
 		"coordinates": [
 			37.4069,
@@ -256,6 +310,9 @@
 	},
 	"shopping_center": {
 		"name": "Stanford Shopping Center",
+		"aliases": [
+			"Shopping Center"
+		],
 		"description": "...",
 		"coordinates": [
 			37.443056,
