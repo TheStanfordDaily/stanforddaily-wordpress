@@ -107,6 +107,7 @@ function tsd_locations_plugin_enable_api() {
         //print_r($place_names);
 
         // https://stackoverflow.com/a/39477606/2603230
+        // TODO: Incease accuracy?
         uksort($place_names, function ($a, $b) use ($search_word) {
             similar_text($search_word, $a, $percentA);
             similar_text($search_word, $b, $percentB);
