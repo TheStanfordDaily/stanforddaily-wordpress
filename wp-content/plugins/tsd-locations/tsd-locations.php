@@ -40,6 +40,15 @@ function tsd_locations_plugin_enable_api() {
                 return true;
             }
         ]);
+
+        // Match "/locations/coordinates/{lat},{long}/{radius}"
+        register_rest_route('tsd/v1', '/locations/coordinates/(?P<lat>-?\d+\.\d+),(?P<long>-?\d+\.\d+)/(?P<radius>\d+(\.\d+)?)', [
+            'methods' => 'GET',
+            'callback' => 'tsd_locations_plugin_return_coordinates_search',
+            'permission_callback' => function (WP_REST_Request $request) {
+                return true;
+            }
+        ]);
     });
 
     function tsd_locations_plugin_get_locations() {
@@ -126,6 +135,47 @@ function tsd_locations_plugin_enable_api() {
                 }
             }
         }
+        return $results;
+    }
+
+
+    // https://stackoverflow.com/q/12439801/2603230
+    // Return in miles
+    function tsd_locations_plugin_get_distance( $latitude1, $longitude1, $latitude2, $longitude2 ) {
+        $earth_radius = 6371;
+
+        $dLat = deg2rad( $latitude2 - $latitude1 );
+        $dLon = deg2rad( $longitude2 - $longitude1 );
+
+        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2)) * sin($dLon/2) * sin($dLon/2);
+        $c = 2 * asin(sqrt($a));
+        $d = $earth_radius * $c;
+
+        return $d * 0.621371; // km * 0.621371 = mile
+    }
+
+    // Handle the "/locations/coordinates/{lat},{long}/{radius}" request
+    function tsd_locations_plugin_return_coordinates_search( $request ) {
+        $lat = floatval( $request[ 'lat' ] );
+        $long = floatval( $request[ 'long' ] );
+        $radius = floatval( $request[ 'radius' ] );
+
+        $locations = tsd_locations_plugin_get_locations();
+        $results = [];
+        foreach ( $locations as $each_location_key => $each_location_info ) {
+            $distance = tsd_locations_plugin_get_distance( $lat, $long, $each_location_info["coordinates"][0], $each_location_info["coordinates"][1] );
+            //echo "Distance from ".$lat.", ".$long." to ".$each_location_key." (".$each_location_info["coordinates"][0].",".$each_location_info["coordinates"][1].") is ".$distance." km.\n";
+            if ( $distance <= $radius ) {
+                $results[ $each_location_key ] = $each_location_info;
+                $results[ $each_location_key ][ "distance" ] = $distance;
+            }
+        }
+
+        // https://stackoverflow.com/q/1597736/2603230
+        uasort( $results, function ($a, $b) {
+            return $a[ 'distance' ] <=> $b[ 'distance' ];
+        });
+
         return $results;
     }
 }
