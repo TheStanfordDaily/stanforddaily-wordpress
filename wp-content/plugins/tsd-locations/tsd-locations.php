@@ -83,7 +83,7 @@ function tsd_locations_plugin_enable_api() {
         $locations = tsd_locations_plugin_get_locations();
         $location_key = $request[ 'name' ];
         $page_number = $request[ 'page' ] - 1;
-        $number_of_posts_each_page = 30;
+        $number_of_posts_each_page = 3;
 
         if ( ! array_key_exists( $location_key, $locations ) ) {
             return new WP_Error( 'no_location', 'Invalid location', ['status' => 404] );
