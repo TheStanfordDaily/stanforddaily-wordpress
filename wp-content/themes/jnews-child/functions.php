@@ -81,11 +81,13 @@ function tsd_blockquote_function($atts, $content = null) {
         'padding-right' => '10px',
         'float' => 'left',
         'font-size' => '30px',
+        'font-family' => '"Times New Roman", Times, serif',
     ), $atts);
 
     $return .= '<div><div style="width: ' . $atts['width'] . '; padding-bottom: ' .$atts['padding-bottom'] . '; 
     float: ' . $atts['float'] . '; padding-right: ' .$atts['padding-right'] .';
-    font-size: ' . $atts['font-size'] .';">' .do_shortcode($content) .'</div></div>';
+    font-size: ' . $atts['font-size'] . '; font-family: ' .$atts['font-family'] .'">' 
+    .do_shortcode($content) .'</div></div>';
 
     return $return;
 }
@@ -105,7 +107,7 @@ add_shortcode('tsd_blockquote', 'tsd_blockquote_function');
 
      $return .= '<div><div style ="display: ' .$atts['display']. '; margin-left: ' .$atts['margin-left'] 
      . '; margin-right: ' . $atts['margin-right'] . '; width: ' .$atts['width'] 
-     . ';">' .do_shortcode($content) . '</div></div>';
+     . '; ">' .do_shortcode($content) . '</div></div>';
 
      return $return;
  }

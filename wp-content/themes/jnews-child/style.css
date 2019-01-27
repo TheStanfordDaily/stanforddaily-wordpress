@@ -195,3 +195,7 @@ blockquote {
 img {
   display: block;
 }
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+}
