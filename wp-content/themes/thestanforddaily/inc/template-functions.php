@@ -86,11 +86,23 @@ function tsd_change_post_subtitle_meta_key() {
 add_filter( 'wps_subtitle_key', 'tsd_change_post_subtitle_meta_key' );
 
 /*
- * Add a Stanford Daily logo to wp-login.php.
+ * Add a Stanford Daily logo and a Stanford background to wp-login.php.
  * https://codex.wordpress.org/Customizing_the_Login_Form
  */
-function tsd_add_login_logo() { ?>
+function tsd_add_login_css() { ?>
     <style>
+	body {
+		background: #f1f1f1 url('<?php echo get_template_directory_uri(); ?>/img/login-background.png') center center no-repeat !important;
+		background-size: cover !important;
+	}
+	body::after {
+		content: "(King of Hearts / Wikimedia Commons / CC-BY-SA-3.0)";
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		color: #f1f1f1;
+		opacity: 0.75;
+	}
 	#login h1 a, .login h1 a {
 		display: inline-block;
 	}
@@ -113,4 +125,4 @@ function tsd_add_login_logo() { ?>
 	}
     </style>
 <?php }
-add_action( 'login_enqueue_scripts', 'tsd_add_login_logo' );
+add_action( 'login_enqueue_scripts', 'tsd_add_login_css' );
