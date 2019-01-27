@@ -127,6 +127,7 @@ function tsd_locations_plugin_enable_api() {
         $results = [];
         foreach( $place_names as $each_place_name => $each_place_code ) {
             similar_text($search_word, $each_place_name, $match_pertcentage);
+            //echo $each_place_name." ".similar_text($search_word, $each_place_name, $match_pertcentage)."\n";
             //echo $each_place_name." ".$match_pertcentage."\n";
             // If it is >40% match.
             if ( $match_pertcentage > 40 ) {
