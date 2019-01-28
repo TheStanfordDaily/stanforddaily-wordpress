@@ -23,8 +23,8 @@ function tsd_locations_plugin_enable_api() {
             }
         ]);
 
-        // Match "/locations/info/{name}/{page_number}"
-        register_rest_route('tsd/v1', '/locations/info/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
+        // Match "/locations/{name}/{page_number}"
+        register_rest_route('tsd/v1', '/locations/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
             'methods' => 'GET',
             'callback' => 'tsd_locations_plugin_return_location_info',
             'permission_callback' => function (WP_REST_Request $request) {
