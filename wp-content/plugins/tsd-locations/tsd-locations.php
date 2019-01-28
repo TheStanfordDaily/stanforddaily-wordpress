@@ -17,16 +17,7 @@ function tsd_locations_plugin_enable_api() {
         // Match "/locations"
         register_rest_route('tsd/v1', '/locations', [
             'methods' => 'GET',
-            'callback' => 'tsd_locations_plugin_return_locations_list',
-            'permission_callback' => function (WP_REST_Request $request) {
-                return true;
-            }
-        ]);
-
-        // Match "/locations/{name}/{page_number}"
-        register_rest_route('tsd/v1', '/locations/(?P<name>[\w\d_.-]+)/(?P<page>\d+)', [
-            'methods' => 'GET',
-            'callback' => 'tsd_locations_plugin_return_location_info',
+            'callback' => 'tsd_locations_plugin_return_locations',
             'permission_callback' => function (WP_REST_Request $request) {
                 return true;
             }
@@ -55,7 +46,26 @@ function tsd_locations_plugin_enable_api() {
         $locations_string = file_get_contents( __DIR__ . "/locations.json" );
         $locations = json_decode( $locations_string, true );
         //print_r($locations);
-        return $locations;
+
+        $results = [];
+        $count = 0;
+        foreach ( $locations as $each_location_key => $each_location_info ) {
+            $results_info = $each_location_info;
+            $results_info[ "id" ] = $count;
+            $results[] = $results_info;
+            $count++;
+        }
+
+        return $results;
+    }
+
+    // Handle the "/locations" with GET request
+    function tsd_locations_plugin_return_locations( $request ) {
+        if ( empty( $request[ "id" ] ) ) {
+            return tsd_locations_plugin_return_locations_list( $request );
+        } else {
+            return tsd_locations_plugin_return_locations_info( $request );
+        }
     }
 
     // Handle the "/locations" request
@@ -73,17 +83,21 @@ function tsd_locations_plugin_enable_api() {
             ] );
             $results_info[ "count" ] = count( $all_posts );
 
-            $location_keys[ $each_location_key ] = $results_info;
+            $location_keys[] = $results_info;
         }
         return $location_keys;
     }
 
-    // Handle the "/locations/info/{name}/{page_number}" request
-    function tsd_locations_plugin_return_location_info( $request ) {
+    // Handle the "/locations?id={id}&p={page_number}" request
+    function tsd_locations_plugin_return_locations_info( $request ) {
         $locations = tsd_locations_plugin_get_locations();
-        $location_key = $request[ 'name' ];
-        $page_number = $request[ 'page' ] - 1;
-        $number_of_posts_each_page = 3;
+        $location_key = (int) $request[ "id" ];
+        $page_number = 0;
+        $number_of_posts_each_page = -1;
+        if ( ! empty( $request[ "page" ] ) ) {
+            $page_number = $request[ "page" ] - 1;
+            $number_of_posts_each_page = 3;
+        }
 
         if ( ! array_key_exists( $location_key, $locations ) ) {
             return new WP_Error( 'no_location', 'Invalid location', ['status' => 404] );
