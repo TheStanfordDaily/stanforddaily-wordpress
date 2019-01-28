@@ -92,15 +92,16 @@ function tsd_locations_plugin_enable_api() {
     function tsd_locations_plugin_return_locations_info( $request ) {
         $locations = tsd_locations_plugin_get_locations();
         $location_key = (int) $request[ "id" ];
+
+        if ( ! is_integer( $request[ "id" ] ) || ! array_key_exists( $location_key, $locations ) ) {
+            return new WP_Error( 'no_location', 'Invalid location', ['status' => 404] );
+        }
+
         $page_number = 0;
         $number_of_posts_each_page = -1;
         if ( ! empty( $request[ "page" ] ) ) {
             $page_number = $request[ "page" ] - 1;
             $number_of_posts_each_page = 3;
-        }
-
-        if ( ! array_key_exists( $location_key, $locations ) ) {
-            return new WP_Error( 'no_location', 'Invalid location', ['status' => 404] );
         }
 
         $location_info = $locations[ $location_key ];
