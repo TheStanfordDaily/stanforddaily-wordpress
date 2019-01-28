@@ -32,8 +32,8 @@ function tsd_locations_plugin_enable_api() {
             }
         ]);
 
-        // Match "/locations/search/{text}"
-        register_rest_route('tsd/v1', '/locations/search/(?P<text>.*)', [
+        // Match "/locations/locations_search?q="
+        register_rest_route('tsd/v1', '/locations_search', [
             'methods' => 'GET',
             'callback' => 'tsd_locations_plugin_return_location_search',
             'permission_callback' => function (WP_REST_Request $request) {
@@ -101,9 +101,9 @@ function tsd_locations_plugin_enable_api() {
         return $all_articles;
     }
 
-    // Handle the "/locations/search/{text}" request
+    // Handle the "/locations/locations_search?q=" request
     function tsd_locations_plugin_return_location_search( $request ) {
-        $search_word = urldecode( $request[ 'text' ] );
+        $search_word = urldecode( $request[ "q" ] );
 
         $locations = tsd_locations_plugin_get_locations();
         $place_names = [];
