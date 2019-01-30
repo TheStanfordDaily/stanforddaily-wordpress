@@ -32,15 +32,6 @@ function tsd_locations_plugin_enable_api() {
                 return true;
             }
         ]);
-
-        // Match "/locations/coordinates/{lat},{long}/{radius}"
-        register_rest_route('tsd/v1', '/locations/coordinates/(?P<lat>-?\d+\.\d+),(?P<long>-?\d+\.\d+)/(?P<radius>\d+(\.\d+)?)', [
-            'methods' => 'GET',
-            'callback' => 'tsd_locations_plugin_return_coordinates_search',
-            'permission_callback' => function (WP_REST_Request $request) {
-                return true;
-            }
-        ]);
     });
 
     function tsd_locations_plugin_get_locations() {
@@ -64,6 +55,8 @@ function tsd_locations_plugin_enable_api() {
     function tsd_locations_plugin_return_locations( $request ) {
         if ( ! empty( $request[ "q" ] ) ) {
             return tsd_locations_plugin_return_location_search( $request );
+        } else if ( ! empty( $request[ "lat" ] ) && ! empty( $request[ "long" ] ) ) {
+            return tsd_locations_plugin_return_coordinates_search( $request );
         } else {
             return tsd_locations_plugin_return_locations_list( $request );
         }
@@ -183,9 +176,19 @@ function tsd_locations_plugin_enable_api() {
 
     // Handle the "/locations/coordinates/{lat},{long}/{radius}" request
     function tsd_locations_plugin_return_coordinates_search( $request ) {
+        if ( ! is_numeric( $request[ 'lat' ] ) || ! is_numeric( $request[ 'long' ] ) ) {
+            return new WP_Error( 'invalid_coords', 'Invalid coordinates', ['status' => 404] );
+        }
+
         $lat = floatval( $request[ 'lat' ] );
         $long = floatval( $request[ 'long' ] );
-        $radius = floatval( $request[ 'radius' ] );
+        $radius = 0.5;    // Default: 0.5 miles
+        if ( ! empty( $request[ 'radius' ] ) ) {
+            if ( ! is_numeric( $request[ 'radius' ] ) ) {
+                return new WP_Error( 'invalid_radius', 'Invalid radius', ['status' => 404] );
+            }
+            $radius = floatval( $request[ 'radius' ] );
+        }
 
         $locations = tsd_locations_plugin_get_locations();
         $results = [];
