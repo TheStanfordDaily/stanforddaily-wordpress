@@ -67,7 +67,7 @@ function tsd_locations_plugin_enable_api() {
         $locations = tsd_locations_plugin_get_locations();
 
         $location_keys = [];
-        foreach ( $locations as $each_location_key => $each_location_info ) {
+        foreach ( $locations as $each_location_info ) {
             $results_info = $each_location_info;
 
             $all_posts = get_posts( [
@@ -126,10 +126,11 @@ function tsd_locations_plugin_enable_api() {
 
         $locations = tsd_locations_plugin_get_locations();
         $place_names = [];
-        foreach( $locations as $each_location_key => $each_location_info ) {
-            $place_names[ $each_location_info["name"] ] = $each_location_key;
+        foreach( $locations as $each_location_info ) {
+            $each_location_id = $each_location_info["id"];
+            $place_names[ $each_location_info["name"] ] = $each_location_id;
             foreach( $each_location_info["aliases"] as $each_alias ) {
-                $place_names[ $each_alias ] = $each_location_key;
+                $place_names[ $each_alias ] = $each_location_id;
             }
         }
         //print_r($place_names);
@@ -155,6 +156,7 @@ function tsd_locations_plugin_enable_api() {
                 }
             }
         }
+        $results = array_values( $results );
         return $results;
     }
 
@@ -192,17 +194,18 @@ function tsd_locations_plugin_enable_api() {
 
         $locations = tsd_locations_plugin_get_locations();
         $results = [];
-        foreach ( $locations as $each_location_key => $each_location_info ) {
+        foreach ( $locations as $each_location_info ) {
             $distance = tsd_locations_plugin_get_distance( $lat, $long, $each_location_info["coordinates"][0], $each_location_info["coordinates"][1] );
-            //echo "Distance from ".$lat.", ".$long." to ".$each_location_key." (".$each_location_info["coordinates"][0].",".$each_location_info["coordinates"][1].") is ".$distance." km.\n";
+            //echo "Distance from ".$lat.", ".$long." to (".$each_location_info["coordinates"][0].",".$each_location_info["coordinates"][1].") is ".$distance." km.\n";
             if ( $distance <= $radius ) {
-                $results[ $each_location_key ] = $each_location_info;
-                $results[ $each_location_key ][ "distance" ] = $distance;
+                $this_result = $each_location_info;
+                $this_result[ "distance" ] = $distance;
+                $results[] = $this_result;
             }
         }
 
         // https://stackoverflow.com/q/1597736/2603230
-        uasort( $results, function ($a, $b) {
+        usort( $results, function ($a, $b) {
             return $a[ 'distance' ] <=> $b[ 'distance' ];
         });
 
