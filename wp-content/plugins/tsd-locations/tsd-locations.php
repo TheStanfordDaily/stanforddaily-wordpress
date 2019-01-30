@@ -33,15 +33,6 @@ function tsd_locations_plugin_enable_api() {
             }
         ]);
 
-        // Match "/locations/locations_search?q="
-        register_rest_route('tsd/v1', '/locations_search', [
-            'methods' => 'GET',
-            'callback' => 'tsd_locations_plugin_return_location_search',
-            'permission_callback' => function (WP_REST_Request $request) {
-                return true;
-            }
-        ]);
-
         // Match "/locations/coordinates/{lat},{long}/{radius}"
         register_rest_route('tsd/v1', '/locations/coordinates/(?P<lat>-?\d+\.\d+),(?P<long>-?\d+\.\d+)/(?P<radius>\d+(\.\d+)?)', [
             'methods' => 'GET',
@@ -71,7 +62,11 @@ function tsd_locations_plugin_enable_api() {
 
     // Handle the "/locations" with GET request
     function tsd_locations_plugin_return_locations( $request ) {
-        return tsd_locations_plugin_return_locations_list( $request );
+        if ( ! empty( $request[ "q" ] ) ) {
+            return tsd_locations_plugin_return_location_search( $request );
+        } else {
+            return tsd_locations_plugin_return_locations_list( $request );
+        }
     }
 
     // Handle the "/locations" request
