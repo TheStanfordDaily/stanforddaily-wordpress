@@ -48,12 +48,27 @@ Taken from https://github.com/digitalquery/wp-vagrant
 
 # Theme Development
 
-When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. To compile all the `.scss` files into `style.css`, run the following command at the root of the theme folder (`wp-content/themes/thestanforddaily/`):
+The theme is using [Sass](https://sass-lang.com/) for styling. When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. Do NOT manually edit the `style.css` file.
+
+We are using [grunt](https://gruntjs.com/) to compiling files.
+
+To set up, type the following command in the theme folder (`wp-content/themes/thestanforddaily/`)
 ```
-sass sass/style.scss style.css
+npm install
 ```
 
-Learn more: https://sass-lang.com/
+Then just type the following command every time you start working on the theme:
+```
+grunt
+```
+
+If you see:
+```
+Running "watch" task
+Waiting...
+```
+
+It means that grunt is working. Grunt will watch your `scss` files changes and automatically update the `style.css` and `style.min.css` for you.
 
 # Alternative ways
 
