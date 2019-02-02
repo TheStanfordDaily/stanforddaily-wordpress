@@ -757,6 +757,7 @@ a:hover, a:active {
 
 .site-branding {
   height: 100px;
+  background-color: red;
 }
 .site-branding .container {
   height: 100%;
@@ -1354,7 +1355,8 @@ a:hover, a:active {
 .entry-title {
   font-family: Libre Baskerville;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 1em;
+  /* TODO: Font size is too small! Change it to 3em. */
   line-height: 1.15;
   margin: 0 0 0.4em;
   letter-spacing: -0.04em;
