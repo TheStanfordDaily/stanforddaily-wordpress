@@ -28,6 +28,13 @@ module.exports = function (grunt) {
 		},
 
 		cssmin: { // Begin CSS Minify Plugin
+			options: {
+				level: {
+					1: {
+						specialComments: 0
+					}
+				}
+			},
 			target: {
 				files: {
 					'style.min.css': 'style.css'
