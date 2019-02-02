@@ -50,7 +50,7 @@ Taken from https://github.com/digitalquery/wp-vagrant
 
 The theme is using [Sass](https://sass-lang.com/) for styling. When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. Do NOT manually edit the `style.css` file.
 
-We are using [grunt](https://gruntjs.com/) to compiling files.
+We are using [Grunt](https://gruntjs.com/) to compiling files.
 
 To set up, type the following command in the theme folder (`wp-content/themes/thestanforddaily/`)
 ```
@@ -68,7 +68,7 @@ Running "watch" task
 Waiting...
 ```
 
-It means that grunt is working. Grunt will watch your `scss` files changes and automatically update the `style.css` and `style.min.css` for you.
+It means that grunt is up and running. Grunt will watch your `scss` files changes and automatically update the `style.css` and `style.min.css` for you.
 
 # Alternative ways
 
