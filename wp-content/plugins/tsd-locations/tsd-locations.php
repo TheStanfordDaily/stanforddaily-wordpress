@@ -44,6 +44,17 @@ function tsd_locations_plugin_enable_api() {
         foreach ( $locations as $each_location_key => $each_location_info ) {
             $results_info = $each_location_info;
             $results_info[ "id" ] = $count;
+
+            if ( empty( $results_info["iconBackgroundColor"] ) ) {
+                $results_info["iconBackgroundColor"] = "black";
+            }
+            if ( empty( $results_info["iconBorderColor"] ) ) {
+                $results_info["iconBorderColor"] = "white";
+            }
+            if ( empty( $results_info["iconColor"] ) ) {
+                $results_info["iconColor"] = "white";
+            }
+
             $results[] = $results_info;
             $count++;
         }
