@@ -27,6 +27,8 @@ Your support makes a difference in helping give staff members from all backgroun
     width: 100px;
     margin: 0px 20px;
 ">
+        <option>$5</option>
+        <option>$10</option>
         <option>$25</option>
         <option>$50</option>
         <option>$100</option>
