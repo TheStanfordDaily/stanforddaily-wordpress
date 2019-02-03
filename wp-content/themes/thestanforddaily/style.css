@@ -97,7 +97,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -134,7 +135,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -281,7 +283,8 @@ fieldset {
  *		`fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -315,7 +318,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -528,14 +532,16 @@ sub {
 # Elements
 --------------------------------------------------------------*/
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -736,7 +742,8 @@ a:hover, a:active {
   padding: 0;
   border: 0;
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: transparent;
 }
 .main-topbar .topbar-search-form .topbar-search-field {
@@ -818,7 +825,8 @@ a:hover, a:active {
 }
 .main-navigation ul ul {
   background: #fff;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 20px 40px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 20px 40px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 20px 40px rgba(0, 0, 0, 0.18);
   float: left;
   position: absolute;
   top: 100%;
@@ -886,7 +894,9 @@ a:hover, a:active {
   top: 0;
   bottom: 0;
   background: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#434343));
   background: linear-gradient(180deg, #000, #434343);
+  -webkit-transition: 0.2s ease-out 0.1s;
   transition: 0.2s ease-out 0.1s;
   opacity: 0;
   z-index: 9998;
@@ -897,6 +907,7 @@ a:hover, a:active {
   .background-overlay.overlay-display {
     opacity: 0.85;
     visibility: visible;
+    -webkit-transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
     transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
   }
 
@@ -911,7 +922,8 @@ a:hover, a:active {
     width: 100%;
     height: 60px;
     background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   .site-branding .container {
     padding: 10px 54px;
@@ -931,7 +943,8 @@ a:hover, a:active {
     font-size: 22px;
     border: 0;
     outline: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background: transparent;
     cursor: pointer;
   }
@@ -940,7 +953,8 @@ a:hover, a:active {
     height: 100%;
     /* 100% Full-height */
     max-width: 250px;
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
     position: fixed;
     /* Stay in place */
     z-index: 9999;
@@ -955,10 +969,13 @@ a:hover, a:active {
     /* Place content 40px from the top */
   }
   .main-navigation.mobile-open {
-    transform: translateZ(0);
-    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
+            box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1), 3px 0 25px rgba(0, 0, 0, 0.18);
   }
   .main-navigation.with-animation {
+    -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     /* 0.3 second transition effect to slide in the sidenav */
   }
@@ -968,7 +985,10 @@ a:hover, a:active {
   }
   .main-navigation ul {
     width: 100%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main-navigation ul a {
     padding: 8px 8px 8px 32px;
@@ -976,6 +996,7 @@ a:hover, a:active {
     font-size: 25px;
     color: #818181;
     display: block;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .main-navigation ul li {
@@ -1006,6 +1027,7 @@ a:hover, a:active {
     line-height: initial;
     color: black;
     opacity: 0.75;
+    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     z-index: 9999;
   }
@@ -1035,20 +1057,36 @@ a:hover, a:active {
 }
 
 .nav-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .nav-row ul {
   float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .nav-row ul li {
   float: none;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 /*--------------------------------------------------------------
@@ -1097,7 +1135,8 @@ a:hover, a:active {
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -1110,9 +1149,11 @@ a:hover, a:active {
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  clip-path: none;
+  -webkit-clip-path: none;
+          clip-path: none;
   color: #21759b;
   display: block;
   font-size: 14px;
@@ -1451,8 +1492,12 @@ a:hover, a:active {
   line-height: 200px;
   background: #f7f7f7;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .excerpt-thumb .thumbnail-container.no-thumbnail {
   background-image: url("https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg");

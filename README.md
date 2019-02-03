@@ -48,84 +48,28 @@ Taken from https://github.com/digitalquery/wp-vagrant
 
 # Theme Development
 
-When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. To compile all the `.scss` files into `style.css`, run the following command at the root of the theme folder (`wp-content/themes/thestanforddaily/`):
+The theme is using [Sass](https://sass-lang.com/) for styling. When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. Do NOT manually edit the `style.css` file.
+
+We are using [Grunt](https://gruntjs.com/) to compiling files.
+
+To set up, type the following command in the theme folder (`wp-content/themes/thestanforddaily/`)
 ```
-sass sass/style.scss style.css
+npm install
+npm install -g grunt-cli
 ```
 
-Learn more: https://sass-lang.com/
-
-## Notes
-Random notes:
-
+Then just type the following command every time you start working on the theme:
 ```
-vagrant ssh
+grunt
 ```
 
-Befor running vagrant up (if loading db dump directly from wpengine):
+If you see:
 ```
-sed -i 's/utf8mb4_unicode_520_ci/utf8mb4_unicode_ci/g' /vagrant/wp-vagrant/dump.sql
-perl -i -pe 's/utf8mb4_unicode_520_ci/utf8mb4_unicode_ci/g' wp-vagrant/wp_stanforddaily2.sql
-```
-
-Create admin user:
-
-```
-cd /vagrant
-wp user create root admin@localhost.stanforddaily.com --role=administrator --user_pass=root
-wp user update root --user_email=admin@localhost.stanforddaily.com
+Running "watch" task
+Waiting...
 ```
 
-MySQL queries to make db smaller:
-```
-mysql -uroot -proot
-
-use wp_stanforddaily2;
-delete from wp_pv_am_activities;
-delete from wp_3wp_activity_monitor_index;
-delete from wp_comments;
-delete from wp_popularpostssummary;
-delete from wp_options where option_name like '%jnews%';
-delete from wp_postmeta where meta_key like '%jnews%';
-UPDATE wp_postmeta
-  WHERE post_type = 'attachment'
-  SET guid = replace(guid, 'localhost.stanforddaily.com', 'www.stanforddaily.com');
-DELETE p, pm
-  FROM wp_posts p
- INNER
-  JOIN wp_postmeta pm
-    ON pm.post_id = p.ID
- WHERE (p.post_type = "post" and (p.post_date < "2018" or p.post_status != 'publish')) ;
-```
-Exit mysql, create admin user:
-
-```
-cd /vagrant
-wp user create root local@stanforddaily.local --role=administrator --user-pass=root
-```
-
-```
-mysqldump -uroot -proot wp_stanforddaily2 > /vagrant/wp-vagrant/dump.sql
-sed -i 's/utf8mb4_unicode_520_ci/utf8mb4_unicode_ci/g' /vagrant/wp-vagrant/dump.sql
-
-sed -i 's/https:\/\/localhost.stanforddaily.com/http:\/\/localhost.stanforddaily.com/g' /vagrant/wp-vagrant/dump.sql
-```
-
-Check table sizes
-```
-SELECT
-     table_schema as `Database`,
-     table_name AS `Table`,
-     round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`
-FROM information_schema.TABLES
-ORDER BY (data_length + index_length) DESC;
-```
-
-Nginx logs
-```
-sudo tail -f /var/log/nginx/error.log
-sudo vim /etc/nginx/sites-enabled/default.conf
-```
+It means that grunt is up and running. Grunt will watch your `scss` files changes and automatically update the `style.css` and `style.min.css` for you.
 
 # Alternative ways
 

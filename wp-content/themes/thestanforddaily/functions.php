@@ -121,6 +121,8 @@ add_action( 'widgets_init', 'tsd_widgets_init' );
  */
 function tsd_scripts() {
 	wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
+	// TODO: Use style.min.css in production.
+	//wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css" );
 
 	wp_enqueue_script( 'jquery' );
 
