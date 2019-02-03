@@ -96,6 +96,7 @@ add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
  */
 function tsd_add_widget_before_sidebar( $name ) 
 {
-    include "sidebar-tips-donation.php";
+    wp_enqueue_script('tsd-sidebar-script', get_stylesheet_directory_uri() . "/sidebar-tips.js", array('jquery'));
+    wp_enqueue_style('tsd-sidebar-styles', get_stylesheet_directory_uri() . "/sidebar-tips.css");
 }
-add_action( 'get_sidebar', 'tsd_add_widget_before_sidebar' );
+add_action( 'wp_enqueue_scripts', 'tsd_add_widget_before_sidebar' );
