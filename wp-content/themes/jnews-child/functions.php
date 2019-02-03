@@ -89,3 +89,13 @@ function tsd_add_donate_blurb_to_content( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
+
+
+/*
+ * Add tips and donation widget before every sidebar
+ */
+function tsd_add_widget_before_sidebar( $name ) 
+{
+    include "sidebar-tips-donation.php";
+}
+add_action( 'get_sidebar', 'tsd_add_widget_before_sidebar' );
