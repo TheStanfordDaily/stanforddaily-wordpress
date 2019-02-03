@@ -19,8 +19,6 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			?><h1 style="color: red; ">hEWWO wORLD! tODAY iZ <b><?php echo date("Y/m/d"); ?></b>!</h1><?php	// TODO: Who wrote it here?! Delete it!
-
 			//the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
