@@ -5,6 +5,7 @@
 			"Stanford University Arboretum"
 		],
 		"description": "...",
+		"icon": "flower",
 		"coordinates": [
 			37.437778,
 			-122.166667
@@ -22,6 +23,7 @@
 			"Cactus Garden"
 		],
 		"description": "...",
+		"icon": "flower",
 		"coordinates": [
 			37.43592,
 			-122.17112
@@ -36,6 +38,7 @@
 		"name": "Bing Concert Hall",
 		"aliases": [],
 		"description": "...",
+		"icon": "music-note",
 		"coordinates": [
 			37.431944,
 			-122.166111
@@ -48,6 +51,7 @@
 		"name": "Braun Music Center",
 		"aliases": [],
 		"description": "...",
+		"icon": "music-note",
 		"coordinates": [
 			37.423889,
 			-122.169444
@@ -62,6 +66,7 @@
 			"Iris & B. Gerald Cantor Center for Visual Arts"
 		],
 		"description": "...",
+		"icon": "brush",
 		"coordinates": [
 			37.433,
 			-122.171
@@ -79,6 +84,7 @@
 			"Stanford Clock Tower"
 		],
 		"description": "...",
+		"icon": "clock-outline",
 		"coordinates": [
 			37.42595,
 			-122.168858
@@ -92,6 +98,7 @@
 		"name": "The Dish",
 		"aliases": [],
 		"description": "...",
+		"icon": "satellite",
 		"coordinates": [
 			37.4083,
 			-122.179
@@ -105,6 +112,7 @@
 		"name": "Fire Truck House",
 		"aliases": [],
 		"description": "...",
+		"icon": "fire-truck",
 		"coordinates": [
 			37.425066,
 			-122.171667
@@ -120,6 +128,7 @@
 			"Laurence Frost Amphitheater"
 		],
 		"description": "...",
+		"icon": "stadium",
 		"coordinates": [
 			37.430556,
 			-122.165833
@@ -134,6 +143,7 @@
 			"Cecil H. and Ida M. Green Earth Sciences Research Building"
 		],
 		"description": "...",
+		"icon": "earth",
 		"coordinates": [
 			37.426667,
 			-122.173889
@@ -149,6 +159,7 @@
 			"Haas Center"
 		],
 		"description": "...",
+		"icon": "heart-circle-outline",
 		"coordinates": [
 			37.422531,
 			-122.167436
@@ -165,6 +176,7 @@
 			"Hanna-Honeycomb House"
 		],
 		"description": "...",
+		"icon": "home-variant",
 		"coordinates": [
 			37.416014,
 			-122.163553
@@ -180,6 +192,7 @@
 			"Lou Henry and Herbert Hoover House"
 		],
 		"description": "...",
+		"icon": "home-variant",
 		"coordinates": [
 			37.417711,
 			-122.168878
@@ -193,6 +206,7 @@
 		"name": "Hoover Tower",
 		"aliases": [],
 		"description": "...",
+		"icon": "tower-fire",
 		"coordinates": [
 			37.42759,
 			-122.16695
@@ -207,6 +221,7 @@
 			"Dry lake"
 		],
 		"description": "...",
+		"icon": "water-off",
 		"coordinates": [
 			37.423273,
 			-122.176076
@@ -222,6 +237,7 @@
 			"Quad"
 		],
 		"description": "...",
+		"icon": "stadium",
 		"coordinates": [
 			37.4275,
 			-122.170278
@@ -235,6 +251,7 @@
 		"name": "Oval",
 		"aliases": [],
 		"description": "...",
+		"icon": "stadium",
 		"coordinates": [
 			37.42986,
 			-122.16948
@@ -250,6 +267,7 @@
 			"Stanford Mausoleum"
 		],
 		"description": "...",
+		"icon": "stadium",
 		"coordinates": [
 			37.43651,
 			-122.16989
@@ -268,6 +286,7 @@
 			"MemAud"
 		],
 		"description": "...",
+		"icon": "stadium",
 		"coordinates": [
 			37.428889,
 			-122.166389
@@ -284,6 +303,7 @@
 			"MemChu"
 		],
 		"description": "...",
+		"icon": "church",
 		"coordinates": [
 			37.4268,
 			-122.1705
@@ -300,6 +320,7 @@
 			"SRP"
 		],
 		"description": "...",
+		"icon": "test-tube",
 		"coordinates": [
 			37.4069,
 			-122.1518
@@ -315,6 +336,7 @@
 			"Shopping Center"
 		],
 		"description": "...",
+		"icon": "shopping",
 		"coordinates": [
 			37.443056,
 			-122.171111
