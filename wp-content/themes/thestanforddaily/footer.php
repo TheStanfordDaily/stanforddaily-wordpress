@@ -17,7 +17,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div class="site-info">
-				&copy; <?php echo date("Y"); ?> The Stamford Daily Publishing Corporation.<!--TODO: Typo here!-->
+				&copy; <?php echo date("Y"); ?> The Stanford Daily Publishing Corporation.<!--TODO: Typo here!-->
 				<br />
 				Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>
 				<span class="sep"> | </span>
