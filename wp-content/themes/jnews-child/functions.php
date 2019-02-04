@@ -99,4 +99,4 @@ function tsd_add_widget_before_sidebar( $name )
     wp_enqueue_script('tsd-sidebar-script', get_stylesheet_directory_uri() . "/sidebar-tips.js", array('jquery'));
     wp_enqueue_style('tsd-sidebar-styles', get_stylesheet_directory_uri() . "/sidebar-tips.css");
 }
-add_action( 'wp_enqueue_scripts', 'tsd_add_widget_before_sidebar' );
+// add_action( 'wp_enqueue_scripts', 'tsd_add_widget_before_sidebar' );
