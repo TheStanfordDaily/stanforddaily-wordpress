@@ -10,7 +10,7 @@
 			37.437778,
 			-122.166667
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"arboretum",
 			"arboretum-grove",
 			"arboretum-road"
@@ -28,7 +28,7 @@
 			37.43592,
 			-122.17112
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"arizona-cactus-garden",
 			"the-arizona-garden",
 			"cactus-garden"
@@ -43,7 +43,7 @@
 			37.431944,
 			-122.166111
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"bing-concert-hall"
 		]
 	},
@@ -56,7 +56,7 @@
 			37.423889,
 			-122.169444
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"braun-music-center"
 		]
 	},
@@ -71,7 +71,7 @@
 			37.433,
 			-122.171
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"cantor-arts-center",
 			"the-cantor-arts-center",
 			"iris-and-b-gerald-cantor-center-for-visual-arts",
@@ -89,7 +89,7 @@
 			37.42595,
 			-122.168858
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"clock-tower",
 			"stanford-clock-tower"
 		]
@@ -103,7 +103,7 @@
 			37.4083,
 			-122.179
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"the-dish",
 			"dish"
 		]
@@ -117,7 +117,7 @@
 			37.425066,
 			-122.171667
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"fire-truck-house",
 			"firetruck-house"
 		]
@@ -133,7 +133,7 @@
 			37.430556,
 			-122.165833
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"frost-amphitheater"
 		]
 	},
@@ -148,7 +148,7 @@
 			37.426667,
 			-122.173889
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"green-earth-sciences"
 		]
 	},
@@ -164,7 +164,7 @@
 			37.422531,
 			-122.167436
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"haas-center-for-public-service",
 			"haas-center",
 			"stanford-haas-center"
@@ -181,7 +181,7 @@
 			37.416014,
 			-122.163553
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"hanna-honeycomb-house",
 			"hanna-house"
 		]
@@ -197,7 +197,7 @@
 			37.417711,
 			-122.168878
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"hoover-house",
 			"lou-henry-hoover-house"
 		]
@@ -211,7 +211,7 @@
 			37.42759,
 			-122.16695
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"hoover-tower"
 		]
 	},
@@ -226,7 +226,7 @@
 			37.423273,
 			-122.176076
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"lake-lagunita"
 		]
 	},
@@ -242,7 +242,7 @@
 			37.4275,
 			-122.170278
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"main-quad",
 			"quad"
 		]
@@ -256,7 +256,7 @@
 			37.42986,
 			-122.16948
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"oval",
 			"the-oval"
 		]
@@ -272,7 +272,7 @@
 			37.43651,
 			-122.16989
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"mausoleum",
 			"stanford-mausoleum",
 			"the-mausoleum"
@@ -291,7 +291,7 @@
 			37.428889,
 			-122.166389
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"memorial-auditorium",
 			"memaud"
 		]
@@ -308,7 +308,7 @@
 			37.4268,
 			-122.1705
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"memorial-church",
 			"memchu"
 		]
@@ -325,7 +325,7 @@
 			37.4069,
 			-122.1518
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"stanford-research-park",
 			"research-park"
 		]
@@ -341,7 +341,7 @@
 			37.443056,
 			-122.171111
 		],
-		"tag-slug": [
+		"tagSlug": [
 			"stanford-shopping-center"
 		]
 	}

@@ -82,7 +82,7 @@ function tsd_locations_plugin_enable_api() {
             $results_info = $each_location_info;
 
             $all_posts = get_posts( [
-                'tag' => implode( ",", $each_location_info[ "tag-slug" ] ),
+                'tag' => implode( ",", $each_location_info[ "tagSlug" ] ),
                 'numberposts' => -1,
                 'fields' => 'ids',  // https://wordpress.stackexchange.com/a/159193/75147
             ] );
@@ -120,7 +120,7 @@ function tsd_locations_plugin_enable_api() {
                 }
 
                 $all_articles = get_posts( [
-                    'tag' => implode( ",", $location_info[ "tag-slug" ] ),
+                    'tag' => implode( ",", $location_info[ "tagSlug" ] ),
                     'offset' => $page_number * $number_of_posts_each_page,
                     'numberposts' => $number_of_posts_each_page
                 ] );
