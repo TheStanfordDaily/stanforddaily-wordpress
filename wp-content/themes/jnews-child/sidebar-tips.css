@@ -11,7 +11,7 @@
     text-transform: uppercase;
 }
 
-.tsd-sidebar-tips-container button[type=submit] {
+.tsd-sidebar-tips-container input[type=submit] {
     border: 1px solid white;
     margin-top: 20px;
 }
