@@ -1,8 +1,4 @@
 jQuery(function() {
-    $("<div class='tsd-sidebar-tips-container'><h3>Confidential Tips</h3>" +
-    "<input type='text' placeholder='name'><input type='text' placeholder='email (optional)'>" +
-    "<textarea placeholder='message'></textarea><input type='submit'>Submit</button>" +
-    "</div>"
-    
-    ).prependTo($('.jeg_sidebar'));
+    jQuery(jQuery("#tsd-tips-widget").html()).prependTo(jQuery('.jeg_sidebar'));
+    jQuery(jQuery("#tsd-donate-header").html()).prependTo(jQuery('.jeg_viewport'));
 });
