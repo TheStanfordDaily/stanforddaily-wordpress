@@ -1,1 +1,1 @@
-<h1>Test, tips widget.</h1>
+<div style="background: #aa0000;color: white; padding: 0px 50px;" class="jeg_nav_item">Send us tips</div>
