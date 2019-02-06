@@ -41,13 +41,12 @@ echo home_url($wp->request);?>">
     </select>
 
     <div class="checkbox"
-    class="monthlyDonation"
     style="
     /* display: inline-block; */
     margin: 0px 10px;
     margin-top: 10px;
     " name="monthly-donation">
-    <label><input type="checkbox" value="" style="
+    <label><input type="checkbox" class="monthlyDonation" value="" style="
         margin-right: 10px;
     ">Make my donation a monthly donation.</label>
     </div>
