@@ -55,12 +55,15 @@ if (!window.localStorage) {
         });
 
         $(".tsd-tips-expanded form").submit(function (e) {
+            var buttonSubmit = $(this).find("input[type=submit]").attr("value", "Loading...").attr("disabled", "disabled");
             $.post($(this).attr("action"), $(this).serialize()).done(function () {
                 alert("Tip submitted successfully. Thank you!");
                 $(this).find("input[type=text], input[type=email], textarea").val("");
+                $(this).find("input[type=submit]").attr("value", "Submit").attr("disabled", "");
                 $("a.tsd-tips-toggle").click();
             })
                 .fail(function () {
+                    $(this).find("input[type=submit]").attr("value", "Submit").attr("disabled", "");
                     alert("Error submitting the form. Please email your tip to eic@stanforddaily.com.");
                 });
             return false;
