@@ -9,7 +9,7 @@
             var isRecurring = $(this).find("input.monthlyDonation").attr("checked") === "checked";
             if (isRecurring) {
                 var amount = $(this).find("select[name=amount]").val();
-                var recurringForm = $(this).next("tsd-donation-form-recurring");
+                var recurringForm = $(this).next(".tsd-donation-form-recurring");
                 recurringForm.find("input[name=a3]").val(amount);
                 recurringForm.submit();
                 return false;
