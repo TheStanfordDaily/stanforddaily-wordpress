@@ -36,6 +36,12 @@
     position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+    .tsd-hidden-sm {
+        display: none;
+    }
+}
+
 .tsd-tips-expanded {
     display: none;
     width: 350px;

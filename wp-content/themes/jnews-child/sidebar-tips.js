@@ -16,9 +16,16 @@ if (!window.localStorage) {
     };
     $(function () {
         // $($("#tsd-tips-widget").html()).prependTo($('.jeg_sidebar'));
-        $(".jeg_bottombar .jeg_nav_normal").last().replaceWith(
-            $($("#tsd-tips-widget").html())
-        );
+        if (document.body.clientWidth < 768) {
+            $("body").prepend(
+                $($("#tsd-tips-widget").html())
+            );
+        }
+        else {
+            $(".jeg_bottombar .jeg_nav_normal").last().replaceWith(
+                $($("#tsd-tips-widget").html())
+            );
+        }
         var optoutDate = new Date(parseInt(localStorage.getItem("tsd-donate-header-optout-time") || 0));
         if (localStorage.getItem("tsd-donate-header-close") !== "true" || numDaysBetween(new Date(), optoutDate) > 7) {
             $($("#tsd-donate-header").html()).prependTo($('.jeg_viewport'));
