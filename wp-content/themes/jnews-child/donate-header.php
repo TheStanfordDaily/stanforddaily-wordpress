@@ -20,7 +20,7 @@
 </div>
 
 <div class="col-xs-12 col-sm-6">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="tsd-donation-form">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="tsd-donation-form">
     <input type="hidden" name="business" value="coo@stanforddaily.com">
     <input type="hidden" name="cmd" value="_donations">
     <input type="hidden" name="item_name" value="Stanford Daily Donation">
@@ -56,7 +56,6 @@ https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-g
     -->
 
     <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-</div>
 
 
 </form>
@@ -73,5 +72,7 @@ echo home_url($wp->request);?>">
     <input type="hidden" name="p3" value="1">
     <input type="hidden" name="t3" value="M" />
 </form>
+
+</div>
 
 </div>
