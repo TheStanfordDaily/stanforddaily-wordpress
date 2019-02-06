@@ -36,12 +36,6 @@
     position: relative;
 }
 
-@media only screen and (max-width: 768px) {
-    .tsd-hidden-sm {
-        display: none;
-    }
-}
-
 .tsd-tips-expanded {
     display: none;
     width: 350px;
@@ -49,4 +43,25 @@
     position: absolute;
     top: 52px;
     right: 0;
+    z-index: 9999999;
+}
+
+@media only screen and (max-width: 768px) {
+    .tsd-hidden-sm {
+        display: none;
+    }
+    .tsd-tips-toggle > div {
+        padding: 10px 20px;
+    }
+    .tsd-tips-expanded {
+        top: 80px;
+    }
+    .tsd-donate-header {
+        padding: 0px;
+        padding-top: 10px;
+    }
+    .tsd-donate-header button[type=submit] {
+        width: 50%;
+        padding: 0;
+    }
 }
