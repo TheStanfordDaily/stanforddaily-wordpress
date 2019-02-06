@@ -19,3 +19,15 @@
 .tsd-donation-form-recurring {
     display: none;
 }
+
+.tsd-tips-toggle {
+    position: relative;
+}
+
+.tsd-tips-expanded {
+    display: none;
+    max-width: 350px;
+    position: absolute;
+    top: 52px;
+    right: 0;
+}
