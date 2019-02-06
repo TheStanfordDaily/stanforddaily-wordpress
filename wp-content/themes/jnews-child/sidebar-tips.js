@@ -16,9 +16,16 @@ if (!window.localStorage) {
     };
     $(function () {
         // $($("#tsd-tips-widget").html()).prependTo($('.jeg_sidebar'));
-        $(".jeg_bottombar .jeg_nav_normal").last().replaceWith(
-            $($("#tsd-tips-widget").html())
-        );
+        if (document.body.clientWidth < 768) {
+            $("body").prepend(
+                $($("#tsd-tips-widget").html())
+            );
+        }
+        else {
+            $(".jeg_bottombar .jeg_nav_normal").last().replaceWith(
+                $($("#tsd-tips-widget").html())
+            );
+        }
         var optoutDate = new Date(parseInt(localStorage.getItem("tsd-donate-header-optout-time") || 0));
         if (localStorage.getItem("tsd-donate-header-close") !== "true" || numDaysBetween(new Date(), optoutDate) > 7) {
             $($("#tsd-donate-header").html()).prependTo($('.jeg_viewport'));
@@ -55,12 +62,16 @@ if (!window.localStorage) {
         });
 
         $(".tsd-tips-expanded form").submit(function (e) {
+            var buttonSubmit = $(this).find("input[type=submit]").attr("value", "Loading...").attr("disabled", "disabled");
+            var inputs = $(this).find("input[type=text], input[type=email], textarea");
             $.post($(this).attr("action"), $(this).serialize()).done(function () {
                 alert("Tip submitted successfully. Thank you!");
-                $(this).find("input[type=text], input[type=email], textarea").val("");
+                inputs.val("");
+                buttonSubmit.attr("value", "Submit").attr("disabled", "");
                 $("a.tsd-tips-toggle").click();
             })
                 .fail(function () {
+                    buttonSubmit.attr("value", "Submit").attr("disabled", "");
                     alert("Error submitting the form. Please email your tip to eic@stanforddaily.com.");
                 });
             return false;
