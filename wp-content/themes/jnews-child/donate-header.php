@@ -10,9 +10,13 @@
     /* padding: 0; */
     margin-top: 0px;
     text-align: center;
-    ">Support independent, student-run journalism</h3>
+    ">
+        <mark style="color: black">
+            Support independent, student-run journalism
+        </mark>
+    </h3>
     <i class="fa fa-book fa-4x" aria-hidden="true" style="float: left; margin: 5px 30px 0px 30px;"></i>
-    Your support makes a difference in helping give staff members from all backgrounds the opportunity to conduct meaningful reporting. All contributions are tax-deductible.
+    Your support helps give staff members from all backgrounds the opportunity to conduct meaningful reporting on important issues at Stanford. All contributions are tax-deductible.
 </div>
 
 <div class="col-xs-12 col-sm-6">
