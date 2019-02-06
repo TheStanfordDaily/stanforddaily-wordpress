@@ -1,5 +1,5 @@
 <a href="#" class="tsd-tips-toggle">
-    <div style="background: #aa0000;color: white;padding: 0px 20px;/* padding-right: 20px; */" class="jeg_nav_item">Send us tips
+    <div class="jeg_nav_item">Send us tips
     
     <i class="fa fa-caret-down" style="
         margin-left: 10px;

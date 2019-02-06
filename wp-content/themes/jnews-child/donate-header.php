@@ -1,9 +1,4 @@
-<div class="row tsd-donate-header" style="
-    background: #eee;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #aa0000;
-">
+<div class="row tsd-donate-header">
 
 <a class="tsd-donate-header-close" href="#" >
     <i class="fa fa-close"></i>
