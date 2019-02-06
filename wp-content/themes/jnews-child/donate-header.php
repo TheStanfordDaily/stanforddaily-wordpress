@@ -22,7 +22,7 @@
 <div class="col-xs-12 col-sm-6">
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="tsd-donation-form">
     <input type="hidden" name="business" value="coo@stanforddaily.com">
-    <input type="hidden" name="cmd" value="_xclick-subscriptions">
+    <input type="hidden" name="cmd" value="_donations">
     <input type="hidden" name="item_name" value="Stanford Daily Donation">
     <input type="hidden" name="item_number" value="From Header in Page: <?php global $wp;
 echo home_url($wp->request);?>">
@@ -40,7 +40,9 @@ echo home_url($wp->request);?>">
         <option>$1,000</option>
     </select>
 
-    <div class="checkbox" style="
+    <div class="checkbox"
+    class="monthlyDonation"
+    style="
     /* display: inline-block; */
     margin: 0px 10px;
     margin-top: 10px;
@@ -63,6 +65,9 @@ https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-g
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="tsd-donation-form-recurring">
     <input type="hidden" name="business" value="coo@stanforddaily.com">
     <input type="hidden" name="cmd" value="_xclick-subscriptions">
+    <input type="hidden" name="item_name" value="Stanford Daily Donation">
+    <input type="hidden" name="item_number" value="From Header in Page: <?php global $wp;
+echo home_url($wp->request);?>">
     <input type="hidden" name="no_note" value="1" />
     <input type="hidden" name="src" value="1" />
     <input type="hidden" name="a3" value="100">
