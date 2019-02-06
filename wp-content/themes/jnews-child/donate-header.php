@@ -20,9 +20,9 @@
 </div>
 
 <div class="col-xs-12 col-sm-6">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="customize-unpreviewable">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="tsd-donation-form">
     <input type="hidden" name="business" value="coo@stanforddaily.com">
-    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="cmd" value="_xclick-subscriptions">
     <input type="hidden" name="item_name" value="Stanford Daily Donation">
     <input type="hidden" name="item_number" value="From Header in Page: <?php global $wp;
 echo home_url($wp->request);?>">
@@ -50,11 +50,24 @@ echo home_url($wp->request);?>">
     ">Make my donation a monthly donation.</label>
     </div>
 
-    <!-- Display the payment button. -->
+    <!-- 
+https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/Appx_websitestandard_htmlvariables/#recurring-payment-variables
+    -->
 
     <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
 </div>
 
 
 </form>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="tsd-donation-form-recurring">
+    <input type="hidden" name="business" value="coo@stanforddaily.com">
+    <input type="hidden" name="cmd" value="_xclick-subscriptions">
+    <input type="hidden" name="no_note" value="1" />
+    <input type="hidden" name="src" value="1" />
+    <input type="hidden" name="a3" value="100">
+    <input type="hidden" name="p3" value="1">
+    <input type="hidden" name="t3" value="M" />
+</form>
+
 </div>
