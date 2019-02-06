@@ -57,6 +57,7 @@ if (!window.localStorage) {
         $(".tsd-tips-expanded form").submit(function (e) {
             $.post($(this).attr("action"), $(this).serialize()).done(function () {
                 alert("Tip submitted successfully. Thank you!");
+                $(this).find("input[type=text], input[type=email], textarea").val("");
                 $("a.tsd-tips-toggle").click();
             })
                 .fail(function () {
