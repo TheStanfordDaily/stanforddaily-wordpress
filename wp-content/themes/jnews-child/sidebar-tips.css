@@ -34,7 +34,8 @@
 
 .tsd-tips-expanded {
     display: none;
-    max-width: 350px;
+    width: 350px;
+    max-width: 100vw;
     position: absolute;
     top: 52px;
     right: 0;

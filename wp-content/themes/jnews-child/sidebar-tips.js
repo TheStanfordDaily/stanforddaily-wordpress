@@ -42,7 +42,7 @@ if (!window.localStorage) {
 
         $("a.tsd-tips-toggle").click(function (e) {
             e.preventDefault();
-            var expandedElement = $(this).next(".tsd-tips-expanded");
+            var expandedElement = $(this).find(".tsd-tips-expanded");
             var icon = $(this).find("i.fa");
             expandedElement.slideToggle(400, function () {
                 if (expandedElement.is(":visible")) {
