@@ -30,8 +30,6 @@
 .tsd-sidebar-tips-container input[type=submit] {
     border: 1px solid white;
     margin-top: 20px;
-<<<<<<< HEAD
-=======
 }
 
 .tsd-tips-toggle {
@@ -45,5 +43,4 @@
     position: absolute;
     top: 52px;
     right: 0;
->>>>>>> 9b130df451ba5610ee8c6cc92a43b894755e9096
 }
