@@ -6,7 +6,7 @@
     position: relative;
 ">
 
-<a class="tsd-donate-header-close" href="#"><i class="fa fa-close fa-4x" style="position: absolute; right: 50px; top: 20px;"></a>
+<a class="tsd-donate-header-close" href="#"><i class="fa fa-close fa-4x" style="position: absolute; right: 50px; top: 20px;"></i></a>
 
 <div class="col-xs-12 col-sm-6">
     <h3 style="
