@@ -5,7 +5,11 @@
 }
 
 .tsd-donate-header-close {
-    position: absolute; right: 20px; top: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+    color: black;
 }
 
 /* tips */
