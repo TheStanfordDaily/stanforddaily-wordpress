@@ -1,3 +1,19 @@
+/* header */
+
+.tsd-donation-form-recurring {
+    display: none;
+}
+
+.tsd-donate-header-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+    color: black;
+}
+
+/* tips */
+
 .tsd-sidebar-tips-container {
     padding: 20px;
     background: #aa0000;
@@ -14,4 +30,20 @@
 .tsd-sidebar-tips-container input[type=submit] {
     border: 1px solid white;
     margin-top: 20px;
+<<<<<<< HEAD
+=======
+}
+
+.tsd-tips-toggle {
+    position: relative;
+}
+
+.tsd-tips-expanded {
+    display: none;
+    width: 350px;
+    max-width: 100vw;
+    position: absolute;
+    top: 52px;
+    right: 0;
+>>>>>>> 9b130df451ba5610ee8c6cc92a43b894755e9096
 }

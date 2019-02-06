@@ -99,4 +99,20 @@ function tsd_add_widget_before_sidebar( $name )
     wp_enqueue_script('tsd-sidebar-script', get_stylesheet_directory_uri() . "/sidebar-tips.js", array('jquery'));
     wp_enqueue_style('tsd-sidebar-styles', get_stylesheet_directory_uri() . "/sidebar-tips.css");
 }
-// add_action( 'wp_enqueue_scripts', 'tsd_add_widget_before_sidebar' );
+add_action( 'wp_enqueue_scripts', 'tsd_add_widget_before_sidebar' );
+
+function tsd_add_widget_content()
+{
+    ?>
+    
+    <script type="text/html" id="tsd-donate-header">
+    <?php include "donate-header.php"; ?>
+    </script>
+
+    <script type="text/html" id="tsd-tips-widget">
+    <?php include "tips-widget.php"; ?>
+    </script>
+    
+    <?php
+}
+add_action('wp_head', 'tsd_add_widget_content');
