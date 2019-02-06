@@ -3,10 +3,11 @@
     padding: 20px;
     text-align: center;
     border-top: 1px solid #aa0000;
-    position: relative;
 ">
 
-<a class="tsd-donate-header-close" href="#"><i class="fa fa-close fa-4x" style="position: absolute; right: 50px; top: 20px;"></i></a>
+<a class="tsd-donate-header-close" href="#" >
+    <i class="fa fa-close"></i>
+</a>
 
 <div class="col-xs-12 col-sm-6">
     <h3 style="

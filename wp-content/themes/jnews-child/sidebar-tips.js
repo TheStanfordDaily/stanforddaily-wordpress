@@ -10,12 +10,17 @@ if (!window.localStorage) {
 }
 
 (function ($) {
+    var numDaysBetween = function (d1, d2) {
+        var diff = Math.abs(d1.getTime() - d2.getTime());
+        return diff / (1000 * 60 * 60 * 24);
+    };
     $(function () {
         // $($("#tsd-tips-widget").html()).prependTo($('.jeg_sidebar'));
         $(".jeg_bottombar .jeg_nav_normal").last().replaceWith(
             $($("#tsd-tips-widget").html())
         );
-        if (localStorage.getItem("tsd-donate-header-close") !== "true") {
+        var optoutDate = new Date(parseInt(localStorage.getItem("tsd-donate-header-optout-time") || 0));
+        if (localStorage.getItem("tsd-donate-header-close") !== "true" || numDaysBetween(new Date(), optoutDate) > 7) {
             $($("#tsd-donate-header").html()).prependTo($('.jeg_viewport'));
         }
         $(".tsd-donation-form").submit(function (e) {
@@ -32,6 +37,7 @@ if (!window.localStorage) {
             e.preventDefault();
             $(".tsd-donate-header").hide();
             localStorage.setItem("tsd-donate-header-close", "true");
+            localStorage.setItem("tsd-donate-header-optout-time", new Date().getTime() + "");
         });
 
         $("a.tsd-tips-toggle").click(function (e) {

@@ -1,3 +1,15 @@
+/* header */
+
+.tsd-donation-form-recurring {
+    display: none;
+}
+
+.tsd-donate-header-close {
+    position: absolute; right: 20px; top: 20px;
+}
+
+/* tips */
+
 .tsd-sidebar-tips-container {
     padding: 20px;
     background: #aa0000;
@@ -14,10 +26,6 @@
 .tsd-sidebar-tips-container input[type=submit] {
     border: 1px solid white;
     margin-top: 20px;
-}
-
-.tsd-donation-form-recurring {
-    display: none;
 }
 
 .tsd-tips-toggle {
