@@ -24,7 +24,7 @@
 </div>
 
 <div class="col-xs-12 col-sm-6">
-    <?php include "donation-form.php"; ?>
+    <?php $donation_location = "header"; include "donation-form.php"; ?>
 </div>
 
 </div>

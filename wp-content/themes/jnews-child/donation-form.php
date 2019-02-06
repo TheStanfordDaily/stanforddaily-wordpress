@@ -42,8 +42,8 @@ https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-g
     <input type="hidden" name="business" value="coo@stanforddaily.com">
     <input type="hidden" name="cmd" value="_xclick-subscriptions">
     <input type="hidden" name="item_name" value="Stanford Daily Donation">
-    <input type="hidden" name="item_number" value="From Header in Page: <?php global $wp;
-echo home_url($wp->request);?>">
+    <input type="hidden" name="item_number" value="From <?php echo $donation_location; ?>">
+    <input type="hidden" name="custom" value="<?php global $post; echo $post->id?>">
     <input type="hidden" name="no_note" value="1" />
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="src" value="1" />
