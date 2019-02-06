@@ -12,7 +12,7 @@
     text-align: center;
     ">
         <mark style="color: black">
-            Support independent, student-run journalism
+            Support independent, student-run journalism.
         </mark>
     </h3>
     <i class="fa fa-book fa-4x" aria-hidden="true" style="float: left; margin: 5px 30px 0px 30px;"></i>
