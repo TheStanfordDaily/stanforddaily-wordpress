@@ -31,13 +31,13 @@ echo home_url($wp->request);?>">
     width: 100px;
     margin: 0px 20px;
 ">
-        <option>$5</option>
-        <option>$10</option>
-        <option>$25</option>
-        <option>$50</option>
-        <option>$100</option>
-        <option>$500</option>
-        <option>$1,000</option>
+        <option value="5">$5</option>
+        <option value="10">$10</option>
+        <option value="25">$25</option>
+        <option value="50">$50</option>
+        <option value="100">$100</option>
+        <option value="500">$500</option>
+        <option value="1000">$1,000</option>
     </select>
 
     <div class="checkbox"
@@ -68,7 +68,7 @@ https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-g
 echo home_url($wp->request);?>">
     <input type="hidden" name="no_note" value="1" />
     <input type="hidden" name="src" value="1" />
-    <input type="hidden" name="a3" value="100">
+    <input type="hidden" name="a3" value="5">
     <input type="hidden" name="p3" value="1">
     <input type="hidden" name="t3" value="M" />
 </form>
