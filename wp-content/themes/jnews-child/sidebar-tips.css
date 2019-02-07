@@ -56,7 +56,7 @@
 .tsd-tips-toggle > div {
     background: #aa0000;
     color: white;
-    padding: 0px 20px;
+    padding: 0px 20px !important;
 }
 
 @media only screen and (max-width: 768px) {
