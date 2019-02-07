@@ -71,7 +71,7 @@ if (!window.localStorage) {
                 $("a.tsd-tips-toggle").click();
             })
                 .fail(function () {
-                    buttonSubmit.attr("value", "Submit").attr("disabled", "");
+                    buttonSubmit.attr("value", "Submit").removeAttr("disabled");
                     alert("Error submitting the form. Please email your tip to eic@stanforddaily.com.");
                 });
             return false;
