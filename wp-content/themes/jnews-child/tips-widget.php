@@ -8,7 +8,7 @@
 <div class="tsd-tips-expanded">
     <div class="tsd-sidebar-tips-container">
         <h3>Submit a Tip</h3>
-        <form action="https://script.google.com/macros/s/AKfycbzTLxlB1iYpJh8gEbeHEXEGiZiWOoglns3NJJf3YzrYLzn-W5Q/exec" method="POST">
+        <form action="#" method="POST">
             <textarea name="message" placeholder="message" style="line-height: initial;"></textarea>
             <input type="text" name="name" placeholder="name (optional)" />
             <input type="email" name="email" placeholder="email (optional)" />

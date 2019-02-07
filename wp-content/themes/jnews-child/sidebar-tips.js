@@ -64,7 +64,7 @@ if (!window.localStorage) {
         $(".tsd-tips-expanded form").submit(function (e) {
             var buttonSubmit = $(this).find("input[type=submit]").attr("value", "Loading...").attr("disabled", "disabled");
             var inputs = $(this).find("input[type=text], input[type=email], textarea");
-            $.post($(this).attr("action"), $(this).serialize()).done(function () {
+            $.post("https://script.google.com/macros/s/AKfycbzTLxlB1iYpJh8gEbeHEXEGiZiWOoglns3NJJf3YzrYLzn-W5Q/exec", $(this).serialize()).done(function () {
                 alert("Tip submitted successfully. Thank you!");
                 inputs.val("");
                 buttonSubmit.attr("value", "Submit").attr("disabled", "");
