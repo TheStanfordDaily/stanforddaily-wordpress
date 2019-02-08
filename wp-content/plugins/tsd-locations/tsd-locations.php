@@ -119,13 +119,22 @@ function tsd_locations_plugin_enable_api() {
                     $number_of_posts_each_page = 3;
                 }
 
-                $all_articles = get_posts( [
+                $all_posts = get_posts( [
                     'tag' => implode( ",", $location_info[ "tagSlug" ] ),
                     'offset' => $page_number * $number_of_posts_each_page,
                     'numberposts' => $number_of_posts_each_page
                 ] );
-                //echo $location_key.count($all_articles)."\n";
-                return $all_articles;
+                //echo $location_key.count($all_posts)."\n";
+
+                // https://wordpress.stackexchange.com/q/236249/75147
+                $controller = new WP_REST_Posts_Controller( 'post' );
+
+                $results = [];
+                foreach ( $all_posts as $post ) {
+                    $data = $controller->prepare_item_for_response( $post, $request );
+                    $results[] = $controller->prepare_response_for_collection( $data );
+                }
+                return $results;
             default:
                 return new WP_Error( 'no_type', 'Invalid info type', ['status' => 404] );
         }
