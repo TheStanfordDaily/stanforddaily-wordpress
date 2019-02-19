@@ -68,3 +68,16 @@ function tsd_add_push_notification_post_type() {
     register_post_type( 'tsd_push_msg', $args );
 }
 add_action( 'init', 'tsd_add_push_notification_post_type' );
+
+// https://wordpress.stackexchange.com/a/137257/75147
+function tsd_push_notification_post_type_on_save( $post_id, $post, $update ) {
+    if ( $update ) {
+        // TODO: Actually send notification!
+
+        // https://stackoverflow.com/a/139553/2603230
+        $log_content = "<pre>".var_export( $post, true )."</pre>";
+
+        wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
+    }
+}
+add_action( 'save_post_tsd_push_msg', 'tsd_push_notification_post_type_on_save', 10, 3 );
