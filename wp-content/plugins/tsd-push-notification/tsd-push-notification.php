@@ -45,10 +45,19 @@ function tsd_add_push_notification_post_type() {
         'menu_icon'          => "dashicons-cloud",
         'query_var'          => false,
         'rewrite'            => [ 'slug' => 'tsd_push_msg' ], // TODO: what does this does?
-        'capability_type'    => 'post', // TODO: tsd_push_notification
+        'capability_type'    => 'post',
         'capabilities' => [
             'edit_published_posts' => false,
             'delete_published_posts' => false,
+            // https://wordpress.stackexchange.com/a/54962/75147
+            'edit_post'          => 'update_core',
+            'read_post'          => 'update_core',
+            'delete_post'        => 'update_core',
+            'edit_posts'         => 'update_core',
+            'edit_others_posts'  => 'update_core',
+            'delete_posts'       => 'update_core',
+            'publish_posts'      => 'update_core',
+            'read_private_posts' => 'update_core',
         ],
         'map_meta_cap'       => true,
         'has_archive'        => true,
@@ -59,19 +68,3 @@ function tsd_add_push_notification_post_type() {
     register_post_type( 'tsd_push_msg', $args );
 }
 add_action( 'init', 'tsd_add_push_notification_post_type' );
-
-/*function tsd_push_notification_add_role_caps() {
-    // Add the roles you'd like to administer the custom post types
-    $roles = ['administrator'];
-
-    // Loop through each role and assign capabilities
-    foreach( $roles as $the_role ) {
-        $role = get_role( $the_role );
-
-        $role->add_cap( 'read' );
-        $role->add_cap( 'read_tsd_push_notification');
-        $role->add_cap( 'read_private_tsd_push_notification' );
-        $role->add_cap( 'publish_tsd_push_notification' );
-    }
-}
-add_action('admin_init', 'tsd_push_notification_add_role_caps', 999);*/
