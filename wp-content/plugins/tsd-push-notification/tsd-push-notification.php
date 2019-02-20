@@ -60,7 +60,6 @@ function tsd_add_push_notification_post_type() {
             'read_private_posts' => 'update_core',
         ],
         'map_meta_cap'       => true,
-        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
         'supports'           => [ 'title', 'excerpt', 'custom-fields', 'thumbnail' ],
@@ -87,7 +86,7 @@ add_action( 'save_post_tsd_push_msg', 'tsd_push_notification_post_type_on_save',
 function tsd_push_notification_receiver_group_init() {
 	register_taxonomy(
 		'tsd_push_msg_receiver_group',
-		'tsd_push_msg',
+		[ 'tsd_push_msg', 'tsd_pn_receiver' ],
 		[
             'labels' => [
                 'name' => 'Receiver Groups',
@@ -118,3 +117,48 @@ function tsd_push_notification_receiver_group_init() {
 	);
 }
 add_action( 'init', 'tsd_push_notification_receiver_group_init' );
+
+
+function tsd_add_push_notification_receiver_post_type() {
+    $args = [
+        'label'              => "PN Users",
+        'public'             => false,
+        'publicly_queryable' => false,
+        'show_ui'            => true,
+        'show_in_rest'       => false,
+        'menu_icon'          => "dashicons-networking",
+        'query_var'          => false,
+        'rewrite'            => false,
+        'capability_type'    => 'post',
+        'capabilities' => [
+            'edit_post'          => 'update_core',
+            'read_post'          => 'update_core',
+            'delete_post'        => 'update_core',
+            'edit_posts'         => 'update_core',
+            'edit_others_posts'  => 'update_core',
+            'publish_posts'      => 'update_core',
+            'read_private_posts' => 'update_core',
+            'create_posts'       => 'update_core',
+        ],
+        'map_meta_cap'       => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => [ 'title', 'custom-fields' ],
+    ];
+    register_post_type( 'tsd_pn_receiver', $args );
+}
+add_action( 'init', 'tsd_add_push_notification_receiver_post_type' );
+
+function tsd_create_new_pn_receiver() {
+    // insert the post and set the category
+    $post_id = wp_insert_post([
+        'post_type' => 'tsd_pn_receiver',
+        'post_title' => 'TOKEN HERE',
+        'meta_input' => [
+            "category_ids" => "[]",
+            "author_ids" => "[]",
+            "location_ids" => "[]",
+        ]
+    ]);
+}
+//add_action( 'plugins_loaded', 'tsd_create_new_pn_receiver' );
