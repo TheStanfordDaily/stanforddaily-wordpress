@@ -44,7 +44,7 @@ function tsd_add_push_notification_post_type() {
         'show_in_rest'       => false,
         'menu_icon'          => "dashicons-cloud",
         'query_var'          => false,
-        'rewrite'            => [ 'slug' => 'tsd_push_msg' ], // TODO: what does this does?
+        'rewrite'            => false,
         'capability_type'    => 'post',
         'capabilities' => [
             'edit_published_posts' => false,
@@ -63,7 +63,7 @@ function tsd_add_push_notification_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => [ 'title', 'editor', 'custom-fields', 'thumbnail' ],
+        'supports'           => [ 'title', 'excerpt', 'custom-fields', 'thumbnail' ],
     ];
     register_post_type( 'tsd_push_msg', $args );
 }
