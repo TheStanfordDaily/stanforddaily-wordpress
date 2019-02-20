@@ -76,7 +76,12 @@ function tsd_push_notification_post_type_on_save( $post_id, $post, $update ) {
         // https://stackoverflow.com/a/139553/2603230
         $log_content = "<pre>".var_export( $post, true )."</pre>";
 
-        wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
+        // TODO: Use admin_notices
+        // Ref:
+        // https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices
+        // https://digwp.com/2016/05/wordpress-admin-notices/
+
+        //wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
     }
 }
 add_action( 'save_post_tsd_push_msg', 'tsd_push_notification_post_type_on_save', 10, 3 );
