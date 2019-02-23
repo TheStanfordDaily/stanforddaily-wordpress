@@ -18,12 +18,12 @@ $tsd_author_custom_fields = [
     "funnyImage" => ["title" => "Funny Image", "type" => "image"],
     "profileImage" => ["title" => "Profile Image", "type" => "image"],
     "blurb" => ["title" => "Blurb", "type" => "textarea"],
-    "hometown" => ["title" => "Hometown"],
-    "timeAtDaily" => ["title" => "Time at the Daily"],
-    "tapOrder" => ["title" => "Favorite TAP Order"],
-    "diningHall" => ["title" => "Dining Hall"],
-    "studySpot" => ["title" => "Study Spot"],
-    "findYou" => ["title" => "Find You"],
+    "hometown" => ["title" => "Hometown", "type" => "text"],
+    "timeAtDaily" => ["title" => "Time at the Daily", "type" => "text"],
+    "tapOrder" => ["title" => "Favorite TAP Order", "type" => "text"],
+    "diningHall" => ["title" => "Dining Hall", "type" => "text"],
+    "studySpot" => ["title" => "Study Spot", "type" => "text"],
+    "findYou" => ["title" => "Find You", "type" => "text"],
     "section" => ["title" => "Your Section(s)", "type" => "checkbox", "choices" => $theDailySections],
 ];
 
@@ -58,7 +58,7 @@ function tsd_authors_plugin_add_custom_fields()
 	<table class="form-table">
         <?php foreach ($tsd_author_custom_fields as $field => $fieldOptions) {
             $name = "tsd_" . $field;
-            $value = esc_attr(get_the_author_meta($name, $user->ID));
+            $value = get_the_author_meta($name, $user->ID);
             ?>
 		<tr>
             <th>
@@ -145,11 +145,15 @@ break;
         //if (!empty($_POST['year_of_birth']) && intval($_POST['year_of_birth']) >= 1900) {
         foreach ($tsd_author_custom_fields as $field => $fieldOptions) {
             if ($fieldOptions["type"] == "checkbox") {
-                update_user_meta($user_id, 'tsd_' . $field, array_keys($_POST['tsd_' . $field]));
+                $values = [];
+                if (!empty($_POST['tsd_' . $field])) {
+                    $values = array_keys($_POST['tsd_' . $field]);
+                }
+                update_user_meta($user_id, 'tsd_' . $field, $values);
                 continue;
             }
             if (isset($_POST['tsd_' . $field])) {
-                update_user_meta($user_id, 'tsd_' . $field, $_POST['tsd_' . $field]);
+                update_user_meta($user_id, 'tsd_' . $field, esc_attr( $_POST['tsd_' . $field] ));
             }
         }
         //}
