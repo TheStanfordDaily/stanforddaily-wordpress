@@ -8,6 +8,8 @@
 * 1.0 (2019-02-18) - Created. (Yifei He)
 */
 
+include_once "rest-api-endpoints.php";
+
 function tsd_add_push_notification_post_type() {
     // Ref: https://developer.wordpress.org/reference/functions/register_post_type/#comment-351
     $labels = [
@@ -70,11 +72,46 @@ add_action( 'init', 'tsd_add_push_notification_post_type' );
 
 // https://wordpress.stackexchange.com/a/137257/75147
 function tsd_push_notification_post_type_on_save( $post_id, $post, $update ) {
-    if ( $update ) {
-        // TODO: Actually send notification!
-
+    if ( $update && $post->post_status == "publish" ) {
         // https://stackoverflow.com/a/139553/2603230
         $log_content = "<pre>".var_export( $post, true )."</pre>";
+        var_dump($log_content);
+
+        // TODO: only send notification to certain groups
+        $user_lists = get_posts( [
+            'post_type'  => 'tsd_pn_receiver',
+        ] );
+
+        $message_body = [
+            "title" => $post->post_title,
+            "body" => $post->post_excerpt,
+        ];
+
+        $all_messages = [];
+        foreach ( $user_lists as $each_user ) {
+            $each_message = $message_body;
+            $each_message[ "to" ] = $each_user->post_title;
+            $all_messages[] = $each_message;
+        }
+
+        // Ref: https://docs.expo.io/versions/latest/guides/push-notifications/#http2-api
+        // TODO: "an array of up to 100 messages" - need divide 100
+        $response = wp_remote_post( "https://exp.host/--/api/v2/push/send", [
+            'method' => 'POST',
+            'timeout' => 15,
+            'httpversion' => '2.0',
+            'headers' => [ "content-type" => "application/json" ],
+            'body' => json_encode( $all_messages ),
+        ] );
+
+        if ( is_wp_error( $response ) ) {
+            $error_message = $response->get_error_message();
+            echo "Something went wrong: $error_message";
+        } else {
+            echo 'Response:<pre>';
+            print_r( $response );
+            echo '</pre>';
+        }
 
         // TODO: Use admin_notices
         // Ref:
@@ -153,17 +190,3 @@ function tsd_add_push_notification_receiver_post_type() {
     register_post_type( 'tsd_pn_receiver', $args );
 }
 add_action( 'init', 'tsd_add_push_notification_receiver_post_type' );
-
-function tsd_create_new_pn_receiver() {
-    // insert the post and set the category
-    $post_id = wp_insert_post([
-        'post_type' => 'tsd_pn_receiver',
-        'post_title' => 'TOKEN HERE',
-        'meta_input' => [
-            "category_ids" => "[]",
-            "author_ids" => "[]",
-            "location_ids" => "[]",
-        ]
-    ]);
-}
-//add_action( 'plugins_loaded', 'tsd_create_new_pn_receiver' );
