@@ -71,57 +71,55 @@ function tsd_add_push_notification_post_type() {
 add_action( 'init', 'tsd_add_push_notification_post_type' );
 
 // https://wordpress.stackexchange.com/a/137257/75147
-function tsd_push_notification_post_type_on_save( $post_id, $post, $update ) {
-    if ( $update && $post->post_status == "publish" ) {
-        // https://stackoverflow.com/a/139553/2603230
-        $log_content = "<pre>".var_export( $post, true )."</pre>";
-        var_dump($log_content);
+function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
+    // https://stackoverflow.com/a/139553/2603230
+    $log_content = "<pre>".var_export( $post, true )."</pre>";
+    var_dump($log_content);
 
-        // TODO: only send notification to certain groups
-        $user_lists = get_posts( [
-            'post_type'  => 'tsd_pn_receiver',
-        ] );
+    // TODO: only send notification to certain groups
+    $user_lists = get_posts( [
+        'post_type'  => 'tsd_pn_receiver',
+    ] );
 
-        $message_body = [
-            "title" => $post->post_title,
-            "body" => $post->post_excerpt,
-        ];
+    $message_body = [
+        "title" => $post->post_title,
+        "body" => $post->post_excerpt,
+    ];
 
-        $all_messages = [];
-        foreach ( $user_lists as $each_user ) {
-            $each_message = $message_body;
-            $each_message[ "to" ] = $each_user->post_title;
-            $all_messages[] = $each_message;
-        }
-
-        // Ref: https://docs.expo.io/versions/latest/guides/push-notifications/#http2-api
-        // TODO: "an array of up to 100 messages" - need divide 100
-        $response = wp_remote_post( "https://exp.host/--/api/v2/push/send", [
-            'method' => 'POST',
-            'timeout' => 15,
-            'httpversion' => '2.0',
-            'headers' => [ "content-type" => "application/json" ],
-            'body' => json_encode( $all_messages ),
-        ] );
-
-        if ( is_wp_error( $response ) ) {
-            $error_message = $response->get_error_message();
-            echo "Something went wrong: $error_message";
-        } else {
-            echo 'Response:<pre>';
-            print_r( $response );
-            echo '</pre>';
-        }
-
-        // TODO: Use admin_notices
-        // Ref:
-        // https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices
-        // https://digwp.com/2016/05/wordpress-admin-notices/
-
-        //wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
+    $all_messages = [];
+    foreach ( $user_lists as $each_user ) {
+        $each_message = $message_body;
+        $each_message[ "to" ] = $each_user->post_title;
+        $all_messages[] = $each_message;
     }
+
+    // Ref: https://docs.expo.io/versions/latest/guides/push-notifications/#http2-api
+    // TODO: "an array of up to 100 messages" - need divide 100
+    $response = wp_remote_post( "https://exp.host/--/api/v2/push/send", [
+        'method' => 'POST',
+        'timeout' => 15,
+        'httpversion' => '2.0',
+        'headers' => [ "content-type" => "application/json" ],
+        'body' => json_encode( $all_messages ),
+    ] );
+
+    if ( is_wp_error( $response ) ) {
+        $error_message = $response->get_error_message();
+        echo "Something went wrong: $error_message";
+    } else {
+        echo 'Response:<pre>';
+        print_r( $response );
+        echo '</pre>';
+    }
+
+    // TODO: Use admin_notices
+    // Ref:
+    // https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices
+    // https://digwp.com/2016/05/wordpress-admin-notices/
+
+    //wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
 }
-add_action( 'save_post_tsd_push_msg', 'tsd_push_notification_post_type_on_save', 10, 3 );
+add_action( 'publish_tsd_push_msg', 'tsd_push_notification_post_type_on_publish', 10, 2 );
 
 // https://codex.wordpress.org/Taxonomies#Registering_a_taxonomy
 // https://codex.wordpress.org/Function_Reference/register_taxonomy
