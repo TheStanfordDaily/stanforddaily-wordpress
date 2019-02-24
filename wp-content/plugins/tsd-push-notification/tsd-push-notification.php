@@ -105,21 +105,52 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 
     if ( is_wp_error( $response ) ) {
         $error_message = $response->get_error_message();
-        echo "Something went wrong: $error_message";
-    } else {
-        echo 'Response:<pre>';
-        print_r( $response );
-        echo '</pre>';
+        tsd_send_pn_failed( $post_id, $error_message );
+        return;
     }
 
-    // TODO: Use admin_notices
-    // Ref:
-    // https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices
-    // https://digwp.com/2016/05/wordpress-admin-notices/
+    $decoded_body = json_decode( $response[ "body" ], true );
+    if ( $response[ "response" ][ "code" ] != 200 ) {
+        tsd_send_pn_failed( $post_id, $decoded_body );
+        return;
+    }
+
+    set_transient( get_current_user_id().'tsd_send_pn_success', $decoded_body );
 
     //wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
 }
 add_action( 'publish_tsd_push_msg', 'tsd_push_notification_post_type_on_publish', 10, 2 );
+
+function tsd_send_pn_failed( $post_id, $message ) {
+    set_transient( get_current_user_id().'tsd_send_pn_fail', $message );
+    wp_update_post( [
+        'ID' => $post_id,
+        'post_status' => 'draft',
+    ] );
+}
+
+// https://stackoverflow.com/a/19822056/2603230
+function tsd_push_notification_add_admin_notice() {
+    if ( $out = get_transient( get_current_user_id() . 'tsd_send_pn_success' ) ) {
+        delete_transient( get_current_user_id() . 'tsd_send_pn_success' );
+        ?>
+        <div class="notice notice-success is-dismissible">
+            <pre>Notification sent!<?php echo "\n"; print_r($out); ?></pre>
+        </div>
+        <?php
+    }
+
+    if ( $out = get_transient( get_current_user_id() . 'tsd_send_pn_fail' ) ) {
+        delete_transient( get_current_user_id() . 'tsd_send_pn_fail' );
+        ?>
+        <style>#message { display: none; }</style><!-- Hide the "Post published." message -->
+        <div class="notice notice-error is-dismissible">
+            <pre>Error! Message:<?php echo "\n"; print_r($out); ?></pre>
+        </div>
+        <?php
+    }
+}
+add_action( 'admin_notices', 'tsd_push_notification_add_admin_notice' );
 
 // https://codex.wordpress.org/Taxonomies#Registering_a_taxonomy
 // https://codex.wordpress.org/Function_Reference/register_taxonomy
