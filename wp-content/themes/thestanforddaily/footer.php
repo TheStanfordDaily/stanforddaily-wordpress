@@ -21,7 +21,7 @@
 				<br />
 				Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>
 				<span class="sep"> | </span>
-				Theme by <a href="https://github.com/TheStanfordDaily/" target="_blank">TSD Tech Team</a>
+				Theme by <a href="/wp-content/themes/thestanforddaily/about.html" target="_blank">TSD Tech Team</a>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
