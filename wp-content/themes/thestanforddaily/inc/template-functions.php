@@ -126,3 +126,13 @@ function tsd_add_login_css() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'tsd_add_login_css' );
+
+// Add a new default avatar (Tree)
+// Note: this will NOT work on localhost.
+// https://crunchify.com/how-to-change-default-avatar-in-wordpress/#comment-3851077053
+function tsd_custom_default_gravatar( $avatar_defaults ) {
+	$customAvatar = get_template_directory_uri() . '/img/placeholder-avatar.png';
+	$avatar_defaults[ $customAvatar ] = "Stanford Tree";
+	return $avatar_defaults;
+}
+add_filter( 'avatar_defaults', 'tsd_custom_default_gravatar' );
