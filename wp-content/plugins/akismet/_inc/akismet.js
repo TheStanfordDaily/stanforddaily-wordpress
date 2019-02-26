@@ -273,4 +273,31 @@ jQuery( function ( $ ) {
 		var img = new Image();
 		img.src = akismet_mshot_url( linkUrl );
 	}
+
+	/**
+	 * Sets the comment form privacy notice display to hide when one clicks Core's dismiss button on the related admin notice.
+	 */
+	$( '#akismet-privacy-notice-admin-notice' ).on( 'click', '.notice-dismiss', function(){
+		$.ajax({
+                        url: './options-general.php?page=akismet-key-config&akismet_comment_form_privacy_notice=hide',
+		});
+	});
+
+	$( ".akismet-could-be-primary" ).each( function () {
+		var form = $( this ).closest( 'form' );
+
+		form.data( 'initial-state', form.serialize() );
+
+		form.on( 'change keyup', function () {
+			var self = $( this );
+			var submit_button = self.find( ".akismet-could-be-primary" );
+
+			if ( self.serialize() != self.data( 'initial-state' ) ) {
+				submit_button.addClass( "akismet-is-primary" );
+			}
+			else {
+				submit_button.removeClass( "akismet-is-primary" );
+			}
+		} );
+	} );
 });

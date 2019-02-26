@@ -17,17 +17,11 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tsd' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'tsd' ), 'WordPress' );
-					?>
-				</a>
+				&copy; <?php echo date("Y"); ?> The Stanford Daily Publishing Corporation.
+				<br />
+				Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>
 				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'tsd' ), 'tsd', '<a href="http://underscores.me/">TSD Tech Team</a>' );
-					?>
+				Theme by <a href="/wp-content/themes/thestanforddaily/about.html" target="_blank">TSD Tech Team</a>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->

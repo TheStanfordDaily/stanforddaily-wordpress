@@ -121,6 +121,10 @@ add_action( 'widgets_init', 'tsd_widgets_init' );
  */
 function tsd_scripts() {
 	wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
+	// TODO: Use style.min.css in production.
+	//wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css" );
+
+	wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
 	wp_enqueue_style('fonts-libre-baskerville', "https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville:400,400i,700");

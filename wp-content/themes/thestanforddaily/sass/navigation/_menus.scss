@@ -121,7 +121,9 @@
 				display: inline-block;
 				margin-left: 5px;
 				margin-right: -3px;
-				font-family: FontAwesome;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;	// https://stackoverflow.com/a/49755090/2603230
+				vertical-align: middle;
 			}
 		}
 
@@ -142,6 +144,8 @@
 			}
 
 			li {
+				min-width: 100%;
+
 				a {
 					padding: 8px 16px;
 					line-height: 20px;
@@ -163,12 +167,16 @@
 					left: 100%;
 				}
 
-				&.menu-item-has-children > a::after {
-					/** Add angle-right **/
-					content: "\F105";
-					position: absolute;
-					right: 10px;
-					color: #949494;
+				&.menu-item-has-children > a {
+					margin-right: 10px;
+
+					&::after {
+						/** Add angle-right **/
+						content: "\F105";
+						position: absolute;
+						right: 10px;
+						color: #949494;
+					}
 				}
 			}
 
@@ -246,7 +254,7 @@
 	$top_sticky_bar_height: 60px;
 	.site-branding {
 		position: fixed;
-		top: 0;
+		top: auto;	// So that the admin bar would not cover it.
 		left: 0;
 		width: 100%;
 		height: $top_sticky_bar_height;
@@ -286,7 +294,7 @@
 		transform: translate3d(-100%, 0, 0); // Move navbar off-screen to the left
 		position: fixed; /* Stay in place */
 		z-index: 9999; /* Stay on top */
-		top: 0; /* Stay at the top */
+		top: auto;	// So that the admin bar would not cover it.
 		left: 0;
 		background-color: #fff;
 		overflow-x: hidden; /* Disable horizontal scroll */
