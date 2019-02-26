@@ -222,6 +222,20 @@
 	}
 }
 
+.row.tsd-block-title {
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+	h3 {
+		background: #aa0000;
+		color: white;
+		padding: 10px 15px;
+		font-size: 17px;
+		font-weight: bold;
+		margin: 0;
+		display: inline-block;
+	}
+}
+
 .tsd-home-main {
 
 }

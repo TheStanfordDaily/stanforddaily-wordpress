@@ -1321,6 +1321,18 @@ a {
   .tsd-excerpt-container-small .excerpt-content .entry-meta .tsd-excerpt-byline-dash {
     display: none; }
 
+.row.tsd-block-title {
+  border-bottom: 1px solid #ddd;
+  padding: 0; }
+  .row.tsd-block-title h3 {
+    background: #aa0000;
+    color: white;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+    display: inline-block; }
+
 .page-header {
   margin: 0 0 30px; }
   .page-header .page-title {
