@@ -20,7 +20,7 @@
 
 			<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php tsd_posted_by(false); ?> &mdash; <?php tsd_posted_on(); tsd_comments_count(); ?>
+				<?php tsd_posted_by(false); ?> &mdash; <?php tsd_posted_on(); //tsd_comments_count(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
