@@ -211,6 +211,14 @@
 		.entry-summary {
 			display: none;
 		}
+		.entry-meta {
+			.byline, .posted-on {
+				display: block;
+			}
+			.tsd-excerpt-byline-dash {
+				display: none;
+			}
+		}
 	}
 }
 

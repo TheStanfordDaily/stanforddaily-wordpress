@@ -1316,6 +1316,10 @@ a {
     margin-bottom: 2px; }
   .tsd-excerpt-container-small .excerpt-content .entry-summary {
     display: none; }
+  .tsd-excerpt-container-small .excerpt-content .entry-meta .byline, .tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on {
+    display: block; }
+  .tsd-excerpt-container-small .excerpt-content .entry-meta .tsd-excerpt-byline-dash {
+    display: none; }
 
 .page-header {
   margin: 0 0 30px; }
