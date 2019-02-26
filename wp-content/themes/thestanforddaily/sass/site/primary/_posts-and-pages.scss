@@ -222,9 +222,28 @@
 	}
 }
 
+.tsd-excerpt-container-textonly {
+	.excerpt-thumb {
+		display: none;
+	}
+	.excerpt-content {
+		flex: 1;
+		.entry-title {
+			font-size: 15px;
+			margin-bottom: 2px;
+		}
+		.entry-summary {
+			display: none;
+		}
+		.entry-meta {
+		}
+	}
+}
+
 .row.tsd-block-title {
 	border-bottom: 1px solid #ddd;
 	padding: 0;
+	margin-top: 20px;
 	h3 {
 		background: #aa0000;
 		color: white;
@@ -234,6 +253,10 @@
 		margin: 0;
 		display: inline-block;
 	}
+}
+
+.row.tsd-block {
+	margin-top: 10px;
 }
 
 .tsd-home-main {
