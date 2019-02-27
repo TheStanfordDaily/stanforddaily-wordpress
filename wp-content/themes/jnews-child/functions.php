@@ -116,3 +116,29 @@ function tsd_add_widget_content()
     <?php
 }
 add_action('wp_head', 'tsd_add_widget_content');
+
+function tsd_add_ga_tracking() {
+    ?>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'AW-761286398');
+	</script>
+    <?php
+}
+add_action('wp_head', 'tsd_add_ga_tracking');
+
+function tsd_add_conversion_page() {
+    if (is_page('email_digests')) {
+    ?>
+    <!-- Event snippet for email digest pageview conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-761286398/hZxQCO-08JUBEP6dgesC'});
+    </script>
+    <?php
+    }
+}
+
+add_action('wp_footer', 'tsd_add_conversion_page');
