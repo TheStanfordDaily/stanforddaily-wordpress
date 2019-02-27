@@ -131,7 +131,7 @@ function tsd_add_ga_tracking() {
 add_action('wp_head', 'tsd_add_ga_tracking');
 
 function tsd_add_conversion_page() {
-    if (is_page('email_digests')) {
+    if (is_page('email-digests')) {
     ?>
     <!-- Event snippet for email digest pageview conversion page -->
     <script>
