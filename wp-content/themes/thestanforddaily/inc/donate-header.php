@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div class="row tsd-donate-header">
 
 <a class="tsd-donate-header-close" href="#" >
@@ -22,4 +23,5 @@
 
 <div class="col-12 col-sm-6">
     <?php $donation_location = "header"; include "donation-form.php"; ?>
+</div>
 </div>
