@@ -1608,6 +1608,35 @@ a:hover, a:active {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .excerpt-thumb {
+    width: 200px;
+    margin-right: 20px;
+  }
+  .excerpt-thumb .thumbnail-container {
+    height: 200px;
+  }
+
+  .excerpt-content .entry-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .excerpt-thumb {
+    width: 100px;
+    margin-right: 10px;
+  }
+  .excerpt-thumb .thumbnail-container {
+    height: 100px;
+  }
+
+  .excerpt-content .entry-title {
+    font-size: 15px;
+  }
+  .excerpt-content .entry-summary {
+    display: none;
+  }
+}
 .page-header {
   margin: 0 0 30px;
 }
