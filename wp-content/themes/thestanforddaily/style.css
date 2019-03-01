@@ -1361,6 +1361,7 @@ a:hover, a:active {
   right: 20px;
   top: 20px;
   color: black;
+  z-index: 990;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1370,6 +1371,21 @@ a:hover, a:active {
   }
   .tsd-donate-header .tsd-donate-header-close {
     top: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tsd-donate-header {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .tsd-donate-header .tsd-donate-header-close {
+    top: 70px;
+    right: 10px;
+  }
+  .tsd-donate-header button[type=submit] {
+    width: 50%;
+    padding: 0;
   }
 }
 .tsd-donation-form-recurring {
@@ -1430,16 +1446,6 @@ a:hover, a:active {
 
   .tsd-tips-expanded {
     top: 80px;
-  }
-
-  .tsd-donate-header {
-    padding: 0px;
-    padding-top: 10px;
-  }
-
-  .tsd-donate-header button[type=submit] {
-    width: 50%;
-    padding: 0;
   }
 }
 /*--------------------------------------------------------------
