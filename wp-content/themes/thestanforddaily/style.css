@@ -1639,6 +1639,10 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+#disqus_thread {
+  margin-top: 20px;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
