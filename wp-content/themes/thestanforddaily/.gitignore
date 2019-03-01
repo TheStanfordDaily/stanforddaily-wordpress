@@ -78,3 +78,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# https://github.com/github/gitignore/blob/master/Sass.gitignore
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
