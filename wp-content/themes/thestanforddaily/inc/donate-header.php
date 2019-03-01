@@ -1,5 +1,5 @@
-<div class="container-fluid">
-	<div class="row tsd-donate-header">
+<div class="tsd-donate-header container-fluid">
+	<div class="row">
 		<a class="tsd-donate-header-close" href="#" >
 			<i class="fas fa-times"></i>
 		</a>

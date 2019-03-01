@@ -928,7 +928,7 @@ a:hover, a:active {
 
   .site-branding {
     position: fixed;
-    top: auto;
+    top: 0;
     left: 0;
     width: 100%;
     height: 60px;
@@ -974,7 +974,7 @@ a:hover, a:active {
     /* Stay in place */
     z-index: 9999;
     /* Stay on top */
-    top: auto;
+    top: 0;
     left: 0;
     background-color: #fff;
     overflow-x: hidden;
@@ -1350,7 +1350,12 @@ a:hover, a:active {
   padding: 40px 0;
 }
 
-/* Header Donation Banner */
+/* Donation Banner */
+@media screen and (max-width: 1024px) {
+  .tsd-donate-header {
+    margin-top: 60px;
+  }
+}
 .tsd-donation-form-recurring {
   display: none;
 }

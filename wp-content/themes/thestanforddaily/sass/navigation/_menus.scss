@@ -266,7 +266,7 @@
 	$top_sticky_bar_height: 60px;
 	.site-branding {
 		position: fixed;
-		top: auto;	// So that the admin bar would not cover it.
+		top: 0;	// So that the header donation banner will not move it on smaller screen
 		left: 0;
 		width: 100%;
 		height: $top_sticky_bar_height;
@@ -311,7 +311,7 @@
 		transform: translate3d(-100%, 0, 0); // Move navbar off-screen to the left
 		position: fixed; /* Stay in place */
 		z-index: 9999; /* Stay on top */
-		top: auto;	// So that the admin bar would not cover it.
+		top: 0; // So that the header donation banner will not move it on smaller screen
 		left: 0;
 		background-color: #fff;
 		overflow-x: hidden; /* Disable horizontal scroll */
