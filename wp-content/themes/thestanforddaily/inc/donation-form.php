@@ -5,7 +5,7 @@
 	<input type="hidden" name="item_number" value="From Header in Page: <?php global $wp;
 echo home_url($wp->request);?>">
 	<input type="hidden" name="currency_code" value="USD">
-	<button class="button" type="submit" name="submit">Support the Daily</button><select name="amount" class="form-control" style="
+	<button class="tsd-button" type="submit" name="submit">Support the Daily</button><select name="amount" class="form-control" style="
 	width: 100px;
 	margin: 0px 20px;
 ">
