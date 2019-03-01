@@ -1380,9 +1380,12 @@ a:hover, a:active {
 .tsd-excerpt-container-textonly .excerpt-thumb {
   display: none;
 }
+.tsd-excerpt-container-textonly .excerpt-content {
+  margin-bottom: 10px;
+}
 .tsd-excerpt-container-textonly .excerpt-content .entry-title {
   font-size: 15px;
-  margin-bottom: 2px;
+  margin-bottom: 0;
 }
 .tsd-excerpt-container-textonly .excerpt-content .entry-summary {
   display: none;

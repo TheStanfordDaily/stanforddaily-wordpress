@@ -50,9 +50,10 @@
 		display: none;
 	}
 	.excerpt-content {
+		margin-bottom: 10px;
 		.entry-title {
 			font-size: 15px;
-			margin-bottom: 2px;
+			margin-bottom: 0;
 		}
 		.entry-summary {
 			display: none;
