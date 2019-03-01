@@ -691,11 +691,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #aa0000;
+  color: #820000;
   text-decoration: none;
 }
 a:visited {
-  color: #aa0000;
+  color: #820000;
 }
 a:hover, a:focus, a:active {
   color: black;
@@ -875,7 +875,7 @@ a:hover, a:active {
   position: relative;
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
-  color: #aa0000;
+  color: #820000;
 }
 .main-navigation a {
   display: block;
@@ -1112,8 +1112,8 @@ a:hover, a:active {
   font-weight: 400;
 }
 .pagination .page-numbers.current {
-  background-color: #aa0000;
-  border-color: #aa0000;
+  background-color: #820000;
+  border-color: #820000;
   color: white;
 }
 .pagination .page-numbers.prev::before, .pagination .page-numbers.next::after {
