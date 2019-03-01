@@ -6,7 +6,7 @@
 	<div class="tsd-sidebar-tips-container">
 		<h3>Submit a Tip</h3>
 		<form action="#" method="POST">
-			<textarea name="message" placeholder="message" style="line-height: initial;"></textarea>
+			<textarea name="message" placeholder="message" style="line-height: initial; resize: vertical;"></textarea>
 			<input type="text" name="name" placeholder="name (optional)" />
 			<input type="email" name="email" placeholder="email (optional)" />
 			<input type="submit" />
