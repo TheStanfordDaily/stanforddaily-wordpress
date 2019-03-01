@@ -28,6 +28,19 @@
 			.tsd-excerpt-byline-dash {
 				display: none;
 			}
+			.posted-on {
+				a {
+					color: inherit;
+					&::before {
+						/** Add clock icon **/
+						content: "\F017";
+						display: inline-block;
+						margin-right: 5px;
+						// https://stackoverflow.com/a/47775385/2603230
+						font-family: 'Font Awesome 5 Free';
+					}
+				}
+			}
 			.entry-meta-comment {
 				display: none;
 			}
