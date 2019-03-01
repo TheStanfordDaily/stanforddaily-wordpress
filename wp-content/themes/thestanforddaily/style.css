@@ -1354,6 +1354,10 @@ a:hover, a:active {
 @media screen and (max-width: 1024px) {
   .tsd-donate-header {
     margin-top: 60px;
+    margin-bottom: -60px;
+  }
+  .tsd-donate-header .tsd-donate-header-close {
+    top: 80px;
   }
 }
 .tsd-donation-form-recurring {
@@ -1364,7 +1368,6 @@ a:hover, a:active {
   position: absolute;
   right: 20px;
   top: 20px;
-  z-index: 999;
   color: black;
 }
 

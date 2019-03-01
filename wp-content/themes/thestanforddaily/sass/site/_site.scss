@@ -37,10 +37,18 @@
 
 
 /* Donation Banner */
+$header_donation_banner_close_button_offset: 20px;
 @media screen and (max-width: $size__break-mobile) {
     .tsd-donate-header {
         // To make the banner below the .site-branding fixed bar on smaller screens.
-        margin-top: $mobile_top_sticky_bar_height;
+		margin-top: $mobile_top_sticky_bar_height;
+
+		// To offset .site-content's margin-top
+		margin-bottom: -$mobile_top_sticky_bar_height;
+
+		.tsd-donate-header-close {
+			top: $mobile_top_sticky_bar_height + $header_donation_banner_close_button_offset;
+		}
     }
 }
 
@@ -50,9 +58,8 @@
 
 .tsd-donate-header-close {
     position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 999;
+    right: $header_donation_banner_close_button_offset;
+    top: $header_donation_banner_close_button_offset;
     color: black;
 }
 
