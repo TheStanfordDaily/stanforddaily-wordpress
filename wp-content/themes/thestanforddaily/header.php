@@ -93,6 +93,7 @@
 						'theme_location' => 'menu-primary',
 						'menu_id'        => 'primary-menu',
 					) );
+					include "inc/tips-widget.php";
 					?>
 				</div>
 			</div>

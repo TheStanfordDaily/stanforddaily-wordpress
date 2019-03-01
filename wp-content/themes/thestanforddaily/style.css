@@ -702,6 +702,7 @@ a {
   float: left;
   width: 100%; }
   .main-navigation .nav-row {
+    position: relative;
     line-height: 50px;
     border-top: solid #111111 3px;
     border-bottom: 1px solid #e8e8e8; }
@@ -1170,6 +1171,9 @@ a {
   text-align: center;
   margin-bottom: 20px;
   padding-top: 5px; }
+  .tsd-sidebar-tips-container input, .tsd-sidebar-tips-container textarea {
+    padding: 10px;
+    width: 100%; }
 
 .tsd-sidebar-tips-container h3 {
   color: white;
