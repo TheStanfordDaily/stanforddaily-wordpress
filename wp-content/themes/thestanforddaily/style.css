@@ -1588,6 +1588,7 @@ a:hover, a:active {
 }
 .excerpt-content .entry-title {
   font-size: 30px;
+  line-height: 1.25em;
   margin-bottom: 2px;
 }
 .excerpt-content .entry-summary {
