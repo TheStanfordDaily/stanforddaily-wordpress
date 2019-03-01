@@ -37,6 +37,17 @@ function tsd_pingback_header() {
 add_action( 'wp_head', 'tsd_pingback_header' );
 
 /*
+ * Remove ellipses ([...]) at the end of excerpts in the homepage
+ */
+function custom_excerpt_more( $more ) {
+	if ( is_home() ) {
+		return false;
+	}
+	return "&hellip;";
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+/*
  * Add donate blurb to the bottom of every article page
  */
 function tsd_add_donate_blurb_to_content( $content ) {

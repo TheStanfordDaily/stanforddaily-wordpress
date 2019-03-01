@@ -202,6 +202,3 @@ $image_size = [$prefix . '1140x570' => array('width' => 1140, 'height' => 570, '
 foreach($image_size as $id => $image) {
 	add_image_size( $id, $image['width'], $image['height'], $image['crop'] );
 }
-
-// Excerpts have no ellipses ([...]) at the end
-add_filter('excerpt_more','__return_false');
