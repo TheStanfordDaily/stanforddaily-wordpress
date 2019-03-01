@@ -38,6 +38,21 @@
 
 /* Donation Banner */
 $header_donation_banner_close_button_offset: 20px;
+
+.tsd-donate-header {
+	background: #eee;
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid #aa0000;
+
+	.tsd-donate-header-close {
+		position: absolute;
+		right: $header_donation_banner_close_button_offset;
+		top: $header_donation_banner_close_button_offset;
+		color: black;
+	}
+}
+
 @media screen and (max-width: $size__break-mobile) {
 	.tsd-donate-header {
 		// To make the banner below the .site-branding fixed bar on smaller screens.
@@ -56,12 +71,6 @@ $header_donation_banner_close_button_offset: 20px;
 	display: none;
 }
 
-.tsd-donate-header-close {
-	position: absolute;
-	right: $header_donation_banner_close_button_offset;
-	top: $header_donation_banner_close_button_offset;
-	color: black;
-}
 
 /* "Send us tips" widget */
 .tsd-sidebar-tips-container {
@@ -98,13 +107,6 @@ $header_donation_banner_close_button_offset: 20px;
 	top: 52px;
 	right: 0;
 	z-index: 9999999;
-}
-
-.tsd-donate-header {
-	background: #eee;
-	padding: 20px;
-	text-align: center;
-	border-top: 1px solid #aa0000;
 }
 
 .tsd-tips-toggle > div {

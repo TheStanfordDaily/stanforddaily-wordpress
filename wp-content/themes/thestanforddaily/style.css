@@ -1351,6 +1351,19 @@ a:hover, a:active {
 }
 
 /* Donation Banner */
+.tsd-donate-header {
+  background: #eee;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #aa0000;
+}
+.tsd-donate-header .tsd-donate-header-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: black;
+}
+
 @media screen and (max-width: 1024px) {
   .tsd-donate-header {
     margin-top: 60px;
@@ -1362,13 +1375,6 @@ a:hover, a:active {
 }
 .tsd-donation-form-recurring {
   display: none;
-}
-
-.tsd-donate-header-close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: black;
 }
 
 /* "Send us tips" widget */
@@ -1406,13 +1412,6 @@ a:hover, a:active {
   top: 52px;
   right: 0;
   z-index: 9999999;
-}
-
-.tsd-donate-header {
-  background: #eee;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #aa0000;
 }
 
 .tsd-tips-toggle > div {
