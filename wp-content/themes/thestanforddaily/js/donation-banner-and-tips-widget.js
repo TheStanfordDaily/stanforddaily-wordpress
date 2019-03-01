@@ -49,14 +49,13 @@ if (!window.localStorage) {
 
 		$("a.tsd-tips-toggle").click(function (e) {
 			e.preventDefault();
-			console.log("HI");
+			//console.log("HI");
 			var expandedElement = $(this).next(".tsd-tips-expanded");
 			var icon = $(this).find("i.fa");
 			expandedElement.slideToggle(400, function () {
 				if (expandedElement.is(":visible")) {
 					icon.removeClass("fa-caret-down").addClass("fa-caret-up");
-				}
-				else {
+				} else {
 					icon.addClass("fa-caret-down").removeClass("fa-caret-up");
 				}
 			})

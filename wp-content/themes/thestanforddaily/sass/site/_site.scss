@@ -98,16 +98,14 @@ $header_donation_banner_close_button_offset: 20px;
 		padding: 10px;
 		width: 100%;
 	}
-}
-
-.tsd-sidebar-tips-container h3 {
-	color: white;
-	text-transform: uppercase;
-}
-
-.tsd-sidebar-tips-container input[type=submit] {
-	border: 1px solid white;
-	margin-top: 20px;
+	h3 {
+		color: white;
+		text-transform: uppercase;
+	}
+	input[type=submit] {
+		border: 1px solid white;
+		margin-top: 20px;
+	}
 }
 
 .tsd-tips-toggle {
