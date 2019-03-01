@@ -757,6 +757,7 @@ a:hover, a:active {
 
 .site-branding {
   height: 100px;
+  z-index: 999;
 }
 .site-branding .container {
   height: 100%;
