@@ -1416,8 +1416,10 @@ a:hover, a:active {
 }
 
 .tsd-tips-toggle {
-  position: relative;
   line-height: 52px;
+  background: #8c1515;
+  color: white !important;
+  padding: 0px 20px;
 }
 
 .tsd-tips-expanded {
@@ -1428,12 +1430,6 @@ a:hover, a:active {
   top: 52px;
   right: 0;
   z-index: 9999999;
-}
-
-.tsd-tips-toggle > div {
-  background: #8c1515;
-  color: white;
-  padding: 0px 20px !important;
 }
 
 @media only screen and (max-width: 768px) {

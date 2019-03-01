@@ -111,8 +111,10 @@ $header_donation_banner_close_button_offset: 20px;
 }
 
 .tsd-tips-toggle {
-	position: relative;
 	line-height: 52px;
+	background: $color__cardinal-red;
+	color: white !important;
+	padding: 0px 20px;
 }
 
 .tsd-tips-expanded {
@@ -123,12 +125,6 @@ $header_donation_banner_close_button_offset: 20px;
 	top: 52px;
 	right: 0;
 	z-index: 9999999;
-}
-
-.tsd-tips-toggle > div {
-	background: $color__cardinal-red;
-	color: white;
-	padding: 0px 20px !important;
 }
 
 @media only screen and (max-width: 768px) {

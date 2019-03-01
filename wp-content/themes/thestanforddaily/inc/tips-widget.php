@@ -1,9 +1,6 @@
 <a href="#" class="tsd-tips-toggle">
-    <div class="jeg_nav_item">Send us tips
-
-    <i class="fa fa-caret-down" style="
-        margin-left: 10px;
-    "></i></div>
+    Send us tips
+    <i class="fa fa-caret-down" style="margin-left: 10px;"></i>
 </a>
 <div class="tsd-tips-expanded">
     <div class="tsd-sidebar-tips-container">
@@ -15,4 +12,4 @@
             <input type="submit" />
         </form>
     </div>
-</div> 
+</div>
