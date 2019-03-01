@@ -35,6 +35,87 @@
 	padding: 40px 0;
 }
 
+/* header */
+
+.tsd-donation-form-recurring {
+    display: none;
+}
+
+.tsd-donate-header-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+    color: black;
+}
+
+/* tips */
+
+.tsd-sidebar-tips-container {
+    padding: 20px;
+    background: #aa0000;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+
+.tsd-sidebar-tips-container h3 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.tsd-sidebar-tips-container input[type=submit] {
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+.tsd-tips-toggle {
+    position: relative;
+}
+
+.tsd-tips-expanded {
+    display: none;
+    width: 350px;
+    max-width: 100vw;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    z-index: 9999999;
+}
+
+.tsd-donate-header {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #aa0000;
+}
+
+.tsd-tips-toggle > div {
+    background: #aa0000;
+    color: white;
+    padding: 0px 20px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .tsd-hidden-sm {
+        display: none;
+    }
+    .tsd-tips-toggle > div {
+        padding: 10px 20px !important;
+    }
+    .tsd-tips-expanded {
+        top: 80px;
+    }
+    .tsd-donate-header {
+        padding: 0px;
+        padding-top: 10px;
+    }
+    .tsd-donate-header button[type=submit] {
+        width: 50%;
+        padding: 0;
+    }
+}
+
 /*--------------------------------------------------------------
 ## Home page
 --------------------------------------------------------------*/
