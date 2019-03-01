@@ -1350,7 +1350,7 @@ a:hover, a:active {
   padding: 40px 0;
 }
 
-/* header */
+/* Header Donation Banner */
 .tsd-donation-form-recurring {
   display: none;
 }
@@ -1363,7 +1363,7 @@ a:hover, a:active {
   color: black;
 }
 
-/* tips */
+/* "Send us tips" widget */
 .tsd-sidebar-tips-container {
   padding: 20px;
   background: #aa0000;
