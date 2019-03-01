@@ -1421,6 +1421,11 @@ a:hover, a:active {
   color: white !important;
   padding: 0px 20px;
 }
+@media screen and (max-width: 1024px) {
+  .tsd-tips-toggle {
+    display: none !important;
+  }
+}
 
 .tsd-tips-expanded {
   display: none;

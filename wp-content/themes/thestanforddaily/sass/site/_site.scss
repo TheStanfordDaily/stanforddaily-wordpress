@@ -115,6 +115,10 @@ $header_donation_banner_close_button_offset: 20px;
 	background: $color__cardinal-red;
 	color: white !important;
 	padding: 0px 20px;
+
+	@media screen and (max-width: $size__break-mobile) {
+		display: none !important;
+	}
 }
 
 .tsd-tips-expanded {
