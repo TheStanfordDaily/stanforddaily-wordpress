@@ -51,6 +51,10 @@ $header_donation_banner_close_button_offset: 20px;
 		color: black;
 		z-index: 990;	// So that it can be clicked
 	}
+
+	.tsd-button, .tsd-select {
+		margin-top: 10px;
+	}
 }
 
 @media screen and (max-width: $size__break-mobile) {
@@ -63,6 +67,10 @@ $header_donation_banner_close_button_offset: 20px;
 
 		.tsd-donate-header-close {
 			top: $mobile_top_sticky_bar_height + $header_donation_banner_close_button_offset;
+		}
+
+		.tsd-donation-form {
+			margin-top: 20px;
 		}
 	}
 }

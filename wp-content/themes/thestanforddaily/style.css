@@ -656,6 +656,13 @@ input[type=submit]:focus {
   transition: 0.3s ease;
 }
 
+.tsd-select {
+  width: 100px;
+  margin-left: 20px;
+  height: 40px;
+  vertical-align: top;
+}
+
 input[type=text],
 input[type=email],
 input[type=url],
@@ -1383,6 +1390,9 @@ a:hover, a:active {
   color: black;
   z-index: 990;
 }
+.tsd-donate-header .tsd-button, .tsd-donate-header .tsd-select {
+  margin-top: 10px;
+}
 
 @media screen and (max-width: 1024px) {
   .tsd-donate-header {
@@ -1391,6 +1401,9 @@ a:hover, a:active {
   }
   .tsd-donate-header .tsd-donate-header-close {
     top: 80px;
+  }
+  .tsd-donate-header .tsd-donation-form {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 480px) {
