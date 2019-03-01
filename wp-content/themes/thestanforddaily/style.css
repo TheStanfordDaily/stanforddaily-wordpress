@@ -691,11 +691,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #aa0000;
+  color: #820000;
   text-decoration: none;
 }
 a:visited {
-  color: #aa0000;
+  color: #820000;
 }
 a:hover, a:focus, a:active {
   color: black;
@@ -757,6 +757,7 @@ a:hover, a:active {
 
 .site-branding {
   height: 100px;
+  z-index: 999;
 }
 .site-branding .container {
   height: 100%;
@@ -875,7 +876,7 @@ a:hover, a:active {
   position: relative;
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
-  color: #aa0000;
+  color: #820000;
 }
 .main-navigation a {
   display: block;
@@ -1112,8 +1113,8 @@ a:hover, a:active {
   font-weight: 400;
 }
 .pagination .page-numbers.current {
-  background-color: #aa0000;
-  border-color: #aa0000;
+  background-color: #820000;
+  border-color: #820000;
   color: white;
 }
 .pagination .page-numbers.prev::before, .pagination .page-numbers.next::after {
@@ -1336,6 +1337,83 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Home page
+--------------------------------------------------------------*/
+.tsd-excerpt-container-small article {
+  margin-bottom: 15px;
+}
+.tsd-excerpt-container-small .excerpt-thumb {
+  margin-right: 15px;
+  max-width: 130px;
+}
+.tsd-excerpt-container-small .excerpt-thumb .thumbnail-container {
+  height: 100%;
+  height: 100px;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-title {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-summary {
+  display: none;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .byline, .tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on {
+  display: block;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .tsd-excerpt-byline-dash {
+  display: none;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on a {
+  color: inherit;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on a::before {
+  /** Add clock icon **/
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Free";
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .entry-meta-comment {
+  display: none;
+}
+
+.tsd-excerpt-container-textonly .excerpt-thumb {
+  display: none;
+}
+.tsd-excerpt-container-textonly .excerpt-content {
+  margin-bottom: 10px;
+}
+.tsd-excerpt-container-textonly .excerpt-content .entry-title {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.tsd-excerpt-container-textonly .excerpt-content .entry-summary {
+  display: none;
+}
+.tsd-excerpt-container-textonly .excerpt-content .entry-meta .entry-meta-comment {
+  display: none;
+}
+
+.row.tsd-block-title {
+  border-bottom: 1px solid #ddd;
+  padding: 0;
+  margin-top: 20px;
+}
+.row.tsd-block-title h3 {
+  background: #8c1515;
+  color: white;
+  padding: 10px 15px;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0;
+  display: inline-block;
+}
+
+.row.tsd-block {
+  margin-top: 15px;
+}
+
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
@@ -1355,7 +1433,6 @@ a:hover, a:active {
   font-family: Libre Baskerville;
   font-weight: 700;
   font-size: 3em;
-  line-height: 1.15;
   margin: 0 0 0.4em;
   letter-spacing: -0.04em;
 }
@@ -1511,7 +1588,7 @@ a:hover, a:active {
 }
 .excerpt-content .entry-title {
   font-size: 30px;
-  line-height: 1em;
+  line-height: 1.25em;
   margin-bottom: 2px;
 }
 .excerpt-content .entry-summary {
@@ -1523,6 +1600,35 @@ a:hover, a:active {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .excerpt-thumb {
+    width: 200px;
+    margin-right: 20px;
+  }
+  .excerpt-thumb .thumbnail-container {
+    height: 200px;
+  }
+
+  .excerpt-content .entry-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .excerpt-thumb {
+    width: 100px;
+    margin-right: 10px;
+  }
+  .excerpt-thumb .thumbnail-container {
+    height: 100px;
+  }
+
+  .excerpt-content .entry-title {
+    font-size: 15px;
+  }
+  .excerpt-content .entry-summary {
+    display: none;
+  }
+}
 .page-header {
   margin: 0 0 30px;
 }
@@ -1533,6 +1639,10 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+#disqus_thread {
+  margin-top: 20px;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
