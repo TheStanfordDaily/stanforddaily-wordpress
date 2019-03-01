@@ -766,6 +766,7 @@ a:hover, a:active {
 }
 .site-branding .site-title {
   display: block;
+  float: left;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -788,6 +789,14 @@ a:hover, a:active {
 }
 .site-branding .nav-toggle-button {
   display: none;
+}
+.site-branding .header-social-media {
+  float: right;
+  font-size: 25px;
+  margin-top: 11.25px;
+}
+.site-branding .header-social-media a:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .main-navigation {
@@ -930,6 +939,7 @@ a:hover, a:active {
     padding: 10px 54px;
   }
   .site-branding .site-title {
+    float: none;
     text-align: center;
     font-size: 30px;
   }
@@ -948,6 +958,9 @@ a:hover, a:active {
             box-shadow: none;
     background: transparent;
     cursor: pointer;
+  }
+  .site-branding .header-social-media {
+    display: none;
   }
 
   .main-navigation {

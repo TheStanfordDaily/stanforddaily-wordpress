@@ -70,6 +70,13 @@
 						?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php
 					}
 				?></<?php echo $title_tag; ?>>
+
+				<div class="header-social-media">
+					<a href="https://www.facebook.com/stanforddaily/" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/StanfordDaily" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/stanforddaily/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UCWg3QqUzqxXt6herm5sMjNw" target="_blank"><i class="fab fa-youtube"></i></a>
+				</div>
 			</div>
 		</div><!-- .site-branding -->
 

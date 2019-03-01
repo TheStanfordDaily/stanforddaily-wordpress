@@ -60,6 +60,7 @@
 	}
 	.site-title {
 		display: block;
+		float: left;
 		height: 100%;
 		margin: 0;
 		padding: 0;
@@ -86,6 +87,15 @@
 
 	.nav-toggle-button {
 		display: none;
+	}
+
+	.header-social-media {
+		float: right;
+		font-size: 25px;
+		margin-top: 11.25px;
+		a:not(:last-of-type) {
+			margin-right: 20px;
+		}
 	}
 }
 
@@ -267,6 +277,7 @@
 		}
 
 		.site-title {
+			float: none;
 			text-align: center;
 			font-size: 30px;
 		}
@@ -285,6 +296,10 @@
 			box-shadow: none;
 			background: transparent;
 			cursor: pointer;
+		}
+
+		.header-social-media {
+			display: none;
 		}
 	}
 
