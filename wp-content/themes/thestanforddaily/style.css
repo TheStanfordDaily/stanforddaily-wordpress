@@ -1342,6 +1342,7 @@ a:hover, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 15px;
 }
 .tsd-excerpt-container-small .excerpt-thumb {
   float: none;
@@ -1407,7 +1408,7 @@ a:hover, a:active {
 }
 
 .row.tsd-block {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 /*--------------------------------------------------------------
