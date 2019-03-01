@@ -16,7 +16,7 @@
  *
  * @uses tsd_header_style()
  */
-function tsd_custom_header_setup() {
+/*function tsd_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'tsd_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
@@ -26,7 +26,7 @@ function tsd_custom_header_setup() {
 		'wp-head-callback'       => 'tsd_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'tsd_custom_header_setup' );
+add_action( 'after_setup_theme', 'tsd_custom_header_setup' );*/
 
 if ( ! function_exists( 'tsd_header_style' ) ) :
 	/**
