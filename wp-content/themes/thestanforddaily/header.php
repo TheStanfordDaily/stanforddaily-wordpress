@@ -24,10 +24,6 @@
 <div id="fb-root"></div>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
-
-
-			
-
 <div id="page" class="site">
 	<div class="col-12 p-0"><?php include "inc/donate-header.php"; ?></div>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tsd' ); ?></a>
