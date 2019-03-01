@@ -15,7 +15,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main tsd-home-main container-fluid">
 		<div class="row">
-			<div class="col-12 col-sm-8">
+			<div class="col-12 col-lg-8">
 				<div class="row">
 					<div class="col-12 tsd-excerpt-container-bignews">
 						<?php
@@ -38,7 +38,7 @@ get_header();
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 col-sm-6 tsd-excerpt-container-small">';
+							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
 							get_template_part( 'template-parts/excerpt', get_post_type() );
 							echo "</div>";
 						endwhile;
@@ -59,7 +59,7 @@ get_header();
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 col-sm-6 tsd-excerpt-container-small">';
+							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
 							get_template_part( 'template-parts/excerpt', get_post_type() );
 							echo "</div>";
 						endwhile;
@@ -80,7 +80,7 @@ get_header();
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 col-sm-6 tsd-excerpt-container-small">';
+							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
 							get_template_part( 'template-parts/excerpt', get_post_type() );
 							echo "</div>";
 						endwhile;
@@ -101,7 +101,7 @@ get_header();
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 col-sm-6 tsd-excerpt-container-small">';
+							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
 							get_template_part( 'template-parts/excerpt', get_post_type() );
 							echo "</div>";
 						endwhile;
@@ -112,15 +112,15 @@ get_header();
 					?>
 				</div>
 				<div class="row tsd-block">
-					<div class="col-12 col-sm-6">
+					<div class="col-12 col-lg-6">
 						<a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/StanfordDaily?ref_src=twsrc%5Etfw">Tweets by StanfordDaily</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
-					<div class="col-12 col-sm-6">
+					<div class="col-12 col-lg-6">
 						<div class="fb-page" data-href="https://www.facebook.com/stanforddaily" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/stanforddaily" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/stanforddaily">The Stanford Daily</a></blockquote></div>
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-sm-4">
+			<div class="col-12 col-lg-4">
 				<div class="row tsd-block-title">
 					<div class="col-12">
 						<h3 class="tsd-block-title">Opinions</h3>
