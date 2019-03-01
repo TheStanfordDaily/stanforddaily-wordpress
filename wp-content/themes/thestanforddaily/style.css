@@ -1395,7 +1395,7 @@ a:hover, a:active {
 /* "Send us tips" widget */
 .tsd-sidebar-tips-container {
   padding: 20px;
-  background: #aa0000;
+  background: #8c1515;
   text-align: center;
   margin-bottom: 20px;
   padding-top: 5px;
@@ -1417,6 +1417,7 @@ a:hover, a:active {
 
 .tsd-tips-toggle {
   position: relative;
+  line-height: 52px;
 }
 
 .tsd-tips-expanded {
@@ -1430,7 +1431,7 @@ a:hover, a:active {
 }
 
 .tsd-tips-toggle > div {
-  background: #aa0000;
+  background: #8c1515;
   color: white;
   padding: 0px 20px !important;
 }

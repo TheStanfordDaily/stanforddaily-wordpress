@@ -90,7 +90,7 @@ $header_donation_banner_close_button_offset: 20px;
 /* "Send us tips" widget */
 .tsd-sidebar-tips-container {
 	padding: 20px;
-	background: #aa0000;
+	background: $color__cardinal-red;
 	text-align: center;
 	margin-bottom: 20px;
 	padding-top: 5px;
@@ -112,6 +112,7 @@ $header_donation_banner_close_button_offset: 20px;
 
 .tsd-tips-toggle {
 	position: relative;
+	line-height: 52px;
 }
 
 .tsd-tips-expanded {
@@ -125,7 +126,7 @@ $header_donation_banner_close_button_offset: 20px;
 }
 
 .tsd-tips-toggle > div {
-	background: #aa0000;
+	background: $color__cardinal-red;
 	color: white;
 	padding: 0px 20px !important;
 }
