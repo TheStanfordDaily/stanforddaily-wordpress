@@ -179,7 +179,7 @@ get_header();
 							echo "</div>";
 						endwhile;
 					else:
-						get_template_part( 'template-parts/content', 'none' );
+						// Do nothing
 					endif;
 					wp_reset_query();
 					?>
