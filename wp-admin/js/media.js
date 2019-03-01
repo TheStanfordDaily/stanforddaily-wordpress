@@ -1,21 +1,21 @@
+/* global ajaxurl, attachMediaBoxL10n, _wpMediaGridSettings, showNotice */
+
 /**
- * Creates a dialog containing posts that can have a particular media attached
- * to it.
+ * @summary Creates a dialog containing posts that can have a particular media attached to it.
  *
  * @since 2.7.0
- * @output wp-admin/js/media.js
  *
- * @namespace findPosts
+ * @global
+ * @namespace
  *
  * @requires jQuery
  */
-
-/* global ajaxurl, attachMediaBoxL10n, _wpMediaGridSettings, showNotice, findPosts */
+var findPosts;
 
 ( function( $ ){
-	window.findPosts = {
+	findPosts = {
 		/**
-		 * Opens a dialog to attach media to a post.
+		 * @summary Opens a dialog to attach media to a post.
 		 *
 		 * Adds an overlay prior to retrieving a list of posts to attach the media to.
 		 *
@@ -59,7 +59,7 @@
 		},
 
 		/**
-		 * Clears the found posts lists before hiding the attach media dialog.
+		 * @summary Clears the found posts lists before hiding the attach media dialog.
 		 *
 		 * @since 2.7.0
 		 *
@@ -74,8 +74,7 @@
 		},
 
 		/**
-		 * Binds a click event listener to the overlay which closes the attach media
-		 * dialog.
+		 * @summary Binds a click event listener to the overlay which closes the attach media dialog.
 		 *
 		 * @since 3.5.0
 		 *
@@ -90,11 +89,10 @@
 		},
 
 		/**
-		 * Retrieves and displays posts based on the search term.
+		 * @summary Retrieves and displays posts based on the search term.
 		 *
-		 * Sends a post request to the admin_ajax.php, requesting posts based on the
-		 * search term provided by the user. Defaults to all posts if no search term is
-		 * provided.
+		 * Sends a post request to the admin_ajax.php, requesting posts based on the search term provided by the user.
+		 * Defaults to all posts if no search term is provided.
 		 *
 		 * @since 2.7.0
 		 *
@@ -113,8 +111,8 @@
 			spinner.addClass( 'is-active' );
 
 			/**
-			 * Send a POST request to admin_ajax.php, hide the spinner and replace the list
-			 * of posts with the response data. If an error occurs, display it.
+			 * Send a POST request to admin_ajax.php, hide the spinner and replace the list of posts with the response data.
+			 * If an error occurs, display it.
 			 */
 			$.ajax( ajaxurl, {
 				type: 'POST',
@@ -135,8 +133,7 @@
 	};
 
 	/**
-	 * Initializes the file once the DOM is fully loaded and attaches events to the
-	 * various form elements.
+	 * @summary Initializes the file once the DOM is fully loaded and attaches events to the various form elements.
 	 *
 	 * @returns {void}
 	 */
@@ -196,7 +193,7 @@
 		});
 
 		/**
-		 * Enables clicking on the entire table row.
+		 * @summary Enables clicking on the entire table row.
 		 *
 		 * @returns {void}
 		 */

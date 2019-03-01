@@ -298,8 +298,7 @@
 .folded #adminmenu .wp-has-current-submenu li > a {
 	padding-left: 16px;
 	padding-right: 14px;
-	/* Exclude from the transition the outline for Windows High Contrast mode */
-	transition: all .1s ease-in-out, outline 0s;
+	transition: all .1s ease-in-out;
 }
 
 #adminmenu .wp-has-current-submenu ul > li > a,
@@ -331,6 +330,7 @@
 #adminmenu .wp-submenu li {
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
 
 #adminmenu .wp-menu-image img {
@@ -547,20 +547,16 @@ ul#adminmenu > li.current > a.current:after {
 	padding: 0;
 	position: relative;
 	overflow: visible;
+	line-height: 34px;
 	background: none;
 	color: #aaa;
 	cursor: pointer;
+	outline: 0;
 }
 
-#collapse-button:hover {
-	color: #00b9eb;
-}
-
+#collapse-button:hover,
 #collapse-button:focus {
 	color: #00b9eb;
-	/* Only visible in Windows High Contrast mode */
-	outline: 1px solid transparent;
-	outline-offset: -1px;
 }
 
 #collapse-button .collapse-button-icon,
@@ -570,10 +566,7 @@ ul#adminmenu > li.current > a.current:after {
 	position: absolute;
 	top: 0;
 	right: 0;
-}
-
-#collapse-button .collapse-button-label {
-	top: 8px;
+	line-height: 34px;
 }
 
 #collapse-button .collapse-button-icon {
@@ -742,7 +735,7 @@ li#wp-admin-bar-menu-toggle {
 
 }
 
-@media screen and (max-width: 782px) {
+@media screen and ( max-width: 782px ) {
 	.auto-fold #wpcontent {
 		position: relative;
 		margin-right: 0;

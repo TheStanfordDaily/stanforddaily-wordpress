@@ -1,11 +1,9 @@
+/* global ajaxurl */
+
 /**
  * This file is used on media-upload.php which has been replaced by media-new.php and upload.php
- *
- * @deprecated  3.5.0
- * @output wp-admin/js/media-gallery.js
+ * Deprecated since 3.5.0
  */
-
- /* global ajaxurl */
 jQuery(function($) {
 	/**
 	 * Adds a click event handler to the element with a 'wp-gallery' class.

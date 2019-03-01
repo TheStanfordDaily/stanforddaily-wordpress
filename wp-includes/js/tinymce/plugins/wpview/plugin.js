@@ -1,12 +1,9 @@
 /**
  * WordPress View plugin.
  */
-( function( tinymce ) {
+( function( tinymce, wp ) {
 	tinymce.PluginManager.add( 'wpview', function( editor ) {
 		function noop () {}
-
-		// Set this here as wp-tinymce.js may be loaded too early.
-		var wp = window.wp;
 
 		if ( ! wp || ! wp.mce || ! wp.mce.views ) {
 			return {
@@ -202,4 +199,4 @@
 			getView: noop
 		};
 	} );
-} )( window.tinymce );
+} )( window.tinymce, window.wp );

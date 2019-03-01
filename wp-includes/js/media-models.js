@@ -81,25 +81,13 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 22:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(23);
-
-
-/***/ }),
-
-/***/ 23:
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * @output wp-includes/js/media-models.js
- */
 
 var $ = jQuery,
 	Attachment, Attachments, l10n, media;
@@ -167,12 +155,12 @@ l10n = media.model.l10n = window._wpMediaModelsL10n || {};
 media.model.settings = l10n.settings || {};
 delete l10n.settings;
 
-Attachment = media.model.Attachment = __webpack_require__( 24 );
-Attachments = media.model.Attachments = __webpack_require__( 25 );
+Attachment = media.model.Attachment = __webpack_require__( 21 );
+Attachments = media.model.Attachments = __webpack_require__( 22 );
 
-media.model.Query = __webpack_require__( 26 );
-media.model.PostImage = __webpack_require__( 27 );
-media.model.Selection = __webpack_require__( 28 );
+media.model.Query = __webpack_require__( 23 );
+media.model.PostImage = __webpack_require__( 24 );
+media.model.Selection = __webpack_require__( 25 );
 
 /**
  * ========================================================================
@@ -343,7 +331,7 @@ $(window).on('unload', function(){
 
 /***/ }),
 
-/***/ 24:
+/***/ 21:
 /***/ (function(module, exports) {
 
 var $ = Backbone.$,
@@ -519,7 +507,7 @@ module.exports = Attachment;
 
 /***/ }),
 
-/***/ 25:
+/***/ 22:
 /***/ (function(module, exports) {
 
 /**
@@ -1078,7 +1066,7 @@ module.exports = Attachments;
 
 /***/ }),
 
-/***/ 26:
+/***/ 23:
 /***/ (function(module, exports) {
 
 var Attachments = wp.media.model.Attachments,
@@ -1393,7 +1381,7 @@ module.exports = Query;
 
 /***/ }),
 
-/***/ 27:
+/***/ 24:
 /***/ (function(module, exports) {
 
 /**
@@ -1554,7 +1542,7 @@ module.exports = PostImage;
 
 /***/ }),
 
-/***/ 28:
+/***/ 25:
 /***/ (function(module, exports) {
 
 var Attachments = wp.media.model.Attachments,
