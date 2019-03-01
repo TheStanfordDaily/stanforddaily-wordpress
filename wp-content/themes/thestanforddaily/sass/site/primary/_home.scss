@@ -50,7 +50,7 @@
 		display: none;
 	}
 	.excerpt-content {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		.entry-title {
 			font-size: 15px;
 			margin-bottom: 0;
@@ -62,6 +62,15 @@
 			.entry-meta-comment {
 				display: none;
 			}
+		}
+	}
+}
+
+.tsd-excerpt-container-bignews {
+	.excerpt-content {
+		.entry-title {
+			font-size: 25px;
+			font-weight: bold;
 		}
 	}
 }
