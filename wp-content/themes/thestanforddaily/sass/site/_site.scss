@@ -40,7 +40,7 @@
 @media screen and (max-width: $size__break-mobile) {
     .tsd-donate-header {
         // To make the banner below the .site-branding fixed bar on smaller screens.
-        margin-top: 60px;
+        margin-top: $mobile_top_sticky_bar_height;
     }
 }
 

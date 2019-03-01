@@ -263,13 +263,12 @@
 		display: none;
 	}
 
-	$top_sticky_bar_height: 60px;
 	.site-branding {
 		position: fixed;
 		top: 0;	// So that the header donation banner will not move it on smaller screen
 		left: 0;
 		width: 100%;
-		height: $top_sticky_bar_height;
+		height: $mobile_top_sticky_bar_height;
 		background: #fff;
 		box-shadow: 0 2px 6px rgba(0,0,0,.1);
 
@@ -387,7 +386,7 @@
 
 	.site-content {
 		// To make sure that the nav bar does not cover the content.
-		margin-top: $top_sticky_bar_height;
+		margin-top: $mobile_top_sticky_bar_height;
 	}
 }
 
