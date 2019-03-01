@@ -1680,6 +1680,9 @@ a:hover, a:active {
   margin-bottom: 0.5em;
 }
 
+.entry-footer {
+  margin-top: 20px;
+}
 .entry-footer .tags-links {
   font-size: 12px;
   margin: 2.2em auto 1.75em;
