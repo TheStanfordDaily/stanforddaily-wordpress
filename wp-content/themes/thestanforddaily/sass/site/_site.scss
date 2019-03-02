@@ -33,6 +33,18 @@
 	color: #666;
 
 	padding: 40px 0;
+
+	.site-info {
+		&.site-info-right {
+			text-align: right;
+		}
+
+		@media screen and (max-width: 960px) {
+			&.site-info-left, &.site-info-right {
+				text-align: center;
+			}
+		}
+	}
 }
 
 

@@ -1376,6 +1376,14 @@ a:hover, a:active {
   color: #666;
   padding: 40px 0;
 }
+.site-footer .site-info.site-info-right {
+  text-align: right;
+}
+@media screen and (max-width: 960px) {
+  .site-footer .site-info.site-info-left, .site-footer .site-info.site-info-right {
+    text-align: center;
+  }
+}
 
 /* Donation Banner */
 .tsd-donate-header {
@@ -1485,7 +1493,7 @@ a:hover, a:active {
 ## Home page
 --------------------------------------------------------------*/
 .tsd-excerpt-container-small article {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .tsd-excerpt-container-small .excerpt-thumb {
   margin-right: 15px;
@@ -1526,7 +1534,7 @@ a:hover, a:active {
   display: none;
 }
 .tsd-excerpt-container-textonly .excerpt-content {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .tsd-excerpt-container-textonly .excerpt-content .entry-title {
   font-size: 15px;
@@ -1537,6 +1545,14 @@ a:hover, a:active {
 }
 .tsd-excerpt-container-textonly .excerpt-content .entry-meta .entry-meta-comment {
   display: none;
+}
+
+.tsd-excerpt-container-bignews .excerpt-content .entry-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.tsd-excerpt-container-bignews .excerpt-content .entry-summary {
+  color: #666666;
 }
 
 .row.tsd-block-title {
@@ -1556,6 +1572,13 @@ a:hover, a:active {
 
 .row.tsd-block {
   margin-top: 15px;
+}
+
+.tsd-home-main .entry-title {
+  font-weight: 400;
+}
+.tsd-home-main .entry-title, .tsd-home-main .entry-title a {
+  color: black;
 }
 
 /*--------------------------------------------------------------
