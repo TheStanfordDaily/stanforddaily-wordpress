@@ -34,7 +34,7 @@ get_header();
 				</div>
 				<div class="row tsd-block">
 					<?php
-					query_posts( array ( 'category_name' => 'big-news-feed', 'posts_per_page' => 2, 'offset' => 1 ) );
+					query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 2, 'offset' => 1 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
