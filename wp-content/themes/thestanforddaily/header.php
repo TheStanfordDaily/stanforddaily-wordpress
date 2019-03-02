@@ -25,6 +25,9 @@
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
 <div id="page" class="site">
+	<!-- Ezoic - atf_1 - top_of_page -->
+	<div id="ezoic-pub-ad-placeholder-101"></div>
+	<!-- End Ezoic - atf_1 - top_of_page -->
 	<?php include "inc/donate-header.php"; ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tsd' ); ?></a>
 	<div class="background-overlay"></div>
