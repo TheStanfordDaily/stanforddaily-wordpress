@@ -637,6 +637,7 @@ input[type=submit]:focus {
 }
 
 .tsd-button {
+  font-family: Open Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   border: none;
   border-radius: 0;
   background-color: #8c1515;
@@ -654,6 +655,14 @@ input[type=submit]:focus {
   -webkit-appearance: none;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+.tsd-button.outline {
+  color: inherit;
+  letter-spacing: 1.5px;
+  line-height: 36px;
+  height: auto;
+  background: transparent;
+  border: 2px solid #e0e0e0;
 }
 
 .tsd-select {
@@ -817,12 +826,15 @@ a:hover, a:active {
 .site-branding .nav-toggle-button {
   display: none;
 }
-.site-branding .header-social-media {
+.site-branding .header-right {
   float: right;
   font-size: 25px;
   margin-top: 11.25px;
 }
-.site-branding .header-social-media a:not(:last-of-type) {
+.site-branding .header-right a {
+  vertical-align: middle;
+}
+.site-branding .header-right a:not(:last-of-type) {
   margin-right: 20px;
 }
 
@@ -987,7 +999,7 @@ a:hover, a:active {
     background: transparent;
     cursor: pointer;
   }
-  .site-branding .header-social-media {
+  .site-branding .header-right {
     display: none;
   }
 

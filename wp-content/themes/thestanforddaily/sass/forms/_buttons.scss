@@ -22,6 +22,7 @@ input[type="submit"] {
 }
 
 .tsd-button {
+	font-family: $font__main;
 	border: none;
 	border-radius: 0;
 	background-color: $color__cardinal-red;
@@ -38,6 +39,14 @@ input[type="submit"] {
 	outline: 0;
 	-webkit-appearance: none;
 	transition: .3s ease;
+	&.outline {
+		color: inherit;
+		letter-spacing: 1.5px;
+		line-height: 36px;
+		height: auto;
+		background: transparent;
+		border: 2px solid #e0e0e0;
+	}
 }
 
 .tsd-select {
