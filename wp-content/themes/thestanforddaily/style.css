@@ -1543,6 +1543,9 @@ a:hover, a:active {
   font-size: 25px;
   font-weight: bold;
 }
+.tsd-excerpt-container-bignews .excerpt-content .entry-summary {
+  color: #666666;
+}
 
 .row.tsd-block-title {
   border-bottom: 1px solid #ddd;
