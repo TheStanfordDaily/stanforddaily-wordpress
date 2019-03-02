@@ -27,6 +27,12 @@ get_header();
 			</header><!-- .page-header -->
 
 			<?php
+			if (is_category("magazine")) {
+				include "inc/magazine-slider.php";
+			}
+			?>
+
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
