@@ -136,6 +136,12 @@ function tsd_scripts() {
 		// We are using Disqus
 		//wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( is_category( "magazine" ) ) {
+		wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css' );
+		wp_enqueue_style( 'slick-carousel-theme-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css' );
+		wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'));
+	}
 }
 add_action( 'wp_enqueue_scripts', 'tsd_scripts' );
 
