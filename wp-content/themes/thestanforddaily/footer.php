@@ -15,7 +15,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="site-info col-6">
 					&copy; <?php echo date("Y"); ?> The Stanford Daily Publishing Corporation.
