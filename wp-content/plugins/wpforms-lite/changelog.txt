@@ -1,5 +1,69 @@
 == Changelog ==
 
+= 1.5.1.1 =
+- Fixed: Conflict with WordPress 5.1 if form contained target="_blank".
+- Fixed: Unable to uncheck default Multiple Choice value in form builder after being set initially.
+- Fixed: PHP error when entries are exported after a field has been deleted.
+- Fixed: Form builder Email notification conditional logic settings display issue after new notification is added.
+- Fixed: Conflict with some themes preventing Multiple Choice fields from being selectable.
+
+= 1.5.1 =
+- Added: Complete translations for Spanish, Italian, Japanese, and German.
+- Added: Smart Tag for referencing user meta data, `{user_meta key=""}`.
+- Changed: Improved support with LocoTranslate plugin.
+- Changed: Refactored Form Preview functionality, no longer requiring hidden private page to be created.
+- Changed: Always load full WPForms styling inside Gutenberg so forms render correctly.
+- Fixed: Typos, grammar, and other i18n related issues.
+- Fixed: Created alias class for `WPForms` to prevent issue with namespacing introduced in 1.5.0.
+- Fixed: Dynamic population issue when using Image Choices field setting.
+
+= 1.5.0.4 =
+- Changed: Dashboard widget improvements.
+- Fixed: Various typos.
+
+= 1.5.0.3 =
+- Changed: Minor improvements to Gutenberg block for WordPress 5.0.
+- Fixed: Error when activating WPForms Pro if WPForms Lite is still activated.
+
+= 1.5.0 =
+- IMPORTANT: Support for PHP 5.2 has been discontinued. If you are running PHP 5.2, you MUST upgrade PHP before installing WPForms 1.5. Failure to do that will disable WPForms core functionality.
+- Added: Dashboard widget.
+- Added: WPForms Challenge: an interactive step-by-step guide to creating a form for new users.
+- Added: Dynamic field population, available to enable from form settings.
+- Added: "About Us" admin page (WPForms > About Us).
+- Added: {user_first_name} and {user_last_name} Smart Tags.
+- Changed: Improved randomizing if field is configured to randomize items.
+- Changed: Improved i18n support.
+- Fixed: Form builder errors if user had Visual Editor disabled in profile.
+- Fixed: Form builder Windows styling issues.
+- Fixed: Form builder dynamic choices warning not always removing.
+- Fixed: Form builder "Show Layout" CSS formatting.
+- Fixed: reCAPTCHA compatibility when form is inside OptinMonster popup.
+- Fixed: Gutenberg block returning error if no forms have been created.
+
+= 1.4.9 =
+- Added: Pirate Forms importer.
+- Changed: Some form builder tooltips to contain documentation links.
+- Fixed: Form builder javascript conflict with jQuery non-conflict mode.
+- Fixed: PHP Notice from WPForms widget.
+- Fixed: Incorrect markup around Addons submenu item.
+
+= 1.4.8.1 =
+- Fixed: Certain confirmation settings, before 1.4.8, not displaying correctly in the form builder.
+
+= 1.4.8 =
+- Added: Gutenberg block.
+- Added: WP Mail SMTP detection and hints in the form builder notification settings.
+- Added: Alt and title tags to image choices images on frontend display.
+- Changed: i18n improvements.
+- Fixed: Incorrect param used with `shortcode_atts`.
+- Fixed: Accessing `wpforms_setting` in frontend javascript before checking if it exists.
+- Fixed: PHP error toggling form builder notifications in some use cases.
+- Fixed: GDPR field Agreement text not updating in real time.
+- Fixed: Marketing provider connections containing an escaped apostrophe.
+- Fixed: Pressing "Enter" in the form builder resulting in unexpected behavior.
+- Fixed: Security enhancements and other misc. bug fixes.
+
 = 1.4.7.2 =
 - Fixed: Honeypot field using a none unique CSS ID.
 - Fixed: Form builder Bulk Add display issues in certain use cases.

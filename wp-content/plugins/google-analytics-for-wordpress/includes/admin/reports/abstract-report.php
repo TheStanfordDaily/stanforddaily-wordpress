@@ -166,11 +166,13 @@ class MonsterInsights_Report {
 		}
 
 		if ( ( $start !== $this->default_start_date() || $end !== $this->default_end_date() ) && ! monsterinsights_is_pro_version() ) {
-			return array(
-				'success' => false,
-				'error'   => __( 'Please upgrade to MonsterInsights Pro to use custom date ranges.', 'google-analytics-for-wordpress' ),
-				'data'    => array(),
-			);
+			$start   = $this->default_start_date();
+			$end     = $this->default_end_date();
+			// return array(
+			// 	'success' => false,
+			// 	'error'   => __( 'Please upgrade to MonsterInsights Pro to use custom date ranges.', 'google-analytics-for-wordpress' ),
+			// 	'data'    => array(),
+			// );
 		}
 
 		$error = apply_filters( 'monsterinsights_reports_abstract_get_data_pre_cache', false, $args, $this->name );
@@ -182,12 +184,12 @@ class MonsterInsights_Report {
 			) );
 		}
 
-		$check_cache = ( $start === $this->default_start_date() && $end === $this->default_end_date() );
+		$check_cache = ( $start === $this->default_start_date() && $end === $this->default_end_date() ) || apply_filters( 'monsterinsights_report_use_cache', false, $this->name );
 		$site_auth   = MonsterInsights()->auth->get_viewname();
 		$ms_auth     = is_multisite() && MonsterInsights()->auth->get_network_viewname();
 		$transient   = 'monsterinsights_report_' . $this->name . '_' . $start . '_' . $end;
 		// Set to same time as MI cache. MI caches same day to 15 and others to 1 day, so there's no point pinging MI before then.
-		$expiration  = $end === date( 'Y-m-d' ) ? 15 * MINUTE_IN_SECONDS : DAY_IN_SECONDS;
+		$expiration  = $end === date( 'Y-m-d' ) ? apply_filters( 'monsterinsights_report_transient_expiration', 15 * MINUTE_IN_SECONDS, $this->name ) : DAY_IN_SECONDS;
 
 		// Default date range, check
 		if ( $site_auth || $ms_auth ) {
@@ -220,18 +222,17 @@ class MonsterInsights_Report {
 			if ( ! $site_auth && $ms_auth ) {
 				$api_options['network'] = true;
 			}
-			
+
 			$api   = new MonsterInsights_API_Request( 'analytics/reports/' . $this->name . '/', $api_options, 'GET' );
 
 			$additional_data = $this->additional_data();
-			
+
 			if ( ! empty( $additional_data ) ) {
 				$api->set_additional_data( $additional_data );
 			}
-			
+
 			$ret   = $api->request();
-			//echo print_r( $ret['data']);wp_die();
-			
+
 			if ( is_wp_error( $ret ) ) {
 				return array(
 					'success' => false,
@@ -250,7 +251,7 @@ class MonsterInsights_Report {
 				} else {
 					! $site_auth && $ms_auth ? set_site_transient( $option_name, $data, $expiration ) : set_transient( $option_name, $data, $expiration );
 				}
-				
+
 				return array(
 					'success' => true,
 					'data'    => $ret['data'],

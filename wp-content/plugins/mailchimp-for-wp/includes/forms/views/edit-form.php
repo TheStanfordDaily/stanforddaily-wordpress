@@ -20,7 +20,7 @@ $tabs = apply_filters('mc4wp_admin_edit_form_tabs', $tabs);
 
     <p class="breadcrumbs">
         <span class="prefix"><?php echo __('You are here: ', 'mailchimp-for-wp'); ?></span>
-        <a href="<?php echo admin_url('admin.php?page=mailchimp-for-wp'); ?>">MailChimp for WordPress</a> &rsaquo;
+        <a href="<?php echo admin_url('admin.php?page=mailchimp-for-wp'); ?>">Mailchimp for WordPress</a> &rsaquo;
         <a href="<?php echo admin_url('admin.php?page=mailchimp-for-wp-forms'); ?>"><?php _e('Forms', 'mailchimp-for-wp'); ?></a>
         &rsaquo;
         <span class="current-crumb"><strong><?php echo __('Form', 'mailchimp-for-wp'); ?> <?php echo $form_id; ?>
@@ -45,11 +45,11 @@ $tabs = apply_filters('mc4wp_admin_edit_form_tabs', $tabs);
                 ?>
             </h1>
 
-            <h2 style="display: none;"></h2><?php // fake h2 for admin notices ?>
+            <h2 style="display: none;"></h2><?php // fake h2 for admin notices?>
 
             <!-- Wrap entire page in <form> -->
             <form method="post">
-                <?php // default submit button to prevent opening preview ?>
+                <?php // default submit button to prevent opening preview?>
                 <input type="submit" style="display: none; "/>
                 <input type="hidden" name="_mc4wp_action" value="edit_form"/>
                 <input type="hidden" name="mc4wp_form_id" value="<?php echo esc_attr($form->ID); ?>"/>
@@ -66,7 +66,7 @@ $tabs = apply_filters('mc4wp_admin_edit_form_tabs', $tabs);
                                style="line-height: initial;">
                     </div>
                     <div>
-                        <?php printf( __( 'Use the shortcode %s to display this form inside a post, page or text widget.' ,'mailchimp-for-wp' ), '<input type="text" onfocus="this.select();" readonly="readonly" value="'. esc_attr( sprintf( '[mc4wp_form id="%d"]', $form->ID ) ) .'" size="'. ( strlen( $form->ID ) + 18 ) .'">' ); ?>
+                        <?php printf(__('Use the shortcode %s to display this form inside a post, page or text widget.', 'mailchimp-for-wp'), '<input type="text" onfocus="this.select();" readonly="readonly" value="'. esc_attr(sprintf('[mc4wp_form id="%d"]', $form->ID)) .'" size="'. (strlen($form->ID) + 18) .'">'); ?>
                     </div>
                 </div>
 
@@ -74,9 +74,9 @@ $tabs = apply_filters('mc4wp_admin_edit_form_tabs', $tabs);
                 <div>
                     <h2 class="nav-tab-wrapper" id="mc4wp-tabs-nav">
                         <?php foreach ($tabs as $tab => $name) {
-                            $class = ($active_tab === $tab) ? 'nav-tab-active' : '';
-                            echo sprintf('<a class="nav-tab nav-tab-%s %s" href="%s">%s</a>', $tab, $class, esc_attr($this->tab_url($tab)), $name);
-                        } ?>
+                    $class = ($active_tab === $tab) ? 'nav-tab-active' : '';
+                    echo sprintf('<a class="nav-tab nav-tab-%s %s" href="%s">%s</a>', $tab, $class, esc_attr($this->tab_url($tab)), $name);
+                } ?>
                     </h2>
 
                     <div id="mc4wp-tabs">
@@ -104,7 +104,7 @@ $tabs = apply_filters('mc4wp_admin_edit_form_tabs', $tabs);
                             // end of .tab
                             echo '</div>';
 
-                        endforeach; // foreach tabs ?>
+                        endforeach; // foreach tabs?>
 
                     </div><!-- / tabs -->
                 </div>

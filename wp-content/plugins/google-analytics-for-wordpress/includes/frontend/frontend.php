@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Get frontend tracking options.
  *
  * This function is used to return an array of parameters
- * for the frontend_output() function to output. These are 
+ * for the frontend_output() function to output. These are
  * generally dimensions and turned on GA features.
  *
  * @since 7.0.0
@@ -53,7 +53,7 @@ add_action( 'wp_head', 'monsterinsights_tracking_script', 6 );
  * Get frontend tracking options.
  *
  * This function is used to return an array of parameters
- * for the frontend_output() function to output. These are 
+ * for the frontend_output() function to output. These are
  * generally dimensions and turned on GA features.
  *
  * @since 6.0.0
@@ -62,10 +62,9 @@ add_action( 'wp_head', 'monsterinsights_tracking_script', 6 );
  * @return array Array of the options to use.
  */
 function monsterinsights_events_tracking( ) {
-    $events_mode   = monsterinsights_get_option( 'events_mode', false );
     $track_user    = monsterinsights_track_user();
 
-    if ( $track_user && ( $events_mode === 'js' || $events_mode === 'php' ) ) {
+    if ( $track_user ) {
         require_once plugin_dir_path( MONSTERINSIGHTS_PLUGIN_FILE ) . 'includes/frontend/events/class-analytics-events.php';
         new MonsterInsights_Analytics_Events();
     } else {

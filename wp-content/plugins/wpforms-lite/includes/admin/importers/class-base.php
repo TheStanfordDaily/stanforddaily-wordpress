@@ -61,7 +61,7 @@ abstract class WPForms_Importer implements WPForms_Importer_Interface {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param array $importers
+	 * @param array $importers List of supported importers.
 	 *
 	 * @return array
 	 */
@@ -94,10 +94,10 @@ abstract class WPForms_Importer implements WPForms_Importer_Interface {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param array $form
-	 * @param array $unsupported
-	 * @param array $upgrade_plain
-	 * @param array $upgrade_omit
+	 * @param array $form Form to import.
+	 * @param array $unsupported List of unsupported fields.
+	 * @param array $upgrade_plain List of fields, that are supported inside the paid WPForms, but not in Lite.
+	 * @param array $upgrade_omit No field alternative in WPForms.
 	 */
 	public function add_form( $form, $unsupported = array(), $upgrade_plain = array(), $upgrade_omit = array() ) {
 
@@ -111,7 +111,7 @@ abstract class WPForms_Importer implements WPForms_Importer_Interface {
 			wp_send_json_success( array(
 				'error' => true,
 				'name'  => sanitize_text_field( $form['settings']['form_title'] ),
-				'msg'   => esc_html__( 'There was an error while creating a new form.', 'wpforms' ),
+				'msg'   => esc_html__( 'There was an error while creating a new form.', 'wpforms-lite' ),
 			) );
 		}
 
@@ -128,7 +128,7 @@ abstract class WPForms_Importer implements WPForms_Importer_Interface {
 		wp_send_json_success( array(
 			'name'          => $form['settings']['form_title'],
 			'edit'          => esc_url_raw( admin_url( 'admin.php?page=wpforms-builder&view=fields&form_id=' . $form_id ) ),
-			'preview'       => wpforms()->preview->form_preview_url( $form_id  ),
+			'preview'       => wpforms_get_form_preview_url( $form_id ),
 			'unsupported'   => $unsupported,
 			'upgrade_plain' => $upgrade_plain,
 			'upgrade_omit'  => $upgrade_omit,
@@ -142,8 +142,8 @@ abstract class WPForms_Importer implements WPForms_Importer_Interface {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param int $source_id
-	 * @param int $wpforms_id
+	 * @param int $source_id Imported plugin form ID.
+	 * @param int $wpforms_id WPForms form ID.
 	 */
 	public function track_import( $source_id, $wpforms_id ) {
 

@@ -2,7 +2,8 @@
    Admin Form Builder - Conditional Fields Styles
    ========================================================================== */
 
-.wpforms-notification .wpforms-conditional-groups {
+.wpforms-notification .wpforms-conditional-groups,
+.wpforms-confirmation .wpforms-conditional-groups {
 	padding: 0 20px;
 }
 

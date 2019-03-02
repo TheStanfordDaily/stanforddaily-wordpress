@@ -51,20 +51,20 @@ class Loader {
 
 		// WPForms > Settings > Integrations page.
 		$integration = $provider->get_page_integrations();
-		if ( ! \is_null( $integration ) ) {
-			\add_action( 'wpforms_settings_providers', array( $integration, 'display' ), 10, 2 );
+		if ( null !== $integration ) {
+			\add_action( 'wpforms_settings_providers', array( $integration, 'display' ), $provider::PRIORITY, 2 );
 		}
 
 		// Editing Single Form > Form Builder.
 		$form_builder = $provider->get_form_builder();
-		if ( ! \is_null( $form_builder ) ) {
-			\add_action( 'wpforms_providers_panel_sidebar', array( $form_builder, 'display_sidebar' ) );
-			\add_action( 'wpforms_providers_panel_content', array( $form_builder, 'display_content' ) );
+		if ( null !== $form_builder ) {
+			\add_action( 'wpforms_providers_panel_sidebar', array( $form_builder, 'display_sidebar' ), $provider::PRIORITY );
+			\add_action( 'wpforms_providers_panel_content', array( $form_builder, 'display_content' ), $provider::PRIORITY );
 		}
 
 		// Process entry submission.
 		$process = $provider->get_process();
-		if ( ! \is_null( $process ) ) {
+		if ( null !== $process ) {
 			\add_action( 'wpforms_process_complete', array( $process, 'process' ), 5, 4 );
 		}
 	}

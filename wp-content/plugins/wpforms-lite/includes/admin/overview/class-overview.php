@@ -40,15 +40,12 @@ class WPForms_Overview {
 		if ( 'wpforms-overview' === $page ) {
 
 			// The overview page leverages WP_List_Table so we must load it.
-			if ( ! class_exists( 'WP_List_Table' ) ) {
+			if ( ! class_exists( 'WP_List_Table', false ) ) {
 				require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
 			}
 
 			// Load the class that builds the overview table.
 			require_once WPFORMS_PLUGIN_DIR . 'includes/admin/overview/class-overview-table.php';
-
-			// Preview page check.
-			wpforms()->preview->form_preview_check();
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueues' ) );
 			add_action( 'wpforms_admin_page', array( $this, 'output' ) );
@@ -74,7 +71,7 @@ class WPForms_Overview {
 		add_screen_option(
 			'per_page',
 			array(
-				'label'   => esc_html__( 'Number of forms per page:', 'wpforms' ),
+				'label'   => esc_html__( 'Number of forms per page:', 'wpforms-lite' ),
 				'option'  => 'wpforms_forms_per_page',
 				'default' => apply_filters( 'wpforms_overview_per_page', 20 ),
 			)
@@ -123,9 +120,9 @@ class WPForms_Overview {
 		<div id="wpforms-overview" class="wrap wpforms-admin-wrap">
 
 			<h1 class="page-title">
-				<?php esc_html_e( 'Forms Overview', 'wpforms' ); ?>
+				<?php esc_html_e( 'Forms Overview', 'wpforms-lite' ); ?>
 				<a href="<?php echo admin_url( 'admin.php?page=wpforms-builder&view=setup' ); ?>" class="add-new-h2 wpforms-btn-orange">
-					<?php esc_html_e( 'Add New', 'wpforms' ); ?>
+					<?php esc_html_e( 'Add New', 'wpforms-lite' ); ?>
 				</a>
 			</h1>
 

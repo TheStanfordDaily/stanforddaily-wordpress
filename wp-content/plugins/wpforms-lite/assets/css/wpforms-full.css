@@ -1233,3 +1233,35 @@ div.wpforms-container-full .wpforms-form .wpforms-screen-reader-element {
 		width: 100%;
 	}
 }
+
+/* Gutenberg Block
+----------------------------------------------------------------------------- */
+
+.edit-post-visual-editor .wpforms-gutenberg-form-selector-wrap h3 {
+	width: 100%;
+	margin: 10px 0 5px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.edit-post-visual-editor .wpforms-gutenberg-form-selector-wrap img {
+	margin-right: 25px;
+	width: initial;
+}
+
+.edit-post-visual-editor .wpforms-gutenberg-form-selector-wrap .components-base-control {
+	width: 100%;
+}
+
+div.wpforms-gutenberg-form-selector .wpforms-form input:disabled,
+div.wpforms-gutenberg-form-selector .wpforms-form textarea:disabled,
+div.wpforms-gutenberg-form-selector .wpforms-form select:disabled {
+	background-color: #fff;
+	border-color: #ccc;
+	color: #333;
+	cursor: not-allowed;
+}
+
+div.wpforms-gutenberg-form-selector .wpforms-form button[type=submit]:disabled {
+	cursor: not-allowed;
+}

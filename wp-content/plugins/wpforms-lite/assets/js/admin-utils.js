@@ -553,6 +553,22 @@ var wpf = {
 		}
 
 		return json;
+	},
+
+	/**
+	 * Initialize WPForms admin area tooltips.
+	 *
+	 * @since 1.4.8
+	 */
+	initTooltips: function() {
+
+		jQuery( '.wpforms-help-tooltip' ).tooltipster( {
+			contentAsHTML: true,
+			position: 'right',
+			maxWidth: 300,
+			multiple: true,
+			interactive: true
+		} );
 	}
 };
 wpf.init();

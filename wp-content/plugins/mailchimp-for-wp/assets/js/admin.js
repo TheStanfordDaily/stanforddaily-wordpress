@@ -1,36 +1,39 @@
-(function () { var require = undefined; var define = undefined; (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
-'use strict';
+(function () { var require = undefined; var define = undefined; (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+'use strict'; // dependencies
 
-// dependencies
-
-var _tlite = require('tlite');
-
-var _tlite2 = _interopRequireDefault(_tlite);
+var _tlite = _interopRequireDefault(require("tlite"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var m = window.m = require('mithril');
-var EventEmitter = require('wolfy87-eventemitter');
 
-// vars
+var EventEmitter = require('wolfy87-eventemitter'); // vars
+
+
 var context = document.getElementById('mc4wp-admin');
 var events = new EventEmitter();
+
 var tabs = require('./admin/tabs.js')(context);
+
 var helpers = require('./admin/helpers.js');
+
 var settings = require('./admin/settings.js')(context, helpers, events);
 
-(0, _tlite2.default)(function (el) {
-    return el.className.indexOf('mc4wp-tooltip') > -1;
-});
+(0, _tlite.default)(function (el) {
+  return el.className.indexOf('mc4wp-tooltip') > -1;
+}); // list fetcher
 
-// list fetcher
 var ListFetcher = require('./admin/list-fetcher.js');
+
 var mount = document.getElementById('mc4wp-list-fetcher');
+
 if (mount) {
-    m.mount(mount, new ListFetcher());
+  m.mount(mount, new ListFetcher());
 }
 
-// expose some things
+require('./admin/fields/mailchimp-api-key.js'); // expose some things
+
+
 window.mc4wp = window.mc4wp || {};
 window.mc4wp.deps = window.mc4wp.deps || {};
 window.mc4wp.deps.mithril = m;
@@ -39,99 +42,129 @@ window.mc4wp.events = events;
 window.mc4wp.settings = settings;
 window.mc4wp.tabs = tabs;
 
-},{"./admin/helpers.js":2,"./admin/list-fetcher.js":3,"./admin/settings.js":4,"./admin/tabs.js":5,"mithril":7,"tlite":8,"wolfy87-eventemitter":9}],2:[function(require,module,exports){
+},{"./admin/fields/mailchimp-api-key.js":2,"./admin/helpers.js":3,"./admin/list-fetcher.js":4,"./admin/settings.js":5,"./admin/tabs.js":6,"mithril":8,"tlite":11,"wolfy87-eventemitter":12}],2:[function(require,module,exports){
+'use strict';
+
+var field;
+
+function validate(evt) {
+  var node = document.createElement('p');
+  node.className = 'help red';
+  node.innerText = window.mc4wp_vars.i18n.invalid_api_key;
+
+  if (field.nextElementSibling.innerText === node.innerText) {
+    field.nextElementSibling.parentElement.removeChild(field.nextElementSibling);
+  }
+
+  if (!field.value.match(/^[0-9a-zA-Z*]{32}-[a-z]{2}[0-9]{1,2}$/)) {
+    field.parentElement.insertBefore(node, field.nextElementSibling);
+  }
+}
+
+(function () {
+  field = document.getElementById('mailchimp_api_key');
+
+  if (!field) {
+    return;
+  }
+
+  field.addEventListener('change', validate);
+})();
+
+},{}],3:[function(require,module,exports){
 'use strict';
 
 var helpers = {};
 
 helpers.toggleElement = function (selector) {
-	var elements = document.querySelectorAll(selector);
-	for (var i = 0; i < elements.length; i++) {
-		var show = elements[i].clientHeight <= 0;
-		elements[i].style.display = show ? '' : 'none';
-	}
+  var elements = document.querySelectorAll(selector);
+
+  for (var i = 0; i < elements.length; i++) {
+    var show = elements[i].clientHeight <= 0;
+    elements[i].style.display = show ? '' : 'none';
+  }
 };
 
 helpers.bindEventToElement = function (element, event, handler) {
-	if (element.addEventListener) {
-		element.addEventListener(event, handler);
-	} else if (element.attachEvent) {
-		element.attachEvent('on' + event, handler);
-	}
+  if (element.addEventListener) {
+    element.addEventListener(event, handler);
+  } else if (element.attachEvent) {
+    element.attachEvent('on' + event, handler);
+  }
 };
 
 helpers.bindEventToElements = function (elements, event, handler) {
-	Array.prototype.forEach.call(elements, function (element) {
-		helpers.bindEventToElement(element, event, handler);
-	});
-};
+  Array.prototype.forEach.call(elements, function (element) {
+    helpers.bindEventToElement(element, event, handler);
+  });
+}; // polling
 
-// polling
+
 helpers.debounce = function (func, wait, immediate) {
-	var timeout;
-	return function () {
-		var context = this,
-		    args = arguments;
-		var later = function later() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
+  var timeout;
+  return function () {
+    var context = this,
+        args = arguments;
 
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
 /**
  * Showif.js
  */
+
+
 (function () {
-	var showIfElements = document.querySelectorAll('[data-showif]');
+  var showIfElements = document.querySelectorAll('[data-showif]'); // dependent elements
 
-	// dependent elements
-	Array.prototype.forEach.call(showIfElements, function (element) {
-		var config = JSON.parse(element.getAttribute('data-showif'));
-		var parentElements = document.querySelectorAll('[name="' + config.element + '"]');
-		var inputs = element.querySelectorAll('input,select,textarea:not([readonly])');
-		var hide = config.hide === undefined || config.hide;
+  Array.prototype.forEach.call(showIfElements, function (element) {
+    var config = JSON.parse(element.getAttribute('data-showif'));
+    var parentElements = document.querySelectorAll('[name="' + config.element + '"]');
+    var inputs = element.querySelectorAll('input,select,textarea:not([readonly])');
+    var hide = config.hide === undefined || config.hide;
 
-		function toggleElement() {
+    function toggleElement() {
+      // do nothing with unchecked radio inputs
+      if (this.getAttribute('type') === "radio" && !this.checked) {
+        return;
+      }
 
-			// do nothing with unchecked radio inputs
-			if (this.getAttribute('type') === "radio" && !this.checked) {
-				return;
-			}
+      var value = this.getAttribute("type") === "checkbox" ? this.checked : this.value;
+      var conditionMet = value == config.value;
 
-			var value = this.getAttribute("type") === "checkbox" ? this.checked : this.value;
-			var conditionMet = value == config.value;
+      if (hide) {
+        element.style.display = conditionMet ? '' : 'none';
+        element.style.visibility = conditionMet ? '' : 'hidden';
+      } else {
+        element.style.opacity = conditionMet ? '' : '0.4';
+      } // disable input fields to stop sending their values to server
 
-			if (hide) {
-				element.style.display = conditionMet ? '' : 'none';
-				element.style.visibility = conditionMet ? '' : 'hidden';
-			} else {
-				element.style.opacity = conditionMet ? '' : '0.4';
-			}
 
-			// disable input fields to stop sending their values to server
-			Array.prototype.forEach.call(inputs, function (inputElement) {
-				conditionMet ? inputElement.removeAttribute('readonly') : inputElement.setAttribute('readonly', 'readonly');
-			});
-		}
+      Array.prototype.forEach.call(inputs, function (inputElement) {
+        conditionMet ? inputElement.removeAttribute('readonly') : inputElement.setAttribute('readonly', 'readonly');
+      });
+    } // find checked element and call toggleElement function
 
-		// find checked element and call toggleElement function
-		Array.prototype.forEach.call(parentElements, function (parentElement) {
-			toggleElement.call(parentElement);
-		});
 
-		// bind on all changes
-		helpers.bindEventToElements(parentElements, 'change', toggleElement);
-	});
+    Array.prototype.forEach.call(parentElements, function (parentElement) {
+      toggleElement.call(parentElement);
+    }); // bind on all changes
+
+    helpers.bindEventToElements(parentElements, 'change', toggleElement);
+  });
 })();
 
 module.exports = helpers;
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 var $ = window.jQuery;
@@ -139,344 +172,326 @@ var config = mc4wp_vars;
 var i18n = config.i18n;
 
 function ListFetcher() {
-    this.working = false;
-    this.done = false;
+  this.working = false;
+  this.done = false; // start fetching right away when no lists but api key given
 
-    // start fetching right away when no lists but api key given
-    if (config.mailchimp.api_connected && config.mailchimp.lists.length === 0) {
-        this.fetch();
-    }
+  if (config.mailchimp.api_connected && config.mailchimp.lists.length === 0) {
+    this.fetch();
+  }
 }
 
 ListFetcher.prototype.fetch = function (e) {
-    e && e.preventDefault();
+  e && e.preventDefault();
+  this.working = true;
+  this.done = false;
+  $.post(ajaxurl, {
+    action: "mc4wp_renew_mailchimp_lists",
+    timeout: 600000 // 10 minutes, matching max_execution_time
 
-    this.working = true;
-    this.done = false;
+  }).done(function (data) {
+    this.success = true;
 
-    $.post(ajaxurl, {
-        action: "mc4wp_renew_mailchimp_lists",
-        timeout: 180000
-    }).done(function (data) {
-        this.success = true;
-
-        if (data) {
-            window.setTimeout(function () {
-                window.location.reload();
-            }, 3000);
-        }
-    }.bind(this)).fail(function (data) {
-        this.success = false;
-    }.bind(this)).always(function (data) {
-        this.working = false;
-        this.done = true;
-
-        m.redraw();
-    }.bind(this));
+    if (data) {
+      window.setTimeout(function () {
+        window.location.reload();
+      }, 3000);
+    }
+  }.bind(this)).fail(function (data) {
+    this.success = false;
+  }.bind(this)).always(function (data) {
+    this.working = false;
+    this.done = true;
+    m.redraw();
+  }.bind(this));
 };
 
 ListFetcher.prototype.view = function () {
-    return m('form', {
-        method: "POST",
-        onsubmit: this.fetch.bind(this)
-    }, [m('p', [m('input', {
-        type: "submit",
-        value: this.working ? i18n.fetching_mailchimp_lists : i18n.renew_mailchimp_lists,
-        className: "button",
-        disabled: !!this.working
-    }), m.trust(' &nbsp; '), this.working ? [m('span.mc4wp-loader', "Loading..."), m.trust(' &nbsp; '), m('em.help', i18n.fetching_mailchimp_lists_can_take_a_while)] : '', this.done ? [this.success ? m('em.help.green', i18n.fetching_mailchimp_lists_done) : m('em.help.red', i18n.fetching_mailchimp_lists_error)] : ''])]);
+  return m('form', {
+    method: "POST",
+    onsubmit: this.fetch.bind(this)
+  }, [m('p', [m('input', {
+    type: "submit",
+    value: this.working ? i18n.fetching_mailchimp_lists : i18n.renew_mailchimp_lists,
+    className: "button",
+    disabled: !!this.working
+  }), m.trust(' &nbsp; '), this.working ? [m('span.mc4wp-loader', "Loading..."), m.trust(' &nbsp; '), m('em.help', i18n.fetching_mailchimp_lists_can_take_a_while)] : '', this.done ? [this.success ? m('em.help.green', i18n.fetching_mailchimp_lists_done) : m('em.help.red', i18n.fetching_mailchimp_lists_error)] : ''])]);
 };
 
 module.exports = ListFetcher;
 
-},{}],4:[function(require,module,exports){
-'use strict';
+},{}],5:[function(require,module,exports){
+"use strict";
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var Settings = function Settings(context, helpers, events) {
-	'use strict';
+  'use strict'; // vars
 
-	// vars
+  var form = context.querySelector('form');
+  var listInputs = context.querySelectorAll('.mc4wp-list-input');
+  var lists = mc4wp_vars.mailchimp.lists;
+  var selectedLists = []; // functions
 
-	var form = context.querySelector('form');
-	var listInputs = context.querySelectorAll('.mc4wp-list-input');
-	var lists = mc4wp_vars.mailchimp.lists;
-	var selectedLists = [];
+  function getSelectedListsWhere(searchKey, searchValue) {
+    return selectedLists.filter(function (el) {
+      return el[searchKey] === searchValue;
+    });
+  }
 
-	// functions
-	function getSelectedListsWhere(searchKey, searchValue) {
-		return selectedLists.filter(function (el) {
-			return el[searchKey] === searchValue;
-		});
-	}
+  function getSelectedLists() {
+    return selectedLists;
+  }
 
-	function getSelectedLists() {
-		return selectedLists;
-	}
+  function updateSelectedLists() {
+    selectedLists = [];
+    Array.prototype.forEach.call(listInputs, function (input) {
+      // skip unchecked checkboxes
+      if (typeof input.checked === "boolean" && !input.checked) {
+        return;
+      }
 
-	function updateSelectedLists() {
-		selectedLists = [];
+      if (_typeof(lists[input.value]) === "object") {
+        selectedLists.push(lists[input.value]);
+      }
+    });
+    events.trigger('selectedLists.change', [selectedLists]);
+    return selectedLists;
+  }
 
-		Array.prototype.forEach.call(listInputs, function (input) {
-			// skip unchecked checkboxes
-			if (typeof input.checked === "boolean" && !input.checked) {
-				return;
-			}
+  function toggleVisibleLists() {
+    var rows = document.querySelectorAll('.lists--only-selected > *');
+    Array.prototype.forEach.call(rows, function (el) {
+      var listId = el.getAttribute('data-list-id');
+      var isSelected = getSelectedListsWhere('id', listId).length > 0;
 
-			if (_typeof(lists[input.value]) === "object") {
-				selectedLists.push(lists[input.value]);
-			}
-		});
+      if (isSelected) {
+        el.setAttribute('class', el.getAttribute('class').replace('hidden', ''));
+      } else {
+        el.setAttribute('class', el.getAttribute('class') + " hidden");
+      }
+    });
+  }
 
-		events.trigger('selectedLists.change', [selectedLists]);
-		return selectedLists;
-	}
-
-	function toggleVisibleLists() {
-		var rows = document.querySelectorAll('.lists--only-selected > *');
-		Array.prototype.forEach.call(rows, function (el) {
-
-			var listId = el.getAttribute('data-list-id');
-			var isSelected = getSelectedListsWhere('id', listId).length > 0;
-
-			if (isSelected) {
-				el.setAttribute('class', el.getAttribute('class').replace('hidden', ''));
-			} else {
-				el.setAttribute('class', el.getAttribute('class') + " hidden");
-			}
-		});
-	}
-
-	events.on('selectedLists.change', toggleVisibleLists);
-	helpers.bindEventToElements(listInputs, 'change', updateSelectedLists);
-
-	updateSelectedLists();
-
-	return {
-		getSelectedLists: getSelectedLists
-	};
+  events.on('selectedLists.change', toggleVisibleLists);
+  helpers.bindEventToElements(listInputs, 'change', updateSelectedLists);
+  updateSelectedLists();
+  return {
+    getSelectedLists: getSelectedLists
+  };
 };
 
 module.exports = Settings;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
-var URL = require('./url.js');
+var URL = require('./url.js'); // Tabs
 
-// Tabs
+
 var Tabs = function Tabs(context) {
+  // TODO: last piece of jQuery... can we get rid of it?
+  var $ = window.jQuery;
+  var $context = $(context);
+  var $tabs = $context.find('.tab');
+  var $tabNavs = $context.find('.nav-tab');
+  var refererField = context.querySelector('input[name="_wp_http_referer"]');
+  var tabs = [];
+  $.each($tabs, function (i, t) {
+    var id = t.id.substring(4);
+    var title = $(t).find('h2').first().text();
+    tabs.push({
+      id: id,
+      title: title,
+      element: t,
+      nav: context.querySelectorAll('.nav-tab-' + id),
+      open: function open() {
+        return _open(id);
+      }
+    });
+  });
 
-	// TODO: last piece of jQuery... can we get rid of it?
-	var $ = window.jQuery;
+  function get(id) {
+    for (var i = 0; i < tabs.length; i++) {
+      if (tabs[i].id === id) {
+        return tabs[i];
+      }
+    }
 
-	var $context = $(context);
-	var $tabs = $context.find('.tab');
-	var $tabNavs = $context.find('.nav-tab');
-	var refererField = context.querySelector('input[name="_wp_http_referer"]');
-	var tabs = [];
+    return undefined;
+  }
 
-	$.each($tabs, function (i, t) {
-		var id = t.id.substring(4);
-		var title = $(t).find('h2').first().text();
+  function _open(tab, updateState) {
+    // make sure we have a tab object
+    if (typeof tab === "string") {
+      tab = get(tab);
+    }
 
-		tabs.push({
-			id: id,
-			title: title,
-			element: t,
-			nav: context.querySelectorAll('.nav-tab-' + id),
-			open: function open() {
-				return _open(id);
-			}
-		});
-	});
+    if (!tab) {
+      return false;
+    } // should we update state?
 
-	function get(id) {
 
-		for (var i = 0; i < tabs.length; i++) {
-			if (tabs[i].id === id) {
-				return tabs[i];
-			}
-		}
+    if (updateState == undefined) {
+      updateState = true;
+    } // hide all tabs & remove active class
 
-		return undefined;
-	}
 
-	function _open(tab, updateState) {
+    $tabs.removeClass('tab-active').css('display', 'none');
+    $tabNavs.removeClass('nav-tab-active'); // add `nav-tab-active` to this tab
 
-		// make sure we have a tab object
-		if (typeof tab === "string") {
-			tab = get(tab);
-		}
+    Array.prototype.forEach.call(tab.nav, function (nav) {
+      nav.className += " nav-tab-active";
+      nav.blur();
+    }); // show target tab
 
-		if (!tab) {
-			return false;
-		}
+    tab.element.style.display = 'block';
+    tab.element.className += " tab-active"; // create new URL
 
-		// should we update state?
-		if (updateState == undefined) {
-			updateState = true;
-		}
+    var url = URL.setParameter(window.location.href, "tab", tab.id); // update hash
 
-		// hide all tabs & remove active class
-		$tabs.removeClass('tab-active').css('display', 'none');
-		$tabNavs.removeClass('nav-tab-active');
+    if (history.pushState && updateState) {
+      history.pushState(tab.id, '', url);
+    } // update document title
 
-		// add `nav-tab-active` to this tab
-		Array.prototype.forEach.call(tab.nav, function (nav) {
-			nav.className += " nav-tab-active";
-			nav.blur();
-		});
 
-		// show target tab
-		tab.element.style.display = 'block';
-		tab.element.className += " tab-active";
+    title(tab); // update referer field
 
-		// create new URL
-		var url = URL.setParameter(window.location.href, "tab", tab.id);
+    refererField.value = url; // if thickbox is open, close it.
 
-		// update hash
-		if (history.pushState && updateState) {
-			history.pushState(tab.id, '', url);
-		}
+    if (typeof tb_remove === "function") {
+      tb_remove();
+    } // refresh editor after switching tabs
+    // TODO: decouple this! law of demeter etc.
 
-		// update document title
-		title(tab);
 
-		// update referer field
-		refererField.value = url;
+    if (tab.id === 'fields' && window.mc4wp && window.mc4wp.forms && window.mc4wp.forms.editor) {
+      mc4wp.forms.editor.refresh();
+    }
 
-		// if thickbox is open, close it.
-		if (typeof tb_remove === "function") {
-			tb_remove();
-		}
+    return true;
+  }
 
-		// refresh editor after switching tabs
-		// TODO: decouple this! law of demeter etc.
-		if (tab.id === 'fields' && window.mc4wp && window.mc4wp.forms && window.mc4wp.forms.editor) {
-			mc4wp.forms.editor.refresh();
-		}
+  function title(tab) {
+    var title = document.title.split('-');
+    document.title = document.title.replace(title[0], tab.title + " ");
+  }
 
-		return true;
-	}
+  function switchTab(e) {
+    e = e || window.event; // get from data attribute
 
-	function title(tab) {
-		var title = document.title.split('-');
-		document.title = document.title.replace(title[0], tab.title + " ");
-	}
+    var tabId = this.getAttribute('data-tab'); // get from classname
 
-	function switchTab(e) {
-		e = e || window.event;
+    if (!tabId) {
+      var match = this.className.match(/nav-tab-(\w+)?/);
 
-		// get from data attribute
-		var tabId = this.getAttribute('data-tab');
+      if (match) {
+        tabId = match[1];
+      }
+    } // get from href
 
-		// get from classname
-		if (!tabId) {
-			var match = this.className.match(/nav-tab-(\w+)?/);
-			if (match) {
-				tabId = match[1];
-			}
-		}
 
-		// get from href
-		if (!tabId) {
-			var urlParams = URL.parse(this.href);
-			if (!urlParams.tab) {
-				return;
-			}
-			tabId = urlParams.tab;
-		}
+    if (!tabId) {
+      var urlParams = URL.parse(this.href);
 
-		var opened = _open(tabId);
+      if (!urlParams.tab) {
+        return;
+      }
 
-		if (opened) {
-			e.preventDefault();
-			e.returnValue = false;
-			return false;
-		}
+      tabId = urlParams.tab;
+    }
 
-		return true;
-	}
+    var opened = _open(tabId);
 
-	function init() {
+    if (opened) {
+      e.preventDefault();
+      e.returnValue = false;
+      return false;
+    }
 
-		// check for current tab
-		if (!history.pushState) {
-			return;
-		}
+    return true;
+  }
 
-		var activeTab = $tabs.filter(':visible').get(0);
-		if (!activeTab) {
-			return;
-		}
-		var tab = get(activeTab.id.substring(4));
-		if (!tab) return;
+  function init() {
+    // check for current tab
+    if (!history.pushState) {
+      return;
+    }
 
-		// check if tab is in html5 history
-		if (history.replaceState && history.state === null) {
-			history.replaceState(tab.id, '');
-		}
+    var activeTab = $tabs.filter(':visible').get(0);
 
-		// update document title
-		title(tab);
-	}
+    if (!activeTab) {
+      return;
+    }
 
-	$tabNavs.click(switchTab);
-	$(document.body).on('click', '.tab-link', switchTab);
-	init();
+    var tab = get(activeTab.id.substring(4));
+    if (!tab) return; // check if tab is in html5 history
 
-	if (window.addEventListener && history.pushState) {
-		window.addEventListener('popstate', function (e) {
-			if (!e.state) return true;
-			var tabId = e.state;
-			return _open(tabId, false);
-		});
-	}
+    if (history.replaceState && history.state === null) {
+      history.replaceState(tab.id, '');
+    } // update document title
 
-	return {
-		open: _open,
-		get: get
-	};
+
+    title(tab);
+  }
+
+  $tabNavs.click(switchTab);
+  $(document.body).on('click', '.tab-link', switchTab);
+  init();
+
+  if (window.addEventListener && history.pushState) {
+    window.addEventListener('popstate', function (e) {
+      if (!e.state) return true;
+      var tabId = e.state;
+      return _open(tabId, false);
+    });
+  }
+
+  return {
+    open: _open,
+    get: get
+  };
 };
 
 module.exports = Tabs;
 
-},{"./url.js":6}],6:[function(require,module,exports){
+},{"./url.js":7}],7:[function(require,module,exports){
 'use strict';
 
 var URL = {
-	parse: function parse(url) {
-		var query = {};
-		var a = url.split('&');
-		for (var i in a) {
-			if (!a.hasOwnProperty(i)) {
-				continue;
-			}
-			var b = a[i].split('=');
-			query[decodeURIComponent(b[0])] = decodeURIComponent(b[1]);
-		}
+  parse: function parse(url) {
+    var query = {};
+    var a = url.split('&');
 
-		return query;
-	},
-	build: function build(data) {
-		var ret = [];
-		for (var d in data) {
-			ret.push(d + "=" + encodeURIComponent(data[d]));
-		}return ret.join("&");
-	},
-	setParameter: function setParameter(url, key, value) {
-		var data = URL.parse(url);
-		data[key] = value;
-		return URL.build(data);
-	}
+    for (var i in a) {
+      if (!a.hasOwnProperty(i)) {
+        continue;
+      }
+
+      var b = a[i].split('=');
+      query[decodeURIComponent(b[0])] = decodeURIComponent(b[1]);
+    }
+
+    return query;
+  },
+  build: function build(data) {
+    var ret = [];
+
+    for (var d in data) {
+      ret.push(d + "=" + encodeURIComponent(data[d]));
+    }
+
+    return ret.join("&");
+  },
+  setParameter: function setParameter(url, key, value) {
+    var data = URL.parse(url);
+    data[key] = value;
+    return URL.build(data);
+  }
 };
-
 module.exports = URL;
 
-},{}],7:[function(require,module,exports){
-(function (global){
+},{}],8:[function(require,module,exports){
+(function (global,setImmediate){
 ;(function() {
 "use strict"
 function Vnode(tag, key, attrs0, children, text, dom) {
@@ -496,6 +511,10 @@ Vnode.normalizeChildren = function normalizeChildren(children) {
 var selectorParser = /(?:(^|#|\.)([^#\.\[\]]+))|(\[(.+?)(?:\s*=\s*("|'|)((?:\\["'\]]|.)*?)\5)?\])/g
 var selectorCache = {}
 var hasOwn = {}.hasOwnProperty
+function isEmpty(object) {
+	for (var key in object) if (hasOwn.call(object, key)) return false
+	return true
+}
 function compileSelector(selector) {
 	var match, tag = "div", classes = [], attrs = {}
 	while (match = selectorParser.exec(selector)) {
@@ -516,6 +535,15 @@ function compileSelector(selector) {
 function execSelector(state, attrs, children) {
 	var hasAttrs = false, childList, text
 	var className = attrs.className || attrs.class
+	if (!isEmpty(state.attrs) && !isEmpty(attrs)) {
+		var newAttrs = {}
+		for(var key in attrs) {
+			if (hasOwn.call(attrs, key)) {
+				newAttrs[key] = attrs[key]
+			}
+		}
+		attrs = newAttrs
+	}
 	for (var key in state.attrs) {
 		if (hasOwn.call(state.attrs, key)) {
 			attrs[key] = state.attrs[key]
@@ -1284,9 +1312,10 @@ var coreRenderer = function($window) {
 	}
 	function onremove(vnode) {
 		if (vnode.attrs && typeof vnode.attrs.onremove === "function") vnode.attrs.onremove.call(vnode.state, vnode)
-		if (typeof vnode.tag !== "string" && typeof vnode._state.onremove === "function") vnode._state.onremove.call(vnode.state, vnode)
-		if (vnode.instance != null) onremove(vnode.instance)
-		else {
+		if (typeof vnode.tag !== "string") {
+			if (typeof vnode._state.onremove === "function") vnode._state.onremove.call(vnode.state, vnode)
+			if (vnode.instance != null) onremove(vnode.instance)
+		} else {
 			var children = vnode.children
 			if (Array.isArray(children)) {
 				for (var i = 0; i < children.length; i++) {
@@ -1447,9 +1476,9 @@ var coreRenderer = function($window) {
 		if (!Array.isArray(vnodes)) vnodes = [vnodes]
 		updateNodes(dom, dom.vnodes, Vnode.normalizeChildren(vnodes), false, hooks, null, namespace === "http://www.w3.org/1999/xhtml" ? undefined : namespace)
 		dom.vnodes = vnodes
-		for (var i = 0; i < hooks.length; i++) hooks[i]()
 		// document.activeElement can return null in IE https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement
 		if (active != null && $doc.activeElement !== active) active.focus()
+		for (var i = 0; i < hooks.length; i++) hooks[i]()
 	}
 	return {render: render, setEventCallback: setEventCallback}
 }
@@ -1715,13 +1744,278 @@ m.request = requestService.request
 m.jsonp = requestService.jsonp
 m.parseQueryString = parseQueryString
 m.buildQueryString = buildQueryString
-m.version = "1.1.5"
+m.version = "1.1.6"
 m.vnode = Vnode
 if (typeof module !== "undefined") module["exports"] = m
 else window.m = m
 }());
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],8:[function(require,module,exports){
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("timers").setImmediate)
+},{"timers":10}],9:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],10:[function(require,module,exports){
+(function (setImmediate,clearImmediate){
+var nextTick = require('process/browser.js').nextTick;
+var apply = Function.prototype.apply;
+var slice = Array.prototype.slice;
+var immediateIds = {};
+var nextImmediateId = 0;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) { timeout.close(); };
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// That's not how node.js implements it but the exposed api is the same.
+exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function(fn) {
+  var id = nextImmediateId++;
+  var args = arguments.length < 2 ? false : slice.call(arguments, 1);
+
+  immediateIds[id] = true;
+
+  nextTick(function onNextTick() {
+    if (immediateIds[id]) {
+      // fn.call() is faster so we optimize for the common use-case
+      // @see http://jsperf.com/call-apply-segu
+      if (args) {
+        fn.apply(null, args);
+      } else {
+        fn.call(null);
+      }
+      // Prevent ids from leaking
+      exports.clearImmediate(id);
+    }
+  });
+
+  return id;
+};
+
+exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
+  delete immediateIds[id];
+};
+}).call(this,require("timers").setImmediate,require("timers").clearImmediate)
+},{"process/browser.js":9,"timers":10}],11:[function(require,module,exports){
 function tlite(getTooltipOpts) {
   document.addEventListener('mouseover', function (e) {
     var el = e.target;
@@ -1857,9 +2151,9 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = tlite;
 }
 
-},{}],9:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*!
- * EventEmitter v5.2.4 - git.io/ee
+ * EventEmitter v5.2.5 - git.io/ee
  * Unlicense - http://unlicense.org/
  * Oliver Caldwell - http://oli.me.uk/
  * @preserve
@@ -2343,7 +2637,7 @@ if (typeof module !== 'undefined' && module.exports) {
     else {
         exports.EventEmitter = EventEmitter;
     }
-}(this || {}));
+}(typeof window !== 'undefined' ? window : this || {}));
 
 },{}]},{},[1]);
  })();

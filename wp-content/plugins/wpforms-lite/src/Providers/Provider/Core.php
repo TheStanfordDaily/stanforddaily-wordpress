@@ -17,7 +17,7 @@ abstract class Core {
 	/**
 	 * Unique provider slug.
 	 *
-	 * @since 1.4.7.
+	 * @since 1.4.7
 	 *
 	 * @var string
 	 */
@@ -26,7 +26,7 @@ abstract class Core {
 	/**
 	 * Translatable provider name.
 	 *
-	 * @since 1.4.7.
+	 * @since 1.4.7
 	 *
 	 * @var string
 	 */
@@ -35,11 +35,20 @@ abstract class Core {
 	/**
 	 * Custom provider icon (logo).
 	 *
-	 * @since 1.4.7.
+	 * @since 1.4.7
 	 *
 	 * @var string
 	 */
 	public $icon;
+
+	/**
+	 * Custom priority for a provider, that will affect loading/placement order.
+	 *
+	 * @since 1.4.8
+	 *
+	 * @var int
+	 */
+	const PRIORITY = 10;
 
 	/**
 	 * Get the instance of the class.
@@ -100,7 +109,7 @@ abstract class Core {
 	 *
 	 * @return array
 	 */
-	public function register_provider( $providers = array() ) {
+	public function register_provider( array $providers ) {
 
 		$providers[ $this->slug ] = $this->name;
 

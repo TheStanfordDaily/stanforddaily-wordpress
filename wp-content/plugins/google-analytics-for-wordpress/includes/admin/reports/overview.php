@@ -38,7 +38,6 @@ final class MonsterInsights_Report_Overview extends MonsterInsights_Report {
 	// Outputs the report.
 	protected function get_report_html( $data = array() ) {
 		ob_start();
-
 		$this->get_overview_top( $data );
 
 		if ( ! empty( $data['newvsreturn'] ) && ! empty( $data['devices'] ) ) { ?>
@@ -904,10 +903,10 @@ final class MonsterInsights_Report_Overview extends MonsterInsights_Report {
 							echo '<li class="list-group-item">' .
 							     '<span class="monsterinsights-reports-list-count">'
 							     . $i .
-							     '</span>' .
-							     '<img class="monsterinsights-reports-referral-icon"  src="https://www.google.com/s2/favicons?domain=' . $referralsdata['url'] . '" width="16px" height="16px" />' .
+							     '.</span>' .
+							     '<img class="monsterinsights-reports-referral-icon"  src="https://www.google.com/s2/favicons?domain=' . esc_url( $referralsdata['url'] ) . '" width="16px" height="16px" />' .
 							     '<span class="monsterinsights-reports-list-text">'
-							     . $referralsdata['url'] .
+							     . esc_html( $referralsdata['url'] ) .
 							     '</span>
 										<span class="monsterinsights-reports-list-number">'
 							     . number_format_i18n( $referralsdata['sessions'] ) .
@@ -952,7 +951,7 @@ final class MonsterInsights_Report_Overview extends MonsterInsights_Report {
 							     '. </span>&nbsp;' .
 							     '<span class="monsterinsights-reports-list-text">'
 							     . $opening
-							     . $toppagesdata['title']
+							     . esc_html( $toppagesdata['title'] )
 							     . $closing .
 							     '</span>' .
 							     '<span class="monsterinsights-reports-list-number">' .
@@ -965,7 +964,7 @@ final class MonsterInsights_Report_Overview extends MonsterInsights_Report {
 					</ul>
 				</div>
 				<?php
-				$referral_url = 'https://analytics.google.com/analytics/web/#report/content-pages/' . MonsterInsights()->auth->get_referral_url() . $this->get_ga_report_range( $data );
+				$referral_url = 'https://analytics.google.com/analytics/web/#/report/content-pages/' . MonsterInsights()->auth->get_referral_url() . $this->get_ga_report_range( $data );
 				?>
 				<div class="monsterinsights-reports-panel-footer monsterinsights-reports-panel-footer-large">
 					<?php echo esc_html__( 'Show', 'google-analytics-for-wordpress' ); ?>&nbsp;

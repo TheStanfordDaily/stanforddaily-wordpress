@@ -11,7 +11,7 @@
 interface WPForms_Importer_Interface {
 
 	/**
-	 * Defines some properties.
+	 * Define required properties.
 	 *
 	 * @since 1.4.2
 	 */
@@ -45,8 +45,8 @@ interface WPForms_Importer_Interface {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param string $string
-	 * @param array $fields
+	 * @param string $string Text to look for Smart Tags in.
+	 * @param array  $fields List of fields to process Smart Tags in.
 	 *
 	 * @return string
 	 */

@@ -23,16 +23,6 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 	var __private = {
 
 		/**
-		 * All templating functions for providers are stored here in a Map.
-		 * Key is a template name, value - Underscore.js templating function.
-		 *
-		 * @since 1.4.7
-		 *
-		 * @type {Map}
-		 */
-		previews: new Map(),
-
-		/**
 		 * Internal cache storage, do not use it directly, but app.cache.{(get|set|delete|clear)()} instead.
 		 * Key is the provider slug, value is a Map, that will have it's own key as a connection id (or not).
 		 *
@@ -51,7 +41,7 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 		 */
 		config: {
 			/**
-			 * List of templates that should be compiled.
+			 * List of default templates that should be compiled.
 			 *
 			 * @since 1.4.7
 			 *
@@ -75,7 +65,7 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 
 		/**
 		 * By default, there is no provider.
-		 * If set - will be used in templating etc.
+		 * If set - will be used in templating/caching etc.
 		 *
 		 * @since 1.4.7
 		 *
@@ -375,7 +365,8 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 
 			app.providerHolder = $( '.wpforms-builder-provider' );
 
-			app.addTemplates( __private.config.templates );
+			app.Templates = WPForms.Admin.Builder.Templates;
+			app.Templates.add( __private.config.templates );
 
 			app.bindActions();
 			app.ui.bindActions();
@@ -469,6 +460,11 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 
 				// CONNECTION: ADD/DELETE.
 				app.providerHolder
+				   .on( 'click', '.js-wpforms-builder-provider-account-add', function ( e ) {
+					   e.preventDefault();
+					   app.ui.account.setProvider( $( this ).data( 'provider' ) );
+					   app.ui.account.add();
+				   } )
 				   .on( 'click', '.js-wpforms-builder-provider-connection-add', function ( e ) {
 					   e.preventDefault();
 
@@ -512,6 +508,11 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 
 					   $row.remove();
 				   } );
+
+				// CONNECTION: Rendered.
+				$( '#wpforms-panel-providers' ).on( 'connectionRendered', function ( e, provider, connection_id ) {
+					wpf.initTooltips();
+				});
 			},
 
 			/**
@@ -592,7 +593,146 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 						}
 					}
 				} );
-			}
+			},
+
+			/**
+			 * Account specific methods.
+			 *
+			 * @since 1.4.8
+			 */
+			account: {
+
+				/**
+				 * Current provider in the context of account creation.
+				 *
+				 * @since 1.4.8
+				 *
+				 * @param {String}
+				 */
+				provider: '',
+
+				/**
+				 * Preserve a list of action to perform when new account creation form is submitted.
+				 * Provider specific.
+				 *
+				 * @since 1.4.8
+				 *
+				 * @param {Array<string, callable>}
+				 */
+				submitHandlers: [],
+
+				/**
+				 * Set the account specific provider.
+				 *
+				 * @since 1.4.8
+				 *
+				 * @param {String} provider
+				 */
+				setProvider: function( provider ) {
+					this.provider = provider;
+				},
+
+				/**
+				 * Add an account for provider.
+				 *
+				 * @since 1.4.8
+				 */
+				add: function() {
+
+					var account = this;
+
+					$.confirm({
+						title: false,
+						smoothContent: true,
+						content: function () {
+							var modal = this;
+
+							return app.ajax
+							   .request( account.provider, {
+								   data: {
+									   task: 'account_template_get'
+								   }
+							   } )
+							   .done( function ( response ) {
+								   if ( ! response.success ) {
+									   return;
+								   }
+
+								   if ( response.data.title.length ) {
+									   modal.setTitle( response.data.title );
+								   }
+								   if ( response.data.content.length ) {
+									   modal.setContent( response.data.content );
+								   }
+								   if ( response.data.type.length ) {
+									   modal.setType( response.data.type );
+								   }
+								   app.providerHolder.trigger( 'accountAddModal.content.done', [ modal, account.provider, response ] );
+							   } )
+							   .fail( function () {
+								   app.providerHolder.trigger( 'accountAddModal.content.fail', [ modal, account.provider ] );
+							   } )
+							   .always( function () {
+								   app.providerHolder.trigger( 'accountAddModal.content.always', [ modal, account.provider ] );
+							   } );
+						},
+						contentLoaded: function( data, status, xhr ){
+							var modal = this;
+
+							// Data is already set in content.
+							this.buttons.add.enable();
+							this.buttons.cancel.enable();
+
+							app.providerHolder.trigger( 'accountAddModal.contentLoaded', [ modal ] );
+						},
+						// Before the modal is displayed.
+						onOpenBefore: function () {
+							var modal = this;
+
+							modal.buttons.add.disable();
+							modal.buttons.cancel.disable();
+
+							app.providerHolder.trigger( 'accountAddModal.onOpenBefore', [ modal ] );
+						},
+						icon: 'fa fa-info-circle',
+						type: 'blue',
+						buttons: {
+							add: {
+								text: wpforms_builder.provider_add_new_acc_btn,
+								btnClass: 'btn-confirm',
+								keys: [ 'enter' ],
+								action: function() {
+									var modal = this;
+
+									app.providerHolder.trigger( 'accountAddModal.buttons.add.action.before', [ modal ] );
+
+									if (
+										! _.isEmpty( account.provider ) &&
+										typeof account.submitHandlers[ account.provider ] !== 'undefined'
+									) {
+										return account.submitHandlers[ account.provider ]( modal );
+									}
+								}
+							},
+							cancel: {
+								text: wpforms_builder.cancel
+							}
+						}
+					});
+				},
+
+				/**
+				 * Register a template for Add New Account modal window.
+				 *
+				 * @since 1.4.8
+				 */
+				registerAddHandler: function ( provider, handler ) {
+
+					if ( typeof provider === 'string' && typeof handler === 'function' ) {
+						this.submitHandlers[ provider ] = handler;
+					}
+				},
+			},
 		},
 
 		/**
@@ -615,46 +755,7 @@ WPForms.Admin.Builder.Providers = WPForms.Admin.Builder.Providers || (function (
 		 */
 		getProviderHolder: function () {
 			return $( '#' + app.provider + '-provider' );
-		},
-
-		/**
-		 * Register and compile all templates.
-		 * All data is saved in a Map.
-		 *
-		 * @since 1.4.7
-		 *
-		 * @param {string[]} templates Array of template names.
-		 */
-		addTemplates: function ( templates ) {
-
-			templates.forEach( function ( template ) {
-				__private.previews.set( template, wp.template( template ) );
-			} );
-		},
-
-		/**
-		 * Get a templating function (to compile later with data).
-		 *
-		 * @since 1.4.7
-		 *
-		 * @param {string} template ID of a template to retrieve from a cache.
-		 *
-		 * @returns {*} After compiling will always return a string.
-		 */
-		getTemplate: function ( template ) {
-
-			var preview = __private.previews.get( template );
-
-			if ( typeof preview !== 'undefined' ) {
-				return preview;
-			}
-
-			return function () {
-				return '';
-			};
 		}
-
-		////
 	};
 
 	// Provide access to public functions/properties.

@@ -26,7 +26,7 @@ class MC4WP_WPForms_Field extends WPForms_Field
     {
 
         // Define field type information
-        $this->name = 'MailChimp';
+        $this->name = 'Mailchimp';
         $this->type = 'mailchimp';
         $this->icon = 'fa-envelope-o';
         $this->order = 21;
@@ -55,7 +55,7 @@ class MC4WP_WPForms_Field extends WPForms_Field
         // Options open markup
         $this->field_option('basic-options', $field, array('markup' => 'open'));
 
-        // MailChimp list
+        // Mailchimp list
         $this->field_option_mailchimp_list($field);
 
         // Choices
@@ -89,13 +89,13 @@ class MC4WP_WPForms_Field extends WPForms_Field
         $mailchimp = new MC4WP_MailChimp();
 
         // Field option label
-        $tooltip = __('Select the MailChimp list to subscribe to.', 'mailchimp-for-wp');
+        $tooltip = __('Select the Mailchimp list to subscribe to.', 'mailchimp-for-wp');
         $option_label = $this->field_element(
             'label',
             $field,
             array(
                 'slug' => 'mailchimp-list',
-                'value' => __('MailChimp list', 'mailchimp-for-wp'),
+                'value' => __('Mailchimp list', 'mailchimp-for-wp'),
                 'tooltip' => $tooltip,
             ),
             false
@@ -118,7 +118,6 @@ class MC4WP_WPForms_Field extends WPForms_Field
                 'content' => $option_label . $option_select,
             )
         );
-
     }
 
     private function field_option_choices($field)
@@ -183,7 +182,6 @@ class MC4WP_WPForms_Field extends WPForms_Field
 
         // Individual checkbox options
         foreach ($values as $key => $value) {
-
             $default = isset($value['default']) ? $value['default'] : '';
             $selected = checked('1', $default, false);
 
@@ -225,14 +223,14 @@ class MC4WP_WPForms_Field extends WPForms_Field
         printf('<ul id="%s" class="%s">', $field_id, $field_class);
 
         foreach ($choices as $key => $choice) {
-
             $selected = isset($choice['default']) ? '1' : '0';
             $depth = isset($choice['depth']) ? absint($choice['depth']) : 1;
 
             printf('<li class="choice-%d depth-%d">', $key, $depth);
 
             // Checkbox elements
-            printf('<input type="checkbox" id="wpforms-%d-field_%d_%d" name="wpforms[fields][%d]" value="%s" %s %s>',
+            printf(
+                '<input type="checkbox" id="wpforms-%d-field_%d_%d" name="wpforms[fields][%d]" value="%s" %s %s>',
                 $form_id,
                 $field['id'],
                 $key,

@@ -34,7 +34,7 @@ function mc4wp($service = null)
 }
 
 /**
- * Gets the MailChimp for WP options from the database
+ * Gets the Mailchimp for WP options from the database
  * Uses default values to prevent undefined index notices.
  *
  * @since 1.0
@@ -53,7 +53,7 @@ function mc4wp_get_options()
     }
 
     /**
-     * Filters the MailChimp for WordPress settings (general).
+     * Filters the Mailchimp for WordPress settings (general).
      *
      * @param array $options
      */
@@ -61,7 +61,23 @@ function mc4wp_get_options()
 }
 
 /**
- * Gets the MailChimp for WP API class (v3) and injects it with the API key
+ * @since 4.2.6
+ * @return string
+ */
+function mc4wp_get_api_key()
+{
+    // try to get from constant
+    if (defined('MC4WP_API_KEY') && constant('MC4WP_API_KEY') !== '') {
+        return MC4WP_API_KEY;
+    }
+
+    // get from options
+    $opts = mc4wp_get_options();
+    return $opts['api_key'];
+}
+
+/**
+ * Gets the Mailchimp for WP API class (v3) and injects it with the API key
  *
  * @since 4.0
  * @access public
@@ -70,13 +86,13 @@ function mc4wp_get_options()
  */
 function mc4wp_get_api_v3()
 {
-    $opts = mc4wp_get_options();
-    $instance = new MC4WP_API_v3($opts['api_key']);
+    $api_key = mc4wp_get_api_key();
+    $instance = new MC4WP_API_v3($api_key);
     return $instance;
 }
 
 /**
- * Gets the MailChimp for WP API class and injects it with the API key
+ * Gets the Mailchimp for WP API class and injects it with the API key
  *
  * @deprecated 4.0
  * @use mc4wp_get_api_v3
@@ -89,8 +105,8 @@ function mc4wp_get_api_v3()
 function mc4wp_get_api()
 {
     _deprecated_function(__FUNCTION__, '4.0', 'mc4wp_get_api_v3');
-    $opts = mc4wp_get_options();
-    $instance = new MC4WP_API($opts['api_key']);
+    $api_key = mc4wp_get_api_key();
+    $instance = new MC4WP_API($api_key);
     return $instance;
 }
 
@@ -132,8 +148,9 @@ function mc4wp_get_debug_log()
  *
  * @return string
  */
-function mc4wp_get_request_url() {
-     global $wp;
+function mc4wp_get_request_url()
+{
+    global $wp;
 
     // get requested url from global $wp object
     $site_request_uri = $wp->request;
@@ -152,10 +169,10 @@ function mc4wp_get_request_url() {
 
 /**
  * Get current URL path.
- * 
+ *
  * @return string
  */
-function mc4wp_get_request_path() 
+function mc4wp_get_request_path()
 {
     return $_SERVER['REQUEST_URI'];
 }
@@ -165,15 +182,15 @@ function mc4wp_get_request_path()
 *
 * @return string
 */
-function mc4wp_get_request_ip_address() 
+function mc4wp_get_request_ip_address()
 {
-    $headers = ( function_exists( 'apache_request_headers' ) ) ? apache_request_headers() : $_SERVER;
+    $headers = (function_exists('apache_request_headers')) ? apache_request_headers() : $_SERVER;
 
-    if ( array_key_exists( 'X-Forwarded-For', $headers ) && filter_var( $headers['X-Forwarded-For'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
+    if (array_key_exists('X-Forwarded-For', $headers) && filter_var($headers['X-Forwarded-For'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
         return $headers['X-Forwarded-For'];
     }
 
-    if ( array_key_exists( 'HTTP_X_FORWARDED_FOR', $headers ) && filter_var( $headers['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
+    if (array_key_exists('HTTP_X_FORWARDED_FOR', $headers) && filter_var($headers['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
         return $headers['HTTP_X_FORWARDED_FOR'];
     }
 
@@ -190,7 +207,6 @@ function mc4wp_get_request_ip_address()
  */
 function mc4wp_sanitize_deep($value)
 {
-
     if (is_scalar($value)) {
         // strip all HTML tags & whitespace
         $value = trim(strip_tags($value));
@@ -338,7 +354,6 @@ function mc4wp_add_name_data($data = array())
  */
 function mc4wp_get_email_type()
 {
-
     $email_type = 'html';
 
     /**
@@ -417,7 +432,7 @@ function mc4wp_obfuscate_email_addresses($string)
 }
 
 /**
- * Refreshes MailChimp lists. This can take a while if the connected MailChimp account has many lists.
+ * Refreshes Mailchimp lists. This can take a while if the connected Mailchimp account has many lists.
  *
  * @return void
  */
@@ -435,17 +450,18 @@ function mc4wp_refresh_mailchimp_lists()
 * @param mixed $default
 * @return mixed
 */
-function mc4wp_array_get( $array, $key, $default = null ) {
-    if ( is_null( $key ) ) {
+function mc4wp_array_get($array, $key, $default = null)
+{
+    if (is_null($key)) {
         return $array;
     }
 
-    if ( isset( $array[$key] ) ) {
+    if (isset($array[$key])) {
         return $array[$key];
     }
 
-    foreach (explode( '.', $key ) as $segment) {
-        if ( ! is_array( $array ) || ! array_key_exists( $segment, $array ) ) {
+    foreach (explode('.', $key) as $segment) {
+        if (! is_array($array) || ! array_key_exists($segment, $array)) {
             return $default;
         }
 

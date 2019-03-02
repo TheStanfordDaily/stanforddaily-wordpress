@@ -82,7 +82,7 @@
 			$rows = $rows || $( '.wpforms-conditional-row' ); // jshint ignore:line
 
 			var fields     = $.extend({}, allFields),
-				allowed    = [ 'text', 'textarea', 'select', 'radio', 'email', 'url', 'checkbox', 'number', 'payment-multiple', 'payment-select', 'hidden', 'rating', 'net_promoter_score' ],
+				allowed    = [ 'text', 'textarea', 'select', 'radio', 'email', 'url', 'checkbox', 'number', 'payment-multiple', 'payment-checkbox', 'payment-select', 'hidden', 'rating', 'net_promoter_score' ],
 				changed    = [],
 				key        = '',
 				label      = '';
@@ -322,7 +322,14 @@
 				// Placeholder has been selected.
 				$element = $( '<select>' );
 
-			} else if ( data.field.type === 'select' || data.field.type === 'radio' || data.field.type === 'checkbox' || data.field.type === 'payment-multiple' || data.field.type === 'payment-select' ) {
+			} else if (
+				data.field.type === 'select' ||
+				data.field.type === 'radio' ||
+				data.field.type === 'checkbox' ||
+				data.field.type === 'payment-multiple' ||
+				data.field.type === 'payment-checkbox' ||
+				data.field.type === 'payment-select'
+			) {
 				// Selector type fields use select elements.
 				$element = $( '<select>' ).attr( { name: name, class: 'wpforms-conditional-value' } ); // jshint ignore:line
 				$element.append( $( '<option>', { value: '', text : wpforms_builder.select_choice } ) );
@@ -336,7 +343,7 @@
 
 			} else {
 
-				// Text type fields (everything else) use text inputs
+				// Text type fields (everything else) use text inputs.
 
 				// Determine input type.
 				var inputType = 'text';

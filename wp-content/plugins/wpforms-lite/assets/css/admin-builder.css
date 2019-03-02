@@ -420,14 +420,12 @@ body {
 
 #wpforms-builder .wpforms-panel-field {
 	max-width: 450px;
-}
-
-#wpforms-builder .wpforms-panel-field-tinymce {
-	max-width: 800px;
-}
-
-#wpforms-builder .wpforms-panel-field {
 	margin-bottom: 18px;
+}
+
+#wpforms-builder .wpforms-panel-field-tinymce,
+#wpforms-builder .wpforms-confirmation .wpforms-panel-field-textarea {
+	max-width: 800px;
 }
 
 #wpforms-builder .wpforms-panel-field label {
@@ -475,7 +473,8 @@ body {
 	position: relative;
 }
 
-#wpforms-builder .wpforms-panel-sidebar-section.upgrade-modal {
+#wpforms-builder .wpforms-panel-sidebar-section.upgrade-modal,
+#wpforms-builder .wpforms-panel-sidebar-section.education-modal {
 	opacity: 0.5;
 }
 

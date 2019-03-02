@@ -51,7 +51,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param int $id
+	 * @param int $id Form ID.
 	 *
 	 * @return WPCF7_ContactForm|bool
 	 */
@@ -83,9 +83,18 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 		}
 
 		// Define some basic information.
-		$analyze            = isset( $_POST['analyze'] );
-		$cf7_id             = absint( $_POST['form_id'] );
-		$cf7_form           = $this->get_form( $cf7_id );
+		$analyze  = isset( $_POST['analyze'] );
+		$cf7_id   = ! empty( $_POST['form_id'] ) ? (int) $_POST['form_id'] : 0;
+		$cf7_form = $this->get_form( $cf7_id );
+
+		if ( ! $cf7_form ) {
+			wp_send_json_error( array(
+				'error' => true,
+				'name'  => esc_html__( 'Unknown Form', 'wpforms-lite' ),
+				'msg'   => esc_html__( 'The form you are trying to import does not exist.', 'wpforms-lite' ),
+			) );
+		}
+
 		$cf7_form_name      = $cf7_form->title();
 		$cf7_fields         = $cf7_form->scan_form_tags();
 		$cf7_properties     = $cf7_form->get_properties();
@@ -101,28 +110,32 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 			'field_id' => '',
 			'fields'   => array(),
 			'settings' => array(
-				'form_title'                  => $cf7_form_name,
-				'form_desc'                   => '',
-				'submit_text'                 => esc_html__( 'Submit', 'wpforms' ),
-				'submit_text_processing'      => esc_html__( 'Sending', 'wpforms' ),
-				'honeypot'                    => '1',
-				'notification_enable'         => '1',
-				'notifications'               => array(
+				'form_title'             => $cf7_form_name,
+				'form_desc'              => '',
+				'submit_text'            => esc_html__( 'Submit', 'wpforms-lite' ),
+				'submit_text_processing' => esc_html__( 'Sending', 'wpforms-lite' ),
+				'honeypot'               => '1',
+				'notification_enable'    => '1',
+				'notifications'          => array(
 					1 => array(
-						'notification_name' => esc_html__( 'Notification 1', 'wpforms' ),
+						'notification_name' => esc_html__( 'Notification 1', 'wpforms-lite' ),
 						'email'             => '{admin_email}',
-						/* translators: %s - Contact Form 7 form name. */
-						'subject'           => sprintf( esc_html__( 'New Entry: %s', 'wpforms' ), $cf7_form_name ),
+						/* translators: %s - form name. */
+						'subject'           => sprintf( esc_html__( 'New Entry: %s', 'wpforms-lite' ), $cf7_form_name ),
 						'sender_name'       => get_bloginfo( 'name' ),
 						'sender_address'    => '{admin_email}',
 						'replyto'           => '',
 						'message'           => '{all_fields}',
 					),
 				),
-				'confirmation_type'           => 'message',
-				'confirmation_message'        => esc_html__( 'Thanks for contacting us! We will be in touch with you shortly.', 'wpforms' ),
-				'confirmation_message_scroll' => '1',
-				'import_form_id'              => $cf7_id,
+				'confirmations'          => array(
+					1 => array(
+						'type'           => 'message',
+						'message'        => esc_html__( 'Thanks for contacting us! We will be in touch with you shortly.', 'wpforms-lite' ),
+						'message_scroll' => '1',
+					),
+				),
+				'import_form_id'         => $cf7_id,
 			),
 		);
 
@@ -131,7 +144,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 			wp_send_json_success( array(
 				'error' => true,
 				'name'  => sanitize_text_field( $cf7_form_name ),
-				'msg'   => esc_html__( 'No form fields found.', 'wpforms' ),
+				'msg'   => esc_html__( 'No form fields found.', 'wpforms-lite' ),
 			) );
 		}
 
@@ -179,7 +192,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 				case 'number':
 				case 'textarea':
 					$type = $cf7_field->basetype;
-					if ( ! wpforms()->pro && 'url' === $type ) {
+					if ( 'url' === $type && ! wpforms()->pro ) {
 						$type = 'text';
 					}
 					$form['fields'][ $field_id ] = array(
@@ -196,7 +209,6 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 
 				// Phone number field.
 				case 'tel':
-					$type = wpforms()->pro ? 'phone' : 'text';
 					$form['fields'][ $field_id ] = array(
 						'id'            => $field_id,
 						'type'          => 'phone',
@@ -213,6 +225,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 				// Date field.
 				case 'date':
 					$type = wpforms()->pro ? 'date-time' : 'text';
+
 					$form['fields'][ $field_id ] = array(
 						'id'               => $field_id,
 						'type'             => $type,
@@ -235,6 +248,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 				case 'checkbox':
 					$choices = array();
 					$options = (array) $cf7_field->labels;
+
 					foreach ( $options as $option ) {
 						$choices[] = array(
 							'label' => $option,
@@ -299,7 +313,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 					$form['fields'][ $field_id ] = array(
 						'id'         => $field_id,
 						'type'       => 'checkbox',
-						'label'      => esc_html__( 'Acceptance Field', 'wpforms' ),
+						'label'      => esc_html__( 'Acceptance Field', 'wpforms-lite' ),
 						'choices'    => array(
 							1 => array(
 								'label' => $label,
@@ -394,10 +408,10 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 			// Check if a secondary notification is enabled, if so set defaults
 			// and set it up.
 			$form['settings']['notifications'][2] = array(
-				'notification_name' => esc_html__( 'Notification 2', 'wpforms' ),
+				'notification_name' => esc_html__( 'Notification 2', 'wpforms-lite' ),
 				'email'             => '{admin_email}',
-				/* translators: %s - Contact Form 7 form name. */
-				'subject'           => sprintf( esc_html__( 'New Entry: %s', 'wpforms' ), $cf7_form_name ),
+				/* translators: %s - form name. */
+				'subject'           => sprintf( esc_html__( 'New Entry: %s', 'wpforms-lite' ), $cf7_form_name ),
 				'sender_name'       => get_bloginfo( 'name' ),
 				'sender_address'    => '{admin_email}',
 				'replyto'           => '',
@@ -437,8 +451,8 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param object $field
-	 * @param string $type
+	 * @param object $field Field object.
+	 * @param string $type Type of the field.
 	 *
 	 * @return string
 	 */
@@ -464,9 +478,9 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param string $form
-	 * @param string $type
-	 * @param string $name
+	 * @param string $form Form data and settings.
+	 * @param string $type Field type.
+	 * @param string $name Field name.
 	 *
 	 * @return string
 	 */
@@ -487,7 +501,7 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 
 		$label = sprintf(
 			/* translators: %1$s - field type; %2$s - field name if available. */
-			esc_html__( '%1$s Field %2$s', 'wpforms' ),
+			esc_html__( '%1$s Field %2$s', 'wpforms-lite' ),
 			ucfirst( $type ),
 			! empty( $name ) ? "($name)" : ''
 		);
@@ -522,8 +536,8 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param string $headers
-	 * @param array $fields
+	 * @param string $headers CF7 email headers.
+	 * @param array  $fields List of fields.
 	 *
 	 * @return string
 	 */
@@ -550,8 +564,8 @@ class WPForms_Contact_Form_7 extends WPForms_Importer {
 	 *
 	 * @since 1.4.2
 	 *
-	 * @param string $sender
-	 * @param array $fields
+	 * @param string $sender Sender strings in "Name <email@example.com>" format.
+	 * @param array  $fields List of fields.
 	 *
 	 * @return bool|array
 	 */
