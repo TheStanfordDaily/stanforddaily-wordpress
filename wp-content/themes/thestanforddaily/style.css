@@ -1376,6 +1376,14 @@ a:hover, a:active {
   color: #666;
   padding: 40px 0;
 }
+.site-footer .site-info.site-info-right {
+  text-align: right;
+}
+@media screen and (max-width: 960px) {
+  .site-footer .site-info.site-info-left, .site-footer .site-info.site-info-right {
+    text-align: center;
+  }
+}
 
 /* Donation Banner */
 .tsd-donate-header {
