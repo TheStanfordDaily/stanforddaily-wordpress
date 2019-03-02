@@ -19,7 +19,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 tsd-excerpt-container-bignews">
 						<?php
-						query_posts( array ( 'category_name' => 'big-news-feed', 'posts_per_page' => 1 ) );
+						query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ) );
 						if ( have_posts() ) :
 							while ( have_posts() ) :
 								the_post();
