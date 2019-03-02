@@ -181,7 +181,7 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function tsd_post_thumbnail() {
+	function tsd_post_thumbnail($size="large") {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -193,10 +193,7 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-feature-image">
-				<?php
-				// TODO: More sizes? Change name?
-				the_post_thumbnail( 'jnews-1140x570' );
-				?>
+				<img src="<?php echo get_the_post_thumbnail_url( null, $size ); ?>" style="height: auto; width: 100%;" />
 			</div><!-- .post-feature-image -->
 
 		<?php else : ?>
