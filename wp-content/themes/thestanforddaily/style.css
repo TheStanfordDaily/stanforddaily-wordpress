@@ -1559,6 +1559,13 @@ a:hover, a:active {
   display: none;
 }
 
+.tsd-excerpt-container-bignews .excerpt-thumb {
+  width: 320px;
+}
+.tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container {
+  height: 250px;
+  line-height: 250px;
+}
 .tsd-excerpt-container-bignews .excerpt-content .entry-title {
   font-size: 25px;
   font-weight: bold;

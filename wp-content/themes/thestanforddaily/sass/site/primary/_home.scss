@@ -67,6 +67,13 @@
 }
 
 .tsd-excerpt-container-bignews {
+	.excerpt-thumb {
+		width: 320px;
+		.thumbnail-container {
+			height: 250px;
+			line-height: 250px;
+		}
+	}
 	.excerpt-content {
 		.entry-title {
 			font-size: 25px;
