@@ -75,8 +75,8 @@ if ( ! function_exists( 'tsd_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 60,
-			'width'       => 500,
+			'height'      => 180,
+			'width'       => 1500,
 			'flex-width'  => true,
 		) );
 	}
