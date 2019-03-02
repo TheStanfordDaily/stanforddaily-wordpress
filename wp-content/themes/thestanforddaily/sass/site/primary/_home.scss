@@ -98,5 +98,10 @@
 }
 
 .tsd-home-main {
-
+	.entry-title {
+		font-weight: 400;
+		&, & a {
+			color: black;
+		}
+	}
 }

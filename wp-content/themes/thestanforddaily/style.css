@@ -1574,6 +1574,13 @@ a:hover, a:active {
   margin-top: 15px;
 }
 
+.tsd-home-main .entry-title {
+  font-weight: 400;
+}
+.tsd-home-main .entry-title, .tsd-home-main .entry-title a {
+  color: black;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1592,13 +1599,10 @@ a:hover, a:active {
 
 .entry-title {
   font-family: Libre Baskerville;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 3em;
   margin: 0 0 0.4em;
   letter-spacing: -0.04em;
-}
-.entry-title, .entry-title a {
-  color: black;
 }
 
 .entry-subtitle {
