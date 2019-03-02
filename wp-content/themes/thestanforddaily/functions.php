@@ -126,17 +126,21 @@ function tsd_scripts() {
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
 	wp_enqueue_style( 'load-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville:400,400i,700' );
 	wp_enqueue_style( 'bootstrap-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css' );
-	wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?ver=4.9.9', array('jquery'));
 	wp_enqueue_script( 'tsd-donation-banner-and-tips-widget', get_template_directory_uri() . '/js/donation-banner-and-tips-widget.js', array(), '20190301', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		// We are using Disqus
 		//wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_category( "magazine" ) ) {
+		wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css' );
+		wp_enqueue_style( 'slick-carousel-theme-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css' );
+		wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'));
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tsd_scripts' );
