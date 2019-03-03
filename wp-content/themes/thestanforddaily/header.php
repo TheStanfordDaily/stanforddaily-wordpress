@@ -26,7 +26,7 @@
 
 <div id="page" class="site">
 	<!-- Ezoic - atf_1 - top_of_page -->
-	<div style="text-align: center">
+	<div class="tsd-hidden-sm" style="text-align: center">
 		<div id="ezoic-pub-ad-placeholder-101">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Custom Banner, 970 x 90 leaderboard -->
