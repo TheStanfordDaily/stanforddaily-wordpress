@@ -15,4 +15,4 @@ cedato.com,501446106,RESELLER
 cedato.com,25242397,RESELLER
 vertamedia.com, 275574, RESELLER, 7de89dc7742b5b11
 beachfront.com, 11555, RESELLER, e2541279e8e2ca4d
-
+google.com, pub-8817523005861595, DIRECT, f08c47fec0942fa0
