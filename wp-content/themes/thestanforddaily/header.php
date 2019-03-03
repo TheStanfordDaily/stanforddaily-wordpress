@@ -26,16 +26,18 @@
 
 <div id="page" class="site">
 	<!-- Ezoic - atf_1 - top_of_page -->
-	<div id="ezoic-pub-ad-placeholder-101">
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Custom Banner, 970 x 90 leaderboard -->
-		<ins class="adsbygoogle"
-			style="display:inline-block;width:970px;height:90px"
-			data-ad-client="ca-pub-8817523005861595"
-			data-ad-slot="2031929913"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+	<div style="text-align: center">
+		<div id="ezoic-pub-ad-placeholder-101">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Custom Banner, 970 x 90 leaderboard -->
+			<ins class="adsbygoogle"
+				style="display:inline-block;width:970px;height:90px"
+				data-ad-client="ca-pub-8817523005861595"
+				data-ad-slot="2031929913"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
 	</div>
 	<!-- End Ezoic - atf_1 - top_of_page -->
 	<?php include "inc/donate-header.php"; ?>
