@@ -21,7 +21,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
 <div id="page" class="site">
+	<?php include "inc/donate-header.php"; ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tsd' ); ?></a>
 	<div class="background-overlay"></div>
 
@@ -67,6 +71,15 @@
 						?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><?php
 					}
 				?></<?php echo $title_tag; ?>>
+
+				<div class="header-right">
+					<a href="/email-digests/" class="tsd-button outline"><i class="fas fa-envelope" style="margin-right: 8px;"></i>Email Digest</a>
+
+					<a href="https://www.facebook.com/stanforddaily/" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/StanfordDaily" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/stanforddaily/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.youtube.com/channel/UCWg3QqUzqxXt6herm5sMjNw" target="_blank"><i class="fab fa-youtube"></i></a>
+				</div>
 			</div>
 		</div><!-- .site-branding -->
 
@@ -80,6 +93,7 @@
 						'theme_location' => 'menu-primary',
 						'menu_id'        => 'primary-menu',
 					) );
+					include "inc/tips-widget.php";
 					?>
 				</div>
 			</div>

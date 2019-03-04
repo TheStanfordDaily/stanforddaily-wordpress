@@ -1,20 +1,19 @@
+/* global inlineEditL10n, ajaxurl, typenow */
 /**
  * This file contains the functions needed for the inline editing of posts.
  *
  * @since 2.7.0
- * @output wp-admin/js/inline-edit-post.js
  */
-
-/* global inlineEditL10n, ajaxurl, typenow, inlineEditPost */
 
 window.wp = window.wp || {};
 
 /**
  * Manages the quick edit and bulk edit windows for editing posts or pages.
  *
- * @namespace inlineEditPost
+ * @namespace
  *
  * @since 2.7.0
+ * @access public
  *
  * @type {Object}
  *
@@ -22,12 +21,13 @@ window.wp = window.wp || {};
  * @property {string} what The prefix before the post id.
  *
  */
+var inlineEditPost;
 ( function( $, wp ) {
 
-	window.inlineEditPost = {
+	inlineEditPost = {
 
 	/**
-	 * Initializes the inline and bulk post editor.
+	 * @summary Initializes the inline and bulk post editor.
 	 *
 	 * Binds event handlers to the escape key to close the inline editor
 	 * and to the save and close buttons. Changes DOM to be ready for inline
@@ -46,7 +46,7 @@ window.wp = window.wp || {};
 		t.what = '#post-';
 
 		/**
-		 * Binds the escape key to revert the changes and close the quick editor.
+		 * @summary Bind escape key to revert the changes and close the quick editor.
 		 *
 		 * @returns {boolean} The result of revert.
 		 */
@@ -58,7 +58,7 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Binds the escape key to revert the changes and close the bulk editor.
+		 * @summary Bind escape key to revert the changes and close the bulk editor.
 		 *
 		 * @returns {boolean} The result of revert.
 		 */
@@ -70,7 +70,7 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Reverts changes and close the quick editor if the cancel button is clicked.
+		 * @summary Revert changes and close the quick editor if the cancel button is clicked.
 		 *
 		 * @returns {boolean} The result of revert.
 		 */
@@ -79,7 +79,7 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Saves changes in the quick editor if the save(named: update) button is clicked.
+		 * @summary Save changes in the quick editor if the save(named: update) button is clicked.
 		 *
 		 * @returns {boolean} The result of save.
 		 */
@@ -88,7 +88,7 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * If enter is pressed, and the target is not the cancel button, save the post.
+		 * @summary If enter is pressed, and the target is not the cancel button, save the post.
 		 *
 		 * @returns {boolean} The result of save.
 		 */
@@ -99,7 +99,7 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Reverts changes and close the bulk editor if the cancel button is clicked.
+		 * @summary Revert changes and close the bulk editor if the cancel button is clicked.
 		 *
 		 * @returns {boolean} The result of revert.
 		 */
@@ -108,7 +108,7 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Disables the password input field when the private post checkbox is checked.
+		 * @summary Disables the password input field when the private post checkbox is checked.
 		 */
 		$('#inline-edit .inline-edit-private input[value="private"]').click( function(){
 			var pw = $('input.inline-edit-password-input');
@@ -120,11 +120,11 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Binds click event to the .editinline button which opens the quick editor.
+		 * @summary Bind click event to the .editinline link which opens the quick editor.
 		 */
-		$( '#the-list' ).on( 'click', '.editinline', function() {
-			$( this ).attr( 'aria-expanded', 'true' );
-			inlineEditPost.edit( this );
+		$('#the-list').on( 'click', 'a.editinline', function( e ) {
+			e.preventDefault();
+			inlineEditPost.edit(this);
 		});
 
 		$('#bulk-edit').find('fieldset:first').after(
@@ -136,7 +136,7 @@ window.wp = window.wp || {};
 		$('select[name="_status"] option[value="future"]', bulkRow).remove();
 
 		/**
-		 * Adds onclick events to the apply buttons.
+		 * @summary Adds onclick events to the apply buttons.
 		 */
 		$('#doaction, #doaction2').click(function(e){
 			var n;
@@ -154,8 +154,9 @@ window.wp = window.wp || {};
 	},
 
 	/**
-	 * Toggles the quick edit window, hiding it when it's active and showing it when
-	 * inactive.
+	 * @summary Toggles the quick edit window.
+	 *
+	 * Hides the window when it's active and shows the window when inactive.
 	 *
 	 * @memberof inlineEditPost
 	 * @since 2.7.0
@@ -168,7 +169,7 @@ window.wp = window.wp || {};
 	},
 
 	/**
-	 * Creates the bulk editor row to edit multiple posts at once.
+	 * @summary Creates the bulk editor row to edit multiple posts at once.
 	 *
 	 * @memberof inlineEditPost
 	 * @since 2.7.0
@@ -184,10 +185,10 @@ window.wp = window.wp || {};
 		$('#bulk-edit').addClass('inline-editor').show();
 
 		/**
-		 * Create a HTML div with the title and a link(delete-icon) for each selected
-		 * post.
+		 * @summary Create a HTML div with the title and a delete link(cross-icon) for each selected post.
 		 *
 		 * Get the selected posts based on the checked checkboxes in the post table.
+		 * Create a HTML div with the title and a link(delete-icon) for each selected post.
 		 */
 		$( 'tbody th.check-column input[type="checkbox"]' ).each( function() {
 
@@ -208,7 +209,7 @@ window.wp = window.wp || {};
 		// Add onclick events to the delete-icons in the bulk editors the post title list.
 		$('#bulk-titles').html(te);
 		/**
-		 * Binds on click events to the checkboxes before the posts in the table.
+		 * @summary Binds on click events to the checkboxes before the posts in the table.
 		 *
 		 * @listens click
 		 */
@@ -240,7 +241,7 @@ window.wp = window.wp || {};
 	},
 
 	/**
-	 * Creates a quick edit window for the post that has been clicked.
+	 * @summary Creates a quick edit window for the post that has been clicked.
 	 *
 	 * @memberof inlineEditPost
 	 * @since 2.7.0
@@ -283,7 +284,7 @@ window.wp = window.wp || {};
 			val = $('.'+fields[f], rowData);
 
 			/**
-			 * Replaces the image for a Twemoji(Twitter emoji) with it's alternate text.
+			 * @summary Replaces the image for a Twemoji(Twitter emoji) with it's alternate text.
 			 *
 			 * @returns Alternate text from the image.
 			 */
@@ -303,7 +304,7 @@ window.wp = window.wp || {};
 		}
 
 		/**
-		 * Creates the select boxes for the categories.
+		 * @summary Creates the select boxes for the categories.
 		 */
 		$('.post_category', rowData).each(function(){
 			var taxname,
@@ -316,8 +317,8 @@ window.wp = window.wp || {};
 		});
 
 		/**
-		 * Gets all the taxonomies for live auto-fill suggestions when typing the name
-		 * of a tag.
+		 * @summary Gets all the taxonomies for live auto-fill suggestions.
+		 * When typing the name of a tag.
 		 */
 		$('.tags_input', rowData).each(function(){
 			var terms = $(this),
@@ -380,7 +381,7 @@ window.wp = window.wp || {};
 	},
 
 	/**
-	 * Saves the changes made in the quick edit window to the post.
+	 * @summary Saves the changes made in the quick edit window to the post.
 	 * AJAX saving is only for Quick Edit and not for bulk edit.
 	 *
 	 * @since 2.7.0
@@ -423,10 +424,8 @@ window.wp = window.wp || {};
 						$(inlineEditPost.what+id).siblings('tr.hidden').addBack().remove();
 						$('#edit-'+id).before(r).remove();
 						$( inlineEditPost.what + id ).hide().fadeIn( 400, function() {
-							// Move focus back to the Quick Edit button. $( this ) is the row being animated.
-							$( this ).find( '.editinline' )
-								.attr( 'aria-expanded', 'false' )
-								.focus();
+							// Move focus back to the Quick Edit link. $( this ) is the row being animated.
+							$( this ).find( '.editinline' ).focus();
 							wp.a11y.speak( inlineEditL10n.saved );
 						});
 					} else {
@@ -448,7 +447,7 @@ window.wp = window.wp || {};
 	},
 
 	/**
-	 * Hides and empties the Quick Edit and/or Bulk Edit windows.
+	 * @summary Hides and empties the Quick Edit and/or Bulk Edit windows.
 	 *
 	 * @memberof    inlineEditPost
 	 * @since 2.7.0
@@ -480,10 +479,8 @@ window.wp = window.wp || {};
 				$('#'+id).siblings('tr.hidden').addBack().remove();
 				id = id.substr( id.lastIndexOf('-') + 1 );
 
-				// Show the post row and move focus back to the Quick Edit button.
-				$( this.what + id ).show().find( '.editinline' )
-					.attr( 'aria-expanded', 'false' )
-					.focus();
+				// Show the post row and move focus back to the Quick Edit link.
+				$( this.what + id ).show().find( '.editinline' ).focus();
 			}
 		}
 
@@ -491,8 +488,8 @@ window.wp = window.wp || {};
 	},
 
 	/**
-	 * Gets the id for a the post that you want to quick edit from the row in the quick
-	 * edit table.
+	 * @summary Gets the id for a the post that you want to quick edit from the row
+	 * in the quick edit table.
 	 *
 	 * @memberof    inlineEditPost
 	 * @since 2.7.0

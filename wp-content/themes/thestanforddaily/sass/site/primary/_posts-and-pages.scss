@@ -17,7 +17,7 @@
 	font-family: Libre Baskerville;
 	font-weight: 700;
 	font-size: 3em;
-	line-height: 1.15;
+	// line-height: 1.15;
 	margin: 0 0 .4em;
 	letter-spacing: -.04em;
 }
@@ -118,6 +118,7 @@
 }
 
 .entry-footer {
+	margin-top: 20px;
 	.tags-links {
 		font-size: 12px;
 		margin: 2.2em auto 1.75em;
@@ -174,7 +175,7 @@
 
 	.entry-title {
 		font-size: 30px;
-		line-height: 1em;
+		line-height: 1.25em;
 		margin-bottom: 2px;
 	}
 
@@ -185,6 +186,39 @@
 
 		p:last-of-type {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: $size__break-mobile) {
+	.excerpt-thumb {
+		width: 200px;
+		margin-right: 20px;
+		.thumbnail-container {
+			height: 200px;
+		}
+	}
+	.excerpt-content {
+		.entry-title {
+			font-size: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: $size__break-phone) {
+	.excerpt-thumb {
+		width: 100px;
+		margin-right: 10px;
+		.thumbnail-container {
+			height: 100px;
+		}
+	}
+	.excerpt-content {
+		.entry-title {
+			font-size: 15px;
+		}
+		.entry-summary {
+			display: none;
 		}
 	}
 }

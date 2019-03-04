@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php tsd_post_thumbnail(); ?>
+	<?php tsd_post_thumbnail("full"); ?>
 
 	<div class="entry-content">
 		<?php

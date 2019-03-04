@@ -52,6 +52,7 @@
 
 .site-branding {
 	height: 100px;
+	z-index: 999;
 	.container {
 		height: 100%;
 		padding-top: 20px;
@@ -59,6 +60,7 @@
 	}
 	.site-title {
 		display: block;
+		float: left;
 		height: 100%;
 		margin: 0;
 		padding: 0;
@@ -86,6 +88,18 @@
 	.nav-toggle-button {
 		display: none;
 	}
+
+	.header-right {
+		float: right;
+		font-size: 25px;
+		margin-top: 11.25px;
+		a {
+			vertical-align: middle;
+			&:not(:last-of-type) {
+				margin-right: 20px;
+			}
+		}
+	}
 }
 
 .main-navigation {
@@ -95,6 +109,7 @@
 	width: 100%;
 
 	.nav-row {
+		position: relative;
 		line-height: 50px;
 		border-top: solid #111111 3px;
 		border-bottom: 1px solid #e8e8e8;
@@ -251,13 +266,12 @@
 		display: none;
 	}
 
-	$top_sticky_bar_height: 60px;
 	.site-branding {
 		position: fixed;
-		top: auto;	// So that the admin bar would not cover it.
+		top: 0;	// So that the header donation banner will not move it on smaller screen
 		left: 0;
 		width: 100%;
-		height: $top_sticky_bar_height;
+		height: $mobile_top_sticky_bar_height;
 		background: #fff;
 		box-shadow: 0 2px 6px rgba(0,0,0,.1);
 
@@ -266,6 +280,7 @@
 		}
 
 		.site-title {
+			float: none;
 			text-align: center;
 			font-size: 30px;
 		}
@@ -285,6 +300,10 @@
 			background: transparent;
 			cursor: pointer;
 		}
+
+		.header-right {
+			display: none;
+		}
 	}
 
 	// Ref: https://www.w3schools.com/howto/howto_js_sidenav.asp & JNews 2
@@ -294,7 +313,7 @@
 		transform: translate3d(-100%, 0, 0); // Move navbar off-screen to the left
 		position: fixed; /* Stay in place */
 		z-index: 9999; /* Stay on top */
-		top: auto;	// So that the admin bar would not cover it.
+		top: 0; // So that the header donation banner will not move it on smaller screen
 		left: 0;
 		background-color: #fff;
 		overflow-x: hidden; /* Disable horizontal scroll */
@@ -370,7 +389,7 @@
 
 	.site-content {
 		// To make sure that the nav bar does not cover the content.
-		margin-top: $top_sticky_bar_height;
+		margin-top: $mobile_top_sticky_bar_height;
 	}
 }
 

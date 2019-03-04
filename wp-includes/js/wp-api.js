@@ -1,7 +1,3 @@
-/**
- * @output wp-includes/js/wp-api.js
- */
-
 (function( window, undefined ) {
 
 	'use strict';
@@ -145,7 +141,7 @@
 	wp.api.utils.getRootUrl = function() {
 		return window.location.origin ?
 			window.location.origin + '/' :
-			window.location.protocol + '//' + window.location.host + '/';
+			window.location.protocol + '/' + window.location.host + '/';
 	};
 
 	/**
@@ -1175,7 +1171,7 @@
 					 * have to retrieve it again for this session. Then, construct the models and collections based
 					 * on the schema model data.
 					 *
-					 * @ignore
+					 * @callback
 					 */
 					success: function( newSchemaModel ) {
 

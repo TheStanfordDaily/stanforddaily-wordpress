@@ -37,6 +37,17 @@ function tsd_pingback_header() {
 add_action( 'wp_head', 'tsd_pingback_header' );
 
 /*
+ * Remove ellipses ([...]) at the end of excerpts in the homepage
+ */
+function custom_excerpt_more( $more ) {
+	if ( is_home() ) {
+		return false;
+	}
+	return "&hellip;";
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+/*
  * Add donate blurb to the bottom of every article page
  */
 function tsd_add_donate_blurb_to_content( $content ) {
@@ -50,14 +61,6 @@ function tsd_add_donate_blurb_to_content( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'tsd_add_donate_blurb_to_content' );
-
-/*
- * Add Font Awesome
- */
-function tsd_load_fa() {
-	?><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><?php
-}
-add_action( 'wp_head', 'tsd_load_fa' );
 
 /*
  * Issue #28 - Add a banner to download iOS app.
@@ -126,3 +129,13 @@ function tsd_add_login_css() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'tsd_add_login_css' );
+
+// Add a new default avatar (Tree)
+// Note: this will NOT work on localhost.
+// https://crunchify.com/how-to-change-default-avatar-in-wordpress/#comment-3851077053
+function tsd_custom_default_gravatar( $avatar_defaults ) {
+	$customAvatar = get_template_directory_uri() . '/img/placeholder-avatar.png';
+	$avatar_defaults[ $customAvatar ] = "Stanford Tree";
+	return $avatar_defaults;
+}
+add_filter( 'avatar_defaults', 'tsd_custom_default_gravatar' );

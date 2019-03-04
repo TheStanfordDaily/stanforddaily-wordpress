@@ -145,6 +145,15 @@ function tsd_authors_plugin_enable_api() {
     // Issue #51 - Alter the avatar image returned by the get_avatar() function
     // Ref: https://codex.wordpress.org/Plugin_API/Filter_Reference/get_avatar
     function tsd_authors_plugin_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
+        // https://wordpress.stackexchange.com/a/214411/75147
+        // Properly show Avatars and Gravatars on the options-discussion.php page
+        if ( is_admin() ) {
+            $screen = get_current_screen();
+            if ( is_object( $screen ) && in_array( $screen->id, array( 'dashboard', 'options-discussion' ) ) && ( $default != 'XenForo' ) ) {
+                return $avatar;
+            }
+        }
+
         $user = false;
 
         if ( is_numeric( $id_or_email ) ) {

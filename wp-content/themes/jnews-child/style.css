@@ -149,3 +149,8 @@ li {
 #adminmenuback {
   display: none !important;
 }
+
+/* Center ad on top*/
+.ads_code > div {
+  margin: auto !important;
+}

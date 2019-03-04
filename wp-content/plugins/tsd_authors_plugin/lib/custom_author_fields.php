@@ -153,7 +153,7 @@ break;
                 continue;
             }
             if (isset($_POST['tsd_' . $field])) {
-                update_user_meta($user_id, 'tsd_' . $field, esc_attr( $_POST['tsd_' . $field] ));
+                update_user_meta($user_id, 'tsd_' . $field, $_POST['tsd_' . $field]);
             }
         }
         //}

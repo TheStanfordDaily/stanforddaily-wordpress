@@ -1,0 +1,116 @@
+.tsd-excerpt-container-small {
+	article {
+		margin-bottom: 20px;
+	}
+	.excerpt-thumb {
+		margin-right: 15px;
+		max-width: 130px;
+		.thumbnail-container {
+			height: 100%;
+			height: 100px;
+		}
+	}
+	.excerpt-content {
+		.entry-title {
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+		.entry-summary {
+			display: none;
+		}
+		.entry-meta {
+			.byline, .posted-on {
+				display: block;
+			}
+			.tsd-excerpt-byline-dash {
+				display: none;
+			}
+			.posted-on {
+				a {
+					color: inherit;
+					&::before {
+						/** Add clock icon **/
+						content: "\F017";
+						display: inline-block;
+						margin-right: 5px;
+						// https://stackoverflow.com/a/47775385/2603230
+						font-family: 'Font Awesome 5 Free';
+					}
+				}
+			}
+			.entry-meta-comment {
+				display: none;
+			}
+		}
+	}
+}
+
+.tsd-excerpt-container-textonly {
+	.excerpt-thumb {
+		display: none;
+	}
+	.excerpt-content {
+		margin-bottom: 15px;
+		.entry-title {
+			font-size: 15px;
+			margin-bottom: 0;
+		}
+		.entry-summary {
+			display: none;
+		}
+		.entry-meta {
+			.entry-meta-comment {
+				display: none;
+			}
+		}
+	}
+}
+
+.tsd-excerpt-container-bignews {
+	margin-bottom: 20px;
+	.excerpt-thumb {
+		width: 320px;
+		.thumbnail-container {
+			height: 250px;
+			line-height: 250px;
+		}
+	}
+	.excerpt-content {
+		.entry-title {
+			font-size: 25px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.entry-summary {
+			color: #666666;
+		}
+	}
+}
+
+.row.tsd-block-title {
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+	margin-top: 20px;
+	h3 {
+		background: $color__cardinal-red;
+		color: white;
+		padding: 10px 15px;
+		font-size: 17px;
+		font-weight: bold;
+		margin: 0;
+		display: inline-block;
+	}
+}
+
+.row.tsd-block {
+	margin-top: 15px;
+}
+
+.tsd-home-main {
+	.entry-title {
+		font-weight: 400;
+		&, & a {
+			color: black;
+		}
+	}
+}
