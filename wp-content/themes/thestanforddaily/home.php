@@ -62,7 +62,9 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
-						<h3 class="tsd-block-title">News</h3>
+						<a href="<?php echo get_category_link(get_category_by_slug("news")); ?>">
+							<h3 class="tsd-block-title">News</h3>
+						</a>
 					</div>
 				</div>
 				<div class="row tsd-block">
@@ -83,7 +85,9 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
-						<h3 class="tsd-block-title">Sports</h3>
+						<a href="<?php echo get_category_link(get_category_by_slug("sports")); ?>">
+							<h3 class="tsd-block-title">Sports</h3>
+						</a>
 					</div>
 				</div>
 				<div class="row tsd-block">
@@ -104,7 +108,9 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
-						<h3 class="tsd-block-title">Arts & Life</h3>
+						<a href="<?php echo get_category_link(get_category_by_slug("arts-life")); ?>">
+							<h3 class="tsd-block-title">Arts & Life</h3>
+						</a>
 					</div>
 				</div>
 				<div class="row tsd-block">
@@ -135,7 +141,9 @@ function tsd_query_not_featured_posts($args) {
 			<div class="col-12 col-lg-4">
 				<div class="row tsd-block-title">
 					<div class="col-12">
-						<h3 class="tsd-block-title">Opinions</h3>
+						<a href="<?php echo get_category_link(get_category_by_slug("opinions")); ?>">
+							<h3 class="tsd-block-title">Opinions</h3>
+						</a>
 					</div>
 				</div>
 				<div class="row tsd-block">
@@ -156,7 +164,9 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
-						<h3 class="tsd-block-title">The Grind</h3>
+						<a href="<?php echo get_category_link(get_category_by_slug("thegrind")); ?>">
+							<h3 class="tsd-block-title">The Grind</h3>
+						</a>
 					</div>
 				</div>
 				<div class="row tsd-block">
@@ -177,7 +187,9 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
-						<h3 class="tsd-block-title">Sponsored Content</h3>
+						<a href="<?php echo get_category_link(get_category_by_slug("sponsored")); ?>">
+							<h3 class="tsd-block-title">Sponsored Content</h3>
+						</a>
 					</div>
 				</div>
 				<div class="row tsd-block">
