@@ -1517,7 +1517,7 @@ a:hover, a:active {
 }
 .tsd-excerpt-container-small .excerpt-content .entry-title {
   font-size: 15px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 .tsd-excerpt-container-small .excerpt-content .entry-summary {
   display: none;
@@ -1559,6 +1559,9 @@ a:hover, a:active {
   display: none;
 }
 
+.tsd-excerpt-container-bignews {
+  margin-bottom: 20px;
+}
 .tsd-excerpt-container-bignews .excerpt-thumb {
   width: 320px;
 }
@@ -1569,6 +1572,7 @@ a:hover, a:active {
 .tsd-excerpt-container-bignews .excerpt-content .entry-title {
   font-size: 25px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .tsd-excerpt-container-bignews .excerpt-content .entry-summary {
   color: #666666;

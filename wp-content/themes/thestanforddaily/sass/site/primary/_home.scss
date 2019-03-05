@@ -13,7 +13,7 @@
 	.excerpt-content {
 		.entry-title {
 			font-size: 15px;
-			margin-bottom: 2px;
+			margin-bottom: 5px;
 		}
 		.entry-summary {
 			display: none;
@@ -67,6 +67,7 @@
 }
 
 .tsd-excerpt-container-bignews {
+	margin-bottom: 20px;
 	.excerpt-thumb {
 		width: 320px;
 		.thumbnail-container {
@@ -78,6 +79,7 @@
 		.entry-title {
 			font-size: 25px;
 			font-weight: bold;
+			margin-bottom: 10px;
 		}
 		.entry-summary {
 			color: #666666;
