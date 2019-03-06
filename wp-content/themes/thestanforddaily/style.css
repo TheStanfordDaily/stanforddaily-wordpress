@@ -1735,6 +1735,20 @@ a:hover, a:active {
 .author-box .author-content .author-description {
   margin-bottom: 0.5em;
 }
+@media screen and (max-width: 480px) {
+  .author-box .author-image {
+    float: none;
+    margin-bottom: 20px;
+  }
+  .author-box .author-content {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+  .author-box .author-content .author-name {
+    text-align: center;
+  }
+}
 
 .entry-footer {
   margin-top: 20px;

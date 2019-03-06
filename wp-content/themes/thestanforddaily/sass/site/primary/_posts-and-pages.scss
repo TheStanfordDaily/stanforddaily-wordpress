@@ -115,6 +115,23 @@
 			margin-bottom: 0.5em;
 		}
 	}
+
+	@media screen and (max-width: $size__break-phone) {
+		.author-image {
+			float: none;
+			margin-bottom: 20px;
+		}
+
+		.author-content {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 0;
+
+			.author-name {
+				text-align: center;
+			}
+		}
+	}
 }
 
 .entry-footer {
