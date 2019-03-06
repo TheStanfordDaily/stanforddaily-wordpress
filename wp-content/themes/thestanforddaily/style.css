@@ -1569,6 +1569,16 @@ a:hover, a:active {
   height: 250px;
   line-height: 250px;
 }
+@media screen and (max-width: 1024px) {
+  .tsd-excerpt-container-bignews .excerpt-thumb {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container {
+    height: auto;
+  }
+}
 .tsd-excerpt-container-bignews .excerpt-content .entry-title {
   font-size: 25px;
   font-weight: bold;
@@ -1778,7 +1788,7 @@ a:hover, a:active {
 }
 
 .excerpt-content {
-  overflow: visible;
+  overflow: auto;
 }
 .excerpt-content .entry-title {
   font-size: 30px;

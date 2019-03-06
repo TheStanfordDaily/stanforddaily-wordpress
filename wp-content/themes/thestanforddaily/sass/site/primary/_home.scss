@@ -74,6 +74,15 @@
 			height: 250px;
 			line-height: 250px;
 		}
+
+		@media screen and (max-width: $size__break-mobile) {
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+			.thumbnail-container {
+				height: auto;
+			}
+		}
 	}
 	.excerpt-content {
 		.entry-title {
