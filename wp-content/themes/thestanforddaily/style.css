@@ -1522,21 +1522,11 @@ a:hover, a:active {
 .tsd-excerpt-container-small .excerpt-content .entry-summary {
   display: none;
 }
-.tsd-excerpt-container-small .excerpt-content .entry-meta .byline, .tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on {
+.tsd-excerpt-container-small .excerpt-content .entry-meta .byline {
   display: block;
 }
-.tsd-excerpt-container-small .excerpt-content .entry-meta .tsd-excerpt-byline-dash {
-  display: none;
-}
-.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on a {
-  color: inherit;
-}
-.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on a::before {
-  /** Add clock icon **/
-  content: "";
-  display: inline-block;
-  margin-right: 5px;
-  font-family: "Font Awesome 5 Free";
+.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on {
+  display: block;
 }
 .tsd-excerpt-container-small .excerpt-content .entry-meta .entry-meta-comment {
   display: none;
@@ -1586,6 +1576,45 @@ a:hover, a:active {
 }
 .tsd-excerpt-container-bignews .excerpt-content .entry-summary {
   color: #666666;
+}
+.tsd-excerpt-container-bignews .excerpt-content .entry-meta .byline {
+  display: inline-block;
+  margin-right: 15px;
+}
+.tsd-excerpt-container-bignews .excerpt-content .entry-meta .posted-on {
+  display: inline-block;
+  margin-right: 15px;
+}
+.tsd-excerpt-container-bignews .excerpt-content .entry-meta .entry-meta-comment {
+  display: inline-block;
+}
+
+.tsd-excerpt-container-small .excerpt-content .entry-meta .byline::before, .tsd-excerpt-container-bignews .excerpt-content .entry-meta .byline::before {
+  /** Add user icon **/
+  content: "";
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 5.5px;
+  font-family: "Font Awesome 5 Free";
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .tsd-excerpt-byline-dash, .tsd-excerpt-container-bignews .excerpt-content .entry-meta .tsd-excerpt-byline-dash {
+  display: none;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on a, .tsd-excerpt-container-bignews .excerpt-content .entry-meta .posted-on a {
+  color: inherit;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .posted-on a::before, .tsd-excerpt-container-bignews .excerpt-content .entry-meta .posted-on a::before {
+  /** Add clock icon **/
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Free";
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .entry-meta-comment, .tsd-excerpt-container-bignews .excerpt-content .entry-meta .entry-meta-comment {
+  margin-left: 0;
+}
+.tsd-excerpt-container-small .excerpt-content .entry-meta .entry-meta-comment a, .tsd-excerpt-container-bignews .excerpt-content .entry-meta .entry-meta-comment a {
+  color: inherit;
 }
 
 .row.tsd-block-title {

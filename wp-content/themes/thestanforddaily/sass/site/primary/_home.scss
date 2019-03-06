@@ -19,24 +19,11 @@
 			display: none;
 		}
 		.entry-meta {
-			.byline, .posted-on {
+			.byline {
 				display: block;
 			}
-			.tsd-excerpt-byline-dash {
-				display: none;
-			}
 			.posted-on {
-				a {
-					color: inherit;
-					&::before {
-						/** Add clock icon **/
-						content: "\F017";
-						display: inline-block;
-						margin-right: 5px;
-						// https://stackoverflow.com/a/47775385/2603230
-						font-family: 'Font Awesome 5 Free';
-					}
-				}
+				display: block;
 			}
 			.entry-meta-comment {
 				display: none;
@@ -92,6 +79,59 @@
 		}
 		.entry-summary {
 			color: #666666;
+		}
+		.entry-meta {
+			.byline {
+				display: inline-block;
+				margin-right: 15px;
+			}
+			.posted-on {
+				display: inline-block;
+				margin-right: 15px;
+			}
+			.entry-meta-comment {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.tsd-excerpt-container-small, .tsd-excerpt-container-bignews {
+	.excerpt-content {
+		.entry-meta {
+			.byline {
+					&::before {
+						/** Add user icon **/
+						content: "\F007";
+						display: inline-block;
+						margin-left: 1px;
+						margin-right: 5.5px;
+						// https://stackoverflow.com/a/47775385/2603230
+						font-family: 'Font Awesome 5 Free';
+					}
+			}
+			.tsd-excerpt-byline-dash {
+				display: none;
+			}
+			.posted-on {
+				a {
+					color: inherit;
+					&::before {
+						/** Add clock icon **/
+						content: "\F017";
+						display: inline-block;
+						margin-right: 5px;
+						// https://stackoverflow.com/a/47775385/2603230
+						font-family: 'Font Awesome 5 Free';
+					}
+				}
+			}
+			.entry-meta-comment {
+				margin-left: 0;
+				a {
+					color: inherit;
+				}
+			}
 		}
 	}
 }
