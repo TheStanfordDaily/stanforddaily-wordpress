@@ -120,9 +120,8 @@ add_action( 'widgets_init', 'tsd_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tsd_scripts() {
-	wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
-	// TODO: Use style.min.css in production.
-	//wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css" );
+	//wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css" );
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
 	wp_enqueue_style( 'load-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville:400,400i,700' );
 	wp_enqueue_style( 'bootstrap-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css' );
@@ -141,6 +140,9 @@ function tsd_scripts() {
 		wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css' );
 		wp_enqueue_style( 'slick-carousel-theme-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css' );
 		wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'));
+
+		wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css' );
+		wp_enqueue_script( 'fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js', array('jquery') );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tsd_scripts' );

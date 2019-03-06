@@ -1778,7 +1778,7 @@ a:hover, a:active {
 }
 
 .excerpt-content {
-  overflow: auto;
+  overflow: visible;
 }
 .excerpt-content .entry-title {
   font-size: 30px;
