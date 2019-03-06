@@ -210,6 +210,11 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 			</div>
 		</div>
+		<div class="row tsd-block">
+			<div class="col-12" style="height: 150px">
+				<div class="scorestream-widget-container" data-ss_widget_type="horzScoreboard" data-user-widget-id="28769"></div><script async="async" type="text/javascript" src="https://scorestream.com/apiJsCdn/widgets/embed.js"></script>
+			</div>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
