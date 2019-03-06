@@ -73,8 +73,8 @@ add_action( 'init', 'tsd_add_push_notification_post_type' );
 // https://wordpress.stackexchange.com/a/137257/75147
 function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
     // https://stackoverflow.com/a/139553/2603230
-    $log_content = "<pre>".var_export( $post, true )."</pre>";
-    var_dump($log_content);
+    //$log_content = "<pre>".var_export( $post, true )."</pre>";
+    //var_dump($log_content);
 
     // TODO: only send notification to certain groups
     $user_lists = get_posts( [
@@ -145,7 +145,7 @@ function tsd_push_notification_add_admin_notice() {
         delete_transient( get_current_user_id() . 'tsd_send_pn_success' );
         ?>
         <div class="notice notice-success is-dismissible">
-            <pre>Notification sent!<?php echo "\n".$out; ?></pre>
+            <pre style="white-space: pre-wrap;">Notification sent!<?php echo "\n".$out; ?></pre>
         </div>
         <?php
     }
@@ -155,7 +155,7 @@ function tsd_push_notification_add_admin_notice() {
         ?>
         <style>#message { display: none; }</style><!-- Hide the "Post published." message -->
         <div class="notice notice-error is-dismissible">
-            <pre>Error! Message:<?php echo "\n".$out; ?></pre>
+            <pre style="white-space: pre-wrap;">Error! Message:<?php echo "\n".$out; ?></pre>
         </div>
         <?php
     }
