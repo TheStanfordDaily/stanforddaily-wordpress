@@ -125,14 +125,14 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
         return;
     }
 
-    set_transient( get_current_user_id().'tsd_send_pn_success', $decoded_body );
+    set_transient( get_current_user_id().'tsd_send_pn_success', "Response: \n" . json_encode( $decoded_body ) . "\nYour message: \n" . json_encode( $message_body ) );
 
     //wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
 }
 add_action( 'publish_tsd_push_msg', 'tsd_push_notification_post_type_on_publish', 10, 2 );
 
 function tsd_send_pn_failed( $post_id, $message ) {
-    set_transient( get_current_user_id().'tsd_send_pn_fail', $message );
+    set_transient( get_current_user_id().'tsd_send_pn_fail', "Response: \n" . json_encode( $message ) . "\nYour message: \n" . json_encode( $message_body ) );
     wp_update_post( [
         'ID' => $post_id,
         'post_status' => 'draft',
@@ -145,7 +145,7 @@ function tsd_push_notification_add_admin_notice() {
         delete_transient( get_current_user_id() . 'tsd_send_pn_success' );
         ?>
         <div class="notice notice-success is-dismissible">
-            <pre>Notification sent!<?php echo "\n"; print_r($out); ?></pre>
+            <pre>Notification sent!<?php echo "\n".$out; ?></pre>
         </div>
         <?php
     }
@@ -155,7 +155,7 @@ function tsd_push_notification_add_admin_notice() {
         ?>
         <style>#message { display: none; }</style><!-- Hide the "Post published." message -->
         <div class="notice notice-error is-dismissible">
-            <pre>Error! Message:<?php echo "\n"; print_r($out); ?></pre>
+            <pre>Error! Message:<?php echo "\n".$out; ?></pre>
         </div>
         <?php
     }
