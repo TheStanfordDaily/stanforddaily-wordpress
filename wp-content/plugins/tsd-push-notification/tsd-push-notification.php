@@ -81,9 +81,19 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
         'post_type'  => 'tsd_pn_receiver',
     ] );
 
+    $custom_fields = get_post_custom( $post_id );
+    // https://stackoverflow.com/a/4979308/2603230
+    $tsd_pn_custom_fields = [];
+    foreach ( $custom_fields as $key => $value ) {
+        if ( strpos( $key, 'tsd_pn_' ) === 0 ) {
+            // Remove `tsd_pn_` from key.
+            $tsd_pn_custom_fields[ substr( $key, 7 ) ] = $value[ 0 ];
+        }
+    }
     $message_body = [
         "title" => $post->post_title,
         "body" => $post->post_excerpt,
+        "data" => $tsd_pn_custom_fields,
     ];
 
     $all_messages = [];
