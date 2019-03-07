@@ -1418,9 +1418,6 @@ a:hover, a:active {
     margin-top: 60px;
     margin-bottom: -60px;
   }
-  .tsd-donate-header .tsd-donate-header-close {
-    top: 80px;
-  }
   .tsd-donate-header .tsd-donation-form {
     margin-top: 5px;
   }
@@ -1432,7 +1429,6 @@ a:hover, a:active {
     padding-bottom: 10px;
   }
   .tsd-donate-header .tsd-donate-header-close {
-    top: 70px;
     right: 10px;
   }
   .tsd-donate-header button[type=submit] {
