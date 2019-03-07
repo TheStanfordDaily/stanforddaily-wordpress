@@ -181,7 +181,7 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function tsd_post_thumbnail($size="post-thumbnail") {
+	function tsd_post_thumbnail( $size = "post-thumbnail" ) {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}

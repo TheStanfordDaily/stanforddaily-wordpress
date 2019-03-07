@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="excerpt-thumb">
-		<?php tsd_post_thumbnail("thumbnail"); ?>
+		<?php tsd_post_thumbnail( "thumbnail" ); ?>
 	</div><!-- .excerpt-thumb -->
 
 	<div class="excerpt-content">
