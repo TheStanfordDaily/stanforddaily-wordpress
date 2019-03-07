@@ -99,7 +99,8 @@ function tsd_authors_plugin_enable_api() {
         $user_query = new WP_User_Query([
             'meta_key' => 'tsd_section',
             'meta_value' => [''],
-            'meta_compare' => 'NOT IN'
+            'meta_compare' => 'NOT IN',
+            'orderby' => 'display_name',
         ]);
         if (!empty( $user_query->get_results())) {
             foreach($user_query->get_results() as $user) {
