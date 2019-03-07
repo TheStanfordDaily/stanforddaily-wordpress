@@ -59,7 +59,7 @@ $header_donation_banner_close_button_offset: 20px;
 	.tsd-donate-header-close {
 		position: absolute;
 		right: $header_donation_banner_close_button_offset;
-		top: $header_donation_banner_close_button_offset;
+		// We don't need top here, because we need the position to be relative to .tsd-donate-header instead of the whole page.
 		color: black;
 		z-index: 990;	// So that it can be clicked
 	}

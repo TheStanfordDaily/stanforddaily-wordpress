@@ -1406,7 +1406,6 @@ a:hover, a:active {
 .tsd-donate-header .tsd-donate-header-close {
   position: absolute;
   right: 20px;
-  top: 20px;
   color: black;
   z-index: 990;
 }
