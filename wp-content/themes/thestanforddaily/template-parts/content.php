@@ -27,10 +27,10 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php tsd_post_thumbnail("full"); ?>
-	<div style="text-align: right; width: 100%"><?php echo wp_get_attachment_caption(get_post_thumbnail_id()); ?></div>
-
 	<div class="entry-content">
+		<?php tsd_post_thumbnail( "full" ); ?>
+		<p class="post-feature-image-caption"><?php echo wp_get_attachment_caption( get_post_thumbnail_id() ); ?></p>
+
 		<?php
 		the_content( sprintf(
 			wp_kses(

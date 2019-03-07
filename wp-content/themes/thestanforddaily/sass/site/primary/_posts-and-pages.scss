@@ -62,7 +62,16 @@
 }
 
 .post-feature-image {
-	margin-top: 1.5em;
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+.post-feature-image-caption {
+	text-align: right;
+	margin-top: 5px;
+	color: gray;
+	font-size: 90%;
 }
 
 .page-content,
