@@ -51,7 +51,7 @@ function tsd_query_not_featured_posts($args) {
 						while ( have_posts() ) :
 							the_post();
 							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
+							get_template_part( 'template-parts/excerpt-thumb', get_post_type() );
 							echo "</div>";
 						endwhile;
 					else:
@@ -74,7 +74,7 @@ function tsd_query_not_featured_posts($args) {
 						while ( have_posts() ) :
 							the_post();
 							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
+							get_template_part( 'template-parts/excerpt-thumb', get_post_type() );
 							echo "</div>";
 						endwhile;
 					else:
@@ -97,7 +97,7 @@ function tsd_query_not_featured_posts($args) {
 						while ( have_posts() ) :
 							the_post();
 							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
+							get_template_part( 'template-parts/excerpt-thumb', get_post_type() );
 							echo "</div>";
 						endwhile;
 					else:
@@ -120,7 +120,7 @@ function tsd_query_not_featured_posts($args) {
 						while ( have_posts() ) :
 							the_post();
 							echo '<div class="col-12 col-lg-6 tsd-excerpt-container-small">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
+							get_template_part( 'template-parts/excerpt-thumb', get_post_type() );
 							echo "</div>";
 						endwhile;
 					else:
@@ -152,9 +152,7 @@ function tsd_query_not_featured_posts($args) {
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 tsd-excerpt-container-textonly">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
-							echo "</div>";
+							get_template_part( 'template-parts/excerpt-textonly', get_post_type() );
 						endwhile;
 					else:
 						get_template_part( 'template-parts/content', 'none' );
@@ -175,9 +173,7 @@ function tsd_query_not_featured_posts($args) {
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 tsd-excerpt-container-textonly">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
-							echo "</div>";
+							get_template_part( 'template-parts/excerpt-textonly', get_post_type() );
 						endwhile;
 					else:
 						get_template_part( 'template-parts/content', 'none' );
@@ -198,9 +194,7 @@ function tsd_query_not_featured_posts($args) {
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
-							echo '<div class="col-12 tsd-excerpt-container-textonly">';
-							get_template_part( 'template-parts/excerpt', get_post_type() );
-							echo "</div>";
+							get_template_part( 'template-parts/excerpt-textonly', get_post_type() );
 						endwhile;
 					else:
 						// Do nothing

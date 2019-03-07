@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts excerpts (e.g. in author pages, search pages, or archive pages)
+ * Template part for displaying thumbnail posts excerpts on home page.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="excerpt-thumb">
-		<?php tsd_post_thumbnail("medium"); ?>
+		<?php tsd_post_thumbnail("thumbnail"); ?>
 	</div><!-- .excerpt-thumb -->
 
 	<div class="excerpt-content">
@@ -24,10 +24,6 @@
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
-
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
 	</div><!-- .excerpt-content -->
 	<div class="clear"></div>
 </article><!-- #post-<?php the_ID(); ?> -->
