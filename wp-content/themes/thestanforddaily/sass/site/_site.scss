@@ -82,7 +82,7 @@ $header_donation_banner_close_button_offset: 20px;
 		}
 
 		.tsd-donation-form {
-			margin-top: 20px;
+			margin-top: 5px;
 		}
 	}
 }
@@ -98,6 +98,13 @@ $header_donation_banner_close_button_offset: 20px;
 		button[type=submit] {
 			width: 50%;
 			padding: 0;
+		}
+
+		.tsd-donation-form {
+			margin-top: 0;
+		}
+		.tsd-button, .tsd-select {
+			margin-top: 0;
 		}
 	}
 }

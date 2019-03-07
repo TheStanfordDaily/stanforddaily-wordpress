@@ -1423,7 +1423,7 @@ a:hover, a:active {
     top: 80px;
   }
   .tsd-donate-header .tsd-donation-form {
-    margin-top: 20px;
+    margin-top: 5px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1439,6 +1439,12 @@ a:hover, a:active {
   .tsd-donate-header button[type=submit] {
     width: 50%;
     padding: 0;
+  }
+  .tsd-donate-header .tsd-donation-form {
+    margin-top: 0;
+  }
+  .tsd-donate-header .tsd-button, .tsd-donate-header .tsd-select {
+    margin-top: 0;
   }
 }
 .tsd-donation-form-recurring {
