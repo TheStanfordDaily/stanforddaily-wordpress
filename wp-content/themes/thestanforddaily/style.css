@@ -1713,7 +1713,7 @@ a:hover, a:active {
 .page-content p,
 .entry-content p,
 .entry-summary p {
-  font-family: PT Serif;
+  font-family: "PT Serif", serif;
 }
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6,
 .entry-content h1,
