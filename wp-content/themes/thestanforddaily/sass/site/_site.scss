@@ -35,12 +35,16 @@
 
 	padding: 50px 0;
 
+	.ezoic-ad {
+		margin-bottom: 25px;
+	}
+
 	.site-info {
-		&.site-info-right {
-			text-align: right;
-		}
 		&.site-info-left {
 			text-align: left;
+		}
+		&.site-info-right {
+			text-align: right;
 		}
 
 		@media screen and (max-width: 960px) {

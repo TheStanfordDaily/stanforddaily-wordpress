@@ -1389,11 +1389,14 @@ a:hover, a:active {
   text-align: center;
   padding: 50px 0;
 }
-.site-footer .site-info.site-info-right {
-  text-align: right;
+.site-footer .ezoic-ad {
+  margin-bottom: 25px;
 }
 .site-footer .site-info.site-info-left {
   text-align: left;
+}
+.site-footer .site-info.site-info-right {
+  text-align: right;
 }
 @media screen and (max-width: 960px) {
   .site-footer .site-info.site-info-left, .site-footer .site-info.site-info-right {
