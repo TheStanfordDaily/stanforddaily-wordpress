@@ -1560,6 +1560,9 @@ a:hover, a:active {
   height: 250px;
   line-height: 250px;
 }
+.tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container img {
+  width: 100%;
+}
 @media screen and (max-width: 1024px) {
   .tsd-excerpt-container-bignews .excerpt-thumb {
     float: none;
