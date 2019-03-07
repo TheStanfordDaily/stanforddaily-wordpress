@@ -29,7 +29,7 @@
 
 	<div class="entry-content">
 		<?php tsd_post_thumbnail( "full" ); ?>
-		<p class="post-feature-image-caption"><?php echo wp_get_attachment_caption( get_post_thumbnail_id() ); ?></p>
+		<?php if ( has_post_thumbnail() ) { ?><p class="post-feature-image-caption"><?php echo wp_get_attachment_caption( get_post_thumbnail_id() ); ?></p><?php } ?>
 
 		<?php
 		the_content( sprintf(
