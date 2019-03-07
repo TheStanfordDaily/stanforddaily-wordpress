@@ -71,7 +71,7 @@ function tsd_authors_plugin_enable_api() {
 
         $meta_to_return = [
             "id" => $user->ID,
-            "name" => $user->first_name." ".$user->last_name,
+            "name" => $user->display_name,
             "email" => $user->user_email,
         ];
         foreach ($all_meta_for_user as $key => $value) {
@@ -109,7 +109,7 @@ function tsd_authors_plugin_enable_api() {
                         $eachSectionName = $theDailySections[$eachSection];
                         $userSectionsAndIDs[$eachSectionName][] = [
                             "id" => $user->ID,
-                            "name" => $user->first_name." ".$user->last_name,
+                            "name" => $user->display_name,
                             "profileImage" => tsd_authors_plugin_get_image_url_from_id(get_user_meta($user->ID, "tsd_coverImage", true), 'thumbnail'),
                         ];
                     }
