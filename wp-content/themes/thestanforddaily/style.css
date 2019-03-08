@@ -1384,9 +1384,16 @@ a:hover, a:active {
 }
 
 .site-footer {
+  padding: 50px 0;
   background: #f5f5f5;
   color: #666;
-  padding: 40px 0;
+  text-align: center;
+}
+.site-footer .ezoic-ad {
+  margin-bottom: 25px;
+}
+.site-footer .site-info.site-info-left {
+  text-align: left;
 }
 .site-footer .site-info.site-info-right {
   text-align: right;
@@ -1559,6 +1566,9 @@ a:hover, a:active {
 .tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container {
   height: 250px;
   line-height: 250px;
+}
+.tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container img {
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .tsd-excerpt-container-bignews .excerpt-thumb {
