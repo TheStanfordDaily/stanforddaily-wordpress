@@ -60,9 +60,6 @@
 		.thumbnail-container {
 			height: 250px;
 			line-height: 250px;
-			img {
-				width: 100%;
-			}
 		}
 
 		@media screen and (max-width: $size__break-mobile) {
