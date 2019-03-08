@@ -1566,9 +1566,7 @@ a:hover, a:active {
 .tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container {
   height: 250px;
   line-height: 250px;
-}
-.tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container img {
-  width: 100%;
+  background-color: transparent;
 }
 @media screen and (max-width: 1024px) {
   .tsd-excerpt-container-bignews .excerpt-thumb {
@@ -1847,6 +1845,9 @@ a:hover, a:active {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.excerpt-thumb .thumbnail-container img {
+  width: 100%;
 }
 
 .excerpt-content {
