@@ -1566,6 +1566,7 @@ a:hover, a:active {
 .tsd-excerpt-container-bignews .excerpt-thumb .thumbnail-container {
   height: 250px;
   line-height: 250px;
+  background-color: transparent;
 }
 @media screen and (max-width: 1024px) {
   .tsd-excerpt-container-bignews .excerpt-thumb {
@@ -1830,7 +1831,7 @@ a:hover, a:active {
   height: 100%;
   height: 200px;
   line-height: 200px;
-  background: white;
+  background: #f7f7f7;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;

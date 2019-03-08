@@ -60,6 +60,7 @@
 		.thumbnail-container {
 			height: 250px;
 			line-height: 250px;
+			background-color: transparent;
 		}
 
 		@media screen and (max-width: $size__break-mobile) {
