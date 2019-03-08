@@ -88,6 +88,9 @@ $header_donation_banner_close_button_offset: 20px;
 		.tsd-donation-form {
 			margin-top: 5px;
 		}
+		* {
+			font-size: 12px;
+		}
 	}
 }
 @media screen and (max-width: $size__break-phone) {
