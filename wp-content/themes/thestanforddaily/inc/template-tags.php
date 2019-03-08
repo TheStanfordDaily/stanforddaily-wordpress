@@ -202,11 +202,9 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			<div class="thumbnail-container<?php if ( ! has_post_thumbnail() ) { ?> no-thumbnail<?php } ?>">
 				<?php
 				if ( has_post_thumbnail() ) {
-					the_post_thumbnail( $size, array(
-						'alt' => the_title_attribute( array(
-							'echo' => false,
-						) ),
-					) );
+					the_post_thumbnail( $size, [
+						'title' => the_title_attribute( [ 'echo' => false ] )
+					] );
 				}
 				?>
 			</div>
