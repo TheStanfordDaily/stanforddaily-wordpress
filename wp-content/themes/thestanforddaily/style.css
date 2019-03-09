@@ -1409,6 +1409,7 @@ a:hover, a:active {
   background: #eee;
   padding: 20px;
   text-align: center;
+  font-family: "PT Serif", serif;
 }
 .tsd-donate-header .tsd-donate-header-close {
   position: absolute;
@@ -1664,14 +1665,41 @@ a:hover, a:active {
   margin: 0;
 }
 
+.single-main {
+  padding: 0 150px;
+}
+@media screen and (max-width: 1024px) {
+  .single-main {
+    padding: 0;
+  }
+}
+.single-main .entry-title {
+  text-align: center;
+  margin: 0;
+  margin-top: 5px;
+}
+@media screen and (max-width: 1024px) {
+  .single-main .entry-title {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  .single-main .entry-title {
+    font-size: 1.75rem;
+  }
+}
+.single-main .entry-meta {
+  margin-bottom: 1em;
+}
+
 .archive-main article, .search-main article {
   margin-bottom: 1.5em;
 }
 
 .entry-title {
-  font-family: Libre Baskerville;
+  font-family: "Libre Baskerville", serif;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 2.25rem;
   margin: 0 0 0.4em;
   letter-spacing: -0.04em;
 }
@@ -1681,6 +1709,7 @@ a:hover, a:active {
   line-height: 1.4em;
   margin-bottom: 20px;
   color: #a0a0a0;
+  font-family: "PT Serif", serif;
 }
 
 .entry-meta {
@@ -1718,18 +1747,17 @@ a:hover, a:active {
 .post-feature-image-caption {
   text-align: right;
   margin-top: 5px;
+  margin-bottom: 1.75em;
   color: gray;
   font-size: 90%;
+  font-style: italic;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
-}
-.page-content p,
-.entry-content p,
-.entry-summary p {
+  color: black;
   font-family: "PT Serif", serif;
 }
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6,
@@ -1746,6 +1774,10 @@ a:hover, a:active {
 .entry-summary h5,
 .entry-summary h6 {
   font-weight: bold;
+}
+
+.entry-content {
+  font-size: 1.1em;
 }
 
 .author-box {
@@ -1771,6 +1803,7 @@ a:hover, a:active {
   padding-right: 20px;
   margin-left: 30px;
   color: #a0a0a0;
+  font-family: "PT Serif", serif;
 }
 .author-box .author-content .author-name {
   font-weight: 700;

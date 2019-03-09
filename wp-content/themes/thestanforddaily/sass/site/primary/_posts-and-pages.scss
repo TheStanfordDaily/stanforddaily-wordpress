@@ -7,6 +7,29 @@
 	margin: 0;
 }
 
+.single-main {
+	padding: 0 150px;
+	@media screen and (max-width: $size__break-mobile) {
+		padding: 0;
+	}
+
+	.entry-title {
+		text-align: center;
+		margin: 0;
+		margin-top: 5px;
+		@media screen and (max-width: $size__break-mobile) {
+			text-align: left;
+		}
+		@media screen and (max-width: $size__break-phone) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.entry-meta {
+		margin-bottom: 1em;
+	}
+}
+
 .archive-main, .search-main {
 	article {
 		margin-bottom: 1.5em;
@@ -14,9 +37,9 @@
 }
 
 .entry-title {
-	font-family: Libre Baskerville;
+	font-family: 'Libre Baskerville', serif;
 	font-weight: 700;
-	font-size: 3em;
+	font-size: 2.25rem;
 	// line-height: 1.15;
 	margin: 0 0 .4em;
 	letter-spacing: -.04em;
@@ -27,6 +50,7 @@
 	line-height: 1.4em;
 	margin-bottom: 20px;
 	color: #a0a0a0;
+	font-family: "PT Serif", serif;
 }
 
 .entry-meta {
@@ -70,22 +94,26 @@
 .post-feature-image-caption {
 	text-align: right;
 	margin-top: 5px;
+	margin-bottom: 1.75em;
 	color: gray;
 	font-size: 90%;
+	font-style: italic;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
-
-	p {
-		font-family: "PT Serif", serif;
-	}
+	color: black;
+	font-family: "PT Serif", serif;
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: bold;
 	}
+}
+
+.entry-content {
+	font-size: 1.1em;
 }
 
 .author-box {
@@ -112,6 +140,7 @@
 		padding-right: 20px;
 		margin-left: 30px;
 		color: #a0a0a0;
+		font-family: "PT Serif", serif;
 
 		.author-name {
 			font-weight: 700;
