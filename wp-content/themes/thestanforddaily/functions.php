@@ -121,7 +121,7 @@ add_action( 'widgets_init', 'tsd_widgets_init' );
  */
 function tsd_scripts() {
 	//wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css" );
+	wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css", array(), filemtime( get_template_directory() . '/style.min.css' ) );
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
 	wp_enqueue_style( 'load-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville|PT+Serif:400,400i,700' );
 	wp_enqueue_style( 'bootstrap-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css' );
