@@ -121,15 +121,15 @@ add_action( 'widgets_init', 'tsd_widgets_init' );
  */
 function tsd_scripts() {
 	//wp_enqueue_style( 'tsd-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css", array(), filemtime(get_template_directory() . '/style.min.css') );
+	wp_enqueue_style( 'tsd-style', get_stylesheet_directory_uri() . "/style.min.css", array(), filemtime( get_template_directory() . '/style.min.css' ) );
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
 	wp_enqueue_style( 'load-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Libre+Baskerville|PT+Serif:400,400i,700' );
 	wp_enqueue_style( 'bootstrap-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css' );
 
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), filemtime(get_template_directory() . '/js/navigation.js'), true );
-	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime(get_template_directory() . '/js/skip-link-focus-fix.js'), true );
-	wp_enqueue_script( 'tsd-donation-banner-and-tips-widget', get_template_directory_uri() . '/js/donation-banner-and-tips-widget.js', array(), filemtime(get_template_directory() . '/js/donation-banner-and-tips-widget.js'), true );
+	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), filemtime( get_template_directory() . '/js/navigation.js' ), true );
+	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime( get_template_directory() . '/js/skip-link-focus-fix.js' ), true );
+	wp_enqueue_script( 'tsd-donation-banner-and-tips-widget', get_template_directory_uri() . '/js/donation-banner-and-tips-widget.js', array(), filemtime( get_template_directory() . '/js/donation-banner-and-tips-widget.js' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		// We are using Disqus
