@@ -147,7 +147,7 @@ function tsd_add_lazyload_to_attachment_image( $attr, $attachment ) {
 	$attr[ 'data-src' ] = $attr[ 'src' ];
 	$attr[ 'data-sizes' ] = $attr[ 'sizes' ];
 	$attr[ 'data-srcset' ] = $attr[ 'srcset' ];
-	$attr[ 'src' ] = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";	// https://stackoverflow.com/a/14115340/2603230
+	$attr[ 'src' ] = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";	// https://stackoverflow.com/a/14115340/2603230
 	$attr[ 'sizes' ] = "";
 	$attr[ 'srcset' ] = "";
 
