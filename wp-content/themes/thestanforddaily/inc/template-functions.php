@@ -139,3 +139,18 @@ function tsd_custom_default_gravatar( $avatar_defaults ) {
 	return $avatar_defaults;
 }
 add_filter( 'avatar_defaults', 'tsd_custom_default_gravatar' );
+
+// https://wordpress.stackexchange.com/a/54988/75147
+function tsd_add_lazyload_to_attachment_image( $attr, $attachment ) {
+	$attr[ 'class' ] = $attr[ 'class' ] . " lazyload";
+
+	$attr[ 'data-src' ] = $attr[ 'src' ];
+	$attr[ 'data-sizes' ] = $attr[ 'sizes' ];
+	$attr[ 'data-srcset' ] = $attr[ 'srcset' ];
+	$attr[ 'src' ] = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";	// https://stackoverflow.com/a/14115340/2603230
+	$attr[ 'sizes' ] = "";
+	$attr[ 'srcset' ] = "";
+
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'tsd_add_lazyload_to_attachment_image', 10, 2 );

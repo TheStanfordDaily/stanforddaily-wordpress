@@ -193,7 +193,11 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-feature-image">
-				<img src="<?php echo get_the_post_thumbnail_url( null, $size ); ?>" />
+				<?php
+				the_post_thumbnail( $size, [
+					'title' => the_title_attribute( [ 'echo' => false ] )
+				] );
+				?>
 			</div><!-- .post-feature-image -->
 
 		<?php else : ?>
