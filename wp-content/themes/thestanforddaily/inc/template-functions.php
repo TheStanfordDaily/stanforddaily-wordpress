@@ -142,6 +142,11 @@ add_filter( 'avatar_defaults', 'tsd_custom_default_gravatar' );
 
 // https://wordpress.stackexchange.com/a/54988/75147
 function tsd_add_lazyload_to_attachment_image( $attr, $attachment ) {
+	if ( is_admin() ) {
+		// Do not lazyload in wp-admin
+		return $attr;
+	}
+
 	$attr[ 'class' ] = $attr[ 'class' ] . " lazyload";
 
 	$attr[ 'data-src' ] = $attr[ 'src' ];
