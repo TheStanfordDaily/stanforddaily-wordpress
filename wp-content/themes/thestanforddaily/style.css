@@ -1449,6 +1449,12 @@ a:hover, a:active {
   .tsd-donate-header .tsd-button, .tsd-donate-header .tsd-select {
     margin-top: 0;
   }
+  .tsd-donate-header h3 {
+    font-size: 15px;
+  }
+  .tsd-donate-header .tsd-button, .tsd-donate-header .tsd-select, .tsd-donate-header .checkbox {
+    font-size: 12px;
+  }
 }
 .tsd-donation-form-recurring {
   display: none;
