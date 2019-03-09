@@ -193,7 +193,11 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-feature-image">
-				<img class="lazyload" data-src="<?php echo get_the_post_thumbnail_url( null, $size ); ?>" />
+				<?php
+				the_post_thumbnail( $size, [
+					'title' => the_title_attribute( [ 'echo' => false ] )
+				] );
+				?>
 			</div><!-- .post-feature-image -->
 
 		<?php else : ?>
@@ -202,9 +206,9 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			<div class="thumbnail-container<?php if ( ! has_post_thumbnail() ) { ?> no-thumbnail<?php } ?>">
 				<?php
 				if ( has_post_thumbnail() ) {
-				?>
-					<img class="lazyload" data-src="<?php echo get_the_post_thumbnail_url( null, $size ); ?>" title="<?php the_title_attribute( [ 'echo' => false ]); ?>" />
-				<?php
+					the_post_thumbnail( $size, [
+						'title' => the_title_attribute( [ 'echo' => false ] )
+					] );
 				}
 				?>
 			</div>
