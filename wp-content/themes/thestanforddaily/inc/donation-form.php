@@ -19,7 +19,6 @@ echo home_url($wp->request);?>">
 	<div class="checkbox"
 	style="
 	/* display: inline-block; */
-	margin: 0px 10px;
 	margin-top: 10px;
 	" name="monthly-donation">
 	<label><input type="checkbox" class="monthlyDonation" value="" style="
