@@ -127,9 +127,9 @@ function tsd_scripts() {
 	wp_enqueue_style( 'bootstrap-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css' );
 
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'tsd-donation-banner-and-tips-widget', get_template_directory_uri() . '/js/donation-banner-and-tips-widget.js', array(), '20190301', true );
+	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), filemtime( get_template_directory() . '/js/navigation.js' ), true );
+	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime( get_template_directory() . '/js/skip-link-focus-fix.js' ), true );
+	wp_enqueue_script( 'tsd-donation-banner-and-tips-widget', get_template_directory_uri() . '/js/donation-banner-and-tips-widget.js', array(), filemtime( get_template_directory() . '/js/donation-banner-and-tips-widget.js' ), true );
 	wp_enqueue_script( 'lazysizes', 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.5/lazysizes.min.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
