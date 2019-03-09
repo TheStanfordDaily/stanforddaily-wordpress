@@ -1694,6 +1694,19 @@ a:hover, a:active {
     font-size: 1.75rem;
   }
 }
+.single-main .entry-subtitle {
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .single-main .entry-subtitle {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  .single-main .entry-subtitle {
+    font-size: 1.15rem;
+  }
+}
 .single-main .entry-meta {
   margin-bottom: 1em;
 }
@@ -1711,11 +1724,11 @@ a:hover, a:active {
 }
 
 .entry-subtitle {
-  font-size: 1.4em;
+  font-family: "PT Serif", serif;
+  font-size: 1.2rem;
   line-height: 1.4em;
   margin-bottom: 20px;
-  color: #a0a0a0;
-  font-family: "PT Serif", serif;
+  color: gray;
 }
 
 .entry-meta {
@@ -1783,7 +1796,7 @@ a:hover, a:active {
 }
 
 .entry-content {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .author-box {
