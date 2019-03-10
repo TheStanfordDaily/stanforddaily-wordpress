@@ -1,7 +1,5 @@
 /*
  * Script run inside a Customizer preview frame.
- *
- * @output wp-includes/js/customize-preview.js
  */
 (function( exports, $ ){
 	var api = wp.customize,
@@ -237,7 +235,7 @@
 	 * @returns {void}
 	 */
 	api.addLinkPreviewing = function addLinkPreviewing() {
-		var linkSelectors = 'a[href], area[href]';
+		var linkSelectors = 'a[href], area';
 
 		// Inject links into initial document.
 		$( document.body ).find( linkSelectors ).each( function() {
@@ -337,11 +335,6 @@
 	api.prepareLinkPreview = function prepareLinkPreview( element ) {
 		var queryParams, $element = $( element );
 
-        // Skip elements with no href attribute. Check first to avoid more expensive checks down the road
-        if ( ! element.hasAttribute( 'href' ) ) {
-            return;
-        }
-
 		// Skip links in admin bar.
 		if ( $element.closest( '#wpadminbar' ).length ) {
 			return;
@@ -384,6 +377,11 @@
 			queryParams.customize_messenger_channel = api.settings.channel;
 		}
 		element.search = $.param( queryParams );
+
+		// Prevent links from breaking out of preview iframe.
+		if ( api.settings.channel ) {
+			element.target = '_self';
+		}
 	};
 
 	/**
@@ -781,7 +779,7 @@
 			api.settings.changeset.uuid = uuid;
 
 			// Update UUIDs in links and forms.
-			$( document.body ).find( 'a[href], area[href]' ).each( function() {
+			$( document.body ).find( 'a[href], area' ).each( function() {
 				api.prepareLinkPreview( this );
 			} );
 			$( document.body ).find( 'form' ).each( function() {
@@ -815,7 +813,7 @@
 
 			api.settings.changeset.autosaved = true; // Start deferring to any autosave once changeset is updated.
 
-			$( document.body ).find( 'a[href], area[href]' ).each( function() {
+			$( document.body ).find( 'a[href], area' ).each( function() {
 				api.prepareLinkPreview( this );
 			} );
 			$( document.body ).find( 'form' ).each( function() {

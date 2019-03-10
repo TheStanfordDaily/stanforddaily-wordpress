@@ -6,21 +6,17 @@
  *
  * @package WordPress
  * @subpackage Administration
- * @output wp-admin/js/nav-menu.js
  */
 
-/* global menus, postboxes, columns, isRtl, navMenuL10n, ajaxurl, wpNavMenu */
+/* global menus, postboxes, columns, isRtl, navMenuL10n, ajaxurl */
+
+var wpNavMenu;
 
 (function($) {
 
 	var api;
 
-	/**
-	 * Contains all the functions to handle WordPress navigation menus administration.
-	 *
-	 * @namespace wpNavMenu
-	 */
-	api = window.wpNavMenu = {
+	api = wpNavMenu = {
 
 		options : {
 			menuItemDepthPerLevel : 30, // Do not use directly. Use depthToPx and pxToDepth instead.
@@ -170,8 +166,6 @@
 				},
 				/**
 				 * Adds selected menu items to the menu.
-				 *
-				 * @ignore
 				 *
 				 * @param jQuery metabox The metabox jQuery object.
 				 */
@@ -835,20 +829,6 @@
 					}
 				}
 			});
-
-			$( '#menu-name' ).on( 'input', _.debounce( function () {
-				var menuName = $( document.getElementById( 'menu-name' ) ),
-					menuNameVal = menuName.val();
-
-				if ( ! menuNameVal || ! menuNameVal.replace( /\s+/, '' ) ) {
-					// Add warning for invalid menu name.
-					menuName.parent().addClass( 'form-invalid' );
-				} else {
-					// Remove warning for valid menu name.
-					menuName.parent().removeClass( 'form-invalid' );
-				}
-			}, 500 ) );
-
 			$('#add-custom-links input[type="text"]').keypress(function(e){
 				$('#customlinkdiv').removeClass('form-invalid');
 
@@ -887,14 +867,26 @@
 		},
 
 		attachQuickSearchListeners : function() {
-			var searchTimer;
+			var searchTimer,
+				inputEvent;
 
 			// Prevent form submission.
 			$( '#nav-menu-meta' ).on( 'submit', function( event ) {
 				event.preventDefault();
 			});
 
-			$( '#nav-menu-meta' ).on( 'input', '.quick-search', function() {
+			/*
+			 * Use feature detection to determine whether inputs should use
+			 * the `keyup` or `input` event. Input is preferred but lacks support
+			 * in legacy browsers. See changeset 34078, see also ticket #26600#comment:59
+			 */
+			if ( 'oninput' in document.createElement( 'input' ) ) {
+				inputEvent = 'input';
+			} else {
+				inputEvent = 'keyup';
+			}
+
+			$( '#nav-menu-meta' ).on( inputEvent, '.quick-search', function() {
 				var $this = $( this );
 
 				$this.attr( 'autocomplete', 'off' );
@@ -1180,8 +1172,8 @@
 			menuName = $('#menu-name'),
 			menuNameVal = menuName.val();
 			// Cancel and warn if invalid menu name
-			if ( ! menuNameVal || ! menuNameVal.replace( /\s+/, '' ) ) {
-				menuName.parent().addClass( 'form-invalid' );
+			if( !menuNameVal || menuNameVal == menuName.attr('title') || !menuNameVal.replace(/\s+/, '') ) {
+				menuName.parent().addClass('form-invalid');
 				return false;
 			}
 			// Copy menu theme locations

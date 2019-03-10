@@ -1,7 +1,3 @@
-/**
- * @output wp-admin/js/widgets/media-image-widget.js
- */
-
 /* eslint consistent-this: [ "error", "control" ] */
 (function( component, $ ) {
 	'use strict';
@@ -13,8 +9,8 @@
 	 *
 	 * See WP_Widget_Media_Image::enqueue_admin_scripts() for amending prototype from PHP exports.
 	 *
-	 * @class    wp.mediaWidgets.modelConstructors.media_image
-	 * @augments wp.mediaWidgets.MediaWidgetModel
+	 * @class ImageWidgetModel
+	 * @constructor
 	 */
 	ImageWidgetModel = component.MediaWidgetModel.extend({});
 
@@ -23,10 +19,10 @@
 	 *
 	 * See WP_Widget_Media_Image::enqueue_admin_scripts() for amending prototype from PHP exports.
 	 *
-	 * @class    wp.mediaWidgets.controlConstructors.media_audio
-	 * @augments wp.mediaWidgets.MediaWidgetControl
+	 * @class ImageWidgetModel
+	 * @constructor
 	 */
-	ImageWidgetControl = component.MediaWidgetControl.extend(/** @lends wp.mediaWidgets.controlConstructors.media_image.prototype */{
+	ImageWidgetControl = component.MediaWidgetControl.extend({
 
 		/**
 		 * View events.

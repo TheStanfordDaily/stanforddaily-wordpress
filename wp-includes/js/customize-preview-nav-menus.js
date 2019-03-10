@@ -1,7 +1,3 @@
-/**
- * @output wp-includes/js/customize-preview-nav-menus.js
- */
-
 /* global _wpCustomizePreviewNavMenusExports */
 
 /** @namespace wp.customize.navMenusPreview */
