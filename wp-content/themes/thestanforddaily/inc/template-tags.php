@@ -181,7 +181,7 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function tsd_post_thumbnail($size="large") {
+	function tsd_post_thumbnail( $size = "post-thumbnail" ) {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -193,7 +193,11 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-feature-image">
-				<img src="<?php echo get_the_post_thumbnail_url( null, $size ); ?>" style="height: auto; width: 100%;" />
+				<?php
+				the_post_thumbnail( $size, [
+					'title' => the_title_attribute( [ 'echo' => false ] )
+				] );
+				?>
 			</div><!-- .post-feature-image -->
 
 		<?php else : ?>
@@ -202,12 +206,9 @@ if ( ! function_exists( 'tsd_post_thumbnail' ) ) :
 			<div class="thumbnail-container<?php if ( ! has_post_thumbnail() ) { ?> no-thumbnail<?php } ?>">
 				<?php
 				if ( has_post_thumbnail() ) {
-					// TODO: What size?
-					the_post_thumbnail( 'post-thumbnail', array(
-						'alt' => the_title_attribute( array(
-							'echo' => false,
-						) ),
-					) );
+					the_post_thumbnail( $size, [
+						'title' => the_title_attribute( [ 'echo' => false ] )
+					] );
 				}
 				?>
 			</div>

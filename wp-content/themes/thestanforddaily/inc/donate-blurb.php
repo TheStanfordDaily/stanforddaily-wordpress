@@ -2,6 +2,7 @@
     background: #eee;
     padding: 10px;
     border-top: 1px solid #aa0000;
+    font-family: 'PT Serif', serif;
 ">
     <h3 style="
     /* padding: 0; */

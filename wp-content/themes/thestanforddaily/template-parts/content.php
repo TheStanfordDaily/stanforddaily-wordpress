@@ -18,20 +18,21 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php tsd_posted_by(); ?> &mdash; <?php tsd_posted_on(); tsd_comments_count(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		?>
 	</header><!-- .entry-header -->
-
-	<?php tsd_post_thumbnail("full"); ?>
-	<div style="text-align: right; width: 100%"><?php echo wp_get_attachment_caption(get_post_thumbnail_id()); ?></div>
 
 	<div class="entry-content">
 		<?php
+		if ( has_post_thumbnail() ) {
+			tsd_post_thumbnail( "full" ); ?>
+			<p class="post-feature-image-caption"><?php echo wp_get_attachment_caption( get_post_thumbnail_id() ); ?></p><?php
+		}
+		if ( 'post' === get_post_type() ) { ?>
+			<div class="entry-meta">
+				<?php tsd_posted_by(); ?> &mdash; <?php tsd_posted_on(); tsd_comments_count(); ?>
+			</div><!-- .entry-meta -->
+		<?php }
+
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
