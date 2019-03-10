@@ -165,10 +165,10 @@ add_action( 'admin_notices', 'tsd_push_notification_add_admin_notice' );
 // https://codex.wordpress.org/Taxonomies#Registering_a_taxonomy
 // https://codex.wordpress.org/Function_Reference/register_taxonomy
 function tsd_push_notification_receiver_group_init() {
-	register_taxonomy(
-		'tsd_push_msg_receiver_group',
-		[ 'tsd_push_msg', 'tsd_pn_receiver' ],
-		[
+    register_taxonomy(
+        'tsd_push_msg_receiver_group',
+        [ 'tsd_push_msg', 'tsd_pn_receiver' ],
+        [
             'labels' => [
                 'name' => 'Receiver Groups',
                 'singular_name' => 'Receiver Group',
@@ -187,15 +187,15 @@ function tsd_push_notification_receiver_group_init() {
             'show_admin_column' => true,
             'hierarchical' => true,
             'query_var' => false,
-			'rewrite' => false,
-			'capabilities' => [
+            'rewrite' => false,
+            'capabilities' => [
                 'manage_terms' => 'update_core',
                 'edit_terms' => 'update_core',
                 'delete_terms' => 'update_core',
-				'assign_terms' => 'update_core',
+                'assign_terms' => 'update_core',
             ]
         ]
-	);
+    );
 }
 add_action( 'init', 'tsd_push_notification_receiver_group_init' );
 
