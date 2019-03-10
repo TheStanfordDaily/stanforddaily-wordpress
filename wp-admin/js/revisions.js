@@ -1,11 +1,9 @@
+/* global isRtl */
 /**
  * @file Revisions interface functions, Backbone classes and
  * the revisions.php document.ready bootstrap.
  *
- * @output wp-admin/js/revisions.js
  */
-
-/* global isRtl */
 
 window.wp = window.wp || {};
 

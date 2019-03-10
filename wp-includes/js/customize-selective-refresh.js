@@ -1,7 +1,3 @@
-/**
- * @output wp-includes/js/customize-selective-refresh.js
- */
-
 /* global jQuery, JSON, _customizePartialRefreshExports, console */
 
 /** @namespace wp.customize.selectiveRefresh */
@@ -249,7 +245,7 @@ wp.customize.selectiveRefresh = ( function( $, api ) {
 		},
 
 		/**
-		 * Find all placements for this partial in the document.
+		 * Find all placements for this partial int he document.
 		 *
 		 * @since 4.5.0
 		 *
