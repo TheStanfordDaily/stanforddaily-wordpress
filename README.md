@@ -74,3 +74,14 @@ It means that grunt is up and running. Grunt will watch your `scss` files change
 # Alternative ways
 
 https://github.com/TheStanfordDaily/stanforddaily-website/wiki/Setting-up-the-Stanford-Daily-website-on-your-Mac-or-Windows-using-Local-by-Flywheel
+
+
+## Submodules
+We use submodules to track plugin dependencies from Github. WPEngine supports using submodules; that way we won't have to make copies of all the plugin files in code!
+```
+# add submodule to track master branch
+git submodule add -b master [URL to Git repo];
+
+# update your submodule
+git submodule update --remote 
+```
