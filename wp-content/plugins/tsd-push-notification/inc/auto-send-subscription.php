@@ -1,6 +1,10 @@
 <?php
 // https://wordpress.stackexchange.com/a/88335/75147
 function tsd_pn_post_transition_post_status( $new_status, $old_status, $post ) {
+	if ( get_post_type( $post ) != 'post' ) {
+		return;
+	}
+
 	if ( $new_status == 'publish' && $old_status == 'new' ) {
 		// the post is inserted
 	} else if ( $new_status == 'publish' && $old_status != 'publish' ) {
