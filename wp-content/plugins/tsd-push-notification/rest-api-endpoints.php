@@ -60,19 +60,20 @@ function tsd_push_notification_enable_api() {
             'post_type' => 'tsd_pn_receiver',
             'post_title' => $token,
             'post_status' => "publish",
-            'meta_input' => [
+            /*'meta_input' => [
                 "category_ids" => json_encode( $category_ids ),
                 "author_ids" => json_encode( $author_ids ),
                 "location_ids" => json_encode( $location_ids ),
-            ]
+            ]*/
         ]);
         return $post_id;
     }
 
     function tsd_create_update_pn_receiver( $post_id, $category_ids, $author_ids, $location_ids ) {
-        update_post_meta( $post_id, 'category_ids', json_encode( $category_ids ) );
+        // Do nothing.
+        /*update_post_meta( $post_id, 'category_ids', json_encode( $category_ids ) );
         update_post_meta( $post_id, 'author_ids', json_encode( $author_ids ) );
-        update_post_meta( $post_id, 'location_ids', json_encode( $location_ids ) );
+        update_post_meta( $post_id, 'location_ids', json_encode( $location_ids ) );*/
     }
 }
 add_action('init', 'tsd_push_notification_enable_api');

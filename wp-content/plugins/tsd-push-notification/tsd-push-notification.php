@@ -301,7 +301,7 @@ add_action( 'admin_notices', 'tsd_push_notification_add_admin_notice' );
 function tsd_push_notification_receiver_group_init() {
     register_taxonomy(
         'tsd_push_msg_receiver_group',
-        [ 'tsd_push_msg', 'tsd_pn_receiver' ],
+        [ 'tsd_push_msg' ],
         [
             'labels' => [
                 'name' => 'Receiver Groups',
