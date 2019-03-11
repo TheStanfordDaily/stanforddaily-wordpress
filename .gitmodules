@@ -1,0 +1,4 @@
+[submodule "wp-content/plugins/wp-libre-form"]
+	path = wp-content/plugins/wp-libre-form
+	url = https://github.com/libreform/wp-libre-form.git
+	branch = master
