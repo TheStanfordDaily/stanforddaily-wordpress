@@ -140,6 +140,8 @@ function tsd_pn_sub_update_subscription( $receiver_id, $item_type, $new_sub ) {
 	}
 }
 
+include_once "inc/send-notification.php";
+
 include_once "inc/rest-api-endpoints.php";
 include_once "inc/cpt-push-msg.php";
 include_once "inc/cpt-pn-receiver.php";
