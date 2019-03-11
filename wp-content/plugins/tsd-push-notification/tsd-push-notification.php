@@ -8,7 +8,141 @@
 * 1.0 (2019-02-18) - Created. (Yifei He)
 */
 
+// https://codex.wordpress.org/Creating_Tables_with_Plugins
+global $wpdb, $tsd_pn_db_version, $tsd_pn_db_table_name;
+$tsd_pn_db_version = '1.0';
+$tsd_pn_db_table_name = $wpdb->prefix . 'tsd_pn';
+
+function tsd_pn_install() {
+    global $wpdb;
+    global $tsd_pn_db_version;
+    global $tsd_pn_db_table_name;
+
+    $charset_collate = $wpdb->get_charset_collate();
+
+    $sql = "CREATE TABLE $tsd_pn_db_table_name (
+        id bigint(20) NOT NULL AUTO_INCREMENT,
+        receiver_id bigint(20) unsigned NOT NULL,
+        item_type varchar(20) NOT NULL,
+        item_id bigint(20) unsigned NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE (receiver_id, item_type, item_id),
+        INDEX (receiver_id, item_type),
+        INDEX (item_type, item_id)
+    ) $charset_collate;";
+
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    dbDelta( $sql );
+
+    add_option( 'tsd_pn_db_version', $tsd_pn_db_version );
+}
+
+function tsd_pn_install_data() {
+    global $wpdb;
+    global $tsd_pn_db_table_name;
+
+    // Do nothing
+}
+
+register_activation_hook( __FILE__, 'tsd_pn_install' );
+register_activation_hook( __FILE__, 'tsd_pn_install_data' );
+
+
+function tsd_pn_get_subscription_types() {
+    return [ "list", "category_ids", "author_ids", "location_ids" ];
+}
+
+function tsd_pn_get_sub_list_id_from_name( $name ) {
+    switch ( $name ) {
+        case "breaking":
+            return 1;
+        case "daily":
+            return 2;
+        case "weekly":
+            return 3;
+        default:
+            return -1;
+    }
+}
+
+
+function tsd_pn_sub_add( $receiver_id, $item_type, $item_id ) {
+    global $wpdb, $tsd_pn_db_table_name;
+
+    $wpdb->insert(
+        $tsd_pn_db_table_name,
+        [
+            'receiver_id' => $receiver_id,
+            'item_type' => $item_type,
+            'item_id' => $item_id,
+        ]
+    );
+}
+
+function tsd_pn_sub_delete( $receiver_id, $item_type, $item_id ) {
+    global $wpdb, $tsd_pn_db_table_name;
+
+    $wpdb->delete(
+        $tsd_pn_db_table_name,
+        [
+            'receiver_id' => $receiver_id,
+            'item_type' => $item_type,
+            'item_id' => $item_id,
+        ]
+    );
+}
+
+function tsd_pn_sub_get_receivers_for_item( $item_type, $item_id ) {
+    global $wpdb, $tsd_pn_db_table_name;
+
+    return $wpdb->get_results( "
+        SELECT receiver_id
+        FROM $tsd_pn_db_table_name
+        WHERE item_type = '" . $item_type . "'
+            AND item_id = " . $item_id . "
+    " );
+}
+
+function tsd_pn_sub_get_all_items_for_receiver( $receiver_id ) {
+    global $wpdb, $tsd_pn_db_table_name;
+
+    return $wpdb->get_results( "
+        SELECT item_type, item_id
+        FROM $tsd_pn_db_table_name
+        WHERE receiver_id = " . $receiver_id . "
+        ORDER BY item_type
+    ", ARRAY_A );
+}
+
+function tsd_pn_sub_get_items_for_receiver( $receiver_id, $item_type ) {
+    global $wpdb, $tsd_pn_db_table_name;
+
+    return $wpdb->get_col( $wpdb->prepare( "
+        SELECT item_id
+        FROM $tsd_pn_db_table_name
+        WHERE receiver_id = %d
+            AND item_type = %s
+    " , $receiver_id, $item_type ) );
+}
+
+function tsd_pn_sub_update_subscription( $receiver_id, $item_type, $new_sub ) {
+    $original_sub = tsd_pn_sub_get_items_for_receiver( $receiver_id, $item_type );
+
+    $removed_items = array_values( array_diff( $original_sub, $new_sub ) );
+    $added_items = array_values( array_diff( $new_sub, $original_sub ) );
+
+    foreach ( $removed_items as $removed_item ) {
+        tsd_pn_sub_delete( $receiver_id, $item_type, $removed_item );
+    }
+
+    foreach ( $added_items as $added_item ) {
+        tsd_pn_sub_add( $receiver_id, $item_type, $added_item );
+    }
+}
+
 include_once "rest-api-endpoints.php";
+
+
 
 function tsd_add_push_notification_post_type() {
     // Ref: https://developer.wordpress.org/reference/functions/register_post_type/#comment-351

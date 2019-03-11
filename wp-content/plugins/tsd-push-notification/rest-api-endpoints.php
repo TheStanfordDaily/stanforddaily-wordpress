@@ -20,16 +20,32 @@ function tsd_push_notification_enable_api() {
         $user_token = $request[ "token" ];
         $user_subscribing = $request[ "subscribing" ];
 
+        // Change e.g. "breaking" to 1.
+        $list_ids = [];
+        foreach ( $user_subscribing[ "list" ] as $each_list_name ) {
+            $list_ids[] = tsd_pn_get_sub_list_id_from_name( $each_list_name );
+        }
+        $user_subscribing[ "list" ] = $list_ids;
+
         $this_user = get_posts( [
             'post_type' => 'tsd_pn_receiver',
             'name' => $user_token,
         ] );
+        $post_id = -1;
         if ( empty( $this_user ) ) {
-            tsd_create_new_pn_receiver( $user_token, $user_subscribing[ "category_ids" ], $user_subscribing[ "author_ids" ], $user_subscribing[ "location_ids" ] );
+            $post_id = tsd_create_new_pn_receiver( $user_token, $user_subscribing[ "category_ids" ], $user_subscribing[ "author_ids" ], $user_subscribing[ "location_ids" ] );
         } else if ( count( $this_user ) == 1 ) {
-            tsd_create_update_pn_receiver( $this_user[0]->ID, $user_subscribing[ "category_ids" ], $user_subscribing[ "author_ids" ], $user_subscribing[ "location_ids" ] );
+            $post_id = $this_user[0]->ID;
+            tsd_create_update_pn_receiver( $post_id, $user_subscribing[ "category_ids" ], $user_subscribing[ "author_ids" ], $user_subscribing[ "location_ids" ] );
         } else {
             echo "WARNING: SHOULD NOT HAVE MORE THAN 1 POST WITH SAME NAME";
+            return [];  // TODO: return error;
+        }
+
+        if ( $post_id != -1 ) {
+            foreach ( tsd_pn_get_subscription_types() as $each_type ) {
+                tsd_pn_sub_update_subscription( $post_id, $each_type, $user_subscribing[ $each_type ] );
+            }
         }
 
         // TODO: return success / error message
@@ -50,6 +66,7 @@ function tsd_push_notification_enable_api() {
                 "location_ids" => json_encode( $location_ids ),
             ]
         ]);
+        return $post_id;
     }
 
     function tsd_create_update_pn_receiver( $post_id, $category_ids, $author_ids, $location_ids ) {
