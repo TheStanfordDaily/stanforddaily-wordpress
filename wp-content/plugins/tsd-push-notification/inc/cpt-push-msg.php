@@ -69,7 +69,7 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 	$receiver_cpt_ids = [];
 	if ( $receiver_groups ) {
 		foreach ( $receiver_groups as $each_receiver_group ) {
-			$each_receiver_group_id = tsd_pn_get_sub_list_id_from_name( $each_receiver_group->slug );
+			$each_receiver_group_id = $each_receiver_group->term_id;
 			$receiver_cpt_ids = array_merge( $receiver_cpt_ids, tsd_pn_sub_get_receivers_for_item( "list", $each_receiver_group_id ) );
 		}
 	}
