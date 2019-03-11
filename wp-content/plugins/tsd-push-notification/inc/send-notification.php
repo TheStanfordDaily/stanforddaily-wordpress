@@ -1,5 +1,23 @@
 <?php
-function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body, $data ) {
+// Returns whether the push notification process is successfully completed.
+// $manual parameter changes the behavior of no receiver;
+// I.e. If it's not manual, no error will be produced when there's no receiver.
+function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body, $data, $manual = false ) {
+	if ( empty( $receiver_pn_users_ids ) ) {
+		if ( $manual ) {
+			tsd_pn_set_admin_notice( 'fail', "No receiver!" );
+			return false;
+		} else {
+			// Do nothing
+			return true;
+		}
+	}
+	if ( empty( $title ) ) {
+		tsd_pn_set_admin_notice( 'fail', "Missing title!" );
+		return false;
+	}
+	// TODO: Check char. limit for title and body
+
 	$message_body = [
 		"title" => $title,
 		"body" => $body,
@@ -12,6 +30,15 @@ function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body,
 		'post_type' => 'tsd_pn_receiver',
 		'include' => $receiver_pn_users_ids,
 	] );
+	if ( empty( $receiver_pn_users ) ) {
+		if ( $manual ) {
+			tsd_pn_set_admin_notice( 'fail', "No receiver!\nThis might be a bug. Please note down what you are doing and contact the Tech Team!" );
+			return false;
+		} else {
+			// Do nothing
+			return true;
+		}
+	}
 
 	$all_messages = [];
 	foreach ( $receiver_pn_users as $each_user ) {
@@ -32,24 +59,24 @@ function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body,
 
 	if ( is_wp_error( $response ) ) {
 		$error_message = $response->get_error_message();
-		tsd_send_pn_failed( $post_id, $error_message, $message_body );
+		tsd_pn_set_admin_notice( 'fail', "Response: \n" . json_encode( $error_message ) . "\nYour message: \n" . json_encode( $message_body ) );
 		return false;
 	}
 
 	$decoded_body = json_decode( $response[ "body" ], true );
 	if ( $response[ "response" ][ "code" ] != 200 ) {
-		tsd_send_pn_failed( $post_id, $decoded_body, $message_body );
+		tsd_pn_set_admin_notice( 'fail', "Response: \n" . json_encode( $decoded_body ) . "\nYour message: \n" . json_encode( $message_body ) );
 		return false;
 	}
 
-	set_transient( get_current_user_id().'tsd_send_pn_success', "Response: \n" . json_encode( $decoded_body ) . "\nYour message: \n" . json_encode( $message_body ) );
+	tsd_pn_set_admin_notice( 'success', "Response: \n" . json_encode( $decoded_body ) . "\nYour message: \n" . json_encode( $message_body ) );
 	//wp_die( "Notification sent!<br />".$log_content, "Notification sent!", [ "response" => 200, "back_link" => true ] );
 
 	return true;
 }
 
-function tsd_send_pn_failed( $post_id, $response_message, $sent_message ) {
-	set_transient( get_current_user_id().'tsd_send_pn_fail', "Response: \n" . json_encode( $response_message ) . "\nYour message: \n" . json_encode( $sent_message ) );
+function tsd_pn_set_admin_notice( $status, $content ) {
+	set_transient( get_current_user_id() . 'tsd_send_pn_' . $status, $content );
 }
 
 // https://stackoverflow.com/a/19822056/2603230

@@ -87,7 +87,8 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 		$receiver_cpt_ids,
 		$post->post_title,
 		$post->post_excerpt,
-		$tsd_pn_custom_fields
+		$tsd_pn_custom_fields,
+		true
 	);
 
 	// If failed.
