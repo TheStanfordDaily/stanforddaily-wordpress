@@ -92,6 +92,17 @@ function tsd_pn_sub_delete( $receiver_id, $item_type, $item_id ) {
     );
 }
 
+function tsd_pn_sub_clear_receiver( $receiver_id ) {
+    global $wpdb, $tsd_pn_db_table_name;
+
+    $wpdb->delete(
+        $tsd_pn_db_table_name,
+        [
+            'receiver_id' => $receiver_id,
+        ]
+    );
+}
+
 function tsd_pn_sub_get_receivers_for_item( $item_type, $item_id ) {
     global $wpdb, $tsd_pn_db_table_name;
 
@@ -363,3 +374,14 @@ function tsd_add_push_notification_receiver_post_type() {
     register_post_type( 'tsd_pn_receiver', $args );
 }
 add_action( 'init', 'tsd_add_push_notification_receiver_post_type' );
+
+// https://wordpress.stackexchange.com/a/91052/75147
+function tsd_push_notification_receiver_post_type_trash_post( $post_id ) {
+    $post_type = get_post_type( $post_id );
+    $post_status = get_post_status( $post_id );
+
+    if ( $post_type == 'tsd_pn_receiver' && in_array( $post_status, [ 'publish', 'draft', 'future' ] ) ) {
+        tsd_pn_sub_clear_receiver( $post_id );
+    }
+}
+add_action( 'wp_trash_post', 'tsd_push_notification_receiver_post_type_trash_post' );
