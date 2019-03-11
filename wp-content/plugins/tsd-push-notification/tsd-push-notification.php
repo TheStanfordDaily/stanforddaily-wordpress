@@ -95,14 +95,15 @@ function tsd_pn_sub_delete( $receiver_id, $item_type, $item_id ) {
 function tsd_pn_sub_get_receivers_for_item( $item_type, $item_id ) {
     global $wpdb, $tsd_pn_db_table_name;
 
-    return $wpdb->get_results( "
+    return $wpdb->get_col( $wpdb->prepare( "
         SELECT receiver_id
         FROM $tsd_pn_db_table_name
-        WHERE item_type = '" . $item_type . "'
-            AND item_id = " . $item_id . "
-    " );
+        WHERE item_type = %s
+            AND item_id = %d
+    " , $item_type, $item_id ) );
 }
 
+// TODO: REMOVE THIS FUNCTION
 function tsd_pn_sub_get_all_items_for_receiver( $receiver_id ) {
     global $wpdb, $tsd_pn_db_table_name;
 
@@ -210,9 +211,18 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
     //$log_content = "<pre>".var_export( $post, true )."</pre>";
     //var_dump($log_content);
 
+    $receiver_groups = get_the_terms( $post->ID, 'tsd_push_msg_receiver_group' );
+    $receiver_cpt_ids = [];
+    foreach ( $receiver_groups as $each_receiver_group ) {
+        $each_receiver_group_id = tsd_pn_get_sub_list_id_from_name( $each_receiver_group->slug );
+        $receiver_cpt_ids = array_merge( $receiver_cpt_ids, tsd_pn_sub_get_receivers_for_item( "list", $each_receiver_group_id ) );
+    }
+    $receiver_cpt_ids = array_unique( $receiver_cpt_ids );
+
     // TODO: only send notification to certain groups
     $user_lists = get_posts( [
-        'post_type'  => 'tsd_pn_receiver',
+        'post_type' => 'tsd_pn_receiver',
+        'include' => $receiver_cpt_ids,
     ] );
 
     $custom_fields = get_post_custom( $post_id );
@@ -227,8 +237,10 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
     $message_body = [
         "title" => $post->post_title,
         "body" => $post->post_excerpt,
-        "data" => $tsd_pn_custom_fields,
     ];
+    if ( ! empty( $tsd_pn_custom_fields ) ) {
+        $message_body[ "data" ] = $tsd_pn_custom_fields;
+    }
 
     $all_messages = [];
     foreach ( $user_lists as $each_user ) {
@@ -249,13 +261,13 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 
     if ( is_wp_error( $response ) ) {
         $error_message = $response->get_error_message();
-        tsd_send_pn_failed( $post_id, $error_message );
+        tsd_send_pn_failed( $post_id, $error_message, $message_body );
         return;
     }
 
     $decoded_body = json_decode( $response[ "body" ], true );
     if ( $response[ "response" ][ "code" ] != 200 ) {
-        tsd_send_pn_failed( $post_id, $decoded_body );
+        tsd_send_pn_failed( $post_id, $decoded_body, $message_body );
         return;
     }
 
@@ -265,8 +277,8 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 }
 add_action( 'publish_tsd_push_msg', 'tsd_push_notification_post_type_on_publish', 10, 2 );
 
-function tsd_send_pn_failed( $post_id, $message ) {
-    set_transient( get_current_user_id().'tsd_send_pn_fail', "Response: \n" . json_encode( $message ) . "\nYour message: \n" . json_encode( $message_body ) );
+function tsd_send_pn_failed( $post_id, $response_message, $sent_message ) {
+    set_transient( get_current_user_id().'tsd_send_pn_fail', "Response: \n" . json_encode( $response_message ) . "\nYour message: \n" . json_encode( $sent_message ) );
     wp_update_post( [
         'ID' => $post_id,
         'post_status' => 'draft',
