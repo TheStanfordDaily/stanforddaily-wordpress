@@ -75,30 +75,3 @@ function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body,
 
 	return true;
 }
-
-function tsd_pn_set_admin_notice( $status, $content ) {
-	set_transient( get_current_user_id() . 'tsd_send_pn_' . $status, $content );
-}
-
-// https://stackoverflow.com/a/19822056/2603230
-function tsd_push_notification_add_admin_notice() {
-	if ( $out = get_transient( get_current_user_id() . 'tsd_send_pn_success' ) ) {
-		delete_transient( get_current_user_id() . 'tsd_send_pn_success' );
-		?>
-		<div class="notice notice-success is-dismissible">
-			<pre style="white-space: pre-wrap;">Notification sent!<?php echo "\n".$out; ?></pre>
-		</div>
-		<?php
-	}
-
-	if ( $out = get_transient( get_current_user_id() . 'tsd_send_pn_fail' ) ) {
-		delete_transient( get_current_user_id() . 'tsd_send_pn_fail' );
-		?>
-		<style>#message { display: none; }</style><!-- Hide the "Post published." message -->
-		<div class="notice notice-error is-dismissible">
-			<pre style="white-space: pre-wrap;">Error! Message:<?php echo "\n".$out; ?></pre>
-		</div>
-		<?php
-	}
-}
-add_action( 'admin_notices', 'tsd_push_notification_add_admin_notice' );

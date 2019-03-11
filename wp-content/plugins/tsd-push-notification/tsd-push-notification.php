@@ -13,6 +13,8 @@ global $wpdb, $tsd_pn_db_version, $tsd_pn_db_table_name;
 $tsd_pn_db_version = '1.0';
 $tsd_pn_db_table_name = $wpdb->prefix . 'tsd_pn';
 
+include_once "inc/helper.php";
+
 function tsd_pn_install() {
 	global $wpdb;
 	global $tsd_pn_db_version;
@@ -46,24 +48,6 @@ function tsd_pn_install_data() {
 
 register_activation_hook( __FILE__, 'tsd_pn_install' );
 register_activation_hook( __FILE__, 'tsd_pn_install_data' );
-
-
-function tsd_pn_get_subscription_types() {
-	return [ "list", "category_ids", "author_ids", "location_ids" ];
-}
-
-function tsd_pn_get_sub_list_id_from_name( $name ) {
-	switch ( $name ) {
-		case "breaking":
-			return 1;
-		case "daily":
-			return 2;
-		case "weekly":
-			return 3;
-		default:
-			return -1;
-	}
-}
 
 
 function tsd_pn_sub_add( $receiver_id, $item_type, $item_id ) {
