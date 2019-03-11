@@ -67,9 +67,11 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 
 	$receiver_groups = get_the_terms( $post->ID, 'tsd_push_msg_receiver_group' );
 	$receiver_cpt_ids = [];
-	foreach ( $receiver_groups as $each_receiver_group ) {
-		$each_receiver_group_id = tsd_pn_get_sub_list_id_from_name( $each_receiver_group->slug );
-		$receiver_cpt_ids = array_merge( $receiver_cpt_ids, tsd_pn_sub_get_receivers_for_item( "list", $each_receiver_group_id ) );
+	if ( $receiver_groups ) {
+		foreach ( $receiver_groups as $each_receiver_group ) {
+			$each_receiver_group_id = tsd_pn_get_sub_list_id_from_name( $each_receiver_group->slug );
+			$receiver_cpt_ids = array_merge( $receiver_cpt_ids, tsd_pn_sub_get_receivers_for_item( "list", $each_receiver_group_id ) );
+		}
 	}
 	$receiver_cpt_ids = array_unique( $receiver_cpt_ids );
 
