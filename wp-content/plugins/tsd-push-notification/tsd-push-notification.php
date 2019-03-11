@@ -103,18 +103,6 @@ function tsd_pn_sub_get_receivers_for_item( $item_type, $item_id ) {
     " , $item_type, $item_id ) );
 }
 
-// TODO: REMOVE THIS FUNCTION
-function tsd_pn_sub_get_all_items_for_receiver( $receiver_id ) {
-    global $wpdb, $tsd_pn_db_table_name;
-
-    return $wpdb->get_results( "
-        SELECT item_type, item_id
-        FROM $tsd_pn_db_table_name
-        WHERE receiver_id = " . $receiver_id . "
-        ORDER BY item_type
-    ", ARRAY_A );
-}
-
 function tsd_pn_sub_get_items_for_receiver( $receiver_id, $item_type ) {
     global $wpdb, $tsd_pn_db_table_name;
 
