@@ -3,6 +3,7 @@
 // $manual parameter changes the behavior of no receiver;
 // I.e. If it's not manual, no error will be produced when there's no receiver.
 function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body, $data, $manual = false ) {
+	// We have to check this first because `'include' => []` below will return all tsd_pn_receiver.
 	if ( empty( $receiver_pn_users_ids ) ) {
 		if ( $manual ) {
 			tsd_pn_set_admin_notice( 'fail', "No receiver!" );
@@ -12,20 +13,6 @@ function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body,
 			return true;
 		}
 	}
-	if ( empty( $title ) ) {
-		tsd_pn_set_admin_notice( 'fail', "Missing title!" );
-		return false;
-	}
-	// TODO: Check char. limit for title and body
-
-	$message_body = [
-		"title" => $title,
-		"body" => $body,
-	];
-	if ( ! empty( $data ) ) {
-		$message_body[ "data" ] = $data;
-	}
-
 	$receiver_pn_users = get_posts( [
 		'post_type' => 'tsd_pn_receiver',
 		'include' => $receiver_pn_users_ids,
@@ -40,10 +27,24 @@ function tsd_send_expo_push_notification( $receiver_pn_users_ids, $title, $body,
 		}
 	}
 
+	if ( empty( $title ) ) {
+		tsd_pn_set_admin_notice( 'fail', "Missing title!" );
+		return false;
+	}
+	// TODO: Check char. limit for title and body
+
+	$message_body = [
+		"title" => $title,
+		"body" => $body,
+	];
+	if ( ! empty( $data ) ) {
+		$message_body[ "data" ] = $data;
+	}
+
 	$all_messages = [];
 	foreach ( $receiver_pn_users as $each_user ) {
 		$each_message = $message_body;
-		$each_message[ "to" ] = $each_user->post_title;
+		$each_message[ "to" ] = $each_user->post_title;	// post_title is the user token
 		$all_messages[] = $each_message;
 	}
 
