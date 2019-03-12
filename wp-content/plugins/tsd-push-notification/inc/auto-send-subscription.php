@@ -22,6 +22,7 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 
 		$notification_receiver_ids = [];
 
+		// Authors
 		$post_authors = [ (int) $post->post_author ];
 		if ( function_exists( "get_coauthors" ) ) {
 			$post_authors = [];
@@ -31,6 +32,13 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 		}
 		foreach ( $post_authors as $each_author ) {
 			$notification_receiver_ids = array_merge( $notification_receiver_ids, tsd_pn_sub_get_receivers_for_item( 'author_ids', $each_author ) );
+		}
+
+		// Categories
+		$post_categories = get_the_category( $post_id );
+		foreach ( $post_categories as $each_category ) {
+			$each_category_id = $each_category->term_id;
+			$notification_receiver_ids = array_merge( $notification_receiver_ids, tsd_pn_sub_get_receivers_for_item( 'category_ids', $each_category_id ) );
 		}
 
 
@@ -49,7 +57,7 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 		);
 
 		// DEBUG
-		set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $notification_receiver_ids ] );
+		set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $post_categories, $notification_receiver_ids ] );
 	}
 }
 /**
