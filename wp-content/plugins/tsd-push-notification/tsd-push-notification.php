@@ -132,3 +132,5 @@ include_once "inc/cpt-pn-receiver.php";
 include_once "inc/ct-receiver-group.php";
 
 include_once "inc/auto-send-subscription.php";
+
+include_once "inc/admin-menu.php";
