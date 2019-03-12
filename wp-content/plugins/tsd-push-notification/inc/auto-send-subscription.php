@@ -69,3 +69,5 @@ function tsd_pn_post_save_post( $post_id, $post ) {
  * When the author click "Publish", `_tsd_pn_sent` first becomes "ready" (by `tsd_pn_post_transition_post_status`), then becomes "sent" (by `tsd_pn_post_save_post`).
  */
 add_action( 'save_post', 'tsd_pn_post_save_post', 20, 2 );
+// TODO: get_the_category and get_coauthors only seems to be working only if the post is saved as draft before (as opposed to directly clicking "Publish".)
+// That seems to be a bug of gutenberg because Classic Editor seems to be working fine.
