@@ -35,21 +35,21 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 
 
 		$notification_receiver_ids = array_unique( $notification_receiver_ids );
-
+		$notification_title = $post->post_title;
 		$notification_body = trim( strip_tags( get_extended( $post->post_content )[ "main" ] ) );
-
-		set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $notification_receiver_ids ] );
-
 		$notification_data = [
 			"post_id" => $post_id,
 		];
 
 		$send_results = tsd_send_expo_push_notification(
 			$notification_receiver_ids,
-			$post->post_title,
+			$notification_title,
 			$notification_body,
 			$notification_data
 		);
+
+		// DEBUG
+		set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $notification_receiver_ids ] );
 	}
 }
 /**
