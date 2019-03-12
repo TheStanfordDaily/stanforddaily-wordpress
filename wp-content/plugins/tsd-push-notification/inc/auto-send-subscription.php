@@ -19,6 +19,9 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 		// See note below (for `save_post` action) as for why we need to do this.
 		update_post_meta( $post_id, '_tsd_pn_sent', 'sent' );
 
+
+		$notification_receiver_ids = [];
+
 		$post_authors = [ (int) $post->post_author ];
 		if ( function_exists( "get_coauthors" ) ) {
 			$post_authors = [];
@@ -26,17 +29,23 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 				$post_authors[] = (int) $each_author->ID;
 			}
 		}
+		foreach ( $post_authors as $each_author ) {
+			$notification_receiver_ids = array_merge( $notification_receiver_ids, tsd_pn_sub_get_receivers_for_item( 'author_ids', $each_author ) );
+		}
+
+
+		$notification_receiver_ids = array_unique( $notification_receiver_ids );
 
 		$notification_body = trim( strip_tags( get_extended( $post->post_content )[ "main" ] ) );
 
-		set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), get_coauthors( $post_id ) ] );
+		set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $notification_receiver_ids ] );
 
 		$notification_data = [
 			"post_id" => $post_id,
 		];
 
 		$send_results = tsd_send_expo_push_notification(
-			[1144875, 1144876],	// TODO: actually get receivers
+			$notification_receiver_ids,
 			$post->post_title,
 			$notification_body,
 			$notification_data
