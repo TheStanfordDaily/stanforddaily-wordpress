@@ -7,6 +7,9 @@ function tsd_pn_plugin_menu() {
 		'tsd-push-notification.php',
 		'tsd_pn_plugin_settings_page'
 	);
+
+	// DEBUG
+	//set_transient( "tsd_pn_debug_info", [] );
 }
 add_action( 'admin_menu', 'tsd_pn_plugin_menu' );
 
