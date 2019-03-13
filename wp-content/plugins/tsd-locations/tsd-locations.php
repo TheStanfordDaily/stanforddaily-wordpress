@@ -231,5 +231,22 @@ function tsd_locations_plugin_enable_api() {
 
         return $results;
     }
+
+
+    // For TSD Push Notification
+    function tsd_locations_plugin_get_location_ids_by_tags( $tag_slugs ) {
+        $results = [];
+        $locations = tsd_locations_plugin_get_locations();
+        foreach( $locations as $each_location_info ) {
+            $each_location_id = $each_location_info[ "id" ];
+            $each_location_tags = $each_location_info[ "tagSlug" ];
+            foreach( $tag_slugs as $tag_slug ) {
+                if ( in_array( $tag_slug, $each_location_tags ) ) {
+                    $results[] = $each_location_id;
+                }
+            }
+        }
+        return array_unique( $results );
+    }
 }
 add_action('init', 'tsd_locations_plugin_enable_api');
