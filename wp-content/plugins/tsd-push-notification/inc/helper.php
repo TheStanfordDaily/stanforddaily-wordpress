@@ -3,6 +3,7 @@ function tsd_pn_get_subscription_types() {
 	return [ "list", "category_ids", "author_ids", "location_ids" ];
 }
 
+// Change the `slug` of a term in `tsd_push_msg_receiver_group` (e.g. "breaking") to its `term_id`.
 function tsd_pn_get_sub_list_id_from_name( $name ) {
 	$term_id = get_term_by( 'slug', $name, 'tsd_push_msg_receiver_group' )->term_id;
 	return (int) $term_id;	// See "Warning: string vs integer confusion!" on https://codex.wordpress.org/Function_Reference/get_term_by

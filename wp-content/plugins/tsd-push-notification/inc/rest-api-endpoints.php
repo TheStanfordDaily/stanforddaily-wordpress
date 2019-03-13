@@ -20,7 +20,6 @@ function tsd_push_notification_enable_api() {
 		$user_token = $request[ "token" ];
 		$user_subscribing = $request[ "subscribing" ];
 
-		// Change e.g. "breaking" to 1.
 		$list_ids = [];
 		foreach ( $user_subscribing[ "list" ] as $each_list_name ) {
 			$list_ids[] = tsd_pn_get_sub_list_id_from_name( $each_list_name );
