@@ -59,13 +59,9 @@ function tsd_add_push_notification_post_type() {
 }
 add_action( 'init', 'tsd_add_push_notification_post_type' );
 
-// https://wordpress.stackexchange.com/a/137257/75147
-function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
-	// https://stackoverflow.com/a/139553/2603230
-	//$log_content = "<pre>".var_export( $post, true )."</pre>";
-	//var_dump($log_content);
-
-	$receiver_groups = get_the_terms( $post->ID, 'tsd_push_msg_receiver_group' );
+// Input post must support custom taxonomy "tsd_push_msg_receiver_group"
+function tsd_pn_get_receiver_ids_from_tsd_push_msg_receiver_group( $post_id ) {
+	$receiver_groups = get_the_terms( $post_id, 'tsd_push_msg_receiver_group' );
 	$receiver_cpt_ids = [];
 	if ( $receiver_groups ) {
 		foreach ( $receiver_groups as $each_receiver_group ) {
@@ -74,6 +70,16 @@ function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
 		}
 	}
 	$receiver_cpt_ids = array_unique( $receiver_cpt_ids );
+	return $receiver_cpt_ids;
+}
+
+// https://wordpress.stackexchange.com/a/137257/75147
+function tsd_push_notification_post_type_on_publish( $post_id, $post ) {
+	// https://stackoverflow.com/a/139553/2603230
+	//$log_content = "<pre>".var_export( $post, true )."</pre>";
+	//var_dump($log_content);
+
+	$receiver_cpt_ids = tsd_pn_get_receiver_ids_from_tsd_push_msg_receiver_group( $post_id );
 
 	$custom_fields = get_post_custom( $post_id );
 	// https://stackoverflow.com/a/4979308/2603230
