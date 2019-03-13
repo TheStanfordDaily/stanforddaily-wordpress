@@ -9,7 +9,7 @@ function tsd_pn_plugin_menu() {
 	);
 
 	// DEBUG
-	//set_transient( "tsd_pn_debug_info", [] );
+	//update_option( "tsd_pn_debug_info", [] );
 }
 add_action( 'admin_menu', 'tsd_pn_plugin_menu' );
 
@@ -18,7 +18,7 @@ function tsd_pn_plugin_settings_page() {
 <div class="wrap">
 	<h1>TSD Push Notification Debug</h1>
 	<pre>
-	<?php var_dump( get_transient( "tsd_pn_debug_info" ) ); ?>
+	<?php var_dump( get_option( "tsd_pn_debug_info" ) ); ?>
 	</pre>
 </div>
 	<?php

@@ -68,8 +68,8 @@ function tsd_pn_post_save_post( $post_id, $post ) {
 		);
 
 		// DEBUG
-		//set_transient( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $post_categories, $notification_receiver_ids ] );
-		set_transient( "tsd_pn_debug_info", array_merge( get_transient( "tsd_pn_debug_info" ), [ [ date('m/d/Y h:i:s a', time()), $post_authors, $post_categories, $notification_receiver_ids, $post_tags_slugs, $post_location_ids ] ] ) );
+		//update_option( "tsd_pn_debug_info", [ date('m/d/Y h:i:s a', time()), $post_authors, $post_categories, $notification_receiver_ids ] );
+		update_option( "tsd_pn_debug_info", array_merge( get_option( "tsd_pn_debug_info" ), [ [ date('m/d/Y h:i:s a', time()), $post_authors, $post_categories, $notification_receiver_ids, $post_tags_slugs, $post_location_ids ] ] ) );
 	}
 }
 /**
