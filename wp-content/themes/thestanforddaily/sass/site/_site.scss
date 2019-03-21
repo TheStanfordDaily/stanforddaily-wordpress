@@ -160,14 +160,23 @@ $header_donation_banner_close_button_offset: 20px;
 .tsd-tips-toggle-mobile {
 	display: none;
 	background: $color__cardinal-red;
-	width: 50px;
-	padding: 0;
+	height: 100%;
+	line-height: $mobile_top_sticky_bar_height;
+	padding: 0 10px;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 0;
 	right: 0;
+	text-align: center;
 	@media screen and (max-width: $size__break-mobile) {
 		display: block !important;
+	}
+	@media screen and (max-width: $size__break-phone) {
+		padding: 0 5px;
+		line-height: 45px;
+		i {
+			display: block;
+			margin-top: -10px;
+		}
 	}
 }
 
@@ -194,9 +203,6 @@ $header_donation_banner_close_button_offset: 20px;
 	}
 	.tsd-tips-toggle > div {
 		padding: 10px 20px !important;
-	}
-	.tsd-tips-expanded {
-		top: 80px;
 	}
 }
 

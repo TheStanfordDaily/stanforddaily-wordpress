@@ -1,6 +1,6 @@
 <a href="#" class="tsd-tips-toggle tsd-tips-toggle-mobile">
-    TIPS
-    <i class="fa fa-caret-down" style=""></i>
+	TIPS
+	<i class="fa fa-caret-down" style=""></i>
 </a>
 <div class="tsd-tips-expanded">
 	<div class="tsd-sidebar-tips-container">

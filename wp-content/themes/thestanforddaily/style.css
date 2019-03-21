@@ -1496,17 +1496,27 @@ a:hover, a:active {
 .tsd-tips-toggle-mobile {
   display: none;
   background: #8c1515;
-  width: 50px;
-  padding: 0;
+  height: 100%;
+  line-height: 60px;
+  padding: 0 10px;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 0;
   right: 0;
+  text-align: center;
 }
 @media screen and (max-width: 1024px) {
   .tsd-tips-toggle-mobile {
     display: block !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tsd-tips-toggle-mobile {
+    padding: 0 5px;
+    line-height: 45px;
+  }
+  .tsd-tips-toggle-mobile i {
+    display: block;
+    margin-top: -10px;
   }
 }
 
@@ -1535,10 +1545,6 @@ a:hover, a:active {
 
   .tsd-tips-toggle > div {
     padding: 10px 20px !important;
-  }
-
-  .tsd-tips-expanded {
-    top: 80px;
   }
 }
 /*--------------------------------------------------------------
