@@ -157,25 +157,52 @@ $header_donation_banner_close_button_offset: 20px;
 	}
 }
 
+.tsd-tips-toggle-mobile {
+	display: none;
+	background: $color__cardinal-red;
+	height: 100%;
+	line-height: $mobile_top_sticky_bar_height;
+	padding: 0 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	@media screen and (max-width: $size__break-mobile) {
+		display: block !important;
+	}
+	@media screen and (max-width: $size__break-phone) {
+		padding: 0 5px;
+		line-height: 45px;
+		i {
+			display: block;
+			margin-top: -10px;
+		}
+	}
+}
+
 .tsd-tips-expanded {
 	display: none;
 	width: 350px;
-	max-width: 100vw;
+	max-width: 100%;
 	position: absolute;
 	top: 52px;
 	right: 0;
 	z-index: 9999999;
 }
 
+.tsd-shown-sm {
+	display: none;
+}
+
 @media only screen and (max-width: 768px) {
 	.tsd-hidden-sm {
 		display: none;
 	}
+	.tsd-shown-sm {
+		display: block;
+	}
 	.tsd-tips-toggle > div {
 		padding: 10px 20px !important;
-	}
-	.tsd-tips-expanded {
-		top: 80px;
 	}
 }
 
