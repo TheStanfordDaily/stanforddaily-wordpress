@@ -1523,7 +1523,7 @@ a:hover, a:active {
 .tsd-tips-expanded {
   display: none;
   width: 350px;
-  max-width: 100vw;
+  max-width: 100%;
   position: absolute;
   top: 52px;
   right: 0;
