@@ -157,6 +157,20 @@ $header_donation_banner_close_button_offset: 20px;
 	}
 }
 
+.tsd-tips-toggle-mobile {
+	display: none;
+	background: $color__cardinal-red;
+	width: 50px;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	@media screen and (max-width: $size__break-mobile) {
+		display: block !important;
+	}
+}
+
 .tsd-tips-expanded {
 	display: none;
 	width: 350px;
@@ -167,9 +181,16 @@ $header_donation_banner_close_button_offset: 20px;
 	z-index: 9999999;
 }
 
+.tsd-shown-sm {
+	display: none;
+}
+
 @media only screen and (max-width: 768px) {
 	.tsd-hidden-sm {
 		display: none;
+	}
+	.tsd-shown-sm {
+		display: block;
 	}
 	.tsd-tips-toggle > div {
 		padding: 10px 20px !important;

@@ -72,6 +72,9 @@
 					}
 				?></<?php echo $title_tag; ?>>
 
+
+				<?php include "inc/tips-widget-mobile.php"; ?>
+
 				<div class="header-right">
 					<a href="/email-digests/" class="tsd-button outline"><i class="fas fa-envelope" style="margin-right: 8px;"></i>Email Digest</a>
 
