@@ -258,8 +258,7 @@ class WPForms_Smart_Tags {
 		if ( ! empty( $query_vars[1] ) ) {
 
 			foreach ( $query_vars[1] as $key => $query_var ) {
-
-				$value   = ! empty( $_GET[ $query_var ] ) ? sanitize_text_field( $_GET[ $query_var ] ) : '';
+				$value   = ! empty( $_GET[ $query_var ] ) ? wp_unslash( sanitize_text_field( $_GET[ $query_var ] ) ) : ''; // phpcs:ignore
 				$content = str_replace( $query_vars[0][ $key ], $value, $content );
 			}
 		}

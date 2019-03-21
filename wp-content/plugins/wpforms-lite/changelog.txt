@@ -1,11 +1,16 @@
 == Changelog ==
 
+= 1.5.1.3 =
+- Fixed: Importing forms that containing `target="_blank"`.
+- Fixed: Quote support/display inside query param Smart Tags.
+- Fixed: Other minor fixes.
+
 = 1.5.1.1 =
 - Fixed: Conflict with WordPress 5.1 if form contained target="_blank".
 - Fixed: Unable to uncheck default Multiple Choice value in form builder after being set initially.
 - Fixed: PHP error when entries are exported after a field has been deleted.
 - Fixed: Form builder Email notification conditional logic settings display issue after new notification is added.
-- Fixed: Conflict with some themes preventing Multiple Choice fields from being selectable.
+- Fixed: - Conflict with some themes preventing Multiple Choice fields from being selectable.
 
 = 1.5.1 =
 - Added: Complete translations for Spanish, Italian, Japanese, and German.

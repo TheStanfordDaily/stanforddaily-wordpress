@@ -307,8 +307,16 @@ class WPForms_Builder {
 		wp_enqueue_script(
 			'wpforms-builder',
 			WPFORMS_PLUGIN_URL . 'assets/js/admin-builder.js',
-			array( 'wpforms-utils', 'jquery-ui-sortable', 'jquery-ui-draggable', 'tooltipster', 'jquery-confirm' ),
+			array( 'wpforms-utils', 'wpforms-admin-builder-templates', 'jquery-ui-sortable', 'jquery-ui-draggable', 'tooltipster', 'jquery-confirm' ),
 			WPFORMS_VERSION
+		);
+
+		wp_enqueue_script(
+			'wpforms-admin-builder-templates',
+			WPFORMS_PLUGIN_URL . "assets/js/components/admin/builder/templates{$min}.js",
+			array( 'wp-util' ),
+			WPFORMS_VERSION,
+			true
 		);
 
 		$strings = array(

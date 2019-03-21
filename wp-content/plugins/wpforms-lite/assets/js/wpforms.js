@@ -470,9 +470,15 @@
 			} );
 
 			// Checkbox/Radio/Payment checkbox: toggle selected state class.
-			$( document ).on( 'change', '.wpforms-field-checkbox input, .wpforms-field-radio input, .wpforms-field-payment-multiple input, .wpforms-field-payment-checkbox input, .wpforms-field-gdpr-checkbox input', function() {
+			$( document ).on( 'change', '.wpforms-field-checkbox input, .wpforms-field-radio input, .wpforms-field-payment-multiple input, .wpforms-field-payment-checkbox input, .wpforms-field-gdpr-checkbox input', function( event ) {
 
-				var $this = $( this );
+				var $this  = $( this ),
+					$field = $this.closest( '.wpforms-field' );
+
+				if ( $field.hasClass( 'wpforms-conditional-hide' ) ) {
+					event.preventDefault();
+					return false;
+				}
 
 				switch ( $this.attr( 'type' ) ) {
 					case 'radio':

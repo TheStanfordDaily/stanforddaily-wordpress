@@ -165,18 +165,26 @@ abstract class WPForms_Provider {
 			);
 		}
 
+		$name          = ! empty( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
+		$task          = ! empty( $_POST['task'] ) ? sanitize_text_field( wp_unslash( $_POST['task'] ) ) : '';
+		$id            = ! empty( $_POST['id'] ) ? sanitize_text_field( wp_unslash( $_POST['id'] ) ) : '';
+		$connection_id = ! empty( $_POST['connection_id'] ) ? sanitize_text_field( wp_unslash( $_POST['connection_id'] ) ) : '';
+		$account_id    = ! empty( $_POST['account_id'] ) ? sanitize_text_field( wp_unslash( $_POST['account_id'] ) ) : '';
+		$list_id       = ! empty( $_POST['list_id'] ) ? sanitize_text_field( wp_unslash( $_POST['list_id'] ) ) : '';
+		$data          = ! empty( $_POST['data'] ) && is_array( array_map( 'sanitize_text_field', wp_unslash( $_POST['data'] ) ) ) ? : array();
+
 		/*
 		 * Create new connection.
 		 */
 
-		if ( 'new_connection' === $_POST['task'] ) {
+		if ( 'new_connection' === $task ) {
 
 			$connection = $this->output_connection(
 				'',
 				array(
-					'connection_name' => stripslashes( $_POST['name'] ),
+					'connection_name' => $name,
 				),
-				$_POST['id']
+				$id
 			);
 			wp_send_json_success(
 				array(
@@ -189,9 +197,9 @@ abstract class WPForms_Provider {
 		 * Create new Provider account.
 		 */
 
-		if ( 'new_account' === $_POST['task'] ) {
+		if ( 'new_account' === $task ) {
 
-			$auth = $this->api_auth( stripslashes_deep( wp_parse_args( $_POST['data'], array() ) ), $_POST['id'] );
+			$auth = $this->api_auth( $data, $id );
 
 			if ( is_wp_error( $auth ) ) {
 
@@ -204,7 +212,7 @@ abstract class WPForms_Provider {
 			} else {
 
 				$accounts = $this->output_accounts(
-					$_POST['connection_id'],
+					$connection_id,
 					array(
 						'account_id' => $auth,
 					)
@@ -221,12 +229,12 @@ abstract class WPForms_Provider {
 		 * Select/Toggle Provider accounts.
 		 */
 
-		if ( 'select_account' === $_POST['task'] ) {
+		if ( 'select_account' === $task ) {
 
 			$lists = $this->output_lists(
-				$_POST['connection_id'],
+				$connection_id,
 				array(
-					'account_id' => $_POST['account_id'],
+					'account_id' => $account_id,
 				)
 			);
 
@@ -252,12 +260,16 @@ abstract class WPForms_Provider {
 		 * Select/Toggle Provider account lists.
 		 */
 
-		if ( 'select_list' === $_POST['task'] ) {
+		if ( 'select_list' === $task ) {
 
-			$fields = $this->output_fields( $_POST['connection_id'], array(
-				'account_id' => $_POST['account_id'],
-				'list_id'    => $_POST['list_id'],
-			), $_POST['id'] );
+			$fields = $this->output_fields(
+				$connection_id,
+				array(
+					'account_id' => $account_id,
+					'list_id'    => $list_id,
+				),
+				$id
+			);
 
 			if ( is_wp_error( $fields ) ) {
 
@@ -270,29 +282,29 @@ abstract class WPForms_Provider {
 			} else {
 
 				$groups = $this->output_groups(
-					$_POST['connection_id'],
+					$connection_id,
 					array(
-						'account_id' => $_POST['account_id'],
-						'list_id'    => $_POST['list_id'],
+						'account_id' => $account_id,
+						'list_id'    => $list_id,
 					)
 				);
 
 				$conditionals = $this->output_conditionals(
-					$_POST['connection_id'],
+					$connection_id,
 					array(
-						'account_id' => $_POST['account_id'],
-						'list_id'    => $_POST['list_id'],
+						'account_id' => $account_id,
+						'list_id'    => $list_id,
 					),
 					array(
-						'id' => absint( $_POST['form_id'] ),
+						'id' => absint( $_POST['form_id'] ), //phpcs:ignore
 					)
 				);
 
 				$options = $this->output_options(
-					$_POST['connection_id'],
+					$connection_id,
 					array(
-						'account_id' => $_POST['account_id'],
-						'list_id'    => $_POST['list_id'],
+						'account_id' => $account_id,
+						'list_id'    => $list_id,
 					)
 				);
 

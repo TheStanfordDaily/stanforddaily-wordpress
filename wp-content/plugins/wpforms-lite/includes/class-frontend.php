@@ -906,7 +906,7 @@ class WPForms_Frontend {
 		// Load jQuery input mask library - https://github.com/RobinHerbots/jquery.inputmask.
 		if (
 			$this->assets_global() ||
-			true === wpforms_has_field_type( array( 'phone', 'address', 'date-time' ), $this->forms, true ) ||
+			true === wpforms_has_field_type( array( 'phone', 'address' ), $this->forms, true ) ||
 			true === wpforms_has_field_setting( 'input_mask', $this->forms, true )
 		) {
 			wp_enqueue_script(

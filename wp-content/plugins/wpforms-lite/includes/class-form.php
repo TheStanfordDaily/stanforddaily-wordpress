@@ -421,8 +421,15 @@ class WPForms_Form_Handler {
 		) );
 
 		if ( ! empty( $form['field_id'] ) ) {
+
 			$field_id = absint( $form['field_id'] );
-			$form['field_id'] ++;
+
+			if ( ! empty( $form['fields'] ) && max( array_keys( $form['fields'] ) ) > $field_id ) {
+				$field_id = max( array_keys( $form['fields'] ) ) + 1;
+			}
+
+			$form['field_id'] = $field_id + 1;
+
 		} else {
 			$field_id         = '0';
 			$form['field_id'] = '1';
