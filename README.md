@@ -79,12 +79,20 @@ https://github.com/TheStanfordDaily/stanforddaily-website/wiki/Setting-up-the-St
 ## Submodules
 We use submodules to track plugin dependencies from Github. WPEngine supports using submodules; that way we won't have to make copies of all the plugin files in code!
 ```
+
+### Pulling latest changes from submodules (after cloning or when submodules are updated)
+
+# init submodules
+git submodule init
+
+# update your submodule
+git submodule update --remote
+
+### Adding a new submodule
 # add submodule to track master branch
 git submodule add -b master [URL to Git repo] [sub-directory path]
 
 # for example: adding a plugin to the `wp-content/plugins/` folder
 git submodule add -b master https://github.com/TheStanfordDaily/tsd-push-notification.git wp-content/plugins/tsd-push-notification
 
-# update your submodule
-git submodule update --remote
 ```
