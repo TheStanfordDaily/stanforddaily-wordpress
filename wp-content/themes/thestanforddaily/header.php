@@ -25,9 +25,14 @@
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
 <div id="page" class="site">
-	<?php if (get_post_field( 'post_name', get_post() ) !== 'join-the-daily') {
+	<?php
+	/*
+	if (get_post_field( 'post_name', get_post() ) !== 'join-the-daily') {
 		include "inc/apply-blurb.php"; 
-	}?>
+	}
+	*/
+	include "inc/donate-header.php";
+	?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tsd' ); ?></a>
 	<div class="background-overlay"></div>
 
