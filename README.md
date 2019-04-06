@@ -1,3 +1,8 @@
+<img src="https://user-images.githubusercontent.com/1689183/55673023-25239a00-5857-11e9-9699-5f2d0ab365cf.png" width="100">
+
+# Stanford Daily website
+This is the Stanford Daily website. See it live at https://www.stanforddaily.com/. Contributions welcome!
+
 # Local setup
 
 ## Installation
