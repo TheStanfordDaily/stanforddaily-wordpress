@@ -1308,7 +1308,7 @@ a {
   .tsd-tips-toggle > div {
     padding: 10px 20px !important; } }
 .ezoic-ad {
-  width: 100%; }
+  display: block; }
 
 /*--------------------------------------------------------------
 ## Home page
