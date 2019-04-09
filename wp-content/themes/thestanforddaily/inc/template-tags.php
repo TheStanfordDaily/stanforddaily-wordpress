@@ -64,11 +64,18 @@ if ( ! function_exists( 'tsd_posted_by' ) ) :
 			$author_html = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 		endif;
 
+		$format_string = 'by %s';
+		
+		if (has_category('news')) {
+			$format_string = 'Satire by %s';
+		}
+
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'tsd' ),
+			esc_html_x( $format_string, 'post author', 'tsd' ),
 			$author_html
 		);
+		
 
 		if ($show_avatar) {
 			tsd_posted_by_avatar();
