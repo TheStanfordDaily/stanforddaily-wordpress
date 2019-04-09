@@ -66,7 +66,7 @@ if ( ! function_exists( 'tsd_posted_by' ) ) :
 
 		$format_string = 'by %s';
 		
-		if (has_category('news')) {
+		if (has_category('satire')) {
 			$format_string = 'Satire by %s';
 		}
 
