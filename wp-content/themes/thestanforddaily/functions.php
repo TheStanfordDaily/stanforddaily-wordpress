@@ -130,7 +130,7 @@ function tsd_scripts() {
 	wp_enqueue_script( 'tsd-navigation', get_template_directory_uri() . '/js/navigation.js', array(), filemtime( get_template_directory() . '/js/navigation.js' ), true );
 	wp_enqueue_script( 'tsd-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime( get_template_directory() . '/js/skip-link-focus-fix.js' ), true );
 	wp_enqueue_script( 'tsd-donation-banner-and-tips-widget', get_template_directory_uri() . '/js/donation-banner-and-tips-widget.js', array(), filemtime( get_template_directory() . '/js/donation-banner-and-tips-widget.js' ), true );
-	wp_enqueue_script( 'lazysizes', 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.5/lazysizes.min.js' );
+	wp_enqueue_script( 'lazysizes', 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.5/lazysizes.min.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		// We are using Disqus
@@ -140,10 +140,10 @@ function tsd_scripts() {
 	if ( is_category( "magazine" ) ) {
 		wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css' );
 		wp_enqueue_style( 'slick-carousel-theme-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css' );
-		wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'));
+		wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'), '', true);
 
 		wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css' );
-		wp_enqueue_script( 'fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js', array('jquery') );
+		wp_enqueue_script( 'fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js', array('jquery'), '', true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tsd_scripts' );
