@@ -1932,9 +1932,13 @@ a:hover, a:active {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #82221D;
 }
 .excerpt-thumb .thumbnail-container img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .excerpt-content {
