@@ -141,6 +141,30 @@ function tsd_query_not_featured_posts($args) {
 			<div class="col-12 col-lg-4">
 				<div class="row tsd-block-title">
 					<div class="col-12">
+						<a href="https://www.stanforddaily.com/2019/04/19/modeling-the-draw/">
+							<h3 class="tsd-block-title">Modeling the Draw</h3>
+						</a>
+					</div>
+				</div>
+				<div class="row tsd-block">
+					<div class="col-12 tsd-excerpt-container-textonly">
+						<article id="post-1144742" class="post-1144742 post type-post status-publish format-standard hentry category-op-eds category-opinions">
+							<div class="excerpt-content">
+								<header class="entry-header">
+									<p style='margin-bottom: 0; font-family: "PT Serif",serif;'>Our calculator can tell you the probability that you draw into ANY RESIDENCE on campus. Try it now!</p>
+									<br />
+									<a href="https://www.stanforddaily.com/2019/04/19/modeling-the-draw/">
+										<button class="tsd-button outline">Calculate your chances</button>
+									</a>
+													<div class="entry-meta">
+								</header><!-- .entry-header -->
+							</div><!-- .excerpt-content -->
+							<div class="clear"></div>
+						</article><!-- #post-1144742 -->
+					</div>
+				</div>
+				<div class="row tsd-block-title">
+					<div class="col-12">
 						<a href="<?php echo get_category_link(get_category_by_slug("opinions")); ?>">
 							<h3 class="tsd-block-title">Opinions</h3>
 						</a>
