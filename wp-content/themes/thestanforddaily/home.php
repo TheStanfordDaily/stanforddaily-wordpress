@@ -129,14 +129,6 @@ function tsd_query_not_featured_posts($args) {
 					wp_reset_query();
 					?>
 				</div>
-				<div class="row tsd-block">
-					<div class="col-12 col-lg-6">
-						<a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/StanfordDaily?ref_src=twsrc%5Etfw">Tweets by StanfordDaily</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</div>
-					<div class="col-12 col-lg-6">
-						<div class="fb-page" data-href="https://www.facebook.com/stanforddaily" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/stanforddaily" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/stanforddaily">The Stanford Daily</a></blockquote></div>
-					</div>
-				</div>
 			</div>
 			<div class="col-12 col-lg-4">
 				<div class="row tsd-block-title">
