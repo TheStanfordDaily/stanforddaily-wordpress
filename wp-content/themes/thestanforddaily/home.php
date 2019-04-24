@@ -136,16 +136,32 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 					wp_reset_query();
 					?>
 				</div>
-				<div class="row tsd-block">
-					<div class="col-12 col-lg-6">
-						<a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/StanfordDaily?ref_src=twsrc%5Etfw">Tweets by StanfordDaily</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</div>
-					<div class="col-12 col-lg-6">
-						<div class="fb-page" data-href="https://www.facebook.com/stanforddaily" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/stanforddaily" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/stanforddaily">The Stanford Daily</a></blockquote></div>
-					</div>
-				</div>
 			</div>
 			<div class="col-12 col-lg-4">
+				<div class="row tsd-block-title">
+					<div class="col-12">
+						<a href="https://www.stanforddaily.com/2019/04/19/modeling-the-draw/">
+							<h3 class="tsd-block-title">Modeling the Draw</h3>
+						</a>
+					</div>
+				</div>
+				<div class="row tsd-block">
+					<div class="col-12 tsd-excerpt-container-textonly">
+						<article id="post-1144742" class="post-1144742 post type-post status-publish format-standard hentry category-op-eds category-opinions">
+							<div class="excerpt-content">
+								<header class="entry-header">
+									<p style='margin-bottom: 0; font-family: "PT Serif",serif;'>Our calculator can tell you the probability that you draw into ANY RESIDENCE on campus. Try it now!</p>
+									<br />
+									<a href="https://www.stanforddaily.com/2019/04/19/modeling-the-draw/">
+										<button class="tsd-button outline">Calculate your chances</button>
+									</a>
+													<div class="entry-meta">
+								</header><!-- .entry-header -->
+							</div><!-- .excerpt-content -->
+							<div class="clear"></div>
+						</article><!-- #post-1144742 -->
+					</div>
+				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
 						<a href="<?php echo get_category_link(get_category_by_slug("opinions")); ?>">
