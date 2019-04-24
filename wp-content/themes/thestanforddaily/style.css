@@ -964,8 +964,11 @@ a:hover, a:active {
   .main-topbar {
     margin-top: 60px;
   }
-  .main-topbar .menu-new-top-bar-menu-container {
+  .main-topbar .site-topbar-left {
     display: none;
+  }
+  .main-topbar .site-topbar-right {
+    margin: 0 auto;
   }
 
   .site-branding {

@@ -264,8 +264,11 @@
 
 	.main-topbar {
 		margin-top: $mobile_top_sticky_bar_height;
-		.menu-new-top-bar-menu-container {
+		.site-topbar-left {
 			display: none;
+		}
+		.site-topbar-right {
+			margin: 0 auto;
 		}
 	}
 
