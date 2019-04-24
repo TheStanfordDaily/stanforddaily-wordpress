@@ -263,7 +263,13 @@
 	}
 
 	.main-topbar {
-		display: none;
+		margin-top: $mobile_top_sticky_bar_height;
+		.site-topbar-left {
+			display: none;
+		}
+		.site-topbar-right {
+			margin: 0 auto;
+		}
 	}
 
 	.site-branding {
@@ -385,11 +391,6 @@
 			transition: .2s ease;
 			z-index: 9999;
 		}
-	}
-
-	.site-content {
-		// To make sure that the nav bar does not cover the content.
-		margin-top: $mobile_top_sticky_bar_height;
 	}
 }
 
