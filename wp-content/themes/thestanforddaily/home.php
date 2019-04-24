@@ -12,16 +12,9 @@
 get_header();
 
 $featured_post_query = new WP_Query( array (
-    'posts_per_page'        => 3,
+    'posts_per_page' => 3,
 	'fields' => 'ids',
-	'tax_query' => array (
-		array (
-			'taxonomy' => 'category',
-			'field'    => 'slug',
-			'terms'    => "featured",
-			'operator' => 'NOT IN'
-		)
-	)
+	'category_name' => 'featured'
 ));
 $featured_post_ids = $featured_post_query->posts;
 
