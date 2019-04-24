@@ -962,7 +962,13 @@ a:hover, a:active {
   }
 
   .main-topbar {
+    margin-top: 60px;
+  }
+  .main-topbar .site-topbar-left {
     display: none;
+  }
+  .main-topbar .site-topbar-right {
+    margin: 0 auto;
   }
 
   .site-branding {
@@ -1084,10 +1090,6 @@ a:hover, a:active {
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     z-index: 9999;
-  }
-
-  .site-content {
-    margin-top: 60px;
   }
 }
 .site-main .comment-navigation,
