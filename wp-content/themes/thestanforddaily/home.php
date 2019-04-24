@@ -12,7 +12,7 @@
 get_header();
 
 $featured_post_query = new WP_Query( array (
-    'posts_per_page' => 3,
+	'posts_per_page' => 3,
 	'fields' => 'ids',
 	'category_name' => 'featured'
 ));
