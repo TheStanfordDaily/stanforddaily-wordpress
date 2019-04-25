@@ -11,15 +11,15 @@
 
 get_header();
 
-$featured_post_query = new WP_Query( array (
-	'posts_per_page' => 3,
-	'fields' => 'ids',
-	'category_name' => 'featured'
-));
-$featured_post_ids = $featured_post_query->posts;
-
-$tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
-	$args['post__not_in'] = $featured_post_ids;
+function tsd_query_not_featured_posts($args) {
+	$args['tax_query'] = array (
+		array (
+			'taxonomy' => 'category',
+			'field'    => 'slug',
+			'terms'    => "featured",
+			'operator' => 'NOT IN'
+		)
+	);
 	return query_posts($args);
 }
 ?>
@@ -31,7 +31,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				<div class="row">
 					<div class="col-12 tsd-excerpt-container-bignews">
 						<?php
-						query_posts( array ( 'post__in' => array_slice($featured_post_ids, 0, 1) ));
+						query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ));
 						if ( have_posts() ) :
 							while ( have_posts() ) :
 								the_post();
@@ -46,7 +46,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					query_posts( array ( 'post__in' => array_slice($featured_post_ids, 1) ) );
+					query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 2, 'offset' => 1 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
@@ -69,7 +69,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					$tsd_query_not_featured_posts( array ( 'category_name' => 'NEWS', 'posts_per_page' => 4 ) );
+					tsd_query_not_featured_posts( array ( 'category_name' => 'NEWS', 'posts_per_page' => 4 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
@@ -92,7 +92,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					$tsd_query_not_featured_posts( array ( 'category_name' => 'SPORTS', 'posts_per_page' => 6 ) );
+					tsd_query_not_featured_posts( array ( 'category_name' => 'SPORTS', 'posts_per_page' => 6 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
@@ -115,7 +115,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					$tsd_query_not_featured_posts( array ( 'category_name' => 'arts-life', 'posts_per_page' => 6 ) );
+					tsd_query_not_featured_posts( array ( 'category_name' => 'arts-life', 'posts_per_page' => 6 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
@@ -164,7 +164,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					$tsd_query_not_featured_posts( array ( 'category_name' => 'opinions', 'posts_per_page' => 4 ) );
+					tsd_query_not_featured_posts( array ( 'category_name' => 'opinions', 'posts_per_page' => 4 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
@@ -185,7 +185,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					$tsd_query_not_featured_posts( array ( 'category_name' => 'thegrind', 'posts_per_page' => 4 ) );
+					tsd_query_not_featured_posts( array ( 'category_name' => 'thegrind', 'posts_per_page' => 4 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
@@ -206,7 +206,7 @@ $tsd_query_not_featured_posts = function($args) use ($featured_post_ids) {
 				</div>
 				<div class="row tsd-block">
 					<?php
-					$tsd_query_not_featured_posts( array ( 'category_name' => 'sponsored', 'posts_per_page' => 4 ) );
+					tsd_query_not_featured_posts( array ( 'category_name' => 'sponsored', 'posts_per_page' => 4 ) );
 					if ( have_posts() ) :
 						while ( have_posts() ) :
 							the_post();
