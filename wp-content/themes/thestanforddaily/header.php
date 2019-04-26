@@ -28,7 +28,7 @@
 	<?php
 	/*
 	if (get_post_field( 'post_name', get_post() ) !== 'join-the-daily') {
-		include "inc/apply-blurb.php"; 
+		include "inc/apply-blurb.php";
 	}
 	*/
 	include "inc/donate-header.php";
@@ -40,7 +40,7 @@
 		<nav id="site-topbar" class="main-topbar">
 			<div class="container">
 				<div class="nav-row">
-					<div class="nav-col">
+					<div class="nav-col site-topbar-left">
 						<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-topbar',
@@ -48,7 +48,7 @@
 						) );
 						?>
 					</div>
-					<div class="nav-col">
+					<div class="nav-col site-topbar-right">
 						<form role="search" method="get" class="topbar-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<label>
 								<span class="screen-reader-text">Search for:</span>
