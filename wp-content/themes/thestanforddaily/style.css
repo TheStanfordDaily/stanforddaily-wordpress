@@ -1548,7 +1548,7 @@ a:hover, a:active {
   }
 }
 .ezoic-ad {
-  display: block;
+  display: block !important;
 }
 
 /*--------------------------------------------------------------
