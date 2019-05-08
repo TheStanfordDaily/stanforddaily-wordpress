@@ -21,5 +21,12 @@
 				<?php $donation_location = "header"; include "donation-form.php"; ?>
 			</div>
 		</div>
+		<a href="https://www.facebook.com/stanforddaily/videos/2393176237634752/">
+		<div class="row" style="background: red; color: white;">
+			<div class="col-12 text-center">
+				<h3><strong>LIVE: </strong>Watch the second meeting of the 21st Undergraduate Senate.</h3>
+			</div>
+		</div>
+		</a>
 	</div>
 </div>
