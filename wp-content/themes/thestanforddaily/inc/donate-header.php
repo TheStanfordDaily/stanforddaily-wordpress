@@ -22,9 +22,9 @@
 			</div>
 		</div>
 		<a href="https://www.facebook.com/stanforddaily/videos/2393176237634752/">
-		<div class="row" style="background: red; color: white;">
+		<div class="row" style="background: red;">
 			<div class="col-12 text-center">
-				<h3><strong>LIVE: </strong>Watch the second meeting of the 21st Undergraduate Senate.</h3>
+				<h3 style="color: white; text-decoration: underline"><strong>LIVE: </strong>Watch the second meeting of the 21st Undergraduate Senate.</h3>
 			</div>
 		</div>
 		</a>
