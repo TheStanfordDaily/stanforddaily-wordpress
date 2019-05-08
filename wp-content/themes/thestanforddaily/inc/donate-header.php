@@ -22,11 +22,11 @@
 			</div>
 		</div>
 		<?php
-		// $post = get_page_by_path('header');
-		// if ($post) {
-		// 	$content = apply_filters('the_content', $post->post_content);
-		// 	echo $content;
-		// }
+		$post = get_page_by_path('header');
+		if ($post) {
+			$content = apply_filters('the_content', $post->post_content);
+			echo $content;
+		}
 	?>
 	</div>
 </div>
