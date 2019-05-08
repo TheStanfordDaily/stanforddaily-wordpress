@@ -51,7 +51,7 @@ add_filter( 'excerpt_more', 'custom_excerpt_more' );
  * Add donate blurb to the bottom of every article page
  */
 function tsd_add_donate_blurb_to_content( $content ) {
-    if( is_single() ) {
+    if( is_single() && get_the_title() != "sidebar" && get_the_title() != "header" ) {
         ob_start();
         include "donate-blurb.php";
         $donate_blurb_content = ob_get_contents();
