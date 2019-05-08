@@ -131,18 +131,13 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 			</div>
 			<div class="col-12 col-lg-4">
-				<div class="row tsd-block-title">
-					<div class="col-12">
-						<a href="https://www.stanforddaily.com/podcasts/">
-							<h3 class="tsd-block-title">The Daily Brew</h3>
-						</a>
-					</div>
-				</div>
-				<div class="row tsd-block">
-					<div class="col-12 tsd-excerpt-container-textonly">
-						<iframe src="https://anchor.fm/the-daily-brew/embed/episodes/05---Greek-Life-at-Stanford-e3sg6v" width="100%" height="100px" frameborder="0" scrolling="no"></iframe>
-					</div>
-				</div>
+				<?php
+						$post = get_page_by_path('sidebar');
+						if ($post) {
+							$content = apply_filters('the_content', $post->post_content);
+							echo $content;
+						}
+				?>
 				<div class="row tsd-block-title">
 					<div class="col-12">
 						<a href="<?php echo get_category_link(get_category_by_slug("opinions")); ?>">
