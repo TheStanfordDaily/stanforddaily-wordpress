@@ -572,13 +572,51 @@ WPFormsChallenge.core = window.WPFormsChallenge.core || ( function( document, wi
 		triggerPageSave: function() {
 
 			if ( app.isGutenberg() ) {
-				$( '.gutenberg .editor-post-publish-button' ).trigger( 'click' );
+				app.gutenbergPageSave();
 
 				// TODO: Find a way to reload Gutenberg editor after save.
 			} else {
 				$( '#post #publish' ).trigger( 'click' );
 			}
 		},
+
+		/**
+		 * Save page for Gutenberg
+		 *
+		 * @since 1.5.2
+		 */
+		gutenbergPageSave: function() {
+			// use MutationObserver to wait while guttenberg create panel with Publish button
+			var obs = {
+				targetNode  : $('.block-editor .edit-post-layout')[0],
+				config      : {
+					childList: true
+				},
+			};
+
+			obs.callback = function ( mutationsList, observer ) {
+				var mutation;
+				for (var i in mutationsList) {
+					mutation = mutationsList[i];
+					if ( mutation.type === 'childList' ) {
+						var $btn = $( '.block-editor .editor-post-publish-button');
+						if ($btn.length > 0) {
+							$btn.trigger( 'click' );
+							observer.disconnect();
+						}
+					}
+				}
+			}
+
+			obs.observer = new MutationObserver( obs.callback );
+			obs.observer.observe( obs.targetNode, obs.config );
+
+			$( '.block-editor .edit-post-toggle-publish-panel__button').trigger( 'click' );
+		}
+
+
+
+
 	};
 
 	// Provide access to public functions/properties.

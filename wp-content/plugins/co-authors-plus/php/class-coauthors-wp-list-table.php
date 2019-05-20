@@ -250,14 +250,15 @@ class CoAuthors_WP_List_Table extends WP_List_Table {
 	 */
 	function column_posts( $item ) {
 		global $coauthors_plus;
-		$term = $coauthors_plus->get_author_term( $item );
-		$guest_term = get_term_by( 'slug', 'cap-' . $item->user_nicename, $coauthors_plus->coauthor_taxonomy );
-		if ( ! empty( $item->linked_account ) && $guest_term->count ) {
-			$count = count_user_posts( get_user_by( 'slug', $item->linked_account )->ID );
-		} elseif ( $term ) {
-			$count = $term->count;
-		} else {
-			$count = 0;
+		$count = $coauthors_plus->get_guest_author_post_count( $item );
+
+		if ( ! empty( $item->linked_account ) ) {
+			global $coauthors_plus;
+			// Add user term count to guest author term count.
+			$term = get_term_by( 'slug', 'cap-' . $item->linked_account, $coauthors_plus->coauthor_taxonomy );
+			if ( is_object( $term ) ) {
+				$count = $count + $term->count;
+			}	
 		}
 		return '<a href="' . esc_url( add_query_arg( 'author_name', rawurlencode( $item->user_login ), admin_url( 'edit.php' ) ) ) . '">' . $count . '</a>';
 	}

@@ -394,12 +394,19 @@ body {
 }
 
 #wpforms-builder .wpforms-panel-field input[type=text],
+#wpforms-builder .wpforms-panel-field input[type=number],
 #wpforms-builder .wpforms-panel-field textarea,
 #wpforms-panel-fields .wpforms-field-option-row input[type=text],
+#wpforms-panel-fields .wpforms-field-option-row input[type=number],
 #wpforms-panel-fields .wpforms-field-option-row textarea {
 	width: 100%;
 	line-height: 18px;
 	padding: 5px;
+}
+
+#wpforms-builder .wpforms-panel-field input[type=number],
+#wpforms-panel-fields .wpforms-field-option-row input[type=number] {
+	height: auto;
 }
 
 #wpforms-builder .wpforms-panel-field .row {

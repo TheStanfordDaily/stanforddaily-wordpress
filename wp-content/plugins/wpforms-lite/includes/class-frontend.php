@@ -119,6 +119,11 @@ class WPForms_Frontend {
 			return;
 		}
 
+		// Add url query var wpforms_form_id to track post_max_size overflows.
+		if ( in_array( 'file-upload', wp_list_pluck( $form_data['fields'], 'type' ), true ) ) {
+			$action = add_query_arg( 'wpforms_form_id', $form_id, $action );
+		}
+
 		// Before output hook.
 		do_action( 'wpforms_frontend_output_before', $form_data, $form );
 
@@ -652,7 +657,7 @@ class WPForms_Frontend {
 
 		if (
 			empty( $form_data['settings']['honeypot'] ) ||
-			'1' != $form_data['settings']['honeypot']
+			'1' !== $form_data['settings']['honeypot']
 		) {
 			return;
 		}
@@ -661,9 +666,9 @@ class WPForms_Frontend {
 
 		echo '<div class="wpforms-field wpforms-field-hp">';
 
-			echo '<label for="wpforms-field_hp" class="wpforms-field-label">' . $names[ array_rand( $names ) ] . '</label>';
+			echo '<label for="wpforms-' . $form_data['id'] . '-field-hp" class="wpforms-field-label">' . $names[ array_rand( $names ) ] . '</label>'; // phpcs:ignore
 
-			echo '<input type="text" name="wpforms[hp]" id="wpforms-field_hp" class="wpforms-field-medium">';
+			echo '<input type="text" name="wpforms[hp]" id="wpforms-' . $form_data['id'] . '-field-hp" class="wpforms-field-medium">';  // phpcs:ignore
 
 		echo '</div>';
 	}
@@ -841,7 +846,7 @@ class WPForms_Frontend {
 				'wpforms-flatpickr',
 				WPFORMS_PLUGIN_URL . 'assets/css/flatpickr.min.css',
 				array(),
-				'2.3.4'
+				'4.5.5'
 			);
 		}
 
@@ -878,7 +883,7 @@ class WPForms_Frontend {
 			'wpforms-validation',
 			WPFORMS_PLUGIN_URL . 'assets/js/jquery.validate.min.js',
 			array( 'jquery' ),
-			'1.15.1',
+			'1.19.0',
 			true
 		);
 
@@ -891,7 +896,7 @@ class WPForms_Frontend {
 				'wpforms-flatpickr',
 				WPFORMS_PLUGIN_URL . 'assets/js/flatpickr.min.js',
 				array( 'jquery' ),
-				'2.3.4',
+				'4.5.5',
 				true
 			);
 			wp_enqueue_script(
@@ -913,7 +918,21 @@ class WPForms_Frontend {
 				'wpforms-maskedinput',
 				WPFORMS_PLUGIN_URL . 'assets/js/jquery.inputmask.bundle.min.js',
 				array( 'jquery' ),
-				'4.0.0-beta.24',
+				'4.0.6',
+				true
+			);
+		}
+
+		// Load mailcheck library - https://github.com/mailcheck/mailcheck.
+		if (
+			$this->assets_global() ||
+			true === wpforms_has_field_type( array( 'email' ), $this->forms, true )
+		) {
+			wp_enqueue_script(
+				'wpforms-mailcheck',
+				WPFORMS_PLUGIN_URL . 'assets/js/mailcheck.min.js',
+				false,
+				'1.1.2',
 				true
 			);
 		}
@@ -1030,19 +1049,27 @@ class WPForms_Frontend {
 
 		// Define base strings.
 		$strings = array(
-			'val_required'        => wpforms_setting( 'validation-required', esc_html__( 'This field is required.', 'wpforms-lite' ) ),
-			'val_url'             => wpforms_setting( 'validation-url', esc_html__( 'Please enter a valid URL.', 'wpforms-lite' ) ),
-			'val_email'           => wpforms_setting( 'validation-email', esc_html__( 'Please enter a valid email address.', 'wpforms-lite' ) ),
-			'val_number'          => wpforms_setting( 'validation-number', esc_html__( 'Please enter a valid number.', 'wpforms-lite' ) ),
-			'val_confirm'         => wpforms_setting( 'validation-confirm', esc_html__( 'Field values do not match.', 'wpforms-lite' ) ),
-			'val_fileextension'   => wpforms_setting( 'validation-fileextension', esc_html__( 'File type is not allowed.', 'wpforms-lite' ) ),
-			'val_filesize'        => wpforms_setting( 'validation-filesize', esc_html__( 'File exceeds max size allowed.', 'wpforms-lite' ) ),
-			'val_time12h'         => wpforms_setting( 'validation-time12h', esc_html__( 'Please enter time in 12-hour AM/PM format (eg 8:45 AM).', 'wpforms-lite' ) ),
-			'val_time24h'         => wpforms_setting( 'validation-time24h', esc_html__( 'Please enter time in 24-hour format (eg 22:45).', 'wpforms-lite' ) ),
-			'val_requiredpayment' => wpforms_setting( 'validation-requiredpayment', esc_html__( 'Payment is required.', 'wpforms-lite' ) ),
-			'val_creditcard'      => wpforms_setting( 'validation-creditcard', esc_html__( 'Please enter a valid credit card number.', 'wpforms-lite' ) ),
-			'uuid_cookie'         => false,
-			'locale'              => wpforms_get_language_code(),
+			'val_required'               => wpforms_setting( 'validation-required', esc_html__( 'This field is required.', 'wpforms-lite' ) ),
+			'val_url'                    => wpforms_setting( 'validation-url', esc_html__( 'Please enter a valid URL.', 'wpforms-lite' ) ),
+			'val_email'                  => wpforms_setting( 'validation-email', esc_html__( 'Please enter a valid email address.', 'wpforms-lite' ) ),
+			'val_email_suggestion'       => wpforms_setting( 'validation-email-suggestion', esc_html__( 'Did you mean {suggestion}?', 'wpforms-lite' ) ),
+			'val_email_suggestion_title' => esc_attr__( 'Click to accept this suggestion.', 'wpforms-lite' ),
+			'val_number'                 => wpforms_setting( 'validation-number', esc_html__( 'Please enter a valid number.', 'wpforms-lite' ) ),
+			'val_confirm'                => wpforms_setting( 'validation-confirm', esc_html__( 'Field values do not match.', 'wpforms-lite' ) ),
+			'val_fileextension'          => wpforms_setting( 'validation-fileextension', esc_html__( 'File type is not allowed.', 'wpforms-lite' ) ),
+			'val_filesize'               => wpforms_setting( 'validation-filesize', esc_html__( 'File exceeds max size allowed.', 'wpforms-lite' ) ),
+			'val_time12h'                => wpforms_setting( 'validation-time12h', esc_html__( 'Please enter time in 12-hour AM/PM format (eg 8:45 AM).', 'wpforms-lite' ) ),
+			'val_time24h'                => wpforms_setting( 'validation-time24h', esc_html__( 'Please enter time in 24-hour format (eg 22:45).', 'wpforms-lite' ) ),
+			'val_requiredpayment'        => wpforms_setting( 'validation-requiredpayment', esc_html__( 'Payment is required.', 'wpforms-lite' ) ),
+			'val_creditcard'             => wpforms_setting( 'validation-creditcard', esc_html__( 'Please enter a valid credit card number.', 'wpforms-lite' ) ),
+			'val_smart_phone'            => wpforms_setting( 'validation-smart-phone', esc_html__( 'Please enter a valid phone number.', 'wpforms-lite' ) ),
+			'val_post_max_size'          => wpforms_setting( 'validation-post_max_size', esc_html__( 'The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb.', 'wpforms-lite' ) ),
+			'val_checklimit'             => wpforms_setting( 'validation-check-limit', esc_html__( 'You have exceeded the number of allowed selections: {#}.', 'wpforms-lite' ) ),
+			'post_max_size'              => wpforms_size_to_bytes( ini_get( 'post_max_size' ) ),
+			'uuid_cookie'                => false,
+			'locale'                     => wpforms_get_language_code(),
+			'wpforms_plugin_url'         => WPFORMS_PLUGIN_URL,
+			'gdpr'                       => wpforms_setting( 'gdpr' ),
 		);
 		// Include payment related strings if needed.
 		if ( function_exists( 'wpforms_get_currencies' ) ) {

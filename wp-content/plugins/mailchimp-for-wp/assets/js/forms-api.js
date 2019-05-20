@@ -3,7 +3,7 @@
 
 var _conditionalElements = _interopRequireDefault(require("./forms/conditional-elements.js"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var mc4wp = window.mc4wp || {};
 
@@ -40,23 +40,23 @@ function handleFormRequest(form, eventName, errors, data) {
 
   window.addEventListener('load', function () {
     // trigger events
-    forms.trigger('submitted', [form]);
     forms.trigger(form.id + '.submitted', [form]);
+    forms.trigger('submitted', [form]);
 
     if (errors) {
-      forms.trigger('error', [form, errors]);
       forms.trigger(form.id + '.error', [form, errors]);
+      forms.trigger('error', [form, errors]);
     } else {
       // form was successfully submitted
-      forms.trigger('success', [form, data]);
-      forms.trigger(form.id + '.success', [form, data]); // subscribed / unsubscribed
+      forms.trigger(form.id + '.success', [form, data]);
+      forms.trigger('success', [form, data]); // subscribed / unsubscribed
 
-      forms.trigger(eventName, [form, data]);
-      forms.trigger(form.id + "." + eventName, [form, data]); // for BC: always trigger "subscribed" event when firing "updated_subscriber" event
+      forms.trigger(form.id + "." + eventName, [form, data]);
+      forms.trigger(eventName, [form, data]); // for BC: always trigger "subscribed" event when firing "updated_subscriber" event
 
       if (eventName === 'updated_subscriber') {
-        forms.trigger('subscribed', [form, data, true]);
         forms.trigger(form.id + "." + "subscribed", [form, data, true]);
+        forms.trigger('subscribed', [form, data, true]);
       }
     } // scroll to form again if page height changed since last scroll, eg because of slow loading images
     // (only if load didn't take more than 0.8 seconds to prevent overtaking user scroll)
@@ -64,7 +64,7 @@ function handleFormRequest(form, eventName, errors, data) {
 
     var timeElapsed = Date.now() - timeStart;
 
-    if (config.auto_scroll && timeElapsed > 1000 && timeElapsed < 2000 && document.body.clientHeight != pageHeight) {
+    if (config.auto_scroll && timeElapsed > 1000 && timeElapsed < 2000 && document.body.clientHeight !== pageHeight) {
       scrollToForm(form);
     }
   });
@@ -73,15 +73,21 @@ function handleFormRequest(form, eventName, errors, data) {
 
 Gator(document.body).on('submit', '.mc4wp-form', function (event) {
   var form = forms.getByElement(event.target || event.srcElement);
-  forms.trigger('submit', [form, event]);
-  forms.trigger(form.id + '.submit', [form, event]);
+
+  if (!event.defaultPrevented) {
+    forms.trigger(form.id + '.submit', [form, event]);
+  }
+
+  if (!event.defaultPrevented) {
+    forms.trigger('submit', [form, event]);
+  }
 });
 Gator(document.body).on('focus', '.mc4wp-form', function (event) {
   var form = forms.getByElement(event.target || event.srcElement);
 
   if (!form.started) {
-    forms.trigger('started', [form, event]);
     forms.trigger(form.id + '.started', [form, event]);
+    forms.trigger('started', [form, event]);
     form.started = true;
   }
 });
@@ -91,7 +97,7 @@ Gator(document.body).on('change', '.mc4wp-form', function (event) {
   forms.trigger(form.id + '.change', [form, event]);
 }); // init conditional elements
 
-_conditionalElements.default.init(); // register early listeners
+_conditionalElements["default"].init(); // register early listeners
 
 
 if (mc4wp.listeners) {
@@ -124,7 +130,7 @@ window.mc4wp = mc4wp;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 function getFieldValues(form, fieldName) {
   var values = [];
@@ -226,7 +232,7 @@ var _default = {
     evaluate();
   }
 };
-exports.default = _default;
+exports["default"] = _default;
 
 },{}],3:[function(require,module,exports){
 'use strict';
@@ -291,9 +297,10 @@ var forms = []; // get form by its id
 // please note that this will get the FIRST occurence of the form with that ID on the page
 
 function get(formId) {
-  // do we have form for this one already?
+  formId = parseInt(formId); // do we have form for this one already?
+
   for (var i = 0; i < forms.length; i++) {
-    if (forms[i].id == formId) {
+    if (forms[i].id === formId) {
       return forms[i];
     }
   } // try to create from first occurence of this element
@@ -308,7 +315,7 @@ function getByElement(element) {
   var formElement = element.form || element;
 
   for (var i = 0; i < forms.length; i++) {
-    if (forms[i].element == formElement) {
+    if (forms[i].element === formElement) {
       return forms[i];
     }
   }
@@ -329,9 +336,8 @@ function all() {
 }
 
 function triggerEvent(eventName, eventArgs) {
-  if (eventName === 'submit') {
+  if (eventName === 'submit' || eventName.indexOf('.submit') > 0) {
     // don't spin up new thread for submit event as we want to preventDefault()... 
-    // TODO: Fix that in Premium.
     events.trigger(eventName, eventArgs);
   } else {
     // process in separate thread to prevent errors from breaking core functionality
@@ -1764,6 +1770,13 @@ module.exports = scrollTo;
 var ease = require('./ease');
 var Emitter = require('./emitter');
 
+function extend(obj, src) {
+  for (var key in src) {
+    if (src.hasOwnProperty(key)) obj[key] = src[key];
+  }
+  return obj;
+}
+
 function Tween(obj) {
   if (!(this instanceof Tween)) return new Tween(obj);
   this._from = obj;
@@ -1775,7 +1788,7 @@ Emitter(Tween.prototype);
 
 Tween.prototype.reset = function(){
   this.isArray = Object.prototype.toString.call(this._from) === '[object Array]';
-  this._curr = Object.assign({}, this._from);
+  this._curr = extend({}, this._from);
   this._done = false;
   this._start = Date.now();
   return this;
@@ -1854,11 +1867,12 @@ Tween.prototype.update = function(fn){
 };
 
 module.exports = Tween;
+
 },{"./ease":11,"./emitter":12}],16:[function(require,module,exports){
 /*!
- * EventEmitter v5.2.5 - git.io/ee
+ * EventEmitter v5.2.6 - git.io/ee
  * Unlicense - http://unlicense.org/
- * Oliver Caldwell - http://oli.me.uk/
+ * Oliver Caldwell - https://oli.me.uk/
  * @preserve
  */
 

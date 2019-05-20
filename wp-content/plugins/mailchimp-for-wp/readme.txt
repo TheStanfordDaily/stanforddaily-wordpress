@@ -3,8 +3,8 @@ Contributors: Ibericode, DvanKooten, hchouhan, lapzor
 Donate link: https://mc4wp.com/#utm_source=wp-plugin-repo&utm_medium=mailchimp-for-wp&utm_campaign=donate-link
 Tags: mailchimp, mc4wp, email, marketing, newsletter, subscribe, widget, mc4wp, contact form 7, woocommerce, buddypress, ibericode, mailchimp form
 Requires at least: 4.1
-Tested up to: 5.1
-Stable tag: 4.4
+Tested up to: 5.2
+Stable tag: 4.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.3
@@ -36,19 +36,20 @@ This plugin helps you grow your Mailchimp lists and write better newsletters thr
 	- Ninja Forms 3
 	- WPForms
 	- BuddyPress
-   - MemberPress
+    - MemberPress
 	- Events Manager
 	- Easy Digital Downloads
+	- Give
+	- UltimateMember
 
-- A multitude of available add-on plugins:
+- A multitude of available add-on plugins and integrations:
 	- [Mailchimp for WordPress Premium](https://mc4wp.com/#utm_source=wp-plugin-repo&utm_medium=mailchimp-for-wp&utm_campaign=add-on-list)
 	- [Mailchimp Top Bar](https://wordpress.org/plugins/mailchimp-top-bar/)
 	- [Mailchimp Activity](https://wordpress.org/plugins/mc4wp-activity/)
 	- [Mailchimp User Sync](https://wordpress.org/plugins/mailchimp-sync/)
 	- [Boxzilla Pop-ups](https://wordpress.org/plugins/boxzilla/)
-	- [Captcha](https://wordpress.org/plugins/mc4wp-captcha/)
-	- Third Party:
-	    - [WPBruiser](https://wordpress.org/plugins/goodbye-captcha/)
+	- [Google reCAPTCHA](https://www.google.com/recaptcha/)
+	- [WPBruiser anti-spam](https://wordpress.org/plugins/goodbye-captcha/)
 
 - Well documented. Our [knowledge base](https://mc4wp.com/kb/) is updated daily.
 
@@ -197,7 +198,41 @@ The plugin provides various filter & action hooks that allow you to modify or ex
 == Changelog == 
 
 
-#### 4.4 - March 1, 2018
+#### 4.5.2 - May 8, 2019
+
+**Improvements**
+
+- Accept more truthy values in custom integration for improved compatability with third-party forms.
+- Update JavaScript dependencies.
+- Load Google reCaptcha script in footer (if needed). 
+
+
+#### 4.5.1 - April 8, 2019
+
+**Additions**
+
+- Add sign-up integration for [Give](https://wordpress.org/plugins/give/)
+- Add sign-up integration for [UltimateMember](https://wordpress.org/plugins/ultimate-member/)
+
+**Improvements**
+
+- Write to debug log if Google reCAPTCHA secret key is incorrect.
+- Validate reCAPTCHA keys when savings form settings.
+- Allow setting an empty "successfully subscribed" message.
+
+
+#### 4.5.0 - March 27, 2019
+
+**Additions**
+
+- Built-in integration with Google reCAPTCHA to prevent bots from subscribing to your Mailchimp lists.
+
+**Improvements**
+
+- Minor improvements to the JavaScript that is loaded on admin pages.
+
+
+#### 4.4.0 - March 1, 2019
 
 **Fixes**
 

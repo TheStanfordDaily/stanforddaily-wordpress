@@ -72,6 +72,11 @@ class WPForms_Process {
 	 */
 	public function listen() {
 
+		// Catch the post_max_size overflow.
+		if ( $this->post_max_size_overflow() ) {
+			return;
+		}
+
 		if ( ! empty( $_GET['wpforms_return'] ) ) { // phpcs:ignore
 			$this->entry_confirmation_redirect( '', $_GET['wpforms_return'] ); // phpcs:ignore
 		}
@@ -396,6 +401,39 @@ class WPForms_Process {
 	}
 
 	/**
+	 * Catch the post_max_size overflow.
+	 *
+	 * @since 1.5.2
+	 *
+	 * @return boolean
+	 */
+	public function post_max_size_overflow() {
+
+		if ( empty( $_SERVER['CONTENT_LENGTH'] ) || empty( $_GET['wpforms_form_id'] ) ) { // phpcs:ignore
+			return false;
+		}
+
+		$form_id       = (int) $_GET['wpforms_form_id'];
+		$total_size    = (int) $_SERVER['CONTENT_LENGTH'];
+		$post_max_size = wpforms_size_to_bytes( ini_get( 'post_max_size' ) );
+
+		if ( ! ( $total_size > $post_max_size && empty( $_POST ) && $form_id > 0 ) ) {
+			return false;
+		}
+
+		$total_size    = number_format( $total_size / 1048576, 3 );
+		$post_max_size = number_format( $post_max_size / 1048576, 3 );
+		$error_msg     = esc_html__( 'Form has not been submitted, please see the errors below.', 'wpforms-lite' );
+		$error_msg    .= '<br>' . esc_html__( 'The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb.', 'wpforms-lite' );
+		$error_msg     = str_replace( '{totalSize}', $total_size, $error_msg );
+		$error_msg     = str_replace( '{maxSize}', $post_max_size, $error_msg );
+
+		$this->errors[ $form_id ]['header'] = $error_msg;
+
+		return true;
+	}
+
+	/**
 	 * Sends entry email notifications.
 	 *
 	 * @since 1.0.0
@@ -480,6 +518,8 @@ class WPForms_Process {
 			if ( ! empty( $notification['carboncopy'] ) && wpforms_setting( 'email-carbon-copy', false ) ) {
 				$emails->__set( 'cc', $notification['carboncopy'] );
 			}
+
+			$emails = apply_filters( 'wpforms_entry_email_before_send', $emails );
 
 			// Go.
 			foreach ( $email['address'] as $address ) {

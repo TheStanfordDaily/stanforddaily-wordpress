@@ -38,7 +38,7 @@ class WPForms_Review {
 			return;
 		}
 
-		// If the user has opted out of product annoucement notifications, don't
+		// If the user has opted out of product announcement notifications, don't
 		// display the review request.
 		if ( wpforms_setting( 'hide-announcements', false ) ) {
 			return;

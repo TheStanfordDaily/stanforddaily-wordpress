@@ -208,10 +208,9 @@ class WPForms_Settings {
 		foreach ( $tabs as $id => $tab ) {
 
 			$active = $id === $this->view ? 'active' : '';
-			$name   = esc_html( $tab['name'] );
-			$link   = esc_url_raw( add_query_arg( 'view', $id, admin_url( 'admin.php?page=wpforms-settings' ) ) );
+			$link   = add_query_arg( 'view', $id, admin_url( 'admin.php?page=wpforms-settings' ) );
 
-			echo '<li><a href="' . $link . '" class="' . $active . '">' . $name . '</a></li>';
+			echo '<li><a href="' . esc_url_raw( $link ) . '" class="' . esc_attr( $active ) . '">' . esc_html( $tab['name'] ) . '</a></li>';
 		}
 		echo '</ul>';
 	}
@@ -235,7 +234,7 @@ class WPForms_Settings {
 			'<p>' .
 			sprintf(
 				wp_kses(
-					/* translators: %s = WPForms.com Setup Captcha URL. */
+					/* translators: %s - WPForms.com Setup Captcha URL. */
 					__( '<a href="%s" target="_blank" rel="noopener noreferrer">Read our walk through</a> to learn more and for step-by-step directions.', 'wpforms-lite' ),
 					array(
 						'a' => array(
@@ -276,7 +275,7 @@ class WPForms_Settings {
 					'name'      => esc_html__( 'Include Form Styling', 'wpforms-lite' ),
 					'desc'      => sprintf(
 						wp_kses(
-							/* translators: %s = WPForms.com documentation URL. */
+							/* translators: %s - WPForms.com documentation URL. */
 							__( 'Determines which CSS files to load for the site (<a href="%s" target="_blank" rel="noopener noreferrer">please see our tutorial for full details</a>). Unless experienced with CSS or instructed by support, "Base and Form Theme Styling" is recommended.', 'wpforms-lite' ),
 							array(
 								'a' => array(
@@ -303,19 +302,19 @@ class WPForms_Settings {
 					'desc' => esc_html__( 'Check this if you would like to load WPForms assets site-wide. Only check if your site is having compatibility issues or instructed to by support.', 'wpforms-lite' ),
 					'type' => 'checkbox',
 				),
-				'gdpr-heading' => array(
+				'gdpr-heading'    => array(
 					'id'       => 'GDPR',
 					'content'  => '<h4>' . esc_html__( 'GDPR', 'wpforms-lite' ) . '</h4>',
 					'type'     => 'content',
 					'no_label' => true,
 					'class'    => array( 'section-heading', 'no-desc' ),
 				),
-				'gdpr'               => array(
+				'gdpr'            => array(
 					'id'   => 'gdpr',
 					'name' => esc_html__( 'GDPR Enhancements', 'wpforms-lite' ),
 					'desc' => sprintf(
 						wp_kses(
-							/* translators: %s = WPForms.com GDPR documentation URL. */
+							/* translators: %s - WPForms.com GDPR documentation URL. */
 							__( 'Check this to turn on GDPR related features and enhancements. <a href="%s" target="_blank" rel="noopener noreferrer">Read our GDPR documentation</a> to learn more.', 'wpforms-lite' ),
 							array(
 								'a' => array(
@@ -408,42 +407,54 @@ class WPForms_Settings {
 			),
 			// Validation messages settings tab.
 			'validation'   => array(
-				'validation-heading'  => array(
+				'validation-heading'          => array(
 					'id'       => 'validation-heading',
-					'content'  => '<h4>' . esc_html__( 'Validation Messages', 'wpforms-lite' ) . '</h4><p>' . esc_html__( 'These messages are displayed to the user as they fill out a form in real-time.', 'wpforms-lite' ) . '</p>',
+					'content'  => '<h4>' . esc_html__( 'Validation Messages', 'wpforms-lite' ) . '</h4><p>' . esc_html__( 'These messages are displayed to the users as they fill out a form in real-time.', 'wpforms-lite' ) . '</p>',
 					'type'     => 'content',
 					'no_label' => true,
 					'class'    => array( 'section-heading' ),
 				),
-				'validation-required' => array(
+				'validation-required'         => array(
 					'id'      => 'validation-required',
 					'name'    => esc_html__( 'Required', 'wpforms-lite' ),
 					'type'    => 'text',
 					'default' => esc_html__( 'This field is required.', 'wpforms-lite' ),
 				),
-				'validation-url'      => array(
+				'validation-url'              => array(
 					'id'      => 'validation-url',
 					'name'    => esc_html__( 'Website URL', 'wpforms-lite' ),
 					'type'    => 'text',
 					'default' => esc_html__( 'Please enter a valid URL.', 'wpforms-lite' ),
 				),
-				'validation-email'    => array(
+				'validation-email'            => array(
 					'id'      => 'validation-email',
 					'name'    => esc_html__( 'Email', 'wpforms-lite' ),
 					'type'    => 'text',
 					'default' => esc_html__( 'Please enter a valid email address.', 'wpforms-lite' ),
 				),
-				'validation-number'   => array(
+				'validation-email-suggestion' => array(
+					'id'      => 'validation-email-suggestion',
+					'name'    => esc_html__( 'Email Suggestion', 'wpforms-lite' ),
+					'type'    => 'text',
+					'default' => esc_html__( 'Did you mean {suggestion}?', 'wpforms-lite' ),
+				),
+				'validation-number'           => array(
 					'id'      => 'validation-number',
 					'name'    => esc_html__( 'Number', 'wpforms-lite' ),
 					'type'    => 'text',
 					'default' => esc_html__( 'Please enter a valid number.', 'wpforms-lite' ),
 				),
-				'validation-confirm'  => array(
+				'validation-confirm'          => array(
 					'id'      => 'validation-confirm',
 					'name'    => esc_html__( 'Confirm Value', 'wpforms-lite' ),
 					'type'    => 'text',
 					'default' => esc_html__( 'Field values do not match.', 'wpforms-lite' ),
+				),
+				'validation-check-limit'      => array(
+					'id'      => 'validation-check-limit',
+					'name'    => esc_html__( 'Checkbox Selection Limit', 'wpforms-lite' ),
+					'type'    => 'text',
+					'default' => esc_html__( 'You have exceeded the number of allowed selections: {#}.', 'wpforms-lite' ),
 				),
 			),
 			// Provider integrations settings tab.
@@ -477,7 +488,7 @@ class WPForms_Settings {
 					'desc' => esc_html__( 'Check this if you would like to hide plugin announcements and update details.', 'wpforms-lite' ),
 					'type' => 'checkbox',
 				),
-				'uninstall-data'      => array(
+				'uninstall-data'     => array(
 					'id'   => 'uninstall-data',
 					'name' => esc_html__( 'Uninstall WPForms', 'wpforms-lite' ),
 					'desc' => esc_html__( 'Check this if you would like to remove ALL WPForms data upon plugin deletion. All forms, entries, and uploaded files will be unrecoverable.', 'wpforms-lite' ),
