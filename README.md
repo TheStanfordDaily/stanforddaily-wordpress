@@ -59,8 +59,9 @@ We are using [Grunt](https://gruntjs.com/) to compiling files.
 
 To set up, type the following command in the theme folder (`wp-content/themes/thestanforddaily/`)
 ```
-npm install
 npm install -g grunt-cli
+npm install -g sass
+npm install
 ```
 
 Then just type the following command every time you start working on the theme:
