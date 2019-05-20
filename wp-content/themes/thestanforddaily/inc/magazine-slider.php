@@ -1,6 +1,6 @@
 <?php
 get_header();
-include "./magazine-slider-issues.php";
+include "magazine-slider-issues.php";
 ?>
 
 <style>
