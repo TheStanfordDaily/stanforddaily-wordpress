@@ -182,6 +182,28 @@ function tsd_query_not_featured_posts($args) {
 				</div>
 				<div class="row tsd-block-title">
 					<div class="col-12">
+						<a href="<?php echo get_category_link(get_category_by_slug("magazine")); ?>">
+							<h3 class="tsd-block-title">Magazine</h3>
+							<?php include "inc/magazine-slider-single.php"; ?>
+						</a>
+					</div>
+				</div>
+				<div class="row tsd-block">
+					<?php
+					tsd_query_not_featured_posts( array ( 'category_name' => 'magazine', 'posts_per_page' => 4 ) );
+					if ( have_posts() ) :
+						while ( have_posts() ) :
+							the_post();
+							get_template_part( 'template-parts/excerpt-textonly', get_post_type() );
+						endwhile;
+					else:
+						// Do nothing
+					endif;
+					wp_reset_query();
+					?>
+				</div>
+				<div class="row tsd-block-title">
+					<div class="col-12">
 						<a href="<?php echo get_category_link(get_category_by_slug("sponsored")); ?>">
 							<h3 class="tsd-block-title">Sponsored Content</h3>
 						</a>
