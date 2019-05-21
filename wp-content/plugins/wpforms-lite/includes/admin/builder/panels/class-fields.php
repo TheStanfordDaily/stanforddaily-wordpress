@@ -285,7 +285,7 @@ class WPForms_Builder_Panel_Fields extends WPForms_Builder_Panel {
 
 			printf( '<a href="#" class="wpforms-field-duplicate" title="%s"><i class="fa fa-files-o" aria-hidden="true"></i></a>', esc_html__( 'Duplicate Field', 'wpforms-lite' ) );
 
-			printf( '<a href="#" class="wpforms-field-delete" title="%s"><i class="fa fa-times-circle" aria-hidden="true"></i></a>', esc_html__( 'Delete Field', 'wpforms-lite' ) );
+			printf( '<a href="#" class="wpforms-field-delete" title="%s"><i class="fa fa-trash" aria-hidden="true"></i></a>', esc_html__( 'Delete Field', 'wpforms-lite' ) );
 
 			printf( '<span class="wpforms-field-helper">%s</span>', esc_html__( 'Click to edit. Drag to reorder.', 'wpforms-lite' ) );
 

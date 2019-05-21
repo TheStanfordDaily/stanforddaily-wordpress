@@ -31,6 +31,7 @@ class WPForms_Template_Contact extends WPForms_Template {
 				'0' => array(
 					'id'       => '0',
 					'type'     => 'name',
+					'format'   => 'first-last',
 					'label'    => esc_html__( 'Name', 'wpforms-lite' ),
 					'required' => '1',
 					'size'     => 'medium',
@@ -54,16 +55,25 @@ class WPForms_Template_Contact extends WPForms_Template {
 				),
 			),
 			'settings' => array(
-				'notifications'               => array(
+				'notification_enable'    => '1',
+				'notifications'          => array(
 					'1' => array(
-						'replyto'        => '{field_id="1"}',
-						'sender_name'    => '{field_id="0"}',
+						'email'          => '{admin_email}',
 						'sender_address' => '{admin_email}',
+						'replyto'        => '{field_id="1"}',
+						'message'        => '{all_fields}',
 					),
 				),
-				'honeypot'                    => '1',
-				'confirmation_message_scroll' => '1',
-				'submit_text_processing'      => esc_html__( 'Sending...', 'wpforms-lite' ),
+				'confirmations'          => array(
+					'1' => array(
+						'type'           => 'message',
+						'message'        => esc_html__( 'Thanks for contacting us! We will be in touch with you shortly.', 'wpforms-lite' ),
+						'message_scroll' => '1',
+					),
+				),
+				'honeypot'               => '1',
+				'submit_text'            => esc_html__( 'Submit', 'wpforms-lite' ),
+				'submit_text_processing' => esc_html__( 'Sending...', 'wpforms-lite' ),
 			),
 			'meta'     => array(
 				'template' => $this->slug,

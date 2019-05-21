@@ -61,6 +61,9 @@ class MonsterInsights_Onboarding_Wizard {
 			return;
 		}
 
+		// Remove an action in the Gutenberg plugin ( not core Gutenberg ) which throws an error.
+		remove_action( 'admin_print_styles', 'gutenberg_block_editor_admin_print_styles' );
+
 		$this->load_onboarding_wizard();
 
 	}
@@ -130,8 +133,8 @@ class MonsterInsights_Onboarding_Wizard {
 				// Used to add notices for future deprecations.
 				'versions'             => array(
 					'php_version'          => phpversion(),
-					'php_version_below_54' => version_compare( phpversion(), '5.4', '<' ),
-					'php_version_below_56' => version_compare( phpversion(), '5.6', '<' ),
+					'php_version_below_54' => apply_filters( 'monsterinsights_temporarily_hide_php_52_and_53_upgrade_warnings', version_compare( phpversion(), '5.4', '<' ) ),
+					'php_version_below_56' => apply_filters( 'monsterinsights_temporarily_hide_php_54_and_55_upgrade_warnings', version_compare( phpversion(), '5.6', '<' ) ),
 					'php_update_link'      => monsterinsights_get_url( 'settings-notice', 'settings-page', 'https://www.monsterinsights.com/docs/update-php/' ),
 					'wp_version'           => $wp_version,
 					'wp_version_below_46'  => version_compare( $wp_version, '4.6', '<' ),
@@ -166,9 +169,7 @@ class MonsterInsights_Onboarding_Wizard {
 	 * Outputs the content of the current step.
 	 */
 	public function onboarding_wizard_content() {
-		?>
-		<div id="monsterinsights-vue-onboarding-wizard"></div>
-		<?php
+		monsterinsights_settings_error_page( 'monsterinsights-vue-onboarding-wizard', '<a href="' . admin_url() . '">' . esc_html__( 'Return to Dashboard', 'google-analytics-for-wordpress' ) . '</a>' );
 	}
 
 	/**
@@ -343,7 +344,7 @@ class MonsterInsights_Onboarding_Wizard {
 					$errors[] = $cache_error;
 				}
 				// Grab all the UA codes from the page.
-				$pattern = '/UA-[^\s\;\']+/m';
+				$pattern = '/UA-[0-9]+/m';
 				preg_match_all( $pattern, $body, $matches );
 				// If more than twice ( because MI has a ga-disable-UA also ), let them know to remove the others.
 				if ( ! empty( $matches[0] ) && is_array( $matches[0] ) && count( $matches[0] ) > 2 ) {

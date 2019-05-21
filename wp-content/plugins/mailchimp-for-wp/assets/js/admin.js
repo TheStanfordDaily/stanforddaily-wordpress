@@ -3,23 +3,29 @@
 
 var _tlite = _interopRequireDefault(require("tlite"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var m = window.m = require('mithril');
 
-var EventEmitter = require('wolfy87-eventemitter'); // vars
+var EventEmitter = require('wolfy87-eventemitter');
+
+var Tabs = require('./admin/tabs.js');
+
+var Settings = require('./admin/settings.js');
+
+var helpers = require('./admin/helpers.js'); // vars
 
 
 var context = document.getElementById('mc4wp-admin');
+var tabs, settings;
 var events = new EventEmitter();
 
-var tabs = require('./admin/tabs.js')(context);
+if (context !== null) {
+  tabs = Tabs(context);
+  settings = Settings(context, helpers, events);
+}
 
-var helpers = require('./admin/helpers.js');
-
-var settings = require('./admin/settings.js')(context, helpers, events);
-
-(0, _tlite.default)(function (el) {
+(0, _tlite["default"])(function (el) {
   return el.className.indexOf('mc4wp-tooltip') > -1;
 }); // list fetcher
 
@@ -289,7 +295,11 @@ var URL = require('./url.js'); // Tabs
 
 
 var Tabs = function Tabs(context) {
-  // TODO: last piece of jQuery... can we get rid of it?
+  if (context === null) {
+    return;
+  } // TODO: last piece of jQuery... can we get rid of it?
+
+
   var $ = window.jQuery;
   var $context = $(context);
   var $tabs = $context.find('.tab');
@@ -2153,9 +2163,9 @@ if (typeof module !== 'undefined' && module.exports) {
 
 },{}],12:[function(require,module,exports){
 /*!
- * EventEmitter v5.2.5 - git.io/ee
+ * EventEmitter v5.2.6 - git.io/ee
  * Unlicense - http://unlicense.org/
- * Oliver Caldwell - http://oli.me.uk/
+ * Oliver Caldwell - https://oli.me.uk/
  * @preserve
  */
 

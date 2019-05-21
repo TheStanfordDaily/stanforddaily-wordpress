@@ -82,6 +82,10 @@ class DashboardWidget {
 		if ( ! empty( $this->settings['allow_entries_count_lite'] ) ) {
 			\add_action( 'wpforms_process_entry_save', array( $this, 'update_entry_count' ), 10, 3 );
 		}
+
+		\add_action( 'wpforms_create_form', __CLASS__ . '::clear_widget_cache' );
+		\add_action( 'wpforms_save_form', __CLASS__ . '::clear_widget_cache' );
+		\add_action( 'wpforms_delete_form', __CLASS__ . '::clear_widget_cache' );
 	}
 
 	/**
@@ -483,5 +487,15 @@ class DashboardWidget {
 
 		$count = \absint( \get_post_meta( $form_id, 'wpforms_entries_count', true ) );
 		\update_post_meta( $form_id, 'wpforms_entries_count', $count + 1 );
+	}
+
+	/**
+	 * Clear dashboard widget cached data.
+	 *
+	 * @since 1.5.2
+	 */
+	public static function clear_widget_cache() {
+
+		delete_transient( 'wpforms_dash_widget_lite_entries_by_form' );
 	}
 }

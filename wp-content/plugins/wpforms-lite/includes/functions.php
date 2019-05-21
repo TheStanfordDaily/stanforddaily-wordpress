@@ -618,6 +618,37 @@ function wpforms_get_form_fields( $form = false, $whitelist = array() ) {
 }
 
 /**
+ * Conditional logic form fields supported.
+ *
+ * @since 1.5.2
+ *
+ * @return array
+ */
+function wpforms_get_conditional_logic_form_fields_supported() {
+
+	$fields_supported = array(
+		'text',
+		'textarea',
+		'select',
+		'radio',
+		'email',
+		'url',
+		'checkbox',
+		'number',
+		'payment-multiple',
+		'payment-checkbox',
+		'payment-select',
+		'hidden',
+		'rating',
+		'net_promoter_score',
+	);
+
+	return apply_filters( 'wpforms_get_conditional_logic_form_fields_supported', $fields_supported );
+}
+
+
+
+/**
  * Get meta key value for a form field.
  *
  * @since 1.1.9
@@ -1054,6 +1085,7 @@ function wpforms_days() {
  * https://github.com/easydigitaldownloads/easy-digital-downloads/blob/master/includes/misc-functions.php#L163
  *
  * @since 1.2.5
+ *
  * @return string
  */
 function wpforms_get_ip() {
@@ -1061,17 +1093,17 @@ function wpforms_get_ip() {
 	$ip = '127.0.0.1';
 
 	if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
-		$ip = $_SERVER['HTTP_CLIENT_IP'];
+		$ip = $_SERVER['HTTP_CLIENT_IP']; //phpcs:ignore
 	} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
-		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		$ip = explode( ',', $_SERVER['HTTP_X_FORWARDED_FOR'] ); //phpcs:ignore
+		$ip = trim( $ip[0] );
 	} elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
-		$ip = $_SERVER['REMOTE_ADDR'];
+		$ip = $_SERVER['REMOTE_ADDR']; //phpcs:ignore
 	}
 
-	// Fix potential CSV returned from $_SERVER variables
 	$ip_array = array_map( 'trim', explode( ',', $ip ) );
 
-	return $ip_array[0];
+	return sanitize_text_field( apply_filters( 'wpforms_get_ip', $ip_array[0] ) );
 }
 
 /**

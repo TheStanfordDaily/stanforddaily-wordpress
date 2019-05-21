@@ -24,6 +24,13 @@ registerBlockType('mailchimp-for-wp/form', {
         value: f.id
       };
     });
+
+    if (props.attributes.id === undefined && forms.length > 0) {
+      props.setAttributes({
+        id: forms[0].id
+      });
+    }
+
     return React.createElement("div", {
       style: {
         backgroundColor: '#f8f9f9',

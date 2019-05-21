@@ -3,7 +3,7 @@ Contributors: wpforms, jaredatch, smub, slaFFik
 Tags: contact form, contact form plugin, forms, form builder, custom form, contact button, contact me, custom contact form, form manager, form, forms builder, forms creator, captcha, recaptcha, Akismet, email form, web form, feedback form, payment form, survey form, donation form, email submit form, message form, mailchimp, mailchimp form, aweber, aweber form, paypal, paypal form, stripe, stripe form, getresponse, getresponse form, email subscription, contact form widget, user registration form, wordpress registration, wordpress login form
 Requires at least: 4.8
 Tested up to: 5.1
-Stable tag: 1.5.1.3
+Stable tag: 1.5.2.3
 Requires PHP: 5.3.3
 License: GNU General Public License v2.0 or later
 
@@ -15,7 +15,7 @@ The best WordPress contact form plugin. Drag & Drop online form builder that hel
 
 We believe that you shouldn't have to hire a developer to create a WordPress contact form. That's why we built <a href="https://wpforms.com/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion" rel="friend" title="WPForms">WPForms</a>, a drag & drop WordPress form builder that's EASY and POWERFUL.
 
-WPForms allow you to create beautiful contact forms, subscription forms, payment forms, and other type of forms for your site in minutes, not hours!
+WPForms allows you to create beautiful contact forms, subscription forms, payment forms, and other type of forms for your site in minutes, not hours!
 
 At WPForms, user experience is our #1 priority. Our pre-built form templates and workflows make WPForms the most beginner friendly contact form plugin in the market.
 
@@ -32,7 +32,7 @@ https://www.youtube.com/watch?v=eiQ3viAGung&rel=0
 
 = Drag & Drop Contact Form Builder =
 
-We were tired of the bloated and buggy contact form builder plugins. That's why we built WPForms to adapt to your workflow and allow you to create custom contact forms in minutes. By using our easy to use <a href="https://wpforms.com/features/drag-drop-online-form-builder/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion" rel="friend">drag and drop online form builder</a>, you can easy add custom form fields, rearrange them, and basically create a complete contact form in 5 minutes or less.
+We were tired of the bloated and buggy contact form builder plugins. That's why we built WPForms to adapt to your workflow and allow you to create custom contact forms in minutes. By using our easy to use <a href="https://wpforms.com/features/drag-drop-online-form-builder/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion" rel="friend">drag and drop online form builder</a>, you can easily add custom form fields, rearrange them, and basically create a complete contact form in 5 minutes or less.
 
 But don't just take our word. See what one of the WordPress experts are saying:
 
@@ -271,6 +271,32 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 1.5.2.3 =
+- Fixed: PHP error if checkbox field is empty when form is submitted.
+
+= 1.5.2.2 =
+- Fixed: PHP notice/warnings from undefined constant (typo).
+
+= 1.5.2.1 =
+- Fixed: Required Checkbox fields asking for all inputs to be checked to pass validation.
+
+= 1.5.2 =
+- Added: Choice Limit advanced option for Checkbox fields.
+- Added: Smart domain name typo detection for Email fields.
+- Added: New Gutenberg block keywords to help with discovery.
+- Added: Link to "How to Properly Test Your WordPress Forms Before Launching" doc inside Gutenberg block.
+- Changed: Form builder field delete icon, now a trash can.
+- Changed: Updated jQuery inputmask library to v4.0.6.
+- Changed: Updated jQuery validation plugin to v1.19.0.
+- Changed: Clear Dashboard widget cache when form is created/deleted/updated.
+- Fixed: Blank form if using form template containing `target="_blank"`.
+- Fixed: Honeypot field not using unique IDs.
+- Fixed: Duplicating forms creating another duplicate if afterwards the table was sorted.
+- Fixed: Minor issues with Gutenberg editor.
+- Fixed: Form Builder embed modal showing Classic Editor instructions for Gutenberg users.
+- Fixed: Number field allowing non-numerical characters on iOS devices.
+- Fixed: Field Dynamic Choices not showing in form preview when using "Post Type".
 
 = 1.5.1.3 =
 - Fixed: Importing forms that containing `target="_blank"`.

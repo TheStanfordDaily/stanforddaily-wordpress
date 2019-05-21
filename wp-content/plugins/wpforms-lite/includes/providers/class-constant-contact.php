@@ -649,7 +649,7 @@ class WPForms_Constant_Contact extends WPForms_Provider {
 
 		// Output the notice message.
 		$connect    = admin_url( 'admin.php?page=wpforms-settings&wpforms-integration=constant-contact#!wpforms-tab-providers' );
-		$learn_more = admin_url( 'admin.php?page=wpforms-page&wpforms-page=constant-contact ' );
+		$learn_more = admin_url( 'admin.php?page=wpforms-page&wpforms-page=constant-contact' );
 		?>
 		<div class="notice notice-info is-dismissible wpforms-constant-contact-notice">
 			<p>
@@ -881,6 +881,7 @@ class WPForms_Constant_Contact extends WPForms_Provider {
 			.about-wrap .logo {
 				float: right;
 				margin-top: 0.8em;
+				width: auto;
 			}
 
 			.about-wrap .reasons {

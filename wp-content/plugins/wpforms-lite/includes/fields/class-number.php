@@ -128,7 +128,7 @@ class WPForms_Field_Number extends WPForms_Field {
 
 		// Primary field.
 		printf(
-			'<input type="number" %s %s>',
+			'<input type="number" pattern="[0-9]*" %s %s>',
 			wpforms_html_attributes( $primary['id'], $primary['class'], $primary['data'], $primary['attr'] ),
 			$primary['required']
 		);

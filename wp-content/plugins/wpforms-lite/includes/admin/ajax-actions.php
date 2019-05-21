@@ -484,7 +484,7 @@ function wpforms_install_addon() {
 	$error = esc_html__( 'Could not install addon. Please download from wpforms.com and install manually.', 'wpforms-lite' );
 
 	if ( empty( $_POST['plugin'] ) ) {
-		wp_send_json_error();
+		wp_send_json_error( $error );
 	}
 
 	// Set the current screen to avoid undefined notices.
