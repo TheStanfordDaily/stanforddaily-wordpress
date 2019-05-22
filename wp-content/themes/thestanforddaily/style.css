@@ -1998,6 +1998,48 @@ a:hover, a:active {
   margin: 0;
 }
 
+body .tsd-post-long-form {
+  position: relative;
+}
+body .tsd-post-long-form .wp-post-image {
+  max-width: 100vw;
+  width: 100vw !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media only screen and (min-width: 768px) {
+  body .tsd-post-long-form .entry-header {
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    top: 10vw;
+  }
+  body .tsd-post-long-form .entry-header .entry-title, body .tsd-post-long-form .entry-header .entry-subtitle {
+    z-index: 9;
+    color: white;
+    text-shadow: 3px 3px 1px #000;
+    text-align: center;
+    width: 100%;
+  }
+  body .tsd-post-long-form .entry-header .entry-title {
+    font-size: 3.5em;
+  }
+  body .tsd-post-long-form .entry-header .entry-subtitle {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body .tsd-post-long-form .entry-header {
+    top: 20vw;
+  }
+  body .tsd-post-long-form .entry-header .entry-title {
+    font-size: 4em;
+  }
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
