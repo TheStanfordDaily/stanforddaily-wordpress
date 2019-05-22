@@ -163,13 +163,11 @@ add_filter( 'wp_get_attachment_image_attributes', 'tsd_add_lazyload_to_attachmen
 /*
  * Add special post class for long form articles.
  */
-function tsd_add_long_form_post_class($classes, $class, $post_id){
-	if (get_post_meta($post_id, "tsd_long_form", true) === "1") {
-		if (!$classes) {
-			$classes = [];
-		}
-		array_push($classes, "tsd-post-long-form");
+function tsd_add_long_form_post_class( $classes ) {
+	global $post;
+	if ( get_post_meta( $post->ID, "tsd_long_form", true ) === "1" ) {
+		$classes[] = "tsd-post-long-form";
 	}
 	return $classes;
 }
-add_filter('post_class', 'tsd_add_long_form_post_class', 10,3);
+add_filter( 'post_class', 'tsd_add_long_form_post_class' );
