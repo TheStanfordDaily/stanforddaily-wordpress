@@ -141,7 +141,8 @@ function tsd_scripts() {
 		wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css' );
 		wp_enqueue_style( 'slick-carousel-theme-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css' );
 		wp_enqueue_script( 'slick-carousel', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'));
-
+	}
+	if (is_front_page() || is_category( "magazine" )) {
 		wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css' );
 		wp_enqueue_script( 'fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js', array('jquery') );
 	}

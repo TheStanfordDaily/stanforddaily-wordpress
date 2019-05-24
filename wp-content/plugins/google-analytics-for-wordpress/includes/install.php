@@ -57,7 +57,6 @@ class MonsterInsights_Install {
 		// Get a copy of the current MI settings.
 		$this->new_settings = get_option( monsterinsights_get_option_name() );
 
-
 		$version = get_option( 'monsterinsights_current_version', false );
 		$cachec  = false; // have we forced an object cache to be cleared already (so we don't clear it unnecessarily)
 
@@ -103,6 +102,14 @@ class MonsterInsights_Install {
 				$this->v740_upgrades();
 				// Do not increment! See below large comment
 				update_option( 'monsterinsights_db_version', '7.4.0' );
+			}
+
+			if ( version_compare( $version, '7.5.0', '<' ) ) {
+				$this->v750_upgrades();
+			}
+
+			if ( version_compare( $version, '7.6.0', '<' ) ) {
+				$this->v760_upgrades();
 			}
 
 			// Do not use. See monsterinsights_after_install_routine comment below.
@@ -193,6 +200,8 @@ class MonsterInsights_Install {
 		// Add default settings values
 		$this->new_settings = $this->get_monsterinsights_default_values();
 
+		$this->maybe_import_thirstyaffiliates_options();
+
 		$data = array(
 			'installed_version' => MONSTERINSIGHTS_VERSION,
 			'installed_date'    => time(),
@@ -234,6 +243,44 @@ class MonsterInsights_Install {
 			'events_mode'               => 'js',
 			'tracking_mode'             => 'analytics',
 		);
+	}
+
+	/**
+	 * Check if ThirstyAffiliates plugin is installed and use the link prefix value in the affiliate settings.
+	 *
+	 * @return void
+	 */
+	public function maybe_import_thirstyaffiliates_options() {
+
+		// Check if ThirstyAffiliates is installed.
+		if ( ! function_exists( 'ThirstyAffiliates' ) ) {
+			return;
+		}
+
+		$link_prefix = get_option( 'ta_link_prefix', 'recommends' );
+
+		if ( $link_prefix === 'custom' ) {
+			$link_prefix = get_option( 'ta_link_prefix_custom', 'recommends' );
+		}
+
+		if ( ! empty( $link_prefix ) ) {
+
+			// Check if prefix exists.
+			$prefix_set = false;
+			foreach ( $this->new_settings['affiliate_links'] as $affiliate_link ) {
+				if ( $link_prefix === trim( $affiliate_link['path'], '/' ) ) {
+					$prefix_set = true;
+					break;
+				}
+			}
+
+			if ( ! $prefix_set ) {
+				$this->new_settings['affiliate_links'][] = array(
+					'path'  => '/' . $link_prefix . '/',
+					'label' => 'affiliate',
+				);
+			}
+		}
 	}
 
 	/**
@@ -440,5 +487,58 @@ class MonsterInsights_Install {
 		// }
 		//
 		// 2. Clear old settings ( 	'tracking_mode','events_mode',)
+
+
+		// 3. Attempt to extract the cross-domain settings from the Custom Code area and use in the new option.
+		$custom_code = isset( $this->new_settings['custom_code'] ) ? $this->new_settings['custom_code'] : '';
+		if ( ! empty( $custom_code ) ) {
+			$pattern = '/(?:\'linker:autoLink\', )(?:\[)(.*)(?:\])/m';
+			preg_match_all( $pattern, $custom_code, $matches, PREG_SET_ORDER, 0 );
+			if ( ! empty( $matches ) && isset( $matches[0] ) && isset( $matches[0][1] ) ) {
+				$cross_domains = array();
+				$domains       = explode( ',', $matches[0][1] );
+				foreach ( $domains as $key => $domain ) {
+					$domain          = trim( $domain );
+					$cross_domains[] = array(
+						'domain' => trim( $domain, '\'\"' ),
+					);
+				}
+				$this->new_settings['add_allow_linker'] = true;
+				$this->new_settings['cross_domains']    = $cross_domains;
+
+				$notices = get_option( 'monsterinsights_notices' );
+				if ( ! is_array( $notices ) ) {
+					$notices = array();
+				}
+				$notices['monsterinsights_cross_domains_extracted'] = false;
+				update_option( 'monsterinsights_notices', $notices );
+			}
+		}
+	}
+
+	/**
+	 * Upgrade routine for version 7.6.0
+	 */
+	public function v760_upgrades() {
+
+		$cross_domains = isset( $this->new_settings['cross_domains'] ) ? $this->new_settings['cross_domains'] : array();
+
+		if ( ! empty( $cross_domains ) && is_array( $cross_domains ) ) {
+			$current_domain = wp_parse_url( home_url() );
+			$current_domain = isset( $current_domain['host'] ) ? $current_domain['host'] : '';
+			if ( ! empty( $current_domain ) ) {
+				$regex = '/^(?:' . $current_domain . '|(?:.+)\.' . $current_domain . ')$/m';
+				foreach ( $cross_domains as $key => $cross_domain ) {
+					if ( ! isset( $cross_domain['domain'] ) ) {
+						continue;
+					}
+					preg_match( $regex, $cross_domain['domain'], $matches );
+					if ( count( $matches ) > 0 ) {
+						unset( $this->new_settings['cross_domains'][ $key ] );
+					}
+				}
+			}
+		}
+
 	}
 }

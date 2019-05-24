@@ -46,7 +46,7 @@ class Preview {
 	public function is_preview_page() {
 
 		// Only proceed for the form preview page.
-		if ( empty( $_GET['wpforms_form_preview'] ) ) {
+		if ( empty( $_GET['wpforms_form_preview'] ) ) { // phpcs:ignore
 			return false;
 		}
 
@@ -57,7 +57,7 @@ class Preview {
 
 		// Fetch form details for the entry.
 		$this->form_data = \wpforms()->form->get(
-			\absint( $_GET['wpforms_form_preview'] ),
+			\absint( $_GET['wpforms_form_preview'] ), // phpcs:ignore
 			array(
 				'content_only' => true,
 			)
@@ -100,7 +100,9 @@ class Preview {
 	 */
 	public function pre_get_posts( $query ) {
 
-		$query->set( 'posts_per_page', 1 );
+		if ( ! is_admin() && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 1 );
+		}
 	}
 
 	/**
@@ -140,7 +142,7 @@ class Preview {
 
 		$content = esc_html__( 'This is a preview of your form. This page is not publicly accessible.', 'wpforms-lite' );
 
-		if ( ! empty( $_GET['new_window'] ) ) {
+		if ( ! empty( $_GET['new_window'] ) ) { // phpcs:ignore
 			$content .= ' <a href="javascript:window.close();">' . esc_html__( 'Close this window', 'wpforms-lite' ) . '.</a>';
 		}
 

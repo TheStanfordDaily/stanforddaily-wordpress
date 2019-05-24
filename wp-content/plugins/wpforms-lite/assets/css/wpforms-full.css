@@ -506,6 +506,15 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:active {
 	cursor: pointer;
 }
 
+div.wpforms-container-full .wpforms-form input[type=submit]:disabled,
+div.wpforms-container-full .wpforms-form button[type=submit]:disabled,
+div.wpforms-container-full .wpforms-form .wpforms-page-button:disabled {
+	background-color: #eee;
+	border: 1px solid #ddd;
+	cursor: default;
+	opacity: 0.5;
+}
+
 div.wpforms-container-full .wpforms-form input:focus,
 div.wpforms-container-full .wpforms-form textarea:focus,
 div.wpforms-container-full .wpforms-form select:focus {
@@ -1264,4 +1273,11 @@ div.wpforms-gutenberg-form-selector .wpforms-form select:disabled {
 
 div.wpforms-gutenberg-form-selector .wpforms-form button[type=submit]:disabled {
 	cursor: not-allowed;
+}
+
+div.components-panel__body .wpforms-gutenberg-panel-notice {
+	background-color: #d9edf7;
+	border: 1px solid #bce8f1;
+	color: #31708f;
+	padding: 10px;
 }

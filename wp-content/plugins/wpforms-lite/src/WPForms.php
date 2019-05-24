@@ -139,7 +139,6 @@ namespace WPForms {
 
 				self::$instance = new self();
 				self::$instance->constants();
-				self::$instance->conditional_logic_addon_check();
 				self::$instance->includes();
 
 				// Load Pro or Lite specific files.
@@ -183,30 +182,6 @@ namespace WPForms {
 		 */
 		public function load_textdomain() {
 			load_plugin_textdomain( 'wpforms-lite', false, dirname( plugin_basename( WPFORMS_PLUGIN_FILE ) ) . '/languages/' );
-		}
-
-		/**
-		 * Check to see if the conditional logic addon is running, if so then
-		 * deactivate the plugin to prevent conflicts.
-		 *
-		 * @since 1.3.8
-		 */
-		private function conditional_logic_addon_check() {
-
-			if ( function_exists( 'wpforms_conditional_logic' ) ) {
-
-				// Load core files needed to activate deactivate_plugins().
-				require_once ABSPATH . 'wp-admin/includes/plugin.php';
-				require_once ABSPATH . 'wp-includes/pluggable.php';
-
-				// Deactivate Conditional Logic addon.
-				deactivate_plugins( 'wpforms-conditional-logic/wpforms-conditional-logic.php' );
-
-				// To avoid namespace collisions, reload current page.
-				$url = esc_url_raw( remove_query_arg( 'wpforms-test' ) );
-				wp_redirect( $url );
-				exit;
-			}
 		}
 
 		/**
@@ -254,7 +229,6 @@ namespace WPForms {
 				require_once WPFORMS_PLUGIN_DIR . 'includes/admin/ajax-actions.php';
 				require_once WPFORMS_PLUGIN_DIR . 'includes/admin/class-am-notification.php';
 				require_once WPFORMS_PLUGIN_DIR . 'includes/admin/class-am-deactivation-survey.php';
-				require_once WPFORMS_PLUGIN_DIR . 'includes/admin/class-am-dashboard-widget-extend-feed.php';
 			}
 		}
 

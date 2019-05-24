@@ -227,11 +227,13 @@
 		align-items: center;
 
 		&.no-thumbnail {
-			background-image: url('https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg');
+			/* background-image: url("https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg")*/
+			background-image: url("https://raw.githubusercontent.com/TheStanfordDaily/stanforddaily-graphic-assets/master/DailyIcon/without-background/DailyIcon.png");
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
-			background-color: #82221D;
+			background-color:#f4f4f4;
+			/* background-color: #82221D; */
 		}
 
 		img {

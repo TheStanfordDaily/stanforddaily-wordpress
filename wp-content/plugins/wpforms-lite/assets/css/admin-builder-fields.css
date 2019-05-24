@@ -231,11 +231,16 @@
 }
 
 #wpforms-panel-fields .wpforms-field-option-row input[type=text],
+#wpforms-panel-fields .wpforms-field-option-row input[type=number],
 #wpforms-panel-fields .wpforms-field-option-row textarea {
 	width: 99%;
 	border: 1px solid #d6d6d6;
 	padding: 6px 8px;
 	box-shadow: none;
+}
+
+#wpforms-panel-fields .wpforms-field-option-row input[type=number] {
+	width: 20%;
 }
 
 #wpforms-panel-fields .wpforms-field-option-row input[type=text].has-before {

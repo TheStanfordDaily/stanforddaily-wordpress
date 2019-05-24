@@ -2695,10 +2695,11 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 			// Embed form
 			$builder.on('click', '#wpforms-embed', function(e) {
 				e.preventDefault();
-				var content = wpforms_builder.embed_modal;
+				var content  = wpforms_builder.embed_modal,
+					video_id = wpforms_builder.is_gutenberg ? 'ccyJMwyI8x0' : 'IxGVz3AjEe0';
 					content += '<input type=\'text\' value=\'[wpforms id="' + s.formID + '" title="false" description="false"]\' readonly id=\'wpforms-embed-shortcode\'>';
 					content += wpforms_builder.embed_modal_2;
-					content += '<br><br><iframe width="600" height="338" src="https://www.youtube-nocookie.com/embed/IxGVz3AjEe0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+					content += '<br><br><iframe width="600" height="338" src="https://www.youtube-nocookie.com/embed/' + video_id + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
 				$.alert({
 					columnClass: 'modal-wide',
 					title: false,

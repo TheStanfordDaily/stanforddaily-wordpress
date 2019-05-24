@@ -1,7 +1,41 @@
 Changelog
 =========
 
-#### 4.4 - March 1, 2018
+#### 4.5.2 - May 8, 2019
+
+**Improvements**
+
+- Accept more truthy values in custom integration for improved compatability with third-party forms.
+- Update JavaScript dependencies.
+- Load Google reCaptcha script in footer (if needed). 
+
+
+#### 4.5.1 - April 8, 2019
+
+**Additions**
+
+- Add sign-up integration for [Give](https://wordpress.org/plugins/give/)
+- Add sign-up integration for [UltimateMember](https://wordpress.org/plugins/ultimate-member/)
+
+**Improvements**
+
+- Write to debug log if Google reCAPTCHA secret key is incorrect.
+- Validate reCAPTCHA keys when savings form settings.
+- Allow setting an empty "successfully subscribed" message.
+
+
+#### 4.5.0 - March 27, 2019
+
+**Additions**
+
+- Built-in integration with Google reCAPTCHA to prevent bots from subscribing to your Mailchimp lists.
+
+**Improvements**
+
+- Minor improvements to the JavaScript that is loaded on admin pages.
+
+
+#### 4.4.0 - March 1, 2019
 
 **Fixes**
 

@@ -772,6 +772,12 @@
 				errorText,
 				successText;
 
+			if ( $btn.hasClass( 'status-go-to-url' ) ) {
+				// Open url in new tab.
+				window.open( $btn.attr('data-plugin'), '_blank' );
+				return;
+			}
+
 			$btn.prop( 'disabled', true ).addClass( 'loading' );
 			$btn.html( s.iconSpinner );
 
@@ -807,8 +813,8 @@
 
 			} else if ( $btn.hasClass( 'status-download' ) ) {
 				// Install & Activate.
-				action     = 'wpforms_install_addon';
-				cssClass   = 'status-active';
+				action   = 'wpforms_install_addon';
+				cssClass = 'status-active';
 				if ( plugin_type === 'plugin' ) {
 					cssClass += ' button disabled';
 				}
@@ -817,7 +823,7 @@
 				if ( plugin_type === 'addon' ) {
 					buttonText = s.iconActivate + wpforms_admin.addon_deactivate;
 				}
-				errorText  = s.iconInstall + wpforms_admin.addon_activate;
+				errorText = s.iconInstall + wpforms_admin.addon_activate;
 
 			} else {
 				return;

@@ -1930,11 +1930,13 @@ a:hover, a:active {
           align-items: center;
 }
 .excerpt-thumb .thumbnail-container.no-thumbnail {
-  background-image: url("https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg");
+  /* background-image: url("https://pbs.twimg.com/profile_images/828118030605381636/G3wb0UIB_400x400.jpg")*/
+  background-image: url("https://raw.githubusercontent.com/TheStanfordDaily/stanforddaily-graphic-assets/master/DailyIcon/without-background/DailyIcon.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #82221D;
+  background-color: #f4f4f4;
+  /* background-color: #82221D; */
 }
 .excerpt-thumb .thumbnail-container img {
   width: 100%;
@@ -1994,6 +1996,48 @@ a:hover, a:active {
 }
 .page-header .page-title {
   margin: 0;
+}
+
+body .tsd-post-long-form {
+  position: relative;
+}
+body .tsd-post-long-form .wp-post-image {
+  max-width: 100vw;
+  width: 100vw !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media only screen and (min-width: 768px) {
+  body .tsd-post-long-form .entry-header {
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    top: 10vw;
+  }
+  body .tsd-post-long-form .entry-header .entry-title, body .tsd-post-long-form .entry-header .entry-subtitle {
+    z-index: 9;
+    color: white;
+    text-shadow: 3px 3px 1px #000;
+    text-align: center;
+    width: 100%;
+  }
+  body .tsd-post-long-form .entry-header .entry-title {
+    font-size: 3.5em;
+  }
+  body .tsd-post-long-form .entry-header .entry-subtitle {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body .tsd-post-long-form .entry-header {
+    top: 20vw;
+  }
+  body .tsd-post-long-form .entry-header .entry-title {
+    font-size: 4em;
+  }
 }
 
 /*--------------------------------------------------------------
