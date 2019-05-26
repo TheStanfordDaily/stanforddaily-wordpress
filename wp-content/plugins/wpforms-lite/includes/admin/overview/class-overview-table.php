@@ -248,9 +248,12 @@ class WPForms_Overview_Table extends WP_List_Table {
 		}
 
 		$ids    = array_map( 'absint', $ids );
-		$action = ! empty( $_REQUEST['action'] ) ? $_REQUEST['action'] : false;
+		$action = ! empty( $_REQUEST['action'] ) ? $_REQUEST['action'] : false; // phpcs:ignore
 
-		if ( empty( $ids ) || empty( $action ) ) {
+		// Checking the sortable column link.
+		$is_orderby_link = ! empty( $_REQUEST['orderby'] ) && ! empty( $_REQUEST['order'] );
+
+		if ( empty( $ids ) || empty( $action ) || $is_orderby_link ) {
 			return;
 		}
 

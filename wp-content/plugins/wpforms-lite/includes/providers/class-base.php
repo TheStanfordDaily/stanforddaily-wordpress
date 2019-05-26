@@ -171,7 +171,7 @@ abstract class WPForms_Provider {
 		$connection_id = ! empty( $_POST['connection_id'] ) ? sanitize_text_field( wp_unslash( $_POST['connection_id'] ) ) : '';
 		$account_id    = ! empty( $_POST['account_id'] ) ? sanitize_text_field( wp_unslash( $_POST['account_id'] ) ) : '';
 		$list_id       = ! empty( $_POST['list_id'] ) ? sanitize_text_field( wp_unslash( $_POST['list_id'] ) ) : '';
-		$data          = ! empty( $_POST['data'] ) && is_array( array_map( 'sanitize_text_field', wp_unslash( $_POST['data'] ) ) ) ? : array();
+		$data          = ! empty( $_POST['data'] ) ? array_map( 'sanitize_text_field', wp_parse_args( wp_unslash( $_POST['data'] ) ) ) : array(); //phpcs:ignore
 
 		/*
 		 * Create new connection.

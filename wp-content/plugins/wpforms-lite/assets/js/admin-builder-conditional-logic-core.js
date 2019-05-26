@@ -82,7 +82,7 @@
 			$rows = $rows || $( '.wpforms-conditional-row' ); // jshint ignore:line
 
 			var fields     = $.extend({}, allFields),
-				allowed    = [ 'text', 'textarea', 'select', 'radio', 'email', 'url', 'checkbox', 'number', 'payment-multiple', 'payment-checkbox', 'payment-select', 'hidden', 'rating', 'net_promoter_score' ],
+				allowed    = wpforms_builder.cl_fields_supported,
 				changed    = [],
 				key        = '',
 				label      = '';

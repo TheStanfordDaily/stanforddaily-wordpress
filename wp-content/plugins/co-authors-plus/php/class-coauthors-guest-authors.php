@@ -69,6 +69,9 @@ class CoAuthors_Guest_Authors
 		// Add support for featured thumbnails that we can use for guest author avatars
 		add_filter( 'get_avatar', array( $this, 'filter_get_avatar' ),10 ,5 );
 
+		// Add a Personal Data Exporter to guest authors
+		add_filter( 'wp_privacy_personal_data_exporters', array( $this, 'filter_personal_data_exporter' ), 1 );
+
 		// Allow users to change where this is placed in the WordPress admin
 		$this->parent_page = apply_filters( 'coauthors_guest_author_parent_page', $this->parent_page );
 
@@ -95,25 +98,25 @@ class CoAuthors_Guest_Authors
 			'remove_featured_image' => __( 'Remove Avatar', 'co-authors-plus' ),
 		) );
 
-		// Register a post type to store our guest authors 
+		// Register a post type to store our guest authors
 		$args = array(
 				'label' => $this->labels['singular'],
 				'labels' => array(
-						'name' => $this->labels['plural'],
-						'singular_name' => $this->labels['singular'],
-						'add_new' => _x( 'Add New', 'guest author', 'co-authors-plus' ),
-						'all_items' => $this->labels['all_items'],
-						'add_new_item' => $this->labels['add_new_item'],
-						'edit_item' => $this->labels['edit_item'],
-						'new_item' => $this->labels['new_item'],
-						'view_item' => $this->labels['view_item'],
-						'search_items' => $this->labels['search_items'],
-						'not_found' => $this->labels['not_found'],
-						'not_found_in_trash' => $this->labels['not_found_in_trash'],
-						'featured_image' => $this->labels['featured_image'],
-						'set_featured_image' => $this->labels['set_featured_image'],
-						'use_featured_image' => $this->labels['use_featured_image'],
-						'remove_featured_image' => $this->labels['remove_featured_image']
+						'name'                  => isset( $this->labels['plural'] ) ? $this->labels['plural'] : '',
+						'singular_name'         => isset( $this->labels['singular'] ) ? $this->labels['singular'] : '',
+						'add_new'               => _x( 'Add New', 'guest author', 'co-authors-plus' ),
+						'all_items'             => isset( $this->labels['all_items'] ) ? $this->labels['all_items'] : '',
+						'add_new_item'          => isset( $this->labels['add_new_item'] ) ? $this->labels['add_new_item'] : '',
+						'edit_item'             => isset( $this->labels['edit_item'] ) ? $this->labels['edit_item'] : '',
+						'new_item'              => isset( $this->labels['new_item'] ) ? $this->labels['new_item'] : '',
+						'view_item'             => isset( $this->labels['view_item'] ) ? $this->labels['view_item'] : '',
+						'search_items'          => isset( $this->labels['search_items'] ) ? $this->labels['search_items'] : '',
+						'not_found'             => isset( $this->labels['not_found'] ) ? $this->labels['not_found'] : '',
+						'not_found_in_trash'    => isset( $this->labels['not_found_in_trash'] ) ? $this->labels['not_found_in_trash'] : '',
+						'featured_image'        => isset( $this->labels['featured_image'] ) ? $this->labels['featured_image'] : '',
+						'set_featured_image'    => isset( $this->labels['set_featured_image'] ) ? $this->labels['set_featured_image'] : '',
+						'use_featured_image'    => isset( $this->labels['use_featured_image'] ) ? $this->labels['use_featured_image'] : '',
+						'remove_featured_image' => isset( $this->labels['remove_featured_image'] ) ? $this->labels['remove_featured_image'] : '',
 					),
 				'public' => true,
 				'publicly_queryable' => false,
@@ -467,12 +470,7 @@ class CoAuthors_Guest_Authors
 
 			// get post count
 			global $coauthors_plus;
-			$term = $coauthors_plus->get_author_term( $guest_author );
-			if ( $term ) {
-				$count = $term->count;
-			} else {
-				$count = 0;
-			}
+			$count = $coauthors_plus->get_guest_author_post_count( $guest_author );
 
 			echo '<div class="wrap">';
 			echo '<div class="icon32" id="icon-users"><br/></div>';
@@ -493,9 +491,9 @@ class CoAuthors_Guest_Authors
 				}
 				$post_count_message .= $note;
 			}
-			$allowed_html = array(  
-				'p' => array( 
-					'class' => array(), 
+			$allowed_html = array(
+				'p' => array(
+					'class' => array(),
 				),
 			);
 			echo wp_kses( $post_count_message, $allowed_html );
@@ -960,11 +958,12 @@ class CoAuthors_Guest_Authors
 	/**
 	 * Get an thumbnail for a Guest Author object
 	 *
-	 * @param 	object 	The Guest Author object for which to retrieve the thumbnail
-	 * @param 	int 	The desired image size
-	 * @return 	string 	The thumbnail image tag, or null if one doesn't exist
+	 * @param 	object 	      The Guest Author object for which to retrieve the thumbnail.
+	 * @param 	int 	      The desired image size.
+	 * @param	array|string  Optional. An array or string of additional classes. Default null.
+	 * @return 	string 	      The thumbnail image tag, or null if one doesn't exist.
 	 */
-	function get_guest_author_thumbnail( $guest_author, $size ) {
+	function get_guest_author_thumbnail( $guest_author, $size, $class = null ) {
 		// See if the guest author has an avatar
 		if ( ! has_post_thumbnail( $guest_author->ID ) ) {
 			return null;
@@ -973,6 +972,12 @@ class CoAuthors_Guest_Authors
 		$args = array(
 				'class' => "avatar avatar-{$size} photo",
 			);
+		if ( ! empty( $class ) ) {
+			if ( is_array( $class ) ) {
+				$class = implode( ' ', $class );
+			}
+			$args['class'] += " $class";
+		}
 
 		$size = array( $size, $size );
 
@@ -1258,6 +1263,11 @@ class CoAuthors_Guest_Authors
 			update_post_meta( $post_id, $pm_key, $args[ $key ] );
 		}
 
+		// Attach the avatar / featured image.
+		if ( ! empty( $args[ 'avatar' ] ) ) {
+			set_post_thumbnail( $post_id, $args[ 'avatar' ] );
+		}
+
 		// Make sure the author term exists and that we're assigning it to this post type
 		$author_term = $coauthors_plus->update_author_term( $this->get_guest_author_by( 'ID', $post_id ) );
 		wp_set_post_terms( $post_id, array( $author_term->slug ), $coauthors_plus->coauthor_taxonomy, false );
@@ -1502,5 +1512,96 @@ class CoAuthors_Guest_Authors
 		}
 
 		return $link;
+	}
+
+	/**
+	 * Filter Personal Data Exporters to add Guest Author exporter
+	 *
+	 * @since 3.3.1
+	 */
+	public function filter_personal_data_exporter( $exporters ) {
+		$exporters['cap-guest-author'] = array(
+			'exporter_friendly_name' => __( 'Guest Author', 'co-authors-plus' ),
+			'callback'               => array( $this, 'personal_data_exporter' ),
+		);
+
+		return $exporters;
+	}
+
+	/**
+	 * Finds and exports personal data associated with an email address for guest authors
+	 *
+	 * @since 3.3.1
+	 *
+	 * @param string $email_address  The guest author email address.
+ 	 * @return array An array of personal data.
+	 */
+	public function personal_data_exporter( $email_address ) {
+		$email_address = trim( $email_address );
+
+		$data_to_export = array();
+
+		$author = $this->get_guest_author_by( 'user_email', $email_address );
+
+		if ( ! $author ) {
+			return array(
+				'data' => array(),
+				'done' => true,
+			);
+		}
+
+		$author_data = array(
+			'ID'              => __( 'ID', 'co-authors-plus' ),
+			'user_login'      => __( 'Login Name', 'co-authors-plus' ),
+			'display_name'    => __( 'Display Name', 'co-authors-plus' ),
+			'user_email'      => __( 'Email', 'co-authors-plus' ),
+			'first_name'      => __( 'First Name', 'co-authors-plus' ),
+			'last_name'       => __( 'Last Name', 'co-authors-plus' ),
+			'website'         => __( 'Website', 'co-authors-plus' ),
+			'aim'             => __( 'AIM', 'co-authors-plus' ),
+			'yahooim'         => __( 'Yahoo IM', 'co-authors-plus' ),
+			'jabber'          => __( 'Jabber / Google Talk', 'co-authors-plus' ),
+			'description'     => __( 'Biographical Info', 'co-authors-plus' ),
+		);
+
+		$author_data_to_export = array();
+
+		foreach ( $author_data as $key => $name ) {
+			if ( empty( $author->$key ) ) {
+				continue;
+			}
+
+			$author_data_to_export[] = array(
+				'name'  => $name,
+				'value' => $author->$key,
+			);
+		}
+
+		/**
+		 * Filters extra data to allow plugins add data related to guest author
+		 *
+		 * @since 3.3.1
+		 *
+		 * @param array $extra_data A empty array to be populated with extra data
+		 * @param int $author->ID The guest author ID
+		 * @param string $email_address The guest author email address
+		 */
+		$extra_data = apply_filters( 'coauthors_guest_author_personal_export_extra_data', [], $author->ID, $email_address );
+
+		if ( is_array( $extra_data ) && ! empty( $extra_data ) ) {
+			$author_data_to_export = array_merge( $author_data_to_export, $extra_data );
+		}
+
+		$data_to_export[] = array(
+			'group_id'    => 'cap-guest-author',
+			'group_label' => __( 'Guest Author', 'co-authors-plus' ),
+			'item_id'     => "cap-guest-author-{$author->ID}",
+			'data'        => $author_data_to_export,
+		);
+
+		return array(
+			'data' => $data_to_export,
+			'done' => true,
+		);
 	}
 }

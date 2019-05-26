@@ -1,5 +1,31 @@
 == Changelog ==
 
+= 1.5.2.3 =
+- Fixed: PHP error if checkbox field is empty when form is submitted.
+
+= 1.5.2.2 =
+- Fixed: PHP notice/warnings from undefined constant (typo).
+
+= 1.5.2.1 =
+- Fixed: Required Checkbox fields asking for all inputs to be checked to pass validation.
+
+= 1.5.2 =
+- Added: Choice Limit advanced option for Checkbox fields.
+- Added: Smart domain name typo detection for Email fields.
+- Added: New Gutenberg block keywords to help with discovery.
+- Added: Link to "How to Properly Test Your WordPress Forms Before Launching" doc inside Gutenberg block.
+- Changed: Form builder field delete icon, now a trash can.
+- Changed: Updated jQuery inputmask library to v4.0.6.
+- Changed: Updated jQuery validation plugin to v1.19.0.
+- Changed: Clear Dashboard widget cache when form is created/deleted/updated.
+- Fixed: Blank form if using form template containing `target="_blank"`.
+- Fixed: Honeypot field not using unique IDs.
+- Fixed: Duplicating forms creating another duplicate if afterwards the table was sorted.
+- Fixed: Minor issues with Gutenberg editor.
+- Fixed: Form Builder embed modal showing Classic Editor instructions for Gutenberg users.
+- Fixed: Number field allowing non-numerical characters on iOS devices.
+- Fixed: Field Dynamic Choices not showing in form preview when using "Post Type".
+
 = 1.5.1.3 =
 - Fixed: Importing forms that containing `target="_blank"`.
 - Fixed: Quote support/display inside query param Smart Tags.
@@ -10,7 +36,7 @@
 - Fixed: Unable to uncheck default Multiple Choice value in form builder after being set initially.
 - Fixed: PHP error when entries are exported after a field has been deleted.
 - Fixed: Form builder Email notification conditional logic settings display issue after new notification is added.
-- Fixed: - Conflict with some themes preventing Multiple Choice fields from being selectable.
+- Fixed: Conflict with some themes preventing Multiple Choice fields from being selectable.
 
 = 1.5.1 =
 - Added: Complete translations for Spanish, Italian, Japanese, and German.

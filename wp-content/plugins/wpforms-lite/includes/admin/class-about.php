@@ -286,6 +286,23 @@ class WPForms_About {
 			<div class="addons-container">
 				<?php
 				foreach ( $am_plugins as $plugin => $details ) :
+
+					$is_mi     = ( 'google-analytics-for-wordpress/googleanalytics.php' === $plugin );
+					$is_mi_pro = false;
+					if ( $is_mi ) {
+						if ( array_key_exists( $plugin, $all_plugins ) ) {
+							if ( is_plugin_active( $plugin ) ) {
+								$is_mi_pro = true;
+							}
+						} elseif ( array_key_exists( $details['pro']['plug'], $all_plugins ) ) {
+							$is_mi_pro = true;
+						}
+						if ( $is_mi_pro ) {
+							$plugin  = $details['pro']['plug'];
+							$details = $details['pro'];
+						}
+					}
+
 					if ( array_key_exists( $plugin, $all_plugins ) ) {
 						if ( is_plugin_active( $plugin ) ) {
 							// Status text/status.
@@ -308,6 +325,9 @@ class WPForms_About {
 						// Doesn't exist, install.
 						// Status text/status.
 						$status_class = 'status-download';
+						if ( isset( $details['act'] ) && 'go-to-url' === $details['act'] ) {
+							$status_class = 'status-go-to-url';
+						}
 						$status_text  = esc_html__( 'Not Installed', 'wpforms-lite' );
 						// Button text/status.
 						$action_class = $status_class . ' button button-primary';
@@ -728,19 +748,30 @@ class WPForms_About {
 	protected function get_am_plugins() {
 
 		$data = array(
+
 			'google-analytics-for-wordpress/googleanalytics.php' => array(
 				'icon' => WPFORMS_PLUGIN_URL . 'assets/images/about/plugin-mi.png',
 				'name' => esc_html__( 'MonsterInsights', 'wpforms-lite' ),
 				'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'wpforms-lite' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.zip',
+				'pro'  => array(
+					'plug' => 'google-analytics-premium/googleanalytics-premium.php',
+					'icon' => WPFORMS_PLUGIN_URL . 'assets/images/about/plugin-mi.png',
+					'name' => esc_html__( 'MonsterInsights Pro', 'wpforms-lite' ),
+					'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'wpforms-lite' ),
+					'url'  => 'https://www.monsterinsights.com/?utm_source=proplugin&utm_medium=pluginheader&utm_campaign=pluginurl&utm_content=7%2E0%2E0',
+					'act'  => 'go-to-url',
+				),
 			),
-			'optinmonster/optin-monster-wp-api.php'              => array(
+
+			'optinmonster/optin-monster-wp-api.php' => array(
 				'icon' => WPFORMS_PLUGIN_URL . 'assets/images/about/plugin-om.png',
 				'name' => esc_html__( 'OptinMonster', 'wpforms-lite' ),
 				'desc' => esc_html__( 'Our high-converting optin forms like Exit-Intent® popups, Fullscreen Welcome Mats, and Scroll boxes help you dramatically boost conversions and get more email subscribers.', 'wpforms-lite' ),
 				'url'  => 'https://downloads.wordpress.org/plugin/optinmonster.zip',
 			),
-			'wp-mail-smtp/wp_mail_smtp.php'                      => array(
+
+			'wp-mail-smtp/wp_mail_smtp.php'         => array(
 				'icon' => WPFORMS_PLUGIN_URL . 'assets/images/about/plugin-smtp.png',
 				'name' => esc_html__( 'WP Mail SMTP', 'wpforms-lite' ),
 				'desc' => esc_html__( 'SMTP (Simple Mail Transfer Protocol) is an industry standard for sending emails. SMTP helps increase email deliverability by using proper authentication.', 'wpforms-lite' ),

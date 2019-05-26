@@ -182,3 +182,15 @@ function tsd_trim_all_excerpt($text) {
 } 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'tsd_trim_all_excerpt');
+
+/*
+ * Add special post class for long form articles.
+ */
+function tsd_add_long_form_post_class( $classes ) {
+	global $post;
+	if ( get_post_meta( $post->ID, "tsd_long_form", true ) === "1" ) {
+		$classes[] = "tsd-post-long-form";
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'tsd_add_long_form_post_class' );

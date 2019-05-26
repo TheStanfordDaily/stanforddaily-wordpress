@@ -675,6 +675,9 @@ class WPForms_Tools {
 		// Import Form(s).
 		if ( 'import_form' === $_POST['action'] && ! empty( $_FILES['file']['tmp_name'] ) ) {
 
+			// Add filter of the link rel attr to avoid JSON damage.
+			add_filter( 'wp_targeted_link_rel', '__return_empty_string', 50, 1 );
+
 			$ext = strtolower( pathinfo( $_FILES['file']['name'], PATHINFO_EXTENSION ) );
 
 			if ( 'json' !== $ext ) {

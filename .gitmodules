@@ -6,3 +6,7 @@
 	path = wp-content/plugins/tsd-push-notification
 	url = https://github.com/TheStanfordDaily/tsd-push-notification.git
 	branch = master
+[submodule "wp-content/plugins/accelerated-mobile-pages"]
+	path = wp-content/plugins/accelerated-mobile-pages
+	url = https://github.com/ahmedkaludi/accelerated-mobile-pages.git
+	branch = master

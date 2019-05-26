@@ -85,14 +85,21 @@ class FormSelector implements IntegrationInterface {
 	public function enqueue_block_editor_assets() {
 
 		$i18n = array(
-			'title'            => \esc_html__( 'WPForms', 'wpforms-lite' ),
-			'description'      => \esc_html__( 'Select and display one of your forms.', 'wpforms-lite' ),
-			'form_keyword'     => \esc_html__( 'form', 'wpforms-lite' ),
-			'form_select'      => \esc_html__( 'Select a Form', 'wpforms-lite' ),
-			'form_settings'    => \esc_html__( 'Form Settings', 'wpforms-lite' ),
-			'form_selected'    => \esc_html__( 'Form', 'wpforms-lite' ),
-			'show_title'       => \esc_html__( 'Show Title', 'wpforms-lite' ),
-			'show_description' => \esc_html__( 'Show Description', 'wpforms-lite' ),
+			'title'             => \esc_html__( 'WPForms', 'wpforms-lite' ),
+			'description'       => \esc_html__( 'Select and display one of your forms.', 'wpforms-lite' ),
+			'form_keywords'     => array(
+				\esc_html__( 'form', 'wpforms-lite' ),
+				\esc_html__( 'contact', 'wpforms-lite' ),
+				\esc_html__( 'survey', 'wpforms-lite' ),
+			),
+			'form_select'       => \esc_html__( 'Select a Form', 'wpforms-lite' ),
+			'form_settings'     => \esc_html__( 'Form Settings', 'wpforms-lite' ),
+			'form_selected'     => \esc_html__( 'Form', 'wpforms-lite' ),
+			'show_title'        => \esc_html__( 'Show Title', 'wpforms-lite' ),
+			'show_description'  => \esc_html__( 'Show Description', 'wpforms-lite' ),
+			'panel_notice_head' => \esc_html__( 'Heads up!', 'wpforms-lite' ),
+			'panel_notice_text' => \esc_html__( 'Dont forget to test your form.', 'wpforms-lite' ),
+			'panel_notice_link' => \esc_html__( 'Check out our complete guide!', 'wpforms-lite' ),
 		);
 
 		\wp_enqueue_script(
@@ -104,6 +111,14 @@ class FormSelector implements IntegrationInterface {
 		);
 
 		$forms = \wpforms()->form->get( '', array( 'order' => 'DESC' ) );
+		$forms = ! empty( $forms ) ? $forms : array();
+		$forms = array_map(
+			function( $form ) {
+				$form->post_title = htmlspecialchars_decode( $form->post_title, ENT_QUOTES );
+				return $form;
+			},
+			$forms
+		);
 
 		\wp_localize_script(
 			'wpforms-gutenberg-form-selector',
@@ -111,7 +126,7 @@ class FormSelector implements IntegrationInterface {
 			array(
 				'logo_url' => WPFORMS_PLUGIN_URL . 'assets/images/sullie-vc.png',
 				'wpnonce'  => \wp_create_nonce( 'wpforms-gutenberg-form-selector' ),
-				'forms'    => ! empty( $forms ) ? $forms : array(),
+				'forms'    => $forms,
 				'i18n'     => $i18n,
 			)
 		);

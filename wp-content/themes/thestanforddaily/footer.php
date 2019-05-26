@@ -28,6 +28,8 @@
 					<a href="/privacy-policy/" target="_blank">Privacy Policy</a>
 					<span class="sep"> | </span>
 					<a href="https://app.stanforddaily.com" target="_blank">Mobile App</a>
+					<br />
+					Support The Stanford Daily when you shop on <a href="https://smile.amazon.com/" target="_blank">Amazon</a>.
 				</div>
 			</div>
 		</div><!-- .container -->

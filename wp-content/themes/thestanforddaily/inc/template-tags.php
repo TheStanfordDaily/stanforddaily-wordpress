@@ -29,6 +29,7 @@ if ( ! function_exists( 'tsd_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function tsd_posted_on() {
+		/*
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -43,12 +44,23 @@ if ( ! function_exists( 'tsd_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
+			/*
 			esc_html_x( '%s', 'post date', 'tsd' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string .'</a>'
 		);
+		*/
+		// echo '<span class="posted-on">'. $posted_on . '</span>'; // WPCS: XSS OK.
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		global $post;
+		$date = $post->post_date;
+		$time = get_post_time('G', true, $post);
+		$mytime = time() - $time;
+		if($mytime > 0 && $mytime < 7*24*60*60)
+			$posted_on = sprintf(__('%s ago'), human_time_diff($time));
+		else
+			$posted_on = date(get_option('date_format'), strtotime($date));
 
+		echo '<span class="posted-on">'. $posted_on . '</span>'; // WPCS: XSS OK.
 	}
 endif;
 

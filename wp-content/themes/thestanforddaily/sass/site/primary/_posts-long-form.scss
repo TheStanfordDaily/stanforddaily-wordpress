@@ -1,0 +1,45 @@
+body {
+    .tsd-post-long-form {
+        position: relative;
+        .wp-post-image {
+            max-width: 100vw;
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .entry-header {
+                position: absolute;
+                left: 0;
+                z-index: 9;
+                top: 10vw;
+                .entry-title, .entry-subtitle {
+                    z-index: 9;
+                    color: white;
+                    text-shadow: 3px 3px 1px #000;
+                    text-align: center;
+                    width: 100%;
+                }
+                .entry-title {
+                    font-size: 3.5em;
+                }
+                .entry-subtitle {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .entry-header {
+                top: 20vw;
+                .entry-title {
+                    font-size: 4em;
+                }
+            }
+        }
+    }
+}

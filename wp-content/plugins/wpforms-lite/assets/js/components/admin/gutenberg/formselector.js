@@ -17,7 +17,7 @@ registerBlockType( 'wpforms/form-selector', {
 	title: wpforms_gutenberg_form_selector.i18n.title,
 	description: wpforms_gutenberg_form_selector.i18n.description,
 	icon: wpformsIcon,
-	keywords: [ wpforms_gutenberg_form_selector.i18n.form_keyword ],
+	keywords: wpforms_gutenberg_form_selector.i18n.form_keywords,
 	category: 'widgets',
 	attributes: {
 		formId: {
@@ -70,6 +70,12 @@ registerBlockType( 'wpforms/form-selector', {
 						checked={ displayDesc }
 						onChange={ toggleDisplayDesc }
 					/>
+					<p class="wpforms-gutenberg-panel-notice">
+						<strong>{ wpforms_gutenberg_form_selector.i18n.panel_notice_head }</strong><br />
+						{ wpforms_gutenberg_form_selector.i18n.panel_notice_text }<br />
+						<a href="https://wpforms.com/docs/how-to-properly-test-your-wordpress-forms-before-launching-checklist/" target="_blank">{ wpforms_gutenberg_form_selector.i18n.panel_notice_link }</a>
+					</p>
+
 				</PanelBody>
 			</InspectorControls>
 		];

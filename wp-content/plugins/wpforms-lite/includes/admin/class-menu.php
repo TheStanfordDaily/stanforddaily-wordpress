@@ -121,7 +121,7 @@ class WPForms_Admin_Menu {
 		add_submenu_page(
 			'wpforms-overview',
 			esc_html__( 'About WPForms', 'wpforms-lite' ),
-			esc_html__( 'About Us', 'wpform-lite' ),
+			esc_html__( 'About Us', 'wpforms-lite' ),
 			$menu_cap,
 			WPForms_About::SLUG,
 			array( $this, 'admin_page' )
