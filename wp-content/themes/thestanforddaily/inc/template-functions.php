@@ -159,3 +159,26 @@ function tsd_add_lazyload_to_attachment_image( $attr, $attachment ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'tsd_add_lazyload_to_attachment_image', 10, 2 );
+
+/**
+ * Creates an excerpt if needed; shortens the manual excerpt if too long
+ * Code from http://www.transformationpowertools.com/wordpress/automatically-shorten-manual-excerpt
+ */
+function tsd_trim_all_excerpt($text) {
+	global $post;
+	$raw_excerpt = $text;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]&gt;', $text);
+	}
+	 
+	$text = strip_tags($text);
+	$excerpt_length = apply_filters('excerpt_length', 55);
+	$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+	$text = wp_trim_words( $text, $excerpt_length, $excerpt_more ); 
+	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt); 
+} 
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'tsd_trim_all_excerpt');
