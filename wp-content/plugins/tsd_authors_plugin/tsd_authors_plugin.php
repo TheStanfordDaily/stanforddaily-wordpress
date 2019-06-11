@@ -83,7 +83,7 @@ function tsd_authors_plugin_enable_api() {
                 }
                 // If the key ends with `Image`
                 if(preg_match('/Image$/', $key)) {
-                    $value = tsd_authors_plugin_get_image_url_from_id($value, 'medium');
+                    $value = tsd_authors_plugin_get_image_url_from_id($value, 'full');
                 }
                 $meta_to_return[$shortKey] = $value;
             }
