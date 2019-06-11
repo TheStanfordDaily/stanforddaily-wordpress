@@ -10,3 +10,7 @@
 	path = wp-content/plugins/accelerated-mobile-pages
 	url = https://github.com/ahmedkaludi/accelerated-mobile-pages.git
 	branch = master
+[submodule "wp-content/themes/thestanforddaily"]
+	path = wp-content/themes/thestanforddaily
+	url = https://github.com/TheStanfordDaily/tsd-wp-theme.git
+	branch = master
