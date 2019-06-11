@@ -1,6 +1,8 @@
 [![The Stanford Daily logo](https://github.com/TheStanfordDaily/stanforddaily-graphic-assets/raw/master/DailyLogo/DailyLogo.png)](https://www.stanforddaily.com/)
 
 # Stanford Daily website
+[![Build Status](https://travis-ci.com/TheStanfordDaily/stanforddaily-website.svg?branch=master)](https://travis-ci.com/TheStanfordDaily/stanforddaily-website)
+
 This is the Stanford Daily website. See it live at https://www.stanforddaily.com/. Contributions welcome!
 
 ## Local setup
