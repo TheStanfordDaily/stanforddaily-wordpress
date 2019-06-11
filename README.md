@@ -1,12 +1,10 @@
-<img src="https://user-images.githubusercontent.com/1689183/55673023-25239a00-5857-11e9-9699-5f2d0ab365cf.png" width="100">
+[![The Stanford Daily logo](https://github.com/TheStanfordDaily/stanforddaily-graphic-assets/raw/master/DailyLogo/DailyLogo.png)](https://www.stanforddaily.com/)
 
 # Stanford Daily website
 This is the Stanford Daily website. See it live at https://www.stanforddaily.com/. Contributions welcome!
 
-# Local setup
-
-## Installation
-
+## Local setup
+### Installation
 Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 Download [Vagrant](https://www.vagrantup.com/downloads.html)
@@ -18,8 +16,7 @@ vagrant plugin install vagrant-triggers
 vagrant plugin install vagrant-hostsupdater
 ```
 
-## Run
-
+### Run
 First, download the database dump (`.sql`) file and put it into the `wp-vagrant/` folder.
 
 Then, run this command from the cloned `stanforddaily-website/` folder to start the local server: (If you are on Mac, you may need to enter in your password during this step.)
@@ -36,8 +33,7 @@ To shutdown the local server, run:
 vagrant halt
 ```
 
-## Re-setup
-
+### Re-setup
 Normally, when you shutdown the local server using `vagrant halt`, all data in your local database (e.g., if you posted a new article on your local website) will *not* be lost the next time you `vagrant up`.
 
 However, if you wish to restart from a `.sql` file, you can run:
@@ -48,38 +44,15 @@ vagrant destroy # Current database will be exported to `wp-vagrant/db_dumps/`
 vagrant up
 ```
 
-## More info on setup
+### More info on setup
 Taken from https://github.com/digitalquery/wp-vagrant
 
-# Theme Development
-
-The theme is using [Sass](https://sass-lang.com/) for styling. When developing the theme, you should be editing individual `.scss` files in the `sass/` folder. Do NOT manually edit the `style.css` file.
-
-We are using [Grunt](https://gruntjs.com/) to compiling files.
-
-To set up, type the following command in the theme folder (`wp-content/themes/thestanforddaily/`)
-```
-npm install -g grunt-cli
-npm install -g sass
-npm install
-```
-
-Then just type the following command every time you start working on the theme:
-```
-grunt
-```
-
-If you see:
-```
-Running "watch" task
-Waiting...
-```
-
-It means that grunt is up and running. Grunt will watch your `scss` files changes and automatically update the `style.css` and `style.min.css` for you.
-
-# Alternative ways
-
+### Alternative ways to setup
 https://github.com/TheStanfordDaily/stanforddaily-website/wiki/Setting-up-the-Stanford-Daily-website-on-your-Mac-or-Windows-using-Local-by-Flywheel
+
+
+## Theme Development
+See https://github.com/TheStanfordDaily/tsd-wp-theme/.
 
 
 ## Submodules
