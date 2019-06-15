@@ -233,7 +233,7 @@ function tsd_locations_plugin_enable_api() {
     }
 
 
-    // For TSD Push Notification
+    // For adding filter to TSD Push Notification
     function tsd_locations_plugin_get_location_ids_by_tags( $tag_slugs ) {
         $results = [];
         $locations = tsd_locations_plugin_get_locations();
@@ -248,5 +248,23 @@ function tsd_locations_plugin_enable_api() {
         }
         return array_unique( $results );
     }
+
+    function tsd_locations_add_tsd_pn_notification_receiver_sources( $notification_receiver_sources, $post_id ) {
+        $post_tags = get_the_tags( $post_id );
+        $post_tags_slugs = [];
+        foreach ( $post_tags as $each_tag ) {
+            $post_tags_slugs[] = $each_tag->slug;
+        }
+        $post_location_ids = tsd_locations_plugin_get_location_ids_by_tags( $post_tags_slugs );
+        $notification_receiver_sources[ 'location_ids' ] = $post_location_ids;
+        return $notification_receiver_sources;
+    }
+    add_filter( 'tsd_pn_notification_receiver_sources', 'tsd_locations_add_tsd_pn_notification_receiver_sources', 10, 2 );
+
+    function tsd_locations_add_tsd_pn_subscription_types( $types ) {
+        $types[] = 'location_ids';
+        return $types;
+    }
+    add_filter( 'tsd_pn_subscription_types', 'tsd_locations_add_tsd_pn_subscription_types' );
 }
 add_action('init', 'tsd_locations_plugin_enable_api');
