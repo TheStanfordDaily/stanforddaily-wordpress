@@ -299,6 +299,7 @@ class WPForms_Smart_Tags {
 				$field_id    = $field_parts[0];
 				$field_key   = ! empty( $field_parts[1] ) ? sanitize_key( $field_parts[1] ) : 'value';
 				$value       = ! empty( $fields[ $field_id ][ $field_key ] ) ? wpforms_sanitize_textarea_field( $fields[ $field_id ][ $field_key ] ) : '';
+				$value       = apply_filters( 'wpforms_field_smart_tag_value', $value );
 				$content     = str_replace( '{field_id="' . $parts . '"}', $value, $content );
 			}
 		}

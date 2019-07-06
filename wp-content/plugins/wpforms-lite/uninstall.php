@@ -10,6 +10,8 @@
  * - wpforms_log post type posts and post_meta
  * - wpforms post type posts and post_meta
  * - WPForms settings/options
+ * - WPForms user meta
+ * - WPForms term meta
  * - WPForms Uploads
  *
  * @package    WPForms
@@ -17,9 +19,13 @@
  * @since      1.4.5
  * @license    GPL-2.0+
  * @copyright  Copyright (c) 2018, WPForms LLC
+ *
+ * @var WP_Filesystem_Base $wp_filesystem
  */
 
- // Exit if accessed directly.
+// phpcs:disable WordPress.DB.DirectDatabaseQuery
+
+// Exit if accessed directly.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
@@ -42,42 +48,40 @@ $wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . 'wpforms_entry_meta' );
 $wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . 'wpforms_entry_fields' );
 
 // Delete Preview page.
-$preview = get_option( 'wpforms_preview_page', false );
-if ( ! empty( $preview ) ) {
-	wp_delete_post( $preview, true );
+$preview_page = get_option( 'wpforms_preview_page', false );
+if ( ! empty( $preview_page ) ) {
+	wp_delete_post( $preview_page, true );
 }
 
 // Delete wpforms and wpforms_log post type posts/post_meta.
-$posts = get_posts( array(
-	'post_type'   => array( 'wpforms_log', 'wpforms' ),
-	'post_status' => 'any',
-	'numberposts' => -1,
-	'fields'      => 'ids',
-) );
-if ( $posts ) {
-	foreach ( $posts as $post ) {
-		wp_delete_post( $post, true );
+$wpforms_posts = get_posts(
+	array(
+		'post_type'   => array( 'wpforms_log', 'wpforms' ),
+		'post_status' => 'any',
+		'numberposts' => -1,
+		'fields'      => 'ids',
+	)
+);
+if ( $wpforms_posts ) {
+	foreach ( $wpforms_posts as $wpforms_post ) {
+		wp_delete_post( $wpforms_post, true );
 	}
 }
 
 // Delete plugin settings.
-delete_option( 'wpforms_version' );
-delete_option( 'wpforms_providers' );
-delete_option( 'wpforms_license' );
-delete_option( 'wpforms_license_updates' );
-delete_option( 'wpforms_settings' );
-delete_option( 'wpforms_version_upgraded_from' );
-delete_option( 'wpforms_preview_page' );
-delete_option( 'wpforms_zapier_apikey' );
-delete_option( 'wpforms_activated' );
-delete_option( 'wpforms_review' );
-delete_option( 'wpforms_imported' );
+$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE 'wpforms\_%'" );
+
+// Delete plugin user meta.
+$wpdb->query( "DELETE FROM {$wpdb->usermeta} WHERE meta_key LIKE 'wpforms\_%'" );
+
+// Delete plugin term meta.
+$wpdb->query( "DELETE FROM {$wpdb->termmeta} WHERE meta_key LIKE 'wpforms\_%'" );
 
 // Remove any transients we've left behind.
-$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE '\_transient\_wpforms\_%'" );
-$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE '\_site\_transient\_wpforms\_%'" );
-$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE '\_transient\_timeout\_wpforms\_%'" );
-$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE '\_site\_transient\_timeout\_wpforms\_%'" );
+$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\_transient\_wpforms\_%'" );
+$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\_site\_transient\_wpforms\_%'" );
+$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\_transient\_timeout\_wpforms\_%'" );
+$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\_site\_transient\_timeout\_wpforms\_%'" );
 
 // Remove uploaded files.
 $uploads_directory = wp_upload_dir();

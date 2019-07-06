@@ -4,7 +4,7 @@ Donate link: http://www.wpbeginner.com/wpbeginner-needs-your-help/
 Tags: WordPress analytics, google analytics, google analytics dashboard, google analytics widget, WooCommerce stats, analytics dashboard, universal google analytics, statistics, tracking, stats, google, google analytics by yoast, ga, monster insights, monsterinsights, universal analytics, web stats, ecommerce, ecommerce tracking
 Requires at least: 3.8.0
 Tested up to: 5.3
-Stable tag: 7.6.0
+Stable tag: 7.7.1
 License: GPL v3
 
 The best Google Analytics plugin for WordPress. See how visitors find and use your website, so you can keep them coming back.
@@ -273,6 +273,15 @@ You can also learn about other <a href="http://www.wpbeginner.com/category/plugi
 4. Want more features? <a href="https://www.monsterinsights.com/?utm_source=wprepo&utm_medium=link&utm_campaign=liteversion">Purchase MonsterInsights Pro</a>!
 
 == Changelog ==
+= 7.7.1: June 19, 2019 =
+- Fixed: SVN didn't add one of our files.
+
+= 7.7.0: June 18, 2019 =
+- New: Admin bar insights now available in the WordPress admin.
+- New: We've added a custom integration with the WP Site Health Checks area so that you know your site is always properly configured for Google Analytics tracking.
+- Tweak: We've tweaked our settings panel a bit to accomodate our new eCommerce tracking for LifterLMS.
+- Fixed: We've fixed a bug that caused a compatibility issue with WP-CLI.
+
 = 7.6.0: April 24, 2019 =
 - New: Frontend admin bar reports for your website in the last 30 days.
 - New: Brand new About Us page which includes info on getting started and using MonsterInsights features.

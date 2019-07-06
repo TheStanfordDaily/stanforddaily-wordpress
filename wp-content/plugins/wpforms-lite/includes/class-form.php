@@ -83,8 +83,8 @@ class WPForms_Form_Handler {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param mixed $id
-	 * @param array $args
+	 * @param mixed $id   Form ID.
+	 * @param array $args Additional arguments array.
 	 *
 	 * @return array|bool|null|WP_Post
 	 */
@@ -102,8 +102,8 @@ class WPForms_Form_Handler {
 			// If ID is provided, we get a single form
 			$forms = get_post( absint( $id ) );
 
-			if ( ! empty( $args['content_only'] ) && ! empty( $forms ) && 'wpforms' === $forms->post_type ) {
-				$forms = wpforms_decode( $forms->post_content );
+			if ( ! empty( $args['content_only'] ) ) {
+				$forms = ! empty( $forms ) && 'wpforms' === $forms->post_type ? wpforms_decode( $forms->post_content ) : false;
 			}
 		} else {
 

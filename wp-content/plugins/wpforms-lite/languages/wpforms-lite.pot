@@ -1,13 +1,13 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPForms Lite 1.5.2.3\n"
+"Project-Id-Version: WPForms Lite 1.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpforms-lite\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-04-23T13:57:12+00:00\n"
+"POT-Creation-Date: 2019-06-17T15:02:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.1.0\n"
 "X-Domain: wpforms-lite\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #. translators: %s - form name.
 #: lite/wpforms-lite.php:55
-#: includes/class-process.php:499
+#: includes/class-process.php:630
 msgid "New %s Entry"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 #: includes/admin/importers/class-ninja-forms.php:142
 #: includes/admin/importers/class-pirate-forms.php:459
 #: includes/templates/class-contact.php:70
-#: includes/class-process.php:344
+#: includes/class-process.php:442
 #: includes/class-form.php:247
 msgid "Thanks for contacting us! We will be in touch with you shortly."
 msgstr ""
@@ -302,1313 +302,1313 @@ msgstr ""
 msgid "Upgrade to WPForms Pro Now"
 msgstr ""
 
-#: lite/wpforms-lite.php:1045
+#: lite/wpforms-lite.php:1065
 #: includes/admin/class-about.php:85
 #: includes/admin/class-menu.php:113
 msgid "WPForms Addons"
 msgstr ""
 
-#: lite/wpforms-lite.php:1046
+#: lite/wpforms-lite.php:1066
 msgid "Search Addons"
 msgstr ""
 
-#: lite/wpforms-lite.php:1049
+#: lite/wpforms-lite.php:1069
 msgid "Form Addons are a PRO feature."
 msgstr ""
 
-#: lite/wpforms-lite.php:1050
+#: lite/wpforms-lite.php:1070
 msgid "Please upgrade to the PRO plan to unlock them and more awesome features."
 msgstr ""
 
-#: lite/wpforms-lite.php:1053
-#: lite/wpforms-lite.php:1079
+#: lite/wpforms-lite.php:1073
+#: lite/wpforms-lite.php:1099
 #: includes/admin/class-tools.php:499
 #: includes/admin/class-welcome.php:262
 msgid "Upgrade Now"
 msgstr ""
 
 #. translators: %s - addon name
-#: lite/wpforms-lite.php:1069
+#: lite/wpforms-lite.php:1089
 msgid "%s Addon"
 msgstr ""
 
-#: includes/functions.php:715
+#: includes/functions.php:721
 msgid "Alabama"
 msgstr ""
 
-#: includes/functions.php:716
+#: includes/functions.php:722
 msgid "Alaska"
 msgstr ""
 
-#: includes/functions.php:717
+#: includes/functions.php:723
 msgid "Arizona"
 msgstr ""
 
-#: includes/functions.php:718
+#: includes/functions.php:724
 msgid "Arkansas"
 msgstr ""
 
-#: includes/functions.php:719
+#: includes/functions.php:725
 msgid "California"
 msgstr ""
 
-#: includes/functions.php:720
+#: includes/functions.php:726
 msgid "Colorado"
 msgstr ""
 
-#: includes/functions.php:721
+#: includes/functions.php:727
 msgid "Connecticut"
 msgstr ""
 
-#: includes/functions.php:722
+#: includes/functions.php:728
 msgid "Delaware"
 msgstr ""
 
-#: includes/functions.php:723
+#: includes/functions.php:729
 msgid "District of Columbia"
 msgstr ""
 
-#: includes/functions.php:724
+#: includes/functions.php:730
 msgid "Florida"
 msgstr ""
 
-#: includes/functions.php:725
+#: includes/functions.php:731
 msgctxt "US State"
 msgid "Georgia"
 msgstr ""
 
-#: includes/functions.php:726
+#: includes/functions.php:732
 msgid "Hawaii"
 msgstr ""
 
-#: includes/functions.php:727
+#: includes/functions.php:733
 msgid "Idaho"
 msgstr ""
 
-#: includes/functions.php:728
+#: includes/functions.php:734
 msgid "Illinois"
 msgstr ""
 
-#: includes/functions.php:729
+#: includes/functions.php:735
 msgid "Indiana"
 msgstr ""
 
-#: includes/functions.php:730
+#: includes/functions.php:736
 msgid "Iowa"
 msgstr ""
 
-#: includes/functions.php:731
+#: includes/functions.php:737
 msgid "Kansas"
 msgstr ""
 
-#: includes/functions.php:732
+#: includes/functions.php:738
 msgid "Kentucky"
 msgstr ""
 
-#: includes/functions.php:733
+#: includes/functions.php:739
 msgid "Louisiana"
 msgstr ""
 
-#: includes/functions.php:734
+#: includes/functions.php:740
 msgid "Maine"
 msgstr ""
 
-#: includes/functions.php:735
+#: includes/functions.php:741
 msgid "Maryland"
 msgstr ""
 
-#: includes/functions.php:736
+#: includes/functions.php:742
 msgid "Massachusetts"
 msgstr ""
 
-#: includes/functions.php:737
+#: includes/functions.php:743
 msgid "Michigan"
 msgstr ""
 
-#: includes/functions.php:738
+#: includes/functions.php:744
 msgid "Minnesota"
 msgstr ""
 
-#: includes/functions.php:739
+#: includes/functions.php:745
 msgid "Mississippi"
 msgstr ""
 
-#: includes/functions.php:740
+#: includes/functions.php:746
 msgid "Missouri"
 msgstr ""
 
-#: includes/functions.php:741
+#: includes/functions.php:747
 msgid "Montana"
 msgstr ""
 
-#: includes/functions.php:742
+#: includes/functions.php:748
 msgid "Nebraska"
 msgstr ""
 
-#: includes/functions.php:743
+#: includes/functions.php:749
 msgid "Nevada"
 msgstr ""
 
-#: includes/functions.php:744
+#: includes/functions.php:750
 msgid "New Hampshire"
 msgstr ""
 
-#: includes/functions.php:745
+#: includes/functions.php:751
 msgid "New Jersey"
 msgstr ""
 
-#: includes/functions.php:746
+#: includes/functions.php:752
 msgid "New Mexico"
 msgstr ""
 
-#: includes/functions.php:747
+#: includes/functions.php:753
 msgid "New York"
 msgstr ""
 
-#: includes/functions.php:748
+#: includes/functions.php:754
 msgid "North Carolina"
 msgstr ""
 
-#: includes/functions.php:749
+#: includes/functions.php:755
 msgid "North Dakota"
 msgstr ""
 
-#: includes/functions.php:750
+#: includes/functions.php:756
 msgid "Ohio"
 msgstr ""
 
-#: includes/functions.php:751
+#: includes/functions.php:757
 msgid "Oklahoma"
 msgstr ""
 
-#: includes/functions.php:752
+#: includes/functions.php:758
 msgid "Oregon"
 msgstr ""
 
-#: includes/functions.php:753
+#: includes/functions.php:759
 msgid "Pennsylvania"
 msgstr ""
 
-#: includes/functions.php:754
+#: includes/functions.php:760
 msgid "Rhode Island"
 msgstr ""
 
-#: includes/functions.php:755
+#: includes/functions.php:761
 msgid "South Carolina"
 msgstr ""
 
-#: includes/functions.php:756
+#: includes/functions.php:762
 msgid "South Dakota"
 msgstr ""
 
-#: includes/functions.php:757
+#: includes/functions.php:763
 msgid "Tennessee"
 msgstr ""
 
-#: includes/functions.php:758
+#: includes/functions.php:764
 msgid "Texas"
 msgstr ""
 
-#: includes/functions.php:759
+#: includes/functions.php:765
 msgid "Utah"
 msgstr ""
 
-#: includes/functions.php:760
+#: includes/functions.php:766
 msgid "Vermont"
 msgstr ""
 
-#: includes/functions.php:761
+#: includes/functions.php:767
 msgid "Virginia"
 msgstr ""
 
-#: includes/functions.php:762
+#: includes/functions.php:768
 msgid "Washington"
 msgstr ""
 
-#: includes/functions.php:763
+#: includes/functions.php:769
 msgid "West Virginia"
 msgstr ""
 
-#: includes/functions.php:764
+#: includes/functions.php:770
 msgid "Wisconsin"
 msgstr ""
 
-#: includes/functions.php:765
+#: includes/functions.php:771
 msgid "Wyoming"
 msgstr ""
 
-#: includes/functions.php:781
+#: includes/functions.php:787
 msgid "Afghanistan"
 msgstr ""
 
-#: includes/functions.php:782
+#: includes/functions.php:788
 msgid "Åland Islands"
 msgstr ""
 
-#: includes/functions.php:783
+#: includes/functions.php:789
 msgid "Albania"
 msgstr ""
 
-#: includes/functions.php:784
+#: includes/functions.php:790
 msgid "Algeria"
 msgstr ""
 
-#: includes/functions.php:785
+#: includes/functions.php:791
 msgid "American Samoa"
 msgstr ""
 
-#: includes/functions.php:786
+#: includes/functions.php:792
 msgid "Andorra"
 msgstr ""
 
-#: includes/functions.php:787
+#: includes/functions.php:793
 msgid "Angola"
 msgstr ""
 
-#: includes/functions.php:788
+#: includes/functions.php:794
 msgid "Anguilla"
 msgstr ""
 
-#: includes/functions.php:789
+#: includes/functions.php:795
 msgid "Antarctica"
 msgstr ""
 
-#: includes/functions.php:790
+#: includes/functions.php:796
 msgid "Antigua and Barbuda"
 msgstr ""
 
-#: includes/functions.php:791
+#: includes/functions.php:797
 msgid "Argentina"
 msgstr ""
 
-#: includes/functions.php:792
+#: includes/functions.php:798
 msgid "Armenia"
 msgstr ""
 
-#: includes/functions.php:793
+#: includes/functions.php:799
 msgid "Aruba"
 msgstr ""
 
-#: includes/functions.php:794
+#: includes/functions.php:800
 msgid "Australia"
 msgstr ""
 
-#: includes/functions.php:795
+#: includes/functions.php:801
 msgid "Austria"
 msgstr ""
 
-#: includes/functions.php:796
+#: includes/functions.php:802
 msgid "Azerbaijan"
 msgstr ""
 
-#: includes/functions.php:797
+#: includes/functions.php:803
 msgid "Bahamas"
 msgstr ""
 
-#: includes/functions.php:798
+#: includes/functions.php:804
 msgid "Bahrain"
 msgstr ""
 
-#: includes/functions.php:799
+#: includes/functions.php:805
 msgid "Bangladesh"
 msgstr ""
 
-#: includes/functions.php:800
+#: includes/functions.php:806
 msgid "Barbados"
 msgstr ""
 
-#: includes/functions.php:801
+#: includes/functions.php:807
 msgid "Belarus"
 msgstr ""
 
-#: includes/functions.php:802
+#: includes/functions.php:808
 msgid "Belgium"
 msgstr ""
 
-#: includes/functions.php:803
+#: includes/functions.php:809
 msgid "Belize"
 msgstr ""
 
-#: includes/functions.php:804
+#: includes/functions.php:810
 msgid "Benin"
 msgstr ""
 
-#: includes/functions.php:805
+#: includes/functions.php:811
 msgid "Bermuda"
 msgstr ""
 
-#: includes/functions.php:806
+#: includes/functions.php:812
 msgid "Bhutan"
 msgstr ""
 
-#: includes/functions.php:807
+#: includes/functions.php:813
 msgid "Bolivia (Plurinational State of)"
 msgstr ""
 
-#: includes/functions.php:808
+#: includes/functions.php:814
 msgid "Bosnia and Herzegovina"
 msgstr ""
 
-#: includes/functions.php:809
+#: includes/functions.php:815
 msgid "Botswana"
 msgstr ""
 
-#: includes/functions.php:810
+#: includes/functions.php:816
 msgid "Bouvet Island"
 msgstr ""
 
-#: includes/functions.php:811
+#: includes/functions.php:817
 msgid "Brazil"
 msgstr ""
 
-#: includes/functions.php:812
+#: includes/functions.php:818
 msgid "British Indian Ocean Territory"
 msgstr ""
 
-#: includes/functions.php:813
+#: includes/functions.php:819
 msgid "Brunei Darussalam"
 msgstr ""
 
-#: includes/functions.php:814
+#: includes/functions.php:820
 msgid "Bulgaria"
 msgstr ""
 
-#: includes/functions.php:815
+#: includes/functions.php:821
 msgid "Burkina Faso"
 msgstr ""
 
-#: includes/functions.php:816
+#: includes/functions.php:822
 msgid "Burundi"
 msgstr ""
 
-#: includes/functions.php:817
+#: includes/functions.php:823
 msgid "Cabo Verde"
 msgstr ""
 
-#: includes/functions.php:818
+#: includes/functions.php:824
 msgid "Cambodia"
 msgstr ""
 
-#: includes/functions.php:819
+#: includes/functions.php:825
 msgid "Cameroon"
 msgstr ""
 
-#: includes/functions.php:820
+#: includes/functions.php:826
 msgid "Canada"
 msgstr ""
 
-#: includes/functions.php:821
+#: includes/functions.php:827
 msgid "Cayman Islands"
 msgstr ""
 
-#: includes/functions.php:822
+#: includes/functions.php:828
 msgid "Central African Republic"
 msgstr ""
 
-#: includes/functions.php:823
+#: includes/functions.php:829
 msgid "Chad"
 msgstr ""
 
-#: includes/functions.php:824
+#: includes/functions.php:830
 msgid "Chile"
 msgstr ""
 
-#: includes/functions.php:825
+#: includes/functions.php:831
 msgid "China"
 msgstr ""
 
-#: includes/functions.php:826
+#: includes/functions.php:832
 msgid "Christmas Island"
 msgstr ""
 
-#: includes/functions.php:827
+#: includes/functions.php:833
 msgid "Cocos (Keeling) Islands"
 msgstr ""
 
-#: includes/functions.php:828
+#: includes/functions.php:834
 msgid "Colombia"
 msgstr ""
 
-#: includes/functions.php:829
+#: includes/functions.php:835
 msgid "Comoros"
 msgstr ""
 
-#: includes/functions.php:830
+#: includes/functions.php:836
 msgid "Congo"
 msgstr ""
 
-#: includes/functions.php:831
+#: includes/functions.php:837
 msgid "Congo (Democratic Republic of the)"
 msgstr ""
 
-#: includes/functions.php:832
+#: includes/functions.php:838
 msgid "Cook Islands"
 msgstr ""
 
-#: includes/functions.php:833
+#: includes/functions.php:839
 msgid "Costa Rica"
 msgstr ""
 
-#: includes/functions.php:834
+#: includes/functions.php:840
 msgid "Côte d'Ivoire"
 msgstr ""
 
-#: includes/functions.php:835
+#: includes/functions.php:841
 msgid "Croatia"
 msgstr ""
 
-#: includes/functions.php:836
+#: includes/functions.php:842
 msgid "Cuba"
 msgstr ""
 
-#: includes/functions.php:837
+#: includes/functions.php:843
 msgid "Curaçao"
 msgstr ""
 
-#: includes/functions.php:838
+#: includes/functions.php:844
 msgid "Cyprus"
 msgstr ""
 
-#: includes/functions.php:839
+#: includes/functions.php:845
 msgid "Czech Republic"
 msgstr ""
 
-#: includes/functions.php:840
+#: includes/functions.php:846
 msgid "Denmark"
 msgstr ""
 
-#: includes/functions.php:841
+#: includes/functions.php:847
 msgid "Djibouti"
 msgstr ""
 
-#: includes/functions.php:842
+#: includes/functions.php:848
 msgid "Dominica"
 msgstr ""
 
-#: includes/functions.php:843
+#: includes/functions.php:849
 msgid "Dominican Republic"
 msgstr ""
 
-#: includes/functions.php:844
+#: includes/functions.php:850
 msgid "Ecuador"
 msgstr ""
 
-#: includes/functions.php:845
+#: includes/functions.php:851
 msgid "Egypt"
 msgstr ""
 
-#: includes/functions.php:846
+#: includes/functions.php:852
 msgid "El Salvador"
 msgstr ""
 
-#: includes/functions.php:847
+#: includes/functions.php:853
 msgid "Equatorial Guinea"
 msgstr ""
 
-#: includes/functions.php:848
+#: includes/functions.php:854
 msgid "Eritrea"
 msgstr ""
 
-#: includes/functions.php:849
+#: includes/functions.php:855
 msgid "Estonia"
 msgstr ""
 
-#: includes/functions.php:850
+#: includes/functions.php:856
 msgid "Ethiopia"
 msgstr ""
 
-#: includes/functions.php:851
+#: includes/functions.php:857
 msgid "Falkland Islands (Malvinas)"
 msgstr ""
 
-#: includes/functions.php:852
+#: includes/functions.php:858
 msgid "Faroe Islands"
 msgstr ""
 
-#: includes/functions.php:853
+#: includes/functions.php:859
 msgid "Fiji"
 msgstr ""
 
-#: includes/functions.php:854
+#: includes/functions.php:860
 msgid "Finland"
 msgstr ""
 
-#: includes/functions.php:855
+#: includes/functions.php:861
 msgid "France"
 msgstr ""
 
-#: includes/functions.php:856
+#: includes/functions.php:862
 msgid "French Guiana"
 msgstr ""
 
-#: includes/functions.php:857
+#: includes/functions.php:863
 msgid "French Polynesia"
 msgstr ""
 
-#: includes/functions.php:858
+#: includes/functions.php:864
 msgid "French Southern Territories"
 msgstr ""
 
-#: includes/functions.php:859
+#: includes/functions.php:865
 msgid "Gabon"
 msgstr ""
 
-#: includes/functions.php:860
+#: includes/functions.php:866
 msgid "Gambia"
 msgstr ""
 
-#: includes/functions.php:861
+#: includes/functions.php:867
 msgctxt "Country"
 msgid "Georgia"
 msgstr ""
 
-#: includes/functions.php:862
+#: includes/functions.php:868
 msgid "Germany"
 msgstr ""
 
-#: includes/functions.php:863
+#: includes/functions.php:869
 msgid "Ghana"
 msgstr ""
 
-#: includes/functions.php:864
+#: includes/functions.php:870
 msgid "Gibraltar"
 msgstr ""
 
-#: includes/functions.php:865
+#: includes/functions.php:871
 msgid "Greece"
 msgstr ""
 
-#: includes/functions.php:866
+#: includes/functions.php:872
 msgid "Greenland"
 msgstr ""
 
-#: includes/functions.php:867
+#: includes/functions.php:873
 msgid "Grenada"
 msgstr ""
 
-#: includes/functions.php:868
+#: includes/functions.php:874
 msgid "Guadeloupe"
 msgstr ""
 
-#: includes/functions.php:869
+#: includes/functions.php:875
 msgid "Guam"
 msgstr ""
 
-#: includes/functions.php:870
+#: includes/functions.php:876
 msgid "Guatemala"
 msgstr ""
 
-#: includes/functions.php:871
+#: includes/functions.php:877
 msgid "Guernsey"
 msgstr ""
 
-#: includes/functions.php:872
+#: includes/functions.php:878
 msgid "Guinea"
 msgstr ""
 
-#: includes/functions.php:873
+#: includes/functions.php:879
 msgid "Guinea-Bissau"
 msgstr ""
 
-#: includes/functions.php:874
+#: includes/functions.php:880
 msgid "Guyana"
 msgstr ""
 
-#: includes/functions.php:875
+#: includes/functions.php:881
 msgid "Haiti"
 msgstr ""
 
-#: includes/functions.php:876
+#: includes/functions.php:882
 msgid "Heard Island and McDonald Islands"
 msgstr ""
 
-#: includes/functions.php:877
+#: includes/functions.php:883
 msgid "Honduras"
 msgstr ""
 
-#: includes/functions.php:878
+#: includes/functions.php:884
 msgid "Hong Kong"
 msgstr ""
 
-#: includes/functions.php:879
+#: includes/functions.php:885
 msgid "Hungary"
 msgstr ""
 
-#: includes/functions.php:880
+#: includes/functions.php:886
 msgid "Iceland"
 msgstr ""
 
-#: includes/functions.php:881
+#: includes/functions.php:887
 msgid "India"
 msgstr ""
 
-#: includes/functions.php:882
+#: includes/functions.php:888
 msgid "Indonesia"
 msgstr ""
 
-#: includes/functions.php:883
+#: includes/functions.php:889
 msgid "Iran (Islamic Republic of)"
 msgstr ""
 
-#: includes/functions.php:884
+#: includes/functions.php:890
 msgid "Iraq"
 msgstr ""
 
-#: includes/functions.php:885
+#: includes/functions.php:891
 msgid "Ireland (Republic of)"
 msgstr ""
 
-#: includes/functions.php:886
+#: includes/functions.php:892
 msgid "Isle of Man"
 msgstr ""
 
-#: includes/functions.php:887
+#: includes/functions.php:893
 msgid "Israel"
 msgstr ""
 
-#: includes/functions.php:888
+#: includes/functions.php:894
 msgid "Italy"
 msgstr ""
 
-#: includes/functions.php:889
+#: includes/functions.php:895
 msgid "Jamaica"
 msgstr ""
 
-#: includes/functions.php:890
+#: includes/functions.php:896
 msgid "Japan"
 msgstr ""
 
-#: includes/functions.php:891
+#: includes/functions.php:897
 msgid "Jersey"
 msgstr ""
 
-#: includes/functions.php:892
+#: includes/functions.php:898
 msgid "Jordan"
 msgstr ""
 
-#: includes/functions.php:893
+#: includes/functions.php:899
 msgid "Kazakhstan"
 msgstr ""
 
-#: includes/functions.php:894
+#: includes/functions.php:900
 msgid "Kenya"
 msgstr ""
 
-#: includes/functions.php:895
+#: includes/functions.php:901
 msgid "Kiribati"
 msgstr ""
 
-#: includes/functions.php:896
+#: includes/functions.php:902
 msgid "Korea (Democratic People's Republic of)"
 msgstr ""
 
-#: includes/functions.php:897
+#: includes/functions.php:903
 msgid "Korea (Republic of)"
 msgstr ""
 
-#: includes/functions.php:898
+#: includes/functions.php:904
 msgid "Kuwait"
 msgstr ""
 
-#: includes/functions.php:899
+#: includes/functions.php:905
 msgid "Kyrgyzstan"
 msgstr ""
 
-#: includes/functions.php:900
+#: includes/functions.php:906
 msgid "Lao People's Democratic Republic"
 msgstr ""
 
-#: includes/functions.php:901
+#: includes/functions.php:907
 msgid "Latvia"
 msgstr ""
 
-#: includes/functions.php:902
+#: includes/functions.php:908
 msgid "Lebanon"
 msgstr ""
 
-#: includes/functions.php:903
+#: includes/functions.php:909
 msgid "Lesotho"
 msgstr ""
 
-#: includes/functions.php:904
+#: includes/functions.php:910
 msgid "Liberia"
 msgstr ""
 
-#: includes/functions.php:905
+#: includes/functions.php:911
 msgid "Libya"
 msgstr ""
 
-#: includes/functions.php:906
+#: includes/functions.php:912
 msgid "Liechtenstein"
 msgstr ""
 
-#: includes/functions.php:907
+#: includes/functions.php:913
 msgid "Lithuania"
 msgstr ""
 
-#: includes/functions.php:908
+#: includes/functions.php:914
 msgid "Luxembourg"
 msgstr ""
 
-#: includes/functions.php:909
+#: includes/functions.php:915
 msgid "Macao"
 msgstr ""
 
-#: includes/functions.php:910
+#: includes/functions.php:916
 msgid "Macedonia (Republic of)"
 msgstr ""
 
-#: includes/functions.php:911
+#: includes/functions.php:917
 msgid "Madagascar"
 msgstr ""
 
-#: includes/functions.php:912
+#: includes/functions.php:918
 msgid "Malawi"
 msgstr ""
 
-#: includes/functions.php:913
+#: includes/functions.php:919
 msgid "Malaysia"
 msgstr ""
 
-#: includes/functions.php:914
+#: includes/functions.php:920
 msgid "Maldives"
 msgstr ""
 
-#: includes/functions.php:915
+#: includes/functions.php:921
 msgid "Mali"
 msgstr ""
 
-#: includes/functions.php:916
+#: includes/functions.php:922
 msgid "Malta"
 msgstr ""
 
-#: includes/functions.php:917
+#: includes/functions.php:923
 msgid "Marshall Islands"
 msgstr ""
 
-#: includes/functions.php:918
+#: includes/functions.php:924
 msgid "Martinique"
 msgstr ""
 
-#: includes/functions.php:919
+#: includes/functions.php:925
 msgid "Mauritania"
 msgstr ""
 
-#: includes/functions.php:920
+#: includes/functions.php:926
 msgid "Mauritius"
 msgstr ""
 
-#: includes/functions.php:921
+#: includes/functions.php:927
 msgid "Mayotte"
 msgstr ""
 
-#: includes/functions.php:922
+#: includes/functions.php:928
 msgid "Mexico"
 msgstr ""
 
-#: includes/functions.php:923
+#: includes/functions.php:929
 msgid "Micronesia (Federated States of)"
 msgstr ""
 
-#: includes/functions.php:924
+#: includes/functions.php:930
 msgid "Moldova (Republic of)"
 msgstr ""
 
-#: includes/functions.php:925
+#: includes/functions.php:931
 msgid "Monaco"
 msgstr ""
 
-#: includes/functions.php:926
+#: includes/functions.php:932
 msgid "Mongolia"
 msgstr ""
 
-#: includes/functions.php:927
+#: includes/functions.php:933
 msgid "Montenegro"
 msgstr ""
 
-#: includes/functions.php:928
+#: includes/functions.php:934
 msgid "Montserrat"
 msgstr ""
 
-#: includes/functions.php:929
+#: includes/functions.php:935
 msgid "Morocco"
 msgstr ""
 
-#: includes/functions.php:930
+#: includes/functions.php:936
 msgid "Mozambique"
 msgstr ""
 
-#: includes/functions.php:931
+#: includes/functions.php:937
 msgid "Myanmar"
 msgstr ""
 
-#: includes/functions.php:932
+#: includes/functions.php:938
 msgid "Namibia"
 msgstr ""
 
-#: includes/functions.php:933
+#: includes/functions.php:939
 msgid "Nauru"
 msgstr ""
 
-#: includes/functions.php:934
+#: includes/functions.php:940
 msgid "Nepal"
 msgstr ""
 
-#: includes/functions.php:935
+#: includes/functions.php:941
 msgid "Netherlands"
 msgstr ""
 
-#: includes/functions.php:936
+#: includes/functions.php:942
 msgid "New Caledonia"
 msgstr ""
 
-#: includes/functions.php:937
+#: includes/functions.php:943
 msgid "New Zealand"
 msgstr ""
 
-#: includes/functions.php:938
+#: includes/functions.php:944
 msgid "Nicaragua"
 msgstr ""
 
-#: includes/functions.php:939
+#: includes/functions.php:945
 msgid "Niger"
 msgstr ""
 
-#: includes/functions.php:940
+#: includes/functions.php:946
 msgid "Nigeria"
 msgstr ""
 
-#: includes/functions.php:941
+#: includes/functions.php:947
 msgid "Niue"
 msgstr ""
 
-#: includes/functions.php:942
+#: includes/functions.php:948
 msgid "Norfolk Island"
 msgstr ""
 
-#: includes/functions.php:943
+#: includes/functions.php:949
 msgid "Northern Mariana Islands"
 msgstr ""
 
-#: includes/functions.php:944
+#: includes/functions.php:950
 msgid "Norway"
 msgstr ""
 
-#: includes/functions.php:945
+#: includes/functions.php:951
 msgid "Oman"
 msgstr ""
 
-#: includes/functions.php:946
+#: includes/functions.php:952
 msgid "Pakistan"
 msgstr ""
 
-#: includes/functions.php:947
+#: includes/functions.php:953
 msgid "Palau"
 msgstr ""
 
-#: includes/functions.php:948
+#: includes/functions.php:954
 msgid "Palestine (State of)"
 msgstr ""
 
-#: includes/functions.php:949
+#: includes/functions.php:955
 msgid "Panama"
 msgstr ""
 
-#: includes/functions.php:950
+#: includes/functions.php:956
 msgid "Papua New Guinea"
 msgstr ""
 
-#: includes/functions.php:951
+#: includes/functions.php:957
 msgid "Paraguay"
 msgstr ""
 
-#: includes/functions.php:952
+#: includes/functions.php:958
 msgid "Peru"
 msgstr ""
 
-#: includes/functions.php:953
+#: includes/functions.php:959
 msgid "Philippines"
 msgstr ""
 
-#: includes/functions.php:954
+#: includes/functions.php:960
 msgid "Pitcairn"
 msgstr ""
 
-#: includes/functions.php:955
+#: includes/functions.php:961
 msgid "Poland"
 msgstr ""
 
-#: includes/functions.php:956
+#: includes/functions.php:962
 msgid "Portugal"
 msgstr ""
 
-#: includes/functions.php:957
+#: includes/functions.php:963
 msgid "Puerto Rico"
 msgstr ""
 
-#: includes/functions.php:958
+#: includes/functions.php:964
 msgid "Qatar"
 msgstr ""
 
-#: includes/functions.php:959
+#: includes/functions.php:965
 msgid "Réunion"
 msgstr ""
 
-#: includes/functions.php:960
+#: includes/functions.php:966
 msgid "Romania"
 msgstr ""
 
-#: includes/functions.php:961
+#: includes/functions.php:967
 msgid "Russian Federation"
 msgstr ""
 
-#: includes/functions.php:962
+#: includes/functions.php:968
 msgid "Rwanda"
 msgstr ""
 
-#: includes/functions.php:963
+#: includes/functions.php:969
 msgid "Saint Barthélemy"
 msgstr ""
 
-#: includes/functions.php:964
+#: includes/functions.php:970
 msgid "Saint Helena, Ascension and Tristan da Cunha"
 msgstr ""
 
-#: includes/functions.php:965
+#: includes/functions.php:971
 msgid "Saint Kitts and Nevis"
 msgstr ""
 
-#: includes/functions.php:966
+#: includes/functions.php:972
 msgid "Saint Lucia"
 msgstr ""
 
-#: includes/functions.php:967
+#: includes/functions.php:973
 msgid "Saint Martin (French part)"
 msgstr ""
 
-#: includes/functions.php:968
+#: includes/functions.php:974
 msgid "Saint Pierre and Miquelon"
 msgstr ""
 
-#: includes/functions.php:969
+#: includes/functions.php:975
 msgid "Saint Vincent and the Grenadines"
 msgstr ""
 
-#: includes/functions.php:970
+#: includes/functions.php:976
 msgid "Samoa"
 msgstr ""
 
-#: includes/functions.php:971
+#: includes/functions.php:977
 msgid "San Marino"
 msgstr ""
 
-#: includes/functions.php:972
+#: includes/functions.php:978
 msgid "Sao Tome and Principe"
 msgstr ""
 
-#: includes/functions.php:973
+#: includes/functions.php:979
 msgid "Saudi Arabia"
 msgstr ""
 
-#: includes/functions.php:974
+#: includes/functions.php:980
 msgid "Senegal"
 msgstr ""
 
-#: includes/functions.php:975
+#: includes/functions.php:981
 msgid "Serbia"
 msgstr ""
 
-#: includes/functions.php:976
+#: includes/functions.php:982
 msgid "Seychelles"
 msgstr ""
 
-#: includes/functions.php:977
+#: includes/functions.php:983
 msgid "Sierra Leone"
 msgstr ""
 
-#: includes/functions.php:978
+#: includes/functions.php:984
 msgid "Singapore"
 msgstr ""
 
-#: includes/functions.php:979
+#: includes/functions.php:985
 msgid "Sint Maarten (Dutch part)"
 msgstr ""
 
-#: includes/functions.php:980
+#: includes/functions.php:986
 msgid "Slovakia"
 msgstr ""
 
-#: includes/functions.php:981
+#: includes/functions.php:987
 msgid "Slovenia"
 msgstr ""
 
-#: includes/functions.php:982
+#: includes/functions.php:988
 msgid "Solomon Islands"
 msgstr ""
 
-#: includes/functions.php:983
+#: includes/functions.php:989
 msgid "Somalia"
 msgstr ""
 
-#: includes/functions.php:984
+#: includes/functions.php:990
 msgid "South Africa"
 msgstr ""
 
-#: includes/functions.php:985
+#: includes/functions.php:991
 msgid "South Georgia and the South Sandwich Islands"
 msgstr ""
 
-#: includes/functions.php:986
+#: includes/functions.php:992
 msgid "South Sudan"
 msgstr ""
 
-#: includes/functions.php:987
+#: includes/functions.php:993
 msgid "Spain"
 msgstr ""
 
-#: includes/functions.php:988
+#: includes/functions.php:994
 msgid "Sri Lanka"
 msgstr ""
 
-#: includes/functions.php:989
+#: includes/functions.php:995
 msgid "Sudan"
 msgstr ""
 
-#: includes/functions.php:990
+#: includes/functions.php:996
 msgid "Suriname"
 msgstr ""
 
-#: includes/functions.php:991
+#: includes/functions.php:997
 msgid "Svalbard and Jan Mayen"
 msgstr ""
 
-#: includes/functions.php:992
+#: includes/functions.php:998
 msgid "Swaziland"
 msgstr ""
 
-#: includes/functions.php:993
+#: includes/functions.php:999
 msgid "Sweden"
 msgstr ""
 
-#: includes/functions.php:994
+#: includes/functions.php:1000
 msgid "Switzerland"
 msgstr ""
 
-#: includes/functions.php:995
+#: includes/functions.php:1001
 msgid "Syrian Arab Republic"
 msgstr ""
 
-#: includes/functions.php:996
+#: includes/functions.php:1002
 msgid "Taiwan, Province of China"
 msgstr ""
 
-#: includes/functions.php:997
+#: includes/functions.php:1003
 msgid "Tajikistan"
 msgstr ""
 
-#: includes/functions.php:998
+#: includes/functions.php:1004
 msgid "Tanzania (United Republic of)"
 msgstr ""
 
-#: includes/functions.php:999
+#: includes/functions.php:1005
 msgid "Thailand"
 msgstr ""
 
-#: includes/functions.php:1000
+#: includes/functions.php:1006
 msgid "Timor-Leste"
 msgstr ""
 
-#: includes/functions.php:1001
+#: includes/functions.php:1007
 msgid "Togo"
 msgstr ""
 
-#: includes/functions.php:1002
+#: includes/functions.php:1008
 msgid "Tokelau"
 msgstr ""
 
-#: includes/functions.php:1003
+#: includes/functions.php:1009
 msgid "Tonga"
 msgstr ""
 
-#: includes/functions.php:1004
+#: includes/functions.php:1010
 msgid "Trinidad and Tobago"
 msgstr ""
 
-#: includes/functions.php:1005
+#: includes/functions.php:1011
 msgid "Tunisia"
 msgstr ""
 
-#: includes/functions.php:1006
+#: includes/functions.php:1012
 msgid "Turkey"
 msgstr ""
 
-#: includes/functions.php:1007
+#: includes/functions.php:1013
 msgid "Turkmenistan"
 msgstr ""
 
-#: includes/functions.php:1008
+#: includes/functions.php:1014
 msgid "Turks and Caicos Islands"
 msgstr ""
 
-#: includes/functions.php:1009
+#: includes/functions.php:1015
 msgid "Tuvalu"
 msgstr ""
 
-#: includes/functions.php:1010
+#: includes/functions.php:1016
 msgid "Uganda"
 msgstr ""
 
-#: includes/functions.php:1011
+#: includes/functions.php:1017
 msgid "Ukraine"
 msgstr ""
 
-#: includes/functions.php:1012
+#: includes/functions.php:1018
 msgid "United Arab Emirates"
 msgstr ""
 
-#: includes/functions.php:1013
+#: includes/functions.php:1019
 msgid "United Kingdom of Great Britain and Northern Ireland"
 msgstr ""
 
-#: includes/functions.php:1014
+#: includes/functions.php:1020
 msgid "United States of America"
 msgstr ""
 
-#: includes/functions.php:1015
+#: includes/functions.php:1021
 msgid "United States Minor Outlying Islands"
 msgstr ""
 
-#: includes/functions.php:1016
+#: includes/functions.php:1022
 msgid "Uruguay"
 msgstr ""
 
-#: includes/functions.php:1017
+#: includes/functions.php:1023
 msgid "Uzbekistan"
 msgstr ""
 
-#: includes/functions.php:1018
+#: includes/functions.php:1024
 msgid "Vanuatu"
 msgstr ""
 
-#: includes/functions.php:1019
+#: includes/functions.php:1025
 msgid "Vatican City State"
 msgstr ""
 
-#: includes/functions.php:1020
+#: includes/functions.php:1026
 msgid "Venezuela (Bolivarian Republic of)"
 msgstr ""
 
-#: includes/functions.php:1021
+#: includes/functions.php:1027
 msgid "Viet Nam"
 msgstr ""
 
-#: includes/functions.php:1022
+#: includes/functions.php:1028
 msgid "Virgin Islands (British)"
 msgstr ""
 
-#: includes/functions.php:1023
+#: includes/functions.php:1029
 msgid "Virgin Islands (U.S.)"
 msgstr ""
 
-#: includes/functions.php:1024
+#: includes/functions.php:1030
 msgid "Wallis and Futuna"
 msgstr ""
 
-#: includes/functions.php:1025
+#: includes/functions.php:1031
 msgid "Western Sahara"
 msgstr ""
 
-#: includes/functions.php:1026
+#: includes/functions.php:1032
 msgid "Yemen"
 msgstr ""
 
-#: includes/functions.php:1027
+#: includes/functions.php:1033
 msgid "Zambia"
 msgstr ""
 
-#: includes/functions.php:1028
+#: includes/functions.php:1034
 msgid "Zimbabwe"
 msgstr ""
 
-#: includes/functions.php:1043
+#: includes/functions.php:1049
 msgid "January"
 msgstr ""
 
-#: includes/functions.php:1044
+#: includes/functions.php:1050
 msgid "February"
 msgstr ""
 
-#: includes/functions.php:1045
+#: includes/functions.php:1051
 msgid "March"
 msgstr ""
 
-#: includes/functions.php:1046
+#: includes/functions.php:1052
 msgid "April"
 msgstr ""
 
-#: includes/functions.php:1047
+#: includes/functions.php:1053
 msgid "May"
 msgstr ""
 
-#: includes/functions.php:1048
+#: includes/functions.php:1054
 msgid "June"
 msgstr ""
 
-#: includes/functions.php:1049
+#: includes/functions.php:1055
 msgid "July"
 msgstr ""
 
-#: includes/functions.php:1050
+#: includes/functions.php:1056
 msgid "August"
 msgstr ""
 
-#: includes/functions.php:1051
+#: includes/functions.php:1057
 msgid "September"
 msgstr ""
 
-#: includes/functions.php:1052
+#: includes/functions.php:1058
 msgid "October"
 msgstr ""
 
-#: includes/functions.php:1053
+#: includes/functions.php:1059
 msgid "November"
 msgstr ""
 
-#: includes/functions.php:1054
+#: includes/functions.php:1060
 msgid "December"
 msgstr ""
 
-#: includes/functions.php:1069
+#: includes/functions.php:1075
 msgid "Sunday"
 msgstr ""
 
-#: includes/functions.php:1070
+#: includes/functions.php:1076
 msgid "Monday"
 msgstr ""
 
-#: includes/functions.php:1071
+#: includes/functions.php:1077
 msgid "Tuesday"
 msgstr ""
 
-#: includes/functions.php:1072
+#: includes/functions.php:1078
 msgid "Wednesday"
 msgstr ""
 
-#: includes/functions.php:1073
+#: includes/functions.php:1079
 msgid "Thursday"
 msgstr ""
 
-#: includes/functions.php:1074
+#: includes/functions.php:1080
 msgid "Friday"
 msgstr ""
 
-#: includes/functions.php:1075
+#: includes/functions.php:1081
 msgid "Saturday"
 msgstr ""
 
-#: includes/functions.php:1684
-#: includes/class-frontend.php:1052
-#: includes/admin/class-settings.php:421
+#: includes/functions.php:1695
+#: includes/class-frontend.php:1291
+#: includes/admin/class-settings.php:473
 msgid "This field is required."
 msgstr ""
 
@@ -1652,78 +1652,78 @@ msgctxt "Widget"
 msgid "Display form description"
 msgstr ""
 
-#: includes/class-frontend.php:1053
-#: includes/admin/class-settings.php:427
+#. translators: %s - URL to a non-amp version of a page with the form.
+#: includes/class-frontend.php:161
+msgid "<a href=\"%s\">Go to the full page</a> to view and submit the form."
+msgstr ""
+
+#: includes/class-frontend.php:1292
+#: includes/admin/class-settings.php:479
 msgid "Please enter a valid URL."
 msgstr ""
 
-#: includes/class-frontend.php:1054
-#: includes/admin/class-settings.php:433
+#: includes/class-frontend.php:1293
+#: includes/admin/class-settings.php:485
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: includes/class-frontend.php:1055
-#: includes/admin/class-settings.php:439
+#: includes/class-frontend.php:1294
+#: includes/admin/class-settings.php:491
 msgid "Did you mean {suggestion}?"
 msgstr ""
 
-#: includes/class-frontend.php:1056
+#: includes/class-frontend.php:1295
 msgid "Click to accept this suggestion."
 msgstr ""
 
-#: includes/class-frontend.php:1057
-#: includes/admin/class-settings.php:445
+#: includes/class-frontend.php:1296
+#: includes/admin/class-settings.php:497
 #: includes/fields/class-number.php:162
 msgid "Please enter a valid number."
 msgstr ""
 
-#: includes/class-frontend.php:1058
-#: includes/admin/class-settings.php:451
+#: includes/class-frontend.php:1297
+#: includes/admin/class-settings.php:503
 msgid "Field values do not match."
 msgstr ""
 
-#: includes/class-frontend.php:1059
+#: includes/class-frontend.php:1298
 msgid "File type is not allowed."
 msgstr ""
 
-#: includes/class-frontend.php:1060
+#: includes/class-frontend.php:1299
 msgid "File exceeds max size allowed."
 msgstr ""
 
-#: includes/class-frontend.php:1061
+#: includes/class-frontend.php:1300
 msgid "Please enter time in 12-hour AM/PM format (eg 8:45 AM)."
 msgstr ""
 
-#: includes/class-frontend.php:1062
+#: includes/class-frontend.php:1301
 msgid "Please enter time in 24-hour format (eg 22:45)."
 msgstr ""
 
-#: includes/class-frontend.php:1063
+#: includes/class-frontend.php:1302
 msgid "Payment is required."
 msgstr ""
 
-#: includes/class-frontend.php:1064
+#: includes/class-frontend.php:1303
 msgid "Please enter a valid credit card number."
 msgstr ""
 
-#: includes/class-frontend.php:1065
+#: includes/class-frontend.php:1304
 msgid "Please enter a valid phone number."
 msgstr ""
 
-#: includes/class-frontend.php:1066
-#: includes/class-process.php:427
+#: includes/class-frontend.php:1305
+#: includes/class-process.php:558
 msgid "The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb."
 msgstr ""
 
-#: includes/class-frontend.php:1067
-#: includes/admin/class-settings.php:457
-#: includes/fields/class-checkbox.php:542
+#: includes/class-frontend.php:1306
+#: includes/admin/class-settings.php:509
+#: includes/fields/class-checkbox.php:592
 msgid "You have exceeded the number of allowed selections: {#}."
-msgstr ""
-
-#. translators: %s - URL to a non-amp version of a page with the form.
-#: includes/class-frontend.php:1180
-msgid "<a href=\"%s\">Go to the full page</a> to view and submit the form."
 msgstr ""
 
 #: includes/providers/class-base.php:93
@@ -2676,7 +2676,7 @@ msgstr ""
 msgid "If your license has been upgraded or is incorrect, <a href=\"#\" id=\"wpforms-setting-license-key-refresh\">click here to force a refresh</a>."
 msgstr ""
 
-#: includes/admin/settings-api.php:317
+#: includes/admin/settings-api.php:352
 #: includes/fields/class-base.php:820
 #: includes/fields/class-base.php:951
 msgid "Upload Image"
@@ -3432,7 +3432,7 @@ msgid "Your site is running an outdated version of PHP that is no longer support
 msgstr ""
 
 #: includes/admin/admin.php:382
-msgid "<strong>Please Note:</strong> Support for PHP 5.3 will be discontinued in 2019. After this, if no further action is taken, WPForms functionality will be disabled."
+msgid "<strong>Please Note:</strong> Support for PHP 5.3 to 5.5 will be discontinued in 2019. After this, if no further action is taken, WPForms functionality will be disabled."
 msgstr ""
 
 #: includes/admin/admin.php:404
@@ -3702,8 +3702,8 @@ msgstr ""
 
 #: includes/admin/builder/panels/class-settings.php:42
 #: includes/admin/builder/panels/class-settings.php:82
-#: includes/admin/class-settings.php:164
-#: includes/admin/class-settings.php:268
+#: includes/admin/class-settings.php:167
+#: includes/admin/class-settings.php:300
 msgid "General"
 msgstr ""
 
@@ -3751,20 +3751,32 @@ msgstr ""
 msgid "Enable anti-spam honeypot"
 msgstr ""
 
+#: includes/admin/builder/panels/class-settings.php:155
+msgid "Enable Google Checkbox v2 reCAPTCHA"
+msgstr ""
+
 #: includes/admin/builder/panels/class-settings.php:158
 msgid "Enable Google Invisible v2 reCAPTCHA"
 msgstr ""
 
-#: includes/admin/builder/panels/class-settings.php:158
-msgid "Enable Google Checkbox v2 reCAPTCHA"
+#: includes/admin/builder/panels/class-settings.php:161
+msgid "Enable Google v3 reCAPTCHA"
 msgstr ""
 
-#: includes/admin/builder/panels/class-settings.php:166
+#: includes/admin/builder/panels/class-settings.php:177
 msgid "Enable dynamic fields population"
 msgstr ""
 
-#: includes/admin/builder/panels/class-settings.php:168
+#: includes/admin/builder/panels/class-settings.php:179
 msgid "How to use Dynamic Field Population"
+msgstr ""
+
+#: includes/admin/builder/panels/class-settings.php:187
+msgid "Enable AJAX form submission"
+msgstr ""
+
+#: includes/admin/builder/panels/class-settings.php:189
+msgid "Enables form submission without page reload."
 msgstr ""
 
 #: includes/admin/builder/panels/class-fields.php:22
@@ -4158,21 +4170,21 @@ msgstr ""
 msgid "Save Form"
 msgstr ""
 
-#: includes/admin/class-settings.php:142
+#: includes/admin/class-settings.php:145
 msgid "Settings were successfully saved."
 msgstr ""
 
-#: includes/admin/class-settings.php:166
-#: includes/admin/class-settings.php:171
-#: includes/admin/class-settings.php:176
-#: includes/admin/class-settings.php:181
-#: includes/admin/class-settings.php:191
+#: includes/admin/class-settings.php:169
+#: includes/admin/class-settings.php:174
+#: includes/admin/class-settings.php:179
+#: includes/admin/class-settings.php:184
+#: includes/admin/class-settings.php:194
 msgid "Save Settings"
 msgstr ""
 
-#: includes/admin/class-settings.php:169
-#: includes/admin/class-settings.php:336
-#: includes/admin/class-settings.php:431
+#: includes/admin/class-settings.php:172
+#: includes/admin/class-settings.php:368
+#: includes/admin/class-settings.php:483
 #: includes/templates/class-subscribe.php:44
 #: includes/templates/class-suggestion.php:41
 #: includes/templates/class-contact.php:42
@@ -4182,217 +4194,258 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: includes/admin/class-settings.php:174
-#: includes/admin/class-settings.php:376
+#: includes/admin/class-settings.php:177
+#: includes/admin/class-settings.php:408
 msgid "reCAPTCHA"
 msgstr ""
 
-#: includes/admin/class-settings.php:179
+#: includes/admin/class-settings.php:182
 msgid "Validation"
 msgstr ""
 
-#: includes/admin/class-settings.php:184
-#: includes/admin/class-settings.php:464
-#: includes/admin/class-settings.php:471
+#: includes/admin/class-settings.php:187
+#: includes/admin/class-settings.php:516
+#: includes/admin/class-settings.php:523
 msgid "Integrations"
 msgstr ""
 
-#: includes/admin/class-settings.php:189
-#: includes/admin/class-settings.php:480
+#: includes/admin/class-settings.php:192
+#: includes/admin/class-settings.php:532
 msgid "Misc"
 msgstr ""
 
-#: includes/admin/class-settings.php:230
+#: includes/admin/class-settings.php:233
 msgid "reCAPTCHA is a free anti-spam service from Google which helps to protect your website from spam and abuse while letting real people pass through with ease."
 msgstr ""
 
-#: includes/admin/class-settings.php:231
-msgid "Google's original checkbox reCAPTCHA prompts users to check a box to prove they're human, whereas the newer Invisible reCAPTCHA uses advanced technology to detect real users without requiring any input. WPForms supports both versions of Google's v2 reCAPTCHA."
+#: includes/admin/class-settings.php:234
+msgid "Google offers 3 versions of reCAPTCHA (all supported within WPForms):"
 msgstr ""
 
-#: includes/admin/class-settings.php:232
-msgid "Sites already using the original checkbox reCAPTCHA will need to create new site keys before switching to the Invisible reCAPTCHA."
+#: includes/admin/class-settings.php:239
+msgid "<strong>v2 Checkbox reCAPTCHA</strong>: Prompts users to check a box to prove they're human."
+msgstr ""
+
+#: includes/admin/class-settings.php:248
+msgid "<strong>v2 Invisible reCAPTCHA</strong>: Uses advanced technology to detect real users without requiring any input."
+msgstr ""
+
+#: includes/admin/class-settings.php:257
+msgid "<strong>v3 reCAPTCHA</strong>: Uses a behind-the-scenes scoring system to detect abusive traffic, and lets you decide the minimum passing score. Recommended for advanced use only (or if using Google AMP)."
+msgstr ""
+
+#: includes/admin/class-settings.php:264
+msgid "Sites already using one type of reCAPTCHA will need to create new site keys before switching to a different option."
 msgstr ""
 
 #. translators: %s - WPForms.com Setup Captcha URL.
-#: includes/admin/class-settings.php:238
+#: includes/admin/class-settings.php:270
 msgid "<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our walk through</a> to learn more and for step-by-step directions."
 msgstr ""
 
-#: includes/admin/class-settings.php:256
+#: includes/admin/class-settings.php:288
 msgid "License"
 msgstr ""
 
-#: includes/admin/class-settings.php:256
+#: includes/admin/class-settings.php:288
 msgid "Your license key provides access to updates and addons."
 msgstr ""
 
-#: includes/admin/class-settings.php:263
+#: includes/admin/class-settings.php:295
 msgid "License Key"
 msgstr ""
 
-#: includes/admin/class-settings.php:275
+#: includes/admin/class-settings.php:307
 msgid "Include Form Styling"
 msgstr ""
 
 #. translators: %s - WPForms.com documentation URL.
-#: includes/admin/class-settings.php:279
+#: includes/admin/class-settings.php:311
 msgid "Determines which CSS files to load for the site (<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">please see our tutorial for full details</a>). Unless experienced with CSS or instructed by support, \"Base and Form Theme Styling\" is recommended."
 msgstr ""
 
-#: includes/admin/class-settings.php:294
+#: includes/admin/class-settings.php:326
 msgid "Base and form theme styling"
 msgstr ""
 
-#: includes/admin/class-settings.php:295
+#: includes/admin/class-settings.php:327
 msgid "Base styling only"
 msgstr ""
 
-#: includes/admin/class-settings.php:296
+#: includes/admin/class-settings.php:328
 msgid "No styling"
 msgstr ""
 
-#: includes/admin/class-settings.php:301
+#: includes/admin/class-settings.php:333
 msgid "Load Assets Globally"
 msgstr ""
 
-#: includes/admin/class-settings.php:302
+#: includes/admin/class-settings.php:334
 msgid "Check this if you would like to load WPForms assets site-wide. Only check if your site is having compatibility issues or instructed to by support."
 msgstr ""
 
-#: includes/admin/class-settings.php:307
+#: includes/admin/class-settings.php:339
 msgid "GDPR"
 msgstr ""
 
-#: includes/admin/class-settings.php:314
+#: includes/admin/class-settings.php:346
 msgid "GDPR Enhancements"
 msgstr ""
 
 #. translators: %s - WPForms.com GDPR documentation URL.
-#: includes/admin/class-settings.php:318
+#: includes/admin/class-settings.php:350
 msgid "Check this to turn on GDPR related features and enhancements. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Read our GDPR documentation</a> to learn more."
 msgstr ""
 
-#: includes/admin/class-settings.php:343
+#: includes/admin/class-settings.php:375
 msgid "Template"
 msgstr ""
 
-#: includes/admin/class-settings.php:344
+#: includes/admin/class-settings.php:376
 msgid "Determines how email notifications will be formatted. HTML Templates are the default."
 msgstr ""
 
-#: includes/admin/class-settings.php:348
+#: includes/admin/class-settings.php:380
 msgid "HTML Template"
 msgstr ""
 
-#: includes/admin/class-settings.php:349
+#: includes/admin/class-settings.php:381
 msgid "Plain text"
 msgstr ""
 
-#: includes/admin/class-settings.php:354
+#: includes/admin/class-settings.php:386
 msgid "Header Image"
 msgstr ""
 
-#: includes/admin/class-settings.php:355
+#: includes/admin/class-settings.php:387
 msgid "Upload or choose a logo to be displayed at the top of email notifications.<br>Recommended size is 300x100 or smaller for best support on all devices."
 msgstr ""
 
-#: includes/admin/class-settings.php:360
+#: includes/admin/class-settings.php:392
 msgid "Background Color"
 msgstr ""
 
-#: includes/admin/class-settings.php:361
+#: includes/admin/class-settings.php:393
 msgid "Customize the background color of the HTML email template."
 msgstr ""
 
-#: includes/admin/class-settings.php:367
+#: includes/admin/class-settings.php:399
 msgid "Carbon Copy"
 msgstr ""
 
-#: includes/admin/class-settings.php:368
+#: includes/admin/class-settings.php:400
 msgid "Check this if you would like to enable the ability to CC: email addresses in the form notification settings."
 msgstr ""
 
-#: includes/admin/class-settings.php:383
+#: includes/admin/class-settings.php:415
 msgid "Type"
 msgstr ""
 
-#: includes/admin/class-settings.php:387
+#: includes/admin/class-settings.php:419
 msgid "Checkbox reCAPTCHA v2"
 msgstr ""
 
-#: includes/admin/class-settings.php:388
+#: includes/admin/class-settings.php:420
 msgid "Invisible reCAPTCHA v2"
 msgstr ""
 
-#: includes/admin/class-settings.php:393
+#: includes/admin/class-settings.php:421
+msgid "reCAPTCHA v3"
+msgstr ""
+
+#: includes/admin/class-settings.php:426
 msgid "Site Key"
 msgstr ""
 
-#: includes/admin/class-settings.php:398
+#: includes/admin/class-settings.php:431
 msgid "Secret Key"
 msgstr ""
 
-#: includes/admin/class-settings.php:403
+#: includes/admin/class-settings.php:436
+msgid "Fail Message"
+msgstr ""
+
+#: includes/admin/class-settings.php:437
+msgid "The message displayed to users who fail the reCAPTCHA verification process."
+msgstr ""
+
+#: includes/admin/class-settings.php:439
+#: includes/class-process.php:176
+msgid "Google reCAPTCHA verification failed, please try again later."
+msgstr ""
+
+#: includes/admin/class-settings.php:443
+msgid "Score Threshold"
+msgstr ""
+
+#: includes/admin/class-settings.php:444
+msgid "reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). If the score less than or equal to this threshold, the form submission will be blocked and the message above will be displayed."
+msgstr ""
+
+#: includes/admin/class-settings.php:451
+msgid "0.4"
+msgstr ""
+
+#: includes/admin/class-settings.php:455
 msgid "No-Conflict Mode"
 msgstr ""
 
-#: includes/admin/class-settings.php:404
+#: includes/admin/class-settings.php:456
 msgid "When checked, other reCAPTCHA occurrences are forcefully removed, to prevent conflicts. Only check if your site is having compatibility issues or instructed to by support."
 msgstr ""
 
-#: includes/admin/class-settings.php:412
+#: includes/admin/class-settings.php:464
 msgid "Validation Messages"
 msgstr ""
 
-#: includes/admin/class-settings.php:412
+#: includes/admin/class-settings.php:464
 msgid "These messages are displayed to the users as they fill out a form in real-time."
 msgstr ""
 
-#: includes/admin/class-settings.php:419
+#: includes/admin/class-settings.php:471
 #: includes/fields/class-base.php:717
 msgid "Required"
 msgstr ""
 
-#: includes/admin/class-settings.php:425
+#: includes/admin/class-settings.php:477
 msgid "Website URL"
 msgstr ""
 
-#: includes/admin/class-settings.php:437
+#: includes/admin/class-settings.php:489
 msgid "Email Suggestion"
 msgstr ""
 
-#: includes/admin/class-settings.php:443
+#: includes/admin/class-settings.php:495
 msgid "Number"
 msgstr ""
 
-#: includes/admin/class-settings.php:449
+#: includes/admin/class-settings.php:501
 msgid "Confirm Value"
 msgstr ""
 
-#: includes/admin/class-settings.php:455
+#: includes/admin/class-settings.php:507
 msgid "Checkbox Selection Limit"
 msgstr ""
 
-#: includes/admin/class-settings.php:464
-#: includes/admin/class-settings.php:471
+#: includes/admin/class-settings.php:516
+#: includes/admin/class-settings.php:523
 msgid "Manage integrations with popular providers such as Constant Contact, MailChimp, Zapier, and more."
 msgstr ""
 
-#: includes/admin/class-settings.php:487
+#: includes/admin/class-settings.php:539
 msgid "Hide Announcements"
 msgstr ""
 
-#: includes/admin/class-settings.php:488
+#: includes/admin/class-settings.php:540
 msgid "Check this if you would like to hide plugin announcements and update details."
 msgstr ""
 
-#: includes/admin/class-settings.php:493
+#: includes/admin/class-settings.php:545
 msgid "Uninstall WPForms"
 msgstr ""
 
-#: includes/admin/class-settings.php:494
-msgid "Check this if you would like to remove ALL WPForms data upon plugin deletion. All forms, entries, and uploaded files will be unrecoverable."
+#: includes/admin/class-settings.php:546
+msgid "Check this if you would like to remove ALL WPForms data upon plugin deletion. All forms and settings will be unrecoverable."
 msgstr ""
 
 #: includes/admin/class-am-deactivation-survey.php:172
@@ -5042,6 +5095,14 @@ msgstr ""
 msgid "Enter text for the confirmation field placeholder."
 msgstr ""
 
+#: includes/fields/class-email.php:420
+msgid "The provided email is not valid."
+msgstr ""
+
+#: includes/fields/class-email.php:422
+msgid "The provided emails do not match."
+msgstr ""
+
 #: includes/fields/class-radio.php:22
 msgid "Multiple Choice"
 msgstr ""
@@ -5054,42 +5115,38 @@ msgstr ""
 msgid "Single Line Text"
 msgstr ""
 
-#: includes/fields/class-text.php:142
+#: includes/fields/class-text.php:251
 msgid "Input Mask"
 msgstr ""
 
-#: includes/fields/class-text.php:143
+#: includes/fields/class-text.php:252
 msgid "Enter your custom input mask."
 msgstr ""
 
-#: includes/fields/class-text.php:144
+#: includes/fields/class-text.php:253
 msgid "See Examples & Docs"
 msgstr ""
 
-#: includes/class-process.php:106
+#: includes/class-process.php:139
 msgid "Invalid form."
 msgstr ""
 
-#: includes/class-process.php:143
-msgid "Incorrect reCAPTCHA, please try again."
-msgstr ""
-
-#: includes/class-process.php:146
-msgid "reCAPTCHA is required."
-msgstr ""
-
-#: includes/class-process.php:166
+#: includes/class-process.php:216
 msgid "Uploaded files combined size exceeds allowed maximum."
 msgstr ""
 
-#: includes/class-process.php:178
-#: includes/class-process.php:239
-#: includes/class-process.php:426
+#: includes/class-process.php:276
+#: includes/class-process.php:337
+#: includes/class-process.php:557
 msgid "Form has not been submitted, please see the errors below."
 msgstr ""
 
-#: includes/class-process.php:190
+#: includes/class-process.php:288
 msgid "WPForms honeypot field triggered."
+msgstr ""
+
+#: includes/class-process.php:494
+msgid "Redirecting…"
 msgstr ""
 
 #: includes/integrations.php:32

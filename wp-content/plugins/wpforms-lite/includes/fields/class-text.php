@@ -29,6 +29,108 @@ class WPForms_Field_Text extends WPForms_Field {
 	}
 
 	/**
+	 * Convert mask formatted for jquery.inputmask into  the format used by amp-inputmask.
+	 *
+	 * Note that amp-inputmask does not yet support all of the options that jquery.inputmask provides.
+	 * In particular, amp-inputmask doesn't provides:
+	 *  - Upper-alphabetical mask.
+	 *  - Upper-alphanumeric mask.
+	 *  - Advanced Input Masks with arbitrary repeating groups.
+	 *
+	 * @link https://amp.dev/documentation/components/amp-inputmask
+	 * @link https://wpforms.com/docs/how-to-use-custom-input-masks/
+	 *
+	 * @param string $mask Mask formatted for jquery.inputmask.
+	 * @return array {
+	 *     Mask and placeholder.
+	 *
+	 *     @type string $mask        Mask for amp-inputmask.
+	 *     @type string $placeholder Placeholder derived from mask if one is not supplied.
+	 * }
+	 */
+	protected function convert_mask_to_amp_inputmask( $mask ) {
+		$placeholder = '';
+
+		// Convert jquery.inputmask format into amp-inputmask format.
+		$amp_mask            = '';
+		$req_mask_mapping    = array(
+			'9' => '0', // Numeric.
+			'a' => 'L', // Alphabetical (a-z or A-Z).
+			'A' => 'L', // Upper-alphabetical (A-Z). Note: AMP does not have an uppercase-alphabetical mask type, so same as previous.
+			'*' => 'A', // Alphanumeric (0-9, a-z, A-Z).
+			'&' => 'A', // Upper-alphanumeric (A-Z, 0-9). Note: AMP does not have an uppercase-alphanumeric mask type, so same as previous.
+			' ' => '_', // Automatically insert spaces.
+		);
+		$opt_mask_mapping    = array(
+			'9' => '9', // The user may optionally add a numeric character.
+			'a' => 'l', // The user may optionally add an alphabetical character.
+			'A' => 'l', // The user may optionally add an alphabetical character.
+			'*' => 'a', // The user may optionally add an alphanumeric character.
+			'&' => 'a', // The user may optionally add an alphanumeric character.
+		);
+		$placeholder_mapping = array(
+			'9' => '0',
+			'a' => 'a',
+			'A' => 'a',
+			'*' => '_',
+			'&' => '_',
+		);
+		$is_inside_optional  = false;
+		$last_mask_token     = null;
+		for ( $i = 0, $len = strlen( $mask ); $i < $len; $i++ ) {
+			if ( '[' === $mask[ $i ] ) {
+				$is_inside_optional = true;
+				$placeholder       .= $mask[ $i ];
+				continue;
+			} elseif ( ']' === $mask[ $i ] ) {
+				$is_inside_optional = false;
+				$placeholder       .= $mask[ $i ];
+				continue;
+			} elseif ( isset( $last_mask_token ) && preg_match( '/^\{(?P<n>\d+)(?:,(?P<m>\d+))?\}/', substr( $mask, $i ), $matches ) ) {
+				$amp_mask    .= str_repeat( $req_mask_mapping[ $last_mask_token ], $matches['n'] );
+				$placeholder .= str_repeat( $placeholder_mapping[ $last_mask_token ], $matches['n'] );
+				if ( isset( $matches['m'] ) ) {
+					$amp_mask    .= str_repeat( $opt_mask_mapping[ $last_mask_token ], $matches['m'] );
+					$placeholder .= str_repeat( $placeholder_mapping[ $last_mask_token ], $matches['m'] );
+				}
+				$i += strlen( $matches[0] ) - 1;
+
+				$last_mask_token = null; // Reset.
+				continue;
+			}
+
+			if ( '\\' === $mask[ $i ] ) {
+				$amp_mask .= '\\';
+				$i++;
+				if ( ! isset( $mask[ $i ] ) ) {
+					continue;
+				}
+				$amp_mask .= $mask[ $i ];
+			} else {
+				// Remember this token in case it is a mask.
+				if ( isset( $opt_mask_mapping[ $mask[ $i ] ] ) ) {
+					$last_mask_token = $mask[ $i ];
+				}
+
+				if ( $is_inside_optional && isset( $opt_mask_mapping[ $mask[ $i ] ] ) ) {
+					$amp_mask .= $opt_mask_mapping[ $mask[ $i ] ];
+				} elseif ( isset( $req_mask_mapping[ $mask[ $i ] ] ) ) {
+					$amp_mask .= $req_mask_mapping[ $mask[ $i ] ];
+				} else {
+					$amp_mask .= '\\' . $mask[ $i ];
+				}
+			}
+
+			if ( isset( $placeholder_mapping[ $mask[ $i ] ] ) ) {
+				$placeholder .= $placeholder_mapping[ $mask[ $i ] ];
+			} else {
+				$placeholder .= $mask[ $i ];
+			}
+		}
+		return array( $amp_mask, $placeholder );
+	}
+
+	/**
 	 * Define additional field properties.
 	 *
 	 * @since 1.4.5
@@ -47,7 +149,14 @@ class WPForms_Field_Text extends WPForms_Field {
 			// Add class that will trigger custom mask.
 			$properties['inputs']['primary']['class'][] = 'wpforms-masked-input';
 
-			if ( false !== strpos( $field['input_mask'], 'alias:' ) ) {
+			if ( wpforms_is_amp() ) {
+				list( $amp_mask, $placeholder ) = $this->convert_mask_to_amp_inputmask( $field['input_mask'] );
+
+				$properties['inputs']['primary']['attr']['mask'] = $amp_mask;
+				if ( empty( $properties['inputs']['primary']['attr']['placeholder'] ) ) {
+					$properties['inputs']['primary']['attr']['placeholder'] = $placeholder;
+				}
+			} elseif ( false !== strpos( $field['input_mask'], 'alias:' ) ) {
 				$mask = str_replace( 'alias:', '', $field['input_mask'] );
 				$properties['inputs']['primary']['data']['inputmask-alias'] = $mask;
 			} elseif ( false !== strpos( $field['input_mask'], 'regex:' ) ) {

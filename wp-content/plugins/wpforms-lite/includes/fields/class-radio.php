@@ -345,10 +345,30 @@ class WPForms_Field_Radio extends WPForms_Field {
 	 * @param array $form_data  Form data and settings.
 	 */
 	public function field_display( $field, $deprecated, $form_data ) {
+		$using_image_choices = empty( $field['dynamic_choices'] ) && ! empty( $field['choices_images'] );
 
 		// Define data.
 		$container = $field['properties']['input_container'];
 		$choices   = $field['properties']['inputs'];
+
+		$amp_state_id = '';
+		if ( wpforms_is_amp() && $using_image_choices ) {
+			$amp_state_id = str_replace( '-', '_', sanitize_key( $container['id'] ) ) . '_state';
+			$state        = array(
+				'selected' => null,
+			);
+			foreach ( $choices as $key => $choice ) {
+				if ( $choice['default'] ) {
+					$state['selected'] = $choice['attr']['value'];
+					break;
+				}
+			}
+			printf(
+				'<amp-state id="%s"><script type="application/json">%s</script></amp-state>',
+				esc_attr( $amp_state_id ),
+				wp_json_encode( $state )
+			);
+		}
 
 		printf(
 			'<ul %s>',
@@ -357,12 +377,32 @@ class WPForms_Field_Radio extends WPForms_Field {
 
 			foreach ( $choices as $key => $choice ) {
 
+				if ( wpforms_is_amp() && $using_image_choices ) {
+					$choice['container']['attr']['[class]'] = sprintf(
+						'%s + ( %s == %s ? " wpforms-selected" : "")',
+						wp_json_encode( implode( ' ', $choice['container']['class'] ) ),
+						$amp_state_id,
+						wp_json_encode( $choice['attr']['value'] )
+					);
+				}
+
 				printf(
 					'<li %s>',
 					wpforms_html_attributes( $choice['container']['id'], $choice['container']['class'], $choice['container']['data'], $choice['container']['attr'] )
 				); // WPCS: XSS ok.
 
-					if ( empty( $field['dynamic_choices'] ) && ! empty( $field['choices_images'] ) ) {
+					if ( $using_image_choices ) {
+
+						// Make sure the image choices are keyboard-accessible.
+						$choice['label']['attr']['tabindex'] = 0;
+
+						if ( wpforms_is_amp() ) {
+							$choice['label']['attr']['on']   = sprintf(
+								'tap:AMP.setState(%s)',
+								wp_json_encode( array( $amp_state_id => $choice['attr']['value'] ) )
+							);
+							$choice['label']['attr']['role'] = 'button';
+						}
 
 						// Image choices.
 						printf(
@@ -381,6 +421,16 @@ class WPForms_Field_Radio extends WPForms_Field {
 
 							if ( 'none' === $field['choices_images_style'] ) {
 								echo '<br>';
+							}
+
+							$choice['attr']['tabindex'] = '-1';
+
+							if ( wpforms_is_amp() ) {
+								$choice['attr']['[checked]'] = sprintf(
+									'%s == %s',
+									$amp_state_id,
+									wp_json_encode( $choice['attr']['value'] )
+								);
 							}
 
 							printf(

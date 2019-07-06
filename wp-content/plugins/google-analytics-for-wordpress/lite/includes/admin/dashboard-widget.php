@@ -189,6 +189,8 @@ class MonsterInsights_Dashboard_Widget {
 						'wp_update_link'       => monsterinsights_get_url( 'settings-notice', 'settings-page', 'https://www.monsterinsights.com/docs/update-wordpress/' ),
 					),
 					'plugin_version'    => MONSTERINSIGHTS_VERSION,
+					'is_admin'          => true,
+					'reports_url'       => add_query_arg( 'page', 'monsterinsights_reports', admin_url( 'admin.php' ) ),
 				)
 			);
 
@@ -224,7 +226,9 @@ class MonsterInsights_Dashboard_Widget {
 		$reports = $default['reports'];
 		if ( isset( $_POST['reports'] ) ) {
 			$reports = json_decode( sanitize_text_field( wp_unslash( $_POST['reports'] ) ), true );
-			array_walk( $reports, 'boolval' );
+			foreach ( $reports as $report => $reports_sections ) {
+				$reports[ $report ] = array_map( 'boolval', $reports_sections );
+			}
 		}
 
 		$options = array(

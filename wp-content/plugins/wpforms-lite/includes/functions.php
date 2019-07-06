@@ -424,7 +424,13 @@ function wpforms_html_attributes( $id = '', $class = array(), $datas = array(), 
 	if ( ! empty( $atts ) ) {
 		foreach ( $atts as $att => $val ) {
 			if ( '0' == $val || ! empty( $val ) ) {
-				$parts[] = sanitize_html_class( $att ) . '="' . esc_attr( $val ) . '"';
+				if ( '[' === $att[0] ) {
+					// Handle special case for bound attributes in AMP.
+					$escaped_att = '[' . sanitize_html_class( trim( $att, '[]' ) ) . ']';
+				} else {
+					$escaped_att = sanitize_html_class( $att );
+				}
+				$parts[] = $escaped_att . '="' . esc_attr( $val ) . '"';
 			}
 		}
 	}
@@ -1624,9 +1630,10 @@ function wpforms_log( $title = '', $message = '', $args = array() ) {
  *
  * @since 1.4.1
  *
+ * @param bool $check_theme_support Whether theme support should be checked. Defaults to true.
  * @return bool
  */
-function wpforms_is_amp() {
+function wpforms_is_amp( $check_theme_support = true ) {
 
 	$is_amp = false;
 
@@ -1637,6 +1644,10 @@ function wpforms_is_amp() {
 		( function_exists( 'is_better_amp' ) && is_better_amp() )
 	) {
 		$is_amp = true;
+	}
+
+	if ( $is_amp && $check_theme_support ) {
+		$is_amp = current_theme_supports( 'amp' );
 	}
 
 	return apply_filters( 'wpforms_is_amp', $is_amp );

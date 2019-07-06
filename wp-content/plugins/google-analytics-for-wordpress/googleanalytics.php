@@ -6,7 +6,7 @@
  * Author:              MonsterInsights
  * Author URI:          https://www.monsterinsights.com/?utm_source=liteplugin&utm_medium=pluginheader&utm_campaign=authoruri&utm_content=7%2E0%2E0
  *
- * Version:             7.6.0
+ * Version:             7.7.1
  * Requires at least:   3.8.0
  * Tested up to:        5.1.1
  *
@@ -69,7 +69,7 @@ final class MonsterInsights_Lite {
 	 * @access public
 	 * @var string $version Plugin version.
 	 */
-	public $version = '7.6.0';
+	public $version = '7.7.1';
 
 	/**
 	 * Plugin file.
@@ -632,6 +632,18 @@ function monsterinsights_lite_uninstall_hook() {
 	// both plugins. If it needs to be pro specific, then include a file that
 	// has that method.
 	$instance = MonsterInsights();
+
+	// If uninstalling via wp-cli load admin-specific files only here.
+	if ( defined( 'WP_CLI' ) && WP_CLI ) {
+		define( 'WP_ADMIN', true );
+		$instance->require_files();
+		$instance->load_auth();
+		$instance->load_licensing();
+		$instance->notices         = new MonsterInsights_Notice_Admin();
+		$instance->license_actions = new MonsterInsights_License_Actions();
+		$instance->reporting       = new MonsterInsights_Reporting();
+		$instance->api_auth        = new MonsterInsights_API_Auth();
+	}
 
 	// Don't delete any data if the PRO version is already active.
 	if ( monsterinsights_is_pro_version() ) {

@@ -941,6 +941,26 @@
 							}
 						},
 						effect: 'appear'
+					},
+					// reCAPTCHA > Score Threshold.
+					{
+						conditions: {
+							element:   'input[name=recaptcha-type]:checked',
+							type:      'value',
+							operator:  '=',
+							condition: 'v3'
+						},
+						actions: {
+							if: {
+								element: '#wpforms-setting-row-recaptcha-v3-threshold',
+								action:	 'show'
+							},
+							else : {
+								element: '#wpforms-setting-row-recaptcha-v3-threshold',
+								action:	 'hide'
+							}
+						},
+						effect: 'appear'
 					}
 				] );
 			});

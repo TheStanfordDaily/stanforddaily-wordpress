@@ -196,6 +196,41 @@ function wpforms_settings_text_callback( $args ) {
 }
 
 /**
+ * Settings number input field callback.
+ *
+ * @since 1.5.3
+ *
+ * @param array $args Setting field arguments.
+ *
+ * @return string
+ */
+function wpforms_settings_number_callback( $args ) {
+
+	$default = isset( $args['default'] ) ? esc_html( $args['default'] ) : '';
+	$id      = 'wpforms-setting-' . wpforms_sanitize_key( $args['id'] );
+	$attr    =  array(
+		'value' => wpforms_setting( $args['id'], $default ),
+		'name'  => wpforms_sanitize_key( $args['id'] ),
+	);
+	$data    = ! empty( $args['data'] ) ? $args['data'] : array();
+
+	if ( ! empty( $args['attr'] ) ) {
+		$attr = array_merge( $attr, $args['attr'] );
+	}
+
+	$output = sprintf(
+		'<input type="number" %s>',
+		wpforms_html_attributes( $id, array(), $data, $attr )
+	);
+
+	if ( ! empty( $args['desc'] ) ) {
+		$output .= '<p class="desc">' . wp_kses_post( $args['desc'] ) . '</p>';
+	}
+
+	return $output;
+}
+
+/**
  * Settings select field callback.
  *
  * @since 1.3.9

@@ -7,7 +7,7 @@
 
 namespace Yoast\WP\Free\Formatters;
 
-use Yoast\WP\Free\Models\Indexable;
+use WPSEO_Taxonomy_Meta;
 
 /**
  * Formats the term meta to indexable format.
@@ -44,9 +44,9 @@ class Indexable_Term_Formatter {
 	/**
 	 * Formats the data.
 	 *
-	 * @param Indexable $indexable The indexable to format.
+	 * @param \Yoast\WP\Free\Models\Indexable $indexable The indexable to format.
 	 *
-	 * @return Indexable The extended indexable.
+	 * @return \Yoast\WP\Free\Models\Indexable The extended indexable.
 	 */
 	public function format( $indexable ) {
 		$term_meta = $this->get_meta_data();
@@ -155,12 +155,12 @@ class Indexable_Term_Formatter {
 	 * @return null|string The meta value.
 	 */
 	protected function get_meta_value( $meta_key, $term_meta ) {
-		if ( ! array_key_exists( $meta_key, $term_meta ) ) {
+		if ( ! \array_key_exists( $meta_key, $term_meta ) ) {
 			return null;
 		}
 
 		$value = $term_meta[ $meta_key ];
-		if ( is_string( $value ) && $value === '' ) {
+		if ( \is_string( $value ) && $value === '' ) {
 			return null;
 		}
 
@@ -175,7 +175,7 @@ class Indexable_Term_Formatter {
 	 * @return bool|array The meta data for the term.
 	 */
 	protected function get_meta_data() {
-		return \WPSEO_Taxonomy_Meta::get_term_meta( $this->term_id, $this->taxonomy );
+		return WPSEO_Taxonomy_Meta::get_term_meta( $this->term_id, $this->taxonomy );
 	}
 
 	/**

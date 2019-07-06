@@ -150,12 +150,23 @@ class WPForms_Builder_Panel_Settings extends WPForms_Builder_Panel {
 			$recaptcha_secret = wpforms_setting( 'recaptcha-secret-key' );
 			$recaptcha_type   = wpforms_setting( 'recaptcha-type' );
 			if ( ! empty( $recaptcha_key ) && ! empty( $recaptcha_secret ) ) {
+				switch ( $recaptcha_type ) {
+					case 'v2':
+						$lbl = esc_html__( 'Enable Google Checkbox v2 reCAPTCHA', 'wpforms-lite' );
+						break;
+					case 'invisible':
+						$lbl = esc_html__( 'Enable Google Invisible v2 reCAPTCHA', 'wpforms-lite' );
+						break;
+					case 'v3':
+						$lbl = esc_html__( 'Enable Google v3 reCAPTCHA', 'wpforms-lite' );
+						break;
+				}
 				wpforms_panel_field(
 					'checkbox',
 					'settings',
 					'recaptcha',
 					$this->form_data,
-					'invisible' === $recaptcha_type ? esc_html__( 'Enable Google Invisible v2 reCAPTCHA', 'wpforms-lite' ) : esc_html__( 'Enable Google Checkbox v2 reCAPTCHA', 'wpforms-lite' )
+					$lbl
 				);
 			}
 			wpforms_panel_field(
@@ -166,6 +177,16 @@ class WPForms_Builder_Panel_Settings extends WPForms_Builder_Panel {
 				esc_html__( 'Enable dynamic fields population', 'wpforms-lite' ),
 				array(
 					'tooltip' => '<a href="https://developers.wpforms.com/docs/enable-dynamic-field-population/" target="_blank" rel="noopener noreferrer">' . esc_html__( 'How to use Dynamic Field Population', 'wpforms-lite' ) . '</a>',
+				)
+			);
+			wpforms_panel_field(
+				'checkbox',
+				'settings',
+				'ajax_submit',
+				$this->form_data,
+				esc_html__( 'Enable AJAX form submission', 'wpforms-lite' ),
+				array(
+					'tooltip' => esc_html__( 'Enables form submission without page reload.', 'wpforms-lite' ),
 				)
 			);
 

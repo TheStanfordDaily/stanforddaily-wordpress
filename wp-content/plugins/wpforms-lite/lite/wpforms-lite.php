@@ -988,6 +988,21 @@ class WPForms_Lite {
 				'icon' => 'addon-icon-form-abandonment.png',
 			),
 			array(
+				'name' => 'Form Locker',
+				'desc' => 'WPForms\' Form Locker addon allows you to lock your WordPress forms with various permissions and access control rules including passwords, members-only, specific date / time, max entry limit, and more.',
+				'icon' => 'addon-icons-locker.png',
+			),
+			array(
+				'name' => 'Form Pages',
+				'desc' => 'Want to improve your form conversions? WPForms Form Pages addon allows you to create completely custom "distraction-free" form landing pages to boost conversions (without writing any code).',
+				'icon' => 'addon-icon-form-pages.png',
+			),
+			array(
+				'name' => 'Form Templates Pack',
+				'desc' => 'Choose from a huge variety of pre-built templates for every niche and industry, so you can build all kinds of web forms in minutes, not hours.',
+				'icon' => 'addon-icon-form-templates-pack.png',
+			),
+			array(
 				'name' => 'Geolocation',
 				'desc' => 'WPForms Geolocation addon allows you to collect and store your website visitors geolocation data along with their form submission.',
 				'icon' => 'addon-icon-geolocation.png',
@@ -1016,6 +1031,11 @@ class WPForms_Lite {
 				'name' => 'Post Submissions',
 				'desc' => 'WPForms Post Submissions addon makes it easy to have user-submitted content in WordPress. This front-end post submission form allow your users to submit blog posts without logging into the admin area.',
 				'icon' => 'addon-icon-post-submissions.png',
+			),
+			array(
+				'name' => 'Signatures',
+				'desc' => 'WPForms Signatures addon makes it easy for users to sign your forms. This WordPress signatures plugin will allow your users to sign contracts and other agreements with their mouse or touch screen.',
+				'icon' => 'addon-icon-signatures.png',
 			),
 			array(
 				'name' => 'Stripe',

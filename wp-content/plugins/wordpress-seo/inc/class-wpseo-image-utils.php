@@ -24,6 +24,11 @@ class WPSEO_Image_Utils {
 		 */
 		$url = preg_replace( '/(.*)-\d+x\d+\.(jpg|png|gif)$/', '$1.$2', $url );
 
+		// Don't try to do this for external URLs.
+		if ( strpos( $url, get_site_url() ) !== 0 ) {
+			return 0;
+		}
+
 		if ( function_exists( 'wpcom_vip_attachment_url_to_postid' ) ) {
 			// @codeCoverageIgnoreStart -- We can't test this properly.
 			return (int) wpcom_vip_attachment_url_to_postid( $url );
@@ -368,6 +373,10 @@ class WPSEO_Image_Utils {
 	 */
 	public static function get_first_usable_content_image_for_post( $post_id = null ) {
 		$post = get_post( $post_id );
+
+		if ( $post === null ) {
+			return null;
+		}
 
 		$image_finder = new WPSEO_Content_Images();
 		$images       = $image_finder->get_images( $post->ID, $post );

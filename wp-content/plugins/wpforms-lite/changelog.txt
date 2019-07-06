@@ -1,5 +1,19 @@
 == Changelog ==
 
+= 1.5.3.1 =
+- Fixed: Checkbox field validation issue when field is not required.
+
+= 1.5.3 =
+- Added: AJAX form submissions.
+- Added: Full support and compatiblity with Google AMP.
+- Added: Google reCAPTCHA v3.
+- Changed: WPForms uninstall script for better cleanup process.
+- Changed: Email field mailcheck feature to offer additional controls. New filters: `wpforms_mailcheck_enabled`, `wpforms_mailcheck_domains`, and `wpforms_mailcheck_toplevel_domains`.
+- Fixed: Special characters aren't encoded when Smart Tags are processed in query string.
+- Fixed: Fields with Image choices are not working with some Android and older desktop browsers.
+- Fixed: Form Builder: Several alert modals are displayed in batch if multiple providers have configuration issues.
+- Fixed: WP_Post object is returned from `wpforms()->form->get()` if form data is requested with a non-WPForms post ID.
+
 = 1.5.2.3 =
 - Fixed: PHP error if checkbox field is empty when form is submitted.
 

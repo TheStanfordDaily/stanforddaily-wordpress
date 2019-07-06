@@ -364,6 +364,10 @@
 	vertical-align: baseline;
 }
 
+.wpforms-container amp-img > img {
+	position: absolute; /* Override position:static from previous rule, to prevent breaking AMP layout. */
+}
+
 
 /* Errors, Warnings, etc
 ----------------------------------------------------------------------------- */
@@ -380,8 +384,11 @@
 }
 
 .wpforms-container .wpforms-field input.wpforms-error,
+.wpforms-container .wpforms-field input.user-invalid,
 .wpforms-container .wpforms-field textarea.wpforms-error,
-.wpforms-container .wpforms-field select.wpforms-error   {
+.wpforms-container .wpforms-field textarea.user-invalid,
+.wpforms-container .wpforms-field select.wpforms-error,
+.wpforms-container .wpforms-field select.user-invalid {
 	border: 1px solid #cc0000;
 }
 
@@ -432,6 +439,10 @@
 }
 
 .wpforms-container button[type=submit] {
+}
+
+.wpforms-container .wpforms-submit-spinner {
+	margin-left: 0.5em;
 }
 
 
@@ -486,7 +497,7 @@
 }
 
 .wpforms-container .wpforms-image-choices-modern img {
-	display: inline;
+	display: inline-block;
 	margin: 0 auto;
 	max-width: 100%;
 }
@@ -553,7 +564,7 @@
 }
 
 .wpforms-container .wpforms-image-choices-classic img {
-	display: inline;
+	display: inline-block;
 	margin: 0 auto;
 	max-width: 100%;
 }
@@ -851,6 +862,15 @@ div.wpforms-container-full .wpforms-notice.wpforms-error .wpforms-notice-action:
 	border: 0;
 	overflow: hidden;
 	word-wrap: normal !important;
+}
+
+/*
+ * Hide the form fields upon successful submission. This may not be the best approach.
+ * Perhaps more robust: .wpforms-form.amp-form-submit-success > *:not([submit-success]) { display:none }
+ */
+.amp-form-submit-success .wpforms-field-container,
+.amp-form-submit-success .wpforms-submit-container {
+	display: none;
 }
 
 

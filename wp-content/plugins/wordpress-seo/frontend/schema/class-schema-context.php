@@ -19,76 +19,95 @@
  * @property string $description               Page description.
  * @property bool   $breadcrumbs_enabled       Whether or not this site has breadcrumbs enabled.
  * @property array  $site_represents_reference A schema @id reference to the piece the site represents.
+ * @property bool   $has_image                 A boolean that determines whether the current URL has a primary image.
  *
  * @since 10.2
  */
 class WPSEO_Schema_Context {
+
 	/**
 	 * The current page's canonical.
 	 *
 	 * @var string
 	 */
 	public $canonical;
+
 	/**
 	 * Holds the company name, if the site represents a company.
 	 *
 	 * @var string
 	 */
 	public $company_name;
+
 	/**
 	 * The queried object ID, if there is one.
 	 *
 	 * @var int
 	 */
 	public $id;
+
 	/**
 	 * Whether this site represents a `company` or a `person`.
 	 *
 	 * @var string
 	 */
 	public $site_represents;
+
 	/**
 	 * The site's Name.
 	 *
 	 * @var string
 	 */
 	public $site_name;
+
 	/**
 	 * The site's URL.
 	 *
 	 * @var string
 	 */
 	public $site_url;
+
 	/**
 	 * Page title.
 	 *
 	 * @var string
 	 */
 	public $title;
+
 	/**
 	 * User ID when the site represents a Person.
 	 *
 	 * @var int
 	 */
 	public $site_user_id;
+
 	/**
 	 * Page description.
 	 *
 	 * @var string
 	 */
 	public $description;
+
 	/**
 	 * Whether or not this site has breadcrumbs enabled.
 	 *
 	 * @var bool
 	 */
 	public $breadcrumbs_enabled;
+
 	/**
 	 * A schema @id reference to the piece the site represents.
 	 *
 	 * @var array
 	 */
 	public $site_represents_reference;
+
+	/**
+	 * A boolean that determines whether the current URL has a primary image.
+	 *
+	 * @var bool
+	 */
+	public $has_image = false;
 
 	/**
 	 * WPSEO_Schema_Context constructor.
@@ -103,7 +122,7 @@ class WPSEO_Schema_Context {
 	private function build_data() {
 		// Page level variables.
 		$front             = WPSEO_Frontend::get_instance();
-		$this->canonical   = $front->canonical( false );
+		$this->canonical   = $front->canonical( false, false, true );
 		$this->title       = $front->title( '' );
 		$this->description = $front->metadesc( false );
 		$this->id          = get_queried_object_id();

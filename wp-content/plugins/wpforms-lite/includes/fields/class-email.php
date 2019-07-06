@@ -404,6 +404,24 @@ class WPForms_Field_Email extends WPForms_Field {
 		);
 	}
 
+	/**
+	 * Validates field on form submit.
+	 *
+	 * @param int   $field_id
+	 * @param array $field_submit
+	 * @param array $form_data
+	 */
+	public function validate( $field_id, $field_submit, $form_data ) {
+		$form_id = $form_data['id'];
+
+		parent::validate( $field_id, $field_submit, $form_data );
+
+		if ( ! empty( $field_submit['primary'] ) && ! is_email( $field_submit['primary'] ) ) {
+			wpforms()->process->errors[ $form_id ][ $field_id ]['primary'] = esc_html__( 'The provided email is not valid.', 'wpforms-lite' );
+		} elseif ( isset( $field_submit['primary'] ) && isset( $field_submit['secondary'] ) && $field_submit['secondary'] !== $field_submit['primary'] ) {
+			wpforms()->process->errors[ $form_id ][ $field_id ]['secondary'] = esc_html__( 'The provided emails do not match.', 'wpforms-lite' );
+		}
+	}
 
 }
 

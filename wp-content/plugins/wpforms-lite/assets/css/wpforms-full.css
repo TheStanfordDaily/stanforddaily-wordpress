@@ -50,6 +50,10 @@ div.wpforms-container-full .wpforms-form * {
 	box-shadow:none;
 }
 
+div.wpforms-container-full .wpforms-form amp-img > img {
+	position: absolute; /* Override position:static from previous rule, to prevent breaking AMP layout. */
+}
+
 div.wpforms-container-full .wpforms-form input,
 div.wpforms-container-full .wpforms-form label,
 div.wpforms-container-full .wpforms-form select,
@@ -496,11 +500,14 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 }
 
 div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+div.wpforms-container-full .wpforms-form input[type=submit]:focus,
 div.wpforms-container-full .wpforms-form input[type=submit]:active,
 div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+div.wpforms-container-full .wpforms-form button[type=submit]:focus,
 div.wpforms-container-full .wpforms-form button[type=submit]:active,
 div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
-div.wpforms-container-full .wpforms-form .wpforms-page-button:active {
+div.wpforms-container-full .wpforms-form .wpforms-page-button:active,
+div.wpforms-container-full .wpforms-form .wpforms-page-button:focus {
 	background-color: #ddd;
 	border: 1px solid #ccc;
 	cursor: pointer;
@@ -546,8 +553,11 @@ div.wpforms-container-full .wpforms-form label.wpforms-error {
 }
 
 div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid,
 div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error,
-div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error   {
+div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid,
+div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error,
+div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid {
 	border: 1px solid #cc0000;
 }
 
@@ -570,16 +580,38 @@ div.wpforms-container-full .wpforms-form .wpforms-error-alert {
 /* Confirmation
 ----------------------------------------------------------------------------- */
 
-.wpforms-confirmation-container-full {
+/*
+ * Note: The second selector for the following two rules is needed to override the rule with
+ * the selector: `div.wpforms-container-full, div.wpforms-container-full .wpforms-form *`.
+ * The underlying cause is that the .wpforms-confirmation-container-full is not expected
+ * to be located inside of the .wpforms-confirmation-container-full element, since on non-AMP
+ * pages the confirmation message is never displayed on the same page as the form.
+ */
+.wpforms-confirmation-container-full,
+div[submit-success] > .wpforms-confirmation-container-full {
 	color: #333;
 	margin: 0 0 24px 0;
-	background: #e0ffc7;
-	border: 1px solid #b4d39b;
 	padding: 15px 15px;
 }
 
-.wpforms-confirmation-container-full p:last-of-type {
+.wpforms-confirmation-container-full,
+div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+	background: #e0ffc7;
+	border: 1px solid #b4d39b;
+}
+
+.wpforms-confirmation-container-full p:last-of-type,
+div[submit-success] > .wpforms-confirmation-container-full p:last-of-type {
 	margin: 0;
+}
+
+/*
+ * Hide the form fields upon successful submission. This may not be the best approach.
+ * Perhaps more robust: .wpforms-form.amp-form-submit-success > *:not([submit-success]) { display:none }
+ */
+.amp-form-submit-success .wpforms-field-container,
+.amp-form-submit-success .wpforms-submit-container {
+	display: none;
 }
 
 
@@ -619,6 +651,13 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 }
 
 div.wpforms-container-full .wpforms-form button[type=submit] {
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-submit-spinner {
+	margin-left: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 26px;
 }
 
 div.wpforms-container-full .wpforms-form .wpforms-pagebreak-center {
@@ -789,7 +828,7 @@ div.wpforms-container-full .wpforms-form .wpforms-list-inline ul.wpforms-image-c
 }
 
 div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-modern img {
-	display: inline;
+	display: inline-block;
 	margin: 0 auto;
 	max-width: 100%;
 }
@@ -806,7 +845,8 @@ div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-modern label {
 	text-align: center;
 }
 
-div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-modern label:hover {
+div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-modern label:hover,
+div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-modern label:focus {
 	border:1px solid #ddd;
 }
 
@@ -855,7 +895,7 @@ div.wpforms-container-full .wpforms-form .wpforms-list-inline ul.wpforms-image-c
 }
 
 div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-classic img {
-	display: inline;
+	display: inline-block;
 	margin: 0 auto;
 	max-width: 100%;
 }
@@ -870,7 +910,8 @@ div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-classic label 
 	text-align: center;
 }
 
-div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-classic label:hover {
+div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-classic label:hover,
+div.wpforms-container-full .wpforms-form ul.wpforms-image-choices-classic label:focus {
 	border-color: #ddd;
 }
 
@@ -1161,7 +1202,6 @@ div.wpforms-container-full .wpforms-form .wpforms-screen-reader-element {
 	overflow: hidden !important;
 	word-wrap: normal !important;
 }
-
 
 /* Media Queries
 ----------------------------------------------------------------------------- */
