@@ -138,6 +138,14 @@ function tsd_json_plugin_enable_api() {
                 }
             }
 
+            $post_date = strtotime( $post_object->post_date );
+            $post[ 'tsd_url_parameters' ] = [
+                "year" => date('Y', $post_date),
+                "month" => date('m', $post_date),
+                "day" => date('d', $post_date),
+                "slug" => $post_object->post_name,
+            ];
+
             $posts[] = $post;
         }
         return $posts;
