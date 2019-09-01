@@ -102,7 +102,7 @@ function tsd_json_plugin_enable_api() {
                 $post[ 'post_subtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
             }
 
-            $post[ 'tsd_author' ] = tsd_json_plugin_get_author_info( $post_object );
+            $post[ 'tsd_authors' ] = tsd_json_plugin_get_author_info( $post_object );
 
             if ( $include_category_info_for_each_post ) {
                 $category_info = tsd_json_plugin_get_category_info( $post_object );
