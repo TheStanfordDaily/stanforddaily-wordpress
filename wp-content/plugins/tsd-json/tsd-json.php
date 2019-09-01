@@ -85,6 +85,7 @@ function tsd_json_plugin_enable_api() {
 
     function tsd_json_plugin_get_processed_posts( $query, $options = [] ) {
         $defaults_options = array(
+            'include_post_content' => false,
             'exclude_featured_category' => false,
             'include_category_info_for_each_post' => false,
         );
@@ -102,7 +103,13 @@ function tsd_json_plugin_enable_api() {
             $post = $post_object->to_array();
             $post[ 'post_title' ] = html_entity_decode( apply_filters( 'the_title', $post[ 'post_title' ] ) );
             $post[ 'post_excerpt' ] = html_entity_decode( $post[ 'post_excerpt' ] );
-            unset( $post[ 'post_content' ] );
+            if ( ! $options[ 'include_post_content' ] ) {
+                unset( $post[ 'post_content' ] );
+                unset( $post[ 'post_content_filtered' ] );
+            } else {
+                // https://codex.wordpress.org/Class_Reference/WP_Post#Accessing_the_WP_Post_Object
+                $post[ 'post_content' ] = apply_filters( 'the_content', $post[ 'post_content' ] );
+            }
 
             foreach( $post[ 'tags_input' ] as $key => $tag ) {
                 $post[ 'tags_input' ][ $key ] = html_entity_decode( $tag );
