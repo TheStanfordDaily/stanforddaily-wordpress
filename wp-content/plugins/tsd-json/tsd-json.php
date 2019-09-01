@@ -94,7 +94,7 @@ function tsd_json_plugin_enable_api() {
         $posts = [];
         foreach ( $post_objects as $post_object ) {
             $post = $post_object->to_array();
-            $post[ 'post_title' ] = html_entity_decode( $post[ 'post_title' ] );
+            $post[ 'post_title' ] = html_entity_decode( apply_filters( 'the_title', $post[ 'post_title' ] ) );
             $post[ 'post_excerpt' ] = html_entity_decode( $post[ 'post_excerpt' ] );
             unset( $post[ 'post_content' ] );
 
