@@ -122,6 +122,11 @@ function tsd_json_plugin_enable_api() {
                 $post[ 'tagsInput' ][ $key ] = html_entity_decode( $tag );
             }
 
+            $thumbnailUrl = get_the_post_thumbnail_url( $post_object, 'medium_large' );
+            if ( ! empty ( $thumbnailUrl ) ) {
+                $post[ 'thumbnailUrl' ] = $thumbnailUrl;
+            }
+
             if ( function_exists( 'get_the_subtitle' ) ) {
                 $post[ 'postSubtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
             }
