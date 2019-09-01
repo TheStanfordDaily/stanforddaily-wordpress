@@ -29,6 +29,27 @@ function tsd_json_plugin_enable_api() {
         return query_posts( $query );
     }
 
+    // Returns an array of author.
+    function tsd_json_plugin_get_author_info( $post ) {
+        $author_objects = [];
+        if ( function_exists( 'get_coauthors' ) ) {
+            $author_objects = get_coauthors( $post->ID );
+        } else {
+            $author_objects[] = get_user_meta( $post->post_author );
+        }
+
+        $authors = [];
+        foreach ($author_objects as $author) {
+            $authors[] = [
+                'id' => $author->ID,
+                'display_name' => html_entity_decode( $author->display_name ),
+                'user_nicename' => $author->user_nicename,
+            ];
+        };
+        return $authors;
+    }
+
+    // Returns a single category info.
     function tsd_json_plugin_get_category_info( $post ) {
         $primary_category_id = get_post_meta( $post->ID, '_yoast_wpseo_primary_category', true );
         $primary_category = null;
@@ -76,6 +97,12 @@ function tsd_json_plugin_enable_api() {
             $post[ 'post_title' ] = html_entity_decode( $post[ 'post_title' ] );
             $post[ 'post_excerpt' ] = html_entity_decode( $post[ 'post_excerpt' ] );
             unset( $post[ 'post_content' ] );
+
+            if ( function_exists( 'get_the_subtitle' ) ) {
+                $post[ 'post_subtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
+            }
+
+            $post[ 'tsd_author' ] = tsd_json_plugin_get_author_info( $post_object );
 
             if ( $include_category_info_for_each_post ) {
                 $category_info = tsd_json_plugin_get_category_info( $post_object );
