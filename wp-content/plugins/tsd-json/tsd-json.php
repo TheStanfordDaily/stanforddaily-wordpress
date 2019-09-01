@@ -98,6 +98,10 @@ function tsd_json_plugin_enable_api() {
             $post[ 'post_excerpt' ] = html_entity_decode( $post[ 'post_excerpt' ] );
             unset( $post[ 'post_content' ] );
 
+            foreach( $post[ 'tags_input' ] as $key => $tag ) {
+                $post[ 'tags_input' ][ $key ] = html_entity_decode( $tag );
+            }
+
             if ( function_exists( 'get_the_subtitle' ) ) {
                 $post[ 'post_subtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
             }
