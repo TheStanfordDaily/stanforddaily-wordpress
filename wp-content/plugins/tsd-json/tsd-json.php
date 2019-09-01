@@ -14,6 +14,10 @@ function tsd_json_plugin_enable_api() {
 
     // Create json-api endpoint
     add_action('rest_api_init', function () {
+        // Matches "yyyy/mm/dd"
+        // https://stackoverflow.com/a/22061879/2603230
+        $date_regex = "(?P<year>\d{4})\/(?P<month>(0[1-9]|1[012]))\/(?P<day>(0[1-9]|[12][0-9]|3[01]))";
+
         // Match "/json/home"
         register_rest_route('tsd/v1', '/json/home', [
             'methods' => 'GET',
@@ -21,7 +25,7 @@ function tsd_json_plugin_enable_api() {
         ]);
 
         // Match "/json/post/<slug>"
-        register_rest_route('tsd/v1', '/json/post/(?P<slug>[\w-]+)', [
+        register_rest_route('tsd/v1', '/json/post/' . $date_regex . '/(?P<slug>[\w-]+)', [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_post',
         ]);
@@ -161,14 +165,28 @@ function tsd_json_plugin_enable_api() {
     }
 
     function tsd_json_plugin_return_post( $request ) {
+        $year = (int) $request[ "year" ];
+        $month = (int) $request[ "month" ];
+        $day = (int) $request[ "day" ];
         $slug = (string) $request[ "slug" ];
 
-        $posts = tsd_json_plugin_get_processed_posts( [ 'name' => $slug ], [ 'include_post_content' => true, 'include_category_info_for_each_post' => true ] );
+        $posts = tsd_json_plugin_get_processed_posts(
+            [
+                'year' => $year,
+                'monthnum' => $month,
+                'day' => $day,
+                'name' => $slug,
+            ],
+            [
+                'include_post_content' => true,
+                'include_category_info_for_each_post' => true,
+            ]
+        );
         if ( empty( $posts ) ) {
-            return new WP_Error( 'post_not_found', 'This post slug is not associated with any post.', ['status' => 404] );
+            return new WP_Error( 'post_not_found', 'This post cannot be found.', [ 'status' => 404 ] );
         }
         if ( count( $posts ) > 1 ) {
-            return new WP_Error( 'more_than_one_post_found', 'The same slug returns more than one post!', ['status' => 500] );
+            return new WP_Error( 'more_than_one_post_found', 'It returns more than one post!', [ 'status' => 500 ] );
         }
 
         return $posts[0];
