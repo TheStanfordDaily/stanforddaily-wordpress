@@ -14,10 +14,16 @@ function tsd_json_plugin_enable_api() {
 
     // Create json-api endpoint
     add_action('rest_api_init', function () {
-        // Match "/locations"
+        // Match "/json/home"
         register_rest_route('tsd/v1', '/json/home', [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_home',
+        ]);
+
+        // Match "/json/post/<slug>"
+        register_rest_route('tsd/v1', '/json/post/(?P<slug>[\w-]+)', [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_post',
         ]);
     });
 
@@ -152,6 +158,20 @@ function tsd_json_plugin_enable_api() {
         $sections[ 'more_from_the_daily' ] = tsd_json_plugin_get_processed_posts( [ 'post__not_in' => $main_posts_id, 'posts_per_page' => 20 ], [ 'include_category_info_for_each_post' => true ] );
 
         return $sections;
+    }
+
+    function tsd_json_plugin_return_post( $request ) {
+        $slug = (string) $request[ "slug" ];
+
+        $posts = tsd_json_plugin_get_processed_posts( [ 'name' => $slug ], [ 'include_post_content' => true, 'include_category_info_for_each_post' => true ] );
+        if ( empty( $posts ) ) {
+            return new WP_Error( 'post_not_found', 'This post slug is not associated with any post.', ['status' => 404] );
+        }
+        if ( count( $posts ) > 1 ) {
+            return new WP_Error( 'more_than_one_post_found', 'The same slug returns more than one post!', ['status' => 500] );
+        }
+
+        return $posts[0];
     }
 }
 add_action('init', 'tsd_json_plugin_enable_api');
