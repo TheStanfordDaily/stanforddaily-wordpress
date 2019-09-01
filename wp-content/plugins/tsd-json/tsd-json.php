@@ -83,9 +83,15 @@ function tsd_json_plugin_enable_api() {
         }
     }
 
-    function tsd_json_plugin_get_processed_posts( $query, $exclude_featured_category = false, $include_category_info_for_each_post = false ) {
+    function tsd_json_plugin_get_processed_posts( $query, $options = [] ) {
+        $defaults_options = array(
+            'exclude_featured_category' => false,
+            'include_category_info_for_each_post' => false,
+        );
+        $options = wp_parse_args( $options, $defaults_options );
+
         $post_objects = null;
-        if ( $exclude_featured_category ) {
+        if ( $options[ 'exclude_featured_category' ] ) {
             $post_objects = tsd_json_plugin_query_not_featured_posts( $query );
         } else {
             $post_objects = query_posts( $query );
@@ -108,7 +114,7 @@ function tsd_json_plugin_enable_api() {
 
             $post[ 'tsd_authors' ] = tsd_json_plugin_get_author_info( $post_object );
 
-            if ( $include_category_info_for_each_post ) {
+            if ( $options[ 'include_category_info_for_each_post' ] ) {
                 $category_info = tsd_json_plugin_get_category_info( $post_object );
                 if ( ! is_null( $category_info ) ) {
                     $post[ 'tsd_primary_category' ] = $category_info;
@@ -123,11 +129,11 @@ function tsd_json_plugin_enable_api() {
     function tsd_json_plugin_return_home() {
         $sections = [];
         $sections[ 'featured' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'featured', 'posts_per_page' => 3 ] );
-        $sections[ 'news' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'NEWS', 'posts_per_page' => 4 ], true );
-        $sections[ 'sports' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'SPORTS', 'posts_per_page' => 7 ], true );
-        $sections[ 'opinions' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'opinions', 'posts_per_page' => 4 ], true );
-        $sections[ 'the_grind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 4 ], true );
-        $sections[ 'arts_and_life' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 4 ], true );
+        $sections[ 'news' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'NEWS', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'sports' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'SPORTS', 'posts_per_page' => 7 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'opinions' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'opinions', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'the_grind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'arts_and_life' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
 
         $main_posts_id = [];
         foreach ($sections as $section) {
@@ -136,7 +142,7 @@ function tsd_json_plugin_enable_api() {
             }
         }
 
-        $sections[ 'more_from_the_daily' ] = tsd_json_plugin_get_processed_posts( [ 'post__not_in' => $main_posts_id, 'posts_per_page' => 20 ], false, true );
+        $sections[ 'more_from_the_daily' ] = tsd_json_plugin_get_processed_posts( [ 'post__not_in' => $main_posts_id, 'posts_per_page' => 20 ], [ 'include_category_info_for_each_post' => true ] );
 
         return $sections;
     }
