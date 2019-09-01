@@ -13,7 +13,8 @@ function tsd_json_plugin_enable_api() {
     // Ref: https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
 
     // Create json-api endpoint
-    // NOTE: When this is changed, remember to also change the `getWPAPI()` function in `wpapi.ts` in the client.
+    // NOTE: When this is changed, remember to also update the `tsd-json.json` file
+    // in the client with the content on https://www.stanforddaily.com/wp-json/tsd/json/v1/.
     add_action('rest_api_init', function () {
         register_rest_route('tsd/json/v1', '/home', [
             'methods' => 'GET',
