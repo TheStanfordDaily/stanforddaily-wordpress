@@ -49,8 +49,8 @@ function tsd_json_plugin_enable_api() {
         foreach ($author_objects as $author) {
             $authors[] = [
                 'id' => $author->ID,
-                'display_name' => html_entity_decode( $author->display_name ),
-                'user_nicename' => $author->user_nicename,
+                'displayName' => html_entity_decode( $author->display_name ),
+                'userNicename' => $author->user_nicename,
             ];
         };
         return $authors;
@@ -107,36 +107,36 @@ function tsd_json_plugin_enable_api() {
 
         $posts = [];
         foreach ( $post_objects as $post_object ) {
-            $post = $post_object->to_array();
-            $post[ 'post_title' ] = html_entity_decode( apply_filters( 'the_title', $post[ 'post_title' ] ) );
-            $post[ 'post_excerpt' ] = html_entity_decode( $post[ 'post_excerpt' ] );
+            $post = tsd_json_plugin_convert_keys_to_camelCase( $post_object->to_array() );
+            $post[ 'postTitle' ] = html_entity_decode( apply_filters( 'the_title', $post[ 'postTitle' ] ) );
+            $post[ 'postExcerpt' ] = html_entity_decode( $post[ 'postExcerpt' ] );
             if ( ! $options[ 'include_post_content' ] ) {
-                unset( $post[ 'post_content' ] );
-                unset( $post[ 'post_content_filtered' ] );
+                unset( $post[ 'postContent' ] );
+                unset( $post[ 'postContentFiltered' ] );
             } else {
                 // https://codex.wordpress.org/Class_Reference/WP_Post#Accessing_the_WP_Post_Object
-                $post[ 'post_content' ] = apply_filters( 'the_content', $post[ 'post_content' ] );
+                $post[ 'postContent' ] = apply_filters( 'the_content', $post[ 'postContent' ] );
             }
 
-            foreach( $post[ 'tags_input' ] as $key => $tag ) {
-                $post[ 'tags_input' ][ $key ] = html_entity_decode( $tag );
+            foreach( $post[ 'tagsInput' ] as $key => $tag ) {
+                $post[ 'tagsInput' ][ $key ] = html_entity_decode( $tag );
             }
 
             if ( function_exists( 'get_the_subtitle' ) ) {
-                $post[ 'post_subtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
+                $post[ 'postSubtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
             }
 
-            $post[ 'tsd_authors' ] = tsd_json_plugin_get_author_info( $post_object );
+            $post[ 'tsdAuthors' ] = tsd_json_plugin_get_author_info( $post_object );
 
             if ( $options[ 'include_category_info_for_each_post' ] ) {
                 $category_info = tsd_json_plugin_get_category_info( $post_object );
                 if ( ! is_null( $category_info ) ) {
-                    $post[ 'tsd_primary_category' ] = $category_info;
+                    $post[ 'tsdPrimaryCategory' ] = $category_info;
                 }
             }
 
             $post_date = strtotime( $post_object->post_date );
-            $post[ 'tsd_url_parameters' ] = [
+            $post[ 'tsdUrlParameters' ] = [
                 "year" => date('Y', $post_date),
                 "month" => date('m', $post_date),
                 "day" => date('d', $post_date),
@@ -154,17 +154,17 @@ function tsd_json_plugin_enable_api() {
         $sections[ 'news' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'NEWS', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
         $sections[ 'sports' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'SPORTS', 'posts_per_page' => 7 ], [ 'exclude_featured_category' => true ] );
         $sections[ 'opinions' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'opinions', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
-        $sections[ 'the_grind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
-        $sections[ 'arts_and_life' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'theGrind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'artsAndLife' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
 
         $main_posts_id = [];
         foreach ($sections as $section) {
             foreach ($section as $post) {
-                $main_posts_id[] = $post[ 'ID' ];
+                $main_posts_id[] = $post[ 'id' ];
             }
         }
 
-        $sections[ 'more_from_the_daily' ] = tsd_json_plugin_get_processed_posts( [ 'post__not_in' => $main_posts_id, 'posts_per_page' => 20 ], [ 'include_category_info_for_each_post' => true ] );
+        $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_processed_posts( [ 'post__not_in' => $main_posts_id, 'posts_per_page' => 20 ], [ 'include_category_info_for_each_post' => true ] );
 
         return $sections;
     }
@@ -200,5 +200,18 @@ function tsd_json_plugin_enable_api() {
 
         return $posts[0];
     }
+
+    // https://stackoverflow.com/a/31275117/2603230
+    function tsd_json_plugin_convert_keys_to_camelCase( $input ) {
+    $arr = [];
+    foreach ( $input as $key => $value ) {
+        $key = lcfirst( implode( '', array_map( 'ucfirst', explode( '_', strtolower( $key ) ) ) ) );
+        if ( is_array($value) ) {
+            $value = tsd_json_plugin_convert_keys_to_camelCase( $value );
+        }
+        $arr[$key] = $value;
+    }
+    return $arr;
+}
 }
 add_action('init', 'tsd_json_plugin_enable_api');
