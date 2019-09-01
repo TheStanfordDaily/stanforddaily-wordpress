@@ -17,7 +17,7 @@ function tsd_json_plugin_enable_api() {
     add_action('rest_api_init', function () {
         // Matches "yyyy/mm/dd"
         // https://stackoverflow.com/a/22061879/2603230
-        $date_regex = "(?P<year>\d{4})\/(?P<month>(0[1-9]|1[012]))\/(?P<day>(0[1-9]|[12][0-9]|3[01]))";
+        $date_regex = "(?P<year>\d{4})/(?P<month>(0[1-9]|1[012]))/(?P<day>(0[1-9]|[12][0-9]|3[01]))";
 
         // Match "/json/home"
         register_rest_route('tsd/v1', '/json/home', [
