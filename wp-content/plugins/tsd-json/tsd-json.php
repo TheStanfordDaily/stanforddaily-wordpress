@@ -15,18 +15,13 @@ function tsd_json_plugin_enable_api() {
     // Create json-api endpoint
     // NOTE: When this is changed, remember to also change the `getWPAPI()` function in `wpapi.ts` in the client.
     add_action('rest_api_init', function () {
-        // Matches "yyyy/mm/dd"
-        // https://stackoverflow.com/a/22061879/2603230
-        $date_regex = "(?P<year>\d{4})/(?P<month>(0[1-9]|1[012]))/(?P<day>(0[1-9]|[12][0-9]|3[01]))";
-
-        // Match "/json/home"
-        register_rest_route('tsd/v1', '/json/home', [
+        register_rest_route('tsd/json/v1', '/home', [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_home',
         ]);
 
-        // Match "/json/post/<slug>"
-        register_rest_route('tsd/v1', '/json/post/' . $date_regex . '/(?P<slug>[\w-]+)', [
+        // Note that we use `postyear`, etc. because `year`, etc. is a reserved word in `WPAPI` in the client side.
+        register_rest_route('tsd/json/v1', "/posts/(?P<postyear>\d{4})/(?P<postmonth>\d{2})/(?P<postday>\d{2})/(?P<postslug>[\w-]+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_post',
         ]);
@@ -174,10 +169,14 @@ function tsd_json_plugin_enable_api() {
     }
 
     function tsd_json_plugin_return_post( $request ) {
-        $year = (int) $request[ "year" ];
-        $month = (int) $request[ "month" ];
-        $day = (int) $request[ "day" ];
-        $slug = (string) $request[ "slug" ];
+        $year = (int) $request[ "postyear" ];
+        $month = (int) $request[ "postmonth" ];
+        $day = (int) $request[ "postday" ];
+        $slug = (string) $request[ "postslug" ];
+
+        if ( ! checkdate( $month, $day, $year ) ) {
+            return new WP_Error( 'invalid_date', 'The date is invalid.', [ 'status' => 404 ] );
+        }
 
         $posts = tsd_json_plugin_get_processed_posts(
             [
