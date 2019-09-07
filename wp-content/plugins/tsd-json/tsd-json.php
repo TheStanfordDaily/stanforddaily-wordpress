@@ -122,9 +122,21 @@ function tsd_json_plugin_enable_api() {
                 $post[ 'tagsInput' ][ $key ] = html_entity_decode( $tag );
             }
 
-            $thumbnailUrl = get_the_post_thumbnail_url( $post_object, 'medium_large' );
-            if ( ! empty ( $thumbnailUrl ) ) {
-                $post[ 'thumbnailUrl' ] = $thumbnailUrl;
+            $thumbnail_full_url = get_the_post_thumbnail_url( $post_object, 'full' );
+            if ( ! empty ( $thumbnail_full_url ) ) {
+                $thumbnail_info = [];
+                $thumbnail_info_urls = [];
+                $thumbnail_info_urls[ 'full' ] = $thumbnail_full_url;
+                $thumbnail_info_urls[ 'mediumLarge' ] = get_the_post_thumbnail_url( $post_object, 'medium_large' );
+                $thumbnail_info_urls[ 'thumbnail' ] = get_the_post_thumbnail_url( $post_object, 'thumbnail' );
+                $thumbnail_info[ 'urls' ] = $thumbnail_info_urls;
+                $thumbnail_info[ 'caption' ] = get_the_post_thumbnail_caption( $post_object );
+
+                $thumbnail_id = get_post_thumbnail_id( $post_object );
+                $thumbnail_alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+                $thumbnail_info[ 'alt' ] = $thumbnail_alt;
+
+                $post[ 'thumbnailInfo' ] = $thumbnail_info;
             }
 
             if ( function_exists( 'get_the_subtitle' ) ) {
