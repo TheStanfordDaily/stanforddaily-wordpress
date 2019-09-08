@@ -85,7 +85,7 @@ function tsd_json_plugin_enable_api() {
                 }
             }
         } else {
-            $primary_category = get_the_category_by_ID( $primary_category_id );
+            $primary_category = get_category( $primary_category_id );
         }
 
         if ( ! is_null( $primary_category ) ) {
