@@ -8,6 +8,10 @@
 * 1.0 (2019-09-01) - Created. (Yifei He)
 */
 
+// Since 1, 2, 3, 4, 6 are all factors of 12, it is best for the responsive layout.
+const MORE_FROM_DAILY_POST_PER_PAGE = 12;
+const MORE_FROM_DAILY_INITIAL_NUMBER_OF_PAGES = 3;
+
 // Custom WP API endpoint
 function tsd_json_plugin_enable_api() {
     // Ref: https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
@@ -19,6 +23,11 @@ function tsd_json_plugin_enable_api() {
         register_rest_route('tsd/json/v1', '/home', [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_home',
+        ]);
+
+        register_rest_route('tsd/json/v1', '/home/more/(?P<extraPageNumber>\d+)', [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_home_more',
         ]);
 
         // Note that we use `postyear`, etc. because `year`, etc. is a reserved word in `WPAPI` in the client side.
@@ -165,7 +174,7 @@ function tsd_json_plugin_enable_api() {
         return $posts;
     }
 
-    function tsd_json_plugin_return_home() {
+    function tsd_json_plugin_get_home_sections() {
         $sections = [];
         $sections[ 'featured' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'featured', 'posts_per_page' => 3 ] );
         $sections[ 'news' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'NEWS', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
@@ -173,17 +182,54 @@ function tsd_json_plugin_enable_api() {
         $sections[ 'opinions' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'opinions', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
         $sections[ 'theGrind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
         $sections[ 'artsAndLife' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        return $sections;
+    }
 
+    function tsd_json_plugin_get_home_more_from_the_daily( $home_sections, $paged = -1 ) {
         $main_posts_id = [];
-        foreach ($sections as $section) {
+        foreach ($home_sections as $section) {
             foreach ($section as $post) {
                 $main_posts_id[] = $post[ 'id' ];
             }
         }
 
-        $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_processed_posts( [ 'post__not_in' => $main_posts_id, 'posts_per_page' => 20 ], [ 'include_category_info_for_each_post' => true ] );
+        $posts_per_page = MORE_FROM_DAILY_POST_PER_PAGE;
+        if ( $paged === -1 ) {
+            $posts_per_page *= MORE_FROM_DAILY_INITIAL_NUMBER_OF_PAGES;
+            $paged = 1;
+        } else {
+            $paged += MORE_FROM_DAILY_INITIAL_NUMBER_OF_PAGES;
+        }
+
+        $more_from_the_daily = tsd_json_plugin_get_processed_posts(
+            [
+                'post__not_in' => $main_posts_id,
+                'posts_per_page' => $posts_per_page,
+                'paged' => $paged,
+            ],
+            [ 'include_category_info_for_each_post' => true ]
+        );
+        return $more_from_the_daily;
+    }
+
+    function tsd_json_plugin_return_home() {
+        $sections = tsd_json_plugin_get_home_sections();
+
+        $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_home_more_from_the_daily( $sections );
 
         return $sections;
+    }
+
+    function tsd_json_plugin_return_home_more( $request ) {
+        $extra_page_number = (int) $request[ "extraPageNumber" ];
+        if ( $extra_page_number <= 0 ) {
+            return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
+        }
+
+        $home_sections = tsd_json_plugin_get_home_sections();
+        $more_from_the_daily = tsd_json_plugin_get_home_more_from_the_daily( $home_sections, $extra_page_number );
+
+        return $more_from_the_daily;
     }
 
     function tsd_json_plugin_return_post( $request ) {
