@@ -99,6 +99,7 @@ function tsd_json_plugin_enable_api() {
                 'id' => $primary_category->term_id,
                 'name' => html_entity_decode( $primary_category->name ),
                 'slug' => $primary_category->slug,
+                'url' => wp_make_link_relative( get_category_link( $primary_category ) ),
             ];
         } else {
             return null;
