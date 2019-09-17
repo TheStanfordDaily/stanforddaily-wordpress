@@ -35,6 +35,12 @@ function tsd_json_plugin_enable_api() {
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_post',
         ]);
+
+        // TODO: THIS WILL MATCH BOTH /category/columnists/1 and /category/opinions/columnists/1 but we only want the latter
+        register_rest_route('tsd/json/v1', "/category/(.*\/)?(?P<categorySlug>[\w-]+)/(?P<pageNumber>\d+)", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_category_posts',
+        ]);
     });
 
     function tsd_json_plugin_query_not_featured_posts( $query ) {
@@ -262,6 +268,28 @@ function tsd_json_plugin_enable_api() {
         }
 
         return $posts[0];
+    }
+
+    function tsd_json_plugin_return_category_posts( $request ) {
+        $page_number = (int) $request[ "pageNumber" ];
+        if ( $page_number <= 0 ) {
+            return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
+        }
+
+        $category_slug = $request[ "categorySlug" ];
+        if ( ! is_category( $category_slug ) ) {
+            return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
+        }
+
+        $category_posts = tsd_json_plugin_get_processed_posts(
+            [
+                'category_name' => $category_slug,
+                'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
+                'paged' => $page_number,
+            ],
+        );
+
+        return $category_posts;
     }
 
     // https://stackoverflow.com/a/31275117/2603230
