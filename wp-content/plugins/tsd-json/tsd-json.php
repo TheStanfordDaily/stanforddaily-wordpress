@@ -228,12 +228,12 @@ function tsd_json_plugin_enable_api() {
 
     function tsd_json_plugin_return_home_more( $request ) {
         $extra_page_number = (int) $request[ "extraPageNumber" ];
-        if ( $extra_page_number <= 0 ) {
-            return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
+        if ( $extra_page_number <= 1 ) {
+            return new WP_Error( 'invalid_page_number', 'Extra page number number start from 2.', [ 'status' => 404 ] );
         }
 
         $home_sections = tsd_json_plugin_get_home_sections();
-        $more_from_the_daily = tsd_json_plugin_get_home_more_from_the_daily( $home_sections, $extra_page_number );
+        $more_from_the_daily = tsd_json_plugin_get_home_more_from_the_daily( $home_sections, $extra_page_number - 1 );
 
         return $more_from_the_daily;
     }
