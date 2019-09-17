@@ -278,19 +278,25 @@ function tsd_json_plugin_enable_api() {
 
         $category_slug = $request[ "categorySlug" ];
 
+        $category = get_category_by_slug( $category_slug );
+        if ( ! $category ) {
+            return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
+        }
+
         $category_posts = tsd_json_plugin_get_processed_posts(
             [
-                'category_name' => $category_slug,
+                'cat' => $category->term_id,
                 'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
                 'paged' => $page_number,
             ],
         );
 
-        if ( empty( $category_posts ) ) {
-            return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
-        }
-
-        return $category_posts;
+        return [
+            "meta" => [
+                "title" => $category->name,
+            ],
+            "posts" => $category_posts,
+        ];
     }
 
     // https://stackoverflow.com/a/31275117/2603230
