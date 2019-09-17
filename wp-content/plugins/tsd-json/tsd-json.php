@@ -293,7 +293,7 @@ function tsd_json_plugin_enable_api() {
 
         return [
             "meta" => [
-                "title" => $category->name,
+                "title" => html_entity_decode( $category->name ),
             ],
             "posts" => $category_posts,
         ];
