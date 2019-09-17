@@ -277,9 +277,6 @@ function tsd_json_plugin_enable_api() {
         }
 
         $category_slug = $request[ "categorySlug" ];
-        if ( ! is_category( $category_slug ) ) {
-            return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
-        }
 
         $category_posts = tsd_json_plugin_get_processed_posts(
             [
@@ -288,6 +285,10 @@ function tsd_json_plugin_enable_api() {
                 'paged' => $page_number,
             ],
         );
+
+        if ( empty( $category_posts ) ) {
+            return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
+        }
 
         return $category_posts;
     }
