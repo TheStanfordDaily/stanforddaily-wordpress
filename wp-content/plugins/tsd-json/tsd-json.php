@@ -41,6 +41,11 @@ function tsd_json_plugin_enable_api() {
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_category_posts',
         ]);
+
+        register_rest_route('tsd/json/v1', "/author/(?P<authorSlug>[\w-]+)/(?P<pageNumber>\d+)", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_author_posts',
+        ]);
     });
 
     function tsd_json_plugin_query_not_featured_posts( $query ) {
@@ -66,6 +71,7 @@ function tsd_json_plugin_enable_api() {
                 'id' => $author->ID,
                 'displayName' => html_entity_decode( $author->display_name ),
                 'userNicename' => $author->user_nicename,
+                'url' => wp_make_link_relative( get_author_posts_url( $author->ID ) ),
             ];
         };
         return $authors;
@@ -297,6 +303,38 @@ function tsd_json_plugin_enable_api() {
                 "title" => html_entity_decode( $category->name ),
             ],
             "posts" => $category_posts,
+        ];
+    }
+
+    function tsd_json_plugin_return_author_posts( $request ) {
+        $page_number = (int) $request[ "pageNumber" ];
+        if ( $page_number <= 0 ) {
+            return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
+        }
+
+        $author_slug = $request[ "authorSlug" ];
+
+        $author = get_user_by( 'slug', $author_slug );
+        if ( ! $author ) {
+            return new WP_Error( 'author_not_found', 'Author not found.', [ 'status' => 404 ] );
+        }
+
+        $author_posts = tsd_json_plugin_get_processed_posts(
+            [
+                'author' => $author->ID,
+                'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
+                'paged' => $page_number,
+            ],
+            [
+                'include_category_info_for_each_post' => true,
+            ]
+        );
+
+        return [
+            "meta" => [
+                "name" => html_entity_decode( $author->display_name ),
+            ],
+            "posts" => $author_posts,
         ];
     }
 
