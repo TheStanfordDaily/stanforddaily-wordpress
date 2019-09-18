@@ -36,6 +36,11 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_post',
         ]);
 
+        register_rest_route('tsd/json/v1', "/page/(?P<pageSlug>[\S]+)", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_page',
+        ]);
+
         register_rest_route('tsd/json/v1', "/category/(?P<categorySlugs>[\S]+)/(?P<pageNumber>\d+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_category_posts',
@@ -275,6 +280,27 @@ function tsd_json_plugin_enable_api() {
         }
 
         return $posts[0];
+    }
+
+    function tsd_json_plugin_return_page( $request ) {
+        $slug = (string) $request[ "pageSlug" ];
+
+        $pages = tsd_json_plugin_get_processed_posts(
+            [
+                'pagename' => $slug,
+            ],
+            [
+                'include_post_content' => true,
+            ]
+        );
+        if ( empty( $pages ) ) {
+            return new WP_Error( 'page_not_found', 'This page cannot be found.', [ 'status' => 404 ] );
+        }
+        if ( count( $pages ) > 1 ) {
+            return new WP_Error( 'more_than_one_page_found', 'It returns more than one page!', [ 'status' => 500 ] );
+        }
+
+        return $pages[0];
     }
 
     function tsd_json_plugin_return_category_posts( $request ) {
