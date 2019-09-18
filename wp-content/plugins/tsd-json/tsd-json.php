@@ -81,6 +81,15 @@ function tsd_json_plugin_enable_api() {
         return $authors;
     }
 
+    function tsd_json_plugin_get_category( $category ) {
+        return [
+            'id' => $category->term_id,
+            'name' => html_entity_decode( $category->name ),
+            'slug' => $category->slug,
+            'url' => wp_make_link_relative( get_category_link( $category ) ),
+        ];
+    }
+
     // Returns a single category info.
     function tsd_json_plugin_get_category_info( $post ) {
         $primary_category_id = get_post_meta( $post->ID, '_yoast_wpseo_primary_category', true );
@@ -105,12 +114,7 @@ function tsd_json_plugin_enable_api() {
         }
 
         if ( ! is_null( $primary_category ) ) {
-            return [
-                'id' => $primary_category->term_id,
-                'name' => html_entity_decode( $primary_category->name ),
-                'slug' => $primary_category->slug,
-                'url' => wp_make_link_relative( get_category_link( $primary_category ) ),
-            ];
+            return tsd_json_plugin_get_category( $primary_category );
         } else {
             return null;
         }
