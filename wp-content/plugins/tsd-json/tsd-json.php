@@ -30,8 +30,8 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_home_more',
         ]);
 
-        // Note that we use `postyear`, etc. because `year`, etc. is a reserved word in `WPAPI` in the client side.
-        register_rest_route('tsd/json/v1', "/posts/(?P<postyear>\d{4})/(?P<postmonth>\d{2})/(?P<postday>\d{2})/(?P<postslug>[\w-]+)", [
+        // Note that we use `postYear`, etc. because `year`, etc. is a reserved word in `WPAPI` in the client side.
+        register_rest_route('tsd/json/v1', "/posts/(?P<postYear>\d{4})/(?P<postMonth>\d{2})/(?P<postDay>\d{2})/(?P<postSlug>[\S]+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_post',
         ]);
@@ -246,10 +246,10 @@ function tsd_json_plugin_enable_api() {
     }
 
     function tsd_json_plugin_return_post( $request ) {
-        $year = (int) $request[ "postyear" ];
-        $month = (int) $request[ "postmonth" ];
-        $day = (int) $request[ "postday" ];
-        $slug = (string) $request[ "postslug" ];
+        $year = (int) $request[ "postYear" ];
+        $month = (int) $request[ "postMonth" ];
+        $day = (int) $request[ "postDay" ];
+        $slug = (string) $request[ "postSlug" ];
 
         if ( ! checkdate( $month, $day, $year ) ) {
             return new WP_Error( 'invalid_date', 'The date is invalid.', [ 'status' => 404 ] );
@@ -291,6 +291,7 @@ function tsd_json_plugin_enable_api() {
 
         $category = get_category_by_slug( $last_category_slug );
         if ( ! $category ||
+            // Make sure this is the correct subcategory
             ("/category/$category_slugs/") !== wp_make_link_relative( get_category_link( $category ) )
         ) {
             return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
