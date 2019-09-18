@@ -380,23 +380,38 @@ function tsd_json_plugin_enable_api() {
         ];
     }
 
-    function tsd_json_plugin_return_nav_info() {
-        $top_navbar_categories = [];
-        $top_navbar_category_slugs = [
-            'NEWS',
-            'SPORTS',
-            'opinions',
-            'arts-life',
-            'thegrind',
-            'magazine',
-            'data-vizzes',
-        ];
-        foreach ( $top_navbar_category_slugs as $top_navbar_category_slug ) {
-            $top_navbar_category_object = get_category_by_slug( $top_navbar_category_slug );
-            $top_navbar_categories[] = tsd_json_plugin_get_category( $top_navbar_category_object );
+    function tsd_json_plugin_get_categories_from_category_slugs( $category_slugs ) {
+        $categories = [];
+        foreach ( $category_slugs as $category_slug ) {
+            $category_object = get_category_by_slug( $category_slug );
+            $categories[] = tsd_json_plugin_get_category( $category_object );
         }
+        return $categories;
+    }
+
+    function tsd_json_plugin_return_nav_info() {
         return [
-            "top" => $top_navbar_categories,
+            "top" => tsd_json_plugin_get_categories_from_category_slugs( [
+                'NEWS',
+                'SPORTS',
+                'opinions',
+                'arts-life',
+                'thegrind',
+                'magazine',
+                'data-vizzes',
+            ] ),
+            "bottom" => [
+                "news" => tsd_json_plugin_get_categories_from_category_slugs( [
+                    'academics-news',
+                    'local-news',
+                    'research-news',
+                    'speakers-events-news',
+                    'student-government-news',
+                    'student-life-news',
+                    'technology-news',
+                    'university-news',
+                ] ),
+            ],
         ];
     }
 
