@@ -36,8 +36,7 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_post',
         ]);
 
-        // TODO: THIS WILL MATCH BOTH /category/columnists/1 and /category/opinions/columnists/1 but we only want the latter
-        register_rest_route('tsd/json/v1', "/category/(.*\/)?(?P<categorySlug>[\w-]+)/(?P<pageNumber>\d+)", [
+        register_rest_route('tsd/json/v1', "/category/(?P<categorySlugs>[\S]+)/(?P<pageNumber>\d+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_category_posts',
         ]);
@@ -283,10 +282,16 @@ function tsd_json_plugin_enable_api() {
             return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
         }
 
-        $category_slug = $request[ "categorySlug" ];
+        $category_slugs = $request[ "categorySlugs" ];
 
-        $category = get_category_by_slug( $category_slug );
-        if ( ! $category ) {
+        // https://stackoverflow.com/a/1361752/2603230
+        $pos = strrpos($category_slugs, '/');
+        $last_category_slug = $pos === false ? $category_slugs : substr($category_slugs, $pos + 1);
+
+        $category = get_category_by_slug( $last_category_slug );
+        if ( ! $category ||
+            ("/category/$category_slugs/") !== wp_make_link_relative( get_category_link( $category ) )
+        ) {
             return new WP_Error( 'category_not_found', 'Category not found.', [ 'status' => 404 ] );
         }
 
