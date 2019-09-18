@@ -50,6 +50,11 @@ function tsd_json_plugin_enable_api() {
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_author_posts',
         ]);
+
+        register_rest_route('tsd/json/v1', "/nav", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_nav_info',
+        ]);
     });
 
     function tsd_json_plugin_query_not_featured_posts( $query ) {
@@ -372,6 +377,26 @@ function tsd_json_plugin_enable_api() {
                 "name" => html_entity_decode( $author->display_name ),
             ],
             "posts" => $author_posts,
+        ];
+    }
+
+    function tsd_json_plugin_return_nav_info() {
+        $top_navbar_categories = [];
+        $top_navbar_category_slugs = [
+            'NEWS',
+            'SPORTS',
+            'opinions',
+            'arts-life',
+            'thegrind',
+            'magazine',
+            'data-vizzes',
+        ];
+        foreach ( $top_navbar_category_slugs as $top_navbar_category_slug ) {
+            $top_navbar_category_object = get_category_by_slug( $top_navbar_category_slug );
+            $top_navbar_categories[] = tsd_json_plugin_get_category( $top_navbar_category_object );
+        }
+        return [
+            "top" => $top_navbar_categories,
         ];
     }
 
