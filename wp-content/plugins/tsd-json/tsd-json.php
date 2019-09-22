@@ -414,8 +414,7 @@ function tsd_json_plugin_enable_api() {
             $category[ "children" ] = [];
             $to_be_added_categories[ $category[ "slug" ] ] = $category;
         }
-        return $categories;
-        /*return [
+        return [
             "top" => tsd_json_plugin_get_categories_from_category_slugs( [
                 'NEWS',
                 'SPORTS',
@@ -425,29 +424,8 @@ function tsd_json_plugin_enable_api() {
                 'magazine',
                 'data-vizzes',
             ] ),
-            "bottom" => [
-                "news" => tsd_json_plugin_get_categories_from_category_slugs( [
-                    'academics-news',
-                    'local-news',
-                    'research-news',
-                    'speakers-events-news',
-                    'student-government-news',
-                    'student-life-news',
-                    'technology-news',
-                    'university-news',
-                    'environment-news',
-                    'health-news',
-                ] ),
-                "opinions" => tsd_json_plugin_get_categories_from_category_slugs( [
-                    'columnists',
-                    'edit-board',
-                    'letters-to-the-editor',
-                ] ),
-                "theGrind" => tsd_json_plugin_get_categories_from_category_slugs( [
-                    'cartoons',
-                ] ),
-            ],
-        ];*/
+            "bottom" => $categories,
+        ];
     }
 
     // https://stackoverflow.com/a/31275117/2603230
