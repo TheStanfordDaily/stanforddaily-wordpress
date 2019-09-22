@@ -414,7 +414,7 @@ function tsd_json_plugin_enable_api() {
             $category[ "children" ] = [];
             $to_be_added_categories[ $category[ "slug" ] ] = $category;
         }
-        return [
+        return json_decode(json_encode([
             "top" => tsd_json_plugin_get_categories_from_category_slugs( [
                 'NEWS',
                 'SPORTS',
@@ -425,7 +425,7 @@ function tsd_json_plugin_enable_api() {
                 'data-vizzes',
             ] ),
             "bottom" => $categories,
-        ];
+        ], JSON_FORCE_OBJECT));
     }
 
     // https://stackoverflow.com/a/31275117/2603230
