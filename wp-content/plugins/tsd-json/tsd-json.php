@@ -390,7 +390,32 @@ function tsd_json_plugin_enable_api() {
     }
 
     function tsd_json_plugin_return_nav_info() {
-        return [
+        $nav_menu_items = wp_get_nav_menu_items( '(New) Primary Nav Menu' );
+        //return $nav_menu_items;
+        $categories = [];
+        foreach ( $nav_menu_items as $nav_menu_item ) {
+            if ( $nav_menu_item->object !== "category" ) {
+                continue;
+            }
+
+            $category_object = get_category( $nav_menu_item->object_id );
+            $category = tsd_json_plugin_get_category( $category_object );
+
+            $to_be_added_categories = &$categories;
+            if ( $nav_menu_item->menu_item_parent !== "0" ) {
+                $parent_category_object = get_category( $nav_menu_item->post_parent );
+                if ($parent_category_object->category_parent !== 0) {
+                    // ignore second-level or up sub-category
+                    continue;
+                }
+                $to_be_added_categories = &$categories[ $parent_category_object->slug ][ "children" ];
+                //return $parent_category_object;
+            }
+            $category[ "children" ] = [];
+            $to_be_added_categories[ $category[ "slug" ] ] = $category;
+        }
+        return $categories;
+        /*return [
             "top" => tsd_json_plugin_get_categories_from_category_slugs( [
                 'NEWS',
                 'SPORTS',
@@ -410,9 +435,19 @@ function tsd_json_plugin_enable_api() {
                     'student-life-news',
                     'technology-news',
                     'university-news',
+                    'environment-news',
+                    'health-news',
+                ] ),
+                "opinions" => tsd_json_plugin_get_categories_from_category_slugs( [
+                    'columnists',
+                    'edit-board',
+                    'letters-to-the-editor',
+                ] ),
+                "theGrind" => tsd_json_plugin_get_categories_from_category_slugs( [
+                    'cartoons',
                 ] ),
             ],
-        ];
+        ];*/
     }
 
     // https://stackoverflow.com/a/31275117/2603230
