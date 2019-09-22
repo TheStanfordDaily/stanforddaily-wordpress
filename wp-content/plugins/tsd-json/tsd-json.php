@@ -259,6 +259,20 @@ function tsd_json_plugin_enable_api() {
         return $more_from_the_daily;
     }
 
+    function tsd_json_plugin_get_head( $query ) {
+        // https://wordpress.stackexchange.com/q/185287/75147
+        // https://stackoverflow.com/a/24766541/2603230
+        $page_to_load = new WP_Query( $query );
+        global $wp_query;
+        $wp_query = $page_to_load;
+        ob_start();
+        the_post();
+        get_header( 'headonly' );
+        $head = ob_get_clean();
+        wp_reset_query();
+        return $head;
+    }
+
     function tsd_json_plugin_return_post( $request ) {
         $year = (int) $request[ "postYear" ];
         $month = (int) $request[ "postMonth" ];
@@ -288,6 +302,10 @@ function tsd_json_plugin_enable_api() {
             return new WP_Error( 'more_than_one_post_found', 'It returns more than one post!', [ 'status' => 500 ] );
         }
 
+        $posts[0][ "tsdHead" ] = tsd_json_plugin_get_head( [
+            'p' => $posts[0]['id'],
+        ] );
+
         return $posts[0];
     }
 
@@ -308,6 +326,10 @@ function tsd_json_plugin_enable_api() {
         if ( count( $pages ) > 1 ) {
             return new WP_Error( 'more_than_one_page_found', 'It returns more than one page!', [ 'status' => 500 ] );
         }
+
+        $pages[0][ "tsdHead" ] = tsd_json_plugin_get_head( [
+            'page_id' => $pages[0]['id'],
+        ] );
 
         return $pages[0];
     }
