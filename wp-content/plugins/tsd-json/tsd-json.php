@@ -244,9 +244,8 @@ function tsd_json_plugin_enable_api() {
 
         $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_home_more_from_the_daily( $sections );
 
-        $head_and_footer = tsd_json_plugin_get_head_and_footer( [] );
-        $sections[ "tsdHead" ] = $head_and_footer[ "head" ];
-        $sections[ "tsdFooter" ] = $head_and_footer[ "footer" ];
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [] );
+        $sections[ "meta" ] = $head_and_footer;
 
         return $sections;
     }
@@ -263,7 +262,7 @@ function tsd_json_plugin_enable_api() {
         return $more_from_the_daily;
     }
 
-    function tsd_json_plugin_get_head_and_footer( $query ) {
+    function tsd_json_plugin_get_wp_head_and_wp_footer( $query ) {
         // https://wordpress.stackexchange.com/q/185287/75147
         // https://stackoverflow.com/a/24766541/2603230
         $page_to_load = new WP_Query( $query );
@@ -281,8 +280,8 @@ function tsd_json_plugin_enable_api() {
 
         wp_reset_query();
         return [
-            "head" => $head,
-            "footer" => $footer,
+            "wpHead" => $head,
+            "wpFooter" => $footer,
         ];
     }
 
@@ -315,11 +314,10 @@ function tsd_json_plugin_enable_api() {
             return new WP_Error( 'more_than_one_post_found', 'It returns more than one post!', [ 'status' => 500 ] );
         }
 
-        $head_and_footer = tsd_json_plugin_get_head_and_footer( [
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
             'p' => $posts[0]['id'],
         ] );
-        $posts[0][ "tsdHead" ] = $head_and_footer[ "head" ];
-        $posts[0][ "tsdFooter" ] = $head_and_footer[ "footer" ];
+        $posts[0][ "meta" ] = $head_and_footer;
 
         return $posts[0];
     }
@@ -342,11 +340,10 @@ function tsd_json_plugin_enable_api() {
             return new WP_Error( 'more_than_one_page_found', 'It returns more than one page!', [ 'status' => 500 ] );
         }
 
-        $head_and_footer = tsd_json_plugin_get_head_and_footer( [
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
             'page_id' => $pages[0]['id'],
         ] );
-        $pages[0][ "tsdHead" ] = $head_and_footer[ "head" ];
-        $pages[0][ "tsdFooter" ] = $head_and_footer[ "footer" ];
+        $pages[0][ "meta" ] = $head_and_footer;
 
         return $pages[0];
     }
