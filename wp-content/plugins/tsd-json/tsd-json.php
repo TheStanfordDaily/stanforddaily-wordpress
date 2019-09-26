@@ -244,6 +244,10 @@ function tsd_json_plugin_enable_api() {
 
         $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_home_more_from_the_daily( $sections );
 
+        $head_and_footer = tsd_json_plugin_get_head_and_footer( [] );
+        $sections[ "tsdHead" ] = $head_and_footer[ "head" ];
+        $sections[ "tsdFooter" ] = $head_and_footer[ "footer" ];
+
         return $sections;
     }
 
