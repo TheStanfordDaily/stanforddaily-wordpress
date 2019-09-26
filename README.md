@@ -68,7 +68,7 @@ git submodule init
 
 # update your submodule
 git submodule update --remote
-
+ 
 ### Adding a new submodule
 # add submodule to track master branch
 git submodule add -b master [URL to Git repo] [sub-directory path]
