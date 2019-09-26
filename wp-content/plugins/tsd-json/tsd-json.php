@@ -245,7 +245,7 @@ function tsd_json_plugin_enable_api() {
         $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_home_more_from_the_daily( $sections );
 
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [] );
-        $sections[ "meta" ] = $head_and_footer;
+        $sections[ "tsdMeta" ] = $head_and_footer;
 
         return $sections;
     }
@@ -317,7 +317,7 @@ function tsd_json_plugin_enable_api() {
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
             'p' => $posts[0]['id'],
         ] );
-        $posts[0][ "meta" ] = $head_and_footer;
+        $posts[0][ "tsdMeta" ] = $head_and_footer;
 
         return $posts[0];
     }
@@ -343,7 +343,7 @@ function tsd_json_plugin_enable_api() {
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
             'page_id' => $pages[0]['id'],
         ] );
-        $pages[0][ "meta" ] = $head_and_footer;
+        $pages[0][ "tsdMeta" ] = $head_and_footer;
 
         return $pages[0];
     }
@@ -377,7 +377,7 @@ function tsd_json_plugin_enable_api() {
         );
 
         return [
-            "meta" => [
+            "tsdMeta" => [
                 "title" => html_entity_decode( $category->name ),
             ],
             "posts" => $category_posts,
@@ -409,7 +409,7 @@ function tsd_json_plugin_enable_api() {
         );
 
         return [
-            "meta" => [
+            "tsdMeta" => [
                 "name" => html_entity_decode( $author->display_name ),
             ],
             "posts" => $author_posts,
