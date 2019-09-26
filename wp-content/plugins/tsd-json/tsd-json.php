@@ -376,10 +376,14 @@ function tsd_json_plugin_enable_api() {
             ],
         );
 
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
+            'cat' => $category->term_id,
+        ] );
+        $tsd_meta = $head_and_footer;
+        $tsd_meta[ "title" ] = html_entity_decode( $category->name );
+
         return [
-            "tsdMeta" => [
-                "title" => html_entity_decode( $category->name ),
-            ],
+            "tsdMeta" => $tsd_meta,
             "posts" => $category_posts,
         ];
     }
@@ -408,10 +412,14 @@ function tsd_json_plugin_enable_api() {
             ]
         );
 
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
+            'author' => $author->ID,
+        ] );
+        $tsd_meta = $head_and_footer;
+        $tsd_meta[ "name" ] = html_entity_decode( $author->display_name );
+
         return [
-            "tsdMeta" => [
-                "name" => html_entity_decode( $author->display_name ),
-            ],
+            "tsdMeta" => $tsd_meta,
             "posts" => $author_posts,
         ];
     }
