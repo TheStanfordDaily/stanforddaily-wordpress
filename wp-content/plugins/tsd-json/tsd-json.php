@@ -51,6 +51,11 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_author_posts',
         ]);
 
+        register_rest_route('tsd/json/v1', "/search/(?P<searchKeyword>[\S]+)/(?P<pageNumber>\d+)", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_search',
+        ]);
+
         register_rest_route('tsd/json/v1', "/nav", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_nav_info',
@@ -420,6 +425,37 @@ function tsd_json_plugin_enable_api() {
         return [
             "tsdMeta" => $tsd_meta,
             "posts" => $author_posts,
+        ];
+    }
+
+    function tsd_json_plugin_return_search( $request ) {
+        $page_number = (int) $request[ "pageNumber" ];
+        if ( $page_number <= 0 ) {
+            return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
+        }
+
+        $search_keyword = (string) $request[ "searchKeyword" ];
+        if ( empty( $search_keyword ) ) {
+            return new WP_Error( 'invalid_search', 'Cannot be empty.', [ 'status' => 404 ] );
+        }
+
+        $search_posts = tsd_json_plugin_get_processed_posts(
+            [
+                's' => urldecode( $search_keyword ),
+                'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
+                'paged' => $page_number,
+            ],
+            [
+                'include_category_info_for_each_post' => true,
+            ]
+        );
+
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
+        $tsd_meta = $head_and_footer;
+
+        return [
+            "tsdMeta" => $tsd_meta,
+            "posts" => $search_posts,
         ];
     }
 
