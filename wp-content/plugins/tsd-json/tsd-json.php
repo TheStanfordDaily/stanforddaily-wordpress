@@ -36,6 +36,11 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_post',
         ]);
 
+        register_rest_route('tsd/json/v1', "/postsId/(?P<postId>\d+)", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_post_by_id',
+        ]);
+
         register_rest_route('tsd/json/v1', "/page/(?P<pageSlug>[\S]+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_page',
@@ -313,6 +318,31 @@ function tsd_json_plugin_enable_api() {
                 'monthnum' => $month,
                 'day' => $day,
                 'name' => $slug,
+            ],
+            [
+                'include_post_content' => true,
+                'include_category_info_for_each_post' => true,
+            ]
+        );
+        if ( empty( $posts ) ) {
+            return new WP_Error( 'post_not_found', 'This post cannot be found.', [ 'status' => 404 ] );
+        }
+        if ( count( $posts ) > 1 ) {
+            return new WP_Error( 'more_than_one_post_found', 'It returns more than one post!', [ 'status' => 500 ] );
+        }
+
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
+        $posts[0][ "tsdMeta" ] = $head_and_footer;
+
+        return $posts[0];
+    }
+
+    function tsd_json_plugin_return_post_by_id( $request ) {
+        $id = (int) $request[ "postId" ];
+
+        $posts = tsd_json_plugin_get_processed_posts(
+            [
+                'p' => $id,
             ],
             [
                 'include_post_content' => true,
