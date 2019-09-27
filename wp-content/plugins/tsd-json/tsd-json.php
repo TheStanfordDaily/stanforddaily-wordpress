@@ -8,9 +8,9 @@
 * 1.0 (2019-09-01) - Created. (Yifei He)
 */
 
-// Since 1, 2, 3, 4, 6 are all factors of 12, it is best for the responsive layout.
-const MORE_FROM_DAILY_POST_PER_PAGE = 12;
-const MORE_FROM_DAILY_INITIAL_NUMBER_OF_PAGES = 3;
+// Since 1, 2, 3, 4, 6 are all factors of 24, it is best for the responsive layout.
+const MORE_FROM_DAILY_POST_PER_PAGE = 24;
+const MORE_FROM_DAILY_INITIAL_NUMBER_OF_PAGES = 1;
 
 // Custom WP API endpoint
 function tsd_json_plugin_enable_api() {
