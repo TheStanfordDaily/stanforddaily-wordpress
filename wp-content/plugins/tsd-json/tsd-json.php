@@ -244,6 +244,7 @@ function tsd_json_plugin_enable_api() {
 
         $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_home_more_from_the_daily( $sections );
 
+        // `[]` here is important so that we can get info for homepage instead of anything queried above.
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [] );
         $sections[ "tsdMeta" ] = $head_and_footer;
 
@@ -262,12 +263,18 @@ function tsd_json_plugin_enable_api() {
         return $more_from_the_daily;
     }
 
-    function tsd_json_plugin_get_wp_head_and_wp_footer( $query ) {
+    function tsd_json_plugin_get_wp_head_and_wp_footer( $query = null ) {
         // https://wordpress.stackexchange.com/q/185287/75147
         // https://stackoverflow.com/a/24766541/2603230
-        $page_to_load = new WP_Query( $query );
         global $wp_query;
-        $wp_query = $page_to_load;
+
+        if ( ! is_null( $query ) ) {
+            $page_to_load = new WP_Query( $query );
+            $wp_query = $page_to_load;
+        } else {
+            // If is null, we will use the previous `$wp_query`.
+        }
+
         the_post();
 
         ob_start();
@@ -314,9 +321,7 @@ function tsd_json_plugin_enable_api() {
             return new WP_Error( 'more_than_one_post_found', 'It returns more than one post!', [ 'status' => 500 ] );
         }
 
-        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
-            'p' => $posts[0]['id'],
-        ] );
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $posts[0][ "tsdMeta" ] = $head_and_footer;
 
         return $posts[0];
@@ -340,9 +345,7 @@ function tsd_json_plugin_enable_api() {
             return new WP_Error( 'more_than_one_page_found', 'It returns more than one page!', [ 'status' => 500 ] );
         }
 
-        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
-            'page_id' => $pages[0]['id'],
-        ] );
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $pages[0][ "tsdMeta" ] = $head_and_footer;
 
         return $pages[0];
@@ -376,9 +379,7 @@ function tsd_json_plugin_enable_api() {
             ],
         );
 
-        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
-            'cat' => $category->term_id,
-        ] );
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $tsd_meta = $head_and_footer;
         $tsd_meta[ "title" ] = html_entity_decode( $category->name );
 
@@ -412,9 +413,7 @@ function tsd_json_plugin_enable_api() {
             ]
         );
 
-        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [
-            'author' => $author->ID,
-        ] );
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $tsd_meta = $head_and_footer;
         $tsd_meta[ "name" ] = html_entity_decode( $author->display_name );
 
