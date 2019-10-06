@@ -195,6 +195,11 @@ function tsd_json_plugin_enable_api() {
                 if ( ! is_null( $category_info ) ) {
                     $post[ 'tsdPrimaryCategory' ] = $category_info;
                 }
+
+                $post[ 'tsdCategories' ] = [];
+                foreach ( $post[ 'postCategory' ] as $category_id ) {
+                    $post[ 'tsdCategories' ][] = tsd_json_plugin_get_category( get_category( $category_id ) );
+                }
             }
 
             $post_date = strtotime( $post_object->post_date );
