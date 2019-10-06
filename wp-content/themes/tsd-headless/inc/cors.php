@@ -17,7 +17,7 @@ add_action(
         add_filter(
             'rest_pre_serve_request',
             function ( $value ) {
-                header( 'Access-Control-Allow-Origin: ' . get_frontend_origin() );
+                header( 'Access-Control-Allow-Origin: *' );
                 header( 'Access-Control-Allow-Methods: GET' );
                 header( 'Access-Control-Allow-Credentials: true' );
                 return $value;
