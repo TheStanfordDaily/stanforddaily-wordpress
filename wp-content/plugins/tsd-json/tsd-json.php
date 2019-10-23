@@ -169,7 +169,7 @@ function tsd_json_plugin_enable_api() {
         foreach ( $post_objects as $post_object ) {
             $post = tsd_json_plugin_convert_keys_to_camelCase( $post_object->to_array() );
             $post[ 'postTitle' ] = html_entity_decode( apply_filters( 'the_title', $post[ 'postTitle' ] ) );
-            $post[ 'postExcerpt' ] = html_entity_decode( $post[ 'postExcerpt' ] );
+            $post[ 'postExcerpt' ] = html_entity_decode( get_the_excerpt( $post_object ) );
             if ( ! $options[ 'include_post_content' ] ) {
                 unset( $post[ 'postContent' ] );
                 unset( $post[ 'postContentFiltered' ] );
