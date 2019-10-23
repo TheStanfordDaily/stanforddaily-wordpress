@@ -76,7 +76,7 @@ function tsd_json_plugin_enable_api() {
     }
 
     // Returns an array of author.
-    function tsd_json_plugin_get_author_info( $post ) {
+    function tsd_json_plugin_get_author_info( $post, $include_author_description = false ) {
         $author_objects = [];
         if ( function_exists( 'get_coauthors' ) ) {
             $author_objects = get_coauthors( $post->ID );
@@ -86,12 +86,22 @@ function tsd_json_plugin_enable_api() {
 
         $authors = [];
         foreach ($author_objects as $author) {
-            $authors[] = [
+            $image_url = "https://www.stanforddaily.com/wp-content/themes/thestanforddaily/img/placeholder-avatar.png";
+            $image_id = get_user_meta( $author->ID, "tsd_profileImage", true );
+            if ( ! empty( $image_id ) ) {
+                $image_url = wp_get_attachment_image_src( $image_id, 'thumbnail' )[0];
+            }
+            $new_author = [
                 'id' => $author->ID,
                 'displayName' => html_entity_decode( $author->display_name ),
                 'userNicename' => $author->user_nicename,
                 'url' => wp_make_link_relative( get_author_posts_url( $author->ID ) ),
+                'avatarUrl' => $image_url,
             ];
+            if ($include_author_description) {
+                $new_author[ 'description' ] = html_entity_decode( get_the_author_meta( 'description', $author->ID ) );
+            }
+            $authors[] = $new_author;
         };
         return $authors;
     }
@@ -140,6 +150,7 @@ function tsd_json_plugin_enable_api() {
             'include_post_content' => false,
             'exclude_featured_category' => false,
             'include_category_info_for_each_post' => false,
+            'include_author_description' => false,
         );
         $options = wp_parse_args( $options, $defaults_options );
 
@@ -188,7 +199,7 @@ function tsd_json_plugin_enable_api() {
                 $post[ 'postSubtitle' ] = html_entity_decode( get_the_subtitle( $post_object, '', '', false ) );
             }
 
-            $post[ 'tsdAuthors' ] = tsd_json_plugin_get_author_info( $post_object );
+            $post[ 'tsdAuthors' ] = tsd_json_plugin_get_author_info( $post_object, $options[ 'include_author_description' ] );
 
             if ( $options[ 'include_category_info_for_each_post' ] ) {
                 $category_info = tsd_json_plugin_get_category_info( $post_object );
@@ -327,6 +338,7 @@ function tsd_json_plugin_enable_api() {
             [
                 'include_post_content' => true,
                 'include_category_info_for_each_post' => true,
+                'include_author_description' => true,
             ]
         );
         if ( empty( $posts ) ) {
