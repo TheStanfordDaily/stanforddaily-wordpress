@@ -86,24 +86,28 @@ function tsd_json_plugin_enable_api() {
 
         $authors = [];
         foreach ($author_objects as $author) {
-            $image_url = "https://www.stanforddaily.com/wp-content/themes/thestanforddaily/img/placeholder-avatar.png";
-            $image_id = get_user_meta( $author->ID, "tsd_profileImage", true );
-            if ( ! empty( $image_id ) ) {
-                $image_url = wp_get_attachment_image_src( $image_id, 'thumbnail' )[0];
-            }
-            $new_author = [
-                'id' => $author->ID,
-                'displayName' => html_entity_decode( $author->display_name ),
-                'userNicename' => $author->user_nicename,
-                'url' => wp_make_link_relative( get_author_posts_url( $author->ID ) ),
-                'avatarUrl' => $image_url,
-            ];
-            if ($include_author_description) {
-                $new_author[ 'description' ] = html_entity_decode( get_the_author_meta( 'description', $author->ID ) );
-            }
-            $authors[] = $new_author;
+            $authors[] = tsd_json_plugin_get_indiv_author_info( $author, $include_author_description );
         };
         return $authors;
+    }
+
+    function tsd_json_plugin_get_indiv_author_info( $author, $include_author_description ) {
+        $image_url = "https://www.stanforddaily.com/wp-content/themes/thestanforddaily/img/placeholder-avatar.png";
+        $image_id = get_user_meta( $author->ID, "tsd_profileImage", true );
+        if ( ! empty( $image_id ) ) {
+            $image_url = wp_get_attachment_image_src( $image_id, 'thumbnail' )[0];
+        }
+        $new_author = [
+            'id' => $author->ID,
+            'displayName' => html_entity_decode( $author->display_name ),
+            'userNicename' => $author->user_nicename,
+            'url' => wp_make_link_relative( get_author_posts_url( $author->ID ) ),
+            'avatarUrl' => $image_url,
+        ];
+        if ($include_author_description) {
+            $new_author[ 'description' ] = html_entity_decode( get_the_author_meta( 'description', $author->ID ) );
+        }
+        return $new_author;
     }
 
     function tsd_json_plugin_get_category( $category ) {
@@ -467,7 +471,7 @@ function tsd_json_plugin_enable_api() {
 
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $tsd_meta = $head_and_footer;
-        $tsd_meta[ "name" ] = html_entity_decode( $author->display_name );
+        $tsd_meta[ "author" ] = tsd_json_plugin_get_indiv_author_info( $author, true );
 
         return [
             "tsdMeta" => $tsd_meta,
