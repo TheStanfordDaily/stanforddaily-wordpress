@@ -316,11 +316,11 @@ function tsd_json_plugin_enable_api() {
         the_post();
 
         ob_start();
-        get_header();
+        get_header( 'headonly' );
         $head = ob_get_clean();
 
         ob_start();
-        get_footer();
+        get_footer( 'footeronly' );
         $footer = ob_get_clean();
 
         wp_reset_query();
