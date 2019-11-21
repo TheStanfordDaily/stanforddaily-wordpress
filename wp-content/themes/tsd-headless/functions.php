@@ -32,6 +32,13 @@ require_once 'inc/acf-options.php';
 // Add GraphQL resolvers.
 require_once 'inc/graphql/resolvers.php';
 
+function tsd_rest_url( $url, $path, $blog_id, $scheme ) {
+	// We have to use site_url (WordPress URL) for the REST API
+	// else it will call www.stanforddaily.com/wp-json which causes some CORS problems.
+    return get_site_url() . substr( $url, strlen( get_home_url() ) );
+}
+add_filter( 'rest_url', 'tsd_rest_url', 10, 4 );
+
 if ( ! function_exists( 'tsd_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
