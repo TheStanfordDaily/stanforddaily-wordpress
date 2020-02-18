@@ -198,19 +198,3 @@ function tsd_custom_default_gravatar( $avatar_defaults ) {
 	return $avatar_defaults;
 }
 add_filter( 'avatar_defaults', 'tsd_custom_default_gravatar' );
-
-/**
- * Customize the preview button in the WordPress admin to point to the headless client.
- * (from https://medium.com/kata-engineering/headless-wordpress-next-js-what-we-learned-c10abdf80f6a)
- * @param  str $link The WordPress preview link.
- * @return str The headless WordPress preview link.
- */
-function tsd_set_headless_preview_link( $link ) {
-	return get_site_url()
-		. '/_preview/'
-		. get_the_ID() . '/'
-		. wp_create_nonce( 'wp_rest' );
-}
-
-add_filter( 'preview_post_link', 'tsd_set_headless_preview_link' );
-
