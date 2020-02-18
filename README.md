@@ -7,50 +7,16 @@ This is the Stanford Daily website. See it live at https://www.stanforddaily.com
 
 ## Local setup
 ### Installation
-Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-
-Download [Vagrant](https://www.vagrantup.com/downloads.html)
-
-Then run the following commands to install some necessary vagrant plugins:
-```bash
-vagrant plugin install vagrant-hostmanager
-vagrant plugin install vagrant-triggers
-vagrant plugin install vagrant-hostsupdater
-```
+First, install `docker` and `docker-compose`. Make sure the Docker daemon is running.
 
 ### Run
-First, download the database dump (`.sql`) file and put it into the `wp-vagrant/` folder.
+Then run
 
-Then, run this command from the cloned `stanforddaily-website/` folder to start the local server: (If you are on Mac, you may need to enter in your password during this step.)
-```bash
-vagrant up
+```
+docker-compose up
 ```
 
-Open http://localhost.stanforddaily.com/ on your computer.
-
-To sign in to the admin, go to http://localhost.stanforddaily.com/wp-admin/ and sign in with username *root* and password *root*.
-
-To shutdown the local server, run:
-```bash
-vagrant halt
-```
-
-### Re-setup
-Normally, when you shutdown the local server using `vagrant halt`, all data in your local database (e.g., if you posted a new article on your local website) will *not* be lost the next time you `vagrant up`.
-
-However, if you wish to restart from a `.sql` file, you can run:
-```bash
-vagrant up # Vagrant needs first to be up and running
-vagrant destroy # Current database will be exported to `wp-vagrant/db_dumps/`
-# Put your `.sql` file inside `wp-vagrant/`
-vagrant up
-```
-
-### More info on setup
-Taken from https://github.com/digitalquery/wp-vagrant
-
-### Alternative ways to setup
-https://github.com/TheStanfordDaily/stanforddaily-website/wiki/Setting-up-the-Stanford-Daily-website-on-your-Mac-or-Windows-using-Local-by-Flywheel
+Finally, open http://localhost:8000 in your computer.
 
 
 ## Theme Development
