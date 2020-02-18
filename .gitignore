@@ -77,3 +77,5 @@ wp-content/mysql.sql
 .vagrant
 wp-content/debug.log
 wp-vagrant/**/*.sql
+
+wp-content/themes/twenty*
