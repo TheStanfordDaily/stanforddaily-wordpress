@@ -51,7 +51,7 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_category_posts',
         ]);
 
-        register_rest_route('tsd/json/v1', "/category/(?P<tagSlugs>[\S]+)/(?P<pageNumber>\d+)", [
+        register_rest_route('tsd/json/v1', "/tag/(?P<tagSlugs>[\S]+)/(?P<pageNumber>\d+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_tag_posts',
         ]);
