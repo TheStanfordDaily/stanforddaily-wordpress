@@ -51,6 +51,11 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_category_posts',
         ]);
 
+        register_rest_route('tsd/json/v1', "/category/(?P<tagSlugs>[\S]+)/(?P<pageNumber>\d+)", [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_tag_posts',
+        ]);
+
         register_rest_route('tsd/json/v1', "/author/(?P<authorSlug>[\w-]+)/(?P<pageNumber>\d+)", [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_author_posts',
@@ -452,6 +457,32 @@ function tsd_json_plugin_enable_api() {
         return [
             "tsdMeta" => $tsd_meta,
             "posts" => $category_posts,
+        ];
+    }
+
+    function tsd_json_plugin_return_tag_posts( $request ) {
+        $page_number = (int) $request[ "pageNumber" ];
+        if ( $page_number <= 0 ) {
+            return new WP_Error( 'invalid_page_number', 'Page number start from 1.', [ 'status' => 404 ] );
+        }
+
+        $tag_slugs = $request[ "tagSlugs" ];
+
+        $tag_posts = tsd_json_plugin_get_processed_posts(
+            [
+                'tag' => $tag_slugs,
+                'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
+                'paged' => $page_number,
+            ],
+        );
+
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
+        $tsd_meta = $head_and_footer;
+        $tsd_meta[ "title" ] = html_entity_decode( $tag->name );
+
+        return [
+            "tsdMeta" => $tsd_meta,
+            "posts" => $tag_posts,
         ];
     }
 
