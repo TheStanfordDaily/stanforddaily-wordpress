@@ -16,8 +16,9 @@ Then run
 docker-compose up
 ```
 
-Finally, open http://localhost:8000 in your computer.
+Finally, open http://localhost:8000/wp-admin/ in your computer.
 
+You can log in with username `root` and password `root`.
 
 ## Theme Development
 See https://github.com/TheStanfordDaily/tsd-wp-theme/.
