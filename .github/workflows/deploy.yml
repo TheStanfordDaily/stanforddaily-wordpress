@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: webfactory/ssh-agent
+      uses: webfactory/ssh-agent@v0.2.0
+      with:
+        ssh-private-key: ${{ secrets.WPENGINE_SSH_PRIVATE_KEY }}  
+    - run: docker-compose up
+    - run: npm ci
+      working-directory: test
+    - run: npm test
+      working-directory: test
+    - run: git push git@git.wpengine.com:staging/stanforddaily2.git master
+    - run: git push git@git.wpengine.com:production/stanforddaily2.git master
