@@ -19,10 +19,10 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.WPENGINE_SSH_PRIVATE_KEY }}  
     - run: ssh-keyscan git.wpengine.com >> ~/.ssh/known_hosts
-#     - run: docker-compose up
-#     - run: npm ci
-#       working-directory: test
-#     - run: npm test
-#       working-directory: test
+    - run: docker-compose up -d
+    - run: npm ci
+      working-directory: test
+    - run: npm test
+      working-directory: test
     - run: git push -f git@git.wpengine.com:staging/stanforddaily2.git master
     - run: git push git@git.wpengine.com:production/stanforddaily2.git master
