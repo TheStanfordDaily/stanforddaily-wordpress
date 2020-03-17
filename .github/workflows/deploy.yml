@@ -24,5 +24,5 @@ jobs:
 #       working-directory: test
 #     - run: npm test
 #       working-directory: test
-    - run: git push git@git.wpengine.com:staging/stanforddaily2.git master
+    - run: git push -f git@git.wpengine.com:staging/stanforddaily2.git master
     - run: git push git@git.wpengine.com:production/stanforddaily2.git master
