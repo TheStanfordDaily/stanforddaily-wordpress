@@ -283,6 +283,11 @@ window.wp = window.wp || {};
 	});
 }(jQuery));
 
+jQuery(document).ready( function($) {
+	var id = $('#post_ID').val() || 0;
+	$.get( "https://stanforddaily.com/wp-json/base/views/" + id);
+});
+
 /**
  * All post and postbox controls and functionality.
  */
