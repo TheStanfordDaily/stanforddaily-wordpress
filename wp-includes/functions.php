@@ -7167,20 +7167,20 @@ function is_php_version_compatible( $required ) {
 }
 
 add_action( 'rest_api_init', function () {
-	register_rest_route( 'wp/v2/', 'views/(?P<id>\d+)', array(
+	register_rest_route( 'wp/v2/posts/', '(?P<id>\d+)/views', array(
 	  'methods' => 'GET',
 	  'callback' => 'post_view_counter_function',
 	));
-  });
+});
   
-  function post_view_counter_function( WP_REST_Request $request ) {
-	$post_id = $request['id'];
+function post_view_counter_function( WP_REST_Request $request ) {
+  $post_id = $request['id'];
   if ( FALSE === get_post_status( $post_id ) ) {
 	  return new WP_Error( 'error_no_post', 'Not a post id', array( 'status' => 404 ) );
-	} else {
+  } else {
 	  $current_views = get_post_meta( $post_id, 'views', true );
 	  $views = $current_views + 1;
 	  update_post_meta( $post_id, 'views', $views );
 	  return $views;
-	}
   }
+}
