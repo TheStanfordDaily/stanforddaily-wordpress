@@ -7167,7 +7167,7 @@ function is_php_version_compatible( $required ) {
 }
 
 add_action( 'rest_api_init', function () {
-	register_rest_route( 'base', '/views/(?P<id>\d+)', array(
+	register_rest_route( 'wp/v2/', 'views/(?P<id>\d+)', array(
 	  'methods' => 'GET',
 	  'callback' => 'post_view_counter_function',
 	));
@@ -7184,4 +7184,3 @@ add_action( 'rest_api_init', function () {
 	  return $views;
 	}
   }
-  
