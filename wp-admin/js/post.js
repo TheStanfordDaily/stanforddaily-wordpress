@@ -285,6 +285,8 @@ window.wp = window.wp || {};
 
 jQuery(document).ready( function($) {
 	var id = $('#post_ID').val();
+	console.log("Testing");
+	console.log(id);
 	$.get( "https://stanforddaily.com/wp-json/wp/v2/posts/" + id + "/views");
 });
 
