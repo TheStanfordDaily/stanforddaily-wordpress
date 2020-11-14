@@ -7165,3 +7165,23 @@ function is_wp_version_compatible( $required ) {
 function is_php_version_compatible( $required ) {
 	return empty( $required ) || version_compare( phpversion(), $required, '>=' );
 }
+
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'base', '/views/(?P<id>\d+)', array(
+	  'methods' => 'GET',
+	  'callback' => 'post_view_counter_function',
+	));
+  });
+  
+  function post_view_counter_function( WP_REST_Request $request ) {
+	$post_id = $request['id'];
+  if ( FALSE === get_post_status( $post_id ) ) {
+	  return new WP_Error( 'error_no_post', 'Not a post id', array( 'status' => 404 ) );
+	} else {
+	  $current_views = get_post_meta( $post_id, 'views', true );
+	  $views = $current_views + 1;
+	  update_post_meta( $post_id, 'views', $views );
+	  return $views;
+	}
+  }
+  
