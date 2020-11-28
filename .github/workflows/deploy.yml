@@ -27,5 +27,4 @@ jobs:
 #     - run: npm test
 #       working-directory: test
     - run: git push -f git@git.wpengine.com:staging/stanforddaily2.git main
-    - run: git pull git@git.wpengine.com:production/stanforddaily2.git main
-    - run: git push git@git.wpengine.com:production/stanforddaily2.git main
+    - run: git push -f git@git.wpengine.com:production/stanforddaily2.git main
