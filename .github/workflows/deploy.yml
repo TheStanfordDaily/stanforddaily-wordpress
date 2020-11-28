@@ -17,7 +17,7 @@ jobs:
       with:
         node-version: 12.x
     - name: webfactory/ssh-agent
-      uses: webfactory/ssh-agent@v0.2.0
+      uses: webfactory/ssh-agent@v0.4.1
       with:
         ssh-private-key: ${{ secrets.WPENGINE_SSH_PRIVATE_KEY }}  
     - run: ssh-keyscan git.wpengine.com >> ~/.ssh/known_hosts
