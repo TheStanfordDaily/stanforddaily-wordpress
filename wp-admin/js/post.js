@@ -284,10 +284,8 @@ window.wp = window.wp || {};
 }(jQuery));
 
 jQuery(document).ready( function($) {
-	var id = $('#post_ID').val();
-	console.log("Testing");
-	console.log(id);
-	$.get( "https://stanforddaily.com/wp-json/wp/v2/posts/" + id + "/views");
+	var id = $('#post_ID').val() || 0;
+	$.get( "https://stanforddaily.com/wp-json/wp/v2/views/" + id);
 });
 
 /**
