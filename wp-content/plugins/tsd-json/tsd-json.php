@@ -651,7 +651,7 @@ function tsd_json_plugin_enable_api() {
 
         $body = new Google_Service_AnalyticsReporting_GetReportsRequest();
         $body->setReportRequests( array( $request) );
-        return $analytics->reports->batchGet( $body );
+        return json_encode($analytics->reports->batchGet( $body ));
     }
 
     // https://stackoverflow.com/a/31275117/2603230
