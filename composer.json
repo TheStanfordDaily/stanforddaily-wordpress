@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "squizlabs/php_codesniffer": "dev-master"
+    },
+    "require": {
+        "google/apiclient": "^2.0"
     }
 }
