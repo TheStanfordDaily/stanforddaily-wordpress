@@ -614,7 +614,7 @@ function tsd_json_plugin_enable_api() {
 
         // Create and configure a new client object.
         $client = new Google_Client();
-        return 1;
+        return 2;
         $client->setApplicationName("Hello Analytics Reporting");
         $client->setAuthConfig($KEY_FILE_LOCATION);
         $client->setScopes(['https://www.googleapis.com/auth/analytics.readonly']);
