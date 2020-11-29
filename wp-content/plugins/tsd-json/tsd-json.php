@@ -609,6 +609,8 @@ function tsd_json_plugin_enable_api() {
     }
 
     function tsd_json_plugin_return_most_viewed_posts() {
+        
+        return 1;
 
         $KEY_FILE_LOCATION = __DIR__ . '/MostPopularTsdPosts-71f9eba5b57a.json';
 
