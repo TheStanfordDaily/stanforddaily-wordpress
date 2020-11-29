@@ -70,6 +70,11 @@ function tsd_json_plugin_enable_api() {
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_nav_info',
         ]);
+
+        register_rest_route( 'tsd/json/v1', "/most-viewed", [
+              'methods' => 'GET',
+              'callback' => 'tsd_json_plugin_return_most_viewed_posts',
+        ]);
     });
 
     function tsd_json_plugin_query_not_featured_posts( $query ) {
@@ -448,8 +453,7 @@ function tsd_json_plugin_enable_api() {
                 'cat' => $category->term_id,
                 'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
                 'paged' => $page_number,
-            ],
-        );
+            ]);
 
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $tsd_meta = $head_and_footer;
@@ -474,8 +478,7 @@ function tsd_json_plugin_enable_api() {
                 'tag' => $tag_slugs,
                 'posts_per_page' => MORE_FROM_DAILY_POST_PER_PAGE,
                 'paged' => $page_number,
-            ],
-        );
+            ]);
 
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer();
         $tsd_meta = $head_and_footer;
@@ -605,17 +608,63 @@ function tsd_json_plugin_enable_api() {
         ], JSON_FORCE_OBJECT));
     }
 
+    function tsd_json_plugin_return_most_viewed_posts() {
+
+        $KEY_FILE_LOCATION = __DIR__ . '/MostPopularTsdPosts-71f9eba5b57a.json';
+
+        // Create and configure a new client object.
+        $client = new Google_Client();
+        $client->setApplicationName("Hello Analytics Reporting");
+        $client->setAuthConfig($KEY_FILE_LOCATION);
+        $client->setScopes(['https://www.googleapis.com/auth/analytics.readonly']);
+        $analytics = new Google_Service_AnalyticsReporting($client);
+
+        $VIEW_ID = "11659658";
+
+        // Create the DateRange object.
+        $dateRange = new Google_Service_AnalyticsReporting_DateRange();
+        $dateRange->setStartDate("7daysAgo");
+        $dateRange->setEndDate("today");
+
+        // Create the Metrics object.
+        $pageViews = new Google_Service_AnalyticsReporting_Metric();
+        $pageViews->setExpression("ga:uniquePageviews");
+        $pageViews->setAlias("pageviews");
+
+        // Create the Dimensions object.
+        $pagePathDimension = new Google_Service_AnalyticsReporting_Dimension();
+        $pagePathDimension->setName("ga:pagepath");
+
+        // Create the Ordering.
+        $ordering = new Google_Service_AnalyticsReporting_OrderBy();
+        $ordering->setOrderType("VALUE");
+        $ordering->setSortOrder("DESCENDING");
+        $ordering->setFieldName("ga:uniquePageviews");
+        
+        // Create the ReportRequest object.
+        $request = new Google_Service_AnalyticsReporting_ReportRequest();
+        $request->setViewId($VIEW_ID);
+        $request->setDateRanges($dateRange);
+        $request->setDimensions($pagePathDimension);
+        $request->setOrderBys($ordering);
+        $request->setMetrics(array($pageViews));
+
+        $body = new Google_Service_AnalyticsReporting_GetReportsRequest();
+        $body->setReportRequests( array( $request) );
+        return $analytics->reports->batchGet( $body );
+    }
+
     // https://stackoverflow.com/a/31275117/2603230
     function tsd_json_plugin_convert_keys_to_camelCase( $input ) {
-    $arr = [];
-    foreach ( $input as $key => $value ) {
-        $key = lcfirst( implode( '', array_map( 'ucfirst', explode( '_', strtolower( $key ) ) ) ) );
-        if ( is_array($value) ) {
-            $value = tsd_json_plugin_convert_keys_to_camelCase( $value );
+        $arr = [];
+        foreach ( $input as $key => $value ) {
+            $key = lcfirst( implode( '', array_map( 'ucfirst', explode( '_', strtolower( $key ) ) ) ) );
+            if ( is_array($value) ) {
+                $value = tsd_json_plugin_convert_keys_to_camelCase( $value );
+            }
+            $arr[$key] = $value;
         }
-        $arr[$key] = $value;
+        return $arr;
     }
-    return $arr;
-}
 }
 add_action('init', 'tsd_json_plugin_enable_api');
