@@ -25,6 +25,11 @@ function tsd_json_plugin_enable_api() {
             'callback' => 'tsd_json_plugin_return_home',
         ]);
 
+        register_rest_route('tsd/json/v1', '/home-mobile', [
+            'methods' => 'GET',
+            'callback' => 'tsd_json_plugin_return_home_mobile',
+        ]);
+
         register_rest_route('tsd/json/v1', '/home/more/(?P<extraPageNumber>\d+)', [
             'methods' => 'GET',
             'callback' => 'tsd_json_plugin_return_home_more',
@@ -248,9 +253,22 @@ function tsd_json_plugin_enable_api() {
         $sections[ 'opinions' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'opinions', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
         $sections[ 'theGrind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
         $sections[ 'artsAndLife' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
-        $sections[ 'cartoons' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'cartoons', 'posts_per_page' => 1 ], [] );
+        $sections[ 'cartoons' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'cartoons', 'posts_per_page' => 1 ], [ 'exclude_featured_category' => true ] );
         // $sections[ 'sponsored' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'sponsored', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true, 'include_category_info_for_each_post' => true ] );
         $sections[ 'satire' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'satire', 'posts_per_page' => 4 ], [ 'exclude_featured_category' => true ] );
+        return $sections;
+    }
+
+    function tsd_json_plugin_get_home_mobile_sections() {
+        $sections = [];
+        $sections[ 'featured' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'featured', 'posts_per_page' => 3 ] );
+        $sections[ 'news' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'NEWS', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'sports' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'SPORTS', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'opinions' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'opinions', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'theGrind' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'thegrind', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'artsAndLife' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'arts-life', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'cartoons' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'cartoons', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
+        $sections[ 'satire' ] = tsd_json_plugin_get_processed_posts( [ 'category_name' => 'satire', 'posts_per_page' => 6 ], [ 'exclude_featured_category' => true ] );
         return $sections;
     }
 
@@ -285,6 +303,25 @@ function tsd_json_plugin_enable_api() {
         $sections = tsd_json_plugin_get_home_sections();
 
         $sections[ 'moreFromTheDaily' ] = tsd_json_plugin_get_home_more_from_the_daily( $sections );
+
+        // `[]` here is important so that we can get info for homepage instead of anything queried above.
+        $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [] );
+        $sections[ "tsdMeta" ] = $head_and_footer;
+        $sections[ "tsdMeta" ][ "categories" ] = tsd_json_plugin_get_categories_from_category_slugs( [
+            'featured',
+            'NEWS',
+            'SPORTS',
+            'opinions',
+            'arts-life',
+            'thegrind',
+            'cartoons',
+        ], true );
+
+        return $sections;
+    }
+
+    function tsd_json_plugin_return_home_mobile() {
+        $sections = tsd_json_plugin_get_home_mobile_sections();
 
         // `[]` here is important so that we can get info for homepage instead of anything queried above.
         $head_and_footer = tsd_json_plugin_get_wp_head_and_wp_footer( [] );
