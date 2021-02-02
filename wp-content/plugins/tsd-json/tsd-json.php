@@ -645,64 +645,64 @@ function tsd_json_plugin_enable_api() {
         ], JSON_FORCE_OBJECT));
     }
 
-    function tsd_json_plugin_return_most_viewed_posts() {
+    //function tsd_json_plugin_return_most_viewed_posts() {
 
-        $KEY_FILE_LOCATION = __DIR__ . '/MostPopularTsdPosts-71f9eba5b57a.json';
+    //     $KEY_FILE_LOCATION = __DIR__ . '/MostPopularTsdPosts-71f9eba5b57a.json';
 
-        // Create and configure a new client object.
-        $client = new Google_Client();
-        return 1;
-        $client->setApplicationName("Hello Analytics Reporting");
-        $client->setAuthConfig($KEY_FILE_LOCATION);
-        $client->setScopes(['https://www.googleapis.com/auth/analytics.readonly']);
-        $analytics = new Google_Service_AnalyticsReporting($client);
+    //     // Create and configure a new client object.
+    //     $client = new Google_Client();
+    //     return 1;
+    //     $client->setApplicationName("Hello Analytics Reporting");
+    //     $client->setAuthConfig($KEY_FILE_LOCATION);
+    //     $client->setScopes(['https://www.googleapis.com/auth/analytics.readonly']);
+    //     $analytics = new Google_Service_AnalyticsReporting($client);
 
-        $VIEW_ID = "11659658";
+    //     $VIEW_ID = "11659658";
 
-        // Create the DateRange object.
-        $dateRange = new Google_Service_AnalyticsReporting_DateRange();
-        $dateRange->setStartDate("7daysAgo");
-        $dateRange->setEndDate("today");
+    //     // Create the DateRange object.
+    //     $dateRange = new Google_Service_AnalyticsReporting_DateRange();
+    //     $dateRange->setStartDate("7daysAgo");
+    //     $dateRange->setEndDate("today");
 
-        // Create the Metrics object.
-        $pageViews = new Google_Service_AnalyticsReporting_Metric();
-        $pageViews->setExpression("ga:uniquePageviews");
-        $pageViews->setAlias("pageviews");
+    //     // Create the Metrics object.
+    //     $pageViews = new Google_Service_AnalyticsReporting_Metric();
+    //     $pageViews->setExpression("ga:uniquePageviews");
+    //     $pageViews->setAlias("pageviews");
 
-        // Create the Dimensions object.
-        $pagePathDimension = new Google_Service_AnalyticsReporting_Dimension();
-        $pagePathDimension->setName("ga:pagepath");
+    //     // Create the Dimensions object.
+    //     $pagePathDimension = new Google_Service_AnalyticsReporting_Dimension();
+    //     $pagePathDimension->setName("ga:pagepath");
 
-        // Create the Ordering.
-        $ordering = new Google_Service_AnalyticsReporting_OrderBy();
-        $ordering->setOrderType("VALUE");
-        $ordering->setSortOrder("DESCENDING");
-        $ordering->setFieldName("ga:uniquePageviews");
+    //     // Create the Ordering.
+    //     $ordering = new Google_Service_AnalyticsReporting_OrderBy();
+    //     $ordering->setOrderType("VALUE");
+    //     $ordering->setSortOrder("DESCENDING");
+    //     $ordering->setFieldName("ga:uniquePageviews");
         
-        // Create the ReportRequest object.
-        $request = new Google_Service_AnalyticsReporting_ReportRequest();
-        $request->setViewId($VIEW_ID);
-        $request->setDateRanges($dateRange);
-        $request->setDimensions($pagePathDimension);
-        $request->setOrderBys($ordering);
-        $request->setMetrics(array($pageViews));
+    //     // Create the ReportRequest object.
+    //     $request = new Google_Service_AnalyticsReporting_ReportRequest();
+    //     $request->setViewId($VIEW_ID);
+    //     $request->setDateRanges($dateRange);
+    //     $request->setDimensions($pagePathDimension);
+    //     $request->setOrderBys($ordering);
+    //     $request->setMetrics(array($pageViews));
 
-        $body = new Google_Service_AnalyticsReporting_GetReportsRequest();
-        $body->setReportRequests( array( $request) );
-        return json_encode($analytics->reports->batchGet( $body ));
-    }
+    //     $body = new Google_Service_AnalyticsReporting_GetReportsRequest();
+    //     $body->setReportRequests( array( $request) );
+    //     return json_encode($analytics->reports->batchGet( $body ));
+    // }
 
-    // https://stackoverflow.com/a/31275117/2603230
-    function tsd_json_plugin_convert_keys_to_camelCase( $input ) {
-        $arr = [];
-        foreach ( $input as $key => $value ) {
-            $key = lcfirst( implode( '', array_map( 'ucfirst', explode( '_', strtolower( $key ) ) ) ) );
-            if ( is_array($value) ) {
-                $value = tsd_json_plugin_convert_keys_to_camelCase( $value );
-            }
-            $arr[$key] = $value;
-        }
-        return $arr;
-    }
+    // // https://stackoverflow.com/a/31275117/2603230
+    // function tsd_json_plugin_convert_keys_to_camelCase( $input ) {
+    //     $arr = [];
+    //     foreach ( $input as $key => $value ) {
+    //         $key = lcfirst( implode( '', array_map( 'ucfirst', explode( '_', strtolower( $key ) ) ) ) );
+    //         if ( is_array($value) ) {
+    //             $value = tsd_json_plugin_convert_keys_to_camelCase( $value );
+    //         }
+    //         $arr[$key] = $value;
+    //     }
+    //     return $arr;
+    //}
 }
 add_action('init', 'tsd_json_plugin_enable_api');
