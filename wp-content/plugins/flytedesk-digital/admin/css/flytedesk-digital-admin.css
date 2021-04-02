@@ -1,0 +1,26 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+input.flytedesk-uuid-input {
+	margin-bottom: 10px;
+	margin-right: 20px;
+	width: 36ch;
+	display: inline-block;
+}
+
+.flytedesk-wrap {
+	width: 500px;
+	margin: 10px;
+}
+
+.flytedesk-settings {
+	width:100%;
+	margin: 10px;
+}
+
+.flytedesk-logo {
+	max-width: 400px;
+	margin: auto;
+}
