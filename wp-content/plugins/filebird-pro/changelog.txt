@@ -1,0 +1,417 @@
+May 26, 2021 - Version 4.7.3
+
+- Added: Support Dokan plugin
+- Improved: FileBird UI in Mobile
+- Improved: Library
+- Improved: Translations, update POT file
+- Fixed: Auto Update function conflict with plugins and themes
+- Fixed: Image validation for ACF plugin
+- Fixed: Counter wrong in Elementor Pro
+- Fixed: Gutenberg issues (Wrong tag in frontend, Large images chosen when create gallery)
+- Fixed: Missing language "NL"
+- Fixed: RestAPI (404 Error)
+- Fixed: WPML/Polylang Full Compatible modes in Setting Media, support "All languages in admin bar", wrong Counter
+
+Apr 7, 2021 - Version 4.7.2
+- Added: Upload multiple images in multiple folders when upload processing
+- Fixed: Can't set folder Uncategorized as default in folder load
+- Fixed: Append right folder
+- Fixed: Update database make folders duplicated when "Each user folder mode" enabled
+- Improved: Tooltip
+- Improved: UI
+- Improved: Activation 
+- Optimized: Filebird Zip Size
+
+Mar 30, 2021 - Version 4.7
+- Added: New Resize bar
+- Added: Support PHP 8 and greater
+- Added: Support Tatsu Builder
+- Improved: Performance
+- Improved: Optimize code
+- Improved: UI
+- Improved: Text
+- Fixed: Counter in WPML
+- Fixed: Tooltip bugs
+- Fixed: Can't set "Uncategorized" default folder load
+- Fixed: Reorder on Edit gallery
+- Fixed: Small bugs
+
+Mar 12, 2021 - Version 4.6
+- Added: Set auto sorting for files
+- Added: Auto updates via Envato login
+- Added: Sync Gutenberg gallery 
+- Updated: Pot files
+
+Jan 18, 2021 - Version 4.4
+- Added: Download folder feature
+- Improved: Performance
+- Fixed: Duplicate folder when import
+- Fixed: Folder tree scroll
+
+Jan 4, 2021 - Version 4.3.2
+- Fixed: Drag and drop on Tablet
+- Fixed: Edit Gallery
+- Fixed: Set over the max number of AttachmentID 
+- Fixed: FileBird Gallery selector in Gutenberg
+- Fixed: CSS conflict with Shortpixel plugin
+- Removed: Drag and drop on Mobile
+
+Dec 21, 2020 - Version 4.3.1
+- Added: Support shortcode for Document Gallery
+- Added: API - Get folder detail by folder_id
+- Fixed: Modal append (Conflict with Yoast SEO)
+- Fixed: Conflict with Uncode theme
+- Fixed: Not loading media when uploaded by different modal in Elementor
+- Fixed: Reset file selection when move file in Bulk Select mode
+
+Dec 14, 2020 - Version 4.3
+- Added: ESC key to exist Bulk select mode
+- Fixed: Missing folder container
+- Fixed: Security
+- Fixed: SQL
+- Fixed: Uploading new image can't be inserted to a post in modal
+- Fixed: Prevent reload attachments when sorting folders 
+- Improved: Alert text
+- Improved: Icon size and default folders with long names in some languages
+
+Nov 25, 2020 - Version 4.2
+- Added: Set previous folder selected as default folder 
+- Added: Compatible with Oxygen Builder
+- Fixed: ACF warning
+- Fixed: Conflict with WPML rest API
+- Fixed: CSS conflict with The Grid plugin
+- Improved: Prevent warning when upload folder containing desktop.ini or .DS_Store file
+
+Oct 27, 2020 - Version 4.1
+- Added: Set default folder to open
+- Added: New APIs
+- Added: Support ACF
+- Improved: Notice of creating the first folder
+- Removed: Folder selector when no item available in modal popup
+- Fixed: Some bugs in folder container
+
+Sep 16, 2020 - Version 4.0.7
+- Added: User can use API to create folders
+- Improved: Cut/Paste function
+- Fixed: Counter with Polylang
+- Fixed: Import function
+- Fixed: Counter in import message
+
+Aug 26, 2020 - Version 4.0.6
+- Added: Compatible with Cornerstone Page Builder (From X Theme)
+- Fixed: Browser security issue with Microsoft Edge, Firefox
+- Fixed: Conflict jQuery-UI with ACF plugin
+- Fixed: Can't create table 'fbv_attachment_folder'
+- Fixed: Screen Option hidden in Media Upload
+
+Aug 11, 2020 – Version 4.0.5
+- Fixed: Cache issues
+- Fixed: Mobile view
+- Fixed: Compatible with The7 theme
+- Fixed: Improve performance on modal
+- Fixed: Upload bugs
+- Fixed: Count on parent folder
+- Fixed: Small bugs
+
+Aug 01, 2020 – Version 4.0.4
+- Improved: Notifications
+- Improved: Keep old folders from 4.0 version after update database
+- Improved: Performance
+
+Jul 28, 2020 – Version 4.0.3
+- Added: Gutenberg block
+- Improved: Update FileBird database
+- Improved: UI/UX
+
+Jul 27, 2020 – Version 4.0.2
+- Fixed: Update FileBird database
+- Fixed: Bulk delete folders
+- Fixed: Some small bugs
+
+Jul 23, 2020 – Version 4.0.1
+- Fixed: Auto import folders from old version
+
+Jul 22, 2020 – Version 4.0
+- Added: New designs
+- Added: Use new technology
+- Added: Smooth performance for unlimited folders and large numbers of files
+- Added: REST API for developers
+- Added: Sort files by Name, Date, Modified, Author
+- Added: Bulk select folders
+- Added: Bulk delete folders
+- Added: Wipe old data
+- Added: Clean all data
+- Added: Import from Media Library Assistant
+- Added: Import from WP Media Folder by JoomUnited
+- Added: Support Brizy builder
+- Added: Support Fusion builder
+- Added: Compatible with KnowherePro theme
+- Improved: Switchers
+- Improved: Text and Popups
+- Improved: Documentation
+- Fixed: Special characters in folder name
+- Fixed: Auto detect site width
+- Fixed: SQL syntax errors
+- Fixed: Bugs in list view
+- Fixed: Duplicate queries
+- Fixed: Bugs with WPML
+- Fixed: Small bugs
+
+Mar 6, 2020 - Version 3.9
+- Added: Support Thrive Architect
+- Added: Language files for Taiwan 
+- Fixed: Some bugs
+
+Mar 2, 2020 – Version 3.8.2
+- Fixed: List view order item bug 
+- Fixed: WPML bug
+
+Feb 23, 2020 – Version 3.8.1
+- Fixed: Scroll bar
+- Fixed: Some small bugs
+
+Feb 23, 2020 – Version 3.8
+- Added: New FileBird layout
+- Added: New icon
+- Added: Separate Folder(s) for different user
+- Added: Import files from 2 media library plugins (Enhanced Media Library by webbistro and WordPress Media Library Folders by Max Foundry)
+- Added: Folder sort, folder search
+- Fixed: Support PolyLang
+- Fixed: Count
+- Fixed: Splitter
+- Fixed: Rename folder in list view mode
+- Fixed: Some bugs in right to left screen
+- Fixed: Move large folders
+- Fixed: Filter is hidden when using Smush plugin
+- Removed: Unused css
+- Removed: Unused libraries
+
+Nov 11, 2019 – Version 3.5
+- Added: FileBird Gallery block for Gutenberg
+- Fixed: Error of updating media image size in unsaved post
+- Fixed: Menu CSS
+- Fixed: Remove trigger which conflicts with Divi builder
+- Fixed: Conflict with Gridd Theme
+- Fixed: Small bugs
+
+Oct 28, 2019 - Version 3.4
+- Removed: Unused CSS
+- Fixed: Elementor bug
+- Fixed: List view not load image
+- Fixed: Count items in Uncategorized folder
+- Fixed: Conflict CSS with ACF plugin
+- Fixed: Small bugs
+
+Oct 22, 2019 - Version 3.3
+- Added: Option turn on/off load FileBird JS at front-end for page builders
+- Improved: Removed CDN for customScrollBar
+- Fixed: Small bug will Elementor
+- Fixed: Select option doesn’t not change in modal popup upload
+- Fixed: Only call move image when moving folder position
+
+Sep 18, 2019 – Version 3.2.2
+- Fixed: Sorting error in list view
+- Improved: Optimize Code and Security requirements
+
+Sep 16, 2019 – Version 3.2.1
+- Fixed: Conflict with WordPress Customize Function
+- Improved: Optimize Code
+- Fixed: Some small bugs
+
+Sep 13, 2019 – Version 3.2
+- Fixed: "nt_wmc_folder" in Google Search Console results
+- Fixed: Error in full front end Divi Page Builder editor
+- Fixed: PHP notice on line 582 and 586
+- Fixed: Load JS script on front end
+- Fixed: Error "FileBird is loading" on Elementor builder
+- Fixed: Compatible with FooGallery and Final Tiles Grid Gallery
+- Fixed: Warning notice in WordPress
+- Fixed: Margin Overlay
+- Fixed: Other small bugs
+- Improved: Performance and Optimize Code
+
+Jul 29, 2019 - Version 3.1.2
+- Improved: Fast append treeview
+- Improved: Prevent public folders link
+- Improved: CSS UI
+- Fixed: Prevent public taxonomy folder
+- Fixed: Query database callback all time
+- Fixed: FileBird treeview show on the top left in product editor in WooCommerce
+- Fixed: Can’t drop file when creating the first folder
+- Fixed: Work with WPML when Post Types Translation: Media tick not translatable
+- Fixed: Bulk select moving images into folders by itself
+- Fixed: Move folder with length folder text
+- Fixed: Resize bar not save in minimum width
+- Fixed: Remove map file library
+- Fixed: Conflict with photo gallery
+
+Jun 10, 2019 - Version 3.1.1
+- Added: Support RTL languages
+- Added: Support Advanced Custom Field
+- Improved: Reduce plugin size
+- Fixed: Small bugs
+
+Jun 04, 2019 - Version 3.1
+- Improved: Change drag-drop library
+- Improved: Optimize drag-drop
+- Improved: Change drag-drop to trigger folders, list view
+- Improved: Change syntax jQuery
+- Fixed: CSS not show in all folders treeview from classic editor
+- Fixed: Move many files
+- Fixed: Move all categories
+- Fixed: Auto Deselect bulk when none file
+- Fixed: Count file selected in bulk select
+- Fixed: Conflict with Avada theme
+- Updated: CSS
+- Removed: Unused files
+
+May 29, 2019 - Version 3.0.1
+- Fixed: Move files from Uncategorized and All files folders
+- Fixed: Count files when moved
+
+May 28, 2019 - Version 3.0
+- Added: Treeview interface in page, post, custom post type
+- Added: Treeview interface in Divi Builder, Beaver Builder, Visual Composer, WPBakery Page Builder, Elementor Builder
+- Added: Treeview interface for Gutenberg
+- Added: Bulk auto deselect when change folder
+- Added: Compatible with WPML 4.x version
+- Fixed: WPML 3.9 conflict
+- Fixed: Move one file not click image
+- Fixed: CSS over when edit folder 
+- Fixed: Load too much database
+- Fixed: Treeview interface Elementor Builder
+- Fixed: Upload images
+- Improved: No load FileBird files on frontend if not use builder
+- Improved: Optimize FileBird
+- Improved: UI/UX
+- Removed: Unused files
+
+Mar 13, 2019 - Version 2.7
+- Added: Refresh folder
+- Fixed: Categories dropdown from Media Library popup
+- Fixed: Some small bugs
+
+Mar 4, 2019 - Version 2.6.1
+- Updated: Languages and Documentation
+- Fixed: Press double clicks for OK/cancel button
+
+Feb 27, 2019 - Version 2.6
+- Fixed: Scroll folder tree
+- Fixed: Bug for Elementor
+- Fixed: Languages
+- Fixed: Removed WordPress notification
+- Improved: Doesn't jump to destination folder when move files
+
+Feb 14, 2019 - Version 2.5
+- Added: Compatible with Divi Builder
+- Added: Compatible with Beaver Builder
+- Added: Compatible with Visual Composer
+- Added: Compatible with WPBakery Page Builder
+- Improved: CSS
+- Fixed: Some bugs
+
+Feb 13, 2019 - Version 2.4.1
+- Fixed: Folder structure when insert files in page/post
+- Fixed: Bulk select error
+- Fixed: Small bugs
+
+Jan 29, 2019 - Version 2.4
+- Added: Save position for resizable sidebar
+- Fixed: Languages
+- Fixed: Small bugs
+
+Jan 22, 2019 - Version 2.3.2
+- Added: Compatible with Elementor
+
+Jan 9, 2019 - Version 2.3.1
+- Added: Russian Translation
+
+Dec 4, 2018 - Version 2.3
+- Fixed: Error in Theme Customize Tab
+
+August 30, 2018 - Version 2.2
+- Fixed: Conflict with 404 to 301 plugin
+- Fixed: Other bugs
+
+May 17, 2018 - Version 2.1
+- Added: Drag and drop files to folders for List mode
+- Added: Count items after dragging
+- Added: Load effect while dragging
+- Added: Hover effect (List mode and gird mode)
+- Added: Show loading progress bar when upload file
+- Improved: CSS
+- Improved: Clean code
+- Improved: Loading effect smoother
+- Fixed: Resize bug when dragging back
+- Fixed: Hide list attachments after load attachment
+- Fixed: Some small bugs
+
+May 8, 2018 - Version 2.0
+- Added: Resizeable sidebar
+- Added: Tooptip for displaying folder name for folder long title
+- Added: Display child folders in Media Library
+- Added: Display media folder upload on all pages
+- Added: Double click on folder to rename
+- Added: Select folder when upload new files
+- Improved: UI & UX
+- Improved: CSS & Javascripts
+- Improved: Smoother when load folder in Media container
+- Improved: Close/Open folder smoother
+- Improved: Added “…” character when title is long
+- Improved: Set state for current/opening/closed folder
+- Fixed: Only add a new folder one time
+- Fixed: Translation
+- Fixed: Resize sidebar speed
+- Fixed: Hide sidebar when resized minimum
+- Fixed: Temp stops when resize minimum
+- Fixed: Reload child folder after change folder structure
+- Fixed: Show double folder in Media container when double click to folder on the left side
+- Fixed: Refresh folder in media container when sort
+- Fixed: Reload files after upload
+- Fixed: Broken layout when get notification message from another plugins
+- Fixed: Validate rename
+- Fixed: Close parent folder
+- Fixed: Tooltip hidden when mouse leaves
+- Fixed: New folder with existing name
+- Fixed: Uncategorized files count
+- Fixed: Reset current folder when click to All files or Uncategorized
+- Fixed: Load folder media after move file
+- Fixed: Close folder after load page
+- Fixed: Mouse position when drag file
+- Fixed: jQuery Conflicts 
+- Fixed: Some bugs
+
+April 18, 2018 - Version 1.0.7
+- Fixed: Image display section (Thanks to hotmedia)
+- Fixed: Some bugs
+
+April 15, 2018 - Version 1.0.6
+- Fixed: Some bugs
+
+April 5, 2018 – Version 1.0.5
+- Added: Display location latest folder place use.
+- Improved: New UI/UX
+- Improved: Change icons
+- Improved: CSS styles
+
+March 28, 2018 – Version 1.0.4
+- Improved: New drag and drop Javascript
+- Fixed: JS conflicts
+
+March 18, 2018 – Version 1.0.3
+- Fixed: Load files in folder
+- Fixed: More bugs
+
+March 10, 2018 – Version 1.0.2
+- Fixed: Drag and drop files
+- Fixed: More bugs
+
+March 5, 2018 – Version 1.0.1
+- Fixed: JS conflicts
+- Fixed: Drag and drop folders
+
+May 1, 2016 – Version 1.0
+- Version 1.0 Initial Release
+
+
+

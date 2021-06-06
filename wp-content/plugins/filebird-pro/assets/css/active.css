@@ -1,0 +1,55 @@
+
+.njt-fb-logo,
+.njt-fb-activated {
+  background: url("../img/filebird.png") no-repeat;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  margin: 0 auto;
+}
+.njt-fb-activated {
+  background-image: url("../img/filebird_activated.png");
+}
+.njt-fb-row:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+[class^="njt-fb-col"] {
+  float: left;
+  padding: 0 10px;
+}
+
+.njt-fb-col-4 {
+  width: 33.33%;
+}
+
+.njt-fb-col-8 {
+  width: 66.66%;
+}
+
+.njt-fb-row, .njt-fb-row * {
+  box-sizing: border-box;
+}
+
+.njt-fb-text-center {
+  text-align: center;
+}
+.login_envato_now {
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 10px 10px 40px;
+  text-decoration: none;
+  background: url(../img/envato_icon.png) no-repeat 10px center #7eb243;
+  background-size: 20px;
+}
+ul.njt-fb-list {
+  list-style: none;
+}
+
+ul.njt-fb-list li {
+  background: url(../img/check.png) 0 3px no-repeat;
+  background-size: 15px;
+  padding: 0 0 0 19px;
+}
