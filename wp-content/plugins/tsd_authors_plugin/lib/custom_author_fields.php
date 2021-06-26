@@ -39,7 +39,7 @@ function tsd_authors_plugin_add_custom_fields()
     {
         global $tsd_author_custom_fields;
         ?>
-	<h2><?php esc_html_e('Mobile App Author Information');?></h2>
+	<h2><?php esc_html_e('Additional Public Profile Info (Ignore the "Authorial Info" fields above)');?></h2>
 
     <style>
     .user-preview-image {
