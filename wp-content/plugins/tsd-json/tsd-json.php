@@ -117,8 +117,7 @@ function tsd_json_plugin_enable_api() {
             'displayName' => html_entity_decode( $author->display_name ),
             'userNicename' => $author->user_nicename,
             'url' => wp_make_link_relative( get_author_posts_url( $author->ID ) ),
-            'avatarUrl' => $image_url,
-            'test' => $author,
+            'avatarUrl' => $image_url
         ];
         if ($include_author_description) {
             $new_author[ 'description' ] = html_entity_decode( get_the_author_meta( 'description', $author->ID ) );

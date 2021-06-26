@@ -14,17 +14,10 @@ $theDailySections = ["news" => "News",
     "photo" => "Photo"];
 
 $tsd_author_custom_fields = [
-    "coverImage" => ["title" => "Cover Image", "type" => "image"],
-    "funnyImage" => ["title" => "Funny Image", "type" => "image"],
-    "profileImage" => ["title" => "Profile Image", "type" => "image"],
-    "blurb" => ["title" => "Blurb", "type" => "textarea"],
-    "hometown" => ["title" => "Hometown", "type" => "text"],
-    "timeAtDaily" => ["title" => "Time at the Daily", "type" => "text"],
-    "tapOrder" => ["title" => "Favorite TAP Order", "type" => "text"],
-    "diningHall" => ["title" => "Dining Hall", "type" => "text"],
-    "studySpot" => ["title" => "Study Spot", "type" => "text"],
-    "findYou" => ["title" => "Find You", "type" => "text"],
-    "section" => ["title" => "Your Section(s)", "type" => "checkbox", "choices" => $theDailySections],
+    "pronouns" => ["title" => "Pronouns", "type" => "text"],
+    "title" => ["title" => "Position at The Daily", "type" => "text"],
+    "email" => ["title" => "Daily email address", "type" => "text"],
+    "twitter" => ["title" => "Twitter handle", "type" => "text"]
 ];
 
 // https://wordpress.stackexchange.com/a/233212/75147
