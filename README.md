@@ -3,7 +3,7 @@
 # Stanford Daily website
 [![Build Status](https://travis-ci.com/TheStanfordDaily/stanforddaily-website.svg?branch=master)](https://travis-ci.com/TheStanfordDaily/stanforddaily-website)
 
-This is the Stanford Daily website. See it live at https://www.stanforddaily.com/. Contributions welcome!
+This is the Stanford Daily website backend. See it live at https://www.stanforddaily.com/. Contributions welcome!
 
 ## Local setup
 ### Installation
