@@ -16,7 +16,7 @@ $theDailySections = ["news" => "News",
 $tsd_author_custom_fields = [
     "pronouns" => ["title" => "Pronouns", "type" => "text"],
     "title" => ["title" => "Position at The Daily", "type" => "text"],
-    "email" => ["title" => "Daily email address", "type" => "text"],
+    "dailyEmail" => ["title" => "Daily email address", "type" => "text"],
     "twitter" => ["title" => "Twitter handle", "type" => "text"]
 ];
 
