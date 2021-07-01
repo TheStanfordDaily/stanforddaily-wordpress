@@ -71,8 +71,7 @@ function tsd_authors_plugin_enable_api() {
 
         $meta_to_return = [
             "id" => $user->ID,
-            "name" => $user->display_name,
-            "email" => $user->user_email,
+            "name" => $user->display_name
         ];
         foreach ($all_meta_for_user as $key => $value) {
             $shortKey = preg_replace('/^tsd_/', '', $key);
