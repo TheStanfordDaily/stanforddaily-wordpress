@@ -12,6 +12,13 @@
 const MORE_FROM_DAILY_POST_PER_PAGE = 24;
 const MORE_FROM_DAILY_INITIAL_NUMBER_OF_PAGES = 1;
 
+$tsd_author_custom_fields = [
+    "pronouns" => ["title" => "Pronouns", "type" => "text"],
+    "title" => ["title" => "Position at The Daily", "type" => "text"],
+    "dailyEmail" => ["title" => "Daily email address", "type" => "text"],
+    "twitter" => ["title" => "Twitter handle", "type" => "text"]
+];
+
 // Custom WP API endpoint
 function tsd_json_plugin_enable_api() {
     // Ref: https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
@@ -101,7 +108,7 @@ function tsd_json_plugin_enable_api() {
 
         $authors = [];
         foreach ($author_objects as $author) {
-            $authors[] = tsd_json_plugin_get_indiv_author_info( $author, $include_author_description );
+            $authors[] = copy_of_tsd_authors_plugin_author_info( $author );
         };
         return $authors;
     }
@@ -123,6 +130,46 @@ function tsd_json_plugin_enable_api() {
             $new_author[ 'description' ] = html_entity_decode( get_the_author_meta( 'description', $author->ID ) );
         }
         return $new_author;
+    }
+
+    function copy_of_tsd_authors_plugin_author_info( $user ) {
+        global $tsd_author_custom_fields;
+        if ( $user === false ) {
+            // User ID does not exist
+            return new WP_Error( 'no_author', 'Invalid author', ['status' => 404] );
+        }
+        $image_url = "https://www.stanforddaily.com/wp-content/themes/thestanforddaily/img/placeholder-avatar.png";
+        $image_id = get_user_meta( $user->ID, "tsd_profileImage", true );
+        if ( ! empty( $image_id ) ) {
+            $image_url = wp_get_attachment_image_src( $image_id, 'thumbnail' )[0];
+        }
+
+        // https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#return-value
+        // "After your callback is called, the return value is then converted to JSON, and returned to the client."
+
+        // https://codex.wordpress.org/Function_Reference/get_user_meta
+        // "To avoid this, you may want to run a simple array_map() on the results of get_user_meta() in order to take only the first index of each result (this emulating what the $single argument does when $key is provided:"
+        $all_meta_for_user = array_map( function( $a ){ return $a[0]; }, get_user_meta( $user->ID, null ) );
+
+        $meta_to_return = [
+            'id' => $user->ID,
+            'displayName' => html_entity_decode( $user->display_name ),
+            'userNicename' => $user->user_nicename,
+            'url' => wp_make_link_relative( get_author_posts_url( $user->ID ) ),
+            'avatarUrl' => $image_url,
+            'description' => html_entity_decode( get_the_author_meta( 'description', $user->ID ) )
+        ];
+        foreach ($all_meta_for_user as $key => $value) {
+            $shortKey = preg_replace('/^tsd_/', '', $key);
+            if (array_key_exists($shortKey, $tsd_author_custom_fields)) {
+                if (is_serialized($value)) {
+                    // We have to unserialize array if it's serialized (e.g. "a:4:{i:0;s:2:"op";i:1;s:5:"grind";i:2;s:6:"sports";i:3;s:8:"copyedit";}")
+                    $value = unserialize($value);
+                }
+                $meta_to_return[$shortKey] = $value;
+            }
+        }
+        return $meta_to_return;
     }
 
     function tsd_json_plugin_get_category( $category ) {
