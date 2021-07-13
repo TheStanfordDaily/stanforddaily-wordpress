@@ -14,6 +14,7 @@ $theDailySections = ["news" => "News",
     "photo" => "Photo"];
 
 $tsd_author_custom_fields = [
+    "profileImage" => ["title" => "Profile Image", "type" => "image"],
     "pronouns" => ["title" => "Pronouns", "type" => "text"],
     "title" => ["title" => "Position at The Daily", "type" => "text"],
     "dailyEmail" => ["title" => "Daily email address", "type" => "text"],
