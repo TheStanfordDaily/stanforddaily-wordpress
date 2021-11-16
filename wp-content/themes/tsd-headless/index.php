@@ -14,6 +14,9 @@ if ( is_singular() ) {
             get_post()->ID
         )
     );
-} else {
+} else if (stripos($_SERVER['REQUEST_URI'], '/dev' ) !== false) {
+    // Don't redirect for "/dev"
+}
+else {
     header( 'Location: /wp-json/' );
 }
